@@ -1,0 +1,758 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"allocat",
+				"allocation_of_values_to_team_data"
+			],
+			[
+				"foot",
+				"football_data_array"
+			],
+			[
+				"match",
+				"matchescount"
+			],
+			[
+				"write",
+				"write_teamname_into_array"
+			],
+			[
+				"foo",
+				"football_data_array"
+			],
+			[
+				"mat",
+				"matches"
+			],
+			[
+				"fo",
+				"football_data_array"
+			],
+			[
+				"num",
+				"number_of_matches"
+			],
+			[
+				"print",
+				"print_match"
+			],
+			[
+				"ma",
+				"matchdatapointer"
+			],
+			[
+				"fot",
+				"football_data_array"
+			],
+			[
+				"footbal",
+				"football_data_array"
+			],
+			[
+				"football_d",
+				"football_data_array"
+			],
+			[
+				"football",
+				"football_data"
+			],
+			[
+				"footb",
+				"football_data_array"
+			],
+			[
+				"spec",
+				"spectators"
+			],
+			[
+				"gen",
+				"general_help"
+			],
+			[
+				"general",
+				"general_FAQ"
+			],
+			[
+				"hel",
+				"help_options"
+			],
+			[
+				"help",
+				"help_options"
+			],
+			[
+				"In",
+				"InputString"
+			],
+			[
+				"rand",
+				"randforret"
+			],
+			[
+				"ra",
+				"randhovedret"
+			],
+			[
+				"g",
+				"g_or_h"
+			],
+			[
+				"timer",
+				"timer_minutter_sekunder"
+			],
+			[
+				"co",
+				"convertrubler"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Main.tex",
+			"settings":
+			{
+				"buffer_size": 1106,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/sections.tex",
+			"settings":
+			{
+				"buffer_size": 75,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
+			"settings":
+			{
+				"buffer_size": 6234,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "aau/frontpage.tex",
+			"settings":
+			{
+				"buffer_size": 950,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "aau/preface.tex",
+			"settings":
+			{
+				"buffer_size": 236,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "aau/titlepages.tex",
+			"settings":
+			{
+				"buffer_size": 1347,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Procesanalyse/Procesanalyse.tex",
+			"settings":
+			{
+				"buffer_size": 52,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Interessantanalyse/Interessantanalyse.tex",
+			"settings":
+			{
+				"buffer_size": 57,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "aau/signatures.tex",
+			"settings":
+			{
+				"buffer_size": 1115,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "setup/variables.tex",
+			"settings":
+			{
+				"buffer_size": 593,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "syntaxc",
+		"selected_items":
+		[
+			[
+				"syntaxc",
+				"Set Syntax: C"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax",
+				"Set Syntax: C"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX GRUPPEKONTRAKT",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX GRUPPEKONTRAKT/aau",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX GRUPPEKONTRAKT/sections",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX GRUPPEKONTRAKT/sections/evaluation",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX GRUPPEKONTRAKT/sections/Gruppekontrakt",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX GRUPPEKONTRAKT/sections/Interessantanalyse",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX GRUPPEKONTRAKT/sections/intro",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX GRUPPEKONTRAKT/sections/Procesanalyse",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX GRUPPEKONTRAKT/setup"
+	],
+	"file_history":
+	[
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/preamble.tex",
+		"/C/Programs/LaTeX Documents/LaTeX Document 2/assignment2.tex",
+		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
+		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
+		"/C/Programs/C/Lektionone/helppage.c",
+		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
+		"/C/Programs/C/Lektionone/adresserfratxt.c",
+		"/C/Programs/C/Lektionone/superliga-2014-2015.txt",
+		"/C/Programs/C/Lektionone/adresser.txt",
+		"/C/Programs/C/Lektionone/aflevering4.c",
+		"/C/Programs/C/Lektionone/9.5.c",
+		"/C/Programs/C/Lektionone/testaflevering2.c",
+		"/C/Programs/C/Lektionone/opg2.7.c",
+		"/C/Programs/C/Lektionone/12.2.c",
+		"/C/Programs/C/Lektionone/deckofcards.c",
+		"/C/Programs/C/Lektionone/testintro.c",
+		"/C/Programs/C/Lektionone/contactinfo.txt",
+		"/C/Programs/C/Lektionone/sammensetarrays.c",
+		"/C/Programs/C/Lektionone/afleveringdonger.c",
+		"/C/Programs/C/Lektionone/help.c",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Programs/Git/Rep B2-24/sections/intro/intro.tex",
+		"/C/Programs/Git/Rep B2-24/references.bib",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/C/Programs/C/Lektionone/examplemalloc.c",
+		"/C/Programs/C/Lektionone/10.3.c",
+		"/C/Programs/C/Lektionone/mad.c",
+		"/C/Programs/C/Lektionone/exampleqsort.c",
+		"/C/Programs/C/Lektionone/functions_root_2_slide.c",
+		"/C/Programs/C/Lektionone/aflevering6.c",
+		"/C/Programs/C/Lektionone/nyhms.c",
+		"/C/Programs/C/Lektionone/opg6.6.c",
+		"/C/Programs/C/Lektionone/test-prime.c",
+		"/C/Programs/C/Lektionone/opg_267.c",
+		"/C/Programs/C/Lektionone/3.1.c",
+		"/C/Programs/C/Lektionone/primes.h",
+		"/C/Programs/C/Lektionone/2.5.c",
+		"/C/Programs/C/Lektionone/primes.c",
+		"/C/Programs/C/Lektionone/2.3.c",
+		"/C/Programs/C/Lektionone/prog88-2-c.c",
+		"/C/Programs/C/Lektionone/sc88-1.c",
+		"/C/Programs/C/Lektionone/prog88-2-b.c",
+		"/C/Programs/C/Lektionone/prog88-2.c",
+		"/C/Programs/C/Lektionone/2.1-3.c",
+		"/C/Programs/C/Lektionone/2.1-2.c",
+		"/C/Programs/C/Lektionone/2.1.c",
+		"/C/Programs/C/Lektionone/side242prog2.c",
+		"/C/Programs/C/Lektionone/side242prog1.c",
+		"/C/Programs/C/Lektionone/sc2.3-1.c",
+		"/C/Programs/C/Lektionone/pythagorean.c",
+		"/C/Programs/C/Lektionone/opgave9.c",
+		"/C/Programs/MinGW/msys/1.0/etc/profile",
+		"/C/Programs/MinGW/msys/1.0/etc/fstab",
+		"/C/MinGW/msys/1.0/etc/profile",
+		"/C/MinGW/msys/1.0/etc/fstab"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fight",
+			"teams",
+			"match_count",
+			"league_table",
+			".",
+			"->",
+			"had",
+			"H",
+			"BIG_NUMBER",
+			":",
+			"Spectators in total: ",
+			"team_id",
+			"team",
+			"spectators",
+			"football_data_array",
+			"spectators",
+			"i",
+			"football_data_array[i].spectators",
+			"team_spectator",
+			"team_id",
+			"current_high",
+			"round_goal_amount",
+			"total_lines",
+			"number_of_lines",
+			"spectators",
+			"matchdata",
+			"General",
+			"Ret",
+			"%c",
+			"shelf",
+			"Location",
+			"Qualifiers",
+			"ProductCode",
+			"​",
+			"uigytgu",
+			"dickbutt"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1106,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								806,
+								805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sections/sections.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 75,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1974,
+								1974
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "aau/frontpage.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								623,
+								623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "aau/preface.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "aau/titlepages.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "sections/Procesanalyse/Procesanalyse.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 52,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								52,
+								52
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sections/Interessantanalyse/Interessantanalyse.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 57,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "aau/signatures.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "setup/variables.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 108.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sublime_ux.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"with <stdio.h>"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
