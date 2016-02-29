@@ -115,7 +115,7 @@
 			"file": "Main.tex",
 			"settings":
 			{
-				"buffer_size": 1098,
+				"buffer_size": 1106,
 				"line_ending": "Unix"
 			}
 		},
@@ -123,15 +123,18 @@
 			"file": "sections/sections.tex",
 			"settings":
 			{
-				"buffer_size": 156,
+				"buffer_size": 73,
 				"line_ending": "Windows"
 			}
 		},
 		{
+			"contents": "%!TEX root = ..\\..\\Main.tex\n\\chapter{Gruppe Kontrakt\\\\A319}\n\\section{Mødetider og pauser}\n\\begin{enumerate}\n\\item Der er fastlagte mødetider for gruppen. Såfremt at der ikke er forelæsninger, mødes alle medlemmer i gruppe rummet kl 8.15 og tager hjem igen 16.00. Dette er gældene for alle hverdage pånær fredag, her er det 8.15 til 15.30.\n\\begin{enumerate}\n\\item Derudover er der ikke fastlagte pauser, derimod kan der tages pauser efter behov dog inde for rimmelighedens grænser. Disse pauser vare 5 - 10 minutter. Derudover er der en større spisepause i tidsrummet 11.50 til 12.30 såfremt at der ikke er lektioner.\n\\end{enumerate}\n\\item Såfremt at der er forelæsning fra 8:15 ændres mødetidspunktet til det tilsvarende tidspunkt for forelæsningens afslutning, og dermed ses der bort fra ovenstående regel\n\\item Såfremt at et medlem har en lægeaftale eller et andet vigtigt ærinde som gør de bliver nød til at komme senere eller gå før tid, gøres dette klart for resten af gruppen og gerne så snart dette medlem ved besked omkring tidspunkter på hvornår de er fraværende.\n\\item Der kan i særtilfælde arbejdes hjemmefra, f.eks, hvis en opgave kan laves selv og gruppen umiddelbart ikke har brug for at diskuterer opgavens omfang før et senere tidspunkt.\n\\begin{enumerate}\n\\item Isåfald at et medlem arbejder hjemme fra men ikke for løst eller arbejdet tilstrækkeligt på opgaven/opgaverne tildelt dem, så vil medlemmet miste privilegiet til at arbejde hjemmefra.\n\\end{enumerate}\n\\end{enumerate}\n\n\\section{Gruppemøde og Code Review}\nGruppemøderne bliver afhold en gang hver uge. Dette gøres i slutningen af ugen\n\nDerudover holdes der Code Reviews (Så fremt der er kode at fremvise og gå igennem) hver mandag.\n\n\\begin{enumerate}\n\\item Ved dagens start laves der en dagsorden, dette bruges der 10 til 15 minutter på for at opliste dagens arbejde.\n\\item Ved ugens afslutning afholdes der et gruppemøde hvor i der gennemgås hvad der er blevet lavet igennem ugen og \n\\end{enumerate}\n\\section{Gruppens ansvar}\n\\begin{enumerate}\n\\item Hvis et gruppemedlem smider deres nøgle væk til grupperummet, hæfter det pågældende medlem for de resterende gruppemedlemmers nøgler, og skal derfor tilbagebetale gruppemedlemmernes depositum inden udgangen af projekforløbet.\n\\item Opstår der uenighed eller konflikter der kræver at der skal træffes et valg, vil resultatet blive bestemt ved håndsoprækning hvor flertallets\n\\item Der er mødepligt i grupperummet hver dag med mindre andet aftales på forhånd.\nHjemmearbejde: Der kan i særtilfælde blive arbejdet hjemme, dog skal dette aftales på forhånd (altså ikke på dagen) og hvis den opgave individet ville lave ikke er løst, så bliver mister det gruppe medlem det privilegie.\n\\item I tilfælde af splid i gruppen hvad beslutninger angår, gennemføres dette med valg.\n\\item Mød op til opgaveregning, man har selv ansvar for forlæsning.\n\\end{enumerate}\n\n\\section{Organisering}\n\\begin{enumerate}\n\\item Google Drive bruges til fildeling.\n\\item Facebook bruges til at melde forsinkelser.\n\\item Slack bliver brugt til studierelateret og generalle samtaler, samt til kortsigtet fildeling.\n\\item Git/Github bliver brugt til version kontrol af rapporten og koden.\n\\item Latex bliver brugt til at skrive rapporten.\n\\begin{enumerate}\n\\item Der laves et .tex document for hver sektion af rapporten, for at undgå version konflikter.\n\\end{enumerate}\n\\item Trello til opgave opstilling og fordelling af disse opgaver.\n\\item Tomsplanner bliver brugt til at lægge tidsplan over projektforløbet.\n\\item Fremmøde skema laves i regneark gennem Google Drive.\n\\end{enumerate}\n\n\\section{Konflikthåndtering}\n\\begin{enumerate}\n\\item Hvis et gruppemedlem ikke overholder gruppekontrakten, da løses situationen på følgende vis:\n\\begin{enumerate}\n\\item Den involverede person gøres bekendt med situationen ved et ekstraordinært møde.\n\\item Gruppemedlemmet har en uge til at rette op på problemet.\n\\item I tilfælde af, at ovenstående punkt ikke er en løsning, da inddrages vejleder.\n\\item Hvis der ikke kan findes og opstilles et fælles grundlag for den involverede person og resten af gruppen på grundlag af gruppekontrakten, da medfører dette en udsmidelse af gruppen.\n\\end{enumerate}\n\\item Hvis man har et problem skal man sige det hurtigst muligt, før problemet vokser.\n\\item Hvis man vil bringe noget op anonymt, skal man fortælle det til Alexander. Det vil derefter blive bragt op til diskussion ved et fredagsmøde.\n\\end{enumerate}\n\n\\section{Roller}\nGruppen har valgt, at ud dele enkle roller til individer i gruppen. Dette er valgt for at organisere og effektivisere gruppens arbejde. Der er uddelt 4 roller, Tidsplan handler, Trello handler, ordstyrer og referant. Rollerne er semi-dynamiske, andre medlemmer er velkommen til at prøve at være en af disse roller.\n\n\\subsection{Rollefordeling}\nTidsplan handler - Håndholder tidsplanen. (Niclas)\nTrello handler - Håndholder Trello skema. (Jacob)\nOrdstyrer - Håndholder dagsorden, afbrydning af unødvendige diskussioner.(Alex)\nReferant - Håndholder fremmøde skema, daglige referater(Lasse)\n\n\\subsection{Tidsplan handler}\nTidsplan handler, skal håndtere tidsplanen, ved brug af Tomsplanner. Her skal han holde tidsplanen opdateret, samt skal han sørger for tidsplanen bliver holdt, og ikke overskredet.\n\n\\subsection{Trello handler}\nTrello handler, skal håndtere systemet trello, og skal sørger for at gruppen altid har emner, som kan ud deles til gruppemedlemmer. Trello handler, skal sørger for at emnerne bliver sat ind i trello.\n\n\\subsection{Ordstyrer}\nOrdstyrer Håndtere dagsorden, og sørger for at holde gruppens arbejde på sporen igennem forløbet. Ordstyeren skal også uddeligere opgaver til de individuelle gruppemedlemmer. Han skal også sørgeres for, at unødvendige diskussioner bliver afbrydt. Han er også ordstyrer til vejleder møder, dog må andre gruppemedlemmer godt byde ind, enkle gange.\n\n\\subsection{Referant}\nReferanten sørger for fremmøde skema, hvis et gruppemedlem kommer for sent, sørger Referanten for at notere det. Derudover skal han lave daglige referater, af de diskussioner der sker over gruppen. Referanten sørger også for at lave referat af fredagsmøder, samt vejledermøde og vejleder kontakt. \n\n\\section{Projektarbejde}\nDagsorden\nCode reviews om mandagen.",
 			"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
+			"file_size": 6359,
+			"file_write_time": 130990545060199065,
 			"settings":
 			{
-				"buffer_size": 6254,
+				"buffer_size": 6234,
 				"line_ending": "Unix"
 			}
 		},
@@ -160,7 +163,10 @@
 			}
 		},
 		{
+			"contents": "%!TEX root = ..\\..\\Main.tex\n\\chapter{Interessantanalyse}\n",
 			"file": "sections/Interessantanalyse/Interessantanalyse.tex",
+			"file_size": 59,
+			"file_write_time": 130990474137602524,
 			"settings":
 			{
 				"buffer_size": 57,
@@ -176,10 +182,21 @@
 			}
 		},
 		{
+			"contents": "%!TEX root = ..\\Main.tex\n%Allow the use of \\xspace (smart spacing)\n\\usepackage{xspace}\n%Name Variables, remember trailing space\n\\newcommand{\\papername}{Procesanalyse\\xspace}\n\\newcommand{\\paperthemes}{Simulering\\xspace}\n\\newcommand{\\paperperiod}{INSERT PAPER TIME PERIOD HERE\\xspace}\n\\newcommand{\\groupname}{A319\\xspace}\n\n%Definition Variables\n\n%Example definition with the command \\examplevar\n%It will write \"This is an example (TIAE)\" the first time it's used and then just \"TIAE\" afterwards\n%\\newcommand{\\examplevar}{This is an example (TIAE)\\xspace\\renewcommand{\\examplevar}{TIAE\\xspace}}\n",
 			"file": "setup/variables.tex",
+			"file_size": 607,
+			"file_write_time": 130990553497721663,
 			"settings":
 			{
-				"buffer_size": 601,
+				"buffer_size": 592,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "setup/macros.tex",
+			"settings":
+			{
+				"buffer_size": 3800,
 				"line_ending": "Windows"
 			}
 		}
@@ -228,16 +245,12 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/aau",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/evaluation",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Gruppekontrakt",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Interessantanalyse",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/intro",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Procesanalyse",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/todo"
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE/aau",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE/sections",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE/sections/evaluation",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE/sections/Procesanalyse",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE/setup"
 	],
 	"file_history":
 	[
@@ -368,7 +381,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -377,15 +390,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1098,
+						"buffer_size": 1106,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								223,
-								223
+								806,
+								805
 							]
 						],
 						"settings":
@@ -396,7 +409,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -405,43 +418,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 156,
+						"buffer_size": 73,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								156,
-								156
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6254,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								68,
+								68
 							]
 						],
 						"settings":
@@ -453,6 +438,34 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1974,
+								1974
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -468,8 +481,8 @@
 						"selection":
 						[
 							[
-								898,
-								898
+								623,
+								623
 							]
 						],
 						"settings":
@@ -482,7 +495,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -512,7 +525,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -540,7 +553,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -568,7 +581,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -596,7 +609,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -605,15 +618,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 601,
+						"buffer_size": 592,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								320,
-								320
+								165,
+								165
 							]
 						],
 						"settings":
@@ -624,7 +637,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "setup/macros.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
