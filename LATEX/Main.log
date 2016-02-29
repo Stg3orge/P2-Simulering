@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  4 FEB 2016 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  29 FEB 2016 10:43
 entering extended mode
 **Main.tex
 (Main.tex
@@ -1382,13 +1382,29 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 ]
 Chapter 2.
 
+Overfull \hbox (10.0pt too wide) in paragraph at lines 3--3
+[][][][][][][][][]  
+ []
+
+[2
+
+]
+! Too many }'s.
+l.66 }
+      
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+) (sections/teoriafsnit/teoriafsnit.tex [3]
+Chapter 3.
+
 Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
 ))
 No file Main.bbl.
-[2
+[4
 
 ] (appendix.tex
 Appendix A.
@@ -1401,7 +1417,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 \tf@thm=\write5
  
 AED: lastpage setting LastPage
-[3
+[5
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
@@ -1412,11 +1428,11 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 22000 strings out of 493673
- 383174 string characters out of 3151272
- 469873 words of memory out of 3000000
- 24769 multiletter control sequences out of 15000+200000
- 65100 words of font info for 50 fonts, out of 3000000 for 9000
+ 22041 strings out of 493673
+ 383674 string characters out of 3151272
+ 470873 words of memory out of 3000000
+ 24787 multiletter control sequences out of 15000+200000
+ 68098 words of font info for 51 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
  64i,15n,56p,750b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
 {P:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{P:/MiKTeX/fonts/enc/dvips/fontname/8
@@ -1426,9 +1442,9 @@ r.enc}<P:/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><P:/MiKTeX/fonts/type1/public
 s/type1/public/lm/lmri10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmri8.pfb><P:/MiK
 TeX/fonts/type1/public/lm/lmss9.pfb><P:/MiKTeX/fonts/type1/public/lm/lmssbx10.p
 fb><P:/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on Main.pdf (8 pages, 241701 bytes).
+Output written on Main.pdf (10 pages, 262605 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 233 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
