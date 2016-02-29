@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {2.2}Erhvervsk\IeC {\o }rsel}{2}{section.0.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Transport og fragt}{2}{subsection.0.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Taxiselskaber}{2}{subsection.0.2.2.2}
-\contentsline {section}{\numberline {2.3}Privatk\IeC {\o }rsel}{2}{section.0.2.3}
-\contentsline {subsection}{\numberline {2.3.1}myldretidstrafik}{2}{subsection.0.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Enkelte borger}{2}{subsection.0.2.3.2}
+\contentsline {section}{\numberline {2.3}Privatk\IeC {\o }rsel}{3}{section.0.2.3}
+\contentsline {subsection}{\numberline {2.3.1}myldretidstrafik}{3}{subsection.0.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Enkelte borger}{3}{subsection.0.2.3.2}
 \contentsline {section}{\numberline {2.4}Katastrofek\IeC {\o }rsel}{3}{section.0.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Alarmberedskab}{3}{subsection.0.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Politi}{3}{subsection.0.2.4.2}
