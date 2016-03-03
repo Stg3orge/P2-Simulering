@@ -20,12 +20,17 @@
 \contentsline {subsection}{\numberline {3.3.3}Google Drev}{6}{subsection.0.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}GitHub}{6}{subsection.0.3.3.4}
 \contentsline {section}{\numberline {3.4}Reflektion over gruppesamarbejdet}{6}{section.0.3.4}
-\contentsline {chapter}{\numberline {4}Samarbejdsaftale}{7}{chapter.0.4}
-\contentsline {section}{\numberline {4.1}Reflektion over samarbejdsaftalen}{7}{section.0.4.1}
-\contentsline {chapter}{\numberline {5}Arbejdsproces}{8}{chapter.0.5}
-\contentsline {section}{\numberline {5.1}Arbejdspapir}{8}{section.0.5.1}
-\contentsline {section}{\numberline {5.2}Programmering}{8}{section.0.5.2}
-\contentsline {section}{\numberline {5.3}Reflektion over arbejdsprocessen}{8}{section.0.5.3}
-\contentsline {chapter}{\numberline {6}L\IeC {\ae }ringsproces}{10}{chapter.0.6}
-\contentsline {section}{\numberline {6.1}Vidensdeling}{10}{section.0.6.1}
-\contentsline {section}{\numberline {6.2}Reflektion over l\IeC {\ae }ringsprocessen}{10}{section.0.6.2}
+\contentsline {chapter}{\numberline {4}Vejledersamarbejde}{7}{chapter.0.4}
+\contentsline {section}{\numberline {4.1}Vejlederm\IeC {\o }der}{7}{section.0.4.1}
+\contentsline {section}{\numberline {4.2}Vejlederkommunikation}{7}{section.0.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Mailkorrespondance}{7}{subsection.0.4.2.1}
+\contentsline {section}{\numberline {4.3}Reflektion over Vejledersamarbejdet}{8}{section.0.4.3}
+\contentsline {chapter}{\numberline {5}Samarbejdsaftale}{9}{chapter.0.5}
+\contentsline {section}{\numberline {5.1}Reflektion over samarbejdsaftalen}{9}{section.0.5.1}
+\contentsline {chapter}{\numberline {6}Arbejdsproces}{10}{chapter.0.6}
+\contentsline {section}{\numberline {6.1}Arbejdspapir}{10}{section.0.6.1}
+\contentsline {section}{\numberline {6.2}Programmering}{10}{section.0.6.2}
+\contentsline {section}{\numberline {6.3}Reflektion over arbejdsprocessen}{10}{section.0.6.3}
+\contentsline {chapter}{\numberline {7}L\IeC {\ae }ringsproces}{12}{chapter.0.7}
+\contentsline {section}{\numberline {7.1}Vidensdeling}{12}{section.0.7.1}
+\contentsline {section}{\numberline {7.2}Reflektion over l\IeC {\ae }ringsprocessen}{12}{section.0.7.2}
