@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {2.1}Tidsplanl\IeC {\ae }gning}{2}{section.0.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Gantt-diagram}{2}{subsection.0.2.1.1}
 \contentsline {section}{\numberline {2.2}Opgaveplanl\IeC {\ae }gning}{2}{section.0.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Dagsorden}{2}{subsection.0.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Dagsorden}{3}{subsection.0.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Trello}{3}{subsection.0.2.2.2}
 \contentsline {section}{\numberline {2.3}Reflektion over projektplanl\IeC {\ae }gningen}{3}{section.0.2.3}
 \contentsline {chapter}{\numberline {3}Gruppesamarbejde}{4}{chapter.0.3}

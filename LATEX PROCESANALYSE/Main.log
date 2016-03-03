@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  1 MAR 2016 12:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  1 MAR 2016 13:52
 entering extended mode
 **Main.tex
 (Main.tex
@@ -1033,10 +1033,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip80
 )
-Package hyperref Info: Option `plainpages' set `false' on input line 103.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 103.
+Package hyperref Info: Option `plainpages' set `false' on input line 105.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 105.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 103.
+Package hyperref Info: Option `colorlinks' set `true' on input line 105.
 
 (P:\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1302,9 +1302,22 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<./figures/SimuleringGanttdiagramStart.jpg, id=91, 1002.144pt x 333.04425pt>
+File: ./figures/SimuleringGanttdiagramStart.jpg Graphic file (type jpg)
+
+<use ./figures/SimuleringGanttdiagramStart.jpg>
+Package pdftex.def Info: ./figures/SimuleringGanttdiagramStart.jpg used on inpu
+t line 8.
+(pdftex.def)             Requested size: 350.75566pt x 116.56723pt.
+
+Overfull \hbox (5.75566pt too wide) in paragraph at lines 8--10
+ [][] 
+ []
+
 [2
 
-]) (sections/Gruppesamarbejde/Gruppesamarbejde.tex [3]
+ <./figures/SimuleringGanttdiagramStart.jpg>])
+(sections/Gruppesamarbejde/Gruppesamarbejde.tex [3]
 Chapter 3.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -1354,21 +1367,22 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 22023 strings out of 493673
- 383632 string characters out of 3151272
- 471865 words of memory out of 3000000
- 24779 multiletter control sequences out of 15000+200000
- 48264 words of font info for 45 fonts, out of 3000000 for 9000
+ 22050 strings out of 493673
+ 384098 string characters out of 3151272
+ 471878 words of memory out of 3000000
+ 24799 multiletter control sequences out of 15000+200000
+ 54251 words of font info for 47 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
- 64i,11n,56p,509b,478s stack positions out of 5000i,500n,10000p,200000b,50000s
-{P:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-e
-c.enc}<P:/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><P:/MiKTeX/fonts/type1/public
-/lm/lmbx12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr10.pfb><P:/MiKTeX/fonts/type
-1/public/lm/lmr12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><P:/MiKTeX/
-fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on Main.pdf (13 pages, 183511 bytes).
+ 64i,11n,75p,509b,478s stack positions out of 5000i,500n,10000p,200000b,50000s
+{P:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{P:/MiKTeX/fonts/enc/dvips/fontname/8
+r.enc}<P:/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><P:/MiKTeX/fonts/type1/public
+/lm/lmbx12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><P:/MiKTeX/fonts/type
+1/public/lm/lmr10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr12.pfb><P:/MiKTeX/fon
+ts/type1/public/lm/lmr8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><P:/M
+iKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on Main.pdf (13 pages, 545233 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 269 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
