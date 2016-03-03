@@ -1,24 +1,35 @@
 \select@language {english}
 \contentsline {chapter}{Preface}{iii}{chapter*.1}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.0.1}
-\contentsline {section}{\numberline {1.1}Research Question}{1}{section.0.1.1}
-\contentsline {chapter}{\numberline {2}Interessentanalyse}{2}{chapter.0.2}
-\contentsline {section}{\numberline {2.1}Kollektiv trafik}{2}{section.0.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Nordjyllands Traffikselskab (NT)}{2}{subsection.0.2.1.1}
-\contentsline {section}{\numberline {2.2}Erhvervsk\IeC {\o }rsel}{2}{section.0.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Transport og fragt}{2}{subsection.0.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Taxiselskaber}{2}{subsection.0.2.2.2}
-\contentsline {section}{\numberline {2.3}Privatk\IeC {\o }rsel}{3}{section.0.2.3}
-\contentsline {subsection}{\numberline {2.3.1}myldretidstrafik}{3}{subsection.0.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Enkelte borger}{3}{subsection.0.2.3.2}
-\contentsline {section}{\numberline {2.4}Katastrofek\IeC {\o }rsel}{3}{section.0.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Alarmberedskab}{3}{subsection.0.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Politi}{3}{subsection.0.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Ambulanceudrykning}{3}{subsection.0.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Trafikuheld}{4}{subsection.0.2.4.4}
-\contentsline {section}{\numberline {2.5}kommunale og statslig instanser}{4}{section.0.2.5}
-\contentsline {subsection}{\numberline {2.5.1}}{4}{subsection.0.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Vejarbejde}{4}{subsection.0.2.5.2}
-\contentsline {chapter}{\numberline {3}Teori}{5}{chapter.0.3}
-\contentsline {section}{\numberline {3.1}A* Algoritmen}{5}{section.0.3.1}
-\contentsline {chapter}{\numberline {A}Appendix}{6}{appendix.A}
+\contentsline {chapter}{\numberline {1}Indledning}{1}{chapter.0.1}
+\contentsline {chapter}{\numberline {2}Metode}{2}{chapter.0.2}
+\contentsline {part}{I\hspace {1em}Problemanalyse}{3}{part.1}
+\contentsline {chapter}{\numberline {3}Teori}{4}{chapter.1.3}
+\contentsline {section}{\numberline {3.1}A* Algoritmen}{4}{section.1.3.1}
+\contentsline {chapter}{\numberline {4}Problemets Relevans}{5}{chapter.1.4}
+\contentsline {chapter}{\numberline {5}Teknologianalyse}{6}{chapter.1.5}
+\contentsline {chapter}{\numberline {6}Interessentanalyse}{7}{chapter.1.6}
+\contentsline {section}{\numberline {6.1}Kollektiv trafik}{7}{section.1.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Nordjyllands Traffikselskab (NT)}{7}{subsection.1.6.1.1}
+\contentsline {section}{\numberline {6.2}Erhvervsk\IeC {\o }rsel}{7}{section.1.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Transport og fragt}{7}{subsection.1.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Taxiselskaber}{7}{subsection.1.6.2.2}
+\contentsline {section}{\numberline {6.3}Privatk\IeC {\o }rsel}{8}{section.1.6.3}
+\contentsline {subsection}{\numberline {6.3.1}myldretidstrafik}{8}{subsection.1.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Enkelte borger}{8}{subsection.1.6.3.2}
+\contentsline {section}{\numberline {6.4}Katastrofek\IeC {\o }rsel}{8}{section.1.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Alarmberedskab}{8}{subsection.1.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Politi}{8}{subsection.1.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Ambulanceudrykning}{8}{subsection.1.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}Trafikuheld}{9}{subsection.1.6.4.4}
+\contentsline {section}{\numberline {6.5}kommunale og statslig instanser}{9}{section.1.6.5}
+\contentsline {subsection}{\numberline {6.5.1}}{9}{subsection.1.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Vejarbejde}{9}{subsection.1.6.5.2}
+\contentsline {chapter}{\numberline {7}Problemformulering}{10}{chapter.1.7}
+\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{11}{part.2}
+\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{12}{chapter.2.8}
+\contentsline {chapter}{\numberline {9}Kravspecifikationer}{13}{chapter.2.9}
+\contentsline {chapter}{\numberline {10}Implementation}{14}{chapter.2.10}
+\contentsline {chapter}{\numberline {11}Diskussion}{15}{chapter.2.11}
+\contentsline {chapter}{\numberline {12}Konklusion}{16}{chapter.2.12}
+\contentsline {chapter}{\numberline {13}Perspektivering}{17}{chapter.2.13}
+\contentsline {chapter}{\numberline {A}Appendix}{18}{appendix.A}

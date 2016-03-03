@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  3 MAR 2016 10:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  3 MAR 2016 13:25
 entering extended mode
 **Main.tex
 (Main.tex
@@ -1293,11 +1293,6 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 35.
 (P:\MiKTeX\tex\latex\lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 4686) in paragraph at lines 35--35
-\T1/lmr/m/n/10 INSERT PA-PER TIME PE-RIOD
- []
-
-
 Underfull \hbox (badness 4217) in paragraph at lines 35--35
 \T1/lmr/m/n/10 penne lisce tagli-atelle conchiglie.
  []
@@ -1357,36 +1352,117 @@ l.35 }
 ] (aau/preface.tex) [3
 
 
-] (Main.toc)
+] (Main.toc [4
+
+
+])
 \tf@toc=\write4
- [4
-
-
-] (sections/sections.tex
-(sections/intro/intro.tex
+ [5] (sections/sections.tex
+(sections/Indledning/Indledning.tex
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OT1+pzc on input line 2.
+LaTeX Font Info:    Try loading font information for OT1+pzc on input line 1.
 (P:\MiKTeX\tex\latex\psnfss\ot1pzc.fd
 File: ot1pzc.fd 2001/06/04 font definitions for OT1/pzc.
 )
 LaTeX Font Info:    Font shape `OT1/pzc/m/n' in size <76> not available
-(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 2.
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 1.
 
-Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Interessantanalyse/Interessantanalyse.tex [1
+) (sections/Metode/Metode.tex [1
 
 
 ]
 Chapter 2.
 
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) [2
+
+] [3
+
+] (sections/Teori/Teori.tex
+Chapter 3.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+<Pictures/Teoriafsnit/Figurfiler/Grid1.png, id=134, 844.756pt x 597.432pt>
+File: Pictures/Teoriafsnit/Figurfiler/Grid1.png Graphic file (type png)
+
+<use Pictures/Teoriafsnit/Figurfiler/Grid1.png>
+Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid1.png used on inpu
+t line 11.
+(pdftex.def)             Requested size: 207.0021pt x 146.39491pt.
+)
+(sections/ProblemetsRelevans/ProblemetsRelevans.tex
+Underfull \hbox (badness 3333) in paragraph at lines 16--1
+[][]\T1/lmr/m/n/10 Primært når det kom-
+ []
+
+
+Underfull \hbox (badness 6125) in paragraph at lines 16--1
+\T1/lmr/m/n/10 mer til belægn-ing af en
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 16--1
+\T1/lmr/m/n/10 ved at en en-hed fort-sæt-
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 16--1
+\T1/lmr/m/n/10 ter hen i mod et mål in-
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 16--1
+\T1/lmr/m/n/10 bevægelses-møn-ster og in-de-
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 16--1
+\T1/lmr/m/n/10 bærer in vis in-effektivitet.
+ []
+
+
+Underfull \hbox (badness 5119) in paragraph at lines 16--1
+\T1/lmr/m/n/10 Rent re-torisk kunne man
+ []
+
+[4
+
+ <./Pictures/Teoriafsnit/Figurfiler/Grid1.png>]
+Chapter 4.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Teknologianalyse/Teknologianalyse.tex [5
+
+]
+Chapter 5.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Interessentanalyse/Interessentanalyse.tex [6
+
+]
+Chapter 6.
+
 Overfull \hbox (10.0pt too wide) in paragraph at lines 3--3
 [][][][][][][][][]  
  []
 
-[2
+[7
 
 ]
 Overfull \hbox (20.33266pt too wide) in paragraph at lines 37--38
@@ -1400,60 +1476,74 @@ Overfull \hbox (120.24864pt too wide) in paragraph at lines 41--42
 7D3.c3.iopscience.cld.iop.org 
  []
 
-[3]) (sections/teoriafsnit/teoriafsnit.tex [4]
-Chapter 3.
+[8]) (sections/Problemformulering/Problemformulering.tex [9]
+Chapter 7.
 
-Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-<Pictures/Teoriafsnit/Figurfiler/Grid1.png, id=112, 844.756pt x 597.432pt>
-File: Pictures/Teoriafsnit/Figurfiler/Grid1.png Graphic file (type png)
+) [10
 
-<use Pictures/Teoriafsnit/Figurfiler/Grid1.png>
-Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid1.png used on inpu
-t line 12.
-(pdftex.def)             Requested size: 207.0021pt x 146.39491pt.
+] [11
+
+] (sections/Loesningsforslag/Loesningsforslag.tex
+Chapter 8.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Kravspecifikationer/Kravspecifikationer.tex [12
+
+]
+Chapter 9.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Implementation/Implementation.tex [13
+
+]
+Chapter 10.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Diskussion/Diskussion.tex [14
+
+]
+Chapter 11.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Konklusion/Konklusion.tex [15
+
+]
+Chapter 12.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Perspektivering/Perspektivering.tex [16
+
+]
+Chapter 13.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
 ))
 No file Main.bbl.
+[17
 
-Underfull \hbox (badness 3333) in paragraph at lines 17--34
-[][]\T1/lmr/m/n/10 Primært når det kom-
- []
-
-
-Underfull \hbox (badness 6125) in paragraph at lines 17--34
-\T1/lmr/m/n/10 mer til belægn-ing af en
- []
-
-
-Underfull \hbox (badness 3108) in paragraph at lines 17--34
-\T1/lmr/m/n/10 ved at en en-hed fort-sæt-
- []
-
-
-Underfull \hbox (badness 1082) in paragraph at lines 17--34
-\T1/lmr/m/n/10 ter hen i mod et mål in-
- []
-
-
-Underfull \hbox (badness 1147) in paragraph at lines 17--34
-\T1/lmr/m/n/10 bevægelses-møn-ster og in-de-
- []
-
-
-Underfull \hbox (badness 1127) in paragraph at lines 17--34
-\T1/lmr/m/n/10 bærer in vis in-effektivitet.
- []
-
-
-Underfull \hbox (badness 5119) in paragraph at lines 17--34
-\T1/lmr/m/n/10 Rent re-torisk kunne man
- []
-
-[5
-
- <./Pictures/Teoriafsnit/Figurfiler/Grid1.png>] (appendix.tex
+] (appendix.tex
 Appendix A.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -1464,7 +1554,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 \tf@thm=\write5
  
 AED: lastpage setting LastPage
-[6
+[18
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
@@ -1475,13 +1565,13 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 22069 strings out of 493673
- 384174 string characters out of 3151272
- 470873 words of memory out of 3000000
- 24809 multiletter control sequences out of 15000+200000
- 71093 words of font info for 52 fonts, out of 3000000 for 9000
+ 22146 strings out of 493673
+ 385682 string characters out of 3151272
+ 470869 words of memory out of 3000000
+ 24822 multiletter control sequences out of 15000+200000
+ 77106 words of font info for 54 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
- 64i,15n,75p,867b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,15n,75p,863b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
 {P:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{P:/MiKTeX/fonts/enc/dvips/fontname/8
 r.enc}<P:/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><P:/MiKTeX/fonts/type1/public
 /lm/lmbx12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><P:/MiKTeX/fonts/type
@@ -1490,9 +1580,9 @@ ts/type1/public/lm/lmr8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmri10.pfb><P:/MiK
 TeX/fonts/type1/public/lm/lmri8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmss9.pfb>
 <P:/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><P:/MiKTeX/fonts/type1/urw/zapfch
 an/uzcmi8a.pfb>
-Output written on Main.pdf (11 pages, 311367 bytes).
+Output written on Main.pdf (24 pages, 332599 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 319 words of extra memory for PDF output out of 10000 (max. 10000000)
 
