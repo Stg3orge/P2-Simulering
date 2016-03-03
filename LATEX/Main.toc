@@ -15,9 +15,10 @@
 \contentsline {subsection}{\numberline {2.4.1}Alarmberedskab}{3}{subsection.0.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Politi}{3}{subsection.0.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Ambulanceudrykning}{3}{subsection.0.2.4.3}
-\contentsline {section}{\numberline {2.5}kommunale og statslig instanser}{3}{section.0.2.5}
-\contentsline {subsection}{\numberline {2.5.1}}{3}{subsection.0.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Vejarbejde}{3}{subsection.0.2.5.2}
-\contentsline {chapter}{\numberline {3}Teori}{4}{chapter.0.3}
-\contentsline {section}{\numberline {3.1}A* Algoritmen}{4}{section.0.3.1}
-\contentsline {chapter}{\numberline {A}Appendix}{5}{appendix.A}
+\contentsline {subsection}{\numberline {2.4.4}Trafikuheld}{4}{subsection.0.2.4.4}
+\contentsline {section}{\numberline {2.5}kommunale og statslig instanser}{4}{section.0.2.5}
+\contentsline {subsection}{\numberline {2.5.1}}{4}{subsection.0.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Vejarbejde}{4}{subsection.0.2.5.2}
+\contentsline {chapter}{\numberline {3}Teori}{5}{chapter.0.3}
+\contentsline {section}{\numberline {3.1}A* Algoritmen}{5}{section.0.3.1}
+\contentsline {chapter}{\numberline {A}Appendix}{6}{appendix.A}
