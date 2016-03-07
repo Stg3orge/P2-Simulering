@@ -116,7 +116,23 @@
 			"settings":
 			{
 				"buffer_size": 1098,
-				"line_ending": "Unix"
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/sections.tex",
+			"settings":
+			{
+				"buffer_size": 666,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Teori/Teori.tex",
+			"settings":
+			{
+				"buffer_size": 3265,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -128,28 +144,27 @@
 			}
 		},
 		{
-			"file": "sections/teoriafsnit/teoriafsnit.tex",
+			"file": "aau/titlepages.tex",
 			"settings":
 			{
-<<<<<<< Updated upstream
-				"buffer_size": 650,
-=======
-				"buffer_size": 1212,
->>>>>>> Stashed changes
+				"buffer_size": 1347,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/sections.tex",
+			"file": "aau/signatures.tex",
 			"settings":
 			{
-<<<<<<< Updated upstream
-				"buffer_size": 201,
-				"line_ending": "Unix"
-=======
-				"buffer_size": 197,
+				"buffer_size": 1115,
 				"line_ending": "Windows"
->>>>>>> Stashed changes
+			}
+		},
+		{
+			"file": "setup/variables.tex",
+			"settings":
+			{
+				"buffer_size": 597,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -160,10 +175,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "syntaxc",
+		"height": 104.0,
+		"last_filter": "Package Control: install",
 		"selected_items":
 		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
 			[
 				"syntaxc",
 				"Set Syntax: C"
@@ -197,29 +216,20 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/aau",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/Pictures",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/Pictures/Teoriafsnit",
-<<<<<<< Updated upstream
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/Pictures/Teoriafsnit/Figurfiler",
-=======
->>>>>>> Stashed changes
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Gruppekontrakt",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Interessantanalyse",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/teoriafsnit"
+		"/C/Programs/Git/P2-Simulering/LATEX",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures/Teoriafsnit",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures/Teoriafsnit/Figurfiler",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teknologianalyse",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teori"
 	],
 	"file_history":
 	[
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/variables.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/aau/signatures.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
 		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/aau/titlepages.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/aau/frontpage.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/sections.tex",
 		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/preamble.tex",
 		"/C/Programs/LaTeX Documents/LaTeX Document 2/assignment2.tex",
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
@@ -346,7 +356,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -362,75 +372,8 @@
 						"selection":
 						[
 							[
-								223,
-								223
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "aau/frontpage.tex",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 950,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sections/teoriafsnit/teoriafsnit.tex",
-					"semi_transient": false,
-					"settings":
-					{
-<<<<<<< Updated upstream
-						"buffer_size": 650,
-=======
-						"buffer_size": 1212,
->>>>>>> Stashed changes
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< Updated upstream
-								650,
-								650
-=======
-								774,
-								774
->>>>>>> Stashed changes
+								1098,
+								1098
 							]
 						],
 						"settings":
@@ -445,24 +388,164 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 1,
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
 					{
-<<<<<<< Updated upstream
-						"buffer_size": 201,
-=======
-						"buffer_size": 197,
->>>>>>> Stashed changes
+						"buffer_size": 666,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								197,
-								197
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Teori/Teori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3241,
+								3241
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "aau/frontpage.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								623,
+								623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "aau/titlepages.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "aau/signatures.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "setup/variables.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":

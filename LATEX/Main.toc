@@ -5,31 +5,31 @@
 \contentsline {part}{I\hspace {1em}Problemanalyse}{3}{part.1}
 \contentsline {chapter}{\numberline {3}Teori}{4}{chapter.1.3}
 \contentsline {section}{\numberline {3.1}A* Algoritmen}{4}{section.1.3.1}
-\contentsline {chapter}{\numberline {4}Problemets Relevans}{5}{chapter.1.4}
-\contentsline {chapter}{\numberline {5}Teknologianalyse}{6}{chapter.1.5}
-\contentsline {chapter}{\numberline {6}Interessentanalyse}{7}{chapter.1.6}
-\contentsline {section}{\numberline {6.1}Kollektiv trafik}{7}{section.1.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Nordjyllands Traffikselskab (NT)}{7}{subsection.1.6.1.1}
-\contentsline {section}{\numberline {6.2}Erhvervsk\IeC {\o }rsel}{7}{section.1.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Transport og fragt}{7}{subsection.1.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Taxiselskaber}{7}{subsection.1.6.2.2}
-\contentsline {section}{\numberline {6.3}Privatk\IeC {\o }rsel}{8}{section.1.6.3}
-\contentsline {subsection}{\numberline {6.3.1}myldretidstrafik}{8}{subsection.1.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Enkelte borger}{8}{subsection.1.6.3.2}
-\contentsline {section}{\numberline {6.4}Katastrofek\IeC {\o }rsel}{8}{section.1.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Alarmberedskab}{8}{subsection.1.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Politi}{8}{subsection.1.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Ambulanceudrykning}{8}{subsection.1.6.4.3}
-\contentsline {subsection}{\numberline {6.4.4}Trafikuheld}{9}{subsection.1.6.4.4}
-\contentsline {section}{\numberline {6.5}kommunale og statslig instanser}{9}{section.1.6.5}
-\contentsline {subsection}{\numberline {6.5.1}}{9}{subsection.1.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Vejarbejde}{9}{subsection.1.6.5.2}
-\contentsline {chapter}{\numberline {7}Problemformulering}{10}{chapter.1.7}
-\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{11}{part.2}
-\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{12}{chapter.2.8}
-\contentsline {chapter}{\numberline {9}Kravspecifikationer}{13}{chapter.2.9}
-\contentsline {chapter}{\numberline {10}Implementation}{14}{chapter.2.10}
-\contentsline {chapter}{\numberline {11}Diskussion}{15}{chapter.2.11}
-\contentsline {chapter}{\numberline {12}Konklusion}{16}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Perspektivering}{17}{chapter.2.13}
-\contentsline {chapter}{\numberline {A}Appendix}{18}{appendix.A}
+\contentsline {chapter}{\numberline {4}Problemets Relevans}{6}{chapter.1.4}
+\contentsline {chapter}{\numberline {5}Teknologianalyse}{7}{chapter.1.5}
+\contentsline {chapter}{\numberline {6}Interessentanalyse}{8}{chapter.1.6}
+\contentsline {section}{\numberline {6.1}Kollektiv trafik}{8}{section.1.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Nordjyllands Traffikselskab (NT)}{8}{subsection.1.6.1.1}
+\contentsline {section}{\numberline {6.2}Erhvervsk\IeC {\o }rsel}{8}{section.1.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Transport og fragt}{8}{subsection.1.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Taxiselskaber}{8}{subsection.1.6.2.2}
+\contentsline {section}{\numberline {6.3}Privatk\IeC {\o }rsel}{9}{section.1.6.3}
+\contentsline {subsection}{\numberline {6.3.1}myldretidstrafik}{9}{subsection.1.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Enkelte borger}{9}{subsection.1.6.3.2}
+\contentsline {section}{\numberline {6.4}Katastrofek\IeC {\o }rsel}{9}{section.1.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Alarmberedskab}{9}{subsection.1.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Politi}{9}{subsection.1.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Ambulanceudrykning}{9}{subsection.1.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}Trafikuheld}{10}{subsection.1.6.4.4}
+\contentsline {section}{\numberline {6.5}kommunale og statslig instanser}{10}{section.1.6.5}
+\contentsline {subsection}{\numberline {6.5.1}}{10}{subsection.1.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Vejarbejde}{10}{subsection.1.6.5.2}
+\contentsline {chapter}{\numberline {7}Problemformulering}{11}{chapter.1.7}
+\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{12}{part.2}
+\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{13}{chapter.2.8}
+\contentsline {chapter}{\numberline {9}Kravspecifikationer}{14}{chapter.2.9}
+\contentsline {chapter}{\numberline {10}Implementation}{15}{chapter.2.10}
+\contentsline {chapter}{\numberline {11}Diskussion}{16}{chapter.2.11}
+\contentsline {chapter}{\numberline {12}Konklusion}{17}{chapter.2.12}
+\contentsline {chapter}{\numberline {13}Perspektivering}{18}{chapter.2.13}
+\contentsline {chapter}{\numberline {A}Appendix}{19}{appendix.A}
