@@ -14,20 +14,22 @@
 \contentsline {subsection}{\numberline {6.2.1}Transport og fragt}{8}{subsection.1.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Taxiselskaber}{8}{subsection.1.6.2.2}
 \contentsline {section}{\numberline {6.3}Privatk\IeC {\o }rsel}{9}{section.1.6.3}
-\contentsline {subsection}{\numberline {6.3.1}myldretidstrafik}{9}{subsection.1.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Myldretidstrafik}{9}{subsection.1.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Enkelte borger}{9}{subsection.1.6.3.2}
 \contentsline {section}{\numberline {6.4}Katastrofek\IeC {\o }rsel}{9}{section.1.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Alarmberedskab}{9}{subsection.1.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Politi}{9}{subsection.1.6.4.2}
 \contentsline {subsection}{\numberline {6.4.3}Ambulanceudrykning}{9}{subsection.1.6.4.3}
 \contentsline {subsection}{\numberline {6.4.4}Trafikuheld}{10}{subsection.1.6.4.4}
-\contentsline {section}{\numberline {6.5}kommunale og statslig instanser}{10}{section.1.6.5}
+\contentsline {section}{\numberline {6.5}Kommunale og statslig instanser}{10}{section.1.6.5}
 \contentsline {subsection}{\numberline {6.5.1}}{10}{subsection.1.6.5.1}
 \contentsline {subsection}{\numberline {6.5.2}Vejarbejde}{10}{subsection.1.6.5.2}
 \contentsline {chapter}{\numberline {7}Problemformulering}{11}{chapter.1.7}
 \contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{12}{part.2}
 \contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{13}{chapter.2.8}
 \contentsline {chapter}{\numberline {9}Kravspecifikationer}{14}{chapter.2.9}
+\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{14}{subsection.2.9.0.1}
+\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{14}{subsection.2.9.0.2}
 \contentsline {chapter}{\numberline {10}Implementation}{15}{chapter.2.10}
 \contentsline {chapter}{\numberline {11}Diskussion}{16}{chapter.2.11}
 \contentsline {chapter}{\numberline {12}Konklusion}{17}{chapter.2.12}
