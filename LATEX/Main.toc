@@ -21,4 +21,5 @@
 \contentsline {subsection}{\numberline {2.5.2}Vejarbejde}{4}{subsection.0.2.5.2}
 \contentsline {chapter}{\numberline {3}Teori}{5}{chapter.0.3}
 \contentsline {section}{\numberline {3.1}A* Algoritmen}{5}{section.0.3.1}
-\contentsline {chapter}{\numberline {A}Appendix}{6}{appendix.A}
+\contentsline {chapter}{Bibliography}{6}{chapter*.6}
+\contentsline {chapter}{\numberline {A}Appendix}{7}{appendix.A}
