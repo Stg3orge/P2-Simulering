@@ -115,7 +115,27 @@
 			"file": "references.bib",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 2406,
+=======
+				"buffer_size": 1098,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/sections.tex",
+			"settings":
+			{
+				"buffer_size": 666,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Teori/Teori.tex",
+			"settings":
+			{
+				"buffer_size": 3265,
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 				"line_ending": "Windows"
 			}
 		},
@@ -128,6 +148,7 @@
 			}
 		},
 		{
+<<<<<<< HEAD
 			"contents": "Package Control Messages\n========================\n\nTheme - Primer\n--------------\n\n  Thanks for installing Primer!\n  \n  \n  ### How to Activate\n  \n  Activate the UI theme and color scheme by modifying your user preferences file, which you can find using the menu item `Sublime Text -> Preferences -> Settings - User` (<kbd>⌘</kbd><kbd>,</kbd> on Mac).\n  \n  Primer comes with different accent colors based on GitHub's color scheme (http://primercss.io/colors/).\n  \n  ***Note: Don't forget to restart Sublime Text after activating the theme.***\n  \n  #### Settings for Primer\n  \n  Only choose one setting per section.\n  \n  ```json\n  {\n    \"theme\": \"Primer.sublime-theme\",\n    \"color_scheme\": \"Packages/Theme - Primer/primer.light.tmTheme\",\n  \n    \"theme\": \"Primer Dark.sublime-theme\",\n    \"color_scheme\": \"Packages/Theme - Primer/primer.dark.tmTheme\",\n  \n    // Accent Colors\n    \"theme_primer_tab_active_blue\": true,       // default\n    \"theme_primer_tab_active_green\": true,\n    \"theme_primer_tab_active_red\": true,\n    \"theme_primer_tab_active_orange\": true,\n    \"theme_primer_tab_active_purple\": true,\n  \n    // Tab Label Font Size\n    \"theme_primer_tabs_font_small\": true,\n    \"theme_primer_tabs_font_normal\": true,      // default\n    \"theme_primer_tabs_font_large\": true,\n    \"theme_primer_tabs_font_xlarge\": true,\n  \n    // Sidebar Row Padding\n    \"theme_primer_sidebar_tree_xsmall\": true,\n    \"theme_primer_sidebar_tree_small\": true,\n    \"theme_primer_sidebar_tree_normal\": true,   // default\n    \"theme_primer_sidebar_tree_large\": true,\n    \"theme_primer_sidebar_tree_xlarge\": true,\n  \n    // Sidebar Font Size\n    \"theme_primer_sidebar_font_small\": true,\n    \"theme_primer_sidebar_font_normal\": true,   // default\n    \"theme_primer_sidebar_font_large\": true,\n    \"theme_primer_sidebar_font_xlarge\": true,\n  }\n  ```\n  \n  *Note: Don't forget to restart Sublime Text after activating the theme.*\n",
 			"settings":
 			{
@@ -144,6 +165,29 @@
 			{
 				"buffer_size": 1098,
 				"line_ending": "Unix"
+=======
+			"file": "aau/titlepages.tex",
+			"settings":
+			{
+				"buffer_size": 1347,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "aau/signatures.tex",
+			"settings":
+			{
+				"buffer_size": 1115,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "setup/variables.tex",
+			"settings":
+			{
+				"buffer_size": 597,
+				"line_ending": "Windows"
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 			}
 		}
 	],
@@ -154,6 +198,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
+<<<<<<< HEAD
 		"height": 150.0,
 		"last_filter": "Package Control: ins",
 		"selected_items":
@@ -167,10 +212,18 @@
 				"Package Control: Install Package"
 			],
 			[
+=======
+		"height": 104.0,
+		"last_filter": "Package Control: install",
+		"selected_items":
+		[
+			[
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 				"Package Control: install",
 				"Package Control: Install Package"
 			],
 			[
+<<<<<<< HEAD
 				"Package Control: insta",
 				"Package Control: Install Package"
 			],
@@ -187,6 +240,8 @@
 				"Package Control: Install Package"
 			],
 			[
+=======
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 				"syntaxc",
 				"Set Syntax: C"
 			],
@@ -219,6 +274,7 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/C/Programs/GitHub_P2/P2-Simulering/LATEX",
 		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections",
 		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/teoriafsnit"
@@ -226,6 +282,23 @@
 	"file_history":
 	[
 		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+=======
+		"/C/Programs/Git/P2-Simulering/LATEX",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures/Teoriafsnit",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures/Teoriafsnit/Figurfiler",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teknologianalyse",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teori"
+	],
+	"file_history":
+	[
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/preamble.tex",
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 		"/C/Programs/LaTeX Documents/LaTeX Document 2/assignment2.tex",
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
 		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
@@ -351,7 +424,11 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
 			"selected": 1,
+=======
+			"selected": 0,
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 			"sheets":
 			[
 				{
@@ -367,8 +444,13 @@
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								1578,
 								1578
+=======
+								1098,
+								1098
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 							]
 						],
 						"settings":
@@ -381,16 +463,28 @@
 						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 2,
+=======
+					"stack_index": 0,
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+<<<<<<< HEAD
 					"file": "sections/teoriafsnit/teoriafsnit.tex",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1746,
+=======
+					"file": "sections/sections.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 666,
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 						"regions":
 						{
 						},
@@ -404,11 +498,73 @@
 						"settings":
 						{
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+<<<<<<< HEAD
+=======
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Teori/Teori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3241,
+								3241
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "aau/frontpage.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								623,
+								623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+<<<<<<< HEAD
 					"stack_index": 0,
 					"type": "text"
 				},
@@ -418,14 +574,61 @@
 					"settings":
 					{
 						"buffer_size": 1900,
+=======
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "aau/titlepages.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1347,
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								349,
 								349
+=======
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "aau/signatures.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 							]
 						],
 						"settings":
@@ -439,6 +642,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 1,
 					"type": "text"
 				},
@@ -449,6 +653,18 @@
 					"settings":
 					{
 						"buffer_size": 1098,
+=======
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "setup/variables.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 597,
+>>>>>>> f33bf63d969aba0bb28bee0df0530ab1079231dc
 						"regions":
 						{
 						},
