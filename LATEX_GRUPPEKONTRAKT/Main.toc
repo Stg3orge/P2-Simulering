@@ -12,3 +12,6 @@
 \contentsline {subsection}{\numberline {1.6.4}Ordstyrer}{4}{subsection.0.1.6.4}
 \contentsline {subsection}{\numberline {1.6.5}Referant}{4}{subsection.0.1.6.5}
 \contentsline {section}{\numberline {1.7}Projektarbejde}{4}{section.0.1.7}
+\contentsline {chapter}{\numberline {2}Vejlederkontrakt}{5}{chapter.0.2}
+\contentsline {section}{\numberline {2.1}Vejlederen kan forvente at}{5}{section.0.2.1}
+\contentsline {section}{\numberline {2.2}Vi forventer at vejlederen}{5}{section.0.2.2}
