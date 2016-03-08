@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.16)  8 MAR 2016 11:00
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  8 MAR 2016 11:11
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 entering extended mode
 **Main
 (Main.tex
@@ -23,8 +27,12 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\fncychap\fncychap
 .sty"
+=======
+(P:\MiKTeX\tex\latex\fncychap\fncychap.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \RW=\skip43
 \mylen=\skip44
@@ -33,7 +41,12 @@ Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \py=\skip47
 \pyy=\skip48
 \pxx=\skip49
+<<<<<<< HEAD
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+=======
+
+(P:\MiKTeX\tex\latex\graphics\color.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -278,23 +291,39 @@ Package: babel 2015/08/03 3.9m The Babel package
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-danish\dani
 sh.ldf"
 Language: danish 2009/09/19 v1.3r Danish support from the babel system
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+=======
+(P:\MiKTeX\tex\latex\babel-danish\danish.ldf
+Language: danish 2009/09/19 v1.3r Danish support from the babel system
+
+(P:\MiKTeX\tex\generic\babel\babel.def
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: babel.def 2015/08/03 3.9m Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 82.
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-english\eng
 lish.ldf"
+=======
+(P:\MiKTeX\tex\latex\babel-english\english.ldf
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Language: english 2012/08/20 v3.3p English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
+<<<<<<< HEAD
 )) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+=======
+))
+(P:\MiKTeX\tex\latex\lm\lmodern.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -346,6 +375,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 \@float@every@table=\toks18
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 "
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
@@ -358,6 +388,17 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 .sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+=======
+(P:\MiKTeX\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+ (P:\MiKTeX\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+(P:\MiKTeX\tex\latex\colortbl\colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+ (P:\MiKTeX\tex\latex\tools\array.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen104
 \extrarowheight=\dimen105
@@ -401,12 +442,19 @@ Package graphics Info: Driver file: pdftex.def on input line 94.
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.s
 ty"
 Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
 
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.
 sty"
+=======
+(P:\MiKTeX\tex\latex\caption\caption.sty
+Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+
+(P:\MiKTeX\tex\latex\caption\caption3.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen108
@@ -420,8 +468,12 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \c@ContinuedFloat=\count92
 Package caption Info: float package is loaded.
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs
 .sty"
+=======
+(P:\MiKTeX\tex\latex\booktabs\booktabs.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen115
 \lightrulewidth=\dimen116
@@ -441,8 +493,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count96
 \@thisrulewidth=\dimen127
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
 "
+=======
+(P:\MiKTeX\tex\latex\framed\framed.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip53
 \fb@frw=\dimen128
@@ -450,8 +506,12 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen130
 \FrameSep=\dimen131
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings
 .sty"
+=======
+(P:\MiKTeX\tex\latex\listings\listings.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 \lst@mode=\count97
 \lst@gtempboxa=\box28
 \lst@token=\toks22
@@ -465,19 +525,32 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \lst@lineno=\count102
 \lst@maxwidth=\dimen135
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.
 sty"
+=======
+(P:\MiKTeX\tex\latex\listings\lstmisc.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count103
 \lst@skipnumbers=\count104
 \lst@framebox=\box29
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings
 .cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+=======
+(P:\MiKTeX\tex\latex\listings\listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(P:\MiKTeX\tex\latex\amsmath\amsmath.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip54
 
@@ -545,8 +618,12 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\ntheorem\ntheorem
 .sty"
+=======
+(P:\MiKTeX\tex\latex\ntheorem\ntheorem.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Style `ntheorem', Version 1.33 <2011/08/15>
 Package: ntheorem 2011/08/15 1.33
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -592,6 +669,7 @@ Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
 \tagwidth=\dimen150
 \shadecolor=\toks46
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox
 .sty"
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
@@ -599,6 +677,13 @@ Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 )
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr
 .sty"
+=======
+(P:\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count119
+)
+(P:\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 \fancy@headwidth=\skip66
 \f@ncyO@elh=\skip67
 \f@ncyO@erh=\skip68
@@ -608,7 +693,11 @@ Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 \f@ncyO@erf=\skip72
 \f@ncyO@olf=\skip73
 \f@ncyO@orf=\skip74
+<<<<<<< HEAD
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+=======
+) (P:\MiKTeX\tex\latex\tools\calc.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count120
 \calc@Bcount=\count121
@@ -620,6 +709,7 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count122
 \calc@Cskip=\skip77
+<<<<<<< HEAD
 )
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1
 .sty"
@@ -633,6 +723,12 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 "
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+=======
+) (P:\MiKTeX\tex\latex\bbding\bbding.sty
+Package: bbding 1999/04/15 v1.01 Dingbats symbols
+)
+(P:\MiKTeX\tex\latex\tools\multicol.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
 \c@tracingmulticols=\count123
 \mult@box=\box32
@@ -681,14 +777,19 @@ Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
 \colbreak@box=\box57
 \mc@col@check@num=\count131
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\tocbibind\tocbibi
 nd.sty"
+=======
+(P:\MiKTeX\tex\latex\tocbibind\tocbibind.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
 
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
+<<<<<<< HEAD
 )
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\lastpage\lastpage
 .sty"
@@ -699,6 +800,16 @@ es.sty"
 Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
 Package: todonotes 2012/07/25
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+=======
+) (P:\MiKTeX\tex\latex\lastpage\lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+(P:\MiKTeX\tex\latex\todonotes\todonotes.sty
+Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+
+(P:\MiKTeX\tex\latex\xkeyval\xkeyval.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
@@ -709,6 +820,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@depth=\count132
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer
 \tikz.sty"
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pg
@@ -717,10 +829,17 @@ f.sty"
 rcs.sty"
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
 gfutil-common.tex"
+=======
+(P:\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
+(P:\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
+(P:\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+(P:\MiKTeX\tex\generic\pgf\utilities\pgfutil-common.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 \pgfutil@everybye=\toks49
 \pgfutil@tempdima=\dimen162
 \pgfutil@tempdimb=\dimen163
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
 gfutil-common-lists.tex"))
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
@@ -732,10 +851,21 @@ Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
 gfrcs.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\utilities\pgfutil-common-lists.tex))
+(P:\MiKTeX\tex\generic\pgf\utilities\pgfutil-latex.def
+\pgfutil@abb=\box58
+
+(P:\MiKTeX\tex\latex\ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(P:\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pg
 fcore.sty"
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\p
@@ -751,6 +881,18 @@ gfkeys.code.tex"
 
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
 gfkeysfiltered.code.tex"
+=======
+(P:\MiKTeX\tex\latex\pgf\basiclayer\pgfcore.sty
+(P:\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+(P:\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+(P:\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks50
+\pgfkeys@temptoks=\toks51
+
+(P:\MiKTeX\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 \pgfkeys@tmptoks=\toks52
 ))
 \pgf@x=\dimen164
@@ -771,12 +913,17 @@ gfkeysfiltered.code.tex"
 \t@pgf@tokb=\toks54
 \t@pgf@tokc=\toks55
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
 \pgf.cfg"
+=======
+(P:\MiKTeX\tex\generic\pgf\systemlayer\pgf.cfg
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
 \pgfsys-pdftex.def"
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
@@ -787,10 +934,20 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
 \pgfsyssoftpath.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+(P:\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(P:\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count137
 \pgfsyssoftpath@bigbuffer@items=\count138
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
 \pgfsysprotocol.code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -807,6 +964,18 @@ hcalc.code.tex"
 hutil.code.tex")
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
 hparser.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+(P:\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathcalc.code.tex
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathutil.code.tex)
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathparser.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 \pgfmath@dimen=\dimen172
 \pgfmath@count=\count139
 \pgfmath@box=\box59
@@ -814,6 +983,7 @@ hparser.code.tex"
 \pgfmath@stack@operand=\toks57
 \pgfmath@stack@operation=\toks58
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
 hfunctions.code.tex"
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
@@ -838,6 +1008,21 @@ hfloat.code.tex"
 ))
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
 pgfcorepoints.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.code.tex
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex)
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex)
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.random.code.tex)
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex)
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.base.code.tex)
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.round.code.tex)
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex)
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.tex)))
+(P:\MiKTeX\tex\generic\pgf\math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count140
+))
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen173
 \pgf@picmaxx=\dimen174
@@ -854,26 +1039,39 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen185
 \pgf@zy=\dimen186
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
 pgfcorepathconstruct.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen187
 \pgf@path@lasty=\dimen188
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
 pgfcorepathusage.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen189
 \pgf@shorten@start@additional=\dimen190
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
 pgfcorescopes.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box60
 \pgf@hbox=\box61
 \pgf@layerbox@main=\box62
 \pgf@picture@serial@count=\count141
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
 pgfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
@@ -881,11 +1079,19 @@ File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 )
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
 pgfcoretransformations.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen191
+)
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen192
 \pgf@pt@y=\dimen193
 \pgf@pt@temp=\dimen194
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
 pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -905,10 +1111,27 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 )
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
 pgfcoreshade.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen195
+)
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen196
 \pgf@sys@shading@range@num=\count142
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
 pgfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -941,10 +1164,37 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility
 \pgfcomp-version-0-65.sty"
+=======
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box63
+))
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(P:\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(P:\MiKTeX\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box64
+)
+(P:\MiKTeX\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(P:\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen197
 \pgf@nodesepend=\dimen198
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility
 \pgfcomp-version-1-18.sty"
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
@@ -965,17 +1215,38 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
 h.code.tex")
+=======
+(P:\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+(P:\MiKTeX\tex\latex\pgf\utilities\pgffor.sty
+(P:\MiKTeX\tex\latex\pgf\utilities\pgfkeys.sty
+(P:\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex))
+(P:\MiKTeX\tex\latex\pgf\math\pgfmath.sty
+(P:\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex))
+(P:\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(P:\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex)
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 \pgffor@iter=\dimen199
 \pgffor@skip=\dimen200
 \pgffor@stack=\toks59
 \pgffor@toks=\toks60
 ))
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
 er\tikz\tikz.code.tex"
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\p
 gflibraryplothandlers.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(P:\MiKTeX\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count143
 \pgfplotmarksize=\dimen201
@@ -995,8 +1266,12 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikznumberofcurrentchild=\count146
 \tikz@fig@count=\count147
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgf
 modulematrix.code.tex"
+=======
+(P:\MiKTeX\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count148
 \pgfmatrixcurrentcolumn=\count149
@@ -1004,6 +1279,7 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count151
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
 er\tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
@@ -1018,6 +1294,21 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 "
 Package: nth 2002/02/27
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+=======
+(P:\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code
+.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+(P:\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.
+code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+\c@@todonotes@numberoftodonotes=\count152
+) (P:\MiKTeX\tex\generic\genmisc\nth.sty
+Package: nth 2002/02/27
+)
+(P:\MiKTeX\tex\latex\hyperref\hyperref.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
@@ -1095,8 +1386,12 @@ Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count156
+<<<<<<< HEAD
 
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
+=======
+ (P:\MiKTeX\tex\latex\url\url.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -1146,15 +1441,24 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count163
 )
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\rotating\rotating
 .sty"
+=======
+(P:\MiKTeX\tex\latex\rotating\rotating.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \c@r@tfl@t=\count164
 \rotFPtop=\skip81
 \rotFPbot=\skip82
 \rot@float@box=\box69
 \rot@mess@toks=\toks61
+<<<<<<< HEAD
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+=======
+)
+(P:\MiKTeX\tex\latex\psnfss\pifont.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
 
@@ -1180,22 +1484,37 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\chngcntr\chngcntr
 .sty"
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
+=======
+(P:\MiKTeX\tex\latex\chngcntr\chngcntr.sty
+Package: chngcntr 2009/09/02 v1.0a change counter resetting
+)
+(P:\MiKTeX\tex\latex\oberdiek\bookmark.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count165
 ))
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaptio
 n.sty"
 Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
 \c@subfigure=\count166
 \c@subtable=\count167
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pbox\pbox.sty"
+=======
+(P:\MiKTeX\tex\latex\caption\subcaption.sty
+Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
+\c@subfigure=\count166
+\c@subtable=\count167
+) (P:\MiKTeX\tex\latex\pbox\pbox.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: pbox 2011/12/07 v1.2 Dynamic parboxes
 \pb@xlen=\skip83
 )
@@ -1209,8 +1528,12 @@ Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
 Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\collectbox\collec
 tbox.sty"
+=======
+(P:\MiKTeX\tex\latex\collectbox\collectbox.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box70
 )
@@ -1219,7 +1542,12 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@urx=\dimen214
 \tc@ury=\dimen215
 Package trimclip Info: Using driver 'tc-pdftex.def'.
+<<<<<<< HEAD
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+=======
+
+(P:\MiKTeX\tex\latex\adjustbox\tc-pdftex.def
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen216
@@ -1227,26 +1555,43 @@ File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 \adjbox@Depth=\dimen218
 \adjbox@Totalheight=\dimen219
 
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\ifoddpage\ifoddpa
 ge.sty"
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
 \c@checkoddpage=\count168
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+=======
+(P:\MiKTeX\tex\latex\ifoddpage\ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count168
+)
+(P:\MiKTeX\tex\latex\ltxmisc\varwidth.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box71
 \sift@deathcycles=\count169
 \@vwid@loff=\dimen220
 \@vwid@roff=\dimen221
 ))
+<<<<<<< HEAD
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.s
 ty"
+=======
+(P:\MiKTeX\tex\latex\wrapfig\wrapfig.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 \wrapoverhang=\dimen222
 \WF@size=\dimen223
 \c@WF@wrappedlines=\count170
 \WF@box=\box72
 \WF@everypar=\toks62
 Package: wrapfig 2003/01/31  v 3.6
+<<<<<<< HEAD
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+=======
+)
+(P:\MiKTeX\tex\latex\tools\longtable.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip84
 \LTright=\skip85
@@ -1267,14 +1612,19 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@currtheoremctr=\count176
 \c@endtheoremctr=\count177
 \c@theorem=\count178
-
-(setup/todo/todo.tex)) (setup/hyphenations.tex) (setup/macros.tex
+ (setup/todo/todo.tex))
+(setup/hyphenations.tex) (setup/macros.tex
 \c@currexactr=\count179
 \c@endexactr=\count180
 \c@exa=\count181
+<<<<<<< HEAD
 )
 (setup/variables.tex
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+=======
+) (setup/variables.tex
+(P:\MiKTeX\tex\latex\tools\xspace.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )) (Main.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -1295,9 +1645,13 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 7.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+<<<<<<< HEAD
 )
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
 kii"
+=======
+) (P:\MiKTeX\tex\context\base\supp-pdf.mkii
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count182
 \scratchdimen=\dimen225
@@ -1315,9 +1669,13 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
+<<<<<<< HEAD
 
 ("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\ltcaption
 .sty"
+=======
+ (P:\MiKTeX\tex\latex\caption\ltcaption.sty
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -1327,7 +1685,8 @@ Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 7.
- ABD: EveryShipout initializing macros
+
+ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box78
 Package hyperref Info: Link coloring ON on input line 7.
 LaTeX Info: Redefining \ref on input line 7.
@@ -1371,15 +1730,26 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
+<<<<<<< HEAD
 {C:/Users/Jacob Thomsen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+=======
+{C:/Users/Niclas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 (aau/titlepages.tex
 \titlepageleftcolumnwidth=\skip88
 \titlepagerightcolumnwidth=\skip89
 Package epstopdf Info: Source file: <aau/aau_logo_en.eps>
+<<<<<<< HEAD
 (epstopdf)                    date: 2015-09-20 12:21:11
 (epstopdf)                    size: 17997 bytes
 (epstopdf)             Output file: <aau/aau_logo_en-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-09-20 12:36:59
+=======
+(epstopdf)                    date: 2016-02-04 09:45:31
+(epstopdf)                    size: 17997 bytes
+(epstopdf)             Output file: <aau/aau_logo_en-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-02-04 09:45:31
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 (epstopdf)                    size: 9257 bytes
 (epstopdf)             Command: <epstopdf --outfile=aau/aau_logo_en-eps-convert
 ed-to.pdf aau/aau_logo_en.eps>
@@ -1465,6 +1835,7 @@ l.35 }
 
 
 ]
+<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 39.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
@@ -1472,6 +1843,14 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 39.
+=======
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 40.
+ (P:\MiKTeX\tex\latex\lm\omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 40.
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 )
 \tf@toc=\write4
  [5]
@@ -1488,6 +1867,8 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 16.
 ) (sections/Metode/Metode.tex [1
 
 
@@ -1509,6 +1890,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 8.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1546,15 +1928,79 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig:AKvadrat2' on page 6 undefined on input line 64.
 
 <Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=191, 844.756pt x 597.432pt>
+=======
+(P:\MiKTeX\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(P:\MiKTeX\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 9.
+ (P:\MiKTeX\tex\latex\lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+Package Listings Warning: Text dropped after begin of listing on input line 9.
+
+[4
+
+]
+
+Package caption Warning: \label without proper \caption on input line 41.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:AKvadrat1' on page 5 undefined on input line 37.
+
+<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=175, 845.559pt x 598.235pt>
+File: Pictures/Teoriafsnit/Figurfiler/Grid2.png Graphic file (type png)
+
+<use Pictures/Teoriafsnit/Figurfiler/Grid2.png>
+Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid2.png used on inpu
+t line 43.
+(pdftex.def)             Requested size: 413.99895pt x 292.9095pt.
+ [5]
+
+LaTeX Warning: Reference `lst:A*pseudo1' on page 6 undefined on input line 51.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 52.
+
+
+
+Package caption Warning: \label without proper \caption on input line 41.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:AKvadrat1' on page 6 undefined on input line 70.
+
+
+Package caption Warning: \label without proper \caption on input line 76.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:AKvadrat2' on page 6 undefined on input line 70.
+
+[6 <./Pictures/Teoriafsnit/Figurfiler/Grid2.png>]
+<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=215, 844.756pt x 597.432pt>
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 File: Pictures/Teoriafsnit/Figurfiler/Grid3.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid3.png>
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid3.png used on inpu
+<<<<<<< HEAD
 t line 68.
 (pdftex.def)             Requested size: 345.0pt x 243.99152pt.
 )
 (sections/ProblemetsRelevans/ProblemetsRelevans.tex [6 <./Pictures/Teoriafsnit/
 Figurfiler/Grid3.png>] [7]
+=======
+t line 74.
+(pdftex.def)             Requested size: 345.0pt x 243.99152pt.
+)
+(sections/ProblemetsRelevans/ProblemetsRelevans.tex [7 <./Pictures/Teoriafsnit/
+Figurfiler/Grid3.png>]
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 Chapter 4.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
@@ -1752,6 +2198,7 @@ LaTeX Warning: There were undefined references.
 ### semi simple group (level 1) entered at line 35 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  23175 strings out of 493673
  410274 string characters out of 3141503
  532423 words of memory out of 3000000
@@ -1785,4 +2232,31 @@ PDF statistics:
  556 PDF objects out of 1000 (max. 8388607)
  119 named destinations out of 1000 (max. 500000)
  399 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 23166 strings out of 493673
+ 396809 string characters out of 3151272
+ 518861 words of memory out of 3000000
+ 25763 multiletter control sequences out of 15000+200000
+ 81039 words of font info for 58 fonts, out of 3000000 for 9000
+ 1030 hyphenation exceptions out of 8191
+ 64i,15n,75p,1497b,2026s stack positions out of 5000i,500n,10000p,200000b,50000s
+{P:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-math
+sy.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm
+-mathit.enc}{P:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<P:/MiKTeX/fonts/type1/p
+ublic/lm/lmbsy10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><P:/MiKTeX/fon
+ts/type1/public/lm/lmbx12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><P:/Mi
+KTeX/fonts/type1/public/lm/lmmi10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr10.pf
+b><P:/MiKTeX/fonts/type1/public/lm/lmr12.pfb><P:/MiKTeX/fonts/type1/public/lm/l
+mr7.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr8.pfb><P:/MiKTeX/fonts/type1/public
+/lm/lmri10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmri8.pfb><P:/MiKTeX/fonts/type
+1/public/lm/lmss9.pfb><P:/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><P:/MiKTeX/
+fonts/type1/public/lm/lmsy10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><P
+:/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><P:/MiKTeX/fonts/type1/urw/zapfchan/uz
+cmi8a.pfb>
+Output written on Main.pdf (30 pages, 547423 bytes).
+PDF statistics:
+ 558 PDF objects out of 1000 (max. 8388607)
+ 121 named destinations out of 1000 (max. 500000)
+ 412 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 39beab1e7b3ef06d303b53c814eb212d43a140c8
 
