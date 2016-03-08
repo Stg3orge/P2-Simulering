@@ -58,7 +58,22 @@
 % Enable arithmetics with length. Useful when
 % typesetting the layout.
 \usepackage{calc}
-
+\lstset{
+   language=C,
+   basicstyle=\footnotesize\ttfamily,
+   breaklines=true,
+   prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+   frame=shadowbox,
+   showtabs=false,
+   showspaces=false,
+   showstringspaces=false,
+   keywordstyle=\color{red}\bfseries,
+   stringstyle=\color{green!50!black},
+   commentstyle=\color{gray}\itshape,
+   numbers=left,
+   captionpos=t,
+   escapeinside={\%​*}{*​)}
+}
 %cross sign
 \usepackage{bbding}
 
