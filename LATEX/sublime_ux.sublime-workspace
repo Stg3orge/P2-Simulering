@@ -115,7 +115,7 @@
 			"file": "sections/Teori/Teori.tex",
 			"settings":
 			{
-				"buffer_size": 7566,
+				"buffer_size": 7693,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,7 +155,7 @@
 			"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
 			"settings":
 			{
-				"buffer_size": 6501,
+				"buffer_size": 6629,
 				"line_ending": "Windows"
 			}
 		},
@@ -163,7 +163,7 @@
 			"file": "references.bib",
 			"settings":
 			{
-				"buffer_size": 3010,
+				"buffer_size": 3241,
 				"line_ending": "Windows"
 			}
 		},
@@ -171,7 +171,7 @@
 			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 			"settings":
 			{
-				"buffer_size": 5043,
+				"buffer_size": 5429,
 				"line_ending": "Unix"
 			}
 		}
@@ -404,15 +404,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7566,
+						"buffer_size": 7693,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1595,
-								1595
+								0,
+								0
 							]
 						],
 						"settings":
@@ -548,15 +548,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6501,
+						"buffer_size": 6629,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								677,
-								701
+								0,
+								0
 							]
 						],
 						"settings":
@@ -576,15 +576,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3010,
+						"buffer_size": 3241,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2854,
-								2854
+								3241,
+								3241
 							]
 						],
 						"settings":
@@ -594,7 +594,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 87.0,
+						"translation.y": 1005.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -606,7 +606,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5043,
+						"buffer_size": 5429,
 						"regions":
 						{
 						},
