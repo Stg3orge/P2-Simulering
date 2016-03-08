@@ -1,5 +1,6 @@
-\chapter{Teori}
+\chapter{Teori}\label{Teori}
 
+<<<<<<< HEAD
 \section{Dijkstras Algoritme}
 
 Dijkstras algoritme er en algoritme til at finde den korteste vej fra et bestemt punkt til et andet punkt. Disse punkter kan bland andet repræsentere den korteste vej mellem to forskellige byer. Dijkstras er en grådig algoritme, da den finder den mindste længde først og fortsætter således.\cite{DMATBOGEN}
@@ -23,6 +24,9 @@ return (L(z)) {L(z) = length of a shortest path from 	a to z}
 \end{lstlisting}
 
 \section{A* Algoritmen}
+=======
+\section{A* Algoritmen}\label{A-Algoritmen}
+>>>>>>> 1d857fcaf189d131f19ed917d91e5cdb2bb39ea6
 Primært når det kommer til belægning af en dynamisk rute, foregår det ved at en enhed fortsætter hen i mod et mål indtil den når en forhindring. Dette er et ekstremt simpelt bevægelsesmønster og indebærer in vis in-effektivitet. Rent retorisk kunne man stille spørgsmålet om det ikke ville være smartere at planlægge en rute før man overhovedet bevæger sig.
 
 A* er en algoritme til at beregne den korteste rute baseret på en række heuristiske datasæt. A* får input igennem en brugerlavet graf der indeholder en række datasæt for at algoritmen kan fungere.  Først har vi distancen fra punkt til punkt, eksempelvis punkt 'A' til punkt 'B' som vi kalder for f.eks. \textbf{'H'} og dernæst har vi et datasæt \textbf{'G'} der indeholder bekostningen for at flytte fra en kant til en anden, denne variabel er bestemt på forhånd. Et virkelighedseksempel kunne være at man vil over på den anden side af en sø, så har man så muligheden for at svømme direkte eller gå uden om og det koster f.eks. 2 gange så meget at bevæge sig direkte igennem søen. Dette er givet ved \textbf{'G'}, hvor som sagt \textbf{'H'} er den ultimative korteste længde til det bestemte slutpunkt. \textbf{'H'} fungerer desuden for hvilket som helst punkt i et system og angiver \textit{altid} den korteste vej til slutpunktet uanset forhindringer. Det skal også nævnes at \textbf{'H'} ikke er påvirket af bevægelsesbekostningen, til at starte med, som \textbf{'G'} angiver, dette kommer først senere. Til sidst har vi \textbf{'F'} der er en samenlagt værdi af både \textbf{'H'} og \textbf{'G'}. Dette gælder kun for hver kasse der flyttes til, hvori \textbf{'H'} er angivet ved kassen man flytter tils \textbf{'H'} værdi. Det kan vises således i formlen \ref{eq:A*}:
