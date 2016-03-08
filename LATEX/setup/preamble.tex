@@ -41,6 +41,9 @@
 % The ntheorem package is also used for the example environment
 % When using thmmarks, amsmath must be an option as well. Otherwise \eqref doesn't work anymore.
 \usepackage[framed,amsmath,thmmarks]{ntheorem}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{etoolbox}
 % Change the headers and footers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -48,6 +51,10 @@
 \renewcommand{\headrulewidth}{10pt} % optional
 \fancyhead[L]{\nouppercase{\leftmark}}
 \fancyhead[R]{\thepage}
+\makeatletter
+%\patchcmd{\@fancyhead}{\rlap}{\color{red}\rlap}{}{}
+\patchcmd{\headrule}{\hrule}{\color{gray}\hrule}{}{}
+\makeatother
 % Enable arithmetics with length. Useful when
 % typesetting the layout.
 \usepackage{calc}

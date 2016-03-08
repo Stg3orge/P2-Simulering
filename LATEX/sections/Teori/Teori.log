@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.16)  7 MAR 2016 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.16)  7 MAR 2016 13:40
 entering extended mode
 **Teori
 (Teori.tex
@@ -1632,7 +1632,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.13 \begin{wrapfigure}
-                       {l}{0.60\textwidth}
+                       {l}{0.85\textwidth}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1645,19 +1645,19 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.13 \begin{wrapfigure}{l
-                         }{0.60\textwidth}
+                         }{0.85\textwidth}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no l in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 5 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    }
-l.13 \begin{wrapfigure}{l}{0.60\textwidth}
+l.13 \begin{wrapfigure}{l}{0.85\textwidth}
                                           
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1666,7 +1666,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.13 \begin{wrapfigure}{l}{0.60\textwidth}
+l.13 \begin{wrapfigure}{l}{0.85\textwidth}
                                           
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1677,7 +1677,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 
 ! Undefined control sequence.
 l.15     \includegraphics
-                         [width=0.60\textwidth]{Pictures/Teoriafsnit/Figurfi...
+                         [width=0.85\textwidth]{Pictures/Teoriafsnit/Figurfi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1693,12 +1693,12 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 5 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.15     \includegraphics[width=0.60\textwidth]
+l.15     \includegraphics[width=0.85\textwidth]
                                                {Pictures/Teoriafsnit/Figurfi...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1707,7 +1707,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.15     \includegraphics[width=0.60\textwidth]
+l.15     \includegraphics[width=0.85\textwidth]
                                                {Pictures/Teoriafsnit/Figurfi...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -3195,17 +3195,6 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
 )
-Runaway argument?
-! File ended while scanning use of \ref.
-<inserted text> 
-                \par 
-<*> Teori
-         
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
 ! Emergency stop.
 <*> Teori
          
