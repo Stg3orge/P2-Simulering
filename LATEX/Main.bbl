@@ -1,9 +1,23 @@
 \begin{thebibliography}{1}
 
-\bibitem{DMATBOGEN}
-hans.
-\newblock {\em Game engines disected}.
-\newblock Publisher, 1. edition, 2015.
+\bibitem{COPERTII}
+
+
+\bibitem{dmuadfaerdsmodel}
+Danmarks Miljøundersøgelser.
+\newblock Altrans - adfærdsmodel for persontrafik, faglig rapport fra dmu nr.
+  348.
+\newblock
+  \url{http://www.dmu.dk/1_viden/2_Publikationer/3_fagrapporter/rapporter/fr348.pdf},
+  2001.
+
+\bibitem{dmumodelanalyser}
+Danmarks Miljøundersøgelser.
+\newblock Modelanalyser af mobilitet og miljø. slutrapport fra altrans og amor
+  ii, faglig rapport fra dmu nr. 447.
+\newblock
+  \url{http://www.dmu.dk/1_viden/2_publikationer/3_fagrapporter/rapporter/FR447.pdf},
+  2003.
 
 \bibitem{stress}
 Dwight A~Hennessy og~David L~Wiesenthal.
@@ -30,6 +44,11 @@ Henrik Papsø.
 \newblock
   \url{http://www.tveast.dk/artikler/trafikpropper-kan-koste-menneskeliv},
   2007.
+
+\bibitem{DMATBOGEN}
+Kenneth~H. Rosen.
+\newblock {\em Discrete Mathematics and its Applications}.
+\newblock McGraw Hill, 7. global edition, 20113.
 
 \bibitem{dtfnotat}
 Danmarks TransportForskning.

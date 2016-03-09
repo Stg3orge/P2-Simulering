@@ -11,12 +11,17 @@ OBS: Dette afsnit er ikke færdigt og modellen kan og vil med høj sandsynlighed
 En publikation fra 1988 af en Paul Ross fra Traffic Systems Division, belyser om emnet Traffic Dynamics og herunder Traffic Flow cite{trafdyn}{PaullRoss01}. Som Paul Ross beskriver så området et af dem der er mindst forstået da der på dette tidspunkt ikke var nogle kontinuum teorier der kunne forudse trafik densitet, volume og fart med den præcision som der forventes for at kunne opstille et timing signal. Derimod er det bedste der kan gøres er at lave et cirka estimate med diskontinuerlig dellinger. Publikationen forklarer i større detalje hvordan at for at få et udbytte med kontrol, simulation og en general forståelse for emnet, er en beskrivelse af trafik med henhold til fortsættende og differentiable kvantitativer nødvendig. Formålet med denne publikation er at udvikle en ny (nu gamle) formulering til dette som er kvalitativt korrekt. 
 
 Den generelle konsensus for trafik variabler er følgende: Trafik Densiteten, k, farten, v, og volume, Q, er passende og brugbare til formået beskrevet herover. Med disse variabler er to relationer kendt. Den første er forbundet i definitionenerne på volume, densitet og fart.
-	
-\begin{equation}\label{Equation 1}
-\[Q = kv \] \begin{flushright}
-(1)
-\end{flushright}
-\end{equation}
+
+\begin{verbatim}\label{eq:Equation1}
+[Q = kv]
+\end{verbatim}
+
+%\begin{equation}\label{eq:Equation1}
+%\[Q = kv \]
+%\begin{flushright}
+%(1)
+%\end{flushright}
+%\end{equation}
 						
 hvor følgende er gældende:
 
@@ -26,14 +31,16 @@ v  = (local space-mean) fart (km/t)
 
 Det andet kendte relation, kontinuiteten af fartøjer, blev peget ud af Lighthill og Whitham (1955):
 
-\begin{equation}\label{Equation 2}
-\[ ∂k/∂t + ∂Q/∂x = S(x, t) \]\begin{flushright}
-(2)
-\end{flushright}
-\end{equation}
+%\begin{equation}\label{eq:Equation2}
+%\[ ∂k/∂t + ∂Q/∂x = S(x, t) \]
+%\begin{flushright}
+%(2)
+%\end{flushright}
+%\end{equation}
 
 Hvor følgende er gældende:
-∂/∂t og ∂/∂t indikerer delvis differentiering i forhold til tiden, t, og lokation på en vej x.
+%∂/∂t+ og ∂/∂t 
+indikerer delvis differentiering i forhold til tiden, t, og lokation på en vej x.
 S(x,t) er fartøjer der køre ind på (positive) og køre ud igen (negative) på en vejbane (veh/(km/t)).
 
 Disse to ligninger er dog ikke de eneste der er nødvendige for en fuldendt formulering af trafik flow. En tredje relation er også nødvendigt.
@@ -45,11 +52,11 @@ En anden relation vil være “Equilibirum Speed-Density Hypothises” udarbejde
 
 Med dette taget i betragtning kigges der derfor istedet på følgende relation som er formuleret ud fra logiske analyse samt observationer foretaget af Hurdle og Solomon i 1986[5]. Disse indikerer at overbelastning på vejene reducere den ønskede trafik hastighed, men derimod sænker den aktuelle hastighed på vejene mens personer bag rettet har stadig den far de ønsker at rejse i deres free-flow. Relationen kan udtrykkes som følgende:
 
-\begin{equation}\label{Equation 3}
-\[∂v + v ∂t = (F - v)~T, k < kjam 	\]\begin{flushright}
-(3)
-\end{flushright}
-\end{equation}
+%\begin{equation}\label{Equation 3}
+%\[∂v + v ∂t = (F - v)~T, k < kjam 	\]\begin{flushright}
+%(3)
+%\end{flushright}
+%\end{equation}
 
 Hvor:
 F = fri fart på et anlæg (Vejbane) (km/t)
@@ -63,30 +70,30 @@ Contraints:
 Capacity Limit
 De to relationer, den deterministiske og equilibriums relationerne, bliver kapaciteten af vejene bestemt af formed af fart-densitets kurven. Men vores formulering anvender ikke disse to og mangler derfor en lignende begrænsning, derfor formuleres dette på følgende måde for vores model: 
 
-\begin{equation}\label{Equation 4}
-\[v ≤ Capacity / k	\]\begin{flushright}
-(4)
-\end{flushright}
-\end{equation}
+%\begin{equation}\label{Equation 4}
+%\[v ≤ Capacity / k	\]\begin{flushright}
+%(4)
+%\end{flushright}
+%\end{equation}
 
 Denne ulighed fremmer at trafikken vil reducere sin fart således at flowet igennem en indsnævring ikke vil gå ud over kapaciteten af denne indsnævring. Basseret på Paul Ross’s observationer at dette er, kvalitativt, hvad der også sker i rigtige indsnævringer.
 
 Jam density
 Med disse ligninger har vi nu en udemneærket repræsentation af trafik ved lave densiteter som også nu fungerer med kapacitet som en form for begrænsning. Dette beskriver dog ikke trafikkens opførsel når trafikkens densitet når sit maksimum, kjam.
 
-\begin{equation}\label{Equation 5}
-\[k ≤ k_jam.\]\begin{flushright}
-(5)
-\end{flushright}
-\end{equation}
+%\begin{equation}\label{Equation 5}
+%\[k ≤ k_jam.\]\begin{flushright}
+%(5)
+%\end{flushright}
+%\end{equation}
 
 Som Paul Ross beskriver kjam, så er kjam en konstant som kan ændre sig fra sted til sted, alt efter antallet af vejbaner, men den er ikke afhængig af den fart som trafikken bevæger sig med. Sammenligningen med væsker gør sig gældene igen. En væske’s flow har en volume som er uafhængig af x men dette er ikke inkorporeret i vores formulering endnu. hvis vi tager lign (3) så antages det eksplicit at trafik er komprimerbart. Således kan jam densiteten for lign (4) ændre til følgende.
 
-\begin{equation}\label{Equation 6}
-\[ ∂Q/∂x = 0, k = k_jam 	\]\begin{flushright}
-(6)
-\end{flushright}
-\end{equation}
+%\begin{equation}\label{Equation 6}
+%\[ ∂Q/∂x = 0, k = k_jam 	\]\begin{flushright}
+%(6)
+%\end{flushright}
+%\end{equation}
 
 Med relationer (1), (2), (3), (4), (5) og (6) har vi nu en komplet formulering af trafik som kan inddrages i vores program.
 Note: Nogle dele kan nok godt omformuleres

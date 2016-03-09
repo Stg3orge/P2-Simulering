@@ -2,12 +2,6 @@
 \contentsline {chapter}{Preface}{iii}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Indledning}{1}{chapter.0.1}
 \contentsline {chapter}{\numberline {2}Metode}{2}{chapter.0.2}
-<<<<<<< HEAD
-\contentsline {part}{I\hspace {1em}Problemanalyse}{3}{part.1}
-\contentsline {chapter}{\numberline {3}Teori}{4}{chapter.1.3}
-\contentsline {section}{\numberline {3.1}Dijkstras Algoritme}{4}{section.1.3.1}
-\contentsline {section}{\numberline {3.2}A* Algoritmen}{5}{section.1.3.2}
-=======
 \contentsline {subsection}{\numberline {2.0.1}Brainstorm og Problemtr\IeC {\ae }}{2}{subsection.0.2.0.1}
 \contentsline {subsection}{\numberline {2.0.2}Problemomr\IeC {\r a}de}{2}{subsection.0.2.0.2}
 \contentsline {subsection}{\numberline {2.0.3}Fremgangsm\IeC {\r a}de}{2}{subsection.0.2.0.3}
@@ -15,58 +9,43 @@
 \contentsline {subsection}{\numberline {2.0.5}Kilder og Kildekritik}{3}{subsection.0.2.0.5}
 \contentsline {part}{I\hspace {1em}Problemanalyse}{4}{part.1}
 \contentsline {chapter}{\numberline {3}Teori}{5}{chapter.1.3}
-\contentsline {section}{\numberline {3.1}Dijkstras Algoritme}{5}{section.1.3.1}
-\contentsline {section}{\numberline {3.2}A* Algoritmen}{6}{section.1.3.2}
->>>>>>> 1ebe87c1a783fe8fb300a4d4a4addaed42c0d4f6
-\contentsline {chapter}{\numberline {4}Problembeskrivelse}{9}{chapter.1.4}
-\contentsline {section}{\numberline {4.1}Problemets Relevans}{9}{section.1.4.1}
-\contentsline {subsection}{\numberline {4.1.1}\IeC {\O }konomi}{9}{subsection.1.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Forurening}{10}{subsection.1.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Livskvalitet}{10}{subsection.1.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}N\IeC {\o }dsituationer}{10}{subsection.1.4.1.4}
-\contentsline {section}{\numberline {4.2}Eksisterende Modeller}{10}{section.1.4.2}
-\contentsline {chapter}{\numberline {5}Teknologianalyse}{12}{chapter.1.5}
-\contentsline {chapter}{\numberline {6}Interessentanalyse}{13}{chapter.1.6}
-<<<<<<< HEAD
-\contentsline {section}{\numberline {6.1}Kollektiv trafik}{13}{section.1.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Nordjyllands Traffikselskab (NT)}{13}{subsection.1.6.1.1}
-\contentsline {section}{\numberline {6.2}Erhvervsk\IeC {\o }rsel}{13}{section.1.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Transport og fragt}{13}{subsection.1.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Taxiselskaber}{13}{subsection.1.6.2.2}
-\contentsline {section}{\numberline {6.3}Privatk\IeC {\o }rsel}{14}{section.1.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Myldretidstrafik}{14}{subsection.1.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Enkelte borger}{14}{subsection.1.6.3.2}
-\contentsline {section}{\numberline {6.4}Katastrofek\IeC {\o }rsel}{14}{section.1.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Alarmberedskab}{14}{subsection.1.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Politi}{14}{subsection.1.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Ambulanceudrykning}{14}{subsection.1.6.4.3}
-\contentsline {subsection}{\numberline {6.4.4}Trafikuheld}{15}{subsection.1.6.4.4}
-\contentsline {section}{\numberline {6.5}Kommunale og statslig instanser}{15}{section.1.6.5}
-\contentsline {subsection}{\numberline {6.5.1}}{15}{subsection.1.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Vejarbejde}{15}{subsection.1.6.5.2}
-\contentsline {chapter}{\numberline {7}Problemformulering}{16}{chapter.1.7}
-\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{17}{part.2}
-\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{18}{chapter.2.8}
-\contentsline {chapter}{\numberline {9}Kravspecifikationer}{19}{chapter.2.9}
-\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{19}{subsection.2.9.0.1}
-\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{19}{subsection.2.9.0.2}
-\contentsline {chapter}{\numberline {10}Implementation}{20}{chapter.2.10}
-\contentsline {chapter}{\numberline {11}Diskussion}{21}{chapter.2.11}
-\contentsline {chapter}{\numberline {12}Konklusion}{22}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Perspektivering}{23}{chapter.2.13}
-\contentsline {chapter}{Bibliography}{24}{chapter*.8}
-\contentsline {chapter}{\numberline {A}Appendix}{25}{appendix.A}
-=======
-\contentsline {chapter}{\numberline {7}Problemformulering}{17}{chapter.1.7}
-\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{18}{part.2}
-\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{19}{chapter.2.8}
-\contentsline {chapter}{\numberline {9}Kravspecifikationer}{20}{chapter.2.9}
-\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{20}{subsection.2.9.0.1}
-\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{20}{subsection.2.9.0.2}
-\contentsline {chapter}{\numberline {10}Implementation}{21}{chapter.2.10}
-\contentsline {chapter}{\numberline {11}Diskussion}{22}{chapter.2.11}
-\contentsline {chapter}{\numberline {12}Konklusion}{23}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Perspektivering}{24}{chapter.2.13}
-\contentsline {chapter}{Bibliography}{25}{chapter*.7}
-\contentsline {chapter}{\numberline {A}Appendix}{26}{appendix.A}
->>>>>>> 1ebe87c1a783fe8fb300a4d4a4addaed42c0d4f6
+\contentsline {section}{\numberline {3.1}Trafik Model}{5}{section.1.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Trafik Flow}{5}{subsection.1.3.1.1}
+\contentsline {section}{\numberline {3.2}Dijkstras Algoritme}{7}{section.1.3.2}
+\contentsline {section}{\numberline {3.3}A* Algoritmen}{9}{section.1.3.3}
+\contentsline {chapter}{\numberline {4}Problembeskrivelse}{12}{chapter.1.4}
+\contentsline {section}{\numberline {4.1}Problemets Relevans}{12}{section.1.4.1}
+\contentsline {subsection}{\numberline {4.1.1}\IeC {\O }konomi}{12}{subsection.1.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Forurening}{13}{subsection.1.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Livskvalitet}{13}{subsection.1.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}N\IeC {\o }dsituationer}{13}{subsection.1.4.1.4}
+\contentsline {section}{\numberline {4.2}Eksisterende Modeller}{13}{section.1.4.2}
+\contentsline {chapter}{\numberline {5}Teknologianalyse}{15}{chapter.1.5}
+\contentsline {section}{\numberline {5.1}Indledning til teknologianylse her}{15}{section.1.5.1}
+\contentsline {section}{\numberline {5.2}VisSim}{15}{section.1.5.2}
+\contentsline {subsection}{\numberline {5.2.1}VisSim - Bilen}{15}{subsection.1.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}VisSim - Netv\IeC {\ae }rket}{16}{subsection.1.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Analyse af acceleration og deceleration}{16}{subsection.1.5.2.3}
+\contentsline {chapter}{\numberline {6}Altrans}{18}{chapter.1.6}
+\contentsline {section}{\numberline {6.1}Geografisk model}{18}{section.1.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Model af kollektivt transportnet}{18}{subsection.1.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Model af serviceniveau}{19}{subsection.1.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Model for bilrejser}{19}{subsection.1.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Model for attraktion til byfunktioner}{19}{subsection.1.6.1.4}
+\contentsline {section}{\numberline {6.2}Adf\IeC {\ae }rds model}{19}{section.1.6.2}
+\contentsline {section}{\numberline {6.3}Emissions model}{19}{section.1.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Varmstart}{20}{subsection.1.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Koldstartstill\IeC {\ae }g}{20}{subsection.1.6.3.2}
+\contentsline {chapter}{\numberline {7}Interessentanalyse}{21}{chapter.1.7}
+\contentsline {chapter}{\numberline {8}Problemformulering}{25}{chapter.1.8}
+\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{26}{part.2}
+\contentsline {chapter}{\numberline {9}L\IeC {\o }sningsforslag}{27}{chapter.2.9}
+\contentsline {chapter}{\numberline {10}Kravspecifikationer}{28}{chapter.2.10}
+\contentsline {subsection}{\numberline {10.0.1}Succeskriterier}{28}{subsection.2.10.0.1}
+\contentsline {subsection}{\numberline {10.0.2}\IeC {\textbullet }}{28}{subsection.2.10.0.2}
+\contentsline {chapter}{\numberline {11}Implementation}{29}{chapter.2.11}
+\contentsline {chapter}{\numberline {12}Diskussion}{30}{chapter.2.12}
+\contentsline {chapter}{\numberline {13}Konklusion}{31}{chapter.2.13}
+\contentsline {chapter}{\numberline {14}Perspektivering}{32}{chapter.2.14}
+\contentsline {chapter}{Bibliography}{33}{chapter*.11}
+\contentsline {chapter}{\numberline {A}Appendix}{34}{appendix.A}
