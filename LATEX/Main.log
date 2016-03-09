@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  9 MAR 2016 09:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  9 MAR 2016 14:14
 entering extended mode
 **Main.tex
 (Main.tex
@@ -1363,12 +1363,12 @@ l.35 }
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 39.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 28.
  (P:\MiKTeX\tex\latex\lm\omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 39.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 28.
 )
 \tf@toc=\write4
 
@@ -1399,7 +1399,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 
 ) [2
 
-] [3
+] [3] [4
 
 ] (sections/Teori/Teori.tex
 Chapter 3.
@@ -1416,7 +1416,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 9.
- [4
+ [5
 
 ]
 
@@ -1424,32 +1424,32 @@ Package caption Warning: \label without proper \caption on input line 40.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:AKvadrat1' on page 5 undefined on input line 33.
+LaTeX Warning: Reference `fig:AKvadrat1' on page 6 undefined on input line 33.
 
-<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=178, 845.559pt x 598.235pt>
+<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=160, 845.559pt x 598.235pt>
 File: Pictures/Teoriafsnit/Figurfiler/Grid2.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid2.png>
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid2.png used on inpu
 t line 38.
 (pdftex.def)             Requested size: 413.99895pt x 292.9095pt.
- [5]
+ [6]
 
 Package caption Warning: \label without proper \caption on input line 40.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:AKvadrat1' on page 6 undefined on input line 66.
+LaTeX Warning: Reference `fig:AKvadrat1' on page 7 undefined on input line 66.
 
 
 Package caption Warning: \label without proper \caption on input line 72.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:AKvadrat2' on page 6 undefined on input line 66.
+LaTeX Warning: Reference `fig:AKvadrat2' on page 7 undefined on input line 66.
 
-[6 <./Pictures/Teoriafsnit/Figurfiler/Grid2.png>]
-<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=217, 844.756pt x 597.432pt>
+[7 <./Pictures/Teoriafsnit/Figurfiler/Grid2.png>]
+<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=200, 844.756pt x 597.432pt>
 File: Pictures/Teoriafsnit/Figurfiler/Grid3.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid3.png>
@@ -1457,7 +1457,7 @@ Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid3.png used on inpu
 t line 70.
 (pdftex.def)             Requested size: 345.0pt x 243.99152pt.
 )
-(sections/ProblemetsRelevans/ProblemetsRelevans.tex [7 <./Pictures/Teoriafsnit/
+(sections/ProblemetsRelevans/ProblemetsRelevans.tex [8 <./Pictures/Teoriafsnit/
 Figurfiler/Grid3.png>]
 Chapter 4.
 
@@ -1471,48 +1471,42 @@ Overfull \hbox (8.08337pt too wide) in paragraph at lines 8--9
 vn, og en Forbindelse
  []
 
-[8
+[9
 
-] [9]) (sections/Teknologianalyse/Teknologianalyse.tex [10]
+] [10]) (sections/Teknologianalyse/Teknologianalyse.tex [11]
 Chapter 5.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Interessentanalyse/Interessentanalyse.tex [11
+) (sections/Interessentanalyse/Interessentanalyse.tex [12
 
 ]
 Chapter 6.
 
-Overfull \hbox (10.0pt too wide) in paragraph at lines 3--3
+Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
-[12
+[13
 
-]
-Overfull \hbox (20.33266pt too wide) in paragraph at lines 37--38
-[]\T1/lmr/m/n/10 https://www.newscientist.com/article/dn13402-shockwave-traffic
--jam-recreated-
+] [14]
+Overfull \hbox (14.24184pt too wide) in paragraph at lines 94--96
+[]\T1/lmr/m/n/10 Ressource per-son: (In-volveres) Denne gruppe er den vigtig-st
+e gruppe. Ressource
  []
 
-
-Overfull \hbox (120.24864pt too wide) in paragraph at lines 41--42
-[]\T1/lmr/m/n/10 2630/10/3/033001/meta;jsessionid=438C580C1C2C3B3FB10D9B11878FE
-7D3.c3.iopscience.cld.iop.org 
- []
-
-[13]) (sections/Problemformulering/Problemformulering.tex [14]
+[15]) (sections/Problemformulering/Problemformulering.tex [16]
 Chapter 7.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) [15
+) [17
 
-] [16
+] [18
 
 ] (sections/Loesningsforslag/Loesningsforslag.tex
 Chapter 8.
@@ -1521,7 +1515,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Kravspecifikationer/Kravspecifikationer.tex [17
+) (sections/Kravspecifikationer/Kravspecifikationer.tex [19
 
 ]
 Chapter 9.
@@ -1532,7 +1526,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 
 LaTeX Font Info:    Font shape `OMS/lmr/bx/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/b/n' tried instead on input line 5.
-) (sections/Implementation/Implementation.tex [18
+) (sections/Implementation/Implementation.tex [20
 
 ]
 Chapter 10.
@@ -1541,7 +1535,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Diskussion/Diskussion.tex [19
+) (sections/Diskussion/Diskussion.tex [21
 
 ]
 Chapter 11.
@@ -1550,7 +1544,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Konklusion/Konklusion.tex [20
+) (sections/Konklusion/Konklusion.tex [22
 
 ]
 Chapter 12.
@@ -1559,7 +1553,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Perspektivering/Perspektivering.tex [21
+) (sections/Perspektivering/Perspektivering.tex [23
 
 ]
 Chapter 13.
@@ -1568,7 +1562,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-)) (Main.bbl [22
+)) (Main.bbl [24
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 9--14
@@ -1612,7 +1606,7 @@ $\T1/lmtt/m/n/10 20dtf / 2007 / arbejdsnotat _ om _ trafikmodeller _ 160507 . a
 shx ? la = da$[][]\T1/lmr/m/n/10 ,
  []
 
-) [23
+) [25
 
 ] (appendix.tex
 Appendix A.
@@ -1625,7 +1619,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 \tf@thm=\write5
  
 AED: lastpage setting LastPage
-[24
+[26
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
@@ -1639,10 +1633,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 23184 strings out of 493673
- 397016 string characters out of 3151272
- 532500 words of memory out of 3000000
- 25776 multiletter control sequences out of 15000+200000
+ 23149 strings out of 493673
+ 396521 string characters out of 3151272
+ 531736 words of memory out of 3000000
+ 25750 multiletter control sequences out of 15000+200000
  89058 words of font info for 68 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
  64i,15n,76p,1497b,2029s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1660,9 +1654,9 @@ ts/type1/public/lm/lmssbx10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><P:
 /MiKTeX/fonts/type1/public/lm/lmsy8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmtt10
 .pfb><P:/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><P:/MiKTeX/fonts/type1/urw/zapf
 chan/uzcmi8a.pfb>
-Output written on Main.pdf (30 pages, 553652 bytes).
+Output written on Main.pdf (32 pages, 553421 bytes).
 PDF statistics:
- 561 PDF objects out of 1000 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
- 404 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 514 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
+ 316 words of extra memory for PDF output out of 10000 (max. 10000000)
 
