@@ -2,10 +2,22 @@
 \contentsline {chapter}{Preface}{iii}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Indledning}{1}{chapter.0.1}
 \contentsline {chapter}{\numberline {2}Metode}{2}{chapter.0.2}
+<<<<<<< HEAD
 \contentsline {part}{I\hspace {1em}Problemanalyse}{3}{part.1}
 \contentsline {chapter}{\numberline {3}Teori}{4}{chapter.1.3}
 \contentsline {section}{\numberline {3.1}Dijkstras Algoritme}{4}{section.1.3.1}
 \contentsline {section}{\numberline {3.2}A* Algoritmen}{5}{section.1.3.2}
+=======
+\contentsline {subsection}{\numberline {2.0.1}Brainstorm og Problemtr\IeC {\ae }}{2}{subsection.0.2.0.1}
+\contentsline {subsection}{\numberline {2.0.2}Problemomr\IeC {\r a}de}{2}{subsection.0.2.0.2}
+\contentsline {subsection}{\numberline {2.0.3}Fremgangsm\IeC {\r a}de}{2}{subsection.0.2.0.3}
+\contentsline {subsection}{\numberline {2.0.4}S\IeC {\o }geprotokol}{3}{subsection.0.2.0.4}
+\contentsline {subsection}{\numberline {2.0.5}Kilder og Kildekritik}{3}{subsection.0.2.0.5}
+\contentsline {part}{I\hspace {1em}Problemanalyse}{4}{part.1}
+\contentsline {chapter}{\numberline {3}Teori}{5}{chapter.1.3}
+\contentsline {section}{\numberline {3.1}Dijkstras Algoritme}{5}{section.1.3.1}
+\contentsline {section}{\numberline {3.2}A* Algoritmen}{6}{section.1.3.2}
+>>>>>>> 1ebe87c1a783fe8fb300a4d4a4addaed42c0d4f6
 \contentsline {chapter}{\numberline {4}Problembeskrivelse}{9}{chapter.1.4}
 \contentsline {section}{\numberline {4.1}Problemets Relevans}{9}{section.1.4.1}
 \contentsline {subsection}{\numberline {4.1.1}\IeC {\O }konomi}{9}{subsection.1.4.1.1}
@@ -15,6 +27,7 @@
 \contentsline {section}{\numberline {4.2}Eksisterende Modeller}{10}{section.1.4.2}
 \contentsline {chapter}{\numberline {5}Teknologianalyse}{12}{chapter.1.5}
 \contentsline {chapter}{\numberline {6}Interessentanalyse}{13}{chapter.1.6}
+<<<<<<< HEAD
 \contentsline {section}{\numberline {6.1}Kollektiv trafik}{13}{section.1.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Nordjyllands Traffikselskab (NT)}{13}{subsection.1.6.1.1}
 \contentsline {section}{\numberline {6.2}Erhvervsk\IeC {\o }rsel}{13}{section.1.6.2}
@@ -43,3 +56,17 @@
 \contentsline {chapter}{\numberline {13}Perspektivering}{23}{chapter.2.13}
 \contentsline {chapter}{Bibliography}{24}{chapter*.8}
 \contentsline {chapter}{\numberline {A}Appendix}{25}{appendix.A}
+=======
+\contentsline {chapter}{\numberline {7}Problemformulering}{17}{chapter.1.7}
+\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{18}{part.2}
+\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{19}{chapter.2.8}
+\contentsline {chapter}{\numberline {9}Kravspecifikationer}{20}{chapter.2.9}
+\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{20}{subsection.2.9.0.1}
+\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{20}{subsection.2.9.0.2}
+\contentsline {chapter}{\numberline {10}Implementation}{21}{chapter.2.10}
+\contentsline {chapter}{\numberline {11}Diskussion}{22}{chapter.2.11}
+\contentsline {chapter}{\numberline {12}Konklusion}{23}{chapter.2.12}
+\contentsline {chapter}{\numberline {13}Perspektivering}{24}{chapter.2.13}
+\contentsline {chapter}{Bibliography}{25}{chapter*.7}
+\contentsline {chapter}{\numberline {A}Appendix}{26}{appendix.A}
+>>>>>>> 1ebe87c1a783fe8fb300a4d4a4addaed42c0d4f6
