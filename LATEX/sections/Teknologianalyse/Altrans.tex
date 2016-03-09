@@ -1,0 +1,60 @@
+\chapter{Altrans}
+Alternativ Transportsystemer (Altrans) er en trafikmodel, hvis formål er at belyse hvordan en øget brug af den kollektive transport vil påvirke miljøet \cite[s. 14]{dmumodelanayser}. Trafikmodellen er blevet udviklet af Danmarks Miljøundersøgelser (DMU) i 1994. Altrans består af 3 hovedmodeller: en geografisk model, en adfærds model og en emissions model \cite[s. 14]{dmuadfaerdsmodel}.
+\section{Geografisk model}
+Den geografiske model bruges til at beregne rejsetider, ventetider og skiftetider. For at udregne disse benyttes følgende undermodeller:
+
+\begin{itemize}[H]
+\item Model af kollektiv transportnet
+\item Model af serviceniveau
+\item Model for bilrejser
+\item Model for attraktion til byfunktioner
+\end{itemize}
+
+Derudover benytter modellen sig af et geografisk informations system (GIS) til opbevaring af data og udregning af rejsetiderne \cite[s. 18-19]{dmumodelanayser}.
+
+\subsection{Model af kollektivt transportnet}
+For at lave realistiske simuleringer, bruger modellen for det kollektive trafik præcise data for ankomst- og afgangstider. Denne data kommer fra 11 trafikselskaber der bruger køreplansystemet TR-System, DSB’s data kommer i et andet format der bliver brugt til DBS’s egen rejseplanlægger. Der er ikke brugt data fra Bornholm og kommunale ruter i Fyn, Region Midtjylland og Århus amterne, bortset fra ruterne i Århus, Odense og Randers. Modellen tager disse data og fortolker dem til et fælles format.
+
+\vspace{5mm}
+
+For at beregne rejsertiderne er kørestrækningerne, samt ankomst og afgangstiderne sat op i et tredimensionelt koordinatsystem, hvor tiden bliver indsat som den tredje akse Z. Stationernes placering bliver indsat som X og Y koordinaterne, og man kan dermed finde ud af hvilke ruter der kan rejses med ved en given station. Efter at denne data er indsat kan modellen for beregning af rejsetider benytte \cite[s. 20]{dmumodelanayser}.
+
+\subsection{Model af serviceniveau}
+Serviceniveauet i Altrans bliver udregnet med variablerne tid, omkostninger og tilgængelighed. Modellen unlader at indkludere variabler som komfort, da DMU har lavet antagelsen, at komforten ikke ændre sig kraftigt over tid. Dette kan gøre prognoser der ser på den fjerne fremtid upræcise. Modellen spænder over både taktisk (meso) og operationel (mikro). På den taktiske plan kigger Altrans på buskilometer, afgangs frekvenser og tilgængelighed. På den operationelle plan kigges der på tiden man bruger i køretøjet, hvor lang tid man skal vente ved skift samt ventetiden i alt, og prisen på rejsen \cite[s. 36-37]{dmuadfaerdsmodel}.
+
+\subsection{Model for bilrejser}
+Formålet med modellen for bilrejser er at udregne tiden det tager at rejse fra by til by. Dette gøres ved brug af vejnettet i GIS, og hastigheden bilen kører kommer an på vejtypen. Ruten der bliver kørt starter og slutter fra centrumet af byerne der bliver rejst mellem. Modellen tager ikke højde for anden trafik på vejene, så tiderne der udregnes vil være præcise hvis der ikke er andre bliver på vejnettet. Hastighederne modellen bruger til de forskellige veje, kan ses på figur \ref{altranshastigheder}.
+
+\begin{table}[H]
+\centering
+\caption{Hastigheder på forskellige vejtyper}
+\label{altranshastigheder}
+\begin{tabular}{|l|l|}
+\hline
+Motorveje             & 110 \\ \hline
+Motortrafikveje       & 90  \\ \hline
+Hovedveje             & 80  \\ \hline
+Øvrige veje på landet & 70  \\ \hline
+Veje i byer           & 40  \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Model for attraktion til byfunktioner}
+
+\section{Adfærds model}
+
+\section{Emissions model}
+Man kan beregne emissioner af biltrafikken, dette gøres ved følgene: Der tages hensyn til og beregnes efter bilens tilstand, varm motor og koldstart. Det er en udregning der består ved at finde summen af en varstarts-emissionskoefficient gange trafikarbejdet og et koldstartstillæg for hver tur.
+
+\vspace{5mm}
+
+Disse faktorer er ikke selvstændige og bliver lavet per bilens årgang og dens størrelse/brændstoftype. Hastigheden af fartøjet determinere varmstarts-emissionskoefficienten. Der er sågar fortaget undersøgelser, såkaldte årskørselsundersøgelse af Vejdirektoratet (Winther & Ekmann, 1998) hvorfra det er konkluderet at årskørsel forudsat er uafhængigt af bilens størrelse selvom at dette er set som urealistisk. Det estimeret trafikarbejde bliver udregnet ifølge en adfærdsmodel hvori man kigger på årskørsel pr bil i alle aldersgrupper. Der forøges eller reduceres med en faktor i selve fremskrivningsåret sådan at summen af antal biler i hver gruppe ganges deres gennemsnitlige årskørsel bliv lig det førnævnte trafikarbejde.
+
+\subsection{Varmstart}
+For at beregne varmstarts-emissionkoefficienten tager man udgangspunkt i COPERT II for den pågældene årgang. COPERT II er et windows program som gør det muligt at udregne emission fra vej trafik. Ydermere er programmet i stand til at lave lignende beregninger ud fra en forbrændingsmotor til et off-road fartøj. De beregnede emissioner inkludere alle de store forurenende stoffer så som (CO, NO\textsubscript{x}, VOC, PM) og mange flere. Programmet er ydermere i stand til at beregne brændstofforbrug \cite[s 4]{COPERT II}.  For nye biler i alle fremtidsår anvendes der de emissionskoefficienter der er blevet udarbejdet som EU-normer pr den årgang. Dette er ikke gældende for ældre biler. Her ændre emissionskoefficienterne sig med tiden og dette er specielt pågældende for katalysatorbiler. Emissionskoefficienten bliver korrigeret fra årgang til årgang alt efter motorslid, da informationer om emissionskoefficienten udvikling afhænger af fartøjets samlede kørsel. Når den samlede årskørsel bliver udregnet er det også muligt at beregne den gennemsnitlige bils samlede kørsel for en givet alder. Motorslid korrigerede emissionskoefficienten ved varmstart kan således udregnes for hver bilårgang for et beregnings år, jf. Kveiborg(1999).
+
+\vspace{5mm}
+
+Til at beregne emissionen fra varmstarts er det forudsat at man har kendskab til fordelingen af trafik pr by-, land- og motorvejskørsel. ALTRANS har forudsat dette til at være som i basisåret.
+\subsection{Koldstartstillæg}
+I ALTRANS udregnes Koldstartstilægget 
