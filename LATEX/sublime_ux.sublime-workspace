@@ -112,54 +112,11 @@
 	"buffers":
 	[
 		{
-			"contents": "\\chapter{Teori}\\label{Teori}\n\n\\section{Trafik Model}\n\nTil dette projekt har vi valgt at arbejde med emnet trafik og simulering, mere specifikt trafik i storbyer. Vi agter altså at løse et problem inde for dette område hvor i vores fokus ligger på at lave en simulering der kan hjælpe med til anvendelse af sekundære, mere effektive ruter for person- og varebiler i tilfælde at deres primære rute er blokeret af forhindringer så som trafikpropper. Derfor har gruppen valgt at udarbejde en model der beskriver gruppens fælles definition på traffik i en storby. Formålet med dette er at have en model at arbejde med og inddrage i programmet der fungerer som produktet i dette projekt.\n\nOBS: Dette afsnit er ikke færdigt og modellen kan og vil med høj sandsynlighed ændre sig igennem projektet af forskellige årsager! \n\n\\subsection{Trafik Flow}\n\nEn publikation fra 1988 af en Paul Ross fra Traffic Systems Division, belyser om emnet Traffic Dynamics og herunder Traffic Flow cite{trafdyn}{PaullRoss01}. Som Paul Ross beskriver så området et af dem der er mindst forstået da der på dette tidspunkt ikke var nogle kontinuum teorier der kunne forudse trafik densitet, volume og fart med den præcision som der forventes for at kunne opstille et timing signal. Derimod er det bedste der kan gøres er at lave et cirka estimate med diskontinuerlig dellinger. Publikationen forklarer i større detalje hvordan at for at få et udbytte med kontrol, simulation og en general forståelse for emnet, er en beskrivelse af trafik med henhold til fortsættende og differentiable kvantitativer nødvendig. Formålet med denne publikation er at udvikle en ny (nu gamle) formulering til dette som er kvalitativt korrekt. \n\nDen generelle konsensus for trafik variabler er følgende: Trafik Densiteten, k, farten, v, og volume, Q, er passende og brugbare til formået beskrevet herover. Med disse variabler er to relationer kendt. Den første er forbundet i definitionenerne på volume, densitet og fart.\n\n\\begin{figure}\n\\begin{verbatim}\n[Q = kv]\n\\end{verbatim}\n\\label{eq:Equation1}\n\\end{figure}\n\n%\\begin{equation}\\label{eq:Equation1}\n%\\[Q = kv \\]\n%\\begin{flushright}\n%(1)\n%\\end{flushright}\n%\\end{equation}\n						\nhvor følgende er gældende:\n\nQ = trafik volume (Bil(er)/timen) forbi et punkt.\nk  = vehicular densitet (bil(er)/mi)\nv  = (local space-mean) fart (km/t)\n\nDet andet kendte relation, kontinuiteten af fartøjer, blev peget ud af Lighthill og Whitham (1955):\n\n%\\begin{equation}\\label{eq:Equation2}\n%\\[ ∂k/∂t + ∂Q/∂x = S(x, t) \\]\n%\\begin{flushright}\n%(2)\n%\\end{flushright}\n%\\end{equation}\n\nHvor følgende er gældende:\n%∂/∂t+ og ∂/∂t \nindikerer delvis differentiering i forhold til tiden, t, og lokation på en vej x.\nS(x,t) er fartøjer der køre ind på (positive) og køre ud igen (negative) på en vejbane (veh/(km/t)).\n\nDisse to ligninger er dog ikke de eneste der er nødvendige for en fuldendt formulering af trafik flow. En tredje relation er også nødvendigt.\n\nDer har igennem tiderne været mange bud på hvad denne tredje relation kan være for at få et godt estimat udregnet. Et af disse har været “Deterministic speed-density hypothesis” hvori Greenshields i 1934 påpegede at farten på landdistrikts motorveje afhang meget trafik densiteten og at fart-densitets kurven er næsten en helt lige linie hvor på det vil ses at som farten på en landdistrikts motorvej falder, der stiger trafiks densiteten. Det er antaget at der er et udmærket defineret, deterministisk forhold mellem trafik fart og densitet, men på samme tid har de forskere som har lavet denne antagelse, aldrig rigtigt været enige i hvilken form det forhold tager[3].\nIfølge Paul Ross er dette deterministisk forhold ikke muligt, der er ikke fundet data som bekræfter det på trods af at der er en generel tendens hvorved fart falder jo større trafik densiteten stiger, har ingen observationer der er blevet lavet i dette felt påpeget en bestemt fart til en bestemt densitet.\n\nEn anden relation vil være “Equilibirum Speed-Density Hypothises” udarbejdet af Prigogine og Herman [4] i en serie af publikationer fra 1961 til og med 1971. Heri beskrives der at trafik har en ligevægts fart distribuering og at det medføre at den aktuelle fart distribuering forsøger at på sin vis “slappe af”. Det er altså underforstået at der er tale om en gennemsnitsfart, men denne relation lider af mange, hvis ikke flere problemer som den sidstnævnte relation, den deterministiske.\n\nMed dette taget i betragtning kigges der derfor istedet på følgende relation som er formuleret ud fra logiske analyse samt observationer foretaget af Hurdle og Solomon i 1986[5]. Disse indikerer at overbelastning på vejene reducere den ønskede trafik hastighed, men derimod sænker den aktuelle hastighed på vejene mens personer bag rettet har stadig den far de ønsker at rejse i deres free-flow. Relationen kan udtrykkes som følgende:\n\n%\\begin{equation}\\label{Equation 3}\n%\\[∂v + v ∂t = (F - v)~T, k < kjam 	\\]\\begin{flushright}\n%(3)\n%\\end{flushright}\n%\\end{equation}\n\nHvor:\nF = fri fart på et anlæg (Vejbane) (km/t)\nT = “Afslapnings tid” (Timer)\nKjam = “jam” densitet af trafik (vch/km)\n\nF er i denne sammenhæng en konstant som er uafhængig af densiteten, k. Dette vil måske virke ulogisk i lys af observationer der viser at fartøjs trafik bevæger sig langsommere når densiteten er høj. Med de rette afgrænsede forhold vil lining (1), (2), og (3) give et fuldendt afbildning af fart, volume, og densiteten på hvilken som helst plads, x, på hvilket som helst tidspunkt, t. De tre lininger fungerer også således at der ses en opførsel meget lig den man ser i rigtig trafik med “trafik bølger” og livagtigt genoprettelse fra overgangstilstande.\n\nContraints:\n\nCapacity Limit\nDe to relationer, den deterministiske og equilibriums relationerne, bliver kapaciteten af vejene bestemt af formed af fart-densitets kurven. Men vores formulering anvender ikke disse to og mangler derfor en lignende begrænsning, derfor formuleres dette på følgende måde for vores model: \n\n%\\begin{equation}\\label{Equation 4}\n%\\[v ≤ Capacity / k	\\]\\begin{flushright}\n%(4)\n%\\end{flushright}\n%\\end{equation}\n\nDenne ulighed fremmer at trafikken vil reducere sin fart således at flowet igennem en indsnævring ikke vil gå ud over kapaciteten af denne indsnævring. Basseret på Paul Ross’s observationer at dette er, kvalitativt, hvad der også sker i rigtige indsnævringer.\n\nJam density\nMed disse ligninger har vi nu en udemneærket repræsentation af trafik ved lave densiteter som også nu fungerer med kapacitet som en form for begrænsning. Dette beskriver dog ikke trafikkens opførsel når trafikkens densitet når sit maksimum, kjam.\n\n%\\begin{equation}\\label{Equation 5}\n%\\[k ≤ k_jam.\\]\\begin{flushright}\n%(5)\n%\\end{flushright}\n%\\end{equation}\n\nSom Paul Ross beskriver kjam, så er kjam en konstant som kan ændre sig fra sted til sted, alt efter antallet af vejbaner, men den er ikke afhængig af den fart som trafikken bevæger sig med. Sammenligningen med væsker gør sig gældene igen. En væske’s flow har en volume som er uafhængig af x men dette er ikke inkorporeret i vores formulering endnu. hvis vi tager lign (3) så antages det eksplicit at trafik er komprimerbart. Således kan jam densiteten for lign (4) ændre til følgende.\n\n%\\begin{equation}\\label{Equation 6}\n%\\[ ∂Q/∂x = 0, k = k_jam 	\\]\\begin{flushright}\n%(6)\n%\\end{flushright}\n%\\end{equation}\n\nMed relationer (1), (2), (3), (4), (5) og (6) har vi nu en komplet formulering af trafik som kan inddrages i vores program.\nNote: Nogle dele kan nok godt omformuleres\n\nLastbiler:\nLastbiler og andre transport fartøjer er oftest skyld i at trafikken går langsommere eller i nogle tilfælde stopper helt op. Det er derfor at bl.a. transport af vindmølledele bliver igangsat sent om aften eller meget tidligt på morgenen således at de ikke skaber problemer for andre billister. Dette har altså en stor effekt på trafikken og kunne derfor være relevant at medtage i vores model, dette er dog ikke gruppens fokus da dette er et meget specifikt scenarie.\nNOTE: Kan ændres skulle vi have tid til at lave noget med denne type scenarie.\n\nTid på dagen / Rush Hour: \nRush hour er det scenarie hvori der sker mest trafik i et land. Dette er typisk i de timer hvor de forskellige bilister skal på arbejde, køre børn til skole eller andre institutioner eller lignende og igen når disse samme individer skal hjem igen. Dette kan indskrives i programmet som en form for variable der ændre mængden af trafik ved bestemte tidspunkter.\nNOTE: Mangler kilde på dansk rush hour.\n\n\\section{Dijkstras Algoritme}\n\nDijkstras algoritme er en algoritme til at finde den korteste vej fra et bestemt punkt til et andet punkt. Disse punkter kan bland andet repræsentere den korteste vej mellem to forskellige byer. Dijkstras er en grådig algoritme, da den finder den mindste længde først og fortsætter således.\\cite{DMATBOGEN}\nDijkstras algoritme finder den korteste rute mellem 2 forskellige punkter i en simpel ikke-orienteret vægtet graf. Man kan se på figur \\ref{fig:dijkstrasgraf} at der angives forskellige punkter {A, B, C, D, E, Z}. Hvis man skal fra punkt A til Z, så starter man ved A og derfor initialiseres A til at være 0. Algoritmen virker således, at alle punkter er uendeligt udover det punkt man befinder sig på. Algoritmen tager punkt fra punkt, så den starter med at se de grene som A har disse er |AB| = 4 og |AC| = 2. Her fra kan algoritmen ikke se videre end B og C. Den ser altid på det mindste tal, og derfor tager den |AB| = 4 og |AC| = 2, da begge disse tal er mindre end uendeligt. Herefter ser den efter hvilket af de nuværende tal som er mindst, hvilket er 2. Så derfor vælger den C som sit næste punkt. Algoritmen finder nu de næst tætteste punkt, ved at addere alle de tidligere ruter, som har den korteste rute fra A til det næste sæt af punkter. Her ser algoritmen ud fra C og hvilke grene C har. Dette er |CB| |CD| |CE|, dog er længden altid fra A, så derfor er længden fra A til E 12 da 2+10 = 12. Længden til B er nu blivet 3, da algoritmen ser på den mindste rute, så A til B er 3, da 2+1 = 3. Således fortsætter algoritmen indtil den rammer Z.\\cite{DMATBOGEN}\n\n\\begin{figure}[ht!]\n\\begin{adjustbox}{width=1.2\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=1.2\\textwidth]{Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png}\n\\end{adjustbox}\n\\label{fig:dijkstrasgraf}\n\\caption{Graf til fremvisning af eksempel af Dijkstras algoritme i brug}\n\\end{figure}\n\n\\begin{table}[ht!]\n\\centering\n\\begin{adjustbox}{width=1\\textwidth}\n\\Large\n\\begin{tabular}{| c | c | c | c | c | c | c |}\n	\\hline\n	 & A & B & C & D & E & Z \\\\\n	\\hline\n	 & 0 & Inf & Inf & Inf & Inf & Inf \\\\\n	\\hline\n	{A} & 0 & 4 & 2 & Inf & Inf & Inf \\\\\n	\\hline\n	{A, C} & 0 & 3 & 2 & 10 & 12 & Inf \\\\\n	\\hline\n	{A, C, B} & 0 & 3 & 2 & 8 & 12 & Inf \\\\\n	\\hline\n	{A, C, B, D} & 0 & 3 & 2 & 8 & 10 & 14 \\\\\n	\\hline\n	{A, C, B, D, E} & 0 & 3 & 2 & 8 & 10 & 13 \\\\\n	\\hline\n	{A, C, B, D, E, Z} & 0 & 3 & 2 & 8 & 10 & 13 \\\\\n	\\hline\n\\end{tabular}\n\\end{adjustbox}\n\\caption{Dijkstra tabel}\\label{fig:dijkstratabel}\n\\end{table}\n\n\\begin{lstlisting}[language=C,caption={Dijkstras angivet som eksempel i pseudo-kode},label={lst:DijsktrasPseudo1}]\n	procedure Dijkstras(G: weighted connected simple graph, with all weights positive)\n{G has vertices a = V0, V1, ....... Vn = z and lengths w(Vi, Vj) where w(Vi,Vj) = infinity if{Vi, Vj} is not an edge in G}\nfor (i = 1 to n)\n	L(Vi) = infinity\nL(a) = 0\nS = NULL\n{ the labels are now initialized so that the label of a is 0 and all other labels are infinity, and S is the empty set }\nwhile (z does not belong to S)\n	u = a vertex not in S with L(u) minimal\n	S = S U {u}\n	for (all vertices v not in S)\n		if (L(u) + w(u, v) < L(v) then L(v) = L(u) + L(u, v))\n		{this adds a vertex to S with minimal label and updates the labels of vertices not in S}\nreturn (L(z)) {L(z) = length of a shortest path from 	a to z}\n\\end{lstlisting}\n\n\\section{A* Algoritmen}\nPrimært når det kommer til belægning af en dynamisk rute, foregår det ved at en enhed fortsætter hen i mod et mål indtil den når en forhindring. Dette er et ekstremt simpelt bevægelsesmønster og indebærer in vis in-effektivitet. Rent retorisk kunne man stille spørgsmålet om det ikke ville være smartere at planlægge en rute før man overhovedet bevæger sig.\n\nA* er en algoritme til at beregne den korteste rute baseret på en række heuristiske datasæt. A* får input igennem en brugerlavet graf der indeholder en række datasæt for at algoritmen kan fungere.  Først har vi distancen fra punkt til punkt, eksempelvis punkt 'A' til punkt 'B' som vi kalder for f.eks. \\textbf{'H'} og dernæst har vi et datasæt \\textbf{'G'} der indeholder bekostningen for at flytte fra en kant til en anden, denne variabel er bestemt på forhånd. Et virkelighedseksempel kunne være at man vil over på den anden side af en sø, så har man så muligheden for at svømme direkte eller gå uden om og det koster f.eks. 2 gange så meget at bevæge sig direkte igennem søen. Dette er givet ved \\textbf{'G'}, hvor som sagt \\textbf{'H'} er den ultimative korteste længde til det bestemte slutpunkt. \\textbf{'H'} fungerer desuden for hvilket som helst punkt i et system og angiver \\textit{altid} den korteste vej til slutpunktet uanset forhindringer. Det skal også nævnes at \\textbf{'H'} ikke er påvirket af bevægelsesbekostningen, til at starte med, som \\textbf{'G'} angiver, dette kommer først senere. Til sidst har vi \\textbf{'F'} der er en samenlagt værdi af både \\textbf{'H'} og \\textbf{'G'}. Dette gælder kun for hver kasse der flyttes til, hvori \\textbf{'H'} er angivet ved kassen man flytter tils \\textbf{'H'} værdi. Det kan vises således i formlen \\ref{eq:A*}:\n\\begin{equation} \\label{eq:A*}\nF(n) = G(n) + H(n)\n\\end{equation}\n\nEn måde man kan visualisere A* på er f.eks. med et gitter-system som set i figur \\ref{fig:AKvadrat1}. Her kan vi se at vi har et start punkt (grøn) og et slutpunkts (blå). De kasser vi ikke kan bevæge os igennem er de røde kasser. Figuren angiver ingen heuristiske datasæt endnu.\n\n\\begin{figure}[ht!]\n\\begin{adjustbox}{width=1.2\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=1.2\\textwidth]{Pictures/Teoriafsnit/Figurfiler/Grid2.png}\n\\end{adjustbox}\n\\label{fig:AKvadrat1}\n\\caption{A* gitter-system}\n\\end{figure}\n\nUd fra figuren kan vi begynde os at forestille hvordan A* fungerer. Når man bevæger sig fra kasse til kasse laver man 2 lister til at holde styr på hvor brikken har været. En liste til at holde styr på hvilke kasser man ikke har besøgt endnu og en liste der holder styr på hvilke man \\textbf{har} besøgt. Når man flytter brikken skal man derfor angive hvilken kasse der nu skal på \\textit{besøgt} listen. Derfor som nævnt skal vi bruge information om hvor meget \\textbf{'G'} koster. Brikken skal nu til at flytte sig for at komme til slutpunktet. Dette kunne f.eks. være 10 point for at flytte sig i hvilken som helst retning, men man kunne også sagtens angive at diagonal bevægelse ville koste 12 point. Dvs. at ruten ændrer sig til måske ikke at være så direkte som den ellers kunne have været.\n\nDer findes flere metoder man kan anvende A* på og en af dem vises her.\nDet vises her i den lille bid af pseudo-kode i Listing \\ref{lst:Apseudo1}:\n\\begin{lstlisting}[caption={A stjerne og pseudo-kode af brug af lister},label={lst:Apseudo1},language=C]\n	class A_Star\n	{\n		List<int> nodeIdentifierVisited = new List<int> { 7, 8, 9 , 10, 11, 12, 13, 14, 21, 23, 24, 28, 29, 30, 31, 32};\n\n		Expand to new node from previous and move\n		Queue frontQueue = new Point();\n\n		when Point is acknowledged to move\n		change new Point to become Visited = true;\n\n		while(new Point == Visited)\n		{\n			move Point to nodeIdentifierVisited\n		}\n	}\n\\end{lstlisting}\n\nSom set i figur \\ref{fig:AKvadrat1} har vi vores liste givet ved kassernes nummerering. Nummereringen kører fra venstre mod højre én række ad gangen. Vi angiver at det tager 10 point af gå lodret og vandret én kasse ad gangen og 12 point at gå diagonalt. I figur \\ref{fig:AKvadrat2} kan vi nu se de heuristiske datasæt angivet fra startpunktet (grøn). Hver enkel kasse omkringliggende startpunktet har deres \\textbf{'H'} værdi angivet med lys-lilla tekst og bevægelsesomkostningen \\textbf{'G'} fra startpunktet til kassen angivet i blå tekst.\n\n\\begin{figure}[ht!]\n\\begin{center}\n\\includegraphics[width=1.00\\textwidth]{Pictures/Teoriafsnit/Figurfiler/Grid3.png}\n\\end{center}\n\\label{fig:AKvadrat2}\n\\caption{A* der viser bekostning af bevægelse fra startpunkt (grøn) til omkringliggende kasser ('G') angivet med blå farve samt 'H' angivet med lys-lilla}\n\\end{figure}\n\nNu udregnes \\textbf{'F'} værdien så f.eks. hvis vi går fra kasse 14 (startpunktet) til 15 skal vi lægge 10 (\\textbf{'G'}) og 8 (\\textbf{'H'}) sammen. Dette gør vi så for alle omkringliggende kasser for startpunktet. Dernæst går man til den laveste \\textbf{'F'} værdi og gør helt det samme som før, derudover flyttes den nye kasse man står på til \\textit{besøgt} listen. Noget man skal være opmærksom på her er at man stadig skal sammenligne bevægelsesomkostningen fra den tidligere kasse til de kasser der også er relevante for den nye kasse man har flyttet sig til. ",
-			"file": "sections/Teori/Teori.tex",
-			"file_size": 17377,
-			"file_write_time": 131020081740045732,
-			"settings":
-			{
-				"buffer_size": 17065,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Main.tex",
 			"settings":
 			{
 				"buffer_size": 1098,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
-			"settings":
-			{
-				"buffer_size": 4463,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "setup/macros.tex",
-			"settings":
-			{
-				"buffer_size": 3800,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "setup/preamble.tex",
-			"settings":
-			{
-				"buffer_size": 6067,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "setup/variables.tex",
-			"settings":
-			{
-				"buffer_size": 601,
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -167,14 +124,14 @@
 			"settings":
 			{
 				"buffer_size": 764,
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
+			"file": "sections/Teori/Teori.tex",
 			"settings":
 			{
-				"buffer_size": 6502,
+				"buffer_size": 17863,
 				"line_ending": "Windows"
 			}
 		},
@@ -187,27 +144,35 @@
 			}
 		},
 		{
-			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+			"file": "aau/frontpage.tex",
 			"settings":
 			{
-				"buffer_size": 15808,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sections/Problemformulering/Problemformulering.tex",
-			"settings":
-			{
-				"buffer_size": 54,
+				"buffer_size": 950,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/Indledning/Indledning.tex",
+			"file": "aau/titlepages.tex",
 			"settings":
 			{
-				"buffer_size": 562,
-				"line_ending": "Unix"
+				"buffer_size": 1347,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "aau/signatures.tex",
+			"settings":
+			{
+				"buffer_size": 1115,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "setup/variables.tex",
+			"settings":
+			{
+				"buffer_size": 601,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -218,36 +183,12 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 106.0,
+		"height": 104.0,
 		"last_filter": "Package Control: install",
 		"selected_items":
 		[
 			[
 				"Package Control: install",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: ins",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: inst",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: insta",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: instal",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: Install",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: Instal",
 				"Package Control: Install Package"
 			],
 			[
@@ -283,30 +224,21 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/aau",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Diskussion",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Implementation",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Indledning",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Interessentanalyse",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Konklusion",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Perspektivering",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/ProblemetsRelevans",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Problemformulering",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Teknologianalyse",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Teori",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/todo"
+		"/C/Programs/Git/P2-Simulering/LATEX",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures/Teoriafsnit",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures/Teoriafsnit/Figurfiler",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teknologianalyse",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teori"
 	],
 	"file_history":
 	[
-		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Teknologianalyse/Altrans.tex",
-		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/tools/.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/references.bib",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/teoriafsnit/teoriafsnit.tex",
-		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/preamble.tex",
 		"/C/Programs/LaTeX Documents/LaTeX Document 2/assignment2.tex",
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
 		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
@@ -326,9 +258,11 @@
 		"/C/Programs/C/Lektionone/sammensetarrays.c",
 		"/C/Programs/C/Lektionone/afleveringdonger.c",
 		"/C/Programs/C/Lektionone/help.c",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Programs/Git/Rep B2-24/sections/intro/intro.tex",
 		"/C/Programs/Git/Rep B2-24/references.bib",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
 		"/C/Programs/C/Lektionone/examplemalloc.c",
 		"/C/Programs/C/Lektionone/10.3.c",
 		"/C/Programs/C/Lektionone/mad.c",
@@ -363,7 +297,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -377,19 +311,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"dmumodelanayser",
-			"thebibli",
-			"Equation 1",
-			"hastighed",
-			"MISC",
-			"60",
-			"cite",
-			"citep",
-			"4",
-			"gitre",
-			"firkant",
-			"firkanter",
-			"MISC",
 			"fight",
 			"teams",
 			"match_count",
@@ -443,39 +364,11 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "sections/Teori/Teori.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 17065,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								725,
-								725
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 3240.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "Main.tex",
 					"semi_transient": false,
 					"settings":
@@ -487,266 +380,8 @@
 						"selection":
 						[
 							[
-								483,
-								483
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4463,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1744,
-								1744
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "setup/macros.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3800,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3800,
-								3800
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 370.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "setup/preamble.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6067,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								167,
-								167
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "setup/variables.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 601,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								173,
-								173
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "sections/sections.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 764,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								317,
-								317
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6502,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4701,
-								4701
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "references.bib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5300,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5048,
-								5048
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2070.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15808,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "sections/Problemformulering/Problemformulering.tex",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 54,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								1098,
+								1098
 							]
 						],
 						"settings":
@@ -761,12 +396,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "sections/Indledning/Indledning.tex",
+					"buffer": 1,
+					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 562,
+						"buffer_size": 764,
 						"regions":
 						{
 						},
@@ -785,7 +420,181 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Teori/Teori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17819,
+								17819
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "references.bib",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3608,
+								3583
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 930.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "aau/frontpage.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								623,
+								623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "aau/titlepages.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "aau/signatures.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "setup/variables.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -797,7 +606,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -824,7 +633,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 184.0
+		"height": 108.0
 	},
 	"output.find_results":
 	{
@@ -876,7 +685,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 178.0,
+	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

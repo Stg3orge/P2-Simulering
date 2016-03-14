@@ -45,9 +45,15 @@ S(x,t) er fartøjer der køre ind på (positive) og køre ud igen (negative) på
 
 Disse to ligninger er dog ikke de eneste der er nødvendige for en fuldendt formulering af trafik flow. En tredje relation er også nødvendigt.
 
+\vspace{5mm}
+
 Der har igennem tiderne været mange bud på hvad denne tredje relation kan være for at få et godt estimat udregnet. Et af disse har været “Deterministic speed-density hypothesis” men Ifølge Paul Ross er dette deterministisk forhold ikke muligt, der er ikke fundet data som bekræfter det på trods af at der er en generel tendens hvorved fart falder jo større trafik densiteten stiger, har ingen observationer der er blevet lavet i dette felt påpeget en bestemt fart til en bestemt densitet.
 
+\vspace{5mm}
+
 En anden relation vil være “Equilibirum Speed-Density Hypothises” som Paul Ross beskriver, denne relation er også blevet beskrevet i en serie af publikationer fra 1961 til og med 1971. Heri beskrives der at trafik har en ligevægts fart distribuering og at det medføre at den aktuelle fart distribuering forsøger at på sin vis “slappe af”. Det er altså underforstået at der er tale om en gennemsnitsfart, men denne relation lider af mange, hvis ikke flere problemer som den sidstnævnte relation, den deterministiske.
+
+\vspace{5mm}
 
 Med dette taget i betragtning kigges der derfor istedet på følgende relation som er formuleret ud fra logiske analyse samt observationer foretaget af Hurdle og Solomon i 1986[5]. Disse indikerer at overbelastning på vejene reducere den ønskede trafik hastighed, men derimod sænker den aktuelle hastighed på vejene mens personer bag rettet har stadig den far de ønsker at rejse i deres free-flow. Relationen kan udtrykkes som følgende:
 
@@ -108,6 +114,9 @@ NOTE: Mangler kilde på dansk rush hour.
 \section{Dijkstras Algoritme}
 
 Dijkstras algoritme er en algoritme til at finde den korteste vej fra et bestemt punkt til et andet punkt. Disse punkter kan bland andet repræsentere den korteste vej mellem to forskellige byer. Dijkstras er en grådig algoritme, da den finder den korteste længde først og fortsætter således.\cite{DMATBOGEN}
+
+\vspace{5mm}
+
 Dijkstras algoritme finder den korteste rute mellem 2 forskellige punkter i en simpel ikke-orienteret vægtet graf. Man kan se på figur \ref{fig:dijkstrasgraf} at der angives forskellige punkter {A, B, C, D, E, Z}. Hvis man skal fra punkt A til Z på figuren, så starter man ved A og derfor initialiseres A til at være 0, som man kan se på tabel \ref{fig:dijkstratabel}. Algoritmen virker således, at alle punkter er uendeligt udover det punkt man befinder sig på som vist på tabel \ref{fig:dijkstratabel}. Algoritmen tager punkt fra punkt, så den starter med at se de grene som A har. Disse er |AB| = 4 og |AC| = 2. Her fra kan algoritmen ikke se videre end B og C. Den ser altid på det mindste tal, og derfor tager den længden fra A til B som er 4 og længden fra A til C som er 2, begge disse tal er mindre end uendeligt. Herefter ser den efter hvilket af de nuværende tal som er mindst, hvilket er 2. Så derfor vælger den C som sit næste punkt. Algoritmen finder nu de næst tætteste punkt, ved at addere alle de tidligere ruter, som har den korteste rute fra A til det næste sæt af punkter. Her ser algoritmen ud fra C og hvilke grene C har. Dette er længden til B, D og E, dog er længden altid fra A, så derfor er længden fra A til E 12 da 2+10 = 12. Længden til B er nu blivet 3, da algoritmen ser på den korteste rute, så A til B er 3, da 2+1 = 3. Således fortsætter algoritmen indtil den rammer Z.\cite{DMATBOGEN}
 
 \begin{figure}[ht!]
@@ -163,8 +172,18 @@ while (z does not belong to S)
 return (L(z)) {L(z) = length of a shortest path from 	a to z}
 \end{lstlisting}
 
+\vspace{5mm}
+
+\section{INTRO TIL TEORI, SKAL SÆTTES I LØSNINGSAFSNIT}
+Til udformning af vores løsningsmodel bidrager dette afsnit en gennemang af to algoritmer til ruteplanlægning og vejvisning. De er valgt på baggrund af deres udbredthed i industrien (KILDE). TEKNOLOGIANALYSEN anleder til at afgøre hvilke(n) algoritme(r) der er nødvendige til vores løsningsmodel. Der er blevet valgt to algoritmer til vejvisning som er A* og Dijkstras Algoritme.
+Der vil først blive gennengået deres generelle funktion og dernæst en sammenligning af de to og en videre afgrænsning til hvilken der vil blive benyttet til løsningsmodellen.
+
+\vspace{5mm}
+
 \section{A* Algoritmen}
 Primært når det kommer til belægning af en dynamisk rute, foregår det ved at en enhed fortsætter hen i mod et mål indtil den når en forhindring. Dette er et ekstremt simpelt bevægelsesmønster og indebærer in vis in-effektivitet. Rent retorisk kunne man stille spørgsmålet om det ikke ville være smartere at planlægge en rute før man overhovedet bevæger sig.
+
+\vspace{5mm}
 
 A* er en algoritme til at beregne den korteste rute baseret på en række heuristiske datasæt. A* får input igennem en brugerlavet graf der indeholder en række datasæt for at algoritmen kan fungere.  Først har vi distancen fra punkt til punkt, eksempelvis punkt 'A' til punkt 'B' som vi kalder for f.eks. \textbf{'H'} og dernæst har vi et datasæt \textbf{'G'} der indeholder bekostningen for at flytte fra en kant til en anden, denne variabel er bestemt på forhånd. Et virkelighedseksempel kunne være at man vil over på den anden side af en sø, så har man så muligheden for at svømme direkte eller gå uden om og det koster f.eks. 2 gange så meget at bevæge sig direkte igennem søen. Dette er givet ved \textbf{'G'}, hvor som sagt \textbf{'H'} er den ultimative korteste længde til det bestemte slutpunkt. \textbf{'H'} fungerer desuden for hvilket som helst punkt i et system og angiver \textit{altid} den korteste vej til slutpunktet uanset forhindringer. Det skal også nævnes at \textbf{'H'} ikke er påvirket af bevægelsesbekostningen, til at starte med, som \textbf{'G'} angiver, dette kommer først senere. Til sidst har vi \textbf{'F'} der er en samenlagt værdi af både \textbf{'H'} og \textbf{'G'}. Dette gælder kun for hver kasse der flyttes til, hvori \textbf{'H'} er angivet ved kassen man flytter tils \textbf{'H'} værdi. Det kan vises således i formlen \ref{eq:A*}:
 \begin{equation} \label{eq:A*}
@@ -185,24 +204,21 @@ En måde man kan visualisere A* på er f.eks. med et gitter-system som set i fig
 Ud fra figuren kan vi begynde os at forestille hvordan A* fungerer. Når man bevæger sig fra kasse til kasse laver man 2 lister til at holde styr på hvor brikken har været. En liste til at holde styr på hvilke kasser man ikke har besøgt endnu og en liste der holder styr på hvilke man \textbf{har} besøgt. Når man flytter brikken skal man derfor angive hvilken kasse der nu skal på \textit{besøgt} listen. Derfor som nævnt skal vi bruge information om hvor meget \textbf{'G'} koster. Brikken skal nu til at flytte sig for at komme til slutpunktet. Dette kunne f.eks. være 10 point for at flytte sig i hvilken som helst retning, men man kunne også sagtens angive at diagonal bevægelse ville koste 12 point. Dvs. at ruten ændrer sig til måske ikke at være så direkte som den ellers kunne have været.
 
 Der findes flere metoder man kan anvende A* på og en af dem vises her.
-Det vises her i den lille bid af pseudo-kode i Listing \ref{lst:Apseudo1}:
+Det vises her i den lille bid af Python-kode i Listing \ref{lst:Apseudo1}:
 \begin{lstlisting}[caption={A stjerne og pseudo-kode af brug af lister},label={lst:Apseudo1},language=C]
-	class A_Star
-	{
-		List<int> nodeIdentifierVisited = new List<int> { 7, 8, 9 , 10, 11, 12, 13, 14, 21, 23, 24, 28, 29, 30, 31, 32};
+frontier = Queue()
+frontier.put(start)
+visited = {}
+visited[start] = True
 
-		Expand to new node from previous and move
-		Queue frontQueue = new Point();
-
-		when Point is acknowledged to move
-		change new Point to become Visited = true;
-
-		while(new Point == Visited)
-		{
-			move Point to nodeIdentifierVisited
-		}
-	}
+while not frontier.empty():
+   current = frontier.get()
+   for next in graph.neighbors(current):
+      if next not in visited:
+         frontier.put(next)
+         visited[next] = True
 \end{lstlisting}
+\cite{stanfordredblobgamesAstar}
 
 Som set i figur \ref{fig:AKvadrat1} har vi vores liste givet ved kassernes nummerering. Nummereringen kører fra venstre mod højre én række ad gangen. Vi angiver at det tager 10 point af gå lodret og vandret én kasse ad gangen og 12 point at gå diagonalt. I figur \ref{fig:AKvadrat2} kan vi nu se de heuristiske datasæt angivet fra startpunktet (grøn). Hver enkel kasse omkringliggende startpunktet har deres \textbf{'H'} værdi angivet med lys-lilla tekst og bevægelsesomkostningen \textbf{'G'} fra startpunktet til kassen angivet i blå tekst.
 
@@ -214,4 +230,10 @@ Som set i figur \ref{fig:AKvadrat1} har vi vores liste givet ved kassernes numme
 \caption{A* der viser bekostning af bevægelse fra startpunkt (grøn) til omkringliggende kasser ('G') angivet med blå farve samt 'H' angivet med lys-lilla}
 \end{figure}
 
-Nu udregnes \textbf{'F'} værdien så f.eks. hvis vi går fra kasse 14 (startpunktet) til 15 skal vi lægge 10 (\textbf{'G'}) og 8 (\textbf{'H'}) sammen. Dette gør vi så for alle omkringliggende kasser for startpunktet. Dernæst går man til den laveste \textbf{'F'} værdi og gør helt det samme som før, derudover flyttes den nye kasse man står på til \textit{besøgt} listen. Noget man skal være opmærksom på her er at man stadig skal sammenligne bevægelsesomkostningen fra den tidligere kasse til de kasser der også er relevante for den nye kasse man har flyttet sig til. 
+Nu udregnes \textbf{'F'} værdien så f.eks. hvis vi går fra kasse 14 (startpunktet) til 15 skal vi lægge 10 (\textbf{'G'}) og 8 (\textbf{'H'}) sammen. Dette gør vi så for alle omkringliggende kasser for startpunktet. Dernæst går man til den laveste \textbf{'F'} værdi og gør helt det samme som før, derudover flyttes den nye kasse man står på til \textit{besøgt} listen. Noget man skal være opmærksom på her er at man stadig skal sammenligne bevægelsesomkostningen fra den tidligere kasse til de kasser der også er relevante for den nye kasse man har flyttet sig til. For dermed at afgøre om man kunne have påført en smartere bevægelse.
+
+Denne fremgangsmåde er også bedre kendt som Breadth First Search, hvori en frontlinje bliver kontinuerligt fremskyndet baseret på omkostninger og heuristiske datasæt\cite{stanfordredblobgamesAstar}.
+A* er en heuristisk fremgangsmåde afledt af Dijkstras generelle funktionalitet. %\cite{http://search.proquest.com/openview/88fa950a98b308c6687f79f76caeb187/1?pq-origsite=gscholar}
+
+
+\subsection{Dijkstra og A* sammenligning}
