@@ -1,7 +1,38 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{COPERTII}
+\bibitem{TRAFIKMODELREFERENCER}
+COWI.
+\newblock Trafikmodelreferencer.
+\newblock
+  \url{http://www.cowi.dk/menu/project/Oekonomimanagementogplanlaegning/Trafikplanlaegningogmodellering/Pages/trafikmodelreferencer.aspx
+  }, 2015.
 
+\bibitem{OmCOWI}
+COWI.
+\newblock Omcowi.
+\newblock \url{http://www.cowi.dk/topmenu/aboutcowi/Pages/omcowi.aspx}, 2016.
+
+\bibitem{DtuProjekter}
+DTU.
+\newblock Dtu - projekter.
+\newblock
+  \url{http://www.transport.dtu.dk/Forskning/Projekter?fr=1&mr=77&orgid=CTT&qt=DtuProjectQuery&pstatus=all#tabs},
+  2016.
+
+\bibitem{VisualSolutions}
+Altair Engineering.
+\newblock About visual solutions, incorporated.
+\newblock \url{http://www.vissim.com/company.html }, 2016.
+
+\bibitem{VisSim}
+Altair Engineering.
+\newblock Vissim.
+\newblock \url{http://www.vissim.com/}, 2016.
+
+\bibitem{DtuForskning}
+Carsten~Broder Hansen.
+\newblock Dtu - forskning.
+\newblock \url{http://www.transport.dtu.dk/Forskning}, 2015.
 
 \bibitem{dmuadfaerdsmodel}
 Danmarks Miljøundersøgelser.
@@ -18,6 +49,11 @@ Danmarks Miljøundersøgelser.
 \newblock
   \url{http://www.dmu.dk/1_viden/2_publikationer/3_fagrapporter/rapporter/FR447.pdf},
   2003.
+
+\bibitem{COPERTII}
+Leonidas Ntziachristos and Zissis Samaras.
+\newblock Computer programme to calculate emissions from road transport.
+\newblock \url{http://www.eea.europa.eu/publications/TEC05}, 1997.
 
 \bibitem{stress}
 Dwight A~Hennessy og~David L~Wiesenthal.
@@ -45,10 +81,22 @@ Henrik Papsø.
   \url{http://www.tveast.dk/artikler/trafikpropper-kan-koste-menneskeliv},
   2007.
 
+\bibitem{stanfordredblobgamesAstar}
+{Introduction to A*}.
+\newblock
+  \url{http://www.redblobgames.com/pathfinding/a-star/introduction.html}, 2016.
+\newblock Accessed: 06/03/2016.
+
 \bibitem{DMATBOGEN}
 Kenneth~H. Rosen.
 \newblock {\em Discrete Mathematics and its Applications}.
 \newblock McGraw Hill, 7. global edition, 20113.
+
+\bibitem{trafdyn}
+Paul Ross.
+\newblock Traffic dynamics.
+\newblock Technical Report~6, Traffic Systems Division, Federal Highway
+  Administration, August 1988.
 
 \bibitem{dtfnotat}
 Danmarks TransportForskning.
@@ -56,5 +104,12 @@ Danmarks TransportForskning.
 \newblock
   \url{http://www.transport.dtu.dk/~/media/Institutter/Transport/forskning/publikationer/publikationer%20dtf/2007/arbejdsnotat_om_trafikmodeller_160507.ashx?la=da},
   2007.
+
+\bibitem{Vejdirektoratet}
+Vejdirektoratet.
+\newblock Længden af offentlige veje.
+\newblock
+  \url{http://www.vejdirektoratet.dk/DA/viden_og_data/statistik/vejeneital/l%C3%A6ngdeoffentligeveje/Sider/default.aspx},
+  2016.
 
 \end{thebibliography}
