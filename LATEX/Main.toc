@@ -2,11 +2,11 @@
 \contentsline {chapter}{Preface}{iii}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Indledning}{1}{chapter.0.1}
 \contentsline {chapter}{\numberline {2}Metode}{2}{chapter.0.2}
-\contentsline {subsection}{\numberline {2.0.1}Brainstorm og Problemtr\IeC {\ae }}{2}{subsection.0.2.0.1}
-\contentsline {subsection}{\numberline {2.0.2}Problemomr\IeC {\r a}de}{2}{subsection.0.2.0.2}
-\contentsline {subsection}{\numberline {2.0.3}Fremgangsm\IeC {\r a}de}{2}{subsection.0.2.0.3}
-\contentsline {subsection}{\numberline {2.0.4}S\IeC {\o }geprotokol}{3}{subsection.0.2.0.4}
-\contentsline {subsection}{\numberline {2.0.5}Kilder og Kildekritik}{3}{subsection.0.2.0.5}
+\contentsline {section}{\numberline {2.1}Brainstorm og problemtr\IeC {\ae }}{2}{section.0.2.1}
+\contentsline {section}{\numberline {2.2}Problemomr\IeC {\r a}de}{3}{section.0.2.2}
+\contentsline {section}{\numberline {2.3}Fremgangsm\IeC {\r a}de}{3}{section.0.2.3}
+\contentsline {section}{\numberline {2.4}S\IeC {\o }geprotokol}{3}{section.0.2.4}
+\contentsline {section}{\numberline {2.5}Kilder og kildekritik}{3}{section.0.2.5}
 \contentsline {part}{I\hspace {1em}Problemanalyse}{4}{part.1}
 \contentsline {chapter}{\numberline {3}Teori}{5}{chapter.1.3}
 \contentsline {section}{\numberline {3.1}Trafik Model}{5}{section.1.3.1}
@@ -47,5 +47,5 @@
 \contentsline {chapter}{\numberline {12}Diskussion}{30}{chapter.2.12}
 \contentsline {chapter}{\numberline {13}Konklusion}{31}{chapter.2.13}
 \contentsline {chapter}{\numberline {14}Perspektivering}{32}{chapter.2.14}
-\contentsline {chapter}{Bibliography}{33}{chapter*.11}
+\contentsline {chapter}{Bibliography}{33}{chapter*.12}
 \contentsline {chapter}{\numberline {A}Appendix}{34}{appendix.A}
