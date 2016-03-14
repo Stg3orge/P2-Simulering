@@ -8,94 +8,56 @@ OBS: Dette afsnit er ikke færdigt og modellen kan og vil med høj sandsynlighed
 
 \subsection{Trafik Flow}
 
-En publikation fra 1988 af en Paul Ross fra Traffic Systems Division, belyser om emnet Traffic Dynamics og herunder Traffic Flow \cite{trafdyn}. Som Paul Ross beskriver så området et af dem der er mindst forstået da der på dette tidspunkt ikke var nogle kontinuum teorier der kunne forudse trafik densitet, volume og fart med den præcision som der forventes for at kunne opstille et timing signal. Derimod er det bedste der kan gøres er at lave et cirka estimate med diskontinuerlig dellinger. Publikationen forklarer i større detalje hvordan at for at få et udbytte med kontrol, simulation og en general forståelse for emnet, er en beskrivelse af trafik med henhold til fortsættende og differentiable kvantitativer nødvendig. Formålet med denne publikation er at udvikle en ny formulering til dette som er kvalitativt korrekt. 
+Trafik fenomener har i langt tid ikke været nemt at regne på. En publikation fra 1988 af Paul Ross fra Traffic Systems Division beskriver trafik som at have en vis lighed med væsker som ikke kan komprimeres mere end en vis densitet \cite{trafdyn}. Igennem tiden har der været nogle forskellige teorier om hvorvidt man måler på trafik og mange har forsøgt på forskellige måder. 
 
-Den generelle konsensus for trafik variabler er følgende: Trafik Densiteten, k, farten, v, og volume, Q, er passende og brugbare til formået beskrevet herover. Med disse variabler er to relationer kendt. Den første er forbundet i definitionenerne på volume, densitet og fart.
+%En publikation fra 1988 af en Paul Ross fra Traffic Systems Division, belyser om emnet Traffic Dynamics og herunder Traffic Flow \cite{trafdyn}. Som Paul Ross beskriver så området et af dem der er mindst forstået da der på dette tidspunkt ikke var nogle kontinuum teorier der kunne forudse trafik densitet, volume og fart med den præcision som der forventes for at kunne opstille et timing signal. Derimod er det bedste der kan gøres er at lave et cirka estimate med diskontinuerlig dellinger[Ordliste]. Publikationen forklarer i større detalje hvordan at for at få et udbytte med kontrol, simulation og en general forståelse for emnet, er en beskrivelse af trafik med henhold til fortsættende og differentiable kvantitativer[Ordliste] nødvendig. Formålet med denne publikation er at udvikle en ny formulering til dette som er kvalitativt korrekt. 
 
-\begin{verbatim}\label{eq:Equation1}
-[Q = kv]
-\end{verbatim}
+Den generelle konsensus for trafik variabler er følgende: Trafik Densiteten, K, farten, v, og volume, Q, er passende og brugbare til formået beskrevet herover. [Note: Cite Dr. Henry Lieu]
 
 \begin{equation}\label{eq:Equation1}
-\[Q = kv \]
-\begin{flushright}
-(1)
-\end{flushright}
+\[Q = Kv \]\begin{flushright}(1)\end{flushright}
 \end{equation}
 						
 hvor følgende er gældende:
 
-Q = trafik volume (Bil(er)/timen) forbi et punkt.
-k  = vehicular densitet (bil(er)/mi)
-v  = (local space-mean) fart (km/t)
+Q = trafik flow (Bil(er)/timen) forbi et punkt.  
+K  = vehicular densitet (bil(er)/km)
+v  = (space-mean-speed) fart (km/t)
 
-Det andet kendte relation, kontinuiteten af fartøjer også nævnt i Paul Ross' rapport \cite{trafdyn}
+Densitet kan beskrives som antallet af fartøjer per længden af en enhed (i dette tilfælde km). De to vigtige former af densitet er kritisk densitet, K_c og jam densitet, K_j. K_c er den maksimale densitet under free flow. k_j er den maksimale densitet under ophobning. Densitet udregnes som:
 
 \begin{equation}\label{eq:Equation2}
-\[ \partial k/ \partial t + \partial Q/ \partial x = S(x, t) \]
-\begin{flushright}
-(2)
-\end{flushright}
+\[ k = \frac{1}{s} \] \begin{flushright}(2)\end{flushright}
 \end{equation}
 
-Hvor følgende er gældende:
-\partial / \partial t+ og \partial / \partial t 
-indikerer delvis differentiering i forhold til tiden, t, og lokation på en vej x.
-S(x,t) er fartøjer der køre ind på (positive) og køre ud igen (negative) på en vejbane (veh/(km/t)).
+Hvor s er det inverse af densiteten, spacing, som er distancen fra midte til midte mellem fartøjer.
 
-Disse to ligninger er dog ikke de eneste der er nødvendige for en fuldendt formulering af trafik flow. En tredje relation er også nødvendigt.
+På en vej L vil densiteten K, på et bestemt tidspunkt t_1, være lig det inverse af spacing mellem n antal fartøjer.
 
-Der har igennem tiderne været mange bud på hvad denne tredje relation kan være for at få et godt estimat udregnet. Et af disse har været “Deterministic speed-density hypothesis” men Ifølge Paul Ross er dette deterministisk forhold ikke muligt, der er ikke fundet data som bekræfter det på trods af at der er en generel tendens hvorved fart falder jo større trafik densiteten stiger, har ingen observationer der er blevet lavet i dette felt påpeget en bestemt fart til en bestemt densitet.
-
-En anden relation vil være “Equilibirum Speed-Density Hypothises” som Paul Ross beskriver, denne relation er også blevet beskrevet i en serie af publikationer fra 1961 til og med 1971. Heri beskrives der at trafik har en ligevægts fart distribuering og at det medføre at den aktuelle fart distribuering forsøger at på sin vis “slappe af”. Det er altså underforstået at der er tale om en gennemsnitsfart, men denne relation lider af mange, hvis ikke flere problemer som den sidstnævnte relation, den deterministiske.
-
-Med dette taget i betragtning kigges der derfor istedet på følgende relation som er formuleret ud fra logiske analyse samt observationer foretaget af Hurdle og Solomon i 1986[5]. Disse indikerer at overbelastning på vejene reducere den ønskede trafik hastighed, men derimod sænker den aktuelle hastighed på vejene mens personer bag rettet har stadig den far de ønsker at rejse i deres free-flow. Relationen kan udtrykkes som følgende:
-
-\begin{equation}\label{Equation 3}
-\[ \partial v + v \partial t = (F - v)~T, k < kjam 	\]\begin{flushright}
-(3)
-\end{flushright}
+\begin{equation}\label{eq:Equation3}
+\[ K(L,t_1) = \frac{n}{L} = \frac{1}{\overline{s}(t_1)} \] \begin{flushright}(3)\end{flushright}
 \end{equation}
 
-Hvor:
-F = fri fart på et anlæg (Vejbane) (km/t)
-T = “Afslapnings tid” (Timer)
-Kjam = “jam” densitet af trafik (vch/km)
+Space-mean-speed kan forklares som at være en udregning af fart hvori man tager et helt vejbane segment i betragtning. En serie af billeder eller video optager farten på individuelle fartøjer der køre på denne bane, ud fra dette er en gennemsnits fart udregnet. Denne type udregning anses for at være mere præcis end Time-mean-speed metoden som der ikke vil blive forklaret i dette afsnit. Udregningen vor Space-mean-speed ser således ud:
 
-F er i denne sammenhæng en konstant som er uafhængig af densiteten, k. Dette vil måske virke ulogisk i lys af observationer der viser at fartøjs trafik bevæger sig langsommere når densiteten er høj. Med de rette afgrænsede forhold vil lining (1), (2), og (3) give et fuldendt afbildning af fart, volume, og densiteten på hvilken som helst plads, x, på hvilket som helst tidspunkt, t. De tre lininger fungerer også således at der ses en opførsel meget lig den man ser i rigtig trafik med “trafik bølger” og livagtigt genoprettelse fra overgangstilstande.
-
-Contraints:
-
-Capacity Limit
-De to relationer, den deterministiske og equilibriums relationerne, bliver kapaciteten af vejene bestemt af formed af fart-densitets kurven. Men vores formulering anvender ikke disse to og mangler derfor en lignende begrænsning, derfor formuleres dette på følgende måde for vores model: 
-
-\begin{equation}\label{Equation 4}
-\[v ≤ Capacity / k	\]\begin{flushright}
-(4)
-\end{flushright}
+\begin{equation}\label{eq:Equation4}
+\[ v_t = n (\displaystyle\sum_{i=1}^{n}(1/v_i)^-1 \] \begin{flushright}(4)\end{flushright}
 \end{equation}
 
-Denne ulighed fremmer at trafikken vil reducere sin fart således at flowet igennem en indsnævring ikke vil gå ud over kapaciteten af denne indsnævring. Basseret på Paul Ross’s observationer at dette er, kvalitativt, hvad der også sker i rigtige indsnævringer.
+Hvor n er det antal af fartøjer der passere vejbane segmentet.
 
-Jam density
-Med disse ligninger har vi nu en udemneærket repræsentation af trafik ved lave densiteter som også nu fungerer med kapacitet som en form for begrænsning. Dette beskriver dog ikke trafikkens opførsel når trafikkens densitet når sit maksimum, kjam.
+\subsection{Flow}
+Flow er det antal at fartøjer som passere en form for referrence punkt per enhed af tid, som fartøjer/timen. The inverse af flow er togfølge (h) hvilket er den tid der går imellem fartøjer der passere det bestemte punkt og det forrige køretøj (i + 1). Ved overbelastning på veje forbliver h constant. Ved en trafik prop vil h gå mod uendeligt.
 
-\begin{equation}\label{Equation 5}
-\[k ≤ k_jam.\]\begin{flushright}
-(5)
-\end{flushright}
+\begin{equation}\label{eq:Equation5}
+\[ q = 1/h \] \begin{flushright}(5)\end{flushright}
 \end{equation}
 
-Som Paul Ross beskriver kjam, så er kjam en konstant som kan ændre sig fra sted til sted, alt efter antallet af vejbaner, men den er ikke afhængig af den fart som trafikken bevæger sig med. Sammenligningen med væsker gør sig gældene igen. En væske’s flow har en volume som er uafhængig af x men dette er ikke inkorporeret i vores formulering endnu. hvis vi tager lign (3) så antages det eksplicit at trafik er komprimerbart. Således kan jam densiteten for lign (4) ændre til følgende.
+Flow (q) der passere et bestemt punkt (x_1) i et interval (T) er lig det inverse af den gennemsnitlige togfølge af m køretøjer.
 
-\begin{equation}\label{Equation 6}
-\[  \partial Q/ \partial x = 0, k = k_jam 	\]\begin{flushright}
-(6)
-\end{flushright}
+\begin{equation}\label{eq:Equation6}
+\[ q(T, x_1) = \frac{m}{T} = \frac{1}{h(x_1} \] \begin{flushright}(6)\end{flushright}
 \end{equation}
-
-Med relationer (1), (2), (3), (4), (5) og (6) har vi nu en komplet formulering af trafik som kan inddrages i vores program.
-Note: Nogle dele kan nok godt omformuleres
 
 Lastbiler:
 Lastbiler og andre transport fartøjer er oftest skyld i at trafikken går langsommere eller i nogle tilfælde stopper helt op. Det er derfor at bl.a. transport af vindmølledele bliver igangsat sent om aften eller meget tidligt på morgenen således at de ikke skaber problemer for andre billister. Dette har altså en stor effekt på trafikken og kunne derfor være relevant at medtage i vores model, dette er dog ikke gruppens fokus da dette er et meget specifikt scenarie.
