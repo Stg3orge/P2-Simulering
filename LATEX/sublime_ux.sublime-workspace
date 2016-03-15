@@ -111,89 +111,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "sections/Teori/Teori.tex",
-			"settings":
-			{
-				"buffer_size": 15458,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Main.tex",
-			"settings":
-			{
-				"buffer_size": 1098,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "appendix.tex",
-			"settings":
-			{
-				"buffer_size": 44,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "setup/macros.tex",
-			"settings":
-			{
-				"buffer_size": 3800,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "setup/preamble.tex",
-			"settings":
-			{
-				"buffer_size": 6067,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sections/sections.tex",
-			"settings":
-			{
-				"buffer_size": 764,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
-			"settings":
-			{
-				"buffer_size": 6502,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "references.bib",
-			"settings":
-			{
-				"buffer_size": 6901,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "%!TEX root = ..\\..\\Main.tex\n\\chapter{Interessentanalyse}\\label{Interessentanalyse}\n\nFormålet med interessentanalysen er at identificere de interessenter som kan hjælpe med udvikling af produktet, det kunne f.eks være i form af datadeling eller erfaringer. Vi vil i følgende afsnit kigge på nogle af de interessenter som vi synes kunne gavne vores projekt. \n\n\\vspace{5mm}\n\n\\section{Transport- og Bygningsministeriets (trm) - (Vejdirektoratet)}\n\\label{sec:Trm}\nTransport- og Bygningsministeriet(trm) er Danmarks øverste danske statslige myndighed på transportområdet og bygningsområdet. Trms hovedopgave er at sikre sig at de forskellige love bliver overholdt, ved opførelse af fx. en motorvej. Dog da trm er en sammensætning af mange underdelinger har vi valgt at fokusere på en af deres styrelser nemlig Vejdirektoratet.\n \n\\vspace{5mm}\n\nVejdirektoratet står nemlig bag statsvejnettet som hovedsageligt består af motorveje, hovedlandeveje, og mange af landets broer (i alt 3.801 km vej \\cite{Vejdirektoratet}. Det udgør med andre ord ca. 5\\% af det offentlige vejnet. Men selvom Vejdirektoratet kun står får 5\\% af vejnettet, så udgør disse 5\\% ca. halvdelen af Danmarks trafik.\n\n\\vspace{5mm}\n\nGrunden til Vejdirektoratet kunne være interesseret i vores projekt ses på deres primære opgaver. Vejdirektoratet står nemlig for planlægningen af vejnettet så både privatbilismen og den kollektive trafik kan fungere sammen. Samt at de anlagte vej vil fungere i samspil med de allerede eksisterende veje.\nVejdirektoratet vil være interesseret i vores simulering hvis den kunne gå hen og hjælpe med at forudsige placering af nye veje, så den virker i sammenspil med det allerede eksisterende vejnet. Altså at simulering kunne vise hvordan trafikken vil blive påvirket hvis der blev opført en vej.\n\n\\vspace{5mm}\n\nEn anden grund til Vejdirektoratet er valgt som en interessent er at de er en styrelse som foretager mange undersøgelser/målinger omkring trafik. Vejdirektoratets undersøgelser vil derfor kunne bruges til udviklingen af vores produkt, og dermed formentlig gøre produktet mere realistisk.\n\n\\section{Kommunen}\n\\label{sec:Kommunen}\nDanmark har 98 kommuner som er delt over Danmark. Hver enkelt kommune står for de faktorer som påvirker kommunens areal, det kunne f.eks. være vedligeholdelse af veje eller opførelse af en. Kommunerne er derfor ofte midtpunktet i trafikprojekter vedrørende deres areal. De er derfor en vigtig interessant, da de er forbindelsen mellem de forskellige organisationer, f.eks. mellem Vejdirektoratet og Trafik- og Byggestyrelsen. Hvor Vejdirektoratet ofte står for planlægningen og Trafik- og Byggestyrelsen står for opførelsen. Kommunen er derfor ofte involveret i alle dele af projektet. Kommunen kunne derfor være en vigtigt interessant, da de har adgang til en masse undersøgelser/data som er foretaget i forbindelse med de forskellige trafikprojekter osv. \n\n\n\\section{COWI}\n\\label{sec:COWI}\nCOWI er et internationalt rådgivningsfirma som har arbejdet med virksomheder overalt i verden, de var i 2015 involveret i ca. 13.000 projekter på verdensplanen \\cite{OmCOWI}. COWI er en interessant da de har stor erfaring inden mange områder, heriblandt trafik. De har f.eks. rådgivet adskillige virksomheder i de sidste 30 år omkring, samt fremstillet trafikmodeller heriblandt for Vejdirektoratet, og flere kommuner \\cite{TRAFIKMODELREFERENCER}. COWI har altså en erfaring inden for fremstillingen af trafikmodeller, samt har de formentlig en masse datasæt som kan hjælpe os med at fremstille vores produkt.\n\n\\section{Visual Solutions}\n\\label{sec:Visual Solutions}\nVisual solution er firmaet der står bag VisSim, som blev grundlagt i 1989 \\cite{VisualSolutions}, som er en matematisk simuleringsmodel. Da deres VisSim bliver benyttet af større internationale firmaer til at simulere og forbedre forskellige systemer. Over 100.000 forskere og ingeniørere gør sig brug af VisSim når de skal arbejde med simulation, hvilket medfører til at firmaet er en interessant for vores projekt Da de har meget erfaring indenfor simulering af trafikmodeller, da de sidder inde med en af de førende værktøj indenfor simulation \\cite{VisSim}. De kan dermed være med til at bidrage til vores projekt.\n\n\\section{DTU}\n\\label{sec:DTU}\nDTU er et institut, som forsker inden for transportområdet. Deres mål er at skabe større vidensgrundlag for transport politiske beslutninger, hvorved de primært arbejder med optimering af trængsel i trafikken, miljøproblematikken, og trafiksikkerheden \\cite{DtuForskning}. DTU har gennem årene foretaget en masse projekter, som vil kunne gavne og bidrage til vores projekt, f.eks. har de projekter vedrørende adfærdsmodeller, og trafikmodeller \\cite{DtuProjekter}. DTU vil altså kunne bidrage med dataset og erfaringer omkring trafik, som vil kunne hjælpe med at øge realiteten i vores produkt.\n\n",
-			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
-			"file_size": 4918,
-			"file_write_time": 131024226305110367,
-			"settings":
-			{
-				"buffer_size": 4838,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sections/Indledning/Indledning.tex",
-			"settings":
-			{
-				"buffer_size": 562,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -272,12 +189,26 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/Git/Git Repository/P2-Simulering/LATEX",
-		"/C/Programs/Git/Git Repository/P2-Simulering/LATEX/sections",
-		"/C/Programs/Git/Git Repository/P2-Simulering/LATEX/sections/Interessentanalyse"
+		"/C/Programs/Githubp2/P2-Simulering/LATEX",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Perspektivering",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teori",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup"
 	],
 	"file_history":
 	[
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
+		"/C/Programs/GitHub Backup P2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/ProblemetsRelevans/ProblemetsRelevans.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup/preamble.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup/macros.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
 		"/C/Users/Rasmus/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
 		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/tools/.tex",
 		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/references.bib",
@@ -416,305 +347,8 @@
 	"groups":
 	[
 		{
-			"selected": 8,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "sections/Teori/Teori.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1098,
-						"regions":
-						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-								],
-								"scope": "bookmarks"
-							}
-						},
-						"selection":
-						[
-							[
-								764,
-								764
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "appendix.tex",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 44,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "setup/macros.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3800,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3800,
-								3800
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 370.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "setup/preamble.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6067,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2418,
-								2418
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 806.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "sections/sections.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 764,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6502,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3991,
-								4701
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 243.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "references.bib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6901,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5596,
-								5596
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3711.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4838,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1191,
-								1191
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "sections/Indledning/Indledning.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 562,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				}
 			]
 		}
 	],
