@@ -62,10 +62,10 @@ Man kan beregne emissioner af biltrafikken, dette gøres ved følgene: Der tages
 
 \vspace{5mm}
 
-Disse faktorer er ikke selvstændige og bliver lavet per bilens årgang og dens størrelse/brændstoftype. Hastigheden af fartøjet determinere varmstarts-emissionskoefficienten. Der er sågar fortaget undersøgelser, såkaldte årskørselsundersøgelse af Vejdirektoratet (Winther & Ekmann, 1998) hvorfra det er konkluderet at årskørsel forudsat er uafhængigt af bilens størrelse selvom at dette er set som urealistisk. Det estimeret trafikarbejde bliver udregnet ifølge en adfærdsmodel hvori man kigger på årskørsel pr bil i alle aldersgrupper. Der forøges eller reduceres med en faktor i selve fremskrivningsåret sådan at summen af antal biler i hver gruppe ganges deres gennemsnitlige årskørsel bliv lig det førnævnte trafikarbejde.
+Disse faktorer er ikke selvstændige og bliver lavet per bilens årgang og dens størrelse/brændstoftype. Hastigheden af fartøjet determinere varmstarts-emissionskoefficienten. Der er sågar fortaget undersøgelser, såkaldte årskørselsundersøgelse af Vejdirektoratet (Winther \& Ekmann, 1998) hvorfra det er konkluderet at årskørsel forudsat er uafhængigt af bilens størrelse selvom at dette er set som urealistisk. Det estimeret trafikarbejde bliver udregnet ifølge en adfærdsmodel hvori man kigger på årskørsel pr bil i alle aldersgrupper. Der forøges eller reduceres med en faktor i selve fremskrivningsåret sådan at summen af antal biler i hver gruppe ganges deres gennemsnitlige årskørsel bliv lig det førnævnte trafikarbejde.
 
 \subsubsection{Varmstart}
-For at beregne varmstarts-emissionkoefficienten tager man udgangspunkt i COPERT II for den pågældene årgang. COPERT II er et windows program som gør det muligt at udregne emission fra vej trafik. Ydermere er programmet i stand til at lave lignende beregninger ud fra en forbrændingsmotor til et off-road fartøj. De beregnede emissioner inkludere alle de store forurenende stoffer så som (CO, NO\textsubscript{x}, VOC, PM) og mange flere. Programmet er ydermere i stand til at beregne brændstofforbrug \cite[s 4]{COPERT II}.  For nye biler i alle fremtidsår anvendes der de emissionskoefficienter der er blevet udarbejdet som EU-normer pr den årgang. Dette er ikke gældende for ældre biler. Her ændre emissionskoefficienterne sig med tiden og dette er specielt pågældende for katalysatorbiler. Emissionskoefficienten bliver korrigeret fra årgang til årgang alt efter motorslid, da informationer om emissionskoefficienten udvikling afhænger af fartøjets samlede kørsel. Når den samlede årskørsel bliver udregnet er det også muligt at beregne den gennemsnitlige bils samlede kørsel for en givet alder. Motorslid korrigerede emissionskoefficienten ved varmstart kan således udregnes for hver bilårgang for et beregnings år, jf. Kveiborg(1999).
+For at beregne varmstarts-emissionkoefficienten tager man udgangspunkt i COPERT II for den pågældene årgang. COPERT II er et windows program som gør det muligt at udregne emission fra vej trafik. Ydermere er programmet i stand til at lave lignende beregninger ud fra en forbrændingsmotor til et off-road fartøj. De beregnede emissioner inkludere alle de store forurenende stoffer så som (CO, NO\textsubscript{x}, VOC, PM) og mange flere. Programmet er ydermere i stand til at beregne brændstofforbrug \cite[s 4]{COPERTII}.  For nye biler i alle fremtidsår anvendes der de emissionskoefficienter der er blevet udarbejdet som EU-normer pr den årgang. Dette er ikke gældende for ældre biler. Her ændre emissionskoefficienterne sig med tiden og dette er specielt pågældende for katalysatorbiler. Emissionskoefficienten bliver korrigeret fra årgang til årgang alt efter motorslid, da informationer om emissionskoefficienten udvikling afhænger af fartøjets samlede kørsel. Når den samlede årskørsel bliver udregnet er det også muligt at beregne den gennemsnitlige bils samlede kørsel for en givet alder. Motorslid korrigerede emissionskoefficienten ved varmstart kan således udregnes for hver bilårgang for et beregnings år, jf. Kveiborg(1999).
 
 \vspace{5mm}
 
@@ -73,11 +73,22 @@ Til at beregne emissionen fra varmstarts er det forudsat at man har kendskab til
 \subsubsection{Koldstartstillæg}
 I ALTRANS udregnes Koldstartstillægget ved brug af den tysk-schweizisk emissionsdatabase per bytrafiksituation. ALTRANS differentierer koldstartstillægget efter følgende:
 
+<<<<<<< HEAD:LATEX/sections/Teknologianalyse/altrans.tex
 \begin{itemize}[H]
+=======
+\begin{itemize}
+<<<<<<< HEAD:LATEX/sections/Teknologianalyse/altransWTF.tex
+	\item Turlængden. Disse kan være på 0-1 km, 1-2, 2.3, 3-4 og 4km.
+	\item Pause siden sidste tur disse kan være 0-1 timer til over 8 timer.
+	\item Udetemperaturen i temperaturspring på 5 grader som beregnes som månedsmiddelværdien.
+	\item Bilens alder.
+=======
+>>>>>>> 3b2f4a828785449639d4111523ea83b720c924a4:LATEX/sections/Teknologianalyse/altransWTF.tex
 \item Turlængden. Disse kan være på 0-1 km, 1-2, 2.3, 3-4 og 4km.
 \item Pause siden sidste tur disse kan være 0-1 timer til over 8 timer.
 \item Udetemperaturen i temperaturspring på 5 grader som beregnes som månedsmiddelværdien.
 \item Bilens alder.
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3:LATEX/sections/Teknologianalyse/Altrans.tex
 \end{itemize}
 
 Derudover tager bilmodellen i ALTRANS også motorslid med i beregningerne for koldstartstillæg.
