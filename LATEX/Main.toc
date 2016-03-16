@@ -12,10 +12,9 @@
 \contentsline {section}{\numberline {3.1}Trafik Model}{5}{section.1.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Trafik Flow}{5}{subsection.1.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Flow}{6}{subsection.1.3.1.2}
-\contentsline {section}{\numberline {3.2}Dijkstras Algoritme}{7}{section.1.3.2}
-\contentsline {section}{\numberline {3.3}INTRO TIL TEORI, SKAL S\IeC {\AE }TTES I L\IeC {\O }SNINGSAFSNIT}{9}{section.1.3.3}
-\contentsline {section}{\numberline {3.4}A* Algoritmen}{9}{section.1.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Dijkstra og A* sammenligning}{12}{subsection.1.3.4.1}
+\contentsline {section}{\numberline {3.2}INTRO TIL TEORI, SKAL S\IeC {\AE }TTES I L\IeC {\O }SNINGSAFSNIT}{7}{section.1.3.2}
+\contentsline {section}{\numberline {3.3}A* Algoritmen}{7}{section.1.3.3}
+\contentsline {section}{\numberline {3.4}Dijkstras Algoritme}{10}{section.1.3.4}
 \contentsline {chapter}{\numberline {4}Problembeskrivelse}{13}{chapter.1.4}
 \contentsline {section}{\numberline {4.1}Problemets Relevans}{13}{section.1.4.1}
 \contentsline {subsection}{\numberline {4.1.1}\IeC {\O }konomi}{13}{subsection.1.4.1.1}
@@ -29,31 +28,27 @@
 \contentsline {subsection}{\numberline {5.2.1}VisSim - Bilen}{16}{subsection.1.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}VisSim - Netv\IeC {\ae }rket}{17}{subsection.1.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Analyse af acceleration og deceleration}{17}{subsection.1.5.2.3}
-\contentsline {chapter}{\numberline {6}Altrans}{19}{chapter.1.6}
-\contentsline {section}{\numberline {6.1}Geografisk model}{19}{section.1.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Model af kollektivt transportnet}{19}{subsection.1.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Model af serviceniveau}{20}{subsection.1.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Model for bilrejser}{20}{subsection.1.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Model for attraktion til byfunktioner}{20}{subsection.1.6.1.4}
-\contentsline {section}{\numberline {6.2}Adf\IeC {\ae }rds model}{20}{section.1.6.2}
-\contentsline {section}{\numberline {6.3}Emissions model}{20}{section.1.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Varmstart}{21}{subsection.1.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Koldstartstill\IeC {\ae }g}{21}{subsection.1.6.3.2}
-\contentsline {chapter}{\numberline {7}Interessantanalyse}{22}{chapter.1.7}
-\contentsline {section}{\numberline {7.1}Transport- og Bygningsministeriets (trm) - (Vejdirektoratet)}{22}{section.1.7.1}
-\contentsline {section}{\numberline {7.2}Kommunen}{23}{section.1.7.2}
-\contentsline {section}{\numberline {7.3}COWI}{23}{section.1.7.3}
-\contentsline {section}{\numberline {7.4}Visual Solutions}{23}{section.1.7.4}
-\contentsline {section}{\numberline {7.5}DTU}{23}{section.1.7.5}
-\contentsline {chapter}{\numberline {8}Problemformulering}{25}{chapter.1.8}
-\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{26}{part.2}
-\contentsline {chapter}{\numberline {9}L\IeC {\o }sningsforslag}{27}{chapter.2.9}
-\contentsline {chapter}{\numberline {10}Kravspecifikationer}{28}{chapter.2.10}
-\contentsline {subsection}{\numberline {10.0.1}Succeskriterier}{28}{subsection.2.10.0.1}
-\contentsline {subsection}{\numberline {10.0.2}\IeC {\textbullet }}{28}{subsection.2.10.0.2}
-\contentsline {chapter}{\numberline {11}Implementation}{29}{chapter.2.11}
-\contentsline {chapter}{\numberline {12}Diskussion}{30}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Konklusion}{31}{chapter.2.13}
-\contentsline {chapter}{\numberline {14}Perspektivering}{32}{chapter.2.14}
-\contentsline {chapter}{Bibliography}{33}{chapter*.11}
-\contentsline {chapter}{\numberline {A}Appendix}{35}{appendix.A}
+\contentsline {section}{\numberline {5.3}Altrans}{18}{section.1.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Geografisk model}{19}{subsection.1.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Adf\IeC {\ae }rds model}{20}{subsection.1.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Emissions model}{20}{subsection.1.5.3.3}
+\contentsline {subsubsection}{Varmstart}{21}{section*.11}
+\contentsline {subsubsection}{Koldstartstill\IeC {\ae }g}{21}{section*.12}
+\contentsline {chapter}{\numberline {6}Interessantanalyse}{23}{chapter.1.6}
+\contentsline {section}{\numberline {6.1}Transport- og Bygningsministeriets (trm) - (Vejdirektoratet)}{23}{section.1.6.1}
+\contentsline {section}{\numberline {6.2}Kommunen}{24}{section.1.6.2}
+\contentsline {section}{\numberline {6.3}COWI}{24}{section.1.6.3}
+\contentsline {section}{\numberline {6.4}Visual Solutions}{24}{section.1.6.4}
+\contentsline {section}{\numberline {6.5}DTU}{24}{section.1.6.5}
+\contentsline {chapter}{\numberline {7}Problemformulering}{26}{chapter.1.7}
+\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{27}{part.2}
+\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{28}{chapter.2.8}
+\contentsline {chapter}{\numberline {9}Kravspecifikationer}{29}{chapter.2.9}
+\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{29}{subsection.2.9.0.1}
+\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{29}{subsection.2.9.0.2}
+\contentsline {chapter}{\numberline {10}Implementation}{30}{chapter.2.10}
+\contentsline {chapter}{\numberline {11}Diskussion}{31}{chapter.2.11}
+\contentsline {chapter}{\numberline {12}Konklusion}{32}{chapter.2.12}
+\contentsline {chapter}{\numberline {13}Perspektivering}{33}{chapter.2.13}
+\contentsline {chapter}{Bibliography}{34}{chapter*.13}
+\contentsline {chapter}{\numberline {A}Appendix}{36}{appendix.A}
