@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.16)  15 MAR 2016 21:29
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  16 MAR 2016 12:43
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 entering extended mode
 **Main
 (Main.tex
@@ -1376,10 +1380,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \titlepageleftcolumnwidth=\skip88
 \titlepagerightcolumnwidth=\skip89
 Package epstopdf Info: Source file: <aau/aau_logo_en.eps>
+<<<<<<< HEAD
 (epstopdf)                    date: 2015-09-20 12:21:11
 (epstopdf)                    size: 17997 bytes
 (epstopdf)             Output file: <aau/aau_logo_en-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-09-20 12:36:59
+=======
+(epstopdf)                    date: 2016-03-15 13:51:15
+(epstopdf)                    size: 17997 bytes
+(epstopdf)             Output file: <aau/aau_logo_en-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-03-15 13:51:15
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 (epstopdf)                    size: 9257 bytes
 (epstopdf)             Command: <epstopdf --outfile=aau/aau_logo_en-eps-convert
 ed-to.pdf aau/aau_logo_en.eps>
@@ -1465,13 +1476,21 @@ l.35 }
 
 
 ]
+<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 48.
+=======
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 50.
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+<<<<<<< HEAD
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 48.
+=======
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 50.
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 )
 \tf@toc=\write4
  [5]
@@ -1500,9 +1519,22 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) [2
+<Pictures/Metode/metodebillede.jpg, id=164, 715.67375pt x 639.38875pt>
+File: Pictures/Metode/metodebillede.jpg Graphic file (type jpg)
 
-] [3] [4
+<use Pictures/Metode/metodebillede.jpg>
+Package pdftex.def Info: Pictures/Metode/metodebillede.jpg used on input line 1
+0.
+(pdftex.def)             Requested size: 413.99895pt x 369.8701pt.
+ [2
+
+] [3 <./Pictures/Metode/metodebillede.jpg>]
+Overfull \hbox (15.36107pt too wide) in paragraph at lines 36--38
+\T1/lmr/m/n/10 Under pro-gram-mer-ings-fasen er der hov-ed-sageligt blevet an-v
+endt prøve-fejl-metoden,
+ []
+
+) [4] [5] [6
 
 ] (sections/Teori/Teori.tex
 Chapter 3.
@@ -1511,6 +1543,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 [5
 
 ] [6]
@@ -1519,12 +1552,490 @@ Overfull \hbox (3.22461pt too wide) in paragraph at lines 59--59
  []
 
 [7] <Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=195, 845.559pt x 598.235pt>
+=======
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \[
+       Q = Kv \]\begin{flushright}(1)\end{flushright}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \end{equation}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.19 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.19 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.19 \end{equation}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.27 ...former af densitet er kritisk densitet, K_
+                                                  c og jam densitet, K_j. K_...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.28 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (244.10272pt too wide) in paragraph at lines 27--28
+\T1/lmr/m/n/10 K$[]\OML/lmm/m/it/10 ogjamdensitet; K[]:K[]erdenmaksimaledensite
+tunderfreeflow:k[]erdenmaksimaledensitetunderophobning:Densitetudregnessom \OT1
+/lmr/m/n/10 :$ 
+ []
+
+[7
+
+]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \[
+        k = \frac{1}{s} \] \begin{flushright}(2)\end{flushright}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \end{equation}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.31 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.31 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.31 \end{equation}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 ... densiteten K, pÃ¥ et bestemt tidspunkt t_
+                                                  1, vÃ¦re lig det inverse a...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 35.
+
+
+LaTeX Warning: Command \o invalid in math mode on input line 35.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.36 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (141.48137pt too wide) in paragraph at lines 35--36
+[]\T1/lmr/m/n/10 På en vej L vil den-siteten K, på et bestemt tid-spunkt t$[]\O
+ML/lmm/m/it/10 ; v\OT1/lmr/m/n/10 æ\OML/lmm/m/it/10 religdetinverseafspacingmel
+lemnantalfart\OT1/lmr/m/n/10 ø\OML/lmm/m/it/10 jer:$ 
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 \[
+        K(L,t_1) = \frac{n}{L} = \frac{1}{\overline{s}(t_1)} \] \begin{flush...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 \end{equation}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.40 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.40 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.40 \end{equation}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 \[
+        v_t = n (\displaystyle\sum_{i=1}^{n}(1/v_i)^-1 \] \begin{flushright}...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \end{equation}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.46 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.46 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.46 \end{equation}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \[
+        q = 1/h \] \begin{flushright}(5)\end{flushright}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 \end{equation}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.55 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.55 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.55 \end{equation}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.57 Flow (q) der passere et bestemt punkt (x_
+                                              1) i et interval (T) er lig de...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \o invalid in math mode on input line 57.
+
+
+LaTeX Warning: Command \o invalid in math mode on input line 57.
+
+
+LaTeX Warning: Command \o invalid in math mode on input line 57.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (189.5886pt too wide) in paragraph at lines 57--58
+[]\T1/lmr/m/n/10 Flow (q) der passere et bestemt punkt (x$[]\OT1/lmr/m/n/10 )\O
+ML/lmm/m/it/10 ietinterval\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 T\OT1/lmr/m/n/10 )\
+OML/lmm/m/it/10 erligdetinverseafdengennemsnitligetogf\OT1/lmr/m/n/10 ø\OML/lmm
+/m/it/10 lgeafmk\OT1/lmr/m/n/10 ø\OML/lmm/m/it/10 ret\OT1/lmr/m/n/10 ø\OML/lmm/
+m/it/10 jer:$ 
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \[
+        q(T, x_1) = \frac{m}{T} = \frac{1}{h(x_1} \] \begin{flushright}(6)\e...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[8]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \end{equation}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.61 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.61 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.61 \end{equation}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+Package caption Warning: \label without proper reference on input line 186.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:AKvadrat2' on page 9 undefined on input line 73.
+
+
+Package caption Warning: \label without proper reference on input line 84.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:dijkstrasgraf' on page 9 undefined on input line 
+77.
+
+[9]
+<Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png, id=224, 784.43062pt x 307.1
+475pt>
+File: Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png Graphic file (type png)
+
+ <use Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png>
+Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png used
+ on input line 82.
+(pdftex.def)             Requested size: 413.99895pt x 162.10782pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 92.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 115.
+
+
+("C:\Users\Rasmus\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 116.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 116.
+
+[10 <./Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png>]
+Overfull \hbox (3.22461pt too wide) in paragraph at lines 134--134
+[]\T1/lmr/bx/n/14.4 INTRO TIL TEORI, SKAL SÆTTES I LØS-
+ []
+
+[11]
+
+Package caption Warning: \label without proper reference on input line 157.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:AKvadrat1' on page 12 undefined on input line 150
+.
+
+<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=255, 845.559pt x 598.235pt>
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 File: Pictures/Teoriafsnit/Figurfiler/Grid2.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid2.png>
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid2.png used on inpu
 t line 80.
 (pdftex.def)             Requested size: 413.99895pt x 292.9095pt.
+<<<<<<< HEAD
  [8 <./Pictures/Teoriafsnit/Figurfiler/Grid2.png>]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 92.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
@@ -1535,18 +2046,44 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 93.
 <Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=209, 844.756pt x 597.432pt>
+=======
+ [12 <./Pictures/Teoriafsnit/Figurfiler/Grid2.png>]
+
+Package caption Warning: \label without proper reference on input line 157.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:AKvadrat1' on page 13 undefined on input line 180
+.
+
+
+Package caption Warning: \label without proper reference on input line 186.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:AKvadrat2' on page 13 undefined on input line 180
+.
+
+<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=268, 844.756pt x 597.432pt>
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 File: Pictures/Teoriafsnit/Figurfiler/Grid3.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid3.png>
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid3.png used on inpu
 t line 111.
 (pdftex.def)             Requested size: 345.0pt x 243.99152pt.
+<<<<<<< HEAD
  [9 <./Pictures/Teoriafsnit/Figurfiler/Grid3.png>]
 Overfull \hbox (2.24129pt too wide) in paragraph at lines 121--123
+=======
+ [13 <./Pictures/Teoriafsnit/Figurfiler/Grid3.png>]
+Overfull \hbox (2.24129pt too wide) in paragraph at lines 192--194
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 \T1/lmr/m/n/10 tiske datasæt[[]]. A* er en heuris-tisk frem-gangsmåde afledt af
  Di-jk-stras generelle
  []
 
+<<<<<<< HEAD
 
 <Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png, id=237, 784.43062pt x 307.1
 475pt>
@@ -1561,22 +2098,25 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 145.
  [11 <./Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png>])
 (sections/ProblemetsRelevans/ProblemetsRelevans.tex [12]
+=======
+) (sections/ProblemetsRelevans/ProblemetsRelevans.tex [14]
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 Chapter 4.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
-[13
+[15
 
-] [14]) (sections/Teknologianalyse/Teknologianalyse.tex [15]
+] [16]) (sections/Teknologianalyse/Teknologianalyse.tex [17]
 Chapter 5.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-[16
+[18
 
 ]
 Overfull \hbox (18.91762pt too wide) in paragraph at lines 23--25
@@ -1585,7 +2125,19 @@ fly-delse på trafikafviklin-
  []
 
 
+<<<<<<< HEAD
 <Pictures/Teknologianalyse/GrafForAccelerationVisSim.png, id=309, 562.35094pt x
+=======
+Package caption Warning: \label without proper reference on input line 44.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `GrafForAccelerationVisSim' on page 19 undefined on in
+put line 38.
+
+
+<Pictures/Teknologianalyse/GrafForAccelerationVisSim.png, id=329, 562.35094pt x
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
  254.45062pt>
 File: Pictures/Teknologianalyse/GrafForAccelerationVisSim.png Graphic file (typ
 e png)
@@ -1594,7 +2146,20 @@ Package pdftex.def Info: Pictures/Teknologianalyse/GrafForAccelerationVisSim.pn
 g used on input line 42.
 (pdftex.def)             Requested size: 345.0pt x 156.10376pt.
 
+<<<<<<< HEAD
 <Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png, id=311, 543.53062p
+=======
+
+Package caption Warning: \label without proper reference on input line 54.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `GrafForAccelerationVisSimGPS' on page 19 undefined on
+ input line 48.
+
+
+<Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png, id=331, 543.53062p
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 t x 249.18094pt>
 File: Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png Graphic file (
 type png)
@@ -1603,8 +2168,22 @@ type png)
 Package pdftex.def Info: Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS
 .png used on input line 52.
 (pdftex.def)             Requested size: 345.0pt x 158.1711pt.
+<<<<<<< HEAD
  [17 <./Pictures/Teknologianalyse/GrafForAccelerationVisSim.png>]
 <Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png, id=319, 545.03625p
+=======
+ [19 <./Pictures/Teknologianalyse/GrafForAccelerationVisSim.png>]
+
+Package caption Warning: \label without proper reference on input line 64.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `GrafForDecelerationVisSimGPS' on page 20 undefined on
+ input line 58.
+
+
+<Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png, id=340, 545.03625p
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 t x 222.07968pt>
 File: Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png Graphic file (
 type png)
@@ -1614,7 +2193,7 @@ Package pdftex.def Info: Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS
 .png used on input line 62.
 (pdftex.def)             Requested size: 345.0pt x 140.57172pt.
 )
-(sections/Teknologianalyse/Altrans.tex [18 <./Pictures/Teknologianalyse/GrafFor
+(sections/Teknologianalyse/Altrans.tex [20 <./Pictures/Teknologianalyse/GrafFor
 AccelerationVisSimGPS.png> <./Pictures/Teknologianalyse/GrafForDecelerationVisS
 imGPS.png>]
 Overfull \hbox (13.8901pt too wide) in paragraph at lines 21--22
@@ -1622,7 +2201,26 @@ Overfull \hbox (13.8901pt too wide) in paragraph at lines 21--22
 -ablerne tid, omkost-
  []
 
+<<<<<<< HEAD
 [19] [20]
+=======
+[21]
+! Misplaced alignment tab character &.
+l.65 ...ndersÃ¸gelse af Vejdirektoratet (Winther &
+                                                   Ekmann, 1998) hvorfra det...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[22]
+
+LaTeX Warning: Citation `COPERT II' on page 23 undefined on input line 68.
+
+
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 Overfull \hbox (0.97221pt too wide) in paragraph at lines 68--69
 \T1/lmr/m/n/10 For at beregne varmstarts-emissionkoefficienten tager man udgang
 spunkt i COP-
@@ -1646,25 +2244,41 @@ Overfull \hbox (0.69226pt too wide) in paragraph at lines 83--2
 bereg-ningerne
  []
 
+<<<<<<< HEAD
 [21] [22]
+=======
+[23] [24]
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 Chapter 6.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 [23
 
 ]) (sections/Problemformulering/Problemformulering.tex [24] [25]
+=======
+[25
+
+]) (sections/Problemformulering/Problemformulering.tex [26] [27]
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 Chapter 7.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 ) [26
 
 ] [27
+=======
+) [28
+
+] [29
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ] (sections/Loesningsforslag/Loesningsforslag.tex
 Chapter 8.
@@ -1673,7 +2287,11 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 ) (sections/Kravspecifikationer/Kravspecifikationer.tex [28
+=======
+) (sections/Kravspecifikationer/Kravspecifikationer.tex [30
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ]
 Chapter 9.
@@ -1684,7 +2302,11 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 
 LaTeX Font Info:    Font shape `OMS/lmr/bx/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/b/n' tried instead on input line 5.
+<<<<<<< HEAD
 ) (sections/Implementation/Implementation.tex [29
+=======
+) (sections/Implementation/Implementation.tex [31
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ]
 Chapter 10.
@@ -1693,7 +2315,11 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 ) (sections/Diskussion/Diskussion.tex [30
+=======
+) (sections/Diskussion/Diskussion.tex [32
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ]
 Chapter 11.
@@ -1702,7 +2328,11 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 ) (sections/Konklusion/Konklusion.tex [31
+=======
+) (sections/Konklusion/Konklusion.tex [33
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ]
 Chapter 12.
@@ -1711,7 +2341,11 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 ) (sections/Perspektivering/Perspektivering.tex [32
+=======
+) (sections/Perspektivering/Perspektivering.tex [34
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ]
 Chapter 13.
@@ -1720,7 +2354,11 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 )) (Main.bbl [33
+=======
+)) (Main.bbl [35
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
@@ -1764,80 +2402,88 @@ r.
  []
 
 
-Underfull \hbox (badness 2229) in paragraph at lines 59--64
+Underfull \hbox (badness 2229) in paragraph at lines 54--59
 []\T1/lmr/m/n/10 Dwight A Hen-nessy og David L Wiesen-thal.  Traf-fic con-ges-t
 ion,
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 59--64
+Underfull \hbox (badness 2213) in paragraph at lines 54--59
 \T1/lmr/m/n/10 driver stress, and driver ag-gres-sion.  [][]$\T1/lmtt/m/n/10 ht
 tps : / / www . researchgate .$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 54--59
 $\T1/lmtt/m/n/10 net / profile / Dwight _ Hennessy / publication / 229863510 _ 
 Traffic _$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 54--59
 $\T1/lmtt/m/n/10 congestion _ driver _ stress _ and _ driver _ aggression / lin
 ks /$
  []
 
+<<<<<<< HEAD
 [34
+=======
+[36
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ]
-Underfull \hbox (badness 1742) in paragraph at lines 71--76
+Underfull \hbox (badness 1742) in paragraph at lines 66--71
 []\T1/lmr/m/n/10 Michael Knørr Skov og Karsten Sten Ped-er-sen.  Trafikprop. fl
 ere
  []
 
 
-Underfull \hbox (badness 7433) in paragraph at lines 71--76
+Underfull \hbox (badness 7433) in paragraph at lines 66--71
 \T1/lmr/m/n/10 veje vil sk-abe større vækst.  [][]$\T1/lmtt/m/n/10 http : / / w
 ww . cowi . dk / menu / tema /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--76
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
 $\T1/lmtt/m/n/10 infrastruktur-[]2030 / cowi-[]i-[]medierne / Documents / Veje 
 % 20skaber %$
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 85--89
+Underfull \hbox (badness 2547) in paragraph at lines 80--84
 []\T1/lmr/m/n/10 Introduction to A*.  [][]$\T1/lmtt/m/n/10 http : / / www . red
 blobgames . com / pathfinding /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--107
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 $\T1/lmtt/m/n/10 Institutter / Transport / forskning / publikationer / publikat
 ioner %$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--107
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 $\T1/lmtt/m/n/10 20dtf / 2007 / arbejdsnotat _ om _ trafikmodeller _ 160507 . a
 shx ? la = da$[][]\T1/lmr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
 []\T1/lmr/m/n/10 Vejdirektoratet.  Læng-den af of-fentlige veje.  [][]$\T1/lmtt
 /m/n/10 http : / / www .$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
 $\T1/lmtt/m/n/10 vejdirektoratet . dk / DA / viden _ og _ data / statistik / ve
 jeneital /$
  []
 
+<<<<<<< HEAD
 ) [35] (appendix.tex
+=======
+) [37] (appendix.tex
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 Appendix A.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -1848,7 +2494,11 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 \tf@thm=\write5
  
 AED: lastpage setting LastPage
+<<<<<<< HEAD
 [36
+=======
+[38
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
@@ -1858,6 +2508,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  23273 strings out of 493673
  412471 string characters out of 3141503
  551072 words of memory out of 3000000
@@ -1894,4 +2545,48 @@ PDF statistics:
  750 PDF objects out of 1000 (max. 8388607)
  155 named destinations out of 1000 (max. 500000)
  480 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 23324 strings out of 493634
+ 415972 string characters out of 3134831
+ 525825 words of memory out of 3000000
+ 25896 multiletter control sequences out of 15000+200000
+ 93075 words of font info for 73 fonts, out of 3000000 for 9000
+ 1030 hyphenation exceptions out of 8191
+ 64i,15n,78p,1544b,2027s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.e
+nc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
+hsy.enc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/l
+m-mathit.enc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
+/lm/lm-mathex.enc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
+dvips/lm/lm-rm.enc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc
+/dvips/fontname/8r.enc}<C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/lm/lmbsy10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Rasmus/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Rasmus/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Users/Rasmus/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Rasmus/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Rasmus/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Rasmus/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Rasm
+us/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/
+Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Use
+rs/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/
+Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb
+><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri8
+.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
+mss9.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+lm/lmssbx10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/lm/lmsy10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmsy7.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/lm/lmsy8.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Users/Rasmus/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on Main.pdf (44 pages, 706864 bytes).
+PDF statistics:
+ 773 PDF objects out of 1000 (max. 8388607)
+ 165 named destinations out of 1000 (max. 500000)
+ 501 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 
