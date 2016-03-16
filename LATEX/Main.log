@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  14 MAR 2016 13:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  16 MAR 2016 12:43
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -1460,10 +1460,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \titlepageleftcolumnwidth=\skip88
 \titlepagerightcolumnwidth=\skip89
 Package epstopdf Info: Source file: <aau/aau_logo_en.eps>
-(epstopdf)                    date: 2016-02-04 11:06:08
+(epstopdf)                    date: 2016-03-15 13:51:15
 (epstopdf)                    size: 17997 bytes
 (epstopdf)             Output file: <aau/aau_logo_en-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-02-04 11:06:08
+(epstopdf)                    date: 2016-03-15 13:51:15
 (epstopdf)                    size: 9257 bytes
 (epstopdf)             Command: <epstopdf --outfile=aau/aau_logo_en-eps-convert
 ed-to.pdf aau/aau_logo_en.eps>
@@ -1549,13 +1549,13 @@ l.35 }
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 53.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 50.
 
 ("C:\Users\Rasmus\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 53.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 50.
 )
 \tf@toc=\write4
 \openout4 = `Main.toc'.
@@ -1586,9 +1586,22 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) [2
+<Pictures/Metode/metodebillede.jpg, id=164, 715.67375pt x 639.38875pt>
+File: Pictures/Metode/metodebillede.jpg Graphic file (type jpg)
 
-] [3] [4
+<use Pictures/Metode/metodebillede.jpg>
+Package pdftex.def Info: Pictures/Metode/metodebillede.jpg used on input line 1
+0.
+(pdftex.def)             Requested size: 413.99895pt x 369.8701pt.
+ [2
+
+] [3 <./Pictures/Metode/metodebillede.jpg>]
+Overfull \hbox (15.36107pt too wide) in paragraph at lines 36--38
+\T1/lmr/m/n/10 Under pro-gram-mer-ings-fasen er der hov-ed-sageligt blevet an-v
+endt prøve-fejl-metoden,
+ []
+
+) [4] [5] [6
 
 ] (sections/Teori/Teori.tex
 Chapter 3.
@@ -1675,7 +1688,7 @@ tunderfreeflow:k[]erdenmaksimaledensitetunderophobning:Densitetudregnessom \OT1
 /lmr/m/n/10 :$ 
  []
 
-[5
+[7
 
 ]
 
@@ -1977,7 +1990,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[6]
+[8]
 
 ! LaTeX Error: Bad math environment delimiter.
 
@@ -2021,15 +2034,22 @@ The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
+Package caption Warning: \label without proper reference on input line 186.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:AKvadrat2' on page 9 undefined on input line 73.
+
+
 Package caption Warning: \label without proper reference on input line 84.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:dijkstrasgraf' on page 7 undefined on input line 
+LaTeX Warning: Reference `fig:dijkstrasgraf' on page 9 undefined on input line 
 77.
 
-
-<Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png, id=212, 784.43062pt x 307.1
+[9]
+<Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png, id=224, 784.43062pt x 307.1
 475pt>
 File: Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png Graphic file (type png)
 
@@ -2037,7 +2057,6 @@ File: Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png Graphic file (type png)
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png used
  on input line 82.
 (pdftex.def)             Requested size: 413.99895pt x 162.10782pt.
- [7]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 92.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 115.
@@ -2051,33 +2070,34 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 116.
 
-[8 <./Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png>]
+[10 <./Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png>]
 Overfull \hbox (3.22461pt too wide) in paragraph at lines 134--134
 []\T1/lmr/bx/n/14.4 INTRO TIL TEORI, SKAL SÆTTES I LØS-
  []
 
+[11]
 
 Package caption Warning: \label without proper reference on input line 157.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:AKvadrat1' on page 9 undefined on input line 150.
+LaTeX Warning: Reference `fig:AKvadrat1' on page 12 undefined on input line 150
+.
 
-
-[9] <Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=254, 845.559pt x 598.235pt>
+<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=255, 845.559pt x 598.235pt>
 File: Pictures/Teoriafsnit/Figurfiler/Grid2.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid2.png>
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid2.png used on inpu
 t line 155.
 (pdftex.def)             Requested size: 413.99895pt x 292.9095pt.
- [10 <./Pictures/Teoriafsnit/Figurfiler/Grid2.png>]
+ [12 <./Pictures/Teoriafsnit/Figurfiler/Grid2.png>]
 
 Package caption Warning: \label without proper reference on input line 157.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:AKvadrat1' on page 11 undefined on input line 180
+LaTeX Warning: Reference `fig:AKvadrat1' on page 13 undefined on input line 180
 .
 
 
@@ -2085,40 +2105,39 @@ Package caption Warning: \label without proper reference on input line 186.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:AKvadrat2' on page 11 undefined on input line 180
+LaTeX Warning: Reference `fig:AKvadrat2' on page 13 undefined on input line 180
 .
 
-<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=271, 844.756pt x 597.432pt>
+<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=268, 844.756pt x 597.432pt>
 File: Pictures/Teoriafsnit/Figurfiler/Grid3.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid3.png>
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid3.png used on inpu
 t line 184.
 (pdftex.def)             Requested size: 345.0pt x 243.99152pt.
-
+ [13 <./Pictures/Teoriafsnit/Figurfiler/Grid3.png>]
 Overfull \hbox (2.24129pt too wide) in paragraph at lines 192--194
 \T1/lmr/m/n/10 tiske datasæt[[]]. A* er en heuris-tisk frem-gangsmåde afledt af
  Di-jk-stras generelle
  []
 
-[11 <./Pictures/Teoriafsnit/Figurfiler/Grid3.png>])
-(sections/ProblemetsRelevans/ProblemetsRelevans.tex [12]
+) (sections/ProblemetsRelevans/ProblemetsRelevans.tex [14]
 Chapter 4.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
-[13
+[15
 
-] [14]) (sections/Teknologianalyse/Teknologianalyse.tex [15]
+] [16]) (sections/Teknologianalyse/Teknologianalyse.tex [17]
 Chapter 5.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-[16
+[18
 
 ]
 Overfull \hbox (18.91762pt too wide) in paragraph at lines 23--25
@@ -2131,11 +2150,11 @@ Package caption Warning: \label without proper reference on input line 44.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `GrafForAccelerationVisSim' on page 17 undefined on in
+LaTeX Warning: Reference `GrafForAccelerationVisSim' on page 19 undefined on in
 put line 38.
 
 
-<Pictures/Teknologianalyse/GrafForAccelerationVisSim.png, id=328, 562.35094pt x
+<Pictures/Teknologianalyse/GrafForAccelerationVisSim.png, id=329, 562.35094pt x
  254.45062pt>
 File: Pictures/Teknologianalyse/GrafForAccelerationVisSim.png Graphic file (typ
 e png)
@@ -2149,11 +2168,11 @@ Package caption Warning: \label without proper reference on input line 54.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `GrafForAccelerationVisSimGPS' on page 17 undefined on
+LaTeX Warning: Reference `GrafForAccelerationVisSimGPS' on page 19 undefined on
  input line 48.
 
 
-<Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png, id=330, 543.53062p
+<Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png, id=331, 543.53062p
 t x 249.18094pt>
 File: Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png Graphic file (
 type png)
@@ -2162,17 +2181,17 @@ type png)
 Package pdftex.def Info: Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS
 .png used on input line 52.
 (pdftex.def)             Requested size: 345.0pt x 158.1711pt.
- [17 <./Pictures/Teknologianalyse/GrafForAccelerationVisSim.png>]
+ [19 <./Pictures/Teknologianalyse/GrafForAccelerationVisSim.png>]
 
 Package caption Warning: \label without proper reference on input line 64.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `GrafForDecelerationVisSimGPS' on page 18 undefined on
+LaTeX Warning: Reference `GrafForDecelerationVisSimGPS' on page 20 undefined on
  input line 58.
 
 
-<Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png, id=338, 545.03625p
+<Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png, id=340, 545.03625p
 t x 222.07968pt>
 File: Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png Graphic file (
 type png)
@@ -2182,51 +2201,92 @@ Package pdftex.def Info: Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS
 .png used on input line 62.
 (pdftex.def)             Requested size: 345.0pt x 140.57172pt.
 )
-(sections/Teknologianalyse/Altrans.tex [18 <./Pictures/Teknologianalyse/GrafFor
+(sections/Teknologianalyse/Altrans.tex [20 <./Pictures/Teknologianalyse/GrafFor
 AccelerationVisSimGPS.png> <./Pictures/Teknologianalyse/GrafForDecelerationVisS
 imGPS.png>]
-Chapter 6.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
-[][][][][][][][][]  
+Overfull \hbox (13.8901pt too wide) in paragraph at lines 21--22
+[]\T1/lmr/m/n/10 Modellen af ser-viceniveau udreg-ner ser-viceniveauet med vari
+-ablerne tid, omkost-
  []
 
-[19
+[21]
+! Misplaced alignment tab character &.
+l.65 ...ndersÃ¸gelse af Vejdirektoratet (Winther &
+                                                   Ekmann, 1998) hvorfra det...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-] [20]
-Overfull \hbox (0.97221pt too wide) in paragraph at lines 54--55
+[22]
+
+LaTeX Warning: Citation `COPERT II' on page 23 undefined on input line 68.
+
+
+Overfull \hbox (0.97221pt too wide) in paragraph at lines 68--69
 \T1/lmr/m/n/10 For at beregne varmstarts-emissionkoefficienten tager man udgang
 spunkt i COP-
  []
 
-) (sections/Interessentanalyse/Interessentanalyse.tex [21]
-Chapter 7.
+
+Overfull \hbox (1.51793pt too wide) in paragraph at lines 74--75
+\T1/lmr/m/n/10 sions-database per by-trafik-si-t-u-a-tion. AL-TRANS dif-fer-en-
+tierer kold-start-stil-lægget
+ []
+
+
+Overfull \hbox (23.8317pt too wide) in paragraph at lines 79--80
+[]\T1/lmr/m/n/10 Udetemperaturen i tem-per-atur-spring på 5 grader som bereg-ne
+s som månedsmid-
+ []
+
+) (sections/Interessentanalyse/Interessentanalyse.tex
+Overfull \hbox (0.69226pt too wide) in paragraph at lines 83--2
+[]\T1/lmr/m/n/10 Derudover tager bilmod-ellen i AL-TRANS også mo-torslid med i 
+bereg-ningerne
+ []
+
+[23] [24]
+Chapter 6.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
-[22
+[25
 
-] [23]) (sections/Problemformulering/Problemformulering.tex [24]
+]) (sections/Problemformulering/Problemformulering.tex [26] [27]
+Chapter 7.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) [28
+
+] [29
+
+] (sections/Loesningsforslag/Loesningsforslag.tex
 Chapter 8.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) [25
+) (sections/Kravspecifikationer/Kravspecifikationer.tex [30
 
-] [26
-
-] (sections/Loesningsforslag/Loesningsforslag.tex
+]
 Chapter 9.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Kravspecifikationer/Kravspecifikationer.tex [27
+LaTeX Font Info:    Font shape `OMS/lmr/bx/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/b/n' tried instead on input line 5.
+) (sections/Implementation/Implementation.tex [31
 
 ]
 Chapter 10.
@@ -2235,9 +2295,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-LaTeX Font Info:    Font shape `OMS/lmr/bx/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/b/n' tried instead on input line 5.
-) (sections/Implementation/Implementation.tex [28
+) (sections/Diskussion/Diskussion.tex [32
 
 ]
 Chapter 11.
@@ -2246,7 +2304,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Diskussion/Diskussion.tex [29
+) (sections/Konklusion/Konklusion.tex [33
 
 ]
 Chapter 12.
@@ -2255,7 +2313,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Konklusion/Konklusion.tex [30
+) (sections/Perspektivering/Perspektivering.tex [34
 
 ]
 Chapter 13.
@@ -2264,16 +2322,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Perspektivering/Perspektivering.tex [31
-
-]
-Chapter 14.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
-[][][][][][][][][]  
- []
-
-)) (Main.bbl [32
+)) (Main.bbl [35
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
@@ -2317,80 +2366,80 @@ r.
  []
 
 
-Underfull \hbox (badness 2229) in paragraph at lines 59--64
+Underfull \hbox (badness 2229) in paragraph at lines 54--59
 []\T1/lmr/m/n/10 Dwight A Hen-nessy og David L Wiesen-thal.  Traf-fic con-ges-t
 ion,
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 59--64
+Underfull \hbox (badness 2213) in paragraph at lines 54--59
 \T1/lmr/m/n/10 driver stress, and driver ag-gres-sion.  [][]$\T1/lmtt/m/n/10 ht
 tps : / / www . researchgate .$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 54--59
 $\T1/lmtt/m/n/10 net / profile / Dwight _ Hennessy / publication / 229863510 _ 
 Traffic _$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 54--59
 $\T1/lmtt/m/n/10 congestion _ driver _ stress _ and _ driver _ aggression / lin
 ks /$
  []
 
-[33
+[36
 
 ]
-Underfull \hbox (badness 1742) in paragraph at lines 71--76
+Underfull \hbox (badness 1742) in paragraph at lines 66--71
 []\T1/lmr/m/n/10 Michael Knørr Skov og Karsten Sten Ped-er-sen.  Trafikprop. fl
 ere
  []
 
 
-Underfull \hbox (badness 7433) in paragraph at lines 71--76
+Underfull \hbox (badness 7433) in paragraph at lines 66--71
 \T1/lmr/m/n/10 veje vil sk-abe større vækst.  [][]$\T1/lmtt/m/n/10 http : / / w
 ww . cowi . dk / menu / tema /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--76
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
 $\T1/lmtt/m/n/10 infrastruktur-[]2030 / cowi-[]i-[]medierne / Documents / Veje 
 % 20skaber %$
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 85--89
+Underfull \hbox (badness 2547) in paragraph at lines 80--84
 []\T1/lmr/m/n/10 Introduction to A*.  [][]$\T1/lmtt/m/n/10 http : / / www . red
 blobgames . com / pathfinding /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--107
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 $\T1/lmtt/m/n/10 Institutter / Transport / forskning / publikationer / publikat
 ioner %$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--107
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 $\T1/lmtt/m/n/10 20dtf / 2007 / arbejdsnotat _ om _ trafikmodeller _ 160507 . a
 shx ? la = da$[][]\T1/lmr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
 []\T1/lmr/m/n/10 Vejdirektoratet.  Læng-den af of-fentlige veje.  [][]$\T1/lmtt
 /m/n/10 http : / / www .$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
 $\T1/lmtt/m/n/10 vejdirektoratet . dk / DA / viden _ og _ data / statistik / ve
 jeneital /$
  []
 
-) [34] (appendix.tex
+) [37] (appendix.tex
 Appendix A.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -2403,7 +2452,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 
  
 AED: lastpage setting LastPage
-[35
+[38
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
@@ -2417,10 +2466,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 23318 strings out of 493634
- 415770 string characters out of 3134831
- 537805 words of memory out of 3000000
- 25892 multiletter control sequences out of 15000+200000
+ 23324 strings out of 493634
+ 415972 string characters out of 3134831
+ 525825 words of memory out of 3000000
+ 25896 multiletter control sequences out of 15000+200000
  93075 words of font info for 73 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
  64i,15n,78p,1544b,2027s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2454,9 +2503,9 @@ ts/type1/public/lm/lmsy8.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/lm/lmtt10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Users/Rasmus/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on Main.pdf (41 pages, 671798 bytes).
+Output written on Main.pdf (44 pages, 706864 bytes).
 PDF statistics:
- 781 PDF objects out of 1000 (max. 8388607)
+ 773 PDF objects out of 1000 (max. 8388607)
  165 named destinations out of 1000 (max. 500000)
- 536 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 501 words of extra memory for PDF output out of 10000 (max. 10000000)
 
