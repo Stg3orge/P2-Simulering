@@ -14,8 +14,8 @@ Referencer til kilder
 Underskriftspladser for gruppemedlemmer
 
 .\titlepages.tex
-Navne på gruppemedlemmer
-Navne på vejleder(e)
+Navne pï¿½ gruppemedlemmer
+Navne pï¿½ vejleder(e)
 Abstract
 
 .\preface.tex
