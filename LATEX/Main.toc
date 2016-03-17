@@ -2,58 +2,6 @@
 \contentsline {chapter}{Preface}{iii}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Indledning}{1}{chapter.0.1}
 \contentsline {chapter}{\numberline {2}Metode}{2}{chapter.0.2}
-<<<<<<< HEAD
-\contentsline {section}{\numberline {2.1}Brainstorm og problemtr\IeC {\ae }}{2}{section.0.2.1}
-\contentsline {section}{\numberline {2.2}Problemomr\IeC {\r a}de}{2}{section.0.2.2}
-\contentsline {section}{\numberline {2.3}Fremgangsm\IeC {\r a}de}{2}{section.0.2.3}
-\contentsline {section}{\numberline {2.4}S\IeC {\o }geprotokol}{3}{section.0.2.4}
-\contentsline {section}{\numberline {2.5}Kilder og kildekritik}{3}{section.0.2.5}
-\contentsline {part}{I\hspace {1em}Problemanalyse}{4}{part.1}
-\contentsline {chapter}{\numberline {3}Teori}{5}{chapter.1.3}
-\contentsline {section}{\numberline {3.1}Trafik Model}{5}{section.1.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Trafik Flow}{5}{subsection.1.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Flow}{6}{subsection.1.3.1.2}
-\contentsline {section}{\numberline {3.2}INTRO TIL TEORI, SKAL S\IeC {\AE }TTES I L\IeC {\O }SNINGSAFSNIT}{7}{section.1.3.2}
-\contentsline {section}{\numberline {3.3}A* Algoritmen}{7}{section.1.3.3}
-\contentsline {section}{\numberline {3.4}Dijkstras Algoritme}{10}{section.1.3.4}
-\contentsline {chapter}{\numberline {4}Problembeskrivelse}{13}{chapter.1.4}
-\contentsline {section}{\numberline {4.1}Problemets Relevans}{13}{section.1.4.1}
-\contentsline {subsection}{\numberline {4.1.1}\IeC {\O }konomi}{13}{subsection.1.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Forurening}{14}{subsection.1.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Livskvalitet}{14}{subsection.1.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}N\IeC {\o }dsituationer}{14}{subsection.1.4.1.4}
-\contentsline {section}{\numberline {4.2}Eksisterende Modeller}{14}{section.1.4.2}
-\contentsline {chapter}{\numberline {5}Teknologianalyse}{16}{chapter.1.5}
-\contentsline {section}{\numberline {5.1}Indledning til teknologianylse her}{16}{section.1.5.1}
-\contentsline {section}{\numberline {5.2}VisSim}{16}{section.1.5.2}
-\contentsline {subsection}{\numberline {5.2.1}VisSim - Bilen}{16}{subsection.1.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}VisSim - Netv\IeC {\ae }rket}{17}{subsection.1.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Analyse af acceleration og deceleration}{17}{subsection.1.5.2.3}
-\contentsline {section}{\numberline {5.3}Altrans}{18}{section.1.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Geografisk model}{19}{subsection.1.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Adf\IeC {\ae }rds model}{20}{subsection.1.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Emissions model}{20}{subsection.1.5.3.3}
-\contentsline {subsubsection}{Varmstart}{21}{section*.11}
-\contentsline {subsubsection}{Koldstartstill\IeC {\ae }g}{21}{section*.12}
-\contentsline {chapter}{\numberline {6}Interessantanalyse}{23}{chapter.1.6}
-\contentsline {section}{\numberline {6.1}Transport- og Bygningsministeriets (trm) - (Vejdirektoratet)}{23}{section.1.6.1}
-\contentsline {section}{\numberline {6.2}Kommunen}{24}{section.1.6.2}
-\contentsline {section}{\numberline {6.3}COWI}{24}{section.1.6.3}
-\contentsline {section}{\numberline {6.4}Visual Solutions}{24}{section.1.6.4}
-\contentsline {section}{\numberline {6.5}DTU}{24}{section.1.6.5}
-\contentsline {chapter}{\numberline {7}Problemformulering}{26}{chapter.1.7}
-\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{27}{part.2}
-\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{28}{chapter.2.8}
-\contentsline {chapter}{\numberline {9}Kravspecifikationer}{29}{chapter.2.9}
-\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{29}{subsection.2.9.0.1}
-\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{29}{subsection.2.9.0.2}
-\contentsline {chapter}{\numberline {10}Implementation}{30}{chapter.2.10}
-\contentsline {chapter}{\numberline {11}Diskussion}{31}{chapter.2.11}
-\contentsline {chapter}{\numberline {12}Konklusion}{32}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Perspektivering}{33}{chapter.2.13}
-\contentsline {chapter}{Bibliography}{34}{chapter*.13}
-\contentsline {chapter}{\numberline {A}Appendix}{36}{appendix.A}
-=======
 \contentsline {section}{\numberline {2.1}Problemomr\IeC {\r a}de}{2}{section.0.2.1}
 \contentsline {section}{\numberline {2.2}Fremgangsm\IeC {\r a}de}{4}{section.0.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Emperiske-induktive-metode}{4}{subsection.0.2.2.1}
@@ -65,10 +13,9 @@
 \contentsline {section}{\numberline {3.1}Trafik Model}{7}{section.1.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Trafik Flow}{7}{subsection.1.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Flow}{8}{subsection.1.3.1.2}
-\contentsline {section}{\numberline {3.2}Dijkstras Algoritme}{9}{section.1.3.2}
-\contentsline {section}{\numberline {3.3}INTRO TIL TEORI, SKAL S\IeC {\AE }TTES I L\IeC {\O }SNINGSAFSNIT}{11}{section.1.3.3}
-\contentsline {section}{\numberline {3.4}A* Algoritmen}{11}{section.1.3.4}
-\contentsline {section}{\numberline {3.5}Dijkstra og A* sammenligning}{14}{section.1.3.5}
+\contentsline {section}{\numberline {3.2}INTRO TIL TEORI, SKAL S\IeC {\AE }TTES I L\IeC {\O }SNINGSAFSNIT}{9}{section.1.3.2}
+\contentsline {section}{\numberline {3.3}A* Algoritmen}{9}{section.1.3.3}
+\contentsline {section}{\numberline {3.4}Dijkstras Algoritme}{12}{section.1.3.4}
 \contentsline {chapter}{\numberline {4}Problembeskrivelse}{15}{chapter.1.4}
 \contentsline {section}{\numberline {4.1}Problemets Relevans}{15}{section.1.4.1}
 \contentsline {subsection}{\numberline {4.1.1}\IeC {\O }konomi}{15}{subsection.1.4.1.1}
@@ -106,4 +53,3 @@
 \contentsline {chapter}{\numberline {13}Perspektivering}{35}{chapter.2.13}
 \contentsline {chapter}{Bibliography}{36}{chapter*.14}
 \contentsline {chapter}{\numberline {A}Appendix}{38}{appendix.A}
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3

@@ -115,10 +115,7 @@
 			"file": "sections/Teori/Teori.tex",
 			"settings":
 			{
-<<<<<<< HEAD
 				"buffer_size": 15676,
-=======
-				"buffer_size": 15903,
 				"line_ending": "Windows"
 			}
 		},
@@ -127,47 +124,33 @@
 			"settings":
 			{
 				"buffer_size": 1098,
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 				"line_ending": "Unix"
 			}
 		},
 		{
-<<<<<<< HEAD
-			"contents": "\\section{Altrans}\nAlternativ Transportsystemer (Altrans) er en trafikmodel, hvis formål er at belyse hvordan en øget brug af den kollektive transport vil påvirke miljøet \\cite[s. 14]{dmumodelanalyser}. Trafikmodellen er blevet udviklet af Danmarks Miljøundersøgelser (DMU) i 1994. Altrans består af 3 hovedmodeller: en geografisk model, en adfærds model og en emissions model \\cite[s. 14]{dmuadfaerdsmodel}.\n\\subsection{Geografisk model}\nDen geografiske model bruges til at beregne rejsetider, ventetider og skiftetider. For at udregne disse benyttes følgende undermodeller:\n\n\\begin{itemize}\n\\item Model af kollektiv transportnet\n\\item Model af serviceniveau\n\\item Model for bilrejser\n\\item Model for attraktion til byfunktioner\n\\end{itemize}\n\nModellen for attraktion til byfunktioner består af information over antallet af beboere og arbejdspladser i forskellige områder, og benyttes mest i forbindelse med adfærds modellen. Derudover bruger den geografiske model et geografisk informations system (GIS) til opbevaring af data og udregning af rejsetiderne \\cite[s. 18-19]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nFor at lave realistiske simuleringer, bruger modellen for det kollektive trafik præcise data for ankomst- og afgangstider. Denne data kommer fra 11 trafikselskaber der bruger køreplansystemet TR-System, DSB’s data kommer i et andet format der bliver brugt til DBS’s egen rejseplanlægger. Der er ikke brugt data fra Bornholm og kommunale ruter i Fyn, Region Midtjylland og Århus amterne, bortset fra ruterne i Århus, Odense og Randers. Modellen tager disse data og fortolker dem til et fælles format. For at beregne rejsertiderne af kørestrækningerne, samt ankomst og afgangstiderne sat op i et tredimensionelt koordinatsystem, hvor tiden bliver indsat som den tredje akse Z. Stationernes placering bliver indsat som X og Y koordinaterne, og man kan dermed finde ud af hvilke ruter der kan rejses med ved en given station \\cite[s. 20-22]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nModellen af serviceniveau udregner serviceniveauet med variablerne tid, omkostninger og tilgængelighed. Modellen unlader at indkludere variabler som komfort, da DMU har lavet antagelsen, at komforten ikke ændre sig kraftigt over tid. Dette kan gøre prognoser der ser på den fjerne fremtid upræcise. Modellen spænder over både taktisk (meso) og operationel (mikro). På den taktiske plan kigger Altrans på buskilometer, afgangs frekvenser og tilgængelighed. På den operationelle plan kigges der på tiden man bruger i køretøjet, hvor lang tid man skal vente ved skift samt ventetiden i alt, og prisen på rejsen \\cite[s. 36-37]{dmuadfaerdsmodel}.\n\n\\vspace{5mm}\n\nFormålet med modellen for bilrejser er at udregne tiden det tager at rejse fra by til by. Dette gøres ved brug af vejnettet i GIS, og hastigheden bilen kører kommer an på vejtypen. Ruten der bliver kørt starter og slutter fra centrumet af byerne der bliver rejst mellem. Modellen tager ikke højde for anden trafik på vejene, så tiderne der udregnes vil være præcise hvis der ikke er andre bliver på vejnettet \\cite[s. 25]{dmumodelanalyser}. Hastighederne modellen bruger til de forskellige veje, kan ses på figur \\ref{altranshastigheder}.\n\n\\begin{table}[H]\n\\centering\n\\caption{Hastigheder på forskellige vejtyper}\n\\label{altranshastigheder}\n\\begin{tabular}{|l|l|}\n\\hline\nMotorveje             & 110 \\\\ \\hline\nMotortrafikveje       & 90  \\\\ \\hline\nHovedveje             & 80  \\\\ \\hline\nØvrige veje på landet & 70  \\\\ \\hline\nVeje i byer           & 40  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\\subsection{Adfærds model}\nAdfærds modellens formål er at give et estimat på fordelingen af transportmiddelvalg, populariteten af destinationer, kørekort fordeling, og bilejerskab. For at udregne estimaterne, benytter adfærds modellen sig af 3 undermodller \\cite[s. 25-26]{dmumodelanalyser}:\n\n\\begin{itemize}\n\\item Model for valg af transportmiddel og destinationer\n\\item Cohortmodel og model for kørekorthold\n\\item Model for bilejerskab\n\\end{itemize}\n\nModellen for valg af transportmiddel og destinationer estimerer og simulerer antallet af kilometer der bliver rejst i de 4 transportmiddelkategorier: kollektiv trafik, bilfører, bilpassager og let trafik. Derudover estimeres de rejsenes destinationer, hvilket gør det muligt at finde ud af hvordan trafikken bliver fordelt på vejnettet, så trafikkens påvirkning på miljøet kan analyseres. Hovedformålet med at finde destinationerne er dog at modellere indvider i samfundet. Modellen vægter nytten ved rejserne, for eksempel kan en rejse til den nærmest købmand være mere nyttig end en der ligger længere væk. For at finde ud af hvilket transportmiddel et individ vælger, kigges der på prisen og tiden af rejsen, samt individets socioøkonomiske baggrund \\cite[s. 26-27]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nModellen for kørekorthold er en prognosemodel. Sandsynligheden for at et individ har et kørekort, er udregnet udfra kørekortfordelingen over alle individer og en logitmodel med variablerne køn, alder, indkomst, stilling og urdaniseringsgrad. Dette indrages i cohortmodellen der simulerer om individet har et kørekort i det år der bliver beregnet på \\cite[s. 30]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nModellen for bilejerskab estimerer hvor mange biler en husstand har. Modellen består af en logitmodel der bestemmer hvor mange biler husstanden har, denne logitmodel er indlejret i anden logitmodel, der bestemmer hvorvidt husstanden har biler eller ej. Til at bestemme om husstanden har bil, kigges der på husstandens socioøkonomiske forhold, om individerne i husstanden har kørekort, og hvor individerne rejser til. Outputtet af denne model bruges efterfølgende I modellen for valg af transportmiddel \\cite[s. 29-30]{dmumodelanalyser}.\n\n\n\\subsection{Emissions model}\nMan kan beregne emissioner af biltrafikken, dette gøres ved følgene: Der tages hensyn til og beregnes efter bilens tilstand, varm motor og koldstart. Det er en udregning der består ved at finde summen af en varstarts-emissionskoefficient gange trafikarbejdet og et koldstartstillæg for hver tur.\n\n\\vspace{5mm}\n\nDisse faktorer er ikke selvstændige og bliver lavet per bilens årgang og dens størrelse/brændstoftype. Hastigheden af fartøjet determinere varmstarts-emissionskoefficienten. Der er sågar fortaget undersøgelser, såkaldte årskørselsundersøgelse af Vejdirektoratet (Winther \\& Ekmann, 1998) hvorfra det er konkluderet at årskørsel forudsat er uafhængigt af bilens størrelse selvom at dette er set som urealistisk. Det estimeret trafikarbejde bliver udregnet ifølge en adfærdsmodel hvori man kigger på årskørsel pr bil i alle aldersgrupper. Der forøges eller reduceres med en faktor i selve fremskrivningsåret sådan at summen af antal biler i hver gruppe ganges deres gennemsnitlige årskørsel bliv lig det førnævnte trafikarbejde.\n\n\\subsubsection{Varmstart}\nFor at beregne varmstarts-emissionkoefficienten tager man udgangspunkt i COPERT II for den pågældene årgang. COPERT II er et windows program som gør det muligt at udregne emission fra vej trafik. Ydermere er programmet i stand til at lave lignende beregninger ud fra en forbrændingsmotor til et off-road fartøj. De beregnede emissioner inkludere alle de store forurenende stoffer så som (CO, NO\\textsubscript{x}, VOC, PM) og mange flere. Programmet er ydermere i stand til at beregne brændstofforbrug \\cite[s 4]{COPERTII}.  For nye biler i alle fremtidsår anvendes der de emissionskoefficienter der er blevet udarbejdet som EU-normer pr den årgang. Dette er ikke gældende for ældre biler. Her ændre emissionskoefficienterne sig med tiden og dette er specielt pågældende for katalysatorbiler. Emissionskoefficienten bliver korrigeret fra årgang til årgang alt efter motorslid, da informationer om emissionskoefficienten udvikling afhænger af fartøjets samlede kørsel. Når den samlede årskørsel bliver udregnet er det også muligt at beregne den gennemsnitlige bils samlede kørsel for en givet alder. Motorslid korrigerede emissionskoefficienten ved varmstart kan således udregnes for hver bilårgang for et beregnings år, jf. Kveiborg(1999).\n\n\\vspace{5mm}\n\nTil at beregne emissionen fra varmstarts er det forudsat at man har kendskab til fordelingen af trafik pr by-, land- og motorvejskørsel. ALTRANS har forudsat dette til at være som i basisåret.\n\\subsubsection{Koldstartstillæg}\nI ALTRANS udregnes Koldstartstillægget ved brug af den tysk-schweizisk emissionsdatabase per bytrafiksituation. ALTRANS differentierer koldstartstillægget efter følgende:\n\n\\begin{itemize}\n	\\item Turlængden. Disse kan være på 0-1 km, 1-2, 2.3, 3-4 og 4km.\n	\\item Pause siden sidste tur disse kan være 0-1 timer til over 8 timer.\n	\\item Udetemperaturen i temperaturspring på 5 grader som beregnes som månedsmiddelværdien.\n	\\item Bilens alder.\n\\end{itemize}\n\nDerudover tager bilmodellen i ALTRANS også motorslid med i beregningerne for koldstartstillæg.",
+			"file": "sections/Teknologianalyse/altransWTF.tex",
+			"settings":
+			{
+				"buffer_size": 8836,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\\section{Altrans}\nAlternativ Transportsystemer (Altrans) er en trafikmodel, hvis formål er at belyse hvordan en øget brug af den kollektive transport vil påvirke miljøet \\cite[s. 14]{dmumodelanalyser}. Trafikmodellen er blevet udviklet af Danmarks Miljøundersøgelser (DMU) i 1994. Altrans består af 3 hovedmodeller: en geografisk model, en adfærds model og en emissions model \\cite[s. 14]{dmuadfaerdsmodel}.\n\\subsection{Geografisk model}\nDen geografiske model bruges til at beregne rejsetider, ventetider og skiftetider. For at udregne disse benyttes følgende undermodeller:\n\n\\begin{itemize}\n\\item Model af kollektiv transportnet\n\\item Model af serviceniveau\n\\item Model for bilrejser\n\\item Model for attraktion til byfunktioner\n\\end{itemize}\n\nModellen for attraktion til byfunktioner består af information over antallet af beboere og arbejdspladser i forskellige områder, og benyttes mest i forbindelse med adfærds modellen. Derudover bruger den geografiske model et geografisk informations system (GIS) til opbevaring af data og udregning af rejsetiderne \\cite[s. 18-19]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nFor at lave realistiske simuleringer, bruger modellen for det kollektive trafik præcise data for ankomst- og afgangstider. Denne data kommer fra 11 trafikselskaber der bruger køreplansystemet TR-System, DSB’s data kommer i et andet format der bliver brugt til DBS’s egen rejseplanlægger. Der er ikke brugt data fra Bornholm og kommunale ruter i Fyn, Region Midtjylland og Århus amterne, bortset fra ruterne i Århus, Odense og Randers. Modellen tager disse data og fortolker dem til et fælles format. For at beregne rejsertiderne af kørestrækningerne, samt ankomst og afgangstiderne sat op i et tredimensionelt koordinatsystem, hvor tiden bliver indsat som den tredje akse Z. Stationernes placering bliver indsat som X og Y koordinaterne, og man kan dermed finde ud af hvilke ruter der kan rejses med ved en given station \\cite[s. 20-22]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nModellen af serviceniveau udregner serviceniveauet med variablerne tid, omkostninger og tilgængelighed. Modellen unlader at indkludere variabler som komfort, da DMU har lavet antagelsen, at komforten ikke ændre sig kraftigt over tid. Dette kan gøre prognoser der ser på den fjerne fremtid upræcise. Modellen spænder over både taktisk (meso) og operationel (mikro). På den taktiske plan kigger Altrans på buskilometer, afgangs frekvenser og tilgængelighed. På den operationelle plan kigges der på tiden man bruger i køretøjet, hvor lang tid man skal vente ved skift samt ventetiden i alt, og prisen på rejsen \\cite[s. 36-37]{dmuadfaerdsmodel}.\n\n\\vspace{5mm}\n\nFormålet med modellen for bilrejser er at udregne tiden det tager at rejse fra by til by. Dette gøres ved brug af vejnettet i GIS, og hastigheden bilen kører kommer an på vejtypen. Ruten der bliver kørt starter og slutter fra centrumet af byerne der bliver rejst mellem. Modellen tager ikke højde for anden trafik på vejene, så tiderne der udregnes vil være præcise hvis der ikke er andre bliver på vejnettet \\cite[s. 25]{dmumodelanalyser}. Hastighederne modellen bruger til de forskellige veje, kan ses på figur \\ref{altranshastigheder}.\n\n\\begin{table}[H]\n\\centering\n\\caption{Hastigheder på forskellige vejtyper}\n\\label{altranshastigheder}\n\\begin{tabular}{|l|l|}\n\\hline\nMotorveje             & 110 \\\\ \\hline\nMotortrafikveje       & 90  \\\\ \\hline\nHovedveje             & 80  \\\\ \\hline\nØvrige veje på landet & 70  \\\\ \\hline\nVeje i byer           & 40  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\\subsection{Adfærds model}\nAdfærds modellens formål er at give et estimat på fordelingen af transportmiddelvalg, populariteten af destinationer, kørekort fordeling, og bilejerskab. For at udregne estimaterne, benytter adfærds modellen sig af 3 undermodller \\cite[s. 25-26]{dmumodelanalyser}:\n\n\\begin{itemize}\n\\item Model for valg af transportmiddel og destinationer\n\\item Cohortmodel og model for kørekorthold\n\\item Model for bilejerskab\n\\end{itemize}\n\nModellen for valg af transportmiddel og destinationer estimerer og simulerer antallet af kilometer der bliver rejst i de 4 transportmiddelkategorier: kollektiv trafik, bilfører, bilpassager og let trafik. Derudover estimeres de rejsenes destinationer, hvilket gør det muligt at finde ud af hvordan trafikken bliver fordelt på vejnettet, så trafikkens påvirkning på miljøet kan analyseres. Hovedformålet med at finde destinationerne er dog at modellere indvider i samfundet. Modellen vægter nytten ved rejserne, for eksempel kan en rejse til den nærmest købmand være mere nyttig end en der ligger længere væk. For at finde ud af hvilket transportmiddel et individ vælger, kigges der på prisen og tiden af rejsen, samt individets socioøkonomiske baggrund \\cite[s. 26-27]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nModellen for kørekorthold er en prognosemodel. Sandsynligheden for at et individ har et kørekort, er udregnet udfra kørekortfordelingen over alle individer og en logitmodel med variablerne køn, alder, indkomst, stilling og urdaniseringsgrad. Dette indrages i cohortmodellen der simulerer om individet har et kørekort i det år der bliver beregnet på \\cite[s. 30]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nModellen for bilejerskab estimerer hvor mange biler en husstand har. Modellen består af en logitmodel der bestemmer hvor mange biler husstanden har, denne logitmodel er indlejret i anden logitmodel, der bestemmer hvorvidt husstanden har biler eller ej. Til at bestemme om husstanden har bil, kigges der på husstandens socioøkonomiske forhold, om individerne i husstanden har kørekort, og hvor individerne rejser til. Outputtet af denne model bruges efterfølgende I modellen for valg af transportmiddel \\cite[s. 29-30]{dmumodelanalyser}.\n\n\n\\subsection{Emissions model}\nMan kan beregne emissioner af biltrafikken, dette gøres ved følgene: Der tages hensyn til og beregnes efter bilens tilstand, varm motor og koldstart. Det er en udregning der består ved at finde summen af en varstarts-emissionskoefficient gange trafikarbejdet og et koldstartstillæg for hver tur.\n\n\\vspace{5mm}\n\nDisse faktorer er ikke selvstændige og bliver lavet per bilens årgang og dens størrelse/brændstoftype. Hastigheden af fartøjet determinere varmstarts-emissionskoefficienten. Der er sågar fortaget undersøgelser, såkaldte årskørselsundersøgelse af Vejdirektoratet (Winther & Ekmann, 1998) hvorfra det er konkluderet at årskørsel forudsat er uafhængigt af bilens størrelse selvom at dette er set som urealistisk. Det estimeret trafikarbejde bliver udregnet ifølge en adfærdsmodel hvori man kigger på årskørsel pr bil i alle aldersgrupper. Der forøges eller reduceres med en faktor i selve fremskrivningsåret sådan at summen af antal biler i hver gruppe ganges deres gennemsnitlige årskørsel bliv lig det førnævnte trafikarbejde.\n\n\\subsubsection{Varmstart}\nFor at beregne varmstarts-emissionkoefficienten tager man udgangspunkt i COPERT II for den pågældene årgang. COPERT II er et windows program som gør det muligt at udregne emission fra vej trafik. Ydermere er programmet i stand til at lave lignende beregninger ud fra en forbrændingsmotor til et off-road fartøj. De beregnede emissioner inkludere alle de store forurenende stoffer så som (CO, NO\\textsubscript{x}, VOC, PM) og mange flere. Programmet er ydermere i stand til at beregne brændstofforbrug \\cite[s 4]{COPERT II}.  For nye biler i alle fremtidsår anvendes der de emissionskoefficienter der er blevet udarbejdet som EU-normer pr den årgang. Dette er ikke gældende for ældre biler. Her ændre emissionskoefficienterne sig med tiden og dette er specielt pågældende for katalysatorbiler. Emissionskoefficienten bliver korrigeret fra årgang til årgang alt efter motorslid, da informationer om emissionskoefficienten udvikling afhænger af fartøjets samlede kørsel. Når den samlede årskørsel bliver udregnet er det også muligt at beregne den gennemsnitlige bils samlede kørsel for en givet alder. Motorslid korrigerede emissionskoefficienten ved varmstart kan således udregnes for hver bilårgang for et beregnings år, jf. Kveiborg(1999).\n\n\\vspace{5mm}\n\nTil at beregne emissionen fra varmstarts er det forudsat at man har kendskab til fordelingen af trafik pr by-, land- og motorvejskørsel. ALTRANS har forudsat dette til at være som i basisåret.\n\\subsubsection{Koldstartstillæg}\nI ALTRANS udregnes Koldstartstillægget ved brug af den tysk-schweizisk emissionsdatabase per bytrafiksituation. ALTRANS differentierer koldstartstillægget efter følgende:\n\n\\begin{itemize}\n\\item Turlængden. Disse kan være på 0-1 km, 1-2, 2.3, 3-4 og 4km.\n\\item Pause siden sidste tur disse kan være 0-1 timer til over 8 timer.\n\\item Udetemperaturen i temperaturspring på 5 grader som beregnes som månedsmiddelværdien.\n\\item Bilens alder.\n\\end{itemize}\n\nDerudover tager bilmodellen i ALTRANS også motorslid med i beregningerne for koldstartstillæg.",
 			"file": "sections/Teknologianalyse/altrans.tex",
-			"file_size": 9086,
-			"file_write_time": 131025455602269865,
+			"file_size": 9082,
+			"file_write_time": 131026021750629483,
 			"settings":
 			{
-				"buffer_size": 8839,
+				"buffer_size": 8835,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+			"file": "sections/Metode/Metode.tex",
 			"settings":
 			{
-				"buffer_size": 4463,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Main.tex",
-			"settings":
-			{
-				"buffer_size": 1098,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "references.bib",
-			"settings":
-			{
-=======
-			"file": "appendix.tex",
-			"settings":
-			{
-				"buffer_size": 44,
+				"buffer_size": 5041,
 				"line_ending": "Windows"
 			}
 		},
@@ -191,7 +174,7 @@
 			"file": "sections/sections.tex",
 			"settings":
 			{
-				"buffer_size": 764,
+				"buffer_size": 767,
 				"line_ending": "Windows"
 			}
 		},
@@ -207,7 +190,6 @@
 			"file": "references.bib",
 			"settings":
 			{
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 				"buffer_size": 6901,
 				"line_ending": "Windows"
 			}
@@ -306,7 +288,11 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/Git/Git Repository/Repository2/LATEX"
+		"/C/Programs/Git/Git Repository/Repository2/LATEX",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Metode",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teknologianalyse",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teori"
 	],
 	"file_history":
 	[
@@ -386,9 +372,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"fig:AKvadrat2",
-			"fig:AKvadrat1",
-			"fig:dijkstrasgraf",
 			"MISC",
 			"60",
 			"cite",
@@ -451,11 +434,7 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
-			"selected": 3,
-=======
-			"selected": 8,
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -471,13 +450,8 @@
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								11802,
-								11802
-=======
-								0,
-								0
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
+								7763,
+								8067
 							]
 						],
 						"settings":
@@ -486,14 +460,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-<<<<<<< HEAD
-						"translation.y": 0.0,
-=======
-						"translation.y": 45.0,
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
+						"translation.y": 2244.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -518,8 +488,8 @@
 						"selection":
 						[
 							[
-								764,
-								764
+								1098,
+								1098
 							]
 						],
 						"settings":
@@ -527,7 +497,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -535,11 +505,39 @@
 				},
 				{
 					"buffer": 2,
-					"file": "appendix.tex",
-					"semi_transient": true,
+					"file": "sections/Teknologianalyse/altransWTF.tex",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 44,
+						"buffer_size": 8836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6807,
+								6807
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1794.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sections/Teknologianalyse/altrans.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8835,
 						"regions":
 						{
 						},
@@ -547,7 +545,35 @@
 						[
 							[
 								0,
-								0
+								8835
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2310.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sections/Metode/Metode.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1243,
+								1243
 							]
 						],
 						"settings":
@@ -558,11 +584,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "setup/macros.tex",
 					"semi_transient": false,
 					"settings":
@@ -588,11 +614,11 @@
 						"translation.y": 370.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "setup/preamble.tex",
 					"semi_transient": false,
 					"settings":
@@ -618,24 +644,24 @@
 						"translation.y": 806.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 764,
+						"buffer_size": 767,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								316,
+								316
 							]
 						],
 						"settings":
@@ -646,11 +672,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
 					"semi_transient": false,
 					"settings":
@@ -674,11 +700,11 @@
 						"translation.y": 243.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "references.bib",
 					"semi_transient": false,
 					"settings":
@@ -704,89 +730,24 @@
 						"translation.y": 3711.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 					"semi_transient": false,
 					"settings":
 					{
-<<<<<<< HEAD
-						"buffer_size": 8839,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6327,
-								6327
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4463,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4448,
-								4448
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 784.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1098,
-=======
 						"buffer_size": 4838,
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								0,
-								0
-=======
 								1191,
 								1191
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 							]
 						],
 						"settings":
@@ -797,61 +758,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-<<<<<<< HEAD
-					"buffer": 4,
-					"file": "references.bib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6901,
-=======
-					"buffer": 9,
+					"buffer": 11,
 					"file": "sections/Indledning/Indledning.tex",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 562,
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								5048,
-								5048
-=======
 								0,
 								0
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
-							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2179.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-=======
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -890,7 +825,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 94.0
+		"height": 214.0
 	},
 	"output.find_results":
 	{
