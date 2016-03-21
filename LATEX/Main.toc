@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {1.2}Eksisterende Modeller}{2}{section.0.1.2}
 \contentsline {chapter}{\numberline {2}Metode}{4}{chapter.0.2}
 \contentsline {section}{\numberline {2.1}Problemomr\IeC {\r a}de}{4}{section.0.2.1}
-\contentsline {section}{\numberline {2.2}Fremgangsm\IeC {\r a}de}{6}{section.0.2.2}
+\contentsline {section}{\numberline {2.2}Fremgangsm\IeC {\r a}de}{5}{section.0.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Emperiske-induktive-metode}{6}{subsection.0.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Andre metoder}{6}{subsection.0.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Pr\IeC {\o }ve-fejl-metoden}{6}{subsection.0.2.2.3}

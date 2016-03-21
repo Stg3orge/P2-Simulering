@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  21 MAR 2016 07:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  21 MAR 2016 11:31
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -1593,13 +1593,13 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-<Pictures/Metode/metodebillede.jpg, id=208, 715.67375pt x 639.38875pt>
+<Pictures/Metode/metodebillede.jpg, id=208, 733.74126pt x 519.9425pt>
 File: Pictures/Metode/metodebillede.jpg Graphic file (type jpg)
 
 <use Pictures/Metode/metodebillede.jpg>
 Package pdftex.def Info: Pictures/Metode/metodebillede.jpg used on input line 1
 0.
-(pdftex.def)             Requested size: 413.99895pt x 369.8701pt.
+(pdftex.def)             Requested size: 413.99895pt x 293.37138pt.
  [4
 
 ] [5 <./Pictures/Metode/metodebillede.jpg>]
@@ -1692,9 +1692,9 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 
-Overfull \hbox (30.03975pt too wide) in paragraph at lines 12--14
-\T1/lmr/m/n/10 kom-man-doer og blokke.(http://www.vissim.com/downloads/doc/VisS
-im_UGv80.pdf)
+Overfull \hbox (48.95665pt too wide) in paragraph at lines 12--14
+\T1/lmr/m/n/10 tere kom-man-doer og blokke.(http://www.vissim.com/downloads/doc
+/VisSim_UGv80.pdf)
  []
 
 [20
@@ -1971,7 +1971,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  23311 strings out of 493634
  415544 string characters out of 3134831
- 551454 words of memory out of 3000000
+ 551455 words of memory out of 3000000
  25883 multiletter control sequences out of 15000+200000
  93075 words of font info for 73 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
@@ -2006,7 +2006,7 @@ ts/type1/public/lm/lmsy8.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/lm/lmtt10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Users/Rasmus/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on Main.pdf (47 pages, 702076 bytes).
+Output written on Main.pdf (47 pages, 698826 bytes).
 PDF statistics:
  816 PDF objects out of 1000 (max. 8388607)
  166 named destinations out of 1000 (max. 500000)
