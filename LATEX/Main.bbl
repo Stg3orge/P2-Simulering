@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{SimulationHandbook}
+Christopher~A. Chung.
+\newblock {\em Simulation Handbook - A Prictical Approch}.
+\newblock CRC Press LLC, 2004.
+
 \bibitem{VisualSolutions}
 Altair Engineering.
 \newblock About visual solutions, incorporated.
@@ -25,11 +30,6 @@ Danmarks Miljøundersøgelser.
 \newblock
   \url{http://www.dmu.dk/1_viden/2_publikationer/3_fagrapporter/rapporter/FR447.pdf},
   2003.
-
-\bibitem{COPERTII}
-Leonidas Ntziachristos and Zissis Samaras.
-\newblock Computer programme to calculate emissions from road transport.
-\newblock \url{http://www.eea.europa.eu/publications/TEC05}, 1997.
 
 \bibitem{stress}
 Dwight A~Hennessy og~David L~Wiesenthal.
