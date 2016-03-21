@@ -1,8 +1,15 @@
 \begin{thebibliography}{10}
 
+<<<<<<< HEAD
 \bibitem{benjasfar}
 Pshko Aziz.
 \newblock Aalborg kommune teknisk forvaltning, 2016.
+=======
+\bibitem{SimulationHandbook}
+Christopher~A. Chung.
+\newblock {\em Simulation Handbook - A Prictical Approch}.
+\newblock CRC Press LLC, 2004.
+>>>>>>> ee44e355b3d434c551369f2ebe2ddad4baeac941
 
 \bibitem{VisualSolutions}
 Altair Engineering.
