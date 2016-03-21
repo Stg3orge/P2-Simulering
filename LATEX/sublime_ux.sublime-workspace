@@ -112,10 +112,13 @@
 	"buffers":
 	[
 		{
+			"contents": "\\chapter{Teori}\\label{Teori}\n\n\\section{Trafik Model}\n\nTil dette projekt har vi valgt at arbejde med emnet trafik og simulering, mere specifikt simulering af trafik. Vi agter altså at løse et problem inde for dette område hvor i vores fokus ligger på at lave en simulering der kan hjælpe med til at konstruere og udspille forskellige scenarier der kan udspille sig i traffikerede områder og på den måde også simulerer alternativer. Derfor har gruppen valgt at udarbejde en model der beskriver gruppens fælles definition på trafik. Formålet med dette er at have en model at arbejde med og inddrage i programmet der fungerer som produktet i dette projekt.\n\nOBS: Dette afsnit er ikke færdigt og modellen kan og vil med høj sandsynlighed ændre sig igennem projektet af forskellige årsager! \n\n\\subsection{Trafik Flow}\n\nTrafik fenomener har i langt tid ikke været nemt at regne på. En publikation fra 1988 af Paul Ross fra Traffic Systems Division beskriver trafik som at have en vis lighed med væsker som ikke kan komprimeres mere end en vis densitet \\cite{trafdyn}. Igennem tiden har der været nogle forskellige teorier om hvorvidt man måler på trafik og mange har forsøgt på forskellige måder. \n\n%En publikation fra 1988 af en Paul Ross fra Traffic Systems Division, belyser om emnet Traffic Dynamics og herunder Traffic Flow \\cite{trafdyn}. Som Paul Ross beskriver så området et af dem der er mindst forstået da der på dette tidspunkt ikke var nogle kontinuum teorier der kunne forudse trafik densitet, volume og fart med den præcision som der forventes for at kunne opstille et timing signal. Derimod er det bedste der kan gøres er at lave et cirka estimate med diskontinuerlig dellinger[Ordliste]. Publikationen forklarer i større detalje hvordan at for at få et udbytte med kontrol, simulation og en general forståelse for emnet, er en beskrivelse af trafik med henhold til fortsættende og differentiable kvantitativer[Ordliste] nødvendig. Formålet med denne publikation er at udvikle en ny formulering til dette som er kvalitativt korrekt. \n\nDen generelle konsensus for trafik variabler er følgende: Trafik Densiteten, K, farten, v, og volume, Q, er passende og brugbare til formået beskrevet herover. [Note: Cite Dr. Henry Lieu]\n\n\n\\[Q = Kv \\]\\label{eq:Equation1}\\begin{flushright}(1)\\end{flushright}\n						\nhvor følgende er gældende:\n\nQ = trafik flow (Bil(er)/timen) forbi et punkt.  \nK  = vehicular densitet (bil(er)/km)\nv  = (space-mean-speed) fart (km/t)\n\nDensitet kan beskrives som antallet af fartøjer per længden af en enhed (i dette tilfælde km). De to vigtige former af densitet er kritisk densitet, K\\_c og jam densitet, K\\_j. K\\_c er den maksimale densitet under free flow. k\\_j er den maksimale densitet under ophobning. Densitet udregnes som:\n\n\\[ k = \\frac{1}{s} \\]\\label{eq:Equation2}\\begin{flushright}(2)\\end{flushright}\n\nHvor s er det inverse af densiteten, spacing, som er distancen fra midte til midte mellem fartøjer.\n\nPå en vej L vil densiteten K, på et bestemt tidspunkt t\\_1, være lig det inverse af spacing mellem n antal fartøjer.\n\n\\[ K(L,t_1) = \\frac{n}{L} = \\frac{1}{\\overline{s}(t_1)} \\]\\label{eq:Equation3}\\begin{flushright}(3)\\end{flushright}\n\nSpace-mean-speed kan forklares som at være en udregning af fart hvori man tager et helt vejbane segment i betragtning. En serie af billeder eller video optager farten på individuelle fartøjer der køre på denne bane, ud fra dette er en gennemsnits fart udregnet. Denne type udregning anses for at være mere præcis end Time-mean-speed metoden som der ikke vil blive forklaret i dette afsnit. Udregningen vor Space-mean-speed ser således ud:\n\n\\[ v_t = n (\\displaystyle\\sum_{i=1}^{n}(1/v_i)^-1 \\]\\label{eq:Equation4}\\begin{flushright}(4)\\end{flushright}\n\nHvor n er det antal af fartøjer der passere vejbane segmentet.\n\n\\subsection{Flow}\nFlow er det antal at fartøjer som passere en form for referrence punkt per enhed af tid, som fartøjer/timen. The inverse af flow er togfølge (h) hvilket er den tid der går imellem fartøjer der passere det bestemte punkt og det forrige køretøj (i + 1). Ved overbelastning på veje forbliver h constant. Ved en trafik prop vil h gå mod uendeligt.\n\n\\[ q = 1/h \\]\\label{eq:Equation5}\\begin{flushright}(5)\\end{flushright}\n\nFlow (q) der passere et bestemt punkt (x\\_1) i et interval (T) er lig det inverse af den gennemsnitlige togfølge af m køretøjer.\n\n\\[ q(T, x_1) = \\frac{m}{T} = \\frac{1}{h(x_1} \\]\\label{eq:Equation6}\\begin{flushright}(6)\\end{flushright}\n\nLastbiler:\nLastbiler og andre transport fartøjer er oftest skyld i at trafikken går langsommere eller i nogle tilfælde stopper helt op. Det er derfor at bl.a. transport af vindmølledele bliver igangsat sent om aften eller meget tidligt på morgenen således at de ikke skaber problemer for andre billister. Dette har altså en stor effekt på trafikken og kunne derfor være relevant at medtage i vores model, dette er dog ikke gruppens fokus da dette er et meget specifikt scenarie.\nNOTE: Kan ændres skulle vi have tid til at lave noget med denne type scenarie.\n\nTid på dagen / Rush Hour: \nRush hour er det scenarie hvori der sker mest trafik i et land. Dette er typisk i de timer hvor de forskellige bilister skal på arbejde, køre børn til skole eller andre institutioner eller lignende og igen når disse samme individer skal hjem igen. Dette kan indskrives i programmet som en form for variable der ændre mængden af trafik ved bestemte tidspunkter.\nNOTE: Mangler kilde på dansk rush hour.\n\n\\section{INTRO TIL TEORI, SKAL SÆTTES I LØSNINGSAFSNIT}\nTil udformning af vores løsningsmodel bidrager dette afsnit en gennemang af to algoritmer til ruteplanlægning og vejvisning. De er valgt på baggrund af deres udbredthed i industrien (KILDE). TEKNOLOGIANALYSEN anleder til at afgøre hvilke(n) algoritme(r) der er nødvendige til vores løsningsmodel. Der er blevet valgt to algoritmer til vejvisning som er A* og Dijkstras Algoritme.\nDer vil først blive gennengået deres generelle funktion og dernæst en sammenligning af de to og en videre afgrænsning til hvilken der vil blive benyttet til løsningsmodellen.\n\n\\vspace{5mm}\n\n\\section{A* Algoritmen}\nPrimært når det kommer til belægning af en dynamisk rute, foregår det ved at en enhed fortsætter hen i mod et mål indtil den når en forhindring. Dette er et ekstremt simpelt bevægelsesmønster og indebærer in vis in-effektivitet. Rent retorisk kunne man stille spørgsmålet om det ikke ville være smartere at planlægge en rute før man overhovedet bevæger sig.\n\n\\vspace{5mm}\n\nA* er en algoritme til at beregne den korteste rute baseret på en række heuristiske datasæt. A* får input igennem en brugerlavet graf der indeholder en række datasæt for at algoritmen kan fungere.  Først har vi distancen fra punkt til punkt, eksempelvis punkt 'A' til punkt 'B' som vi kalder for f.eks. \\textbf{H} og dernæst har vi et datasæt \\textbf{G} der indeholder bekostningen for at flytte fra en kant til en anden, denne variabel er bestemt på forhånd. Et virkelighedseksempel kunne være at man vil over på den anden side af en sø, så har man så muligheden for at svømme direkte eller gå uden om og det koster f.eks. 2 gange så meget at bevæge sig direkte igennem søen. Dette er givet ved \\textbf{G}, hvor som sagt \\textbf{H} er den ultimative korteste længde til det bestemte slutpunkt. \\textbf{H} fungerer desuden for hvilket som helst punkt i et system og angiver \\textit{altid} den korteste vej til slutpunktet uanset forhindringer. Det skal også nævnes at \\textbf{H} ikke er påvirket af bevægelsesbekostningen, til at starte med, som \\textbf{G} angiver, dette kommer først senere. Til sidst har vi \\textbf{F} der er en samenlagt værdi af både \\textbf{H} og \\textbf{G}. Dette gælder kun for hver kasse der flyttes til, hvori \\textbf{H} er angivet ved kassen man flytter tils \\textbf{H} værdi. Det kan vises således i formlen \\ref{eq:A*}:\n\\begin{equation} \\label{eq:A*}\nF(n) = G(n) + H(n)\n\\end{equation}\n\nEn måde man kan visualisere A* på er f.eks. med et gitter-system som set i figur \\ref{fig:AKvadrat1}. Her kan vi se at vi har et start punkt (grøn) og et slutpunkts (blå). De kasser vi ikke kan bevæge os igennem er de røde kasser. Figuren angiver ingen heuristiske datasæt endnu.\n\n\\begin{figure}[H]\n\\begin{adjustbox}{width=1.2\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=1.2\\textwidth]{Pictures/Teoriafsnit/Figurfiler/Grid2.png}\n\\end{adjustbox}\n\\caption{A* gitter-system}\n\\label{fig:AKvadrat1}\n\\end{figure}\n\nUd fra figuren kan vi begynde os at forestille hvordan A* fungerer. Når man bevæger sig fra kasse til kasse laver man 2 lister til at holde styr på hvor brikken har været. En liste til at holde styr på hvilke kasser man ikke har besøgt endnu og en liste der holder styr på hvilke man \\textbf{har} besøgt. Når man flytter brikken skal man derfor angive hvilken kasse der nu skal på \\textit{besøgt} listen. Derfor som nævnt skal vi bruge information om hvor meget \\textbf{G} koster. Brikken skal nu til at flytte sig for at komme til slutpunktet. Dette kunne f.eks. være 10 point for at flytte sig i hvilken som helst retning, men man kunne også sagtens angive at diagonal bevægelse ville koste 12 point. Dvs. at ruten ændrer sig til måske ikke at være så direkte som den ellers kunne have været.\n\n\\vspace{5mm}\n\nDer findes flere metoder man kan anvende A* på og en af dem vises her.\nDet vises her i den lille bid af Python-kode i Listing \\ref{lst:Apseudo1}:\n\\begin{lstlisting}[caption={A stjerne og pseudo-kode af brug af lister},label={lst:Apseudo1},language=C]\nfrontier = Queue()\nfrontier.put(start)\nvisited = {}\nvisited[start] = True\n\nwhile not frontier.empty():\n   current = frontier.get()\n   for next in graph.neighbors(current):\n      if next not in visited:\n         frontier.put(next)\n         visited[next] = True\n\\end{lstlisting}\n\\cite{stanfordredblobgamesAstar}\n\nSom set i figur \\ref{fig:AKvadrat1} har vi vores liste givet ved kassernes nummerering. Nummereringen kører fra venstre mod højre én række ad gangen. Vi angiver at det tager 10 point af gå lodret og vandret én kasse ad gangen og 12 point at gå diagonalt. I figur \\ref{fig:AKvadrat2} kan vi nu se de heuristiske datasæt angivet fra startpunktet (grøn). Hver enkel kasse omkringliggende startpunktet har deres \\textbf{H} værdi angivet med lys-lilla tekst og bevægelsesomkostningen \\textbf{G} fra startpunktet til kassen angivet i blå tekst.\n\n\\begin{figure}[H]\n\\begin{center}\n\\includegraphics[width=1.00\\textwidth]{Pictures/Teoriafsnit/Figurfiler/Grid3.png}\n\\end{center}\n\\caption{A* der viser bekostning af bevægelse fra startpunkt (grøn) til omkringliggende kasser (G) angivet med blå farve samt H angivet med lys-lilla}\n\\label{fig:AKvadrat2}\n\\end{figure}\n\nNu udregnes \\textbf{F} værdien så f.eks. hvis vi går fra kasse 14 (startpunktet) til 15 skal vi lægge 10 (\\textbf{G}) og 8 (\\textbf{H}) sammen. Dette gør vi så for alle omkringliggende kasser for startpunktet. Dernæst går man til den laveste \\textbf{F} værdi og gør helt det samme som før, derudover flyttes den nye kasse man står på til \\textit{besøgt} listen. Noget man skal være opmærksom på her er at man stadig skal sammenligne bevægelsesomkostningen fra den tidligere kasse til de kasser der også er relevante for den nye kasse man har flyttet sig til. For dermed at afgøre om man kunne have påført en smartere bevægelse. Det skal igen pointeres at A* modtager data fra en graf og det her modelleres.\n\n\\vspace{5mm}\n\nDenne fremgangsmåde er også bedre kendt som Breadth First Search, hvori en frontlinje bliver kontinuerligt fremskyndet baseret på omkostninger og heuristiske datasæt\\cite{stanfordredblobgamesAstar}.\nA* er en heuristisk fremgangsmåde afledt af Dijkstras generelle funktionalitet. Dijkstra og A* vil altid give en kortest vej hen til målet.  %\\cite{http://search.proquest.com/openview/88fa950a98b308c6687f79f76caeb187/1?pq-origsite=gscholar}\n\n\\section{Dijkstras Algoritme}\n\nDijkstras algoritme er en algoritme til at finde den korteste vej fra et bestemt punkt til et andet punkt. Disse punkter kan bland andet repræsentere den korteste vej mellem to forskellige byer. Dijkstra fungerer på nogenlunde samme måde som A* i dens planlæggende fremgangsmåde ved at sammenligne punkter med hinanden. Dijkstras algoritme skanner også et område af kasser fra et startpunkt og fortsætter som eksemplificeret i figur \\ref{fig:AKvadrat2}. Dijkstra modtager dog ikke heuristiske datasæt Dijkstras er en grådig algoritme, da den finder den korteste længde først og fortsætter således.\\cite{DMATBOGEN} Dette kaldes også Greedy Best First Search.\n\n\\vspace{5mm}\n\nDijkstras algoritme finder den korteste rute mellem 2 forskellige punkter i en simpel ikke-orienteret vægtet graf. Man kan se på figur \\ref{fig:dijkstrasgraf} at der angives forskellige punkter \\textbf{{A, B, C, D, E, Z}}. Hvis man skal fra punkt A til Z på figuren, så starter man ved A og derfor initialiseres A til at være 0, som man kan se på tabel \\ref{fig:dijkstratabel}. Algoritmen virker således, at alle punkter er uendeligt udover det punkt man befinder sig på som vist på tabel \\ref{fig:dijkstratabel}.\n\n\\vspace{5mm}\n\nAlgoritmen tager punkt fra punkt, så den starter med at se de grene som A har. Disse er |AB| = 4 og |AC| = 2. Her fra kan algoritmen ikke se videre end B og C. Den ser altid på det mindste tal, og derfor tager den længden fra A til B som er 4 og længden fra A til C som er 2, begge disse tal er mindre end uendeligt. Herefter ser den efter hvilket af de nuværende tal som er mindst, hvilket er 2. Så derfor vælger den C som sit næste punkt. Algoritmen finder nu de næst tætteste punkt, ved at addere alle de tidligere ruter, som har den korteste rute fra A til det næste sæt af punkter. Her ser algoritmen ud fra C og hvilke grene C har. Dette er længden til B, D og E, dog er længden altid fra A, så derfor er længden fra A til E 12 da 2+10 = 12. Længden til B er nu blivet 3, da algoritmen ser på den korteste rute, så A til B er 3, da 2+1 = 3. Således fortsætter algoritmen indtil den rammer Z (slutpunktet).\\cite{DMATBOGEN}\n\n\\begin{figure}[H]\n\\begin{adjustbox}{width=1.2\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=1.2\\textwidth]{Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png}\n\\end{adjustbox}\n\\caption{Graf til fremvisning af eksempel af Dijkstras algoritme i brug}\n\\label{fig:dijkstrasgraf}\n\\end{figure}\n\n\\begin{table}[H]\n\\centering\n\\begin{adjustbox}{width=1\\textwidth}\n\\Large\n\\begin{tabular}{| c | c | c | c | c | c | c |}\n	\\hline\n	 & A & B & C & D & E & Z \\\\\n	\\hline\n	 & 0 & Inf & Inf & Inf & Inf & Inf \\\\\n	\\hline\n	{A} & 0 & 4 & 2 & Inf & Inf & Inf \\\\\n	\\hline\n	{A, C} & 0 & 3 & 2 & 10 & 12 & Inf \\\\\n	\\hline\n	{A, C, B} & 0 & 3 & 2 & 8 & 12 & Inf \\\\\n	\\hline\n	{A, C, B, D} & 0 & 3 & 2 & 8 & 10 & 14 \\\\\n	\\hline\n	{A, C, B, D, E} & 0 & 3 & 2 & 8 & 10 & 13 \\\\\n	\\hline\n	{A, C, B, D, E, Z} & 0 & 3 & 2 & 8 & 10 & 13 \\\\\n	\\hline\n\\end{tabular}\n\\end{adjustbox}\n\\caption{Dijkstra tabel}\\label{fig:dijkstratabel}\n\\end{table}\n\n\\begin{lstlisting}[language=C,caption={Dijkstras angivet som eksempel i pseudo-kode},label={lst:DijsktrasPseudo1}]\n	procedure Dijkstras(G: weighted connected simple graph, with all weights positive)\n{G has vertices a = V0, V1, ....... Vn = z and lengths w(Vi, Vj) where w(Vi,Vj) = infinity if{Vi, Vj} is not an edge in G}\nfor (i = 1 to n)\n	L(Vi) = infinity\nL(a) = 0\nS = NULL\n{ the labels are now initialized so that the label of a is 0 and all other labels are infinity, and S is the empty set }\nwhile (z does not belong to S)\n	u = a vertex not in S with L(u) minimal\n	S = S U {u}\n	for (all vertices v not in S)\n		if (L(u) + w(u, v) < L(v) then L(v) = L(u) + L(u, v))\n		{this adds a vertex to S with minimal label and updates the labels of vertices not in S}\nreturn (L(z)) {L(z) = length of a shortest path from 	a to z}\n\\end{lstlisting}",
 			"file": "sections/Teori/Teori.tex",
+			"file_size": 16124,
+			"file_write_time": 131029473391247611,
 			"settings":
 			{
-				"buffer_size": 15676,
+				"buffer_size": 15714,
 				"line_ending": "Windows"
 			}
 		},
@@ -128,10 +131,21 @@
 			}
 		},
 		{
+			"contents": "\\chapter{Teknologianalyse}\\label{Teknologianalyse}\n\n\\section{Indledning til teknologianylse her}\n\n\\section{VisSim}\nVisSim er et mikrosimuleringsprogram, som bliver anvendt i Danmark. VisSim udgør en stor del af beslutningsgrundlaget for udvidelsen i trafikken i dag. Programmet bruges til at konstruere og simulere større dynamiske systemer. Derudover er det et diskret simulationsprogram som modellerer adfærden for den enkelte billist. Programmet benyttes for general modellering, simulation og designe simulations applikationer, dvs. at VisSim ikke nødvendigvis bruges til trafik simulering. Programmet er programmeret i ANSI C, og under processen af et VisSim projekt kan projektet kompileres.\n\nVisSim benytter sig af den psyko-fysiske model, som benytter en regelbaseret algoritme ved bevægelser på tværs af banerne. Den psykologiske del bliver brugt til bilistens ønske om aggressivitet, hastighed, reaktionsevne og generelt menneskelige forhold til trafikken. Den fysiske del bruges til bilens adfærd, så som bilens hastighed, størrelse, position. \n\n\n\\subsection{Hvordan virker VisSim?}\nPå billede blabla kan man se at VisSim består af en værktøjslinje, som repræsenterer kommandoer og blokke.(http://www.vissim.com/downloads/doc/VisSim\\_UGv80.pdf)\nDisse blokke og diagrammer bruges til at arrangere simuleringen. Det er et blokprogrammerings sprog, man programmere ved brug af blokke og diagrammer. På billede blabla kan man se at VisSim består af forskellige blokke, disse blokke er forskellige parametre og variabler, som udformer det kørende program.\n\n\n\\subsection{VisSim - Bilen}\nDen enkle bil spiller også en stor rolle i VisSim, bilen er bestående af forskellige parametre, og det er ofte disse parametre der bliver anvendt. Denne rapport vurdere nogle af VisSims parametre, da det ikke er muligt for os at vurdere alle parametrene, fordi rapporten også fokusere på andre aspekter end VisSim. Der vil også vurderes vedligeholdelsen af VisSim. Bilens parametre i programmet er beskrevet nedenfor.\n\n\\begin{itemize}\n\\item Ønsket acceleration.\n\\item Deceleration.\n\\item Acceleration\n\\item Vægtfordeling.\n\\item Hastighedsfordeling.\n\\item Afstand mellem køretøjer.\n\\item Størrelsen på køretøjet.\n\\end{itemize}\n\n\\subsection{VisSim - Netværket}\nNetværket er bestående af de visuelle elementer, som har indflydelse på trafikafviklingen. Der er valgt at beskrive disse parametre, da det er disse der udgør største delen af VisSims parametre.\nNetværkets parametre er beskrevet nedenfor.\n\n\\begin{itemize}\n\\item Rundkørsler.\n\\item Vigepligt.\n\\item Lyskryds(signalregulering).\n\\item Hastighedszone.\n\\item Vejbredde.\n\\item Vejlængde.\n\\end{itemize}\n\n\\subsection{Analyse af acceleration og deceleration}\nUd fra en undersøgelse foretaget af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik, viser det sig at nogle af VisSims accelerations og decelerations værdier kan være upræcise. Undersøgelsen er foretaget ved analysering af VisSim på de danske vej-netværk, hvor der sammenlignes med GPS acceleration og decleration med VisSims data. Her er der blevet indsat GPS i 166 bilister som skal repræsentere acceleration og deceleration i Danmark.\n\nPå figur \\ref{GrafForAccelerationVisSimGPS}, kan man se at accelerations fordelingen for VisSim er markant højere end GPS daten. Dette viser sig, at være pga. VisSim er henvendt til de tyske-vejnetværk. I undersøgelsen beskriver de, at det skyldes de tyske biler er større og hurtigere. Det vurderes at VisSims data er upræcis, dette kan resultere forkerte simuleringer, hvilket resultere i forkert planlægning af nye vejnetværk. \n\n\n\\begin{figure}\n\\begin{center}\n\\includegraphics[width=1.0\\textwidth]{Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png}\n\\end{center}\n\\label{GrafForAccelerationVisSimGPS}\n\\caption{Visning af acceleration af VisSim og GPS data}\n\\end{figure}\n\nSamtidig er der undersøgt af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik om deceleration for bilister er præcise i VisSim, dette er også gjort ved sammenligning af VisSim data, med GPS data. På figur \\ref{GrafForDecelerationVisSimGPS} kan man se, at VisSims deceleration er markant højere end GPS dataen, man ser også at VisSim er lineæret udspillet. Det vurderes at dette kan have betydning for udfaldet i simleringen, hvis VisSims data var nær GPS daten, så ville udfaldet blive mere præcist. Man ser også at VisSims data er konstant dette betyder, at programmet ikke variere decelerationen, i forhold til farten. \n\n\\begin{figure}\n\\begin{center}\n\\includegraphics[width=1.0\\textwidth]{Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png}\n\\end{center}\n\\label{GrafForDecelerationVisSimGPS}\n\\caption{Visning af deceleration af VisSim og GPS data}\n\\end{figure}\n\n\\subsection{Vedligeholdelse af VisSim}\nVisSim kan anvendes således, at det kan opstilles til hvilket som helst formål. Dette er en god detalje for VisSim, da brugeren selv kan opstille specifikke scenerier og simuleringer som ikke nødvendigvis er trafik relateret. Dette vurderes til at være godt for vedligeholdelsen, da brugeren selv har muligheden for at opstille scenarier. Dette gør VisSim fremtidssikret, således at udviklerne af VisSim ikke selv skal sørger for vedligeholdelsen.\n\nVisSim er et stort program dette kræver viden omkring anvendelsen af VisSim for at brugeren kan benytte programmet til simulering af trafik. Da VisSim ikke kun er beregnet til trafik simulering, så kræver programmet mange detaljer og viden for brugeren, for at udføre en trafik simulering. Der vurderes at det vil være hjælpsomt for brugeren, hvis brugeren ikke skal anvende tid på at lære et nyt program, men i stedet anvende et program, som kun er egnet specifikt til simulering af trafik. \n\n\n\n",
+			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+			"file_size": 5839,
+			"file_write_time": 131029483755400407,
+			"settings":
+			{
+				"buffer_size": 5711,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "sections/Teknologianalyse/altransWTF.tex",
 			"settings":
 			{
-				"buffer_size": 8836,
+				"buffer_size": 10763,
 				"line_ending": "Windows"
 			}
 		},
@@ -147,10 +161,13 @@
 			}
 		},
 		{
+			"contents": "\\chapter{Metode}\nDette afsnit vil beskrive de anvendte metoder til udarbejdelsen af denne rapport. Hvorfor disse metoder er blevet anvendt og hvilket formål de har haft vil blive beskrevet, samt hvilke tanker der hat lagt til grund for dette igennem problemanalysen og problemløsningsafsnittet. Læseren kan med fordel se tilbage til dette afsnit, for at forstå hvordan der er blevet arbejdet igennem forløbet, skulle der opstå tvivl over hvordan vi er nået frem til vores deduktioner og resultater.\n\n\\section{Problemområde}\nProblemområdet er det som danner grundlaget for projektet. Det har til formål at give et overblik over hvilke aspekter det valgte problem belyser, ud fra det initierende problem. Det klarlægger hvem problemet påvirker og hvem det vil gavne såfremt en løsning på problemet kan opnås til at analysere både problemets relevans og samt om det har nogle interessenter.  Ud fra det initierende problem er der blevet stillet følgende hv-spørgsmål til at afgrænse problemets omfang;\n\n\\begin{figure}[H]\n\\begin{adjustbox}{width=1.2\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=1.2\\textwidth]{Pictures/Metode/metodebillede.jpg}\n\\end{adjustbox}\n\\label{fig:problemtreae}\n\\caption{Problemtræ over trafiksimulering}\n\\end{figure}\n\n\\begin{itemize}\n\\item Hvorfor: Hvad er årsagerne til problemet?\n\\item Hvad: Hvem bliver ramt af problemet?\n\\item Interessenter: Hvem er interessenterne - hvem har en interesse i en løsning på problemet?\n\\item Hvor: Hvor findes problemet?\n\\item Hvem: Hvem er hovedpersonerne i problemet?\n\\item Hvordan: Hvordan kan problemet løses?\n\\end{itemize}\nmen også for at finde ud af at hvorvidt det opstillet problem har nogen relevans for at blive afviklet. Problemområdet er således blevet benyttet til at isolere alle de relevante aspekter af problemet, hvorefter det er blevet sat sammen i en større sammenhæng for at give et klart og tydeligt billede af hvor det præcise problem befinder sig til at udarbejde en problemformulering.\n\n\\section{Fremgangsmåde}\nUnder udarbejdelse af projektet er der blevet benyttet flere forskellige fremgangsmåder, alt efter hvad der er blevet arbejdet med under problemanalysen. Fremgangsmåden under udarbejdelsen af rapporten er foregået ved at opstille relevante hypoteser, som enten kunne be- eller afkræftes ved at research sig frem til eller ved hjælp af en prøve-fejl-metode.\n\n\\subsection{Emperiske-induktive-metode}\nUnder problemanalysen er den emperiske-induktive-metode blevet anvendt til at sikre os, at den information der er blevet indsamlet har statistisk belæg for deres udsagn eller er matematisk bevist. Dette gøre det muligt at udlede logiske slutninger til at underbygge rapportens argumentation, og sikre at troværdigheden i det som er blevet formidlet.\n\n\\subsection{Andre metoder}\nHer tilføjes det hvis vi i løbet af rapporten anvender andre metoder.\n\n\\subsection{Prøve-fejl-metoden}\nUnder programmeringsfasen er der hovedsageligt blevet anvendt prøve-fejl-metoden, eftersom det har været den mest effektive metode til at opnå den ønskede effekt i programmet. Dette er blevet gjort ved at lave metoder, med et specifikt mål i tankerne til at udføre bestemte dele. Hvis metoden ikke opførte sig som forventede blevet den omprogrammeret, indtil den bestemte metode udførte den ønskede effekt i programmet.\n%http://kom.aau.dk/~dsp/ComSys08/ComSys07/sites/ComSys6/4%20Videnskabelige%20metoder.pdf \n\n\\section{Kildekritik og søgeprotokol}\nFor at finde frem til relevant information, er der blevet taget udgangspunkt i kilder med ophav fra statslige instanser eller anerkendte virksomheder og organisationer, for at sikre informationernes gyldighed og troværdighed. Dette vil det også være muligt at kunne kontakte kilderne for uddybende spørgsmål, skulle der opstå tvivl om dele af informationen eller indsamlet data i det anvendte information. Ydermere er der blevet forsøgt at finde den nyeste tilgængelige information, for at sikre at den indsamlede data stadigvæk er brugbart og gyldigt. Fordi flere af de anvendte kilder kunne have en tendens, er den præsenteret information blevet kritisk overvejet efter hvorvidt det forholder sig objektivt eller om det er blevet fremstillet til at opnå noget for egen vinding eller et specielt mål. Den generelle informationssøgning er blevet foretaget ved at benytte udvalgte ord, der relaterer til emnet.\nDer er blevet anvendt en søgeprotokol såfremt søgningens formål har været at finde information til at udvide forståelsen for emnet og afvikle opstillet hypoteser, og ikke hvis formålet har været at finde bestemt information som eksempelvis algoritmer eller modeller. Søgeprotokollen har anvendt følgende keywords:\n\n\\begin{itemize}\n\\item Simulering\n\\item Crowding\n\\item Sustainability of programs\n\\item A* usability and algorithm\n\\item Trafik\n\\end{itemize}\n Den anvendte information er så vidt muligt også forsøgt at krydsrefereret med andre tilsvarende kilder, for at øge troværdigheden ved at undersøge om andre er nået frem til tilsvarende konklusioner og data. De primære søgemaskiner til at finde den anvendte information har været Google Scholar og Aalborg Universitetsbibliotek. \n",
 			"file": "sections/Metode/Metode.tex",
+			"file_size": 5176,
+			"file_write_time": 131029473390997597,
 			"settings":
 			{
-				"buffer_size": 5041,
+				"buffer_size": 5133,
 				"line_ending": "Windows"
 			}
 		},
@@ -198,12 +215,15 @@
 			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 			"settings":
 			{
-				"buffer_size": 4838,
+				"buffer_size": 5071,
 				"line_ending": "Windows"
 			}
 		},
 		{
+			"contents": "\\chapter{Indledning}\\label{Indledning}\n\n\\begin{center}\n\\textit{Initierende Problem}\n\n\\textbf{Danske trafik modeller bliver ofte opbygget med et konkret formål i fokus og bliver svære at vedligeholde i fremtiden i de tilfælde hvor konteksten ændrer sig.}\n\\end{center}\n	\n\\begin{center}\n\\textbf{Arbejdsspørgsmål\n\\begin{itemize}\n\\item Hvilke variabler bruges til at simulere trafik?\n\\item Hvem har gavn af disse trafikmodellerings simulatorer?\n\\item Hvordan fungerer de forskellige eksisterende software, trafik modellerings simulatorer?\n\\end{itemize}\n}\n\\end{center}",
 			"file": "sections/Indledning/Indledning.tex",
+			"file_size": 584,
+			"file_write_time": 131029473390887590,
 			"settings":
 			{
 				"buffer_size": 562,
@@ -288,11 +308,15 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/Git/Git Repository/Repository2/LATEX",
-		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections",
-		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Metode",
-		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teknologianalyse",
-		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teori"
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Indledning",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Interessentanalyse",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Metode",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/ProblemetsRelevans",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Problemformulering",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teknologianalyse",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teori"
 	],
 	"file_history":
 	[
@@ -358,7 +382,7 @@
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -434,7 +458,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 11,
 			"sheets":
 			[
 				{
@@ -443,15 +467,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15676,
+						"buffer_size": 15714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7763,
-								8067
+								13963,
+								13963
 							]
 						],
 						"settings":
@@ -460,10 +484,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2244.0,
+						"translation.y": 3384.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -497,27 +521,27 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 198.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "sections/Teknologianalyse/altransWTF.tex",
+					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8836,
+						"buffer_size": 5711,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6807,
-								6807
+								5214,
+								5214
 							]
 						],
 						"settings":
@@ -525,14 +549,42 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1794.0,
+						"translation.y": 1020.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "sections/Teknologianalyse/altransWTF.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2188,
+								2188
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 81.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "sections/Teknologianalyse/altrans.tex",
 					"semi_transient": false,
 					"settings":
@@ -556,24 +608,24 @@
 						"translation.y": 2310.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "sections/Metode/Metode.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5041,
+						"buffer_size": 5133,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1243,
-								1243
+								4742,
+								4742
 							]
 						],
 						"settings":
@@ -581,14 +633,14 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 651.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "setup/macros.tex",
 					"semi_transient": false,
 					"settings":
@@ -614,11 +666,11 @@
 						"translation.y": 370.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "setup/preamble.tex",
 					"semi_transient": false,
 					"settings":
@@ -644,11 +696,11 @@
 						"translation.y": 806.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
@@ -672,11 +724,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
 					"semi_transient": false,
 					"settings":
@@ -697,14 +749,14 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 243.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "references.bib",
 					"semi_transient": false,
 					"settings":
@@ -727,27 +779,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3711.0,
+						"translation.y": 2151.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4838,
+						"buffer_size": 5071,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1191,
-								1191
+								3976,
+								3976
 							]
 						],
 						"settings":
@@ -755,14 +807,14 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "sections/Indledning/Indledning.tex",
 					"semi_transient": false,
 					"settings":
@@ -774,8 +826,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								562,
+								562
 							]
 						],
 						"settings":
@@ -786,7 +838,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
