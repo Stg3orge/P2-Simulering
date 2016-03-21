@@ -1,58 +1,64 @@
 \select@language {english}
 \contentsline {chapter}{Preface}{iii}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Indledning}{1}{chapter.0.1}
-\contentsline {chapter}{\numberline {2}Metode}{2}{chapter.0.2}
-\contentsline {section}{\numberline {2.1}Problemomr\IeC {\r a}de}{2}{section.0.2.1}
-\contentsline {section}{\numberline {2.2}Fremgangsm\IeC {\r a}de}{4}{section.0.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Emperiske-induktive-metode}{4}{subsection.0.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Andre metoder}{4}{subsection.0.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Pr\IeC {\o }ve-fejl-metoden}{4}{subsection.0.2.2.3}
-\contentsline {section}{\numberline {2.3}Kildekritik og s\IeC {\o }geprotokol}{4}{section.0.2.3}
-\contentsline {part}{I\hspace {1em}Problemanalyse}{6}{part.1}
-\contentsline {chapter}{\numberline {3}Teori}{7}{chapter.1.3}
-\contentsline {section}{\numberline {3.1}Trafik Model}{7}{section.1.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Trafik Flow}{7}{subsection.1.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Flow}{8}{subsection.1.3.1.2}
-\contentsline {section}{\numberline {3.2}INTRO TIL TEORI, SKAL S\IeC {\AE }TTES I L\IeC {\O }SNINGSAFSNIT}{9}{section.1.3.2}
-\contentsline {section}{\numberline {3.3}A* Algoritmen}{9}{section.1.3.3}
-\contentsline {section}{\numberline {3.4}Dijkstras Algoritme}{12}{section.1.3.4}
-\contentsline {chapter}{\numberline {4}Problembeskrivelse}{15}{chapter.1.4}
-\contentsline {section}{\numberline {4.1}Problemets Relevans}{15}{section.1.4.1}
-\contentsline {subsection}{\numberline {4.1.1}\IeC {\O }konomi}{15}{subsection.1.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Forurening}{16}{subsection.1.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Livskvalitet}{16}{subsection.1.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}N\IeC {\o }dsituationer}{16}{subsection.1.4.1.4}
-\contentsline {section}{\numberline {4.2}Eksisterende Modeller}{16}{section.1.4.2}
-\contentsline {chapter}{\numberline {5}Teknologianalyse}{18}{chapter.1.5}
-\contentsline {section}{\numberline {5.1}Indledning til teknologianylse her}{18}{section.1.5.1}
-\contentsline {section}{\numberline {5.2}VisSim}{18}{section.1.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Hvordan virker VisSim?}{18}{subsection.1.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}VisSim - Bilen}{18}{subsection.1.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}VisSim - Netv\IeC {\ae }rket}{19}{subsection.1.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Analyse af acceleration og deceleration}{19}{subsection.1.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Vedligeholdelse af VisSim}{21}{subsection.1.5.2.5}
-\contentsline {section}{\numberline {5.3}Altrans}{21}{section.1.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Geografisk model}{21}{subsection.1.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Adf\IeC {\ae }rds model}{22}{subsection.1.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Emissions model}{23}{subsection.1.5.3.3}
-\contentsline {subsubsection}{Varmstart}{23}{section*.11}
-\contentsline {subsubsection}{Koldstartstill\IeC {\ae }g}{24}{section*.12}
-\contentsline {section}{\numberline {5.4}Vurdering}{24}{section.1.5.4}
-\contentsline {chapter}{\numberline {6}Interessantanalyse}{26}{chapter.1.6}
-\contentsline {subsection}{\numberline {6.0.1}Transport- og Bygningsministerists (TRM) - Vejdirektoratet}{26}{subsection.1.6.0.1}
-\contentsline {subsection}{\numberline {6.0.2}Den Kommunale Sektor}{27}{subsection.1.6.0.2}
-\contentsline {subsection}{\numberline {6.0.3}Visual Solutions}{27}{subsection.1.6.0.3}
-\contentsline {subsection}{\numberline {6.0.4}Uddannelsessektoren}{27}{subsection.1.6.0.4}
-\contentsline {subsection}{\numberline {6.0.5}Specificering af m\IeC {\r a}lgruppe}{28}{subsection.1.6.0.5}
-\contentsline {chapter}{\numberline {7}Problemformulering}{29}{chapter.1.7}
-\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{30}{part.2}
-\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{31}{chapter.2.8}
-\contentsline {chapter}{\numberline {9}Kravspecifikationer}{32}{chapter.2.9}
-\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{32}{subsection.2.9.0.1}
-\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{32}{subsection.2.9.0.2}
-\contentsline {chapter}{\numberline {10}Implementation}{33}{chapter.2.10}
-\contentsline {chapter}{\numberline {11}Diskussion}{34}{chapter.2.11}
-\contentsline {chapter}{\numberline {12}Konklusion}{35}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Perspektivering}{36}{chapter.2.13}
-\contentsline {chapter}{Bibliography}{37}{chapter*.13}
-\contentsline {chapter}{\numberline {A}Appendix}{39}{appendix.A}
+\contentsline {section}{\numberline {1.1}Problemets Relevans}{1}{section.0.1.1}
+\contentsline {subsection}{\numberline {1.1.1}\IeC {\O }konomi}{1}{subsection.0.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Forurening}{2}{subsection.0.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Livskvalitet}{2}{subsection.0.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}N\IeC {\o }dsituationer}{2}{subsection.0.1.1.4}
+\contentsline {section}{\numberline {1.2}Eksisterende Modeller}{2}{section.0.1.2}
+\contentsline {chapter}{\numberline {2}Metode}{4}{chapter.0.2}
+\contentsline {section}{\numberline {2.1}Problemomr\IeC {\r a}de}{4}{section.0.2.1}
+\contentsline {section}{\numberline {2.2}Fremgangsm\IeC {\r a}de}{6}{section.0.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Emperiske-induktive-metode}{6}{subsection.0.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Andre metoder}{6}{subsection.0.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Pr\IeC {\o }ve-fejl-metoden}{6}{subsection.0.2.2.3}
+\contentsline {section}{\numberline {2.3}Kildekritik og s\IeC {\o }geprotokol}{6}{section.0.2.3}
+\contentsline {part}{I\hspace {1em}Problemanalyse}{8}{part.1}
+\contentsline {chapter}{\numberline {3}Teori}{9}{chapter.1.3}
+\contentsline {section}{\numberline {3.1}Trafik Model}{9}{section.1.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Trafik Flow}{9}{subsection.1.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Flow}{10}{subsection.1.3.1.2}
+\contentsline {section}{\numberline {3.2}INTRO TIL TEORI, SKAL S\IeC {\AE }TTES I L\IeC {\O }SNINGSAFSNIT}{11}{section.1.3.2}
+\contentsline {section}{\numberline {3.3}A* Algoritmen}{11}{section.1.3.3}
+\contentsline {section}{\numberline {3.4}Dijkstras Algoritme}{14}{section.1.3.4}
+\contentsline {chapter}{\numberline {4}Problembeskrivelse}{17}{chapter.1.4}
+\contentsline {section}{\numberline {4.1}Problemets Relevans}{17}{section.1.4.1}
+\contentsline {subsection}{\numberline {4.1.1}\IeC {\O }konomi}{17}{subsection.1.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Forurening}{18}{subsection.1.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Livskvalitet}{18}{subsection.1.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}N\IeC {\o }dsituationer}{18}{subsection.1.4.1.4}
+\contentsline {section}{\numberline {4.2}Eksisterende Modeller}{18}{section.1.4.2}
+\contentsline {chapter}{\numberline {5}Teknologianalyse}{20}{chapter.1.5}
+\contentsline {section}{\numberline {5.1}Indledning til teknologianylse her}{20}{section.1.5.1}
+\contentsline {section}{\numberline {5.2}VisSim}{20}{section.1.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Hvordan virker VisSim?}{20}{subsection.1.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}VisSim - Bilen}{20}{subsection.1.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}VisSim - Netv\IeC {\ae }rket}{21}{subsection.1.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Analyse af acceleration og deceleration}{21}{subsection.1.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Vedligeholdelse af VisSim}{23}{subsection.1.5.2.5}
+\contentsline {section}{\numberline {5.3}Altrans}{23}{section.1.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Geografisk model}{23}{subsection.1.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Adf\IeC {\ae }rds model}{24}{subsection.1.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Emissions model}{25}{subsection.1.5.3.3}
+\contentsline {subsubsection}{Varmstart}{25}{section*.11}
+\contentsline {subsubsection}{Koldstartstill\IeC {\ae }g}{26}{section*.12}
+\contentsline {section}{\numberline {5.4}Vurdering}{26}{section.1.5.4}
+\contentsline {chapter}{\numberline {6}Interessantanalyse}{28}{chapter.1.6}
+\contentsline {subsection}{\numberline {6.0.1}Transport- og Bygningsministerists (TRM) - Vejdirektoratet}{28}{subsection.1.6.0.1}
+\contentsline {subsection}{\numberline {6.0.2}Den Kommunale Sektor}{29}{subsection.1.6.0.2}
+\contentsline {subsection}{\numberline {6.0.3}Visual Solutions}{29}{subsection.1.6.0.3}
+\contentsline {subsection}{\numberline {6.0.4}Uddannelsessektoren}{29}{subsection.1.6.0.4}
+\contentsline {subsection}{\numberline {6.0.5}Specificering af m\IeC {\r a}lgruppe}{30}{subsection.1.6.0.5}
+\contentsline {chapter}{\numberline {7}Problemformulering}{31}{chapter.1.7}
+\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{32}{part.2}
+\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{33}{chapter.2.8}
+\contentsline {chapter}{\numberline {9}Kravspecifikationer}{34}{chapter.2.9}
+\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{34}{subsection.2.9.0.1}
+\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{34}{subsection.2.9.0.2}
+\contentsline {chapter}{\numberline {10}Implementation}{35}{chapter.2.10}
+\contentsline {chapter}{\numberline {11}Diskussion}{36}{chapter.2.11}
+\contentsline {chapter}{\numberline {12}Konklusion}{37}{chapter.2.12}
+\contentsline {chapter}{\numberline {13}Perspektivering}{38}{chapter.2.13}
+\contentsline {chapter}{Bibliography}{39}{chapter*.13}
+\contentsline {chapter}{\numberline {A}Appendix}{41}{appendix.A}
