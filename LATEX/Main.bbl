@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{benjasfar}
+Pshko Aziz.
+\newblock Aalborg kommune teknisk forvaltning, 2016.
+
 \bibitem{VisualSolutions}
 Altair Engineering.
 \newblock About visual solutions, incorporated.
@@ -25,11 +29,6 @@ Danmarks Miljøundersøgelser.
 \newblock
   \url{http://www.dmu.dk/1_viden/2_publikationer/3_fagrapporter/rapporter/FR447.pdf},
   2003.
-
-\bibitem{COPERTII}
-Leonidas Ntziachristos and Zissis Samaras.
-\newblock Computer programme to calculate emissions from road transport.
-\newblock \url{http://www.eea.europa.eu/publications/TEC05}, 1997.
 
 \bibitem{stress}
 Dwight A~Hennessy og~David L~Wiesenthal.
@@ -87,5 +86,10 @@ Vejdirektoratet.
 \newblock
   \url{http://www.vejdirektoratet.dk/DA/viden_og_data/statistik/vejeneital/l%C3%A6ngdeoffentligeveje/Sider/default.aspx},
   2016.
+
+\bibitem{vissimfunker}
+{Vissim.com}.
+\newblock \url{http://www.vissim.com/downloads/doc/VisSim\_UGv80.pdf}, 2015.
+\newblock Accessed: 17-03-2016.
 
 \end{thebibliography}

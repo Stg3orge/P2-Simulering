@@ -1,6 +1,6 @@
 \chapter{Teknologianalyse}\label{Teknologianalyse}
 
-\section{Indledning til teknologianylse her}
+I dette kapitel ville der blive gennemgået en analyse af simulationsprogrammerne VisSim og Altrans. Forskellen på de to er at Altrans er en ikke-vedligeholdt model, hvor VisSim stadig er brugt i dag. Begge programmer vil blive vurderet i forhold til de aspekter der gør dem nemme at vedligeholde. %skrive en sammenligning af de to
 
 \section{VisSim}
 VisSim er et mikrosimuleringsprogram, som bliver anendt i Danmark. VisSim udgør en stor del af beslutningsgrundlaget for udvidelsen i trafikken i dag. Programmet bruges til at konstruere og simulere større dynamiske systemer. VisSim er et diskret simuleringsprogram som modellerer adfærden for den enkle billist. VisSim benyttes for general modellering, simulation og designe simulations applikationer, dvs. at VisSim ikke nødvendigvis bruges til trafik simulering. VisSim er programmeret i ANSI C, og under processen af et VisSim projekt kan projektet kompileres.
@@ -9,12 +9,18 @@ VisSim benytter sig af psyko fysisk model, som benytter en regelbaseret algoritm
 
 
 \subsection{Hvordan virker VisSim?}
-På billede blandt andet se at VisSim består af en værktøjslinje, som repræsentere kommandoer og blokke.(http://www.vissim.com/downloads/doc/VisSim\_UGv80.pdf)
-Disse blokke og diagrammer bruges til at forme simuleringen. Det er et blokprogrammerings sprog, man programmere ved brug af blokke og diagrammer. På billede blabla kan man se at VisSim består af forskellige blokke, disse blokke er forskellige parametre og variabler, som udformer det kørende program.
+På figur \ref{vissim} se at VisSim består af en værktøjslinje, som repræsentere kommandoer og blokke. Disse blokke og diagrammer bruges til at forme simuleringen. Det er et blokprogrammerings sprog, man programmere ved brug af blokke og diagrammer. På figur \ref{vissim} kan man se at VisSim består af forskellige blokke, disse blokke er forskellige parametre og variabler, som udformer det kørende program \cite{vissimfunker}.
 
+\begin{figure}
+\begin{center}
+\includegraphics[width=1.2\textwidth]{Pictures/Teknologianalyse/vissimfunker.jpg}
+\end{center}
+\caption{Værktøjer i VisSim}
+\label{vissim}
+\end{figure}
 
 \subsection{VisSim - Bilen}
-Den enkle bil spiller også en stor rolle hos VisSim, bilen er bestående af forskellige parametre, og det er ofte disse parametre der bliver anvendt. Denne rapport vurdere nogle af VisSims parametre, da det ikke er muligt for os at vurdere alle parametrene, fordi rapporten også fokusere på andre aspekter end VisSim. Der vil også vurderes vedligeholdelsen af VisSim. Bilens parametre i VisSim er beskrevet nedenfor.
+Den enkle bil spiller også en stor rolle i VisSim, bilen er bestående af forskellige parametre, og det er ofte disse parametre der bliver anvendt. Denne rapport vurdere nogle af VisSims parametre, da det ikke er muligt for os at vurdere alle parametrene, fordi rapporten også fokusere på andre aspekter end VisSim. Der vil også vurderes vedligeholdelsen af VisSim. Bilens parametre i VisSim er beskrevet nedenfor.
 
 \begin{itemize}
 \item Ønsket acceleration.
@@ -49,18 +55,18 @@ På figur \ref{GrafForAccelerationVisSimGPS}, kan man se at accelerations fordel
 \begin{center}
 \includegraphics[width=1.0\textwidth]{Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png}
 \end{center}
-\label{GrafForAccelerationVisSimGPS}
 \caption{Visning af acceleration af VisSim og GPS data}
+\label{GrafForAccelerationVisSimGPS}
 \end{figure}
 
-Samtidig er der undersøgt af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik om deceleration for bilister er præcise i VisSim, dette er også gjort ved sammenligning af VisSim data, med GPS data. På figur \ref{GrafForDecelerationVisSimGPS} kan man se, at VisSims deceleration er markant højere end GPS dataen, man ser også at VisSim er lineæret udspillet. Det vurderes at dette kan have betydning for udfaldet i simleringen, hvis VisSims data var nær GPS daten, så ville udfaldet blive mere præcist. Man ser også at VisSims data er konstant dette betyder, at programmet ikke variere decelerationen, i forhold til farten. 
+Samtidig er der undersøgt af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik om deceleration for bilister er præcise i VisSim, dette er også gjort ved sammenligning af VisSim data, med GPS data. På figur \ref{GrafForDecelerationVisSimGPS} kan man se, at VisSims deceleration er markant højere end GPS dataen, man ser også at VisSim er lineæret udspillet. Det vurderes at dette kan have betydning for udfaldet i simleringen, hvis VisSims data var nær GPS daten, så ville udfaldet blive mere præcist. Man ser også at VisSims data er konstant, dette betyder at programmet ikke varierer decelerationen i forhold til farten. 
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=1.0\textwidth]{Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png}
 \end{center}
-\label{GrafForDecelerationVisSimGPS}
 \caption{Visning af deceleration af VisSim og GPS data}
+\label{GrafForDecelerationVisSimGPS}
 \end{figure}
 
 \subsection{Vedligeholdelse af VisSim}
