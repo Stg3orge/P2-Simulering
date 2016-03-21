@@ -37,6 +37,7 @@ Hovedveje             & 80  \\ \hline
 Veje i byer           & 40  \\ \hline
 \end{tabular}
 \end{table}
+
 \subsection{Adfærds model}
 Adfærds modellens formål er at give et estimat på fordelingen af transportmiddelvalg, populariteten af destinationer, kørekort fordeling, og bilejerskab. For at udregne estimaterne, benytter adfærds modellen sig af 3 undermodller \cite[s. 25-26]{dmumodelanalyser}:
 
@@ -56,7 +57,6 @@ Modellen for kørekorthold er en prognosemodel. Sandsynligheden for at et indivi
 
 Modellen for bilejerskab estimerer hvor mange biler en husstand har. Modellen består af en logitmodel der bestemmer hvor mange biler husstanden har, denne logitmodel er indlejret i anden logitmodel, der bestemmer hvorvidt husstanden har biler eller ej. Til at bestemme om husstanden har bil, kigges der på husstandens socioøkonomiske forhold, om individerne i husstanden har kørekort, og hvor individerne rejser til. Outputtet af denne model bruges efterfølgende I modellen for valg af transportmiddel \cite[s. 29-30]{dmumodelanalyser}.
 
-
 \subsection{Emissions model}
 Man kan beregne emissioner af biltrafikken, dette gøres ved følgene: Der tages hensyn til og beregnes efter bilens tilstand, varm motor og koldstart. Det er en udregning der består ved at finde summen af en varstarts-emissionskoefficient gange trafikarbejdet og et koldstartstillæg for hver tur.
 
@@ -74,17 +74,25 @@ Til at beregne emissionen fra varmstarts er det forudsat at man har kendskab til
 I ALTRANS udregnes Koldstartstillægget ved brug af den tysk-schweizisk emissionsdatabase per bytrafiksituation. ALTRANS differentierer koldstartstillægget efter følgende:
 
 \begin{itemize}
-<<<<<<< HEAD:LATEX/sections/Teknologianalyse/altransWTF.tex
-	\item Turlængden. Disse kan være på 0-1 km, 1-2, 2.3, 3-4 og 4km.
-	\item Pause siden sidste tur disse kan være 0-1 timer til over 8 timer.
-	\item Udetemperaturen i temperaturspring på 5 grader som beregnes som månedsmiddelværdien.
-	\item Bilens alder.
-=======
 \item Turlængden. Disse kan være på 0-1 km, 1-2, 2.3, 3-4 og 4km.
 \item Pause siden sidste tur disse kan være 0-1 timer til over 8 timer.
 \item Udetemperaturen i temperaturspring på 5 grader som beregnes som månedsmiddelværdien.
 \item Bilens alder.
->>>>>>> 2ef193853ddcb6fc091fa25373c08d13303e14f3:LATEX/sections/Teknologianalyse/Altrans.tex
 \end{itemize}
 
 Derudover tager bilmodellen i ALTRANS også motorslid med i beregningerne for koldstartstillæg.
+
+\section{Vurdering}
+Når der i den Geografiske model bliver udregnet rejsetider for biler, bliver der ikke overvejet hvordan trafikken er på vejene. Rejsetiderne bliver udregnet ved at finde routen gennem vejnettet og derefter gange delafstandene med hastighederne på figur \ref{altranshastigheder}. At udelade trafikdensiteten i udregningen kan dermed gøre bilrejser mere attraktive når et individ skal vælge transportmiddel, hvilket kan føre til et upræcist resultat. Ved simulering kan man selvfølgelig ikke lave en model der passer 100\% på virkeligheden, men i dette tilfælde kunne modellørene muligvis have taget et andet advanceret simulerings program som f.eks. VisSim i brug til at udregne realistiske rejsetider. Et andet problem når der skal udregnes bilrejser, er at afstanden bliver udregnet fra centrum til centrum af byer. Dette kan give et urealistisk billede hvis individet egentlig kun skal fra udkanten af en zone til udkanten af en sidelæggende zone. Derudover gør det at individet bare skal køre til et centrum, at modellen ikke overvejer hvor langt individet skal gå fra en parkeringsplads til destinationen. 
+
+\vspace{5mm}
+
+Adfærds modellen finder destinationen et individ rejser til, og hvilket transportmiddel der bliver valgt, men der bliver ikke overvejet om individet vil rejse eller ej. Det vil sige at alle individerne i simuleringen rejser på en beregnings tidspunktet. Dette kan gøre at både vejnettet og den kollektive trafik virker til at være mere belastet end de i virkeligeheden vil være. I forhold til Altrans formål, at finde miljøpåvirkningen i skift fra bilrejser til kollektiv transport, vil dette ikke gøre at resultatet bliver upræcist, hvis man kigger på dataen procentvis, men det vil være svært at bruge Altrans resultater i sammenspil med andre simuleringsmodeller, der overvejer hvor mange individer der rejser på en dag.
+
+\vspace{5mm}
+
+Vedligeholdelse
+
+\vspace{5mm}
+
+Opsummering

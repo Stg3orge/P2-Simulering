@@ -3,11 +3,18 @@
 \section{Indledning til teknologianylse her}
 
 \section{VisSim}
-VisSim er et simulations program, som består af at man sætter blokke og diagrammer sammen, som former simuleringen. Det er en form for programmering, men man programmere ved brug af blokke og diagrammer. VisSim benyttes for general modellering, simulation og designe simulations applikationer. Programmet bruges til at konstruere og simulere større dynamiske systemer. VisSim er programmeret i ANSI C, og under processen af et VisSim projekt kan projektet kompileres.  
-VisSim er et diskret simuleringsprogram som modellerer adfærden for den enkle billist. VisSim benytter sig af psyko fysisk model, som benytter en regelbaseret algoritme ved bevægelser på tværs af banerne. Den psykologiske del bliver brugt til bilistens ønske om aggressivitet, hastighed, reaktionsevne og generelt menneskelige forhold til trafikken. Den fysiske del bruges til bilens adfærd, så som bilens hastighed, størrelse, position. 
+VisSim er et mikrosimuleringsprogram, som bliver anendt i Danmark. VisSim udgør en stor del af beslutningsgrundlaget for udvidelsen i trafikken i dag. Programmet bruges til at konstruere og simulere større dynamiske systemer. VisSim er et diskret simuleringsprogram som modellerer adfærden for den enkle billist. VisSim benyttes for general modellering, simulation og designe simulations applikationer, dvs. at VisSim ikke nødvendigvis bruges til trafik simulering. VisSim er programmeret i ANSI C, og under processen af et VisSim projekt kan projektet kompileres.
+
+VisSim benytter sig af psyko fysisk model, som benytter en regelbaseret algoritme ved bevægelser på tværs af banerne. Den psykologiske del bliver brugt til bilistens ønske om aggressivitet, hastighed, reaktionsevne og generelt menneskelige forhold til trafikken. Den fysiske del bruges til bilens adfærd, så som bilens hastighed, størrelse, position. 
+
+
+\subsection{Hvordan virker VisSim?}
+På billede blandt andet se at VisSim består af en værktøjslinje, som repræsentere kommandoer og blokke.(http://www.vissim.com/downloads/doc/VisSim\_UGv80.pdf)
+Disse blokke og diagrammer bruges til at forme simuleringen. Det er et blokprogrammerings sprog, man programmere ved brug af blokke og diagrammer. På billede blabla kan man se at VisSim består af forskellige blokke, disse blokke er forskellige parametre og variabler, som udformer det kørende program.
+
 
 \subsection{VisSim - Bilen}
-Den enkle bil spiller også en stor rolle hos VisSim, bilen er bestående af forskellige parametre, og det er ofte disse parametre der måles ved forsøg. Denne rapport tager udgangspunkt i acceleration og deceleration, ved vurdering af VisSim. Bilens parametre er beskrevet nedenfor.
+Den enkle bil spiller også en stor rolle hos VisSim, bilen er bestående af forskellige parametre, og det er ofte disse parametre der bliver anvendt. Denne rapport vurdere nogle af VisSims parametre, da det ikke er muligt for os at vurdere alle parametrene, fordi rapporten også fokusere på andre aspekter end VisSim. Der vil også vurderes vedligeholdelsen af VisSim. Bilens parametre i VisSim er beskrevet nedenfor.
 
 \begin{itemize}
 \item Ønsket acceleration.
@@ -20,8 +27,8 @@ Den enkle bil spiller også en stor rolle hos VisSim, bilen er bestående af for
 \end{itemize}
 
 \subsection{VisSim - Netværket}
-Netværket er bestående af de visuelle elementer, som har indflydelse på trafikafviklingen.
-Netværket parametre er beskrevet nedenfor.
+Netværket er bestående af de visuelle elementer, som har indflydelse på trafikafviklingen. Der er valgt at beskrive disse parametre, da det er disse der udgør største delen af VisSims parametre.
+Netværkets parametre er beskrevet nedenfor.
 
 \begin{itemize}
 \item Rundkørsler.
@@ -33,26 +40,17 @@ Netværket parametre er beskrevet nedenfor.
 \end{itemize}
 
 \subsection{Analyse af acceleration og deceleration}
-Ud fra en undersøgelse foretaget af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik, viser det sig at nogle af VisSims accelerations og decelerations værdier kan være upræcise. Undersøgelsen er foretaget ved analysering af VisSim på de danske vej-netværk.  Undersøgelsen bruger data fra vejdirektoratet, dette data sammenlignes med VisSims accelerations data.
+Ud fra en undersøgelse foretaget af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik, viser det sig at nogle af VisSims accelerations og decelerations værdier kan være upræcise. Undersøgelsen er foretaget ved analysering af VisSim på de danske vej-netværk, hvor der sammenlignes med GPS acceleration og decleration med VisSims data. Her er der blevet indsat GPS i 166 bilister som skal repræsentere acceleration og deceleration i Danmark.
 
-På figur \ref{GrafForAccelerationVisSim}, kan man se at accelerations fordelingen for VisSim er markant højere end dataen fra Vejdirektoratet. Dette viser sig, at være pga. VisSim er henvendt til de tyske-vejnetværk. I undersøgelsen beskriver de, at det skyldes de tyske biler er større og hurtigere. Dog bruger rapporten ældre data fra Vejdirektoratet, og derfor kan undersøgelsen også vise sig at være upræcis.
+På figur \ref{GrafForAccelerationVisSimGPS}, kan man se at accelerations fordelingen for VisSim er markant højere end GPS daten. Dette viser sig, at være pga. VisSim er henvendt til de tyske-vejnetværk. I undersøgelsen beskriver de, at det skyldes de tyske biler er større og hurtigere. Det vurderes at VisSims data er upræcis, dette kan resultere forkerte simuleringer, hvilket resultere i forkert planlægning af nye vejnetværk. 
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=1.0\textwidth]{Pictures/Teknologianalyse/GrafForAccelerationVisSim.png}
-\end{center}
-\caption{graf}
-\label{GrafForAccelerationVisSim}
-\end{figure}
-
-Der er yderlige undersøgelser foretaget af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik, hvor der sammenlignes med GPS accelerations og decleration data, med VisSims data. Her er der blevet indsat GPS i 166 bilister som skal repræsentere acceleration og deceleration i Danmark. På figur \ref{GrafForAccelerationVisSimGPS} kan man se, at det stadigvæk viser sig at VisSims acceleration er markant højere, end GPS daten. Dette kan give upræcis data, ved brug af simulering. 
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=1.0\textwidth]{Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png}
 \end{center}
-\caption{graf}
 \label{GrafForAccelerationVisSimGPS}
+\caption{Visning af acceleration af VisSim og GPS data}
 \end{figure}
 
 Samtidig er der undersøgt af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik om deceleration for bilister er præcise i VisSim, dette er også gjort ved sammenligning af VisSim data, med GPS data. På figur \ref{GrafForDecelerationVisSimGPS} kan man se, at VisSims deceleration er markant højere end GPS dataen, man ser også at VisSim er lineæret udspillet. Det vurderes at dette kan have betydning for udfaldet i simleringen, hvis VisSims data var nær GPS daten, så ville udfaldet blive mere præcist. Man ser også at VisSims data er konstant dette betyder, at programmet ikke variere decelerationen, i forhold til farten. 
@@ -61,7 +59,14 @@ Samtidig er der undersøgt af Pihlkjær afgangsprojekt Aalborg Universitet - Vej
 \begin{center}
 \includegraphics[width=1.0\textwidth]{Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png}
 \end{center}
-\caption{graf}
 \label{GrafForDecelerationVisSimGPS}
+\caption{Visning af deceleration af VisSim og GPS data}
 \end{figure}
+
+\subsection{Vedligeholdelse af VisSim}
+VisSim kan anvendes således, at det kan opstilles til hvilket som helst formål. Dette er en god detalje for VisSim, da brugeren selv kan opstille specifikke scenerier og simuleringer som ikke nødvendigvis er trafik relateret. Dette vurderes til at være godt for vedligeholdelsen, da brugeren selv har muligheden for at opstille scenarier. Dette gør VisSim fremtidssikret, således at udviklerne af VisSim ikke selv skal sørger for vedligeholdelsen.
+
+VisSim er et stort program dette kræver viden omkring anvendelsen af VisSim for at brugeren kan benytte programmet til simulering af trafik. Da VisSim ikke kun er beregnet til trafik simulering, så kræver programmet mange detaljer og viden for brugeren, for at udføre en trafik simulering. Der vurderes at det vil være hjælpsomt for brugeren, hvis brugeren ikke skal anvende tid på at lære et nyt program, men i stedet anvende et program, som kun er egnet specifikt til simulering af trafik. 
+
+
 
