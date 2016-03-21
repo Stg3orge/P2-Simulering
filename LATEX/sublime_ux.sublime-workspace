@@ -112,62 +112,11 @@
 	"buffers":
 	[
 		{
-			"file": "sections/Teori/Teori.tex",
-			"settings":
-			{
-				"buffer_size": 15676,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Main.tex",
 			"settings":
 			{
 				"buffer_size": 1098,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sections/Teknologianalyse/altransWTF.tex",
-			"settings":
-			{
-				"buffer_size": 10763,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "\\section{Altrans}\nAlternativ Transportsystemer (Altrans) er en trafikmodel, hvis formål er at belyse hvordan en øget brug af den kollektive transport vil påvirke miljøet \\cite[s. 14]{dmumodelanalyser}. Trafikmodellen er blevet udviklet af Danmarks Miljøundersøgelser (DMU) i 1994. Altrans består af 3 hovedmodeller: en geografisk model, en adfærds model og en emissions model \\cite[s. 14]{dmuadfaerdsmodel}.\n\\subsection{Geografisk model}\nDen geografiske model bruges til at beregne rejsetider, ventetider og skiftetider. For at udregne disse benyttes følgende undermodeller:\n\n\\begin{itemize}\n\\item Model af kollektiv transportnet\n\\item Model af serviceniveau\n\\item Model for bilrejser\n\\item Model for attraktion til byfunktioner\n\\end{itemize}\n\nModellen for attraktion til byfunktioner består af information over antallet af beboere og arbejdspladser i forskellige områder, og benyttes mest i forbindelse med adfærds modellen. Derudover bruger den geografiske model et geografisk informations system (GIS) til opbevaring af data og udregning af rejsetiderne \\cite[s. 18-19]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nFor at lave realistiske simuleringer, bruger modellen for det kollektive trafik præcise data for ankomst- og afgangstider. Denne data kommer fra 11 trafikselskaber der bruger køreplansystemet TR-System, DSB’s data kommer i et andet format der bliver brugt til DBS’s egen rejseplanlægger. Der er ikke brugt data fra Bornholm og kommunale ruter i Fyn, Region Midtjylland og Århus amterne, bortset fra ruterne i Århus, Odense og Randers. Modellen tager disse data og fortolker dem til et fælles format. For at beregne rejsertiderne af kørestrækningerne, samt ankomst og afgangstiderne sat op i et tredimensionelt koordinatsystem, hvor tiden bliver indsat som den tredje akse Z. Stationernes placering bliver indsat som X og Y koordinaterne, og man kan dermed finde ud af hvilke ruter der kan rejses med ved en given station \\cite[s. 20-22]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nModellen af serviceniveau udregner serviceniveauet med variablerne tid, omkostninger og tilgængelighed. Modellen unlader at indkludere variabler som komfort, da DMU har lavet antagelsen, at komforten ikke ændre sig kraftigt over tid. Dette kan gøre prognoser der ser på den fjerne fremtid upræcise. Modellen spænder over både taktisk (meso) og operationel (mikro). På den taktiske plan kigger Altrans på buskilometer, afgangs frekvenser og tilgængelighed. På den operationelle plan kigges der på tiden man bruger i køretøjet, hvor lang tid man skal vente ved skift samt ventetiden i alt, og prisen på rejsen \\cite[s. 36-37]{dmuadfaerdsmodel}.\n\n\\vspace{5mm}\n\nFormålet med modellen for bilrejser er at udregne tiden det tager at rejse fra by til by. Dette gøres ved brug af vejnettet i GIS, og hastigheden bilen kører kommer an på vejtypen. Ruten der bliver kørt starter og slutter fra centrumet af byerne der bliver rejst mellem. Modellen tager ikke højde for anden trafik på vejene, så tiderne der udregnes vil være præcise hvis der ikke er andre bliver på vejnettet \\cite[s. 25]{dmumodelanalyser}. Hastighederne modellen bruger til de forskellige veje, kan ses på figur \\ref{altranshastigheder}.\n\n\\begin{table}[H]\n\\centering\n\\caption{Hastigheder på forskellige vejtyper}\n\\label{altranshastigheder}\n\\begin{tabular}{|l|l|}\n\\hline\nMotorveje             & 110 \\\\ \\hline\nMotortrafikveje       & 90  \\\\ \\hline\nHovedveje             & 80  \\\\ \\hline\nØvrige veje på landet & 70  \\\\ \\hline\nVeje i byer           & 40  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\\subsection{Adfærds model}\nAdfærds modellens formål er at give et estimat på fordelingen af transportmiddelvalg, populariteten af destinationer, kørekort fordeling, og bilejerskab. For at udregne estimaterne, benytter adfærds modellen sig af 3 undermodller \\cite[s. 25-26]{dmumodelanalyser}:\n\n\\begin{itemize}\n\\item Model for valg af transportmiddel og destinationer\n\\item Cohortmodel og model for kørekorthold\n\\item Model for bilejerskab\n\\end{itemize}\n\nModellen for valg af transportmiddel og destinationer estimerer og simulerer antallet af kilometer der bliver rejst i de 4 transportmiddelkategorier: kollektiv trafik, bilfører, bilpassager og let trafik. Derudover estimeres de rejsenes destinationer, hvilket gør det muligt at finde ud af hvordan trafikken bliver fordelt på vejnettet, så trafikkens påvirkning på miljøet kan analyseres. Hovedformålet med at finde destinationerne er dog at modellere indvider i samfundet. Modellen vægter nytten ved rejserne, for eksempel kan en rejse til den nærmest købmand være mere nyttig end en der ligger længere væk. For at finde ud af hvilket transportmiddel et individ vælger, kigges der på prisen og tiden af rejsen, samt individets socioøkonomiske baggrund \\cite[s. 26-27]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nModellen for kørekorthold er en prognosemodel. Sandsynligheden for at et individ har et kørekort, er udregnet udfra kørekortfordelingen over alle individer og en logitmodel med variablerne køn, alder, indkomst, stilling og urdaniseringsgrad. Dette indrages i cohortmodellen der simulerer om individet har et kørekort i det år der bliver beregnet på \\cite[s. 30]{dmumodelanalyser}.\n\n\\vspace{5mm}\n\nModellen for bilejerskab estimerer hvor mange biler en husstand har. Modellen består af en logitmodel der bestemmer hvor mange biler husstanden har, denne logitmodel er indlejret i anden logitmodel, der bestemmer hvorvidt husstanden har biler eller ej. Til at bestemme om husstanden har bil, kigges der på husstandens socioøkonomiske forhold, om individerne i husstanden har kørekort, og hvor individerne rejser til. Outputtet af denne model bruges efterfølgende I modellen for valg af transportmiddel \\cite[s. 29-30]{dmumodelanalyser}.\n\n\n\\subsection{Emissions model}\nMan kan beregne emissioner af biltrafikken, dette gøres ved følgene: Der tages hensyn til og beregnes efter bilens tilstand, varm motor og koldstart. Det er en udregning der består ved at finde summen af en varstarts-emissionskoefficient gange trafikarbejdet og et koldstartstillæg for hver tur.\n\n\\vspace{5mm}\n\nDisse faktorer er ikke selvstændige og bliver lavet per bilens årgang og dens størrelse/brændstoftype. Hastigheden af fartøjet determinere varmstarts-emissionskoefficienten. Der er sågar fortaget undersøgelser, såkaldte årskørselsundersøgelse af Vejdirektoratet (Winther & Ekmann, 1998) hvorfra det er konkluderet at årskørsel forudsat er uafhængigt af bilens størrelse selvom at dette er set som urealistisk. Det estimeret trafikarbejde bliver udregnet ifølge en adfærdsmodel hvori man kigger på årskørsel pr bil i alle aldersgrupper. Der forøges eller reduceres med en faktor i selve fremskrivningsåret sådan at summen af antal biler i hver gruppe ganges deres gennemsnitlige årskørsel bliv lig det førnævnte trafikarbejde.\n\n\\subsubsection{Varmstart}\nFor at beregne varmstarts-emissionkoefficienten tager man udgangspunkt i COPERT II for den pågældene årgang. COPERT II er et windows program som gør det muligt at udregne emission fra vej trafik. Ydermere er programmet i stand til at lave lignende beregninger ud fra en forbrændingsmotor til et off-road fartøj. De beregnede emissioner inkludere alle de store forurenende stoffer så som (CO, NO\\textsubscript{x}, VOC, PM) og mange flere. Programmet er ydermere i stand til at beregne brændstofforbrug \\cite[s 4]{COPERT II}.  For nye biler i alle fremtidsår anvendes der de emissionskoefficienter der er blevet udarbejdet som EU-normer pr den årgang. Dette er ikke gældende for ældre biler. Her ændre emissionskoefficienterne sig med tiden og dette er specielt pågældende for katalysatorbiler. Emissionskoefficienten bliver korrigeret fra årgang til årgang alt efter motorslid, da informationer om emissionskoefficienten udvikling afhænger af fartøjets samlede kørsel. Når den samlede årskørsel bliver udregnet er det også muligt at beregne den gennemsnitlige bils samlede kørsel for en givet alder. Motorslid korrigerede emissionskoefficienten ved varmstart kan således udregnes for hver bilårgang for et beregnings år, jf. Kveiborg(1999).\n\n\\vspace{5mm}\n\nTil at beregne emissionen fra varmstarts er det forudsat at man har kendskab til fordelingen af trafik pr by-, land- og motorvejskørsel. ALTRANS har forudsat dette til at være som i basisåret.\n\\subsubsection{Koldstartstillæg}\nI ALTRANS udregnes Koldstartstillægget ved brug af den tysk-schweizisk emissionsdatabase per bytrafiksituation. ALTRANS differentierer koldstartstillægget efter følgende:\n\n\\begin{itemize}\n\\item Turlængden. Disse kan være på 0-1 km, 1-2, 2.3, 3-4 og 4km.\n\\item Pause siden sidste tur disse kan være 0-1 timer til over 8 timer.\n\\item Udetemperaturen i temperaturspring på 5 grader som beregnes som månedsmiddelværdien.\n\\item Bilens alder.\n\\end{itemize}\n\nDerudover tager bilmodellen i ALTRANS også motorslid med i beregningerne for koldstartstillæg.",
-			"file": "sections/Teknologianalyse/altrans.tex",
-			"file_size": 9082,
-			"file_write_time": 131026021750629483,
-			"settings":
-			{
-				"buffer_size": 8835,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/Metode/Metode.tex",
-			"settings":
-			{
-				"buffer_size": 5041,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "setup/macros.tex",
-			"settings":
-			{
-				"buffer_size": 3800,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "setup/preamble.tex",
-			"settings":
-			{
-				"buffer_size": 6067,
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -175,38 +124,54 @@
 			"settings":
 			{
 				"buffer_size": 767,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Teori/Teori.tex",
+			"settings":
+			{
+				"buffer_size": 15676,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Teknologianalyse/altransWTF.tex",
+			"settings":
+			{
+				"buffer_size": 11735,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
+			"file": "aau/frontpage.tex",
 			"settings":
 			{
-				"buffer_size": 6502,
+				"buffer_size": 950,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "references.bib",
+			"file": "aau/titlepages.tex",
 			"settings":
 			{
-				"buffer_size": 6901,
+				"buffer_size": 1347,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+			"file": "aau/signatures.tex",
 			"settings":
 			{
-				"buffer_size": 5071,
+				"buffer_size": 1115,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/Indledning/Indledning.tex",
+			"file": "setup/variables.tex",
 			"settings":
 			{
-				"buffer_size": 7010,
+				"buffer_size": 601,
 				"line_ending": "Windows"
 			}
 		}
@@ -218,40 +183,12 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 490.0,
-		"last_filter": "vmen",
+		"height": 104.0,
+		"last_filter": "Package Control: install",
 		"selected_items":
 		[
 			[
-				"vmen",
-				"View: Toggle Menu"
-			],
-			[
 				"Package Control: install",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: ins",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: inst",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: insta",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: instal",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: Install",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: Instal",
 				"Package Control: Install Package"
 			],
 			[
@@ -267,14 +204,13 @@
 				"Set Syntax: C"
 			]
 		],
-		"width": 549.0
+		"width": 400.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
-			"latexmk -pdf -pv file.tex"
 		]
 	},
 	"distraction_free":
@@ -288,19 +224,17 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/Git/Git Repository/Repository2/LATEX",
-		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections",
-		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Metode",
-		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teknologianalyse",
-		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teori"
+		"/C/Programs/Githubp2/P2-Simulering/LATEX",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse"
 	],
 	"file_history":
 	[
-		"/C/Users/Rasmus/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
-		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/tools/.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/references.bib",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/teoriafsnit/teoriafsnit.tex",
-		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/preamble.tex",
 		"/C/Programs/LaTeX Documents/LaTeX Document 2/assignment2.tex",
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
 		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
@@ -320,6 +254,7 @@
 		"/C/Programs/C/Lektionone/sammensetarrays.c",
 		"/C/Programs/C/Lektionone/afleveringdonger.c",
 		"/C/Programs/C/Lektionone/help.c",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Programs/Git/Rep B2-24/sections/intro/intro.tex",
 		"/C/Programs/Git/Rep B2-24/references.bib",
@@ -358,7 +293,7 @@
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -372,15 +307,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"MISC",
-			"60",
-			"cite",
-			"citep",
-			"4",
-			"gitre",
-			"firkant",
-			"firkanter",
-			"MISC",
 			"fight",
 			"teams",
 			"match_count",
@@ -434,40 +360,11 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "sections/Teori/Teori.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15676,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7763,
-								8067
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2244.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "Main.tex",
 					"semi_transient": false,
 					"settings":
@@ -475,15 +372,6 @@
 						"buffer_size": 1098,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
@@ -497,158 +385,14 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 198.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sections/Teknologianalyse/altransWTF.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10763,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1794.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "sections/Teknologianalyse/altrans.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8835,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								8835
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2310.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "sections/Metode/Metode.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5041,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1243,
-								1243
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "setup/macros.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3800,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3800,
-								3800
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 370.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "setup/preamble.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6067,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2418,
-								2418
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 806.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
+					"buffer": 1,
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
@@ -660,8 +404,8 @@
 						"selection":
 						[
 							[
-								316,
-								316
+								0,
+								0
 							]
 						],
 						"settings":
@@ -676,70 +420,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
+					"buffer": 2,
+					"file": "sections/Teori/Teori.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6502,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3991,
-								4701
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 243.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "references.bib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6901,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5596,
-								5596
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3711.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5071,
+						"buffer_size": 15676,
 						"regions":
 						{
 						},
@@ -752,7 +438,96 @@
 						],
 						"settings":
 						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2700.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sections/Teknologianalyse/altransWTF.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11735,
+								11735
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "aau/frontpage.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								623,
+								623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "aau/titlepages.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -762,12 +537,40 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "sections/Indledning/Indledning.tex",
+					"buffer": 6,
+					"file": "aau/signatures.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7010,
+						"buffer_size": 1115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "setup/variables.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 601,
 						"regions":
 						{
 						},
@@ -786,7 +589,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -794,11 +597,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 26.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -825,7 +628,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 214.0
+		"height": 108.0
 	},
 	"output.find_results":
 	{
@@ -835,7 +638,7 @@
 	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -877,7 +680,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 239.0,
+	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

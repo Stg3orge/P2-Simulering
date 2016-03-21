@@ -41,24 +41,22 @@
 \contentsline {subsection}{\numberline {5.3.1}Geografisk model}{23}{subsection.1.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Adf\IeC {\ae }rds model}{24}{subsection.1.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Emissions model}{25}{subsection.1.5.3.3}
-\contentsline {subsubsection}{Varmstart}{25}{section*.11}
-\contentsline {subsubsection}{Koldstartstill\IeC {\ae }g}{26}{section*.12}
-\contentsline {section}{\numberline {5.4}Vurdering}{26}{section.1.5.4}
-\contentsline {chapter}{\numberline {6}Interessantanalyse}{28}{chapter.1.6}
-\contentsline {subsection}{\numberline {6.0.1}Transport- og Bygningsministerists (TRM) - Vejdirektoratet}{28}{subsection.1.6.0.1}
-\contentsline {subsection}{\numberline {6.0.2}Den Kommunale Sektor}{29}{subsection.1.6.0.2}
-\contentsline {subsection}{\numberline {6.0.3}Visual Solutions}{29}{subsection.1.6.0.3}
-\contentsline {subsection}{\numberline {6.0.4}Uddannelsessektoren}{29}{subsection.1.6.0.4}
-\contentsline {subsection}{\numberline {6.0.5}Specificering af m\IeC {\r a}lgruppe}{30}{subsection.1.6.0.5}
-\contentsline {chapter}{\numberline {7}Problemformulering}{31}{chapter.1.7}
-\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{32}{part.2}
-\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{33}{chapter.2.8}
-\contentsline {chapter}{\numberline {9}Kravspecifikationer}{34}{chapter.2.9}
-\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{34}{subsection.2.9.0.1}
-\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{34}{subsection.2.9.0.2}
-\contentsline {chapter}{\numberline {10}Implementation}{35}{chapter.2.10}
-\contentsline {chapter}{\numberline {11}Diskussion}{36}{chapter.2.11}
-\contentsline {chapter}{\numberline {12}Konklusion}{37}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Perspektivering}{38}{chapter.2.13}
-\contentsline {chapter}{Bibliography}{39}{chapter*.13}
-\contentsline {chapter}{\numberline {A}Appendix}{41}{appendix.A}
+\contentsline {section}{\numberline {5.4}Vurdering}{25}{section.1.5.4}
+\contentsline {chapter}{\numberline {6}Interessantanalyse}{27}{chapter.1.6}
+\contentsline {subsection}{\numberline {6.0.1}Transport- og Bygningsministerists (TRM) - Vejdirektoratet}{27}{subsection.1.6.0.1}
+\contentsline {subsection}{\numberline {6.0.2}Den Kommunale Sektor}{28}{subsection.1.6.0.2}
+\contentsline {subsection}{\numberline {6.0.3}Visual Solutions}{28}{subsection.1.6.0.3}
+\contentsline {subsection}{\numberline {6.0.4}Uddannelsessektoren}{28}{subsection.1.6.0.4}
+\contentsline {subsection}{\numberline {6.0.5}Specificering af m\IeC {\r a}lgruppe}{29}{subsection.1.6.0.5}
+\contentsline {chapter}{\numberline {7}Problemformulering}{30}{chapter.1.7}
+\contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{31}{part.2}
+\contentsline {chapter}{\numberline {8}L\IeC {\o }sningsforslag}{32}{chapter.2.8}
+\contentsline {chapter}{\numberline {9}Kravspecifikationer}{33}{chapter.2.9}
+\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{33}{subsection.2.9.0.1}
+\contentsline {subsection}{\numberline {9.0.2}\IeC {\textbullet }}{33}{subsection.2.9.0.2}
+\contentsline {chapter}{\numberline {10}Implementation}{34}{chapter.2.10}
+\contentsline {chapter}{\numberline {11}Diskussion}{35}{chapter.2.11}
+\contentsline {chapter}{\numberline {12}Konklusion}{36}{chapter.2.12}
+\contentsline {chapter}{\numberline {13}Perspektivering}{37}{chapter.2.13}
+\contentsline {chapter}{Bibliography}{38}{chapter*.11}
+\contentsline {chapter}{\numberline {A}Appendix}{40}{appendix.A}
