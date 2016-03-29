@@ -123,7 +123,11 @@
 			"file": "Main.tex",
 			"settings":
 			{
+<<<<<<< HEAD
+				"buffer_size": 6645,
+=======
 				"buffer_size": 1098,
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 				"line_ending": "Unix"
 			}
 		},
@@ -139,7 +143,11 @@
 			"file": "sections/Teknologianalyse/altransWTF.tex",
 			"settings":
 			{
+<<<<<<< HEAD
+				"buffer_size": 7536,
+=======
 				"buffer_size": 11735,
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 				"line_ending": "Windows"
 			}
 		},
@@ -147,8 +155,13 @@
 			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 			"settings":
 			{
+<<<<<<< HEAD
+				"buffer_size": 5836,
+				"line_ending": "Unix"
+=======
 				"buffer_size": 6329,
 				"line_ending": "Windows"
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 			}
 		},
 		{
@@ -166,8 +179,13 @@
 			"file": "sections/Konteksten/konteksten.tex",
 			"settings":
 			{
+<<<<<<< HEAD
+				"buffer_size": 696,
+				"line_ending": "Unix"
+=======
 				"buffer_size": 3541,
 				"line_ending": "Windows"
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 			}
 		},
 		{
@@ -312,6 +330,9 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX"
+=======
 		"/C/Programs/Git/Git Repository/Repository2/LATEX",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Indledning",
@@ -322,6 +343,7 @@
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Simulering",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teknologianalyse",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Test"
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 	],
 	"file_history":
 	[
@@ -388,7 +410,11 @@
 	],
 	"find":
 	{
+<<<<<<< HEAD
+		"height": 28.0
+=======
 		"height": 30.0
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 	},
 	"find_in_files":
 	{
@@ -504,7 +530,11 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
+						"buffer_size": 6645,
+=======
 						"buffer_size": 1098,
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 						"regions":
 						{
 							"bookmarks":
@@ -520,8 +550,13 @@
 						"selection":
 						[
 							[
+<<<<<<< HEAD
+								0,
+								0
+=======
 								500,
 								500
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 							]
 						],
 						"settings":
@@ -569,15 +604,24 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
+						"buffer_size": 7536,
+=======
 						"buffer_size": 11735,
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
+								0,
+								0
+=======
 								5502,
 								5469
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 							]
 						],
 						"settings":
@@ -597,7 +641,11 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
+						"buffer_size": 5836,
+=======
 						"buffer_size": 6329,
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 						"regions":
 						{
 						},
@@ -632,8 +680,13 @@
 						"selection":
 						[
 							[
+<<<<<<< HEAD
+								1394,
+								1394
+=======
 								4227,
 								4227
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 							]
 						],
 						"settings":
@@ -653,15 +706,24 @@
 					"semi_transient": true,
 					"settings":
 					{
+<<<<<<< HEAD
+						"buffer_size": 696,
+=======
 						"buffer_size": 3541,
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
+								0,
+								0
+=======
 								1159,
 								1159
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 							]
 						],
 						"settings":
@@ -910,7 +972,11 @@
 	],
 	"incremental_find":
 	{
+<<<<<<< HEAD
+		"height": 28.0
+=======
 		"height": 30.0
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 	},
 	"input":
 	{
@@ -951,7 +1017,11 @@
 	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
+<<<<<<< HEAD
+		"height": 52.0
+=======
 		"height": 56.0
+>>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 	},
 	"save_all_on_build": true,
 	"select_file":
