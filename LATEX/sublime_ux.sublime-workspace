@@ -147,15 +147,34 @@
 			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 			"settings":
 			{
-				"buffer_size": 6119,
+				"buffer_size": 6329,
 				"line_ending": "Windows"
 			}
 		},
 		{
+			"contents": "\\chapter{Metode}\nDette afsnit vil beskrive de anvendte metoder til udarbejdelsen af denne rapport. Hvorfor disse metoder er blevet anvendt og hvilket formål de har haft vil blive beskrevet, samt hvilke tanker der hat lagt til grund for dette igennem problemanalysen og problemløsningsafsnittet. Læseren kan med fordel se tilbage til dette afsnit, for at forstå hvordan der er blevet arbejdet igennem forløbet, skulle der opstå tvivl over hvordan vi er nået frem til vores deduktioner og resultater.\n\n\\section{Problemområde}\nProblemområdet er det som danner grundlaget for projektet. Det har til formål at give et overblik over hvilke aspekter det valgte problem belyser, ud fra den initierende problem. Det klarelægger hvem problemet påvirker og hvem det vil gavne såfremt en løsning på problemet kan opnås til at analysere både problemets relevans og samt om det har nogle interessenter.  Ud fra det initierende problem er der blevet stillet følgende hv-spørgsmål til at afgrænse problemets omfang;\n\n\\begin{figure}[H]\n\\begin{adjustbox}{width=1.2\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=1.2\\textwidth]{Pictures/Metode/metodebillede.jpg}\n\\end{adjustbox}\n\\label{fig:problemtreae}\n\\caption{Problemtræ over trafiksimulering}\n\\end{figure}\n\n\\begin{itemize}\n\\item Hvorfor: Hvad er årsagerne til problemet?\n\\item Hvad: Hvem bliver ramt af problemet?\n\\item Interessenter: Hvem er interessenterne - hvem har en interesse i en løsning på problemet?\n\\item Hvor: Hvor findes problemet?\n\\item Hvem: Hvem er hovedpersonerne i problemet?\n\\item Hvordan: Hvordan kan problemet løses?\n\\end{itemize}\nmen også for at finde ud af at hvorvidt det opstillet problem har nogen relevans for at blive afviklet. Problemområdet er således blevet benyttet til at isolere alle de relevante aspekter af problemet, hvorefter det er blevet sat sammen i en større sammenhæng for at give et klart og tydeligt billede af hvor det præcise problem befinder sig til at udarbejde en problemformulering.\n\n\\section{Fremgangsmåde}\nUnder udarbejdelse af projektet er der blevet benyttet flere forskellige fremgangsmåder, alt efter hvad der er blevet arbejdet med under problemanalysen. Fremgangsmåden under udarbejdelsen af rapporten er foregået ved at opstille relevante hypoteser, som enten kunne be- eller afkræftes ved at researche sig frem til eller ved hjælp af en prøve-fejl-metode.\n\n\\subsection{Emperiske-induktive-metode}\nUnder problemanalysen er den emperiske-induktive-metode blevet anvendt til at sikre os, at den information der er blevet indsamlet har statistisk belæg for deres udsagn eller er matematisk bevist. Dette gøre det muligt at udlede logiske slutninger til at underbygge rapportens argumentation, og sikre at troværdigheden i det som er blevet formidlet.\n\n\\subsection{Andre metoder}\nHer tilføjes det hvis vi i løbet af rapporten anvender andre metoder. \n\n\\subsection{Prøve-fejl-metoden}\nUnder programmeringsfasen er der hovedsageligt blevet anvendt prøve-fejl-metoden, eftersom det har været den mest effektive metode til at opnå den ønskede effekt i programmet. Dette er blevet gjort ved at lave metoder, med et specifikt mål i tankerne til at udføre bestemte dele. Hvis metoden ikke opførte sig som forventede blevet den omprogrammeret, indtil den bestemte metode udførte den ønskede effekt i programmet.\n%http://kom.aau.dk/~dsp/ComSys08/ComSys07/sites/ComSys6/4%20Videnskabelige%20metoder.pdf \n\n\\section{Kildekritik}\nFor at finde frem til relevant information, er der blevet taget udgangspunkt i kilder med ophav fra statslige instanser eller anerkendte virksomheder og organisationer, for at sikre informationernes gyldighed og troværdighed. Dette vil det også være muligt at kunne kontakte kilderne for uddybende spørgsmål, skulle der opstå tvivl om dele af informationen eller indsamlet data i det anvendte information. Ydermere er der blevet forsøgt at finde den nyeste tilgængelige information, for at sikre at den indsamlede data stadigvæk er brugbart og gyldigt. Fordi flere af de anvendte kilder kunne have en tendens, er den præsenteret information blevet kritisk overvejet efter hvorvidt det forholder sig objektivt eller om det er blevet fremstillet til at opnå noget for egen vinding eller et specielt mål.\n\n\n Den anvendte information er så vidt muligt også forsøgt at krydsrefereret med andre tilsvarende kilder, for at øge troværdigheden ved at undersøge om andre er nået frem til tilsvarende konklusioner og data.\n",
 			"file": "sections/Metode/Metode.tex",
+			"file_size": 4565,
+			"file_write_time": 131037107251553937,
 			"settings":
 			{
-				"buffer_size": 4449,
+				"buffer_size": 4436,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Konteksten/konteksten.tex",
+			"settings":
+			{
+				"buffer_size": 3541,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Test/Test.tex",
+			"settings":
+			{
+				"buffer_size": 2600,
 				"line_ending": "Windows"
 			}
 		},
@@ -179,7 +198,7 @@
 			"file": "sections/sections.tex",
 			"settings":
 			{
-				"buffer_size": 739,
+				"buffer_size": 833,
 				"line_ending": "Windows"
 			}
 		},
@@ -211,7 +230,7 @@
 			"file": "sections/Indledning/Indledning.tex",
 			"settings":
 			{
-				"buffer_size": 6979,
+				"buffer_size": 3743,
 				"line_ending": "Windows"
 			}
 		}
@@ -297,10 +316,12 @@
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Indledning",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Konklusion",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Konteksten",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Metode",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Problemformulering",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Simulering",
-		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teknologianalyse"
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teknologianalyse",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Test"
 	],
 	"file_history":
 	[
@@ -445,7 +466,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -474,7 +495,7 @@
 						"translation.y": 8790.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -499,8 +520,8 @@
 						"selection":
 						[
 							[
-								235,
-								235
+								500,
+								500
 							]
 						],
 						"settings":
@@ -508,7 +529,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 340.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -527,8 +548,8 @@
 						"selection":
 						[
 							[
-								693,
-								693
+								1795,
+								1605
 							]
 						],
 						"settings":
@@ -536,10 +557,10 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 276.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -567,7 +588,7 @@
 						"translation.y": 2702.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -576,7 +597,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6119,
+						"buffer_size": 6329,
 						"regions":
 						{
 						},
@@ -595,7 +616,7 @@
 						"translation.y": 1773.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -604,15 +625,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4449,
+						"buffer_size": 4436,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2832,
-								2832
+								4227,
+								4227
 							]
 						],
 						"settings":
@@ -623,11 +644,67 @@
 						"translation.y": 811.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
+					"file": "sections/Konteksten/konteksten.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3541,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1159,
+								1159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sections/Test/Test.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2598,
+								2598
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "setup/macros.tex",
 					"semi_transient": false,
 					"settings":
@@ -653,11 +730,11 @@
 						"translation.y": 370.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "setup/preamble.tex",
 					"semi_transient": false,
 					"settings":
@@ -683,24 +760,24 @@
 						"translation.y": 806.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 739,
+						"buffer_size": 833,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								575,
+								575
 							]
 						],
 						"settings":
@@ -711,11 +788,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
 					"semi_transient": false,
 					"settings":
@@ -739,11 +816,11 @@
 						"translation.y": 243.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "references.bib",
 					"semi_transient": false,
 					"settings":
@@ -769,11 +846,11 @@
 						"translation.y": 5638.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 13,
 					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 					"semi_transient": false,
 					"settings":
@@ -797,24 +874,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 14,
 					"file": "sections/Indledning/Indledning.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6979,
+						"buffer_size": 3743,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5042,
-								5042
+								3743,
+								3743
 							]
 						],
 						"settings":
@@ -825,7 +902,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
