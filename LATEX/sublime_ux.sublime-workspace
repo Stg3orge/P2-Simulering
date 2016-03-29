@@ -112,19 +112,103 @@
 	"buffers":
 	[
 		{
-			"file": "Main.tex",
+			"file": "sections/Teori/Teori.tex",
 			"settings":
 			{
-				"buffer_size": 1098,
+				"buffer_size": 15676,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+			"file": "Main.tex",
 			"settings":
 			{
+<<<<<<< HEAD
+				"buffer_size": 1098,
+=======
 				"buffer_size": 6119,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Simulering/Simulering.tex",
+			"settings":
+			{
+				"buffer_size": 5072,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Teknologianalyse/altransWTF.tex",
+			"settings":
+			{
+<<<<<<< HEAD
+				"buffer_size": 11735,
+=======
+				"buffer_size": 7465,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+				"line_ending": "Windows"
+			}
+		},
+		{
+<<<<<<< HEAD
+			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+=======
+			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+			"settings":
+			{
+				"buffer_size": 5824,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Problemformulering/Problemformulering.tex",
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+			"settings":
+			{
+				"buffer_size": 6645,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\\chapter{Metode}\nDette afsnit vil beskrive de anvendte metoder til udarbejdelsen af denne rapport. Hvorfor disse metoder er blevet anvendt og hvilket formål de har haft vil blive beskrevet, samt hvilke tanker der hat lagt til grund for dette igennem problemanalysen og problemløsningsafsnittet. Læseren kan med fordel se tilbage til dette afsnit, for at forstå hvordan der er blevet arbejdet igennem forløbet, skulle der opstå tvivl over hvordan vi er nået frem til vores deduktioner og resultater.\n\n\\section{Problemområde}\nProblemområdet er det som danner grundlaget for projektet. Det har til formål at give et overblik over hvilke aspekter det valgte problem belyser, ud fra den initierende problem. Det klarelægger hvem problemet påvirker og hvem det vil gavne såfremt en løsning på problemet kan opnås til at analysere både problemets relevans og samt om det har nogle interessenter.  Ud fra det initierende problem er der blevet stillet følgende hv-spørgsmål til at afgrænse problemets omfang;\n\n\\begin{figure}[H]\n\\begin{adjustbox}{width=1.2\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=1.2\\textwidth]{Pictures/Metode/metodebillede.jpg}\n\\end{adjustbox}\n\\label{fig:problemtreae}\n\\caption{Problemtræ over trafiksimulering}\n\\end{figure}\n\n\\begin{itemize}\n\\item Hvorfor: Hvad er årsagerne til problemet?\n\\item Hvad: Hvem bliver ramt af problemet?\n\\item Interessenter: Hvem er interessenterne - hvem har en interesse i en løsning på problemet?\n\\item Hvor: Hvor findes problemet?\n\\item Hvem: Hvem er hovedpersonerne i problemet?\n\\item Hvordan: Hvordan kan problemet løses?\n\\end{itemize}\nmen også for at finde ud af at hvorvidt det opstillet problem har nogen relevans for at blive afviklet. Problemområdet er således blevet benyttet til at isolere alle de relevante aspekter af problemet, hvorefter det er blevet sat sammen i en større sammenhæng for at give et klart og tydeligt billede af hvor det præcise problem befinder sig til at udarbejde en problemformulering.\n\n\\section{Fremgangsmåde}\nUnder udarbejdelse af projektet er der blevet benyttet flere forskellige fremgangsmåder, alt efter hvad der er blevet arbejdet med under problemanalysen. Fremgangsmåden under udarbejdelsen af rapporten er foregået ved at opstille relevante hypoteser, som enten kunne be- eller afkræftes ved at researche sig frem til eller ved hjælp af en prøve-fejl-metode.\n\n\\subsection{Emperiske-induktive-metode}\nUnder problemanalysen er den emperiske-induktive-metode blevet anvendt til at sikre os, at den information der er blevet indsamlet har statistisk belæg for deres udsagn eller er matematisk bevist. Dette gøre det muligt at udlede logiske slutninger til at underbygge rapportens argumentation, og sikre at troværdigheden i det som er blevet formidlet.\n\n\\subsection{Andre metoder}\nHer tilføjes det hvis vi i løbet af rapporten anvender andre metoder. \n\n\\subsection{Prøve-fejl-metoden}\nUnder programmeringsfasen er der hovedsageligt blevet anvendt prøve-fejl-metoden, eftersom det har været den mest effektive metode til at opnå den ønskede effekt i programmet. Dette er blevet gjort ved at lave metoder, med et specifikt mål i tankerne til at udføre bestemte dele. Hvis metoden ikke opførte sig som forventede blevet den omprogrammeret, indtil den bestemte metode udførte den ønskede effekt i programmet.\n%http://kom.aau.dk/~dsp/ComSys08/ComSys07/sites/ComSys6/4%20Videnskabelige%20metoder.pdf \n\n\\section{Kildekritik}\nFor at finde frem til relevant information, er der blevet taget udgangspunkt i kilder med ophav fra statslige instanser eller anerkendte virksomheder og organisationer, for at sikre informationernes gyldighed og troværdighed. Dette vil det også være muligt at kunne kontakte kilderne for uddybende spørgsmål, skulle der opstå tvivl om dele af informationen eller indsamlet data i det anvendte information. Ydermere er der blevet forsøgt at finde den nyeste tilgængelige information, for at sikre at den indsamlede data stadigvæk er brugbart og gyldigt. Fordi flere af de anvendte kilder kunne have en tendens, er den præsenteret information blevet kritisk overvejet efter hvorvidt det forholder sig objektivt eller om det er blevet fremstillet til at opnå noget for egen vinding eller et specielt mål.\n\n\\end{itemize}\n Den anvendte information er så vidt muligt også forsøgt at krydsrefereret med andre tilsvarende kilder, for at øge troværdigheden ved at undersøge om andre er nået frem til tilsvarende konklusioner og data.\n",
+			"file": "sections/Metode/Metode.tex",
+			"file_size": 5374,
+			"file_write_time": 131037085386723183,
+			"settings":
+			{
+<<<<<<< HEAD
+				"buffer_size": 4449,
+				"line_ending": "Windows"
+=======
+				"buffer_size": 739,
+				"line_ending": "Unix"
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+			}
+		},
+		{
+			"file": "setup/macros.tex",
+			"settings":
+			{
+				"buffer_size": 3800,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "setup/preamble.tex",
+			"settings":
+			{
+				"buffer_size": 6067,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/sections.tex",
+			"settings":
+			{
+				"buffer_size": 696,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -139,7 +223,7 @@
 			"file": "references.bib",
 			"settings":
 			{
-				"buffer_size": 7465,
+				"buffer_size": 7536,
 				"line_ending": "Windows"
 			}
 		},
@@ -147,47 +231,7 @@
 			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 			"settings":
 			{
-				"buffer_size": 5824,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sections/Problemformulering/Problemformulering.tex",
-			"settings":
-			{
-				"buffer_size": 1564,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/sections.tex",
-			"settings":
-			{
-				"buffer_size": 739,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sections/Metode/Metode.tex",
-			"settings":
-			{
-				"buffer_size": 5230,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sections/Teori/Teori.tex",
-			"settings":
-			{
-				"buffer_size": 15676,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sections/Teknologianalyse/altransWTF.tex",
-			"settings":
-			{
-				"buffer_size": 11735,
+				"buffer_size": 5836,
 				"line_ending": "Windows"
 			}
 		},
@@ -196,38 +240,6 @@
 			"settings":
 			{
 				"buffer_size": 6979,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "aau/frontpage.tex",
-			"settings":
-			{
-				"buffer_size": 950,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "aau/titlepages.tex",
-			"settings":
-			{
-				"buffer_size": 1347,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "aau/signatures.tex",
-			"settings":
-			{
-				"buffer_size": 1115,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "setup/variables.tex",
-			"settings":
-			{
-				"buffer_size": 601,
 				"line_ending": "Windows"
 			}
 		}
@@ -239,12 +251,40 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 104.0,
-		"last_filter": "Package Control: install",
+		"height": 490.0,
+		"last_filter": "vmen",
 		"selected_items":
 		[
 			[
+				"vmen",
+				"View: Toggle Menu"
+			],
+			[
 				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Instal",
 				"Package Control: Install Package"
 			],
 			[
@@ -260,13 +300,14 @@
 				"Set Syntax: C"
 			]
 		],
-		"width": 400.0
+		"width": 549.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
+			"latexmk -pdf -pv file.tex"
 		]
 	},
 	"distraction_free":
@@ -280,26 +321,23 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/Githubp2/P2-Simulering/LATEX",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Indledning",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Konklusion",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Kravspecifikationer",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Loesningsforslag",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Metode",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Perspektivering",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/ProblemetsRelevans",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Problemformulering",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse"
+		"/C/Programs/Git/Git Repository/Repository2/LATEX",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Indledning",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Konklusion",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Metode",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Problemformulering",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Simulering",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teknologianalyse"
 	],
 	"file_history":
 	[
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/preamble.tex",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teknologianalyse/altrans.tex",
+		"/C/Users/Rasmus/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/tools/.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/teoriafsnit/teoriafsnit.tex",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Programs/LaTeX Documents/LaTeX Document 2/assignment2.tex",
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
 		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
@@ -319,7 +357,6 @@
 		"/C/Programs/C/Lektionone/sammensetarrays.c",
 		"/C/Programs/C/Lektionone/afleveringdonger.c",
 		"/C/Programs/C/Lektionone/help.c",
-		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Programs/Git/Rep B2-24/sections/intro/intro.tex",
 		"/C/Programs/Git/Rep B2-24/references.bib",
@@ -358,7 +395,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -372,6 +409,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"søge",
+			"Simulerin",
+			"MISC",
+			"60",
+			"cite",
+			"citep",
+			"4",
+			"gitre",
+			"firkant",
+			"firkanter",
+			"MISC",
 			"fight",
 			"teams",
 			"match_count",
@@ -430,240 +478,6 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1098,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								235,
-								235
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6119,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4009,
-								4009
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 918.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 6502,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "references.bib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7465,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5773,
-								5773
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5824,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3446,
-								3446
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "sections/Problemformulering/Problemformulering.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1564,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								642,
-								642
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "sections/sections.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 739,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "sections/Metode/Metode.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5230,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1175,
-								1175
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
 					"file": "sections/Teori/Teori.tex",
 					"semi_transient": false,
 					"settings":
@@ -675,38 +489,60 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								983,
+								983
 							]
 						],
 						"settings":
 						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
 							"translate_tabs_to_spaces": false
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						},
 						"translation.x": 0.0,
-						"translation.y": 2856.0,
+						"translation.y": 8790.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "sections/Teknologianalyse/altransWTF.tex",
+					"buffer": 1,
+					"file": "Main.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11735,
+<<<<<<< HEAD
+						"buffer_size": 1098,
+=======
+						"buffer_size": 6119,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
 						},
 						"selection":
 						[
 							[
-								11312,
-								11312
+<<<<<<< HEAD
+								235,
+								235
+=======
+								4009,
+								4009
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 							]
 						],
 						"settings":
@@ -715,14 +551,320 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2700.0,
+<<<<<<< HEAD
+						"translation.y": 0.0,
+=======
+						"translation.y": 918.0,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Simulering/Simulering.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5072,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								693,
+								693
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+<<<<<<< HEAD
+					"stack_index": 4,
+=======
+					"stack_index": 6,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sections/Teknologianalyse/altransWTF.tex",
+					"semi_transient": false,
+					"settings":
+					{
+<<<<<<< HEAD
+						"buffer_size": 11735,
+=======
+						"buffer_size": 7465,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								5502,
+								5469
+=======
+								5773,
+								5773
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2702.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+					"semi_transient": false,
+					"settings":
+					{
+<<<<<<< HEAD
+						"buffer_size": 6645,
+=======
+						"buffer_size": 5824,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								0,
+								0
+=======
+								3446,
+								3446
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+<<<<<<< HEAD
+						"translation.y": 1773.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+=======
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sections/Metode/Metode.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4449,
+								4449
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 811.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "setup/macros.tex",
+					"semi_transient": false,
+					"settings":
+					{
+<<<<<<< HEAD
+						"buffer_size": 3800,
+=======
+						"buffer_size": 739,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								3800,
+								3800
+=======
+								0,
+								0
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+						},
+						"translation.x": 0.0,
+						"translation.y": 370.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "setup/preamble.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2418,
+								2418
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+						},
+						"translation.x": 0.0,
+						"translation.y": 806.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sections/sections.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 696,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "sections/ProblemetsRelevans/ProblemetsRelevans.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2721,
+								2721
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 243.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 10,
+<<<<<<< HEAD
+					"file": "references.bib",
+=======
 					"file": "sections/Indledning/Indledning.tex",
 					"semi_transient": false,
 					"settings":
@@ -784,70 +926,47 @@
 				{
 					"buffer": 12,
 					"file": "aau/titlepages.tex",
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1347,
+						"buffer_size": 7536,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								484,
-								484
+								0,
+								0
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
+							"tab_size": 4,
+=======
 							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
 							"tab_size": 2,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5638.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
-					"file": "aau/signatures.tex",
+					"buffer": 11,
+					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								113,
-								113
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "setup/variables.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 601,
+						"buffer_size": 5836,
 						"regions":
 						{
 						},
@@ -867,7 +986,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "sections/Indledning/Indledning.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5042,
+								5042
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -875,11 +1023,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 30.0
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 40.0
 	},
 	"layout":
 	{
@@ -906,7 +1054,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 108.0
+		"height": 214.0
 	},
 	"output.find_results":
 	{
@@ -916,7 +1064,7 @@
 	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -958,7 +1106,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 239.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
