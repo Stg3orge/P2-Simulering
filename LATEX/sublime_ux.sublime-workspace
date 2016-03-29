@@ -123,7 +123,7 @@
 			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 			"settings":
 			{
-				"buffer_size": 6112,
+				"buffer_size": 6645,
 				"line_ending": "Unix"
 			}
 		},
@@ -139,7 +139,7 @@
 			"file": "references.bib",
 			"settings":
 			{
-				"buffer_size": 7225,
+				"buffer_size": 7536,
 				"line_ending": "Windows"
 			}
 		},
@@ -147,7 +147,7 @@
 			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 			"settings":
 			{
-				"buffer_size": 5373,
+				"buffer_size": 5836,
 				"line_ending": "Unix"
 			}
 		},
@@ -163,7 +163,7 @@
 			"file": "sections/sections.tex",
 			"settings":
 			{
-				"buffer_size": 653,
+				"buffer_size": 696,
 				"line_ending": "Unix"
 			}
 		},
@@ -280,18 +280,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/Githubp2/P2-Simulering/LATEX",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Indledning",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Konklusion",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Kravspecifikationer",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Loesningsforslag",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Metode",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Perspektivering",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/ProblemetsRelevans",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Problemformulering",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse"
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX"
 	],
 	"file_history":
 	[
@@ -358,7 +347,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -462,15 +451,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6112,
+						"buffer_size": 6645,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								966,
-								966
+								0,
+								0
 							]
 						],
 						"settings":
@@ -518,15 +507,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7225,
+						"buffer_size": 7536,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7178,
-								7178
+								0,
+								0
 							]
 						],
 						"settings":
@@ -548,15 +537,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5373,
+						"buffer_size": 5836,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5372,
-								5372
+								0,
+								0
 							]
 						],
 						"settings":
@@ -583,8 +572,8 @@
 						"selection":
 						[
 							[
-								642,
-								642
+								1394,
+								1394
 							]
 						],
 						"settings":
@@ -604,15 +593,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 653,
+						"buffer_size": 696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								463,
-								463
+								0,
+								0
 							]
 						],
 						"settings":
@@ -860,7 +849,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -901,7 +890,7 @@
 	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
