@@ -1,0 +1,44 @@
+\begin{tikzpicture}
+    \begin{axis}
+    [
+        xlabel=km/t, 
+        ylabel=m/s\textsuperscript{2}, 
+        ymin=-4, 
+        ymax=4,
+        width=320,
+        height=150
+    ]
+    \addplot[blue, thick] coordinates 
+    {
+    	(0, -2.8)
+    	(10, -2.8)
+	    (20, -2.8)
+	    (30, -2.8)
+    	(40, -2.8)
+    	(50, -2.8)
+    	(60, -2.8)
+	    (70, -2.8)
+	    (80, -2.8)
+    	(90, -2.8)
+    	(100, -2.8)
+    	(110, -2.8)
+    };
+    \addlegendentry{VisSim}
+    \addplot[red, thick] coordinates 
+    {
+    	(0, -1.22)
+    	(10, -1.22)
+	    (20, -1.6)
+	    (30, -1.94)
+    	(40, -1.93)
+    	(50, -1.98)
+    	(60, -1.9)
+	    (70, -1.5)
+	    (80, -1)
+    	(90, -0.8)
+    	(100, -0.8)
+    	(110, -0.56)
+    };
+    \addlegendentry{GPS}
+    \end{axis}
+\end{tikzpicture}
