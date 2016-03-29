@@ -123,7 +123,11 @@
 			"file": "Main.tex",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 1098,
+=======
+				"buffer_size": 6119,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 				"line_ending": "Unix"
 			}
 		},
@@ -139,12 +143,28 @@
 			"file": "sections/Teknologianalyse/altransWTF.tex",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 11735,
+=======
+				"buffer_size": 7465,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+=======
+			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+			"settings":
+			{
+				"buffer_size": 5824,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Problemformulering/Problemformulering.tex",
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 			"settings":
 			{
 				"buffer_size": 6645,
@@ -158,8 +178,13 @@
 			"file_write_time": 131037085386723183,
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 4449,
 				"line_ending": "Windows"
+=======
+				"buffer_size": 739,
+				"line_ending": "Unix"
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 			}
 		},
 		{
@@ -448,7 +473,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -470,8 +495,13 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
 							"translate_tabs_to_spaces": false
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						},
 						"translation.x": 0.0,
 						"translation.y": 8790.0,
@@ -486,7 +516,11 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 1098,
+=======
+						"buffer_size": 6119,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						"regions":
 						{
 							"bookmarks":
@@ -502,16 +536,26 @@
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								235,
 								235
+=======
+								4009,
+								4009
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 							]
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 0.0,
+=======
+						"translation.y": 918.0,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -536,13 +580,18 @@
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 4,
+=======
+					"stack_index": 6,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 					"type": "text"
 				},
 				{
@@ -551,19 +600,29 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 11735,
+=======
+						"buffer_size": 7465,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								5502,
 								5469
+=======
+								5773,
+								5773
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -571,6 +630,18 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 					"type": "text"
 				},
 				{
@@ -579,26 +650,43 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 6645,
+=======
+						"buffer_size": 5824,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								0,
 								0
+=======
+								3446,
+								3446
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 							]
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 1773.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
+=======
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 					"type": "text"
 				},
 				{
@@ -620,13 +708,14 @@
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 811.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -635,22 +724,36 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 3800,
+=======
+						"buffer_size": 739,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								3800,
 								3800
+=======
+								0,
+								0
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						},
 						"translation.x": 0.0,
 						"translation.y": 370.0,
@@ -678,9 +781,14 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						},
 						"translation.x": 0.0,
 						"translation.y": 806.0,
@@ -708,7 +816,13 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -736,6 +850,7 @@
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -747,7 +862,71 @@
 				},
 				{
 					"buffer": 10,
+<<<<<<< HEAD
 					"file": "references.bib",
+=======
+					"file": "sections/Indledning/Indledning.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3248,
+								3248
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 972.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "aau/frontpage.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								623,
+								623
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "aau/titlepages.tex",
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 					"semi_transient": false,
 					"settings":
 					{
@@ -764,8 +943,14 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
 							"tab_size": 4,
+=======
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+>>>>>>> b293c0b3949d30836c76043982bc22b75e69e996
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -794,6 +979,7 @@
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -822,6 +1008,7 @@
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
