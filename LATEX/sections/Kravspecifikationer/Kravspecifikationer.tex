@@ -1,5 +1,40 @@
 \chapter{Kravspecifikationer}\label{Kravspecifikationer}
 
+\begin{enumerate}
+\item Generelt
+	\begin{description}
+	\item [Gem og Åben] For at brugeren ikke skal starte forfra ved genstart af programmet, skal der være mulighed for at gemme vejnettet i en fil, og åbne det igen på et senere tidspunkt.
+	\end{description}
+\item Brugerflade
+	\begin{description}
+	\item [Gitter] Ved indsætning af veje og elementer som lyskryds, vil man indsætte disse i et gitter system, der kan panoreres, forstørres og formindskes. Formålet med gitteret er at kunne opstille vejnettet på en systematisk måde.
+	\item [Knudepunkter] Bruges til at forbinde veje.
+	\item [Veje] Tegnes mellem knudepunkterne, og har en maksimal hastighed.
+	\item [Kryds] Man skal kunne indsætte komplekse elementer som eksempelvis kryds med signaler.
+	\item [Vigepligt] Brugeren skal være i stand til at specificere hvilke veje, der har vigepligt i et kryds.
+	\item [Huse] Huse indsættes og bruges som bilrejsernes startpunkt, og slutpunkt ved tilbage rejsen.
+	\item [Destinationer] Brugerne skal kunne opstille forskellige typer destinationer og indsætte disse i gitteret. Ved simuleringen af vejnettet, vil brugeren så være i stand til at bestemme hvor stor en procentdel af bilisterne der vælger en destination.
+	\item [Parkeringspladser] For at billisterne ikke bare parkerer på destinationen, vil der skulle indsættes parkeringspladser. Disse parkeringspladser vil være slutpunktet for rejsen fra billistens hus, hvor billisten søger efter den parkeringsplads der er nærmest destinationen.
+	\end{description}
+\item Simulering
+    \begin{description}
+    \item [Sammenligning] For at simulering kan bruges til at vurdere et system, skal man være i stand til at sammenligne resultaterne med en anden simulation. Dette vil foregå ved at brugeren kan opstille særlige veje, der kun bliver medtaget i en af simulationerne, og brugeren vil derefter kunne sammenligne outputtet.
+    \end{description}
+    \begin{enumerate}
+    \item Input
+        \begin{enumerate}
+        \item Antallet af køretøjer
+        \item Gennemsnitshastighed for køretøjer
+        \item Destinationsvalg
+        \end{enumerate}
+    \item Output
+        \begin{enumerate}
+        \item Procent af rejsetid brugt i kø
+        \item Procent af rejsetid brugt i en hastighed lavere end den ønskede hastighed.
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+
 \subsection{Succeskriterier}\label{Succeskriterier}
 
 \subsection{•}
