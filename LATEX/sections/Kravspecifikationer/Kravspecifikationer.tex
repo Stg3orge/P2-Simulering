@@ -4,6 +4,7 @@
 \item Generelt
 	\begin{description}
 	\item [Gem og Åben] For at brugeren ikke skal starte forfra ved genstart af programmet, skal der være mulighed for at gemme vejnettet i en fil, og åbne det igen på et senere tidspunkt.
+	\item [Importering fra kort] Indlæse fra OpenStreetMap og opstille dataen for et område i programmet.
 	\end{description}
 \item Brugerflade
 	\begin{description}
@@ -15,10 +16,14 @@
 	\item [Huse] Huse indsættes og bruges som bilrejsernes startpunkt, og slutpunkt ved tilbage rejsen.
 	\item [Destinationer] Brugerne skal kunne opstille forskellige typer destinationer og indsætte disse i gitteret. Ved simuleringen af vejnettet, vil brugeren så være i stand til at bestemme hvor stor en procentdel af bilisterne der vælger en destination.
 	\item [Parkeringspladser] For at billisterne ikke bare parkerer på destinationen, vil der skulle indsættes parkeringspladser. Disse parkeringspladser vil være slutpunktet for rejsen fra billistens hus, hvor billisten søger efter den parkeringsplads der er nærmest destinationen.
+	\item [Togbaner] Simuleringen skal tage højde for togenes påvirkning på trafikken.
+	\item [Fodgængerfelt] Trafikkens hastighed bliver påvirket af fodgængere.
 	\end{description}
 \item Simulering
     \begin{description}
     \item [Sammenligning] For at simulering kan bruges til at vurdere et system, skal man være i stand til at sammenligne resultaterne med en anden simulation. Dette vil foregå ved at brugeren kan opstille særlige veje, der kun bliver medtaget i en af simulationerne, og brugeren vil derefter kunne sammenligne outputtet.
+    \item [Køretøjer] Det skal være muligt at opstille forskellige typer køretøjer som for eksempel biler og busser.
+    \item [Pathfinding] Køretøjerne skal kunne beregne den kortest mulige rute til destination. Ved denne beregning skal der overvejes fartgrænser på vejene, derudover skal der tages højde for elementer som lyskryds.
     \end{description}
     \begin{enumerate}
     \item Input
