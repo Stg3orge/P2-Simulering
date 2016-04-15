@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace A319TS
@@ -12,7 +9,7 @@ namespace A319TS
     {
         public List<Road> Roads;
         public Point Position;
-        private Node(){} // Serialize
+        private Node() { } // Serialize
         public Node(Point position)
         {
             Position = position;
