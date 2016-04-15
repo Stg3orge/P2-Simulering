@@ -34,7 +34,7 @@
 \contentsline {section}{\numberline {6.3}Uddannelsessektoren}{21}{section.1.6.3}
 \contentsline {section}{\numberline {6.4}Specificering af m\IeC {\r a}lgruppe}{22}{section.1.6.4}
 \contentsline {chapter}{\numberline {7}Problemformulering}{23}{chapter.1.7}
-\contentsline {section}{\numberline {7.1}Lasse}{23}{section.1.7.1}
+\contentsline {section}{\numberline {7.1}Ny}{23}{section.1.7.1}
 \contentsline {part}{II\hspace {1em}Probleml\IeC {\o }sning}{24}{part.2}
 \contentsline {chapter}{\numberline {8}Teori}{25}{chapter.2.8}
 \contentsline {section}{\numberline {8.1}Trafik Model}{25}{section.2.8.1}

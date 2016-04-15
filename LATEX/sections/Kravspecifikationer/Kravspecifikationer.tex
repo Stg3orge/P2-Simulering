@@ -4,6 +4,7 @@
 \item Generelt
 	\begin{description}
 	\item [Gem og Åben] For at brugeren ikke skal starte forfra ved genstart af programmet, skal der være mulighed for at gemme vejnettet i en fil, og åbne det igen på et senere tidspunkt.
+	\item [Importering fra kort] Indlæse fra OpenStreetMap og opstille dataen for et område i programmet.
 	\end{description}
 \item Brugerflade
 	\begin{description}
@@ -15,10 +16,14 @@
 	\item [Huse] Huse indsættes og bruges som bilrejsernes startpunkt, og slutpunkt ved tilbage rejsen.
 	\item [Destinationer] Brugerne skal kunne opstille forskellige typer destinationer og indsætte disse i gitteret. Ved simuleringen af vejnettet, vil brugeren så være i stand til at bestemme hvor stor en procentdel af bilisterne der vælger en destination.
 	\item [Parkeringspladser] For at billisterne ikke bare parkerer på destinationen, vil der skulle indsættes parkeringspladser. Disse parkeringspladser vil være slutpunktet for rejsen fra billistens hus, hvor billisten søger efter den parkeringsplads der er nærmest destinationen.
+	\item [Togbaner] Simuleringen skal tage højde for togenes påvirkning på trafikken.
+	\item [Fodgængerfelt] Trafikkens hastighed bliver påvirket af fodgængere.
 	\end{description}
 \item Simulering
     \begin{description}
     \item [Sammenligning] For at simulering kan bruges til at vurdere et system, skal man være i stand til at sammenligne resultaterne med en anden simulation. Dette vil foregå ved at brugeren kan opstille særlige veje, der kun bliver medtaget i en af simulationerne, og brugeren vil derefter kunne sammenligne outputtet.
+    \item [Køretøjer] Det skal være muligt at opstille forskellige typer køretøjer som for eksempel biler og busser.
+    \item [Pathfinding] Køretøjerne skal kunne beregne den kortest mulige rute til destination. Ved denne beregning skal der overvejes fartgrænser på vejene, derudover skal der tages højde for elementer som lyskryds.
     \end{description}
     \begin{enumerate}
     \item Input
@@ -36,5 +41,25 @@
 \end{enumerate}
 
 \subsection{Succeskriterier}\label{Succeskriterier}
+Udover de krav vi har sat for den udarbejde løsning, er der yderligere kriterier vi ønsker opfyldt for at kunne kalde løsningen en success. Disse successkriterier opstilles ikke blot ud fra programmets funktionalitet og egenskaber, men også hvad vi mener løsningen skal være i stand til, for at kunne besvare problemformulerigen. Som f.eks. har vi før nævnt at nogle simulerings programmer ikke er særliggodt vedligeholdt og / eller er meget begrænset inde for hvad de kan. Et af vores successkritier kan derfor laves på baggrund af dette som: "Programmet skal kunne tilpasse sig forskellige scenarier opstillet af brugeren."
 
+\vspace{5mm}
+Herunder har vi opstillet en liste af successkritierer:
+
+\begin{enumerate}
+\item Programmet skal kunne tilpasse sig forskellige scenarier opstillet af brugeren.
+\item Det skal være muligt for brugeren at kunne gemme deres arbejde, lukke programmet og fortsætte deres arbejde næste gang de åbner programmet.
+\begin{enumerate}
+\item Yderligere skal to brugere skulle kunne åbne den samme fil og få samme resultat.
+\end{enumerate}
+\item Programmet skal være let forståligt for brugeren, både ny eller erfaren.
+\item Programmet skal gøre brugeren opmærksom på hvis der er fejl og i såfald gøre dem opmærksom hvilken fejl der er tale om.
+\item Programmet skal følge de danske trafik regler og retningslinjer, ved simulering af et opstillet vejnet.
+\item Programmet skal ikke følge en fast formel (Altrans) men derimod gøre brugeren i stand til at skabe sine egne kontekster (VisSim - flexibilitet) dog stadig inde for simulering af trafik.
+\item Programmet skal være i stand til at kunne vise ændringer i simuleringen (real-time) i takt med brugeren ændre på variable (Givet at simuleringen køre).
+
+
+\end{enumerate}
+
+\end{list}
 \subsection{•}
