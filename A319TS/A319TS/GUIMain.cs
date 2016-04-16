@@ -18,7 +18,7 @@ namespace A319TS
         }
 
         // MainMenuStrip Events
-        private void MenuFileNewClick(object sender, EventArgs e)
+        private void MenuFileNewClick(object sender, EventArgs args)
         {
             Project project = FileHandler.NewProject();
             if (project != null)
@@ -28,7 +28,7 @@ namespace A319TS
                 UpdateTitle();
             }
         }
-        private void MenuFileOpenClick(object sender, EventArgs e)
+        private void MenuFileOpenClick(object sender, EventArgs args)
         {
             Project project = FileHandler.OpenProject();
             if (project != null)
@@ -37,16 +37,16 @@ namespace A319TS
                 GUIMainViewport.Reset();
             }
         }
-        private void MenuFileSaveClick(object sender, EventArgs e)
+        private void MenuFileSaveClick(object sender, EventArgs args)
         {
             FileHandler.SaveProject(_currentProject);
         }
         private void MenuSettingsProjectClick(object sender, EventArgs e) {}
 
         // MainToolStrip Events
-        private void ToolAddNodeClick(object sender, EventArgs e) { ToggleTool(ToolAddNode); }
-        private void ToolRemoveNodeClick(object sender, EventArgs e) { ToggleTool(ToolRemoveNode); }
-        private void ToolAddRoadClick(object sender, EventArgs e) { ToggleTool(ToolAddRoad); }
+        private void ToolAddNodeClick(object sender, EventArgs args) { ToggleTool(ToolAddNode); }
+        private void ToolRemoveNodeClick(object sender, EventArgs args) { ToggleTool(ToolRemoveNode); }
+        private void ToolAddRoadClick(object sender, EventArgs args) { ToggleTool(ToolAddRoad); }
 
         // MainToolStrip Methods
         private void ToggleTool(ToolStripButton ToggledTool)
@@ -63,9 +63,9 @@ namespace A319TS
         }
 
         // MainViewport Events
-        private void GUIMainViewportMove(object sender, MouseEventArgs e) {}
-        private void GUIMainViewportWheel(object sender, MouseEventArgs e) {}
-        private void GUIMainViewportClick(object sender, MouseEventArgs e) {}
+        private void GUIMainViewportMove(object sender, MouseEventArgs args) {}
+        private void GUIMainViewportWheel(object sender, MouseEventArgs args) {}
+        private void GUIMainViewportClick(object sender, MouseEventArgs args) {}
 
         // Update GUI Methods
         private void UpdateTitle() { Text = "A319Sim - " + _currentProject.Name; }

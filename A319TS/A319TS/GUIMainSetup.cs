@@ -108,7 +108,6 @@ namespace A319TS
             GUIMainViewport = new Viewport(_currentProject);
             GUIMainViewport.Dock = DockStyle.Fill;
             GUIMainViewport.BorderStyle = BorderStyle.Fixed3D;
-            GUIMainViewport.BackColor = Color.LightSlateGray;
             GUIMainViewport.MouseClick += GUIMainViewportClick;
             GUIMainViewport.MouseMove += GUIMainViewportMove;
             GUIMainViewport.MouseWheel += GUIMainViewportWheel;
