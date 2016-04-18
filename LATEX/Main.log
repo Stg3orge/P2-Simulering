@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.29)  29 MAR 2016 10:59
+entering extended mode
+**C:/Users/hype7/Desktop/Git/P2-Simulering/LATEX/Main.tex
+(C:/Users/hype7/Desktop/Git/P2-Simulering/LATEX/Main.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+(setup/preamble.tex ("C:\Program Files\Miktex\tex\latex\base\report.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\Miktex\tex\latex\base\size10.clo"
+=======
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.9)  29 MAR 2016 10:35
 entering extended mode
 **C:/Users/Fisker/Documents/GitHub/P2-Simulering/LATEX/Main.tex
@@ -8,6 +19,7 @@ Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ("C:\Users\Fisker\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Users\Fisker\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+>>>>>>> b5b75f7be2d0c8c63bf0f23bfd57ae1a7fa19ebb
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,6 +35,21 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+<<<<<<< HEAD
+
+! LaTeX Error: File `fncychap.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.4 \usepackage
+               [utf8]{inputenc}
+End of file on the terminal!
+=======
 ("C:\Users\Fisker\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fncychap\fncychap
 .sty"
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
@@ -2076,19 +2103,20 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 )
 \tf@thm=\write5
 \openout5 = `Main.thm'.
+>>>>>>> b5b75f7be2d0c8c63bf0f23bfd57ae1a7fa19ebb
 
  
-AED: lastpage setting LastPage
-[43
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
- (Main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
- ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
+ 223 strings out of 493634
+ 2433 string characters out of 3145364
+ 52604 words of memory out of 3000000
+ 3694 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 25i,0n,19p,219b,36s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
+=======
  33108 strings out of 493634
  744950 string characters out of 3134832
  1007134 words of memory out of 3000000
@@ -2132,3 +2160,4 @@ PDF statistics:
  173 named destinations out of 1000 (max. 500000)
  509 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+>>>>>>> b5b75f7be2d0c8c63bf0f23bfd57ae1a7fa19ebb
