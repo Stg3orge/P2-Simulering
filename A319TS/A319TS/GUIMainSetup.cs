@@ -10,17 +10,17 @@ namespace A319TS
 {
     partial class GUIMain : Form
     {
-        private void InitializeGUIMain()
+        private void InitGUIMain()
         {
-            Text = "A319Sim"; // Window Title
+            Text = "A319TS - " + CurrentProject.Name; // Window Title
             Size = new Size(700, 350);
             MinimumSize = new Size(300, 150);
             Icon = Resources.P2;
 
-            InitializeGUIMainStatusStrip();
-            InitializeGUIMainViewport();
-            InitializeGUIMainToolStrip();
-            InitializeGUIMainMenuStrip();
+            InitGUIMainStatusStrip();
+            InitGUIMainViewport();
+            InitGUIMainToolStrip();
+            InitGUIMainMenuStrip();
 
             Controls.Add(GUIMainStatusStrip);
             Controls.Add(GUIMainViewport);
@@ -29,7 +29,7 @@ namespace A319TS
         }
 
         // MainMenuStrip
-        private void InitializeGUIMainMenuStrip()
+        private void InitGUIMainMenuStrip()
         {
             GUIMainMenuStrip = new MenuStrip();
             GUIMainMenuStrip.BackColor = SystemColors.Control;
@@ -70,7 +70,7 @@ namespace A319TS
         private ToolStripMenuItem MenuSettingsProject;
 
         // MainToolStrip
-        private void InitializeGUIMainToolStrip()
+        private void InitGUIMainToolStrip()
         {
             GUIMainToolStrip = new ToolStrip();
             GUIMainToolStrip.BackColor = SystemColors.ControlLight;
@@ -78,17 +78,20 @@ namespace A319TS
             GUIMainToolStrip.Padding = new Padding(12, 2, 0, 0);
 
             ToolAddNode = new ToolStripButton();
+            ToolAddNode.Name = "ToolAddNode";
             ToolAddNode.ToolTipText = "Add Node";
             ToolAddNode.Image = Resources.ToolAddNode;
             ToolAddNode.Click += ToolAddNodeClick;
 
             ToolRemoveNode = new ToolStripButton();
+            ToolRemoveNode.Name = "ToolRemoveNode";
             ToolRemoveNode.ToolTipText = "Remove Node";
             ToolRemoveNode.Image = Resources.ToolRemoveNode;
             ToolRemoveNode.Click += ToolRemoveNodeClick;
 
             ToolAddRoad = new ToolStripButton();
-            ToolAddRoad.ToolTipText = "Add Edge";
+            ToolAddRoad.Name = "ToolAddRoad";
+            ToolAddRoad.ToolTipText = "Add Road";
             ToolAddRoad.Image = Resources.ToolAddRoad;
             ToolAddRoad.Click += ToolAddRoadClick;
 
@@ -96,26 +99,28 @@ namespace A319TS
             GUIMainToolStrip.Items.Add(ToolRemoveNode);
             GUIMainToolStrip.Items.Add(ToolAddRoad);
         }
-        private ToolStrip GUIMainToolStrip;
-        private ToolStripButton ToolAddNode;
-        private ToolStripButton ToolRemoveNode;
-        private ToolStripButton ToolAddRoad;
+        public ToolStrip GUIMainToolStrip;
+        public ToolStripButton ToolAddNode;
+        public ToolStripButton ToolRemoveNode;
+        public ToolStripButton ToolAddRoad;
 
 
         // MainPanel
-        private void InitializeGUIMainViewport()
+        private void InitGUIMainViewport()
         {
-            GUIMainViewport = new Viewport(_currentProject);
+            GUIMainViewport = new Viewport(CurrentProject);
             GUIMainViewport.Dock = DockStyle.Fill;
             GUIMainViewport.BorderStyle = BorderStyle.Fixed3D;
-            GUIMainViewport.MouseClick += GUIMainViewportClick;
-            GUIMainViewport.MouseMove += GUIMainViewportMove;
-            GUIMainViewport.MouseWheel += GUIMainViewportWheel;
+            GUIMainViewport.Padding = new Padding(0, 0, 0, 20);
+            GUIMainViewportDrawer = new ViewportDrawer(GUIMainViewport);
+            GUIMainViewportController = new ViewportController(GUIMainViewport, this);
         }
         private Viewport GUIMainViewport;
+        private ViewportDrawer GUIMainViewportDrawer;
+        private ViewportController GUIMainViewportController;
 
         // MainStatusStrip
-        private void InitializeGUIMainStatusStrip()
+        private void InitGUIMainStatusStrip()
         {
             GUIMainStatusStrip = new StatusStrip();
             GUIMainStatusStrip.BackColor = SystemColors.ControlLight;
@@ -137,8 +142,8 @@ namespace A319TS
         }
         private StatusStrip GUIMainStatusStrip;
         private ToolStripStatusLabel StatusZoomLabel;
-        private ToolStripStatusLabel StatusZoom;
+        public ToolStripStatusLabel StatusZoom;
         private ToolStripStatusLabel StatusNodesLabel;
-        private ToolStripStatusLabel StatusNodes;
+        public ToolStripStatusLabel StatusNodes;
     }
 }

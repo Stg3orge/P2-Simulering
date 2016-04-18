@@ -5,70 +5,66 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace A319TS
 {
-    class Viewport : Panel
+    partial class Viewport : Panel
     {
+        public readonly int GridLength = 30000;
+        public readonly int GridSize = 16;
+        public readonly int NodeSize = 8;
+
+        public int Length { get { return Convert.ToInt32(GridLength * GridSize * Zoom); } }
+        public Point MousePos = new Point(0, 0);
+        public Point GridPos { get; private set; }
         public Project Project;
-        public const int GridLength = 30000;
-        private double _zoom;
-        public double Zoom
+        private float _zoom = 1;
+        public float Zoom
         {
             get { return _zoom; }
             set
             {
-                if (value > 2)
-                    _zoom = 2;
-                else if (value < 0.5)
-                    _zoom = 0.5;
+                if (value > 1.25)
+                    _zoom = 1.25F;
+                else if (value < 0.25)
+                    _zoom = 0.25F;
                 else
                     _zoom = value;
             }
         }
-        private Point _position;
-        public Point Position
-        {
-            get { return _position; }
-            set { SetPosition(value); }
-        }
-        private void SetPosition(Point value)
-        {
-            if (value.X < -16)
-                _position.X = -16;
-            else if (value.X > GridLength * 16)
-                _position.X = GridLength * 16;
-            else
-                _position.X = value.X;
-
-            if (value.Y < -16)
-                _position.Y = -16;
-            else if (value.Y > GridLength * 16)
-                _position.Y = GridLength * 16;
-            else
-                _position.Y = value.Y;
-        }
+        
         public Viewport(Project project) : base()
         {
-            Project = project;
-            Position = new Point(-16, -16);
-            Zoom = 1;
             DoubleBuffered = true;
-            Paint += Draw;
+            InitControls();
+            MouseMove += OnMouseMove;
+            GridPos = new Point(0, 0);
+            Project = project;
         }
+        
         public void Reset()
         {
-            Position = new Point(-16, -16);
+            HScrollBar.Value = 0;
+            VScrollBar.Value = 0;
             _zoom = 1;
             Refresh();
         }
-        private void Draw(object sender, PaintEventArgs args)
+        public void UpdateSize()
         {
-
+            Size = new Size(Length, Length);
+            HScrollBar.Maximum = Length - Width;
+            VScrollBar.Maximum = Length - Height;
         }
-        private void DrawGrid(PaintEventArgs args)
+        private void OnMouseMove(object sender, MouseEventArgs args)
         {
-
+            int x = Convert.ToInt32((MousePos.X - HScrollBar.Value) * Zoom);
+            int y = Convert.ToInt32((MousePos.Y - VScrollBar.Value) * Zoom);
+            GridPos = new Point(x, y);
+        }
+        private void OnScrollValueChanged(object sender, EventArgs args)
+        {
+            Refresh();
         }
     }
 }
