@@ -73,6 +73,11 @@
     <Compile Include="Viewport.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ViewportController.cs" />
+    <Compile Include="ViewportSetup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewportDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

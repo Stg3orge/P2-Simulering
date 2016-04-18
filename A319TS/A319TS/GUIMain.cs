@@ -4,17 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace A319TS
 {
     partial class GUIMain : Form
     {
-        private Project _currentProject;
+        public Project CurrentProject;
+        public ToolStripButton CheckedTool;
 
         public GUIMain()
         {
-            _currentProject = new Project("Unnamed Project");
-            InitializeGUIMain();
+            CurrentProject = new Project("Unnamed Project");
+            CurrentProject.Nodes.Add(new Node(new Point(6, 6)));
+            InitGUIMain();
         }
 
         // MainMenuStrip Events
@@ -23,7 +26,7 @@ namespace A319TS
             Project project = FileHandler.NewProject();
             if (project != null)
             {
-                _currentProject = project;
+                CurrentProject = project;
                 GUIMainViewport.Reset();
                 UpdateTitle();
             }
@@ -33,15 +36,18 @@ namespace A319TS
             Project project = FileHandler.OpenProject();
             if (project != null)
             {
-                _currentProject = project;
+                CurrentProject = project;
                 GUIMainViewport.Reset();
             }
         }
         private void MenuFileSaveClick(object sender, EventArgs args)
         {
-            FileHandler.SaveProject(_currentProject);
+            FileHandler.SaveProject(CurrentProject);
         }
-        private void MenuSettingsProjectClick(object sender, EventArgs e) {}
+        private void MenuSettingsProjectClick(object sender, EventArgs e)
+        {
+
+        }
 
         // MainToolStrip Events
         private void ToolAddNodeClick(object sender, EventArgs args) { ToggleTool(ToolAddNode); }
@@ -49,34 +55,40 @@ namespace A319TS
         private void ToolAddRoadClick(object sender, EventArgs args) { ToggleTool(ToolAddRoad); }
 
         // MainToolStrip Methods
-        private void ToggleTool(ToolStripButton ToggledTool)
+        private void ToggleTool(ToolStripButton clickedTool)
         {
-            foreach (ToolStripButton Tool in GUIMainToolStrip.Items.OfType<ToolStripButton>())
+            if (clickedTool.Checked)
             {
-                if (ToggledTool.Checked)
-                    Tool.Checked = false;
-                else if (Tool == ToggledTool)
-                    Tool.Checked = true;
-                else
-                    Tool.Checked = false;
+                clickedTool.Checked = false;
+                CheckedTool = null;
             }
+            else
+            {
+                foreach (ToolStripButton tool in GUIMainToolStrip.Items.OfType<ToolStripButton>())
+                {
+                    if (tool == clickedTool)
+                    {
+                        tool.Checked = true;
+                        CheckedTool = tool;
+                    }
+                    else
+                        tool.Checked = false;
+                }
+            }
+            try { MessageBox.Show(CheckedTool.Name); }
+            catch (Exception e) { MessageBox.Show(e.Message); }
         }
 
-        // MainViewport Events
-        private void GUIMainViewportMove(object sender, MouseEventArgs args) {}
-        private void GUIMainViewportWheel(object sender, MouseEventArgs args) {}
-        private void GUIMainViewportClick(object sender, MouseEventArgs args) {}
-
         // Update GUI Methods
-        private void UpdateTitle() { Text = "A319Sim - " + _currentProject.Name; }
-        private void UpdateStatusVertices() { StatusNodes.Text = _currentProject.Nodes.Count.ToString(); }
-        private void UpdateStatusZoom() { StatusZoom.Text = GUIMainViewport.Zoom + "%"; }
-        private void UpdateAll()
+        public void UpdateTitle() { Text = "A319TS - " + CurrentProject.Name; }
+        public void UpdateStatusNodes() { StatusNodes.Text = CurrentProject.Nodes.Count.ToString(); }
+        public void UpdateStatusZoom() { StatusZoom.Text = GUIMainViewport.Zoom * 100 + "%"; }
+        public void UpdateAll()
         {
             UpdateTitle();
-            UpdateStatusVertices();
+            UpdateStatusNodes();
             UpdateStatusZoom();
-            GUIMainViewport.Update();
+            GUIMainViewport.Refresh();
         }
     }
 }
