@@ -7,16 +7,32 @@ namespace A319TS
     [Serializable]
     public class Node
     {
-        public List<Road> Roads = new List<Road>();
+        enum NodeType { Yield, Home, Parking, Light, None }
+
+
+        public List<Road> Roads;
         public Point Position;
         private Node() { } // Serialize
+
+
         public Node(Point position)
         {
             Position = position;
         }
+
+
+        public Node(Point position, NodeType nodeType)
+        {
+            Position = position;
+
+
+
+        }
+
+
         public override string ToString()
         {
-            return "(" + Position.X + "," + Position.Y + ")"; 
+            return "(" + Position.X + "," + Position.Y + ")";
         }
     }
 }
