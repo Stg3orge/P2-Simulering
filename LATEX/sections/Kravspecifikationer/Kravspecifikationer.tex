@@ -11,6 +11,7 @@
 	\item [Gitter] Ved indsætning af veje og elementer som lyskryds, vil man indsætte disse i et gitter system, der kan panoreres, forstørres og formindskes. Formålet med gitteret er at kunne opstille vejnettet på en systematisk måde.
 	\item [Knudepunkter] Bruges til at forbinde veje.
 	\item [Veje] Tegnes mellem knudepunkterne, og har en maksimal hastighed.
+	\item [Eksklusive Veje] Ligesom almindelige veje, de bliver kun taget med i en af simuleringerne, så der kan måles på forskellen disse veje gør for trafikken.
 	\item [Kryds] Man skal kunne indsætte komplekse elementer som eksempelvis kryds med signaler.
 	\item [Vigepligt] Brugeren skal være i stand til at specificere hvilke veje, der har vigepligt i et kryds.
 	\item [Huse] Huse indsættes og bruges som bilrejsernes startpunkt, og slutpunkt ved tilbage rejsen.
@@ -22,8 +23,12 @@
 \item Simulering
     \begin{description}
     \item [Sammenligning] For at simulering kan bruges til at vurdere et system, skal man være i stand til at sammenligne resultaterne med en anden simulation. Dette vil foregå ved at brugeren kan opstille særlige veje, der kun bliver medtaget i en af simulationerne, og brugeren vil derefter kunne sammenligne outputtet.
+    \item [Fodgængere] Simulering af fodgængerne med formålet at gøre simuleringeringen mere virkelighedsnær, i det at bilerne er nødt til at vente når fodgængerne passerer vejen.
+    \item [Cyklister] Lige som fodgængere påvirke cyklister også trafikken i nogle kryds.
     \item [Køretøjer] Det skal være muligt at opstille forskellige typer køretøjer som for eksempel biler og busser.
     \item [Pathfinding] Køretøjerne skal kunne beregne den kortest mulige rute til destination. Ved denne beregning skal der overvejes fartgrænser på vejene, derudover skal der tages højde for elementer som lyskryds.
+    \item [Acceleration] Køretøjerne skal ikke kunne nå hastighedsgrænsen øjeblikkeligt.
+    \item [Deceleration] Køretøjerne skal ikke kunne bremse øjeblikkeligt.
     \end{description}
     \begin{enumerate}
     \item Input
@@ -57,9 +62,19 @@ Herunder har vi opstillet en liste af successkritierer:
 \item Programmet skal følge de danske trafik regler og retningslinjer, ved simulering af et opstillet vejnet.
 \item Programmet skal ikke følge en fast formel (Altrans) men derimod gøre brugeren i stand til at skabe sine egne kontekster (VisSim - flexibilitet) dog stadig inde for simulering af trafik.
 \item Programmet skal være i stand til at kunne vise ændringer i simuleringen (real-time) i takt med brugeren ændre på variable (Givet at simuleringen køre).
-
-
 \end{enumerate}
 
 \end{list}
+
+\subsection{Succeskriterier}
+Den følgende liste beskriver hvilke kriterier programmet skal opfylde, før programmet kan være en løsning til problemformuleringen. Der er lagt fokus på simulering af køretøjer som biler og busser. Andre simulerings enheder som fodgængere, cyklister og toge er udeladt da de har en mindre påvirkning på trafikken på vejnettet. Derudover er importering af kort ikke taget med som et succeskriterie, da det ikke er nødvendigt for at kunne opstille et vejnet. De udeladte elementer bliver diskuteret i perspektiverings afsnittet (reference her).
+
+\begin{enumerate}
+\item Brugeren skal være i stand til at opsætte et vejnet, der indeholder objekter som trafiklys, huse, parkeringspladser og destinationer.
+\item Simuleringen skal kunne sammenligne trafikafviklingen på vejnettet med og uden de eksklusive veje. Køretøjerne i de to simuleringer skal være de samme, så resultat ikke er tilfældigt.
+\item Køretøjerne skal kunne finde den hurtigste rute til den parkeringsplads der ligger nærmest destinationen. Denne udregning skal tage højde for hastighedsgrænserne på vejene.
+\item Køretøjernes bevælgse skal gøres realistisk med hensyn til acceleration og deceleration.
+\item Programmet skal være brugervenligt.
+\end{enumerate}
+
 \subsection{•}
