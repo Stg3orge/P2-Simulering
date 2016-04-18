@@ -123,12 +123,16 @@
 			"file": "Main.tex",
 			"settings":
 			{
-<<<<<<< HEAD
-				"buffer_size": 6645,
-=======
 				"buffer_size": 1098,
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Konteksten/konteksten.tex",
+			"settings":
+			{
+				"buffer_size": 3561,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -143,11 +147,7 @@
 			"file": "sections/Teknologianalyse/altransWTF.tex",
 			"settings":
 			{
-<<<<<<< HEAD
-				"buffer_size": 7536,
-=======
 				"buffer_size": 11735,
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 				"line_ending": "Windows"
 			}
 		},
@@ -155,20 +155,12 @@
 			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 			"settings":
 			{
-<<<<<<< HEAD
-				"buffer_size": 5836,
-				"line_ending": "Unix"
-=======
 				"buffer_size": 6329,
 				"line_ending": "Windows"
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 			}
 		},
 		{
-			"contents": "\\chapter{Metode}\nDette afsnit vil beskrive de anvendte metoder til udarbejdelsen af denne rapport. Hvorfor disse metoder er blevet anvendt og hvilket formål de har haft vil blive beskrevet, samt hvilke tanker der hat lagt til grund for dette igennem problemanalysen og problemløsningsafsnittet. Læseren kan med fordel se tilbage til dette afsnit, for at forstå hvordan der er blevet arbejdet igennem forløbet, skulle der opstå tvivl over hvordan vi er nået frem til vores deduktioner og resultater.\n\n\\section{Problemområde}\nProblemområdet er det som danner grundlaget for projektet. Det har til formål at give et overblik over hvilke aspekter det valgte problem belyser, ud fra den initierende problem. Det klarelægger hvem problemet påvirker og hvem det vil gavne såfremt en løsning på problemet kan opnås til at analysere både problemets relevans og samt om det har nogle interessenter.  Ud fra det initierende problem er der blevet stillet følgende hv-spørgsmål til at afgrænse problemets omfang;\n\n\\begin{figure}[H]\n\\begin{adjustbox}{width=1.2\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=1.2\\textwidth]{Pictures/Metode/metodebillede.jpg}\n\\end{adjustbox}\n\\label{fig:problemtreae}\n\\caption{Problemtræ over trafiksimulering}\n\\end{figure}\n\n\\begin{itemize}\n\\item Hvorfor: Hvad er årsagerne til problemet?\n\\item Hvad: Hvem bliver ramt af problemet?\n\\item Interessenter: Hvem er interessenterne - hvem har en interesse i en løsning på problemet?\n\\item Hvor: Hvor findes problemet?\n\\item Hvem: Hvem er hovedpersonerne i problemet?\n\\item Hvordan: Hvordan kan problemet løses?\n\\end{itemize}\nmen også for at finde ud af at hvorvidt det opstillet problem har nogen relevans for at blive afviklet. Problemområdet er således blevet benyttet til at isolere alle de relevante aspekter af problemet, hvorefter det er blevet sat sammen i en større sammenhæng for at give et klart og tydeligt billede af hvor det præcise problem befinder sig til at udarbejde en problemformulering.\n\n\\section{Fremgangsmåde}\nUnder udarbejdelse af projektet er der blevet benyttet flere forskellige fremgangsmåder, alt efter hvad der er blevet arbejdet med under problemanalysen. Fremgangsmåden under udarbejdelsen af rapporten er foregået ved at opstille relevante hypoteser, som enten kunne be- eller afkræftes ved at researche sig frem til eller ved hjælp af en prøve-fejl-metode.\n\n\\subsection{Emperiske-induktive-metode}\nUnder problemanalysen er den emperiske-induktive-metode blevet anvendt til at sikre os, at den information der er blevet indsamlet har statistisk belæg for deres udsagn eller er matematisk bevist. Dette gøre det muligt at udlede logiske slutninger til at underbygge rapportens argumentation, og sikre at troværdigheden i det som er blevet formidlet.\n\n\\subsection{Andre metoder}\nHer tilføjes det hvis vi i løbet af rapporten anvender andre metoder. \n\n\\subsection{Prøve-fejl-metoden}\nUnder programmeringsfasen er der hovedsageligt blevet anvendt prøve-fejl-metoden, eftersom det har været den mest effektive metode til at opnå den ønskede effekt i programmet. Dette er blevet gjort ved at lave metoder, med et specifikt mål i tankerne til at udføre bestemte dele. Hvis metoden ikke opførte sig som forventede blevet den omprogrammeret, indtil den bestemte metode udførte den ønskede effekt i programmet.\n%http://kom.aau.dk/~dsp/ComSys08/ComSys07/sites/ComSys6/4%20Videnskabelige%20metoder.pdf \n\n\\section{Kildekritik}\nFor at finde frem til relevant information, er der blevet taget udgangspunkt i kilder med ophav fra statslige instanser eller anerkendte virksomheder og organisationer, for at sikre informationernes gyldighed og troværdighed. Dette vil det også være muligt at kunne kontakte kilderne for uddybende spørgsmål, skulle der opstå tvivl om dele af informationen eller indsamlet data i det anvendte information. Ydermere er der blevet forsøgt at finde den nyeste tilgængelige information, for at sikre at den indsamlede data stadigvæk er brugbart og gyldigt. Fordi flere af de anvendte kilder kunne have en tendens, er den præsenteret information blevet kritisk overvejet efter hvorvidt det forholder sig objektivt eller om det er blevet fremstillet til at opnå noget for egen vinding eller et specielt mål.\n\n\n Den anvendte information er så vidt muligt også forsøgt at krydsrefereret med andre tilsvarende kilder, for at øge troværdigheden ved at undersøge om andre er nået frem til tilsvarende konklusioner og data.\n",
 			"file": "sections/Metode/Metode.tex",
-			"file_size": 4565,
-			"file_write_time": 131037107251553937,
 			"settings":
 			{
 				"buffer_size": 4436,
@@ -176,23 +168,10 @@
 			}
 		},
 		{
-			"file": "sections/Konteksten/konteksten.tex",
-			"settings":
-			{
-<<<<<<< HEAD
-				"buffer_size": 696,
-				"line_ending": "Unix"
-=======
-				"buffer_size": 3541,
-				"line_ending": "Windows"
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
-			}
-		},
-		{
 			"file": "sections/Test/Test.tex",
 			"settings":
 			{
-				"buffer_size": 2600,
+				"buffer_size": 2618,
 				"line_ending": "Windows"
 			}
 		},
@@ -330,9 +309,6 @@
 	},
 	"expanded_folders":
 	[
-<<<<<<< HEAD
-		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX"
-=======
 		"/C/Programs/Git/Git Repository/Repository2/LATEX",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Indledning",
@@ -343,7 +319,6 @@
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Simulering",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Teknologianalyse",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Test"
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 	],
 	"file_history":
 	[
@@ -410,11 +385,7 @@
 	],
 	"find":
 	{
-<<<<<<< HEAD
-		"height": 28.0
-=======
 		"height": 30.0
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 	},
 	"find_in_files":
 	{
@@ -492,7 +463,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -530,11 +501,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-<<<<<<< HEAD
-						"buffer_size": 6645,
-=======
 						"buffer_size": 1098,
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 						"regions":
 						{
 							"bookmarks":
@@ -550,13 +517,8 @@
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								0,
-								0
-=======
-								500,
-								500
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
+								1098,
+								1098
 							]
 						],
 						"settings":
@@ -572,6 +534,34 @@
 				},
 				{
 					"buffer": 2,
+					"file": "sections/Konteksten/konteksten.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3561,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1169,
+								1169
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "sections/Simulering/Simulering.tex",
 					"semi_transient": false,
 					"settings":
@@ -583,8 +573,8 @@
 						"selection":
 						[
 							[
-								1795,
-								1605
+								1796,
+								1796
 							]
 						],
 						"settings":
@@ -592,36 +582,27 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 276.0,
+						"translation.y": 288.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "sections/Teknologianalyse/altransWTF.tex",
 					"semi_transient": false,
 					"settings":
 					{
-<<<<<<< HEAD
-						"buffer_size": 7536,
-=======
 						"buffer_size": 11735,
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								0,
-								0
-=======
 								5502,
 								5469
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 							]
 						],
 						"settings":
@@ -636,16 +617,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 					"semi_transient": false,
 					"settings":
 					{
-<<<<<<< HEAD
-						"buffer_size": 5836,
-=======
 						"buffer_size": 6329,
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 						"regions":
 						{
 						},
@@ -668,7 +645,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "sections/Metode/Metode.tex",
 					"semi_transient": false,
 					"settings":
@@ -680,13 +657,8 @@
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								1394,
-								1394
-=======
 								4227,
 								4227
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 							]
 						],
 						"settings":
@@ -697,33 +669,24 @@
 						"translation.y": 811.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "sections/Konteksten/konteksten.tex",
-					"semi_transient": true,
+					"buffer": 7,
+					"file": "sections/Test/Test.tex",
+					"semi_transient": false,
 					"settings":
 					{
-<<<<<<< HEAD
-						"buffer_size": 696,
-=======
-						"buffer_size": 3541,
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
+						"buffer_size": 2618,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								0,
-								0
-=======
-								1159,
-								1159
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
+								81,
+								81
 							]
 						],
 						"settings":
@@ -735,34 +698,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "sections/Test/Test.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2600,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2598,
-								2598
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -850,7 +785,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -972,11 +907,7 @@
 	],
 	"incremental_find":
 	{
-<<<<<<< HEAD
-		"height": 28.0
-=======
 		"height": 30.0
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 	},
 	"input":
 	{
@@ -1017,11 +948,7 @@
 	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
-<<<<<<< HEAD
-		"height": 52.0
-=======
 		"height": 56.0
->>>>>>> f38d9ed659ed6f805273a8c226fdf07c1d7ed1b9
 	},
 	"save_all_on_build": true,
 	"select_file":
