@@ -25,3 +25,6 @@ C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.pdb
 C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csprojResolveAssemblyReference.cache
 C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.Resources.resources
 C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csproj.GenerateResource.Cache
+C:\Users\hype7\Desktop\Git\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.exe.config
+C:\Users\hype7\Desktop\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.exe
+C:\Users\hype7\Desktop\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.pdb
