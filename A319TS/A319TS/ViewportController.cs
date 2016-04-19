@@ -43,7 +43,6 @@ namespace A319TS
         }
         private void OnClick(object sender, MouseEventArgs args)
         {
-            MessageBox.Show("Hello!");
             if (args.Button == MouseButtons.Left)
             {
                 switch (_main.CheckedTool.Name)
