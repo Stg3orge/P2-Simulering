@@ -13,10 +13,10 @@ namespace A319TS
         public Node Destination;
         public RoadType Type;
         private Road(){} // Serialize
-        public Road(Node destination, RoadType roadType)
+        public Road(Node destination, RoadType type)
         {
             Destination = destination;
-            Type = roadType;
+            Type = type;
         }
     }
 }

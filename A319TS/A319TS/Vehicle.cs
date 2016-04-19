@@ -1,31 +1,29 @@
-﻿namespace A319TS
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Drawing;
+
+namespace A319TS
 {
     class Vehicle
     {
-        public Vehicle(int _acceleration, int _deceleration, string _name, int _maxSpeed, int _x, int _y, bool _start, bool _end, int _currentX, int _currentY, int _id)
+        public Node Home;
+        public Destination Destination;
+        public Point Position;
+        public VehicleType Type;
+        public int TravelTime;
+        public int HomeTime;
+
+        public Vehicle(Node home, Destination destination, VehicleType type, int travelTime, int homeTime)
         {
-            acceleration = _acceleration;
-            deceleration = _deceleration;
-            name = _name;
-            maxSpeed = _maxSpeed;
-            X = _x;
-            Y = _y;
-            start = _start;
-            end = _end;
-            currentX = _currentX;
-            currentY = _currentY;
-            ID = _id;
+            Home = home;
+            Destination = destination;
+            Position = Home.Position;
+            Type = type;
+            TravelTime = travelTime;
+            HomeTime = homeTime;
         }
-        public int acceleration { get; set; }
-        public int deceleration { get; set; }
-        public string name { get; set; }
-        public int maxSpeed { get; set; }
-        public int X { get; set; }
-        public int Y { get; set; }
-        public bool start { get; set; }
-        public bool end { get; set; }
-        public int currentX { get; set; }
-        public int currentY { get; set; }
-        public int ID { get; set; }
     }
 }

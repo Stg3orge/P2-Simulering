@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Destination.cs" />
+    <Compile Include="DestinationType.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="FileHandler.cs" />
     <Compile Include="GUIMain.cs">
       <SubType>Form</SubType>
@@ -58,7 +61,10 @@
     <Compile Include="GUIMenuFileNew.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LightController.cs" />
+    <Compile Include="LightNode.cs" />
     <Compile Include="Node.cs" />
+    <Compile Include="Pathfinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +76,7 @@
     <Compile Include="Road.cs" />
     <Compile Include="RoadType.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="VehicleType.cs" />
     <Compile Include="Viewport.cs">
       <SubType>Component</SubType>
     </Compile>
