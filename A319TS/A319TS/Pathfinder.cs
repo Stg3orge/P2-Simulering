@@ -9,19 +9,16 @@ namespace A319TS
 {
     static class Pathfinder
     {
-
+        /*
         static List<Point> FindPath(List<Node> nodeList, Point startPoint, Point endPoint)
         {
             List<Point> Route = new List<Point>();
 
-            CreateRoute();
+            CreateRoute(nodeList, startPoint, endPoint);
 
 
             return Route;
         }
-
-
-
         static void CreateRoute(List<Node> nodeList, Point startPoint, Point endPoint)
         {
             if(nodeList.Count <= 0)
@@ -40,17 +37,7 @@ namespace A319TS
                 dist[i] = int.MaxValue;
                 
             }
-
-
-
-
-
-
-
         }
-
-
-
-
+        */
     }
 }

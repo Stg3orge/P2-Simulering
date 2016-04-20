@@ -112,12 +112,9 @@ namespace A319TS
             GUIMainViewport.Dock = DockStyle.Fill;
             GUIMainViewport.BorderStyle = BorderStyle.Fixed3D;
             GUIMainViewport.Padding = new Padding(0, 0, 0, 20);
-            GUIMainViewportDrawer = new ViewportDrawer(GUIMainViewport);
-            GUIMainViewportController = new ViewportController(GUIMainViewport, this);
+            GUIMainViewport.Input.MouseClick += ViewportClick;
         }
         private Viewport GUIMainViewport;
-        private ViewportDrawer GUIMainViewportDrawer;
-        private ViewportController GUIMainViewportController;
 
         // MainStatusStrip
         private void InitGUIMainStatusStrip()

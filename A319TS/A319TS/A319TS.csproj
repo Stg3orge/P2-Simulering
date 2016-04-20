@@ -61,6 +61,9 @@
     <Compile Include="GUIMenuFileNew.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Layer.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="LightController.cs" />
     <Compile Include="LightNode.cs" />
     <Compile Include="Node.cs" />
@@ -80,11 +83,12 @@
     <Compile Include="Viewport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ViewportController.cs" />
     <Compile Include="ViewportSetup.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ViewportDrawer.cs" />
+    <Compile Include="ViewportPainter.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

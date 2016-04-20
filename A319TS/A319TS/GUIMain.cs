@@ -11,7 +11,6 @@ namespace A319TS
     partial class GUIMain : Form
     {
         public Project CurrentProject;
-        public ToolStripButton CheckedTool;
 
         public GUIMain()
         {
@@ -58,25 +57,42 @@ namespace A319TS
         private void ToggleTool(ToolStripButton clickedTool)
         {
             if (clickedTool.Checked)
-            {
                 clickedTool.Checked = false;
-                CheckedTool = null;
-            }
             else
             {
                 foreach (ToolStripButton tool in GUIMainToolStrip.Items.OfType<ToolStripButton>())
                 {
                     if (tool == clickedTool)
-                    {
                         tool.Checked = true;
-                        CheckedTool = tool;
-                    }
                     else
                         tool.Checked = false;
                 }
             }
-            try { MessageBox.Show(CheckedTool.Name); }
-            catch (Exception e) { MessageBox.Show(e.Message); }
+        }
+
+        // Viewport Input
+        private void ViewportClick(object sender, MouseEventArgs args)
+        {
+            if (args.Button == MouseButtons.Left)
+            {
+                if (ToolAddNode.Checked)
+                {
+                    if (CurrentProject.Nodes.Find(n => n.Position == GUIMainViewport.GridPos) == null)
+                    {
+                        CurrentProject.Nodes.Add(new Node(GUIMainViewport.GridPos));
+                        GUIMainViewport.Nodes.Refresh();
+                        UpdateStatusNodes();
+                    }
+                }
+                else if (ToolRemoveNode.Checked)
+                {
+
+                }
+                else if (ToolAddRoad.Checked)
+                {
+
+                }
+            }
         }
 
         // Update GUI Methods

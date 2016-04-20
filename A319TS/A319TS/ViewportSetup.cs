@@ -10,52 +10,51 @@ namespace A319TS
 {
     partial class Viewport : Panel
     {
-        public HScrollBar HScrollBar = new HScrollBar();
-        public VScrollBar VScrollBar = new VScrollBar();
-        public PictureBox Grid = new PictureBox();
-        public PictureBox Roads = new PictureBox();
-        public PictureBox Nodes = new PictureBox();
-        public PictureBox Entities = new PictureBox();
-        public PictureBox Information = new PictureBox();
+        public Layer Grid = new Layer();
+        public Layer Roads = new Layer();
+        public Layer Nodes = new Layer();
+        public Layer Entities = new Layer();
+        public Layer Information = new Layer();
+        public Layer Input = new Layer();
 
         private void InitControls()
         {
-            HScrollBar.Dock = DockStyle.Bottom;
-            VScrollBar.Dock = DockStyle.Right;
-            HScrollBar.Minimum = 0;
-            VScrollBar.Minimum = 0;
-            HScrollBar.Maximum = Convert.ToInt32(((GridLength * GridSize) * Zoom) - Width);
-            VScrollBar.Maximum = Convert.ToInt32(((GridLength * GridSize) * Zoom) - Height);
-            HScrollBar.ValueChanged += OnScrollValueChanged;
-            VScrollBar.ValueChanged += OnScrollValueChanged;
-
             Grid.Dock = DockStyle.Fill;
             Grid.BackColor = Color.Transparent;
             Grid.Region = null;
+            Grid.Paint += DrawGrid;
 
             Roads.Dock = DockStyle.Fill;
             Roads.BackColor = Color.Transparent;
             Roads.Region = null;
+            Roads.Paint += DrawRoads;
 
             Nodes.Dock = DockStyle.Fill;
             Nodes.BackColor = Color.Transparent;
             Nodes.Region = null;
+            Nodes.Paint += DrawNodes;
 
             Entities.Dock = DockStyle.Fill;
             Entities.BackColor = Color.Transparent;
             Entities.Region = null;
+            Entities.Paint += DrawEntities;
 
             Information.Dock = DockStyle.Fill;
             Information.BackColor = Color.Transparent;
             Information.Region = null;
+            Information.Paint += DrawInformation;
 
-            Controls.Add(HScrollBar);
-            Controls.Add(VScrollBar);
+            Input.Dock = DockStyle.Fill;
+            Input.BackColor = Color.Transparent;
+            Input.MouseMove += OnMove;
+            Input.MouseWheel += OnWheel;
+
             Controls.Add(Grid);
             Grid.Controls.Add(Roads);
             Roads.Controls.Add(Nodes);
             Nodes.Controls.Add(Entities);
             Entities.Controls.Add(Information);
+            Information.Controls.Add(Input);
         }
     }
 }
