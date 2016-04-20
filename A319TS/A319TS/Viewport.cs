@@ -50,8 +50,8 @@ namespace A319TS
         }
         private Point GetGridPos()
         {
-            int x = Convert.ToInt32((MousePos.X - ViewPos.X) / GridSize / Zoom);
-            int y = Convert.ToInt32((MousePos.Y - ViewPos.Y) / GridSize / Zoom);
+            int x = Convert.ToInt32(((MousePos.X - ViewPos.X) / GridSize) * Zoom);
+            int y = Convert.ToInt32(((MousePos.Y - ViewPos.Y) / GridSize) * Zoom);
             return new Point(x, y);
         }
         private void OnMove(object sender, MouseEventArgs args)

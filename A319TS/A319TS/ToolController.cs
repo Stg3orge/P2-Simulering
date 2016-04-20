@@ -57,11 +57,12 @@ namespace A319TS
             if (targetNode != null)
             {
                 foreach (Node node in CurrentProject.Nodes)
-                    foreach (Road road in node.Roads)
-                        if (road.Destination == targetNode)
-                            node.Roads.Remove(road);
+                    for (int i = 0; i < node.Roads.Count; i++)
+                        if (node.Roads[i].Destination == targetNode)
+                            node.Roads.Remove(node.Roads[i]);
 
                 CurrentProject.Nodes.Remove(targetNode);
+                Viewport.Roads.Refresh();
             }
         }
         private void AddRoad()

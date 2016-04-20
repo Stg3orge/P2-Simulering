@@ -7,8 +7,6 @@ namespace A319TS
 {
     partial class GUIMain : Form
     {
-        private bool FirstRoadConnection = true;
-        private Node FirstRoad;
         public Project CurrentProject;
         public ToolController ToolController;
 
@@ -27,7 +25,7 @@ namespace A319TS
             {
                 CurrentProject = project;
                 GUIMainViewport.Reset();
-                UpdateTitle();
+                UpdateAll();
             }
         }
         private void MenuFileOpenClick(object sender, EventArgs args)
