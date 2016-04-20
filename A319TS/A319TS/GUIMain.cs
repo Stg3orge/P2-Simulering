@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace A319TS
 {
@@ -15,7 +11,6 @@ namespace A319TS
         public GUIMain()
         {
             CurrentProject = new Project("Unnamed Project");
-            CurrentProject.Nodes.Add(new Node(new Point(6, 6)));
             InitGUIMain();
         }
 
@@ -52,6 +47,7 @@ namespace A319TS
         private void ToolAddNodeClick(object sender, EventArgs args) { ToggleTool(ToolAddNode); }
         private void ToolRemoveNodeClick(object sender, EventArgs args) { ToggleTool(ToolRemoveNode); }
         private void ToolAddRoadClick(object sender, EventArgs args) { ToggleTool(ToolAddRoad); }
+        private void ToolToggleRoadClick(object sender, EventArgs args) { ToggleTool(ToolToggleRoad); }
 
         // MainToolStrip Methods
         private void ToggleTool(ToolStripButton clickedTool)
@@ -86,7 +82,10 @@ namespace A319TS
                 }
                 else if (ToolRemoveNode.Checked)
                 {
-
+                    Node node = CurrentProject.Nodes.Find(n => n.Position == GUIMainViewport.GridPos);
+                    if (node != null)
+                        CurrentProject.Nodes.Remove(node);
+                    cur
                 }
                 else if (ToolAddRoad.Checked)
                 {
@@ -94,7 +93,6 @@ namespace A319TS
                 }
             }
         }
-
         // Update GUI Methods
         public void UpdateTitle() { Text = "A319TS - " + CurrentProject.Name; }
         public void UpdateStatusNodes() { StatusNodes.Text = CurrentProject.Nodes.Count.ToString(); }

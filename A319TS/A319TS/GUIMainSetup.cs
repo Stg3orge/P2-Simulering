@@ -95,15 +95,22 @@ namespace A319TS
             ToolAddRoad.Image = Resources.ToolAddRoad;
             ToolAddRoad.Click += ToolAddRoadClick;
 
+            ToolToggleRoad = new ToolStripButton();
+            ToolToggleRoad.Name = "ToolToggleRoad";
+            ToolToggleRoad.ToolTipText = "Toggle a road On or Off";
+            ToolToggleRoad.Image = Resources.ToolToggleRoad;
+            ToolToggleRoad.Click += ToolToggleRoadClick;
+
             GUIMainToolStrip.Items.Add(ToolAddNode);
             GUIMainToolStrip.Items.Add(ToolRemoveNode);
             GUIMainToolStrip.Items.Add(ToolAddRoad);
+            GUIMainToolStrip.Items.Add(ToolToggleRoad);
         }
         public ToolStrip GUIMainToolStrip;
         public ToolStripButton ToolAddNode;
         public ToolStripButton ToolRemoveNode;
         public ToolStripButton ToolAddRoad;
-
+        public ToolStripButton ToolToggleRoad;
 
         // MainPanel
         private void InitGUIMainViewport()

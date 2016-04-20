@@ -56,7 +56,7 @@ namespace A319TS
         }
         private void OnMove(object sender, MouseEventArgs args)
         {
-            if (args.Button == MouseButtons.Right)
+            if (args.Button == MouseButtons.Middle)
             {
                 ViewPos.X += args.Location.X - MousePos.X;
                 ViewPos.Y += args.Location.Y - MousePos.Y;
