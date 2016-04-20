@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace A319TS
 {
     partial class GUIMain : Form
     {
+        private bool FirstRoadConnection = true;
+        private Node FirstRoad;
         public Project CurrentProject;
 
         public GUIMain()
@@ -82,17 +85,45 @@ namespace A319TS
                 }
                 else if (ToolRemoveNode.Checked)
                 {
-                    Node node = CurrentProject.Nodes.Find(n => n.Position == GUIMainViewport.GridPos);
-                    if (node != null)
-                        CurrentProject.Nodes.Remove(node);
-                    cur
-                }
-                else if (ToolAddRoad.Checked)
-                {
+                    Node targetNode = CurrentProject.Nodes.Find(n => n.Position == GUIMainViewport.GridPos);
+                    if (targetNode != null)
+                    {;
+                        foreach (Nodenodem in CurrentProject.Nodes)
+                        {
+                            foreach (Roadroadm innode.Roadso)
+                            {
+                                if (road.Destination == targetNode)
+                                {
+                                    node.Roads.Remove(road); // does this even work ??
+                                }
+                                    
 
+                            }
+                        
+                        CurrentProject.Nodes.Remove(targetNode);}
+                    }
+                }
+                else if (ToolAddoad.Checked)
+                {
+                    foreach (Node item in CurrentProject.Nodes)
+                    {
+                        if (GUIMainViewport.GridPos == item.Position)
+                        {
+                            if (FirstRoadConnection)
+                            {
+                                FirstRoad = item;
+                                FirstRoadConnection = false;
+                            }
+                            else
+                            {
+
+                                FirstRoadConnection = true;
+                            }
+                        }
+                    }
                 }
             }
-        }
+         }
         // Update GUI Methods
         public void UpdateTitle() { Text = "A319TS - " + CurrentProject.Name; }
         public void UpdateStatusNodes() { StatusNodes.Text = CurrentProject.Nodes.Count.ToString(); }
