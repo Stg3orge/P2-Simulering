@@ -10,11 +10,13 @@ namespace A319TS
         private bool FirstRoadConnection = true;
         private Node FirstRoad;
         public Project CurrentProject;
+        public ToolController ToolController;
 
         public GUIMain()
         {
             CurrentProject = new Project("Unnamed Project");
             InitGUIMain();
+            ToolController = new ToolController(GUIMainToolStrip.Items, GUIMainViewport, CurrentProject);
         }
 
         // MainMenuStrip Events
@@ -69,61 +71,6 @@ namespace A319TS
             }
         }
 
-        // Viewport Input
-        private void ViewportClick(object sender, MouseEventArgs args)
-        {
-            if (args.Button == MouseButtons.Left)
-            {
-                if (ToolAddNode.Checked)
-                {
-                    if (CurrentProject.Nodes.Find(n => n.Position == GUIMainViewport.GridPos) == null)
-                    {
-                        CurrentProject.Nodes.Add(new Node(GUIMainViewport.GridPos));
-                        GUIMainViewport.Nodes.Refresh();
-                        UpdateStatusNodes();
-                    }
-                }
-                else if (ToolRemoveNode.Checked)
-                {
-                    Node targetNode = CurrentProject.Nodes.Find(n => n.Position == GUIMainViewport.GridPos);
-                    if (targetNode != null)
-                    {;
-                        foreach (Nodenodem in CurrentProject.Nodes)
-                        {
-                            foreach (Roadroadm innode.Roadso)
-                            {
-                                if (road.Destination == targetNode)
-                                {
-                                    node.Roads.Remove(road); // does this even work ??
-                                }
-                                    
-
-                            }
-                        
-                        CurrentProject.Nodes.Remove(targetNode);}
-                    }
-                }
-                else if (ToolAddoad.Checked)
-                {
-                    foreach (Node item in CurrentProject.Nodes)
-                    {
-                        if (GUIMainViewport.GridPos == item.Position)
-                        {
-                            if (FirstRoadConnection)
-                            {
-                                FirstRoad = item;
-                                FirstRoadConnection = false;
-                            }
-                            else
-                            {
-
-                                FirstRoadConnection = true;
-                            }
-                        }
-                    }
-                }
-            }
-         }
         // Update GUI Methods
         public void UpdateTitle() { Text = "A319TS - " + CurrentProject.Name; }
         public void UpdateStatusNodes() { StatusNodes.Text = CurrentProject.Nodes.Count.ToString(); }

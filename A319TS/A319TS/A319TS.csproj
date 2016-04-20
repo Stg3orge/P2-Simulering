@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="Road.cs" />
     <Compile Include="RoadType.cs" />
+    <Compile Include="ToolController.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="VehicleType.cs" />
     <Compile Include="Viewport.cs">

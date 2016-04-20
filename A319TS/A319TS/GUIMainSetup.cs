@@ -119,7 +119,6 @@ namespace A319TS
             GUIMainViewport.Dock = DockStyle.Fill;
             GUIMainViewport.BorderStyle = BorderStyle.Fixed3D;
             GUIMainViewport.Padding = new Padding(0, 0, 0, 20);
-            GUIMainViewport.Input.MouseClick += ViewportClick;
         }
         private Viewport GUIMainViewport;
 
