@@ -15,6 +15,14 @@ namespace A319TS
             CurrentProject = new Project("Unnamed Project");
             InitGUIMain();
             ToolController = new ToolController(GUIMainToolStrip.Items, GUIMainViewport, CurrentProject);
+
+            CurrentProject.Nodes.Add(new Node(new Point(4, 4)));
+            CurrentProject.Nodes.Add(new Node(new Point(10, 10), Node.NodeType.Light));
+            CurrentProject.Nodes.Add(new Node(new Point(12, 12), Node.NodeType.Home));
+            CurrentProject.Nodes.Add(new Node(new Point(14, 14), Node.NodeType.Parking));
+            CurrentProject.Nodes.Add(new Node(new Point(16, 16), Node.NodeType.Yield));
+            CurrentProject.Destinations.Add(new Destination(new Point(6, 6), new DestinationType("Work", Color.Green)));
+            CurrentProject.LightControllers.Add(new LightController(new Point(8, 8), 10, 10));
         }
 
         // MainMenuStrip Events

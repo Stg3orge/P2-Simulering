@@ -49,7 +49,7 @@ namespace A319TS
 
         private void ViewportClick(object sender, MouseEventArgs args)
         {
-            if (ActiveTool != null)
+            if (ActiveTool != null && args.Button == MouseButtons.Left)
             {
                 switch (ActiveTool.Name)
                 {

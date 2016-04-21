@@ -7,9 +7,9 @@ using System.Drawing;
 
 namespace A319TS
 {
-    class LightController : Entity
+    public class LightController : Entity
     {
-        public List<LightNode> Lights = new List<LightNode>();
+        public List<Node> Lights { get; private set; }
         public int FirstTime;
         public int SecondTime;
         private int _current;
@@ -17,10 +17,19 @@ namespace A319TS
 
         public LightController(Point position, int firstTime, int secondTime) : base(position)
         {
+            Lights = new List<Node>();
             _current = firstTime;
             FirstTime = firstTime;
             SecondTime = secondTime;
             
+        }
+
+        public void AddLight(Node node)
+        {
+            if (node.Type != Node.NodeType.Light)
+                throw new Exception("Wrong Type");
+            else
+                Lights.Add(node);
         }
 
         public void Update(int ms)
@@ -39,7 +48,7 @@ namespace A319TS
 
         private void ToggleLights()
         {
-            foreach (LightNode light in Lights)
+            foreach (Node light in Lights)
                 light.Green = !light.Green;
         }
     }
