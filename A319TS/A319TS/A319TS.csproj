@@ -65,7 +65,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="LightController.cs" />
-    <Compile Include="LightNode.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Pathfinder.cs" />
     <Compile Include="Program.cs" />

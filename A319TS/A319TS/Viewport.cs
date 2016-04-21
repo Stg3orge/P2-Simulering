@@ -8,6 +8,7 @@ namespace A319TS
     {
         public readonly int GridLength = 30000;
         public readonly int GridSize = 16;
+        public readonly int EntitySize = 12;
         public readonly int NodeSize = 8;
 
         public Project Project;

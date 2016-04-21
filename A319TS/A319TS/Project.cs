@@ -8,6 +8,8 @@ namespace A319TS
     {
         public string Name;
         public List<Node> Nodes = new List<Node>();
+        public List<Destination> Destinations = new List<Destination>();
+        public List<LightController> LightControllers = new List<LightController>();
         private Project() { } // Serialize
         public Project(string name)
         {
