@@ -53,7 +53,12 @@ namespace A319TS
         private void ToolPrimaryRoadClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolPrimaryRoad); }
         private void ToolSecondaryRoadClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolSecondaryRoad); }
         private void ToolEditClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolEdit); }
+        private void SetNodeTrafficLightClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeTrafficLight); }
+        private void SetNodeYieldClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeYield); }
+        private void SetNodeHomeClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeHome); }
+        private void SetNodeParkingClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeParking); }
 
+        
         // Update GUI Methods
         public void UpdateTitle() { Text = "A319TS - " + CurrentProject.Name; }
         public void UpdateStatusNodes() { StatusNodes.Text = CurrentProject.Nodes.Count.ToString(); }

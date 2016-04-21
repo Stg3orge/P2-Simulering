@@ -59,6 +59,10 @@ namespace A319TS
                     case "ToolPrimaryRoad": PrimaryRoad(); break;
                     case "ToolSecondaryRoad": SecondaryRoad(); break;
                     case "ToolEdit": Edit(); break;
+                    case "SetNodeTrafficLight": SetNodeType(Node.NodeType.Light); break;
+                    case "SetNodeYield": SetNodeType(Node.NodeType.Yield); break;
+                    case "SetNodeHome": SetNodeType(Node.NodeType.Home); break;
+                    case "SetNodeParking": SetNodeType(Node.NodeType.Parking); break;
                     default: break;
                 }
             }
@@ -117,5 +121,14 @@ namespace A319TS
         {
 
         }
+        private void SetNodeType(Node.NodeType type)
+        {
+            Node target = CurrentProject.Nodes.Find(n => n.Position == Viewport.GridPos);
+            if(target != null)
+            {
+                target.Type = type;
+            }
+        }
+
     }
 }
