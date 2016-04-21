@@ -16,11 +16,24 @@ namespace A319TS
 
         static List<Point> FindPath(List<Node> nodeList, Node startNode, Node endNode)
         {
+
+            CreateAdjMatrix(nodeList);
+
             List<Point> Route = new List<Point>();
 
             CreateRoute(nodeList, startNode, endNode);
 
             return Route;
+        }
+
+
+
+        static void CreateAdjMatrix(List<Node> nodeList)
+        {
+
+
+
+
         }
 
 
