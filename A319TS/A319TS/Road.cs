@@ -18,5 +18,8 @@ namespace A319TS
             Destination = destination;
             Type = type;
         }
+
+        public double Cost { get; set; }
+
     }
 }

@@ -8,56 +8,92 @@ namespace A319TS
     {
 
         /* Resulting arrays with distances to nodes and how to get there */
-        static double[] dist { get; set; }
+        //static double[] dist { get; set; }
         static int[] path { get; set; }
 
         /* Queue List */
-        static List<int> nodeQueue = new List<int>();
+        //static List<int> nodeQueue = new List<int>();
 
-        static List<Point> FindPath(List<Node> nodeList, Point startPoint, Point endPoint)
+        static List<Point> FindPath(List<Node> nodeList, Node startNode, Node endNode)
         {
             List<Point> Route = new List<Point>();
 
-            CreateRoute(nodeList, startPoint, endPoint);
+            CreateRoute(nodeList, startNode, endNode);
 
             return Route;
         }
 
 
-        static void CreateRoute(List<Node> nodeList, Point startPoint, Point endPoint)
+        static void CreateRoute(List<Node> nodeList, Node startNode, Node endNode)
         {
-            if (nodeList.Count <= 0)
+    
+            int nodeListLen = nodeList.Count;
+            //dist = new double[nodeListLen];
+            path = new int[nodeListLen];
+
+            if (nodeListLen <= 0)
             {
                 throw new ArgumentException("List of nodes is empty.");
             }
 
 
+            /* Initalize */
+            for (int i = 0; i < nodeListLen; i++)
+            {
+                foreach (Road item in nodeList[i].Roads)
+                {
+                    item.Cost = double.MaxValue;
+                }
+            }
 
-            int nodeListLen = nodeList.Count;
-            dist = new double[nodeListLen];
-            path = new int[nodeListLen];
+            /* Needs startnode.cost == 0, and pervious node == -1*/
+
+            CalcuelateCost(nodeList, nodeListLen, startNode);
+
+
+        }
+
+
+        static void CalcuelateCost(List<Node> nodeList, int nodeListLen, Node startNode)
+        {
+            Node currentNode = startNode;
+
+            while (nodeListLen > 0)
+            {
+                Tuple<int, int> lowestCost = FindLowestCost(nodeList, nodeListLen, currentNode);
+                
+
+
+            }
+
+        }
+
+
+        static Tuple<int, int> FindLowestCost(List<Node> nodeList, int nodeListLen, Node currentNode)
+        {
+            int lowestNodeCostIndex = 0;
+            int lowestRoadCostIndex = 0;
+            double lowestValue = double.MaxValue;
 
             for (int i = 0; i < nodeListLen; i++)
             {
-                dist[i] = int.MaxValue;
-                nodeQueue.Add(i);
+                for (int n = 0; n < nodeList[i].Roads.Count; n++)
+                {
+                    if (nodeList[i].Roads[n].Cost < lowestValue)
+                    {
+                        lowestValue = nodeList[i].Roads[n].Cost;
+                        lowestNodeCostIndex = i;
+                        lowestRoadCostIndex = n;
+                    }
+                }
             }
 
-            /* Set distance to 0 for starting point and the previous node to null (-1) */
-            //dist[startPoint] = 0;
-            //path[startPoint] = -1;
-
-
-            while (nodeQueue.Count != null)
+            if (lowestValue == double.MaxValue)
             {
-
-
-
+                throw new ArgumentException("Lowest Road Length was never changed from default.");
             }
 
-
-
-
+             return Tuple.Create(lowestNodeCostIndex, lowestRoadCostIndex);
         }
 
 
@@ -65,5 +101,15 @@ namespace A319TS
 
 
 
-    }
+
+
+
+
+
+
+
+
+
+
+}
 }
