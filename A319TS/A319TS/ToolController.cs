@@ -56,6 +56,9 @@ namespace A319TS
                     case "ToolAddNode": AddNode(); break;
                     case "ToolRemoveNode": RemoveNode(); break;
                     case "ToolAddRoad": AddRoad(); break;
+                    case "ToolPrimaryRoad": PrimaryRoad(); break;
+                    case "ToolSecondaryRoad": SecondaryRoad(); break;
+                    case "ToolEdit": Edit(); break;
                     default: break;
                 }
             }
@@ -101,6 +104,18 @@ namespace A319TS
                     }
                 }
             }
+        }
+        private void PrimaryRoad()
+        {
+
+        }
+        private void SecondaryRoad()
+        {
+
+        }
+        private void Edit()
+        {
+
         }
     }
 }
