@@ -96,20 +96,5 @@ namespace A319TS
              return Tuple.Create(lowestNodeCostIndex, lowestRoadCostIndex);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+    }
 }

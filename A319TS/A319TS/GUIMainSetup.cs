@@ -116,6 +116,30 @@ namespace A319TS
             ToolEdit.Image = Resources.ToolToggleRoad;
             ToolEdit.Click += ToolEditClick;
 
+            SetNodeTrafficLight = new ToolStripButton();
+            SetNodeTrafficLight.Name = "Traffic Light Node";
+            SetNodeTrafficLight.ToolTipText = "Set node = Traffic Light";
+            SetNodeTrafficLight.Image = Resources.ToolAddNode;
+            SetNodeTrafficLight.Click += SetNodeTrafficLightClick;
+
+            SetNodeYield = new ToolStripButton();
+            SetNodeYield.Name = "Yield Node";
+            SetNodeYield.ToolTipText = "Set node = Yield";
+            SetNodeYield.Image = Resources.ToolAddNode;
+            SetNodeYield.Click += SetNodeYieldClick;
+
+            SetNodeHome = new ToolStripButton();
+            SetNodeHome.Name = "Home Node";
+            SetNodeHome.ToolTipText = "Set node = Home";
+            SetNodeHome.Image = Resources.ToolAddNode;
+            SetNodeHome.Click += SetNodeHomeClick;
+
+            SetNodeParking = new ToolStripButton();
+            SetNodeParking.Name = "Parking Node";
+            SetNodeParking.ToolTipText = "Set node = Parking";
+            SetNodeParking.Image = Resources.ToolAddNode;
+            SetNodeParking.Click += SetNodeParkingClick;
+
             GUIMainToolStrip.Items.Add(ToolAddNode);
             GUIMainToolStrip.Items.Add(ToolRemoveNode);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
@@ -125,7 +149,11 @@ namespace A319TS
             GUIMainToolStrip.Items.Add(ToolRoadTypeSelect);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
             GUIMainToolStrip.Items.Add(ToolEdit);
-            
+            GUIMainToolStrip.Items.Add(SetNodeTrafficLight);
+            GUIMainToolStrip.Items.Add(SetNodeYield);
+            GUIMainToolStrip.Items.Add(SetNodeHome);
+            GUIMainToolStrip.Items.Add(SetNodeParking);
+
         }
         public ToolStrip GUIMainToolStrip;
         public ToolStripButton ToolAddNode;
@@ -135,6 +163,10 @@ namespace A319TS
         public ToolStripButton ToolSecondaryRoad;
         public ToolStripDropDownButton ToolRoadTypeSelect;
         public ToolStripButton ToolEdit;
+        public ToolStripButton SetNodeTrafficLight;
+        public ToolStripButton SetNodeYield;
+        public ToolStripButton SetNodeHome;
+        public ToolStripButton SetNodeParking;
 
         // MainPanel
         private void InitGUIMainViewport()
