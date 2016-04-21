@@ -31,8 +31,8 @@ namespace A319TS
             args.Graphics.SmoothingMode = SmoothingMode.HighQuality;
             args.Graphics.TranslateTransform(ViewPos.X, ViewPos.Y);
             args.Graphics.ScaleTransform(Zoom, Zoom);
-            Pen pen = new Pen(Color.Black);
-            pen.CustomEndCap = new AdjustableArrowCap(4, 4);
+            Pen pen = new Pen(Color.Black, 4);
+            pen.CustomEndCap = new AdjustableArrowCap(2, 2);
 
             foreach (Node node in Project.Nodes)
                 foreach (Road road in node.Roads)

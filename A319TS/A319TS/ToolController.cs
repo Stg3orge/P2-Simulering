@@ -100,11 +100,25 @@ namespace A319TS
                     }
                     else
                     {
-                        FirstRoadConnection = true;
+                        if (Control.ModifierKeys == Keys.Shift)
+                        {
+                            RoadType roadtype = new RoadType("lort", 90);
+                            FirstRoad.Roads.Add(new Road(node, roadtype));
+                            FirstRoad = node;
+                            Viewport.Roads.Refresh();
+                        }
+                        else
+                        {
+                            RoadType roadtype = new RoadType("lort", 90);
+                            FirstRoad.Roads.Add(new Road(node, roadtype));
+                            FirstRoadConnection = true;
+                            Viewport.Roads.Refresh();
+                        }
                     }
                 }
             }
         }
+
         private void PrimaryRoad()
         {
 

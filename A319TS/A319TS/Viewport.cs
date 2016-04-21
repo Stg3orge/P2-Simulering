@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Drawing;
-using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace A319TS
 {
@@ -25,14 +20,14 @@ namespace A319TS
             get { return _zoom; }
             set { SetZoom(value); }
         }
-        
+
         public Viewport(Project project) : base()
         {
             InitControls();
             DoubleBuffered = true;
             Project = project;
         }
-        
+
         public void Reset()
         {
             ViewPos = new Point(0, 0);
@@ -50,8 +45,8 @@ namespace A319TS
         }
         private Point GetGridPos()
         {
-            int x = Convert.ToInt32(((MousePos.X - ViewPos.X) / GridSize) * Zoom);
-            int y = Convert.ToInt32(((MousePos.Y - ViewPos.Y) / GridSize) * Zoom);
+            int x = Convert.ToInt32(((MousePos.X - ViewPos.X) / GridSize) / Zoom);
+            int y = Convert.ToInt32(((MousePos.Y - ViewPos.Y) / GridSize) / Zoom);
             return new Point(x, y);
         }
         private void OnMove(object sender, MouseEventArgs args)
@@ -71,6 +66,7 @@ namespace A319TS
             else
                 Zoom -= 0.25F;
             Refresh();
+
         }
     }
 }
