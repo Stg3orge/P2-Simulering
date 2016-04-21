@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace A319TS
 {
-    abstract class Entity
+    public abstract class Entity
     {
         public Point Position;
         public Entity(Point position)

@@ -11,6 +11,7 @@ namespace A319TS
         public NodeType Type;
         public List<Road> Roads = new List<Road>();
         public Point Position;
+        public bool Green;
 
         protected Node() { } // Serialize
         public Node(Point position, NodeType type)

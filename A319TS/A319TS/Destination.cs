@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace A319TS
 {
-    class Destination : Entity
+    public class Destination : Entity
     {
         public DestinationType Type;
         public Destination(Point position, DestinationType type) : base(position)
