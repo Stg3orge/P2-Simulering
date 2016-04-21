@@ -141,6 +141,7 @@ namespace A319TS
             if(target != null)
             {
                 target.Type = type;
+                Viewport.Nodes.Refresh();
             }
         }
 

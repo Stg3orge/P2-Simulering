@@ -117,25 +117,25 @@ namespace A319TS
             ToolEdit.Click += ToolEditClick;
 
             SetNodeTrafficLight = new ToolStripButton();
-            SetNodeTrafficLight.Name = "Traffic Light Node";
+            SetNodeTrafficLight.Name = "SetNodeTrafficLight";
             SetNodeTrafficLight.ToolTipText = "Set node = Traffic Light";
             SetNodeTrafficLight.Image = Resources.ToolAddNode;
             SetNodeTrafficLight.Click += SetNodeTrafficLightClick;
 
             SetNodeYield = new ToolStripButton();
-            SetNodeYield.Name = "Yield Node";
+            SetNodeYield.Name = "SetNodeYield";
             SetNodeYield.ToolTipText = "Set node = Yield";
             SetNodeYield.Image = Resources.ToolAddNode;
             SetNodeYield.Click += SetNodeYieldClick;
 
             SetNodeHome = new ToolStripButton();
-            SetNodeHome.Name = "Home Node";
+            SetNodeHome.Name = "SetNodeHome";
             SetNodeHome.ToolTipText = "Set node = Home";
             SetNodeHome.Image = Resources.ToolAddNode;
             SetNodeHome.Click += SetNodeHomeClick;
 
             SetNodeParking = new ToolStripButton();
-            SetNodeParking.Name = "Parking Node";
+            SetNodeParking.Name = "SetNodeParking";
             SetNodeParking.ToolTipText = "Set node = Parking";
             SetNodeParking.Image = Resources.ToolAddNode;
             SetNodeParking.Click += SetNodeParkingClick;
