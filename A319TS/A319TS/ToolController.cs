@@ -49,7 +49,7 @@ namespace A319TS
 
         private void ViewportClick(object sender, MouseEventArgs args)
         {
-            if (ActiveTool != null)
+            if (ActiveTool != null && args.Button == MouseButtons.Left)
             {
                 switch (ActiveTool.Name)
                 {
@@ -59,6 +59,10 @@ namespace A319TS
                     case "ToolPrimaryRoad": PrimaryRoad(); break;
                     case "ToolSecondaryRoad": SecondaryRoad(); break;
                     case "ToolEdit": Edit(); break;
+                    case "SetNodeTrafficLight": SetNodeType(Node.NodeType.Light); break;
+                    case "SetNodeYield": SetNodeType(Node.NodeType.Yield); break;
+                    case "SetNodeHome": SetNodeType(Node.NodeType.Home); break;
+                    case "SetNodeParking": SetNodeType(Node.NodeType.Parking); break;
                     default: break;
                 }
             }
@@ -100,11 +104,25 @@ namespace A319TS
                     }
                     else
                     {
-                        FirstRoadConnection = true;
+                        if (Control.ModifierKeys == Keys.Shift)
+                        {
+                            RoadType roadtype = new RoadType("lort", 90);
+                            FirstRoad.Roads.Add(new Road(node, roadtype));
+                            FirstRoad = node;
+                            Viewport.Roads.Refresh();
+                        }
+                        else
+                        {
+                            RoadType roadtype = new RoadType("lort", 90);
+                            FirstRoad.Roads.Add(new Road(node, roadtype));
+                            FirstRoadConnection = true;
+                            Viewport.Roads.Refresh();
+                        }
                     }
                 }
             }
         }
+
         private void PrimaryRoad()
         {
 
@@ -117,5 +135,14 @@ namespace A319TS
         {
 
         }
+        private void SetNodeType(Node.NodeType type)
+        {
+            Node target = CurrentProject.Nodes.Find(n => n.Position == Viewport.GridPos);
+            if(target != null)
+            {
+                target.Type = type;
+            }
+        }
+
     }
 }
