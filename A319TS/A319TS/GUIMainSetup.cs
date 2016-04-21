@@ -95,22 +95,46 @@ namespace A319TS
             ToolAddRoad.Image = Resources.ToolAddRoad;
             ToolAddRoad.Click += ToolAddRoadClick;
 
-            ToolToggleRoad = new ToolStripButton();
-            ToolToggleRoad.Name = "ToolToggleRoad";
-            ToolToggleRoad.ToolTipText = "Toggle a road On or Off";
-            ToolToggleRoad.Image = Resources.ToolToggleRoad;
-            ToolToggleRoad.Click += ToolToggleRoadClick;
+            ToolPrimaryRoad = new ToolStripButton();
+            ToolPrimaryRoad.Name = "ToolPrimaryRoad";
+            ToolPrimaryRoad.ToolTipText = "Add Primary Road";
+            ToolPrimaryRoad.Image = Resources.ToolAddRoad;
+            ToolPrimaryRoad.Click += ToolPrimaryRoadClick;
+
+            ToolSecondaryRoad = new ToolStripButton();
+            ToolSecondaryRoad.Name = "ToolSecondaryRoad";
+            ToolSecondaryRoad.ToolTipText = "Add Secondary Road";
+            ToolSecondaryRoad.Image = Resources.ToolAddRoad;
+            ToolSecondaryRoad.Click += ToolSecondaryRoadClick;
+
+            ToolRoadTypeSelect = new ToolStripDropDownButton();
+            ToolRoadTypeSelect.Name = "ToolRoadTypeSelect";
+
+            ToolEdit = new ToolStripButton();
+            ToolEdit.Name = "Edit";
+            ToolEdit.ToolTipText = "Edit";
+            ToolEdit.Image = Resources.ToolToggleRoad;
+            ToolEdit.Click += ToolEditClick;
 
             GUIMainToolStrip.Items.Add(ToolAddNode);
             GUIMainToolStrip.Items.Add(ToolRemoveNode);
+            GUIMainToolStrip.Items.Add(new ToolStripSeparator());
             GUIMainToolStrip.Items.Add(ToolAddRoad);
-            GUIMainToolStrip.Items.Add(ToolToggleRoad);
+            GUIMainToolStrip.Items.Add(ToolPrimaryRoad);
+            GUIMainToolStrip.Items.Add(ToolSecondaryRoad);
+            GUIMainToolStrip.Items.Add(ToolRoadTypeSelect);
+            GUIMainToolStrip.Items.Add(new ToolStripSeparator());
+            GUIMainToolStrip.Items.Add(ToolEdit);
+            
         }
         public ToolStrip GUIMainToolStrip;
         public ToolStripButton ToolAddNode;
         public ToolStripButton ToolRemoveNode;
         public ToolStripButton ToolAddRoad;
-        public ToolStripButton ToolToggleRoad;
+        public ToolStripButton ToolPrimaryRoad;
+        public ToolStripButton ToolSecondaryRoad;
+        public ToolStripDropDownButton ToolRoadTypeSelect;
+        public ToolStripButton ToolEdit;
 
         // MainPanel
         private void InitGUIMainViewport()

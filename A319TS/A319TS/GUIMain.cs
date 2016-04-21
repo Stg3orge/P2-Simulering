@@ -47,27 +47,12 @@ namespace A319TS
         }
 
         // MainToolStrip Events
-        private void ToolAddNodeClick(object sender, EventArgs args) { ToggleTool(ToolAddNode); }
-        private void ToolRemoveNodeClick(object sender, EventArgs args) { ToggleTool(ToolRemoveNode); }
-        private void ToolAddRoadClick(object sender, EventArgs args) { ToggleTool(ToolAddRoad); }
-        private void ToolToggleRoadClick(object sender, EventArgs args) { ToggleTool(ToolToggleRoad); }
-
-        // MainToolStrip Methods
-        private void ToggleTool(ToolStripButton clickedTool)
-        {
-            if (clickedTool.Checked)
-                clickedTool.Checked = false;
-            else
-            {
-                foreach (ToolStripButton tool in GUIMainToolStrip.Items.OfType<ToolStripButton>())
-                {
-                    if (tool == clickedTool)
-                        tool.Checked = true;
-                    else
-                        tool.Checked = false;
-                }
-            }
-        }
+        private void ToolAddNodeClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddNode); }
+        private void ToolRemoveNodeClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolRemoveNode); }
+        private void ToolAddRoadClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddRoad); }
+        private void ToolPrimaryRoadClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolPrimaryRoad); }
+        private void ToolSecondaryRoadClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolSecondaryRoad); }
+        private void ToolEditClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolEdit); }
 
         // Update GUI Methods
         public void UpdateTitle() { Text = "A319TS - " + CurrentProject.Name; }
