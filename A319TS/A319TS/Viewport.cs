@@ -12,6 +12,7 @@ namespace A319TS
         public readonly int NodeSize = 8;
 
         public Project Project;
+        public Point HoverConnection = new Point(-1, -1);
         public Point MousePos = new Point(0, 0);
         public Point GridPos { get { return GetGridPos(); } }
         private Point _viewPos = new Point(0, 0);
@@ -78,6 +79,7 @@ namespace A319TS
                 Refresh();
             }
             MousePos = args.Location;
+            Information.Refresh();
         }
         private void OnWheel(object sender, MouseEventArgs args)
         {
@@ -87,6 +89,21 @@ namespace A319TS
             else
                 Zoom -= 0.25F;
             Refresh();
+        }
+
+        public object GetObjByGridPos()
+        {
+            Node node = Project.Nodes.Find(n => n.Position == GridPos);
+            LightController controller = Project.LightControllers.Find(l => l.Position == GridPos);
+            Destination dest = Project.Destinations.Find(d => d.Position == GridPos);
+            if (node != null)
+                return node;
+            else if (controller != null)
+                return controller;
+            else if (dest != null)
+                return dest;
+            else
+                return null;
         }
     }
 }

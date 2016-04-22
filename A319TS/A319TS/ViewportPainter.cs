@@ -33,12 +33,20 @@ namespace A319TS
         private void DrawRoads(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
-            Pen pen = new Pen(Color.Black, 4);
-            pen.CustomEndCap = new AdjustableArrowCap(2, 2);
 
+            // Draw Light Controller Links
+            Pen linkPen = new Pen(Color.Magenta);
+            linkPen.DashPattern = new float[] { 4F, 4F };
+            foreach (LightController controller in Project.LightControllers)
+                foreach (Node light in controller.Lights)
+                    args.Graphics.DrawLine(linkPen, GetDrawPosition(controller.Position), GetDrawPosition(light.Position));
+
+            // Draw Roads
+            Pen roadPen = new Pen(Color.Black, 2);
+            roadPen.CustomEndCap = new AdjustableArrowCap(4, 4);
             foreach (Node node in Project.Nodes)
                 foreach (Road road in node.Roads)
-                    args.Graphics.DrawLine(pen, GetDrawPosition(node.Position),
+                    args.Graphics.DrawLine(roadPen, GetDrawPosition(node.Position),
                         GetDrawPosition(road.Destination.Position));
         }
         private void DrawNodes(object sender, PaintEventArgs args)
@@ -113,8 +121,16 @@ namespace A319TS
         private void DrawInformation(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
-            args.Graphics.TranslateTransform(ViewPos.X, ViewPos.Y);
-            args.Graphics.ScaleTransform(Zoom, Zoom);
+            object obj = GetObjByGridPos();
+            Point ellipsePosition = GetDrawPosition(GridPos);
+            Point textPosition = GetDrawPosition(GridPos);
+            ellipsePosition.X -= EntitySize / 2;
+            ellipsePosition.Y -= EntitySize / 2;
+            textPosition.X += EntitySize / 2;
+            textPosition.Y -= EntitySize / 2;
+            args.Graphics.DrawEllipse(Pens.Black, new Rectangle(ellipsePosition, new Size(EntitySize, EntitySize)));
+            if (obj != null) args.Graphics.DrawString(obj.ToString(), SystemFonts.DefaultFont, Brushes.Black, textPosition);
+            if (HoverConnection != new Point(-1, -1)) args.Graphics.DrawLine(Pens.Black, GetDrawPosition(HoverConnection), GetDrawPosition(GridPos));
         }
     }
 }

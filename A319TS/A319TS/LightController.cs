@@ -24,6 +24,11 @@ namespace A319TS
             
         }
 
+        public override string ToString()
+        {
+            return "(" + Position.X + "," + Position.Y + ") " + FirstTime + "/" + SecondTime;
+        }
+
         public void AddLight(Node node)
         {
             if (node.Type != Node.NodeType.Light)

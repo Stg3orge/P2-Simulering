@@ -14,5 +14,10 @@ namespace A319TS
         {
             Type = type;
         }
+
+        public override string ToString()
+        {
+            return "(" + Position.X + "," + Position.Y + ") " + Type.Name;
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace A319TS
     {
         private bool FirstRoadConnection = true;
         private Node FirstRoad;
+        private bool FirstLightControllerConnection = true;
+        private LightController FirstLightController;
 
         public ToolStripButton ActiveTool;
         public ToolStripItemCollection Tools;
@@ -47,20 +49,6 @@ namespace A319TS
                 }
             }
         }
-        private object GetObjByGridPos()
-        {
-            Node node = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
-            LightController controller = Project.LightControllers.Find(l => l.Position == Viewport.GridPos);
-            Destination dest = Project.Destinations.Find(d => d.Position == Viewport.GridPos);
-            if (node != null)
-                return node;
-            else if (controller != null)
-                return controller;
-            else if (dest != null)
-                return dest;
-            else
-                return null;
-        }
 
         private void ViewportClick(object sender, MouseEventArgs args)
         {
@@ -88,7 +76,7 @@ namespace A319TS
 
         private void AddNode()
         {
-            object target = GetObjByGridPos();
+            object target = Viewport.GetObjByGridPos();
             if (target == null)
                 Project.Nodes.Add(new Node(Viewport.GridPos));
             else if (target.GetType() == typeof(Node))
@@ -115,23 +103,23 @@ namespace A319TS
                     {
                         FirstRoad = node;
                         FirstRoadConnection = false;
+                        Viewport.HoverConnection = node.Position;
                     }
                     else
                     {
+                        FirstRoad.Roads.Add(new Road(FirstRoad, node, new RoadType("lort", 90)));
                         if (Control.ModifierKeys == Keys.Shift)
                         {
-                            RoadType roadtype = new RoadType("lort", 90);
-                            FirstRoad.Roads.Add(new Road(FirstRoad, node, roadtype));
                             FirstRoad = node;
-                            Viewport.Roads.Refresh();
-                        }
+                            Viewport.HoverConnection = FirstRoad.Position;
+                        } 
                         else
                         {
-                            RoadType roadtype = new RoadType("lort", 90);
-                            FirstRoad.Roads.Add(new Road(FirstRoad, node, roadtype));
                             FirstRoadConnection = true;
-                            Viewport.Roads.Refresh();
+                            Viewport.HoverConnection = new Point(-1, -1);
                         }
+                            
+                        Viewport.Roads.Refresh();
                     }
                 }
             }
@@ -151,7 +139,7 @@ namespace A319TS
         }
         private void Remove()
         {
-            object target = GetObjByGridPos();
+            object target = Viewport.GetObjByGridPos();
             if (target != null)
             {
                 if (target.GetType() == typeof(Node))
@@ -178,19 +166,50 @@ namespace A319TS
         }
         private void ToolAddDestination()
         {
-            if (GetObjByGridPos() == null)
+            if (Viewport.GetObjByGridPos() == null)
                 Project.Destinations.Add(new Destination(Viewport.GridPos, new DestinationType("Test", Color.Green)));
             Viewport.Entities.Refresh();
         }
         private void AddLightController()
         {
-            if (GetObjByGridPos() == null)
+            if (Viewport.GetObjByGridPos() == null)
                 Project.LightControllers.Add(new LightController(Viewport.GridPos));
             Viewport.Entities.Refresh();
         }
         private void LinkLight()
         {
-
+            object obj = Viewport.GetObjByGridPos();
+            if (obj != null)
+            {
+                
+                if (FirstLightControllerConnection && obj.GetType() == typeof(LightController))
+                {
+                    LightController controller = (LightController)obj;
+                    FirstLightController = controller;
+                    FirstLightControllerConnection = false;
+                    Viewport.HoverConnection = controller.Position;
+                    Viewport.Roads.Refresh();
+                }
+                else if (!FirstLightControllerConnection && obj.GetType() == typeof(Node))
+                {
+                    Node node = (Node)obj;
+                    FirstLightController.Lights.Add(node);
+                    FirstLightControllerConnection = true;
+                    Viewport.HoverConnection = new Point(-1, -1);
+                    Viewport.Roads.Refresh();
+                }
+            }
+        }
+        public void StopConnection(object sender, KeyEventArgs args)
+        {
+            if (args.KeyCode == Keys.Escape)
+            {
+                FirstRoad = null;
+                FirstLightController = null;
+                FirstRoadConnection = true;
+                FirstLightControllerConnection = true;
+                Viewport.HoverConnection = new Point(-1, -1);
+            }
         }
     }
 }

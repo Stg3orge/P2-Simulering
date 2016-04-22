@@ -15,6 +15,7 @@ namespace A319TS
             CurrentProject = new Project("Unnamed Project");
             InitGUIMain();
             ToolController = new ToolController(GUIMainToolStrip.Items, GUIMainViewport, CurrentProject);
+            KeyDown += ToolController.StopConnection;
         }
 
         // MainMenuStrip Events
