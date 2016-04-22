@@ -12,6 +12,7 @@ namespace A319TS
         public List<Road> Roads = new List<Road>();
         public Point Position;
         public bool Green;
+        public int ID { get { return Position.GetHashCode(); } }
 
         protected Node() { } // Serialize
         public Node(Point position, NodeType type) : this(position)

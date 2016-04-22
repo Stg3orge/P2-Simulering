@@ -7,7 +7,7 @@ namespace A319TS
 {
     static class Pathfinder
     {
-        /* Errors, sorry
+        
         // Resulting arrays {disk = arc, path = nodes}(components to create final graph)
         static private double[] dist { get; set; }
         static private double[] path { get; set; }
@@ -156,6 +156,6 @@ namespace A319TS
 
             return result;
         }
-        */
+        
     }
 }

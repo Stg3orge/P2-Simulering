@@ -124,14 +124,14 @@ namespace A319TS
                         if (Control.ModifierKeys == Keys.Shift)
                         {
                             RoadType roadtype = new RoadType("lort", 90);
-                            FirstRoad.Roads.Add(new Road(node, roadtype));
+                            FirstRoad.Roads.Add(new Road(FirstRoad, node, roadtype));
                             FirstRoad = node;
                             Viewport.Roads.Refresh();
                         }
                         else
                         {
                             RoadType roadtype = new RoadType("lort", 90);
-                            FirstRoad.Roads.Add(new Road(node, roadtype));
+                            FirstRoad.Roads.Add(new Road(FirstRoad, node, roadtype));
                             FirstRoadConnection = true;
                             Viewport.Roads.Refresh();
                         }
