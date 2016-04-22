@@ -53,6 +53,18 @@ namespace A319TS
         {
 
         }
+        private void MenuSettingsSimulationClick(object sender, EventArgs e)
+        {
+
+        }
+        private void MenuSettingsDestinationsClick(object sender, EventArgs e)
+        {
+
+        }
+        private void MenuSettingsVehiclesClick(object sender, EventArgs e)
+        {
+
+        }
 
         // MainToolStrip Events
         private void ToolAddNodeClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddNode); }
@@ -66,7 +78,11 @@ namespace A319TS
         private void SetNodeHomeClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeHome); }
         private void SetNodeParkingClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeParking); }
 
+        // Destination and Light Controller - Not finished
+        private void ToolAddDestinationClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddDestination); }
+        private void ToolAddLightControllerClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddLightController); }
         
+
         // Update GUI Methods
         public void UpdateTitle() { Text = "A319TS - " + CurrentProject.Name; }
         public void UpdateStatusNodes() { StatusNodes.Text = CurrentProject.Nodes.Count.ToString(); }

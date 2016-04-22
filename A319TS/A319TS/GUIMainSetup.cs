@@ -54,10 +54,25 @@ namespace A319TS
                 MenuSettingsProject.Text = "Project";
                 MenuSettingsProject.Click += MenuSettingsProjectClick;
 
+                MenuSettingsSimulation = new ToolStripMenuItem();
+                MenuSettingsSimulation.Text = "Simulation";
+                MenuSettingsSimulation.Click += MenuSettingsSimulationClick;
+
+                MenuSettingsDestinations = new ToolStripMenuItem();
+                MenuSettingsDestinations.Text = "Destinations";
+                MenuSettingsDestinations.Click += MenuSettingsDestinationsClick;
+
+                MenuSettingsVehicles = new ToolStripMenuItem();
+                MenuSettingsVehicles.Text = "Vehicles";
+                MenuSettingsVehicles.Click += MenuSettingsVehiclesClick;
+
             MenuFile.DropDownItems.Add(MenuFileNew);
             MenuFile.DropDownItems.Add(MenuFileOpen);
             MenuFile.DropDownItems.Add(MenuFileSave);
             MenuSettings.DropDownItems.Add(MenuSettingsProject);
+            MenuSettings.DropDownItems.Add(MenuSettingsSimulation);   // addet
+            MenuSettings.DropDownItems.Add(MenuSettingsDestinations);   // addet
+            MenuSettings.DropDownItems.Add(MenuSettingsVehicles);   // addet
             GUIMainMenuStrip.Items.Add(MenuFile);
             GUIMainMenuStrip.Items.Add(MenuSettings);
         }
@@ -68,6 +83,9 @@ namespace A319TS
         private ToolStripMenuItem MenuFileSave;
         private ToolStripMenuItem MenuSettings;
         private ToolStripMenuItem MenuSettingsProject;
+        private ToolStripMenuItem MenuSettingsSimulation;
+        private ToolStripMenuItem MenuSettingsDestinations;
+        private ToolStripMenuItem MenuSettingsVehicles;
 
         // MainToolStrip
         private void InitGUIMainToolStrip()
@@ -140,6 +158,18 @@ namespace A319TS
             SetNodeParking.Image = Resources.ToolAddNode;
             SetNodeParking.Click += SetNodeParkingClick;
 
+            ToolAddDestination = new ToolStripButton();
+            ToolAddDestination.Name = "ToolAddDestination";
+            ToolAddDestination.ToolTipText = "Add Destination";
+            ToolAddDestination.Image = Resources.ToolAddNode;   // mangler icon
+            ToolAddDestination.Click += ToolAddDestinationClick;
+
+            ToolAddLightController = new ToolStripButton();
+            ToolAddLightController.Name = "ToolAddLightController";
+            ToolAddLightController.ToolTipText = "Add Light Controller";
+            ToolAddLightController.Image = Resources.ToolAddNode;   // mangler icon
+            ToolAddLightController.Click += ToolAddLightControllerClick;
+
             GUIMainToolStrip.Items.Add(ToolAddNode);
             GUIMainToolStrip.Items.Add(ToolRemoveNode);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
@@ -153,6 +183,9 @@ namespace A319TS
             GUIMainToolStrip.Items.Add(SetNodeYield);
             GUIMainToolStrip.Items.Add(SetNodeHome);
             GUIMainToolStrip.Items.Add(SetNodeParking);
+            GUIMainToolStrip.Items.Add(new ToolStripSeparator());
+            GUIMainToolStrip.Items.Add(ToolAddDestination);
+            GUIMainToolStrip.Items.Add(ToolAddLightController);
 
         }
         public ToolStrip GUIMainToolStrip;
@@ -167,6 +200,8 @@ namespace A319TS
         public ToolStripButton SetNodeYield;
         public ToolStripButton SetNodeHome;
         public ToolStripButton SetNodeParking;
+        public ToolStripButton ToolAddDestination;
+        public ToolStripButton ToolAddLightController;
 
         // MainPanel
         private void InitGUIMainViewport()
