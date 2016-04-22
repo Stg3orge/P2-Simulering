@@ -10,10 +10,16 @@ namespace A319TS
         public readonly int GridSize = 16;
         public readonly int EntitySize = 12;
         public readonly int NodeSize = 8;
+
         public Project Project;
         public Point MousePos = new Point(0, 0);
         public Point GridPos { get { return GetGridPos(); } }
-        public Point ViewPos = new Point(0, 0);
+        private Point _viewPos = new Point(0, 0);
+        public Point ViewPos
+        {
+            get { return _viewPos; }
+            private set { SetViewPos(value); }
+        }
         private float _zoom = 1;
         public float Zoom
         {
@@ -43,6 +49,14 @@ namespace A319TS
             else
                 _zoom = value;
         }
+        private void SetViewPos(Point value)
+        {
+            if (value.X > 0)
+                value.X = 0;
+            if (value.Y > 0)
+                value.Y = 0;
+            _viewPos = value;
+        }
         private Point GetGridPos()
         {
             int x = Convert.ToInt32(((MousePos.X - ViewPos.X) / GridSize) / Zoom);
@@ -57,8 +71,10 @@ namespace A319TS
         {
             if (args.Button == MouseButtons.Middle)
             {
-                ViewPos.X += args.Location.X - MousePos.X;
-                ViewPos.Y += args.Location.Y - MousePos.Y;
+                Point currentViewPos = ViewPos;
+                currentViewPos.X += args.Location.X - MousePos.X;
+                currentViewPos.Y += args.Location.Y - MousePos.Y;
+                ViewPos = currentViewPos;
                 Refresh();
             }
             MousePos = args.Location;

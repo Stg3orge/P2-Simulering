@@ -101,12 +101,6 @@ namespace A319TS
             ToolAddNode.Image = Resources.ToolAddNode;
             ToolAddNode.Click += ToolClick;
 
-            ToolRemoveNode = new ToolStripButton();
-            ToolRemoveNode.Name = "ToolRemoveNode";
-            ToolRemoveNode.ToolTipText = "Remove Node";
-            ToolRemoveNode.Image = Resources.ToolRemoveNode;
-            ToolRemoveNode.Click += ToolClick;
-
             ToolSetNodeLight = new ToolStripButton();
             ToolSetNodeLight.Name = "ToolSetNodeLight";
             ToolSetNodeLight.ToolTipText = "Set Node Light";
@@ -137,6 +131,12 @@ namespace A319TS
             ToolAddLightController.Image = Resources.ToolAddLightController;
             ToolAddLightController.Click += ToolClick;
 
+            ToolLinkLight = new ToolStripButton();
+            ToolLinkLight.Name = "ToolLinkLight";
+            ToolLinkLight.ToolTipText = "Link Lights to Controller";
+            ToolLinkLight.Image = Resources.ToolLinkLight;
+            ToolLinkLight.Click += ToolClick;
+
             ToolAddDestination = new ToolStripButton();
             ToolAddDestination.Name = "ToolAddDestination";
             ToolAddDestination.ToolTipText = "Add Destination";
@@ -145,10 +145,9 @@ namespace A319TS
 
             ToolDestinationTypeSelect = new ToolStripComboBox();
             ToolDestinationTypeSelect.Name = "ToolRoadTypeSelect";
-            ToolDestinationTypeSelect.Size = new Size(0, 0);
             ToolDestinationTypeSelect.FlatStyle = FlatStyle.Standard;
             ToolDestinationTypeSelect.DropDownStyle = ComboBoxStyle.DropDownList;
-            ToolDestinationTypeSelect.Items.Add(CurrentProject.DestinationTypes);
+            ToolDestinationTypeSelect.ComboBox.DataSource = CurrentProject.DestinationTypes;
 
             ToolAddRoad = new ToolStripButton();
             ToolAddRoad.Name = "ToolAddRoad";
@@ -170,25 +169,30 @@ namespace A319TS
 
             ToolRoadTypeSelect = new ToolStripComboBox();
             ToolRoadTypeSelect.Name = "ToolRoadTypeSelect";
-            ToolRoadTypeSelect.Size = new Size(0, 0);
             ToolRoadTypeSelect.FlatStyle = FlatStyle.Standard;
             ToolRoadTypeSelect.DropDownStyle = ComboBoxStyle.DropDownList;
-            ToolRoadTypeSelect.Items.Add(CurrentProject.VehicleTypes);
+            ToolRoadTypeSelect.ComboBox.DataSource = CurrentProject.RoadTypes;
 
             ToolEdit = new ToolStripButton();
-            ToolEdit.Name = "Edit";
+            ToolEdit.Name = "ToolEdit";
             ToolEdit.ToolTipText = "Edit";
             ToolEdit.Image = Resources.ToolEdit;
             ToolEdit.Click += ToolClick;
+
+            ToolRemove = new ToolStripButton();
+            ToolRemove.Name = "ToolRemove";
+            ToolRemove.ToolTipText = "Remove";
+            ToolRemove.Image = Resources.ToolRemove;
+            ToolRemove.Click += ToolClick;
             
             GUIMainToolStrip.Items.Add(ToolAddNode);
-            GUIMainToolStrip.Items.Add(ToolRemoveNode);
             GUIMainToolStrip.Items.Add(ToolSetNodeLight);
             GUIMainToolStrip.Items.Add(ToolSetNodeYield);
             GUIMainToolStrip.Items.Add(ToolSetNodeHome);
             GUIMainToolStrip.Items.Add(ToolSetNodeParking);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
             GUIMainToolStrip.Items.Add(ToolAddLightController);
+            GUIMainToolStrip.Items.Add(ToolLinkLight);
             GUIMainToolStrip.Items.Add(ToolAddDestination);
             GUIMainToolStrip.Items.Add(ToolDestinationTypeSelect);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
@@ -198,15 +202,16 @@ namespace A319TS
             GUIMainToolStrip.Items.Add(ToolRoadTypeSelect);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
             GUIMainToolStrip.Items.Add(ToolEdit);
+            GUIMainToolStrip.Items.Add(ToolRemove);
         }
         public ToolStrip GUIMainToolStrip;
         public ToolStripButton ToolAddNode;
-        public ToolStripButton ToolRemoveNode;
         public ToolStripButton ToolSetNodeLight;
         public ToolStripButton ToolSetNodeYield;
         public ToolStripButton ToolSetNodeHome;
         public ToolStripButton ToolSetNodeParking;
         public ToolStripButton ToolAddLightController;
+        public ToolStripButton ToolLinkLight;
         public ToolStripButton ToolAddDestination;
         public ToolStripComboBox ToolDestinationTypeSelect;
         public ToolStripButton ToolAddRoad;
@@ -214,6 +219,7 @@ namespace A319TS
         public ToolStripButton ToolSecondaryRoad;
         public ToolStripComboBox ToolRoadTypeSelect;
         public ToolStripButton ToolEdit;
+        public ToolStripButton ToolRemove;
 
         // MainPanel
         private void InitGUIMainViewport()

@@ -69,17 +69,18 @@ namespace A319TS
                 switch (ActiveTool.Name)
                 {
                     case "ToolAddNode": AddNode(); break;
-                    case "ToolRemoveNode": RemoveNode(); break;
                     case "ToolSetNodeLight": SetNodeType(Node.NodeType.Light); break;
                     case "ToolSetNodeYield": SetNodeType(Node.NodeType.Yield); break;
                     case "ToolSetNodeHome": SetNodeType(Node.NodeType.Home); break;
                     case "ToolSetNodeParking": SetNodeType(Node.NodeType.Parking); break;
-                    case "ToolAddDestination": ToolAddDestination(); break;
                     case "ToolAddLightController": AddLightController(); break;
+                    case "ToolLinkLight": LinkLight(); break;
+                    case "ToolAddDestination": ToolAddDestination(); break;
                     case "ToolAddRoad": AddRoad(); break;
                     case "ToolPrimaryRoad": PrimaryRoad(); break;
                     case "ToolSecondaryRoad": SecondaryRoad(); break;
                     case "ToolEdit": Edit(); break;
+                    case "ToolRemove": Remove(); break;
                     default: break;
                 }
             }
@@ -94,19 +95,15 @@ namespace A319TS
                 ((Node)target).Type = Node.NodeType.None;
             Viewport.Nodes.Refresh();
         }
-        private void RemoveNode()
+        private void RemoveNode(Node target)
         {
-            Node target = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
-            if (target != null)
-            {
-                foreach (Node node in Project.Nodes)
-                    for (int i = 0; i < node.Roads.Count; i++)
-                        if (node.Roads[i].Destination == target)
-                            node.Roads.Remove(node.Roads[i]);
+            foreach (Node node in Project.Nodes)
+                for (int i = 0; i < node.Roads.Count; i++)
+                    if (node.Roads[i].Destination == target)
+                        node.Roads.Remove(node.Roads[i]);
 
-                Project.Nodes.Remove(target);
-                Viewport.Roads.Refresh();
-            }
+            Project.Nodes.Remove(target);
+            Viewport.Roads.Refresh();
         }
         private void AddRoad()
         {
@@ -152,6 +149,20 @@ namespace A319TS
         {
 
         }
+        private void Remove()
+        {
+            object target = GetObjByGridPos();
+            if (target != null)
+            {
+                if (target.GetType() == typeof(Node))
+                    RemoveNode((Node)target);
+                else if (target.GetType() == typeof(Destination))
+                    Project.Destinations.Remove((Destination)target);
+                else if (target.GetType() == typeof(LightController))
+                    Project.LightControllers.Remove((LightController)target);
+                Viewport.Roads.Refresh();
+            }
+        }
         private void SetNodeType(Node.NodeType type)
         {
             Node target = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
@@ -176,6 +187,10 @@ namespace A319TS
             if (GetObjByGridPos() == null)
                 Project.LightControllers.Add(new LightController(Viewport.GridPos));
             Viewport.Entities.Refresh();
+        }
+        private void LinkLight()
+        {
+
         }
     }
 }

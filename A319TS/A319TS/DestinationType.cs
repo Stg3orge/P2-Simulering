@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace A319TS
 {
+    [Serializable]
     public class DestinationType
     {
         public string Name;
         public Color Color;
 
+        private DestinationType(){} // Serialize
         public DestinationType(string name, Color color)
         {
             Name = name;
