@@ -16,14 +16,14 @@ namespace A319TS
         public ToolStripButton ActiveTool;
         public ToolStripItemCollection Tools;
         public Viewport Viewport;
-        public Project CurrentProject;
+        public Project Project;
 
-        public ToolController(ToolStripItemCollection collection, Viewport viewport, Project currentProject)
+        public ToolController(ToolStripItemCollection collection, Viewport viewport, Project project)
         {
             Tools = collection;
             Viewport = viewport;
             Viewport.Input.MouseClick += ViewportClick;
-            CurrentProject = currentProject;
+            Project = project;
         }
 
         public void ToggleTool(ToolStripButton clickedTool)
@@ -49,9 +49,9 @@ namespace A319TS
         }
         private object GetObjByGridPos()
         {
-            Node node = CurrentProject.Nodes.Find(n => n.Position == Viewport.GridPos);
-            LightController controller = CurrentProject.LightControllers.Find(l => l.Position == Viewport.GridPos);
-            Destination dest = CurrentProject.Destinations.Find(d => d.Position == Viewport.GridPos);
+            Node node = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
+            LightController controller = Project.LightControllers.Find(l => l.Position == Viewport.GridPos);
+            Destination dest = Project.Destinations.Find(d => d.Position == Viewport.GridPos);
             if (node != null)
                 return node;
             else if (controller != null)
@@ -89,28 +89,28 @@ namespace A319TS
         {
             object target = GetObjByGridPos();
             if (target == null)
-                CurrentProject.Nodes.Add(new Node(Viewport.GridPos));
+                Project.Nodes.Add(new Node(Viewport.GridPos));
             else if (target.GetType() == typeof(Node))
                 ((Node)target).Type = Node.NodeType.None;
             Viewport.Nodes.Refresh();
         }
         private void RemoveNode()
         {
-            Node target = CurrentProject.Nodes.Find(n => n.Position == Viewport.GridPos);
+            Node target = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
             if (target != null)
             {
-                foreach (Node node in CurrentProject.Nodes)
+                foreach (Node node in Project.Nodes)
                     for (int i = 0; i < node.Roads.Count; i++)
                         if (node.Roads[i].Destination == target)
                             node.Roads.Remove(node.Roads[i]);
 
-                CurrentProject.Nodes.Remove(target);
+                Project.Nodes.Remove(target);
                 Viewport.Roads.Refresh();
             }
         }
         private void AddRoad()
         {
-            foreach (Node node in CurrentProject.Nodes)
+            foreach (Node node in Project.Nodes)
             {
                 if (Viewport.GridPos == node.Position)
                 {
@@ -154,27 +154,28 @@ namespace A319TS
         }
         private void SetNodeType(Node.NodeType type)
         {
-            Node target = CurrentProject.Nodes.Find(n => n.Position == Viewport.GridPos);
+            Node target = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
             if(target != null)
             {
-                target.Type = type;
+                if (type == Node.NodeType.Light && target.Type == Node.NodeType.Light)
+                    target.Green = !target.Green;
+                else
+                    target.Type = type;
+                
                 Viewport.Nodes.Refresh();
             }
         }
         private void ToolAddDestination()
         {
-            object target = GetObjByGridPos();
-            if (target == null)
-                CurrentProject.Destinations.Add(new Destination(Viewport.GridPos, new DestinationType("Test", Color.Green)));
+            if (GetObjByGridPos() == null)
+                Project.Destinations.Add(new Destination(Viewport.GridPos, new DestinationType("Test", Color.Green)));
             Viewport.Entities.Refresh();
         }
         private void AddLightController()
         {
-            object target = GetObjByGridPos();
-            if (target == null)
-                CurrentProject.LightControllers.Add(new LightController(Viewport.GridPos));
+            if (GetObjByGridPos() == null)
+                Project.LightControllers.Add(new LightController(Viewport.GridPos));
             Viewport.Entities.Refresh();
         }
-
     }
 }

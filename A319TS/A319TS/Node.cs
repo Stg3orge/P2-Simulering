@@ -14,15 +14,15 @@ namespace A319TS
         public bool Green;
 
         protected Node() { } // Serialize
-        public Node(Point position, NodeType type)
+        public Node(Point position, NodeType type) : this(position)
         {
-            Position = position;
             Type = type;
         }
         public Node(Point position)
         {
             Position = position;
             Type = NodeType.None;
+            Green = true;
         }
         
         public override string ToString()

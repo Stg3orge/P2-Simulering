@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace A319TS
 {
-    class VehicleType
+    public class VehicleType
     {
         public string Name;
         public int MaxSpeed;

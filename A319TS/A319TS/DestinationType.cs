@@ -17,5 +17,10 @@ namespace A319TS
             Name = name;
             Color = color;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

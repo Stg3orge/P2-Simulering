@@ -7,11 +7,12 @@ namespace A319TS
 {
     static class Pathfinder
     {
-        /* Resulting arrays {disk = arc, path = nodes}(components to create final graph) */
+        /* Errors, sorry
+        // Resulting arrays {disk = arc, path = nodes}(components to create final graph)
         static private double[] dist { get; set; }
         static private double[] path { get; set; }
 
-        /* Holds queue for the nodes to be evaluated */ 
+        // Holds queue for the nodes to be evaluated 
         static private List<int> queue = new List<int>();   // NOTE: Use nodeList[i].ID insted?
 
 
@@ -21,13 +22,13 @@ namespace A319TS
 
             Dijkstra(adj, startNode, endNode);
 
-            /* Createing final route */
+            // Createing final route
             double[,] Route = To2DArray(path, dist);
 
             return Route;
         }
 
-        /* Creates adj Matrix from a List of Nodes*/
+        // Creates adj Matrix from a List of Nodes
         static private double[,] CreateAdjMatrix(List<Node> nodeList)
         {
             double[,] adj = new double[nodeList.Count, nodeList.Count];
@@ -51,7 +52,7 @@ namespace A319TS
             return adj;
         }
 
-        /* Takes a adjacency matrix[graph], and a start/end nodes */
+        // Takes a adjacency matrix[graph], and a start/end nodes
         static private void Dijkstra(double[,] adj, Node startNode, Node endNode)
         {
             int len = adj.GetLength(0);
@@ -62,24 +63,24 @@ namespace A319TS
             {
                 int u = GetNextVertex();
 
-                /* Find the nodes that u connects to and perform relax */
+                // Find the nodes that u connects to and perform relax
                 for (int v = 0; v < len; v++)
                 {
-                    /* Checks for edges(roads) with negative weight */
+                    // Checks for edges(roads) with negative weight
                     if (adj[u, v] < 0)
                     {
                         throw new ArgumentException("Graph contains road(s) with negative length");
                     }
-                    /* checking if the next node is the endNode */
+                    // checking if the next node is the endNode
                     if(u == endNode.ID)
                     {
                         break;
                     }
 
-                    /* Check for an edge(road) between u and v */
+                    // Check for an edge(road) between u and v
                     if (adj[u, v] > 0)
                     {
-                        /* Edge exists */
+                        // Edge exists
                         if (dist[v] > dist[u] + adj[u, v])
                         {
                             dist[v] = dist[u] + adj[u, v];
@@ -90,13 +91,13 @@ namespace A319TS
             }
         }
 
-        /* Sets up initial settings */
+        // Sets up initial settings
         static private void Initialize(int startNodeID, int len)
         {
             dist = new double[len];
             path = new double[len];
 
-            /* Set distance to all nodes to MAX */
+            // Set distance to all nodes to MAX
             for (int i = 0; i < len; i++)
             {
                 dist[i] = double.MaxValue;
@@ -104,18 +105,18 @@ namespace A319TS
                 queue.Add(i);
             }
 
-            /* Set distance to 0 for starting point and the previous node to null (-1) */
+            // Set distance to 0 for starting point and the previous node to null (-1)
             dist[startNodeID] = 0;
             path[startNodeID] = -1;
         }
 
-        /* Retrives next node to evaluate from the queue */
+        // Retrives next node to evaluate from the queue
         static private int GetNextVertex()
         {
             double min = double.MaxValue;
             int Vertex = -1;
 
-            /* Search through queue to find the next node having the smallest distance */
+            // Search through queue to find the next node having the smallest distance
             foreach (int j in queue)
             {
                 if (dist[j] <= min)
@@ -132,7 +133,7 @@ namespace A319TS
 
 
 
-        /* http://stackoverflow.com/questions/18735376/combining-two-double-arrays-into-double/18735632#18735632 */
+        // http://stackoverflow.com/questions/18735376/combining-two-double-arrays-into-double/18735632#18735632
         static private T[,] To2DArray<T>(params T[][] arrays)
         {
             if (arrays == null) throw new ArgumentNullException("arrays");
@@ -155,6 +156,6 @@ namespace A319TS
 
             return result;
         }
-
+        */
     }
 }

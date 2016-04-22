@@ -62,7 +62,7 @@ namespace A319TS
                         DrawNode(Brushes.Blue, position, args);
                         break;
                     case Node.NodeType.Light:
-                        if (node.Green) DrawNode(Brushes.Green, position, args);
+                        if (node.Green) DrawNode(Brushes.LimeGreen, position, args);
                         else DrawNode(Brushes.Red, position, args);
                         break;
                     default:
