@@ -184,7 +184,13 @@ namespace A319TS
             ToolRemove.ToolTipText = "Remove";
             ToolRemove.Image = Resources.ToolRemove;
             ToolRemove.Click += ToolClick;
-            
+
+            ToolMove = new ToolStripButton();
+            ToolMove.Name = "ToolMoveObject";
+            ToolMove.ToolTipText = "Move Object";
+            ToolMove.Image = Resources.ToolMove;
+            ToolMove.Click += ToolClick;
+
             GUIMainToolStrip.Items.Add(ToolAddNode);
             GUIMainToolStrip.Items.Add(ToolSetNodeLight);
             GUIMainToolStrip.Items.Add(ToolSetNodeYield);
@@ -203,6 +209,7 @@ namespace A319TS
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
             GUIMainToolStrip.Items.Add(ToolEdit);
             GUIMainToolStrip.Items.Add(ToolRemove);
+            GUIMainToolStrip.Items.Add(ToolMove);
         }
         public ToolStrip GUIMainToolStrip;
         public ToolStripButton ToolAddNode;
@@ -220,6 +227,7 @@ namespace A319TS
         public ToolStripComboBox ToolRoadTypeSelect;
         public ToolStripButton ToolEdit;
         public ToolStripButton ToolRemove;
+        public ToolStripButton ToolMove;
 
         // MainPanel
         private void InitGUIMainViewport()

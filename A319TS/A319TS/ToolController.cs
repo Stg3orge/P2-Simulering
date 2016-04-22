@@ -20,6 +20,9 @@ namespace A319TS
         public Viewport Viewport;
         public Project Project;
 
+        bool FirstMove = true;
+        object FirstObjectMove;
+
         public ToolController(ToolStripItemCollection collection, Viewport viewport, Project project)
         {
             Tools = collection;
@@ -69,6 +72,7 @@ namespace A319TS
                     case "ToolSecondaryRoad": SecondaryRoad(); break;
                     case "ToolEdit": Edit(); break;
                     case "ToolRemove": Remove(); break;
+                    case "ToolMoveObject": ToolMoveObject(); break;
                     default: break;
                 }
             }
@@ -151,6 +155,42 @@ namespace A319TS
                 Viewport.Roads.Refresh();
             }
         }
+        private void ToolMoveObject()
+        {
+            object obj = Viewport.GetObjByGridPos();
+
+            if (FirstMove && obj != null)
+            {
+                FirstObjectMove = obj;
+                Viewport.HoverConnection = Viewport.GridPos;
+                FirstMove = false;
+            }
+            else if(!FirstMove && obj == null)
+            {
+                if (FirstObjectMove.GetType() == typeof(Node))
+                {
+                    Node node = (Node)FirstObjectMove;
+                    node.Position = Viewport.GridPos;
+                    Viewport.HoverConnection = new Point(-1, -1);
+                    FirstMove = true;
+                }
+                else if (FirstObjectMove.GetType() == typeof(LightController))
+                {
+                    LightController lightcontrol = (LightController)FirstObjectMove;
+                    lightcontrol.Position = Viewport.GridPos;
+                    Viewport.HoverConnection = new Point(-1, -1);
+                    FirstMove = true;
+                }
+                else if (FirstObjectMove.GetType() == typeof(Destination))
+                {
+                    Destination dest = (Destination)FirstObjectMove;
+                    dest.Position = Viewport.GridPos;
+                    Viewport.HoverConnection = new Point(-1, -1);
+                    FirstMove = true;
+                }
+            }
+        }
+
         private void SetNodeType(Node.NodeType type)
         {
             Node target = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
