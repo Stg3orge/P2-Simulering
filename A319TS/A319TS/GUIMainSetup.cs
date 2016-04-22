@@ -161,13 +161,13 @@ namespace A319TS
             ToolAddDestination = new ToolStripButton();
             ToolAddDestination.Name = "ToolAddDestination";
             ToolAddDestination.ToolTipText = "Add Destination";
-            ToolAddDestination.Image = Resources.ToolAddNode;
+            ToolAddDestination.Image = Resources.ToolAddNode;   // mangler icon
             ToolAddDestination.Click += ToolAddDestinationClick;
 
             ToolAddLightController = new ToolStripButton();
             ToolAddLightController.Name = "ToolAddLightController";
             ToolAddLightController.ToolTipText = "Add Light Controller";
-            ToolAddLightController.Image = Resources.ToolAddNode;
+            ToolAddLightController.Image = Resources.ToolAddNode;   // mangler icon
             ToolAddLightController.Click += ToolAddLightControllerClick;
 
             GUIMainToolStrip.Items.Add(ToolAddNode);

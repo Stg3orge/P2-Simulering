@@ -78,6 +78,7 @@ namespace A319TS
         private void SetNodeHomeClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeHome); }
         private void SetNodeParkingClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeParking); }
 
+        // Destination and Light Controller - Not finished
         private void ToolAddDestinationClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddDestination); }
         private void ToolAddLightControllerClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddLightController); }
         
