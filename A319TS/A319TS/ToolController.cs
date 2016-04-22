@@ -46,6 +46,20 @@ namespace A319TS
                 }
             }
         }
+        private object GetObjByGridPos()
+        {
+            Node node = CurrentProject.Nodes.Find(n => n.Position == Viewport.GridPos);
+            LightController controller = CurrentProject.LightControllers.Find(l => l.Position == Viewport.GridPos);
+            Destination dest = CurrentProject.Destinations.Find(d => d.Position == Viewport.GridPos);
+            if (node != null)
+                return node;
+            else if (controller != null)
+                return controller;
+            else if (dest != null)
+                return dest;
+            else
+                return null;
+        }
 
         private void ViewportClick(object sender, MouseEventArgs args)
         {
@@ -70,11 +84,11 @@ namespace A319TS
 
         private void AddNode()
         {
-            Node target = CurrentProject.Nodes.Find(n => n.Position == Viewport.GridPos);
+            object target = GetObjByGridPos();
             if (target == null)
                 CurrentProject.Nodes.Add(new Node(Viewport.GridPos));
-            else
-                target.Type = Node.NodeType.None;
+            else if (target.GetType() == typeof(Node))
+                ((Node)target).Type = Node.NodeType.None;
             Viewport.Nodes.Refresh();
         }
         private void RemoveNode()
