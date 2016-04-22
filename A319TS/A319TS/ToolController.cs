@@ -184,10 +184,9 @@ namespace A319TS
                 
                 if (FirstLightControllerConnection && obj.GetType() == typeof(LightController))
                 {
-                    LightController controller = (LightController)obj;
-                    FirstLightController = controller;
+                    FirstLightController = (LightController)obj;
                     FirstLightControllerConnection = false;
-                    Viewport.HoverConnection = controller.Position;
+                    Viewport.HoverConnection = FirstLightController.Position;
                     Viewport.Roads.Refresh();
                 }
                 else if (!FirstLightControllerConnection && obj.GetType() == typeof(Node))

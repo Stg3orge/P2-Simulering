@@ -126,11 +126,17 @@ namespace A319TS
             Point textPosition = GetDrawPosition(GridPos);
             ellipsePosition.X -= EntitySize / 2;
             ellipsePosition.Y -= EntitySize / 2;
-            textPosition.X += EntitySize / 2;
+            textPosition.X += EntitySize;
             textPosition.Y -= EntitySize / 2;
             args.Graphics.DrawEllipse(Pens.Black, new Rectangle(ellipsePosition, new Size(EntitySize, EntitySize)));
-            if (obj != null) args.Graphics.DrawString(obj.ToString(), SystemFonts.DefaultFont, Brushes.Black, textPosition);
+            if (obj != null) DrawOutlinedString(obj.ToString(), textPosition, args);
             if (HoverConnection != new Point(-1, -1)) args.Graphics.DrawLine(Pens.Black, GetDrawPosition(HoverConnection), GetDrawPosition(GridPos));
+        }
+        private void DrawOutlinedString(string text, Point position, PaintEventArgs args)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddString(text, FontFamily.GenericMonospace, (int)FontStyle.Regular, args.Graphics.DpiY * 8 / 72, position, new StringFormat());
+            args.Graphics.DrawPath(Pens.DarkSlateGray, path);
         }
     }
 }
