@@ -70,18 +70,16 @@ namespace A319TS
                 {
                     case "ToolAddNode": AddNode(); break;
                     case "ToolRemoveNode": RemoveNode(); break;
+                    case "ToolSetNodeLight": SetNodeType(Node.NodeType.Light); break;
+                    case "ToolSetNodeYield": SetNodeType(Node.NodeType.Yield); break;
+                    case "ToolSetNodeHome": SetNodeType(Node.NodeType.Home); break;
+                    case "ToolSetNodeParking": SetNodeType(Node.NodeType.Parking); break;
+                    case "ToolAddDestination": ToolAddDestination(); break;
+                    case "ToolAddLightController": AddLightController(); break;
                     case "ToolAddRoad": AddRoad(); break;
                     case "ToolPrimaryRoad": PrimaryRoad(); break;
                     case "ToolSecondaryRoad": SecondaryRoad(); break;
                     case "ToolEdit": Edit(); break;
-                    case "SetNodeTrafficLight": SetNodeType(Node.NodeType.Light); break;
-                    case "SetNodeYield": SetNodeType(Node.NodeType.Yield); break;
-                    case "SetNodeHome": SetNodeType(Node.NodeType.Home); break;
-                    case "SetNodeParking": SetNodeType(Node.NodeType.Parking); break;
-                        
-                        // added - not finished
-                    case "ToolAddDestination": ToolAddDestination(); break;
-                    case "ToolAddLightController": AddLightController(); break;
                     default: break;
                 }
             }

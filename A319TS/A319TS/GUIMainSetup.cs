@@ -107,6 +107,42 @@ namespace A319TS
             ToolRemoveNode.Image = Resources.ToolRemoveNode;
             ToolRemoveNode.Click += ToolRemoveNodeClick;
 
+            ToolSetNodeLight = new ToolStripButton();
+            ToolSetNodeLight.Name = "ToolSetNodeTrafficLight";
+            ToolSetNodeLight.ToolTipText = "Set Node Light";
+            ToolSetNodeLight.Image = Resources.ToolSetNodeLight;
+            ToolSetNodeLight.Click += SetNodeTrafficLightClick;
+
+            ToolSetNodeYield = new ToolStripButton();
+            ToolSetNodeYield.Name = "ToolSetNodeYield";
+            ToolSetNodeYield.ToolTipText = "Set Node Yield";
+            ToolSetNodeYield.Image = Resources.ToolSetNodeYield;
+            ToolSetNodeYield.Click += SetNodeYieldClick;
+
+            ToolSetNodeHome = new ToolStripButton();
+            ToolSetNodeHome.Name = "ToolSetNodeHome";
+            ToolSetNodeHome.ToolTipText = "Set Node Home";
+            ToolSetNodeHome.Image = Resources.ToolSetNodeHome;
+            ToolSetNodeHome.Click += SetNodeHomeClick;
+
+            ToolSetNodeParking = new ToolStripButton();
+            ToolSetNodeParking.Name = "ToolSetNodeParking";
+            ToolSetNodeParking.ToolTipText = "Set Node Parking";
+            ToolSetNodeParking.Image = Resources.ToolSetNodeParking;
+            ToolSetNodeParking.Click += SetNodeParkingClick;
+
+            ToolAddDestination = new ToolStripButton();
+            ToolAddDestination.Name = "ToolAddDestination";
+            ToolAddDestination.ToolTipText = "Add Destination";
+            ToolAddDestination.Image = Resources.ToolAddDestination;
+            ToolAddDestination.Click += ToolAddDestinationClick;
+
+            ToolAddLightController = new ToolStripButton();
+            ToolAddLightController.Name = "ToolAddLightController";
+            ToolAddLightController.ToolTipText = "Add Light Controller";
+            ToolAddLightController.Image = Resources.ToolAddLightController;
+            ToolAddLightController.Click += ToolAddLightControllerClick;
+
             ToolAddRoad = new ToolStripButton();
             ToolAddRoad.Name = "ToolAddRoad";
             ToolAddRoad.ToolTipText = "Add Road";
@@ -116,13 +152,13 @@ namespace A319TS
             ToolPrimaryRoad = new ToolStripButton();
             ToolPrimaryRoad.Name = "ToolPrimaryRoad";
             ToolPrimaryRoad.ToolTipText = "Add Primary Road";
-            ToolPrimaryRoad.Image = Resources.ToolAddRoad;
+            ToolPrimaryRoad.Image = Resources.ToolAddPrimary;
             ToolPrimaryRoad.Click += ToolPrimaryRoadClick;
 
             ToolSecondaryRoad = new ToolStripButton();
             ToolSecondaryRoad.Name = "ToolSecondaryRoad";
             ToolSecondaryRoad.ToolTipText = "Add Secondary Road";
-            ToolSecondaryRoad.Image = Resources.ToolAddRoad;
+            ToolSecondaryRoad.Image = Resources.ToolAddSecondary;
             ToolSecondaryRoad.Click += ToolSecondaryRoadClick;
 
             ToolRoadTypeSelect = new ToolStripDropDownButton();
@@ -131,47 +167,18 @@ namespace A319TS
             ToolEdit = new ToolStripButton();
             ToolEdit.Name = "Edit";
             ToolEdit.ToolTipText = "Edit";
-            ToolEdit.Image = Resources.ToolToggleRoad;
+            ToolEdit.Image = Resources.ToolEdit;
             ToolEdit.Click += ToolEditClick;
-
-            SetNodeTrafficLight = new ToolStripButton();
-            SetNodeTrafficLight.Name = "SetNodeTrafficLight";
-            SetNodeTrafficLight.ToolTipText = "Set node = Traffic Light";
-            SetNodeTrafficLight.Image = Resources.ToolAddNode;
-            SetNodeTrafficLight.Click += SetNodeTrafficLightClick;
-
-            SetNodeYield = new ToolStripButton();
-            SetNodeYield.Name = "SetNodeYield";
-            SetNodeYield.ToolTipText = "Set node = Yield";
-            SetNodeYield.Image = Resources.ToolAddNode;
-            SetNodeYield.Click += SetNodeYieldClick;
-
-            SetNodeHome = new ToolStripButton();
-            SetNodeHome.Name = "SetNodeHome";
-            SetNodeHome.ToolTipText = "Set node = Home";
-            SetNodeHome.Image = Resources.ToolAddNode;
-            SetNodeHome.Click += SetNodeHomeClick;
-
-            SetNodeParking = new ToolStripButton();
-            SetNodeParking.Name = "SetNodeParking";
-            SetNodeParking.ToolTipText = "Set node = Parking";
-            SetNodeParking.Image = Resources.ToolAddNode;
-            SetNodeParking.Click += SetNodeParkingClick;
-
-            ToolAddDestination = new ToolStripButton();
-            ToolAddDestination.Name = "ToolAddDestination";
-            ToolAddDestination.ToolTipText = "Add Destination";
-            ToolAddDestination.Image = Resources.ToolAddNode;   // mangler icon
-            ToolAddDestination.Click += ToolAddDestinationClick;
-
-            ToolAddLightController = new ToolStripButton();
-            ToolAddLightController.Name = "ToolAddLightController";
-            ToolAddLightController.ToolTipText = "Add Light Controller";
-            ToolAddLightController.Image = Resources.ToolAddNode;   // mangler icon
-            ToolAddLightController.Click += ToolAddLightControllerClick;
-
+            
             GUIMainToolStrip.Items.Add(ToolAddNode);
             GUIMainToolStrip.Items.Add(ToolRemoveNode);
+            GUIMainToolStrip.Items.Add(ToolSetNodeLight);
+            GUIMainToolStrip.Items.Add(ToolSetNodeYield);
+            GUIMainToolStrip.Items.Add(ToolSetNodeHome);
+            GUIMainToolStrip.Items.Add(ToolSetNodeParking);
+            GUIMainToolStrip.Items.Add(new ToolStripSeparator());
+            GUIMainToolStrip.Items.Add(ToolAddDestination);
+            GUIMainToolStrip.Items.Add(ToolAddLightController);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
             GUIMainToolStrip.Items.Add(ToolAddRoad);
             GUIMainToolStrip.Items.Add(ToolPrimaryRoad);
@@ -179,14 +186,6 @@ namespace A319TS
             GUIMainToolStrip.Items.Add(ToolRoadTypeSelect);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
             GUIMainToolStrip.Items.Add(ToolEdit);
-            GUIMainToolStrip.Items.Add(SetNodeTrafficLight);
-            GUIMainToolStrip.Items.Add(SetNodeYield);
-            GUIMainToolStrip.Items.Add(SetNodeHome);
-            GUIMainToolStrip.Items.Add(SetNodeParking);
-            GUIMainToolStrip.Items.Add(new ToolStripSeparator());
-            GUIMainToolStrip.Items.Add(ToolAddDestination);
-            GUIMainToolStrip.Items.Add(ToolAddLightController);
-
         }
         public ToolStrip GUIMainToolStrip;
         public ToolStripButton ToolAddNode;
@@ -196,10 +195,10 @@ namespace A319TS
         public ToolStripButton ToolSecondaryRoad;
         public ToolStripDropDownButton ToolRoadTypeSelect;
         public ToolStripButton ToolEdit;
-        public ToolStripButton SetNodeTrafficLight;
-        public ToolStripButton SetNodeYield;
-        public ToolStripButton SetNodeHome;
-        public ToolStripButton SetNodeParking;
+        public ToolStripButton ToolSetNodeLight;
+        public ToolStripButton ToolSetNodeYield;
+        public ToolStripButton ToolSetNodeHome;
+        public ToolStripButton ToolSetNodeParking;
         public ToolStripButton ToolAddDestination;
         public ToolStripButton ToolAddLightController;
 

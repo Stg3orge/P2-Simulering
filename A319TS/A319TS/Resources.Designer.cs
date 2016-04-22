@@ -73,9 +73,39 @@ namespace A319TS {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ToolAddDestination {
+            get {
+                object obj = ResourceManager.GetObject("ToolAddDestination", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToolAddLightController {
+            get {
+                object obj = ResourceManager.GetObject("ToolAddLightController", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ToolAddNode {
             get {
                 object obj = ResourceManager.GetObject("ToolAddNode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToolAddPrimary {
+            get {
+                object obj = ResourceManager.GetObject("ToolAddPrimary", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,6 +123,26 @@ namespace A319TS {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ToolAddSecondary {
+            get {
+                object obj = ResourceManager.GetObject("ToolAddSecondary", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToolEdit {
+            get {
+                object obj = ResourceManager.GetObject("ToolEdit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ToolRemoveNode {
             get {
                 object obj = ResourceManager.GetObject("ToolRemoveNode", resourceCulture);
@@ -103,9 +153,39 @@ namespace A319TS {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ToolToggleRoad {
+        internal static System.Drawing.Bitmap ToolSetNodeHome {
             get {
-                object obj = ResourceManager.GetObject("ToolToggleRoad", resourceCulture);
+                object obj = ResourceManager.GetObject("ToolSetNodeHome", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToolSetNodeLight {
+            get {
+                object obj = ResourceManager.GetObject("ToolSetNodeLight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToolSetNodeParking {
+            get {
+                object obj = ResourceManager.GetObject("ToolSetNodeParking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToolSetNodeYield {
+            get {
+                object obj = ResourceManager.GetObject("ToolSetNodeYield", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
