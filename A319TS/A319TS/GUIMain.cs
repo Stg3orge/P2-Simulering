@@ -22,7 +22,7 @@ namespace A319TS
             CurrentProject.Nodes.Add(new Node(new Point(14, 14), Node.NodeType.Parking));
             CurrentProject.Nodes.Add(new Node(new Point(16, 16), Node.NodeType.Yield));
             CurrentProject.Destinations.Add(new Destination(new Point(6, 6), new DestinationType("Work", Color.Green)));
-            CurrentProject.LightControllers.Add(new LightController(new Point(8, 8), 10, 10));
+            CurrentProject.LightControllers.Add(new LightController(new Point(8, 8)));
         }
 
         // MainMenuStrip Events

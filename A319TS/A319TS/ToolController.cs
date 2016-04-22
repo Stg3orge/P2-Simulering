@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace A319TS
 {
@@ -77,6 +78,10 @@ namespace A319TS
                     case "SetNodeYield": SetNodeType(Node.NodeType.Yield); break;
                     case "SetNodeHome": SetNodeType(Node.NodeType.Home); break;
                     case "SetNodeParking": SetNodeType(Node.NodeType.Parking); break;
+                        
+                        // added - not finished
+                    case "ToolAddDestination": ToolAddDestination(); break;
+                    case "ToolAddLightController": AddLightController(); break;
                     default: break;
                 }
             }
@@ -157,6 +162,20 @@ namespace A319TS
                 target.Type = type;
                 Viewport.Nodes.Refresh();
             }
+        }
+        private void ToolAddDestination()
+        {
+            object target = GetObjByGridPos();
+            if (target == null)
+                CurrentProject.Destinations.Add(new Destination(Viewport.GridPos, new DestinationType("Test", Color.Green)));
+            Viewport.Entities.Refresh();
+        }
+        private void AddLightController()
+        {
+            object target = GetObjByGridPos();
+            if (target == null)
+                CurrentProject.LightControllers.Add(new LightController(Viewport.GridPos));
+            Viewport.Entities.Refresh();
         }
 
     }
