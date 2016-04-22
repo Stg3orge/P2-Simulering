@@ -121,16 +121,40 @@
   <data name="P2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\P2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ToolAddDestination" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ToolAddDestination.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToolAddLightController" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ToolAddLightController.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ToolAddNode" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ToolAddNode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToolAddPrimary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ToolAddPrimary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ToolAddRoad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ToolAddRoad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ToolAddSecondary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ToolAddSecondary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToolEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ToolEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ToolRemoveNode" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ToolRemoveNode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ToolToggleRoad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ToggleRoad.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ToolSetNodeHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ToolSetNodeHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToolSetNodeLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ToolSetNodeLight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToolSetNodeParking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ToolSetNodeParking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToolSetNodeYield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ToolSetNodeYield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

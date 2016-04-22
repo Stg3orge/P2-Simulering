@@ -22,7 +22,7 @@ namespace A319TS
             CurrentProject.Nodes.Add(new Node(new Point(14, 14), Node.NodeType.Parking));
             CurrentProject.Nodes.Add(new Node(new Point(16, 16), Node.NodeType.Yield));
             CurrentProject.Destinations.Add(new Destination(new Point(6, 6), new DestinationType("Work", Color.Green)));
-            CurrentProject.LightControllers.Add(new LightController(new Point(8, 8), 10, 10));
+            CurrentProject.LightControllers.Add(new LightController(new Point(8, 8)));
         }
 
         // MainMenuStrip Events
@@ -53,6 +53,18 @@ namespace A319TS
         {
 
         }
+        private void MenuSettingsSimulationClick(object sender, EventArgs e)
+        {
+
+        }
+        private void MenuSettingsDestinationsClick(object sender, EventArgs e)
+        {
+
+        }
+        private void MenuSettingsVehiclesClick(object sender, EventArgs e)
+        {
+
+        }
 
         // MainToolStrip Events
         private void ToolAddNodeClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddNode); }
@@ -61,12 +73,16 @@ namespace A319TS
         private void ToolPrimaryRoadClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolPrimaryRoad); }
         private void ToolSecondaryRoadClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolSecondaryRoad); }
         private void ToolEditClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolEdit); }
-        private void SetNodeTrafficLightClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeTrafficLight); }
-        private void SetNodeYieldClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeYield); }
-        private void SetNodeHomeClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeHome); }
-        private void SetNodeParkingClick(object sender, EventArgs args) { ToolController.ToggleTool(SetNodeParking); }
+        private void SetNodeTrafficLightClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolSetNodeLight); }
+        private void SetNodeYieldClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolSetNodeYield); }
+        private void SetNodeHomeClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolSetNodeHome); }
+        private void SetNodeParkingClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolSetNodeParking); }
 
+        // Destination and Light Controller - Not finished
+        private void ToolAddDestinationClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddDestination); }
+        private void ToolAddLightControllerClick(object sender, EventArgs args) { ToolController.ToggleTool(ToolAddLightController); }
         
+
         // Update GUI Methods
         public void UpdateTitle() { Text = "A319TS - " + CurrentProject.Name; }
         public void UpdateStatusNodes() { StatusNodes.Text = CurrentProject.Nodes.Count.ToString(); }

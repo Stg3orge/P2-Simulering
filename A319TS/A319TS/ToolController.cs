@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace A319TS
 {
@@ -46,6 +47,20 @@ namespace A319TS
                 }
             }
         }
+        private object GetObjByGridPos()
+        {
+            Node node = CurrentProject.Nodes.Find(n => n.Position == Viewport.GridPos);
+            LightController controller = CurrentProject.LightControllers.Find(l => l.Position == Viewport.GridPos);
+            Destination dest = CurrentProject.Destinations.Find(d => d.Position == Viewport.GridPos);
+            if (node != null)
+                return node;
+            else if (controller != null)
+                return controller;
+            else if (dest != null)
+                return dest;
+            else
+                return null;
+        }
 
         private void ViewportClick(object sender, MouseEventArgs args)
         {
@@ -55,14 +70,16 @@ namespace A319TS
                 {
                     case "ToolAddNode": AddNode(); break;
                     case "ToolRemoveNode": RemoveNode(); break;
+                    case "ToolSetNodeLight": SetNodeType(Node.NodeType.Light); break;
+                    case "ToolSetNodeYield": SetNodeType(Node.NodeType.Yield); break;
+                    case "ToolSetNodeHome": SetNodeType(Node.NodeType.Home); break;
+                    case "ToolSetNodeParking": SetNodeType(Node.NodeType.Parking); break;
+                    case "ToolAddDestination": ToolAddDestination(); break;
+                    case "ToolAddLightController": AddLightController(); break;
                     case "ToolAddRoad": AddRoad(); break;
                     case "ToolPrimaryRoad": PrimaryRoad(); break;
                     case "ToolSecondaryRoad": SecondaryRoad(); break;
                     case "ToolEdit": Edit(); break;
-                    case "SetNodeTrafficLight": SetNodeType(Node.NodeType.Light); break;
-                    case "SetNodeYield": SetNodeType(Node.NodeType.Yield); break;
-                    case "SetNodeHome": SetNodeType(Node.NodeType.Home); break;
-                    case "SetNodeParking": SetNodeType(Node.NodeType.Parking); break;
                     default: break;
                 }
             }
@@ -70,11 +87,11 @@ namespace A319TS
 
         private void AddNode()
         {
-            Node target = CurrentProject.Nodes.Find(n => n.Position == Viewport.GridPos);
+            object target = GetObjByGridPos();
             if (target == null)
                 CurrentProject.Nodes.Add(new Node(Viewport.GridPos));
-            else
-                target.Type = Node.NodeType.None;
+            else if (target.GetType() == typeof(Node))
+                ((Node)target).Type = Node.NodeType.None;
             Viewport.Nodes.Refresh();
         }
         private void RemoveNode()
@@ -141,7 +158,22 @@ namespace A319TS
             if(target != null)
             {
                 target.Type = type;
+                Viewport.Nodes.Refresh();
             }
+        }
+        private void ToolAddDestination()
+        {
+            object target = GetObjByGridPos();
+            if (target == null)
+                CurrentProject.Destinations.Add(new Destination(Viewport.GridPos, new DestinationType("Test", Color.Green)));
+            Viewport.Entities.Refresh();
+        }
+        private void AddLightController()
+        {
+            object target = GetObjByGridPos();
+            if (target == null)
+                CurrentProject.LightControllers.Add(new LightController(Viewport.GridPos));
+            Viewport.Entities.Refresh();
         }
 
     }

@@ -15,12 +15,12 @@ namespace A319TS
         private int _current;
         private int _counter = 0;
 
-        public LightController(Point position, int firstTime, int secondTime) : base(position)
+        public LightController(Point position) : base(position)
         {
             Lights = new List<Node>();
-            _current = firstTime;
-            FirstTime = firstTime;
-            SecondTime = secondTime;
+            FirstTime = 10;
+            SecondTime = 10;
+            _current = FirstTime;
             
         }
 

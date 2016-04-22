@@ -116,6 +116,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\ToggleRoad.bmp" />
+    <None Include="Resources\ToolSetNodeYield.png" />
+    <None Include="Resources\ToolSetNodeParking.png" />
+    <None Include="Resources\ToolSetNodeLight.png" />
+    <None Include="Resources\ToolSetNodeHome.png" />
+    <None Include="Resources\ToolEdit.png" />
+    <None Include="Resources\ToolAddSecondary.png" />
+    <None Include="Resources\ToolAddPrimary.png" />
+    <None Include="Resources\ToolAddLightController.png" />
+    <None Include="Resources\ToolAddDestination.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
