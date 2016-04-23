@@ -139,7 +139,12 @@ namespace A319TS
         }
         private void Edit()
         {
-
+            object obj = Viewport.GetObjByGridPos();
+            if (obj != null)
+            {
+                GUIToolEdit EditDialog = new GUIToolEdit(obj);
+                EditDialog.ShowDialog();
+            }
         }
         private void Remove()
         {
