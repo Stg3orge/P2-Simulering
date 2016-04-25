@@ -83,7 +83,7 @@ namespace A319TS
             object target = Viewport.GetObjByGridPos();
             if (target == null)
                 Project.Nodes.Add(new Node(Viewport.GridPos));
-            else if (target.GetType() == typeof(Node))
+            else if (target is Node)
                 ((Node)target).Type = Node.NodeType.None;
             Viewport.Nodes.Refresh();
         }
@@ -142,7 +142,7 @@ namespace A319TS
             object obj = Viewport.GetObjByGridPos();
             if (obj != null)
             {
-                GUIToolEdit EditDialog = new GUIToolEdit(obj);
+                GUIToolEdit EditDialog = new GUIToolEdit(obj, Project);
                 EditDialog.ShowDialog();
             }
         }

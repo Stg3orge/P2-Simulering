@@ -15,7 +15,7 @@ namespace A319TS
         private Label NodeLight;
         private TextBox NodePositionField;
         private ComboBox NodeTypeField;
-        private ComboBox NodeLightField;
+        private CheckBox NodeLightCheck;
         private Label NodeRoads;
         private List<Label> NodeRoadLabels;
         private List<ComboBox> NodeRoadTypes;
@@ -51,7 +51,7 @@ namespace A319TS
 
             NodePositionField = new TextBox();
             NodePositionField.Text = node.Position.X + ", " + node.Position.Y;
-            NodePositionField.Location = new Point(62, 13);
+            NodePositionField.Location = new Point(66, 13);
             NodePositionField.Size = new Size(100, 20);
             NodePositionField.ReadOnly = true;
             Controls.Add(NodePositionField);
@@ -63,8 +63,9 @@ namespace A319TS
             Controls.Add(NodeType);
 
             NodeTypeField = new ComboBox();
-            NodeTypeField.Location = new Point(62, 40);
+            NodeTypeField.Location = new Point(66, 40);
             NodeTypeField.Size = new Size(100, 21);
+            NodeTypeField.DataSource = Enum.GetValues(typeof(Node.NodeType));
             Controls.Add(NodeTypeField);
 
             NodeLight = new Label();
@@ -73,10 +74,11 @@ namespace A319TS
             NodeLight.AutoSize = true;
             Controls.Add(NodeLight);
 
-            NodeLightField = new ComboBox();
-            NodeLightField.Location = new Point(62, 68);
-            NodeLightField.Size = new Size(100, 21);
-            Controls.Add(NodeLightField);
+            NodeLightCheck = new CheckBox();
+            NodeLightCheck.Location = new Point(67, 68);
+            NodeLightCheck.Size = new Size(100, 21);
+            NodeLightCheck.DataBindings.Add("Checked", node, "Green");
+            Controls.Add(NodeLightCheck);
 
             NodeRoads = new Label();
             NodeRoads.Text = "Roads";

@@ -10,15 +10,17 @@ namespace A319TS
 {
     partial class GUIToolEdit : Form
     {
-        public GUIToolEdit(object obj)
+        private Project _project;
+        public GUIToolEdit(object obj, Project project)
         {
+            _project = project;
             Setup();
             if (obj is Node)
                 InitEditNode(obj as Node);
             else if (obj is Destination)
-                EditDestination(obj);
+                InitEditDestination(obj as Destination);
             else if (obj is LightController)
-                EditLightController(obj);
+                InitEditLightController(obj as LightController);
         }
         private void Setup()
         {
@@ -33,17 +35,6 @@ namespace A319TS
             Size = new Size(width, height);
             MinimumSize = new Size(width, height);
             MaximumSize = new Size(width, height);
-        }
-        
-        private void EditLightController(object obj)
-        {
-            SetSize(210, 110);
-
-        }
-        private void EditDestination(object obj)
-        {
-            SetSize(210, 110);
-
         }
     }
 }
