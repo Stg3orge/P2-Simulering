@@ -73,11 +73,6 @@ namespace A319TS
                         if (node.Green) DrawNode(Brushes.LimeGreen, position, args);
                         else DrawNode(Brushes.Red, position, args);
                         break;
-                        
-                        
-                        // 
-
-               
 
                     case Node.NodeType.Inbound:
                         
@@ -89,7 +84,6 @@ namespace A319TS
                         DrawNode(Brushes.Black, position, args);
                         DrawArrow(node, false, args);
                         break;
-                        //
                     default:
                         DrawNode(Brushes.White, position, args);
                         break;
@@ -101,7 +95,6 @@ namespace A319TS
             args.Graphics.FillEllipse(fill, position.X, position.Y, NodeSize, NodeSize);
             args.Graphics.DrawEllipse(Pens.Black, position.X, position.Y, NodeSize, NodeSize);
         }
-
         private void DrawArrow(Node node, bool left, PaintEventArgs args)
         {
             Point PosNode = GetDrawPosition(node.Position);
@@ -119,7 +112,6 @@ namespace A319TS
                 args.Graphics.DrawLine(arrow, PosNode, offset);
             }
         }
-
         private void DrawEntities(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
