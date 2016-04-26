@@ -142,8 +142,21 @@ namespace A319TS
             object obj = Viewport.GetObjByGridPos();
             if (obj != null)
             {
-                GUIToolEdit EditDialog = new GUIToolEdit(obj, Project);
-                EditDialog.ShowDialog();
+                if (obj is Node)
+                {
+                    GUIToolEditNode EditDialog = new GUIToolEditNode(obj as Node);
+                    EditDialog.ShowDialog();
+                }
+                else if (obj is Destination)
+                {
+                    GUIToolEditDestination EditDialog = new GUIToolEditDestination(obj as Destination);
+                    EditDialog.ShowDialog();
+                }
+                else if (obj is LightController)
+                {
+                    GUIToolEditLightController EditDialog = new GUIToolEditLightController(obj as LightController);
+                    EditDialog.ShowDialog();
+                }
             }
         }
         private void Remove()

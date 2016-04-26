@@ -7,9 +7,15 @@ using System.Windows.Forms;
 
 namespace A319TS
 {
-    partial class GUIToolEdit : Form
+    class GUIToolEditLightController : Form
     {
-        private void InitEditLightController(LightController controller)
+        public LightController Controller;
+        public GUIToolEditLightController(LightController controller)
+        {
+            Controller = controller;
+            Setup();
+        }
+        private void Setup()
         {
 
         }

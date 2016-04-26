@@ -36,9 +36,11 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,9 +61,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUIMenuFileNew.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUIToolEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUIToolEditDestination.cs">
