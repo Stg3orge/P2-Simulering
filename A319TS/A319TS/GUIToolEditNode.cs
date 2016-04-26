@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Data;
 
 namespace A319TS
 {
@@ -17,24 +18,14 @@ namespace A319TS
         private ComboBox NodeTypeField;
         private CheckBox NodeLightCheck;
         private Label NodeRoads;
-        private List<Label> NodeRoadLabels;
-        private List<ComboBox> NodeRoadTypes;
-        private List<Button> NodeRoadDeleteButtons;
+        private DataGrid RoadData;
+
         private void InitEditNode(Node node)
         {
             switch (node.Roads.Count)
             {
                 case 0:
                     SetSize(200, 140);
-                    break;
-                case 1:
-                    SetSize(200, 210);
-                    break;
-                case 2:
-                    SetSize(200, 260);
-                    break;
-                case 3:
-                    SetSize(200, 315);
                     break;
                 default:
                     SetSize(210, 315);
@@ -66,6 +57,7 @@ namespace A319TS
             NodeTypeField.Location = new Point(66, 40);
             NodeTypeField.Size = new Size(100, 21);
             NodeTypeField.DataSource = Enum.GetValues(typeof(Node.NodeType));
+            NodeTypeField.SelectedItem = node.Type;
             Controls.Add(NodeTypeField);
 
             NodeLight = new Label();
@@ -79,46 +71,36 @@ namespace A319TS
             NodeLightCheck.Size = new Size(100, 21);
             NodeLightCheck.DataBindings.Add("Checked", node, "Green");
             Controls.Add(NodeLightCheck);
-
-            NodeRoads = new Label();
-            NodeRoads.Text = "Roads";
-            NodeRoads.Location = new Point(12, 100);
-            NodeRoads.AutoSize = true;
-            Controls.Add(NodeRoads);
-
-            NodeRoadLabels = new List<Label>();
-            NodeRoadTypes = new List<ComboBox>();
-            NodeRoadDeleteButtons = new List<Button>();
-
-            for (int i = 0; i < node.Roads.Count; i++)
+            
+            /*
+            if (node.Roads.Count > 0)
             {
-                Label label = new Label();
-                label.Text = "(" + node.Roads[i].From.Position.X + ", " + 
-                                   node.Roads[i].From.Position.Y + ") - (" + 
-                                   node.Roads[i].Destination.Position.X + ", " + 
-                                   node.Roads[i].Destination.Position.Y + ")";
-                label.Location = new Point(21, 123 + (i * 51));
-                label.AutoSize = true;
-                NodeRoadLabels.Add(label);
+                NodeRoads = new Label();
+                NodeRoads.Text = "Roads";
+                NodeRoads.Location = new Point(12, 100);
+                NodeRoads.AutoSize = true;
+                Controls.Add(NodeRoads);
 
-                ComboBox combo = new ComboBox();
-                combo.Size = new Size(80, 21);
-                combo.Location = new Point(24, 140 + (i * 51));
-                NodeRoadTypes.Add(combo);
+                RoadData = new DataGrid();
+                RoadData.DataSource = ReadRoadData(node);
 
-                Button button = new Button();
-                button.Text = "Delete";
-                button.Size = new Size(50, 23);
-                button.Location = new Point(110, 139 + (i * 51));
-                NodeRoadDeleteButtons.Add(button);
+            }
+            */
+        }
+
+        private DataTable ReadRoadData(Node node)
+        {
+            DataTable data = new DataTable();
+            data.Columns[0].ColumnName = "Position";
+            data.Columns[1].ColumnName = "Type";
+            data.Columns[2].ColumnName = "Delete";
+
+            foreach (Road road in node.Roads)
+            {
+                data.Rows.Add(road, road.Type, new Button());
             }
 
-            foreach (Label label in NodeRoadLabels)
-                Controls.Add(label);
-            foreach (ComboBox combo in NodeRoadTypes)
-                Controls.Add(combo);
-            foreach (Button button in NodeRoadDeleteButtons)
-                Controls.Add(button);
+            return data;
         }
     }
 }
