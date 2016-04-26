@@ -64,7 +64,13 @@
     <Compile Include="GUIToolEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUIToolEditSetup.cs">
+    <Compile Include="GUIToolEditDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIToolEditLightController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIToolEditNode.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Layer.cs">
