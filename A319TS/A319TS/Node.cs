@@ -7,7 +7,7 @@ namespace A319TS
     [Serializable]
     public class Node
     {
-        public enum NodeType { Yield, Home, Parking, Light, None }
+        public enum NodeType { Yield, Home, Parking, Light, None, Inbound, Outbound }
         public NodeType Type;
         public List<Road> Roads = new List<Road>();
         public Point Position;

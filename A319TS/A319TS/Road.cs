@@ -13,6 +13,7 @@ namespace A319TS
         public Node From;
         public Node Destination;
         public RoadType Type;
+        public enum RoadDifferentiation {Primary, Secondary, Shared };
         public double Length { get { return GetLength(); } }
 
         private Road(){} // Serialize

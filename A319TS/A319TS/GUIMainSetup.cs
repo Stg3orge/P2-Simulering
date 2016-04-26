@@ -191,6 +191,18 @@ namespace A319TS
             ToolMove.Image = Resources.ToolMove;
             ToolMove.Click += ToolClick;
 
+            ToolInbound = new ToolStripButton();
+            ToolInbound.Name = "ToolInbound";
+            ToolInbound.ToolTipText = "Add Inbound";
+            ToolInbound.Image = Resources.ToolAddNode;
+            ToolInbound.Click += ToolClick;
+
+            ToolOutbound = new ToolStripButton();
+            ToolOutbound.Name = "ToolOutbound";
+            ToolOutbound.ToolTipText = "Add Outbound";
+            ToolOutbound.Image = Resources.ToolAddNode;
+            ToolOutbound.Click += ToolClick;
+
             GUIMainToolStrip.Items.Add(ToolAddNode);
             GUIMainToolStrip.Items.Add(ToolSetNodeLight);
             GUIMainToolStrip.Items.Add(ToolSetNodeYield);
@@ -210,6 +222,8 @@ namespace A319TS
             GUIMainToolStrip.Items.Add(ToolEdit);
             GUIMainToolStrip.Items.Add(ToolRemove);
             GUIMainToolStrip.Items.Add(ToolMove);
+            GUIMainToolStrip.Items.Add(ToolInbound);
+            GUIMainToolStrip.Items.Add(ToolOutbound);
         }
         public ToolStrip GUIMainToolStrip;
         public ToolStripButton ToolAddNode;
@@ -228,6 +242,8 @@ namespace A319TS
         public ToolStripButton ToolEdit;
         public ToolStripButton ToolRemove;
         public ToolStripButton ToolMove;
+        public ToolStripButton ToolInbound;
+        public ToolStripButton ToolOutbound;
 
         // MainPanel
         private void InitGUIMainViewport()
