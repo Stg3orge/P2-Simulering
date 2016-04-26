@@ -73,6 +73,9 @@ namespace A319TS
                     case "ToolEdit": Edit(); break;
                     case "ToolRemove": Remove(); break;
                     case "ToolMoveObject": ToolMoveObject(); break;
+                    case "ToolInbound": SetNodeType(Node.NodeType.Inbound); break;
+                    case "ToolOutbound": SetNodeType(Node.NodeType.Outbound); break;
+
                     default: break;
                 }
             }
@@ -255,5 +258,6 @@ namespace A319TS
                 Viewport.HoverConnection = new Point(-1, -1);
             }
         }
+
     }
 }
