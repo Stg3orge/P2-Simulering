@@ -113,7 +113,7 @@ namespace A319TS
 
                     else
                     {
-                        FirstRoad.Roads.Add(new Road(FirstRoad, node, new RoadType("New Road", 90)));
+                        FirstRoad.Roads.Add(new Road(FirstRoad, node, Project.RoadTypes[0]));
                         if (Control.ModifierKeys == Keys.Shift)
                         {
                             FirstRoad = node;

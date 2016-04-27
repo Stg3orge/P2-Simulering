@@ -35,6 +35,10 @@ namespace A319TS
         
         private void ReadData(object sender, EventArgs args)
         {
+            Position.BringToFront();
+            Type.BringToFront();
+            RoadData.BringToFront();
+
             Type.DataSource = Enum.GetValues(typeof(Node.NodeType));
             Type.SelectedItem = Node.Type;
 
@@ -50,15 +54,12 @@ namespace A319TS
                 RoadData.Columns[2].Visible = false;
                 RoadData.Columns[3].Visible = false;
                 RoadData.Columns[4].Visible = false;
-                RoadData.Columns.Insert(3, new DataGridViewComboBoxColumn() { HeaderText = "Type" });
+                var RoadTypeColumn = new DataGridViewComboBoxColumn() { HeaderText = "Type" };
+                RoadData.Columns.Insert(3, RoadTypeColumn);
+                RoadTypeColumn.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
                 foreach (DataGridViewRow row in RoadData.Rows)
-                {
                     foreach (DataGridViewComboBoxCell cb in row.Cells.OfType<DataGridViewComboBoxCell>())
-                    {
-                        cb.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
                         cb.Value = ((Road)RoadData.Rows[cb.RowIndex].DataBoundItem).Type;
-                    }
-                }
                 RoadData.Show();
             }
         }

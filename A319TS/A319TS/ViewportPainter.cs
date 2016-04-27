@@ -24,10 +24,10 @@ namespace A319TS
         private void DrawGrid(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighSpeed, args);
-            for (int i = 0; i < GridLength; i += GridSize)
+            for (int i = 0; i < GridLength * GridSize; i += GridSize)
             {
-                args.Graphics.DrawLine(Pens.LightGray, i, 0, i, GridLength);
-                args.Graphics.DrawLine(Pens.LightGray, 0, i, GridLength, i);
+                args.Graphics.DrawLine(Pens.LightGray, i, 0, i, GridLength * GridSize);
+                args.Graphics.DrawLine(Pens.LightGray, 0, i, GridLength * GridSize, i);
             }
         }
         private void DrawRoads(object sender, PaintEventArgs args)
