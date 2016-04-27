@@ -36,9 +36,11 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,14 +63,15 @@
     <Compile Include="GUIMenuFileNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUIMenuSettingsDestination.cs">
+    <Compile Include="GUIToolEditDestination.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUIMenuSettingsProject.cs">
+    <Compile Include="GUIToolEditLightController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUIToolEdit.cs" />
-    <Compile Include="GUIToolEditSetup.cs" />
+    <Compile Include="GUIToolEditNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Layer.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -124,6 +127,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\ToggleRoad.bmp" />
+    <None Include="Resources\ToolSetNodeOutbound.png" />
+    <None Include="Resources\ToolSetNodeInbound.png" />
     <None Include="Resources\ToolMove.png" />
     <None Include="Resources\ToolRemove.png" />
     <None Include="Resources\ToolLinkLight.png" />
