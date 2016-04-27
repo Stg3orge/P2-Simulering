@@ -60,6 +60,8 @@ namespace A319TS
                     case "ToolSetNodeYield": SetNodeType(Node.NodeType.Yield); break;
                     case "ToolSetNodeHome": SetNodeType(Node.NodeType.Home); break;
                     case "ToolSetNodeParking": SetNodeType(Node.NodeType.Parking); break;
+                    case "ToolSetNodeInbound": SetNodeType(Node.NodeType.Inbound); break;
+                    case "ToolSetNodeOutbound": SetNodeType(Node.NodeType.Outbound); break;
                     case "ToolAddLightController": AddLightController(); break;
                     case "ToolLinkLight": LinkLight(); break;
                     case "ToolAddDestination": ToolAddDestination(); break;
@@ -70,8 +72,7 @@ namespace A319TS
                     case "ToolEdit": Edit(); break;
                     case "ToolRemove": Remove(); break;
                     case "ToolMoveObject": ToolMoveObject(); break;
-                    case "ToolInbound": SetNodeType(Node.NodeType.Inbound); break;
-                    case "ToolOutbound": SetNodeType(Node.NodeType.Outbound); break;
+                    
 
                     default: break;
                 }
@@ -143,21 +144,15 @@ namespace A319TS
             object obj = Viewport.GetObjByGridPos();
             if (obj != null)
             {
+                Form EditDialog = null;
                 if (obj is Node)
-                {
-                    GUIToolEditNode EditDialog = new GUIToolEditNode(obj as Node);
-                    EditDialog.ShowDialog();
-                }
+                    EditDialog = new GUIToolEditNode(obj as Node, Project);
                 else if (obj is Destination)
-                {
-                    GUIToolEditDestination EditDialog = new GUIToolEditDestination(obj as Destination);
-                    EditDialog.ShowDialog();
-                }
+                    EditDialog = new GUIToolEditDestination(obj as Destination);
                 else if (obj is LightController)
-                {
-                    GUIToolEditLightController EditDialog = new GUIToolEditLightController(obj as LightController);
-                    EditDialog.ShowDialog();
-                }
+                    EditDialog = new GUIToolEditLightController(obj as LightController);
+                EditDialog.ShowDialog();
+                Viewport.Nodes.Refresh();
             }
         }
         private void Remove()

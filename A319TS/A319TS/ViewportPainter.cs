@@ -164,7 +164,7 @@ namespace A319TS
         {
             GraphicsPath path = new GraphicsPath();
             path.AddString(text, FontFamily.GenericMonospace, (int)FontStyle.Regular, args.Graphics.DpiY * 8 / 72, position, new StringFormat());
-            args.Graphics.DrawPath(Pens.DarkSlateGray, path);
+            args.Graphics.DrawPath(Pens.Black, path);
         }
     }
 }
