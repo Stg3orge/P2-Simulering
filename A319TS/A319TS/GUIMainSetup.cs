@@ -125,6 +125,18 @@ namespace A319TS
             ToolSetNodeParking.Image = Resources.ToolSetNodeParking;
             ToolSetNodeParking.Click += ToolClick;
 
+            ToolSetNodeInbound = new ToolStripButton();
+            ToolSetNodeInbound.Name = "ToolSetNodeInbound";
+            ToolSetNodeInbound.ToolTipText = "Set Node Inbound";
+            ToolSetNodeInbound.Image = Resources.ToolSetNodeInbound;
+            ToolSetNodeInbound.Click += ToolClick;
+
+            ToolSetNodeOutbound = new ToolStripButton();
+            ToolSetNodeOutbound.Name = "ToolSetNodeOutbound";
+            ToolSetNodeOutbound.ToolTipText = "Set Node Outbound";
+            ToolSetNodeOutbound.Image = Resources.ToolSetNodeOutbound;
+            ToolSetNodeOutbound.Click += ToolClick;
+
             ToolAddLightController = new ToolStripButton();
             ToolAddLightController.Name = "ToolAddLightController";
             ToolAddLightController.ToolTipText = "Add Light Controller";
@@ -192,12 +204,14 @@ namespace A319TS
             ToolMove.ToolTipText = "Move Object";
             ToolMove.Image = Resources.ToolMove;
             ToolMove.Click += ToolClick;
-
+            
             GUIMainToolStrip.Items.Add(ToolAddNode);
             GUIMainToolStrip.Items.Add(ToolSetNodeLight);
             GUIMainToolStrip.Items.Add(ToolSetNodeYield);
             GUIMainToolStrip.Items.Add(ToolSetNodeHome);
             GUIMainToolStrip.Items.Add(ToolSetNodeParking);
+            GUIMainToolStrip.Items.Add(ToolSetNodeInbound);
+            GUIMainToolStrip.Items.Add(ToolSetNodeOutbound);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
             GUIMainToolStrip.Items.Add(ToolAddLightController);
             GUIMainToolStrip.Items.Add(ToolLinkLight);
@@ -219,6 +233,8 @@ namespace A319TS
         public ToolStripButton ToolSetNodeYield;
         public ToolStripButton ToolSetNodeHome;
         public ToolStripButton ToolSetNodeParking;
+        public ToolStripButton ToolSetNodeInbound;
+        public ToolStripButton ToolSetNodeOutbound;
         public ToolStripButton ToolAddLightController;
         public ToolStripButton ToolLinkLight;
         public ToolStripButton ToolAddDestination;

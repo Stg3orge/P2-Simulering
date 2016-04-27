@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace A319TS
 {
@@ -37,7 +33,7 @@ namespace A319TS
             {
                 clickedTool.Checked = false;
                 ActiveTool = null;
-            }  
+            }
             else
             {
                 foreach (ToolStripButton tool in Tools.OfType<ToolStripButton>())
@@ -64,15 +60,20 @@ namespace A319TS
                     case "ToolSetNodeYield": SetNodeType(Node.NodeType.Yield); break;
                     case "ToolSetNodeHome": SetNodeType(Node.NodeType.Home); break;
                     case "ToolSetNodeParking": SetNodeType(Node.NodeType.Parking); break;
+                    case "ToolSetNodeInbound": SetNodeType(Node.NodeType.Inbound); break;
+                    case "ToolSetNodeOutbound": SetNodeType(Node.NodeType.Outbound); break;
                     case "ToolAddLightController": AddLightController(); break;
                     case "ToolLinkLight": LinkLight(); break;
                     case "ToolAddDestination": ToolAddDestination(); break;
                     case "ToolAddRoad": AddRoad(); break;
+                    // Combine into AddRoad Function, below cases of primary and secondary
                     case "ToolPrimaryRoad": PrimaryRoad(); break;
                     case "ToolSecondaryRoad": SecondaryRoad(); break;
                     case "ToolEdit": Edit(); break;
                     case "ToolRemove": Remove(); break;
                     case "ToolMoveObject": ToolMoveObject(); break;
+                    
+
                     default: break;
                 }
             }
@@ -83,7 +84,7 @@ namespace A319TS
             object target = Viewport.GetObjByGridPos();
             if (target == null)
                 Project.Nodes.Add(new Node(Viewport.GridPos));
-            else if (target.GetType() == typeof(Node))
+            else if (target is Node)
                 ((Node)target).Type = Node.NodeType.None;
             Viewport.Nodes.Refresh();
         }
@@ -109,20 +110,21 @@ namespace A319TS
                         FirstRoadConnection = false;
                         Viewport.HoverConnection = node.Position;
                     }
+
                     else
                     {
-                        FirstRoad.Roads.Add(new Road(FirstRoad, node, new RoadType("lort", 90)));
+                        FirstRoad.Roads.Add(new Road(FirstRoad, node, Project.RoadTypes[0]));
                         if (Control.ModifierKeys == Keys.Shift)
                         {
                             FirstRoad = node;
                             Viewport.HoverConnection = FirstRoad.Position;
-                        } 
+                        }
                         else
                         {
                             FirstRoadConnection = true;
                             Viewport.HoverConnection = new Point(-1, -1);
                         }
-                            
+
                         Viewport.Roads.Refresh();
                     }
                 }
@@ -142,8 +144,15 @@ namespace A319TS
             object obj = Viewport.GetObjByGridPos();
             if (obj != null)
             {
-                GUIToolEdit EditDialog = new GUIToolEdit(obj);
+                Form EditDialog = null;
+                if (obj is Node)
+                    EditDialog = new GUIToolEditNode(obj as Node, Project);
+                else if (obj is Destination)
+                    EditDialog = new GUIToolEditDestination(obj as Destination);
+                else if (obj is LightController)
+                    EditDialog = new GUIToolEditLightController(obj as LightController);
                 EditDialog.ShowDialog();
+                Viewport.Nodes.Refresh();
             }
         }
         private void Remove()
@@ -170,7 +179,7 @@ namespace A319TS
                 Viewport.HoverConnection = Viewport.GridPos;
                 FirstMove = false;
             }
-            else if(!FirstMove && obj == null)
+            else if (!FirstMove && obj == null)
             {
                 if (FirstObjectMove.GetType() == typeof(Node))
                 {
@@ -199,13 +208,13 @@ namespace A319TS
         private void SetNodeType(Node.NodeType type)
         {
             Node target = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
-            if(target != null)
+            if (target != null)
             {
                 if (type == Node.NodeType.Light && target.Type == Node.NodeType.Light)
                     target.Green = !target.Green;
                 else
                     target.Type = type;
-                
+
                 Viewport.Nodes.Refresh();
             }
         }
@@ -226,7 +235,7 @@ namespace A319TS
             object obj = Viewport.GetObjByGridPos();
             if (obj != null)
             {
-                
+
                 if (FirstLightControllerConnection && obj.GetType() == typeof(LightController))
                 {
                     FirstLightController = (LightController)obj;
@@ -255,5 +264,6 @@ namespace A319TS
                 Viewport.HoverConnection = new Point(-1, -1);
             }
         }
+
     }
 }

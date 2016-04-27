@@ -10,10 +10,12 @@ namespace A319TS
     [Serializable]
     public class Road
     {
-        public Node From;
-        public Node Destination;
-        public RoadType Type;
+        public Node From { get; set; }
+        public Node Destination { get; set; }
+        public RoadType Type { get; set; }
+        public enum RoadDifferentiation {Primary, Secondary, Shared };
         public double Length { get { return GetLength(); } }
+        public double Cost { get; set; }
 
         private Road(){} // Serialize
         public Road(Node from, Node destination, RoadType type)
@@ -28,7 +30,5 @@ namespace A319TS
             return (Math.Sqrt(Math.Pow(Math.Abs(From.Position.X - Destination.Position.X), 2) 
                             + Math.Pow(Math.Abs(From.Position.Y - Destination.Position.Y), 2)));
         }
-        public double Cost { get; set; }
-
     }
 }

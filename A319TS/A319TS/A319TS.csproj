@@ -67,12 +67,8 @@
     <Compile Include="GUIMenuSettingsProject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUIToolEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUIToolEditSetup.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="GUIToolEdit.cs" />
+    <Compile Include="GUIToolEditSetup.cs" />
     <Compile Include="Layer.cs">
       <SubType>Component</SubType>
     </Compile>

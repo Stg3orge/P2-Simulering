@@ -70,7 +70,7 @@ namespace A319TS
         // MainToolStrip Events
         private void ToolClick(object sender, EventArgs args)
         {
-            ToolController.ToggleTool((ToolStripButton)sender);
+            ToolController.ToggleTool(sender as ToolStripButton);
         }
 
         // Update GUI Methods
