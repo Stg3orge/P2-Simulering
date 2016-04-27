@@ -80,8 +80,6 @@ namespace A319TS
                     case "ToolEdit": Edit(); break;
                     case "ToolRemove": Remove(); break;
                     case "ToolMoveObject": ToolMoveObject(); break;
-                    
-
                     default: break;
                 }
             }

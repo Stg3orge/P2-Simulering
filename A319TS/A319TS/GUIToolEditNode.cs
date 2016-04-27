@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing;
-using System.Data;
 using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace A319TS
 {
@@ -32,7 +27,7 @@ namespace A319TS
             Load += ReadData;
             FormClosing += Save;
         }
-        
+
         private void ReadData(object sender, EventArgs args)
         {
             Position.BringToFront();
@@ -43,6 +38,7 @@ namespace A319TS
 
             if (Node.Roads.Count > 0)
             {
+                RoadData.DataError += DataErrorHandler;
                 RoadData.BringToFront();
                 RoadData.DataSource = new BindingSource(new BindingList<Road>(Node.Roads), null);
                 foreach (DataGridViewColumn column in RoadData.Columns)
@@ -58,9 +54,22 @@ namespace A319TS
                 RoadData.Columns.Insert(3, RoadTypeColumn);
                 RoadTypeColumn.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
                 foreach (DataGridViewRow row in RoadData.Rows)
-                    foreach (DataGridViewComboBoxCell cb in row.Cells.OfType<DataGridViewComboBoxCell>())
-                        cb.Value = ((Road)RoadData.Rows[cb.RowIndex].DataBoundItem).Type;
+                    foreach (DataGridViewCell cell in row.Cells)
+                        if (cell is DataGridViewComboBoxCell)
+                            cell.Value = ((Road)row.DataBoundItem).Type;
                 RoadData.Show();
+            }
+        }
+        private void DataErrorHandler(object sender, DataGridViewDataErrorEventArgs args)
+        {
+            if (args.Exception is ArgumentException)
+            {
+                args.Cancel = true;
+            }
+            else
+            {
+                MessageBox.Show(args.Exception.Message);
+                args.Cancel = true;
             }
         }
         private void Save(object sender, EventArgs args)
@@ -119,7 +128,7 @@ namespace A319TS
             GreenCheck.AutoSize = true;
             GreenCheck.Checked = Node.Green;
             Controls.Add(GreenCheck);
-            
+
             if (Node.Roads.Count > 0)
             {
                 Size GridViewSize = new Size(303, 140);
