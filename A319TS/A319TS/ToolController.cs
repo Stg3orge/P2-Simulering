@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace A319TS
 {
@@ -11,6 +12,13 @@ namespace A319TS
         private bool FirstLightControllerConnection = true;
         private LightController FirstLightController;
 
+        public DestinationType SelectedDestinationType
+        {
+            get
+            {
+                return (DestinationType)((ToolStripComboBox)Tools.Find("ToolRoadTypeSelect", false)[0]).SelectedItem;
+            }
+        }
         public ToolStripButton ActiveTool;
         public ToolStripItemCollection Tools;
         public Viewport Viewport;
@@ -221,7 +229,7 @@ namespace A319TS
         private void ToolAddDestination()
         {
             if (Viewport.GetObjByGridPos() == null)
-                Project.Destinations.Add(new Destination(Viewport.GridPos, new DestinationType("Test", Color.Green)));
+                Project.Destinations.Add(new Destination(Viewport.GridPos, SelectedDestinationType));
             Viewport.Entities.Refresh();
         }
         private void AddLightController()
