@@ -48,7 +48,9 @@ namespace A319TS
         }
         private void MenuSettingsProjectClick(object sender, EventArgs args)
         {
-
+            GUIMenuSettingsProject project = new GUIMenuSettingsProject(CurrentProject);
+            project.ShowDialog();
+            UpdateTitle();
         }
         private void MenuSettingsSimulationClick(object sender, EventArgs args)
         {
@@ -56,7 +58,9 @@ namespace A319TS
         }
         private void MenuSettingsDestinationsClick(object sender, EventArgs args)
         {
-
+            GUIMenuSettingsDestination dest = new GUIMenuSettingsDestination(CurrentProject);
+            dest.ShowDialog();
+            ToolDestinationTypeSelect.ComboBox.Show();
         }
         private void MenuSettingsVehiclesClick(object sender, EventArgs args)
         {

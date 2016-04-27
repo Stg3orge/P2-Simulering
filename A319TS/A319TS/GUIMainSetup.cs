@@ -149,6 +149,8 @@ namespace A319TS
             ToolDestinationTypeSelect.DropDownStyle = ComboBoxStyle.DropDownList;
             ToolDestinationTypeSelect.ComboBox.DataSource = CurrentProject.DestinationTypes;
 
+          //  ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
+
             ToolAddRoad = new ToolStripButton();
             ToolAddRoad.Name = "ToolAddRoad";
             ToolAddRoad.ToolTipText = "Add Road";
