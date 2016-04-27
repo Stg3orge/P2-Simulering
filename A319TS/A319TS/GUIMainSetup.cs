@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.ComponentModel;
 
 namespace A319TS
 {
@@ -159,9 +160,9 @@ namespace A319TS
             ToolDestinationTypeSelect.Name = "ToolRoadTypeSelect";
             ToolDestinationTypeSelect.FlatStyle = FlatStyle.Standard;
             ToolDestinationTypeSelect.DropDownStyle = ComboBoxStyle.DropDownList;
-            ToolDestinationTypeSelect.ComboBox.DataSource = CurrentProject.DestinationTypes;
 
-          //  ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
+
+            ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
 
             ToolAddRoad = new ToolStripButton();
             ToolAddRoad.Name = "ToolAddRoad";

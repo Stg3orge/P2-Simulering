@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Drawing;
+using System.ComponentModel;
 
 namespace A319TS
 {
@@ -61,6 +62,8 @@ namespace A319TS
             GUIMenuSettingsDestination dest = new GUIMenuSettingsDestination(CurrentProject);
             dest.ShowDialog();
             ToolDestinationTypeSelect.ComboBox.Show();
+            ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
+
         }
         private void MenuSettingsVehiclesClick(object sender, EventArgs args)
         {

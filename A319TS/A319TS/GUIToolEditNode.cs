@@ -37,13 +37,13 @@ namespace A319TS
         {
             Position.BringToFront();
             Type.BringToFront();
-            RoadData.BringToFront();
 
             Type.DataSource = Enum.GetValues(typeof(Node.NodeType));
             Type.SelectedItem = Node.Type;
 
             if (Node.Roads.Count > 0)
             {
+                RoadData.BringToFront();
                 RoadData.DataSource = new BindingSource(new BindingList<Road>(Node.Roads), null);
                 foreach (DataGridViewColumn column in RoadData.Columns)
                     column.Resizable = DataGridViewTriState.False;
