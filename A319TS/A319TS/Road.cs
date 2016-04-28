@@ -13,7 +13,8 @@ namespace A319TS
         public Node From { get; set; }
         public Node Destination { get; set; }
         public RoadType Type { get; set; }
-        public enum RoadDifferentiation {Primary, Secondary, Shared };
+        public enum RoadDifferentiation { Primary, Secondary, Shared };
+        public RoadDifferentiation Differentiation;
         public double Length { get { return GetLength(); } }
         public double Cost { get; set; }
 

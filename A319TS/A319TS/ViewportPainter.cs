@@ -30,7 +30,7 @@ namespace A319TS
                 args.Graphics.DrawLine(Pens.LightGray, 0, i, GridLength * GridSize, i);
             }
         }
-        private void DrawRoads(object sender, PaintEventArgs args)
+        private void DrawConnections(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
 
@@ -42,13 +42,24 @@ namespace A319TS
                     args.Graphics.DrawLine(linkPen, GetDrawPosition(controller.Position), GetDrawPosition(light.Position));
 
             // Draw Roads
-            Pen roadPen = new Pen(Color.Black, 2);
-            roadPen.CustomEndCap = new AdjustableArrowCap(4, 4);
             foreach (Node node in Project.Nodes)
                 foreach (Road road in node.Roads)
-                    args.Graphics.DrawLine(roadPen, GetDrawPosition(node.Position),
-                        GetDrawPosition(road.Destination.Position));
+                    DrawRoad(road, args);
         }
+        private void DrawRoad(Road road, PaintEventArgs args)
+        {
+            Pen roadPen = new Pen(Color.Black, 2);
+            roadPen.CustomEndCap = new AdjustableArrowCap(4, 4);
+
+            if(road.Differentiation == Road.RoadDifferentiation.Primary)
+                roadPen.Color = Color.Blue;
+            if (road.Differentiation == Road.RoadDifferentiation.Secondary)
+                roadPen.Color = Color.Red;
+
+            args.Graphics.DrawLine(roadPen, GetDrawPosition(road.From.Position), GetDrawPosition(road.Destination.Position));
+        }
+
+
         private void DrawNodes(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
@@ -73,12 +84,9 @@ namespace A319TS
                         if (node.Green) DrawNode(Brushes.LimeGreen, position, args);
                         else DrawNode(Brushes.Red, position, args);
                         break;
-
                     case Node.NodeType.Inbound:
-                        
                         DrawNode(Brushes.Black, position, args);
                         DrawArrow(node, true, args);
-                      
                         break;
                     case Node.NodeType.Outbound:
                         DrawNode(Brushes.Black, position, args);

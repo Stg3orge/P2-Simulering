@@ -67,6 +67,10 @@ namespace A319TS
                 MenuSettingsVehicles.Text = "Vehicles";
                 MenuSettingsVehicles.Click += MenuSettingsVehiclesClick;
 
+                MenuSettingsRoads = new ToolStripMenuItem();
+                MenuSettingsRoads.Text = "Roads";
+                MenuSettingsRoads.Click += MenuSettingsRoadsClick;
+
             MenuSettingsDistribution = new ToolStripMenuItem();
             MenuSettingsDistribution.Text = "Distribution";
             MenuSettingsDistribution.Click += MenuSettingsDistributionClick;
@@ -78,6 +82,7 @@ namespace A319TS
             MenuSettings.DropDownItems.Add(MenuSettingsSimulation);   // addet
             MenuSettings.DropDownItems.Add(MenuSettingsDestinations);   // addet
             MenuSettings.DropDownItems.Add(MenuSettingsVehicles);   // addet
+            MenuSettings.DropDownItems.Add(MenuSettingsRoads);   // addet
             MenuSettings.DropDownItems.Add(MenuSettingsDistribution);
             GUIMainMenuStrip.Items.Add(MenuFile);
             GUIMainMenuStrip.Items.Add(MenuSettings);
@@ -92,6 +97,7 @@ namespace A319TS
         private ToolStripMenuItem MenuSettingsSimulation;
         private ToolStripMenuItem MenuSettingsDestinations;
         private ToolStripMenuItem MenuSettingsVehicles;
+        private ToolStripMenuItem MenuSettingsRoads;
         private ToolStripMenuItem MenuSettingsDistribution;
 
         // MainToolStrip
@@ -163,11 +169,9 @@ namespace A319TS
             ToolAddDestination.Click += ToolClick;
 
             ToolDestinationTypeSelect = new ToolStripComboBox();
-            ToolDestinationTypeSelect.Name = "ToolRoadTypeSelect";
+            ToolDestinationTypeSelect.Name = "ToolDestinationTypeSelect";
             ToolDestinationTypeSelect.FlatStyle = FlatStyle.Standard;
             ToolDestinationTypeSelect.DropDownStyle = ComboBoxStyle.DropDownList;
-
-
             ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
 
             ToolAddRoad = new ToolStripButton();
