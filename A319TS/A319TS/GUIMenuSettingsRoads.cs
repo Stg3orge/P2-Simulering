@@ -26,16 +26,11 @@ namespace A319TS
             Setup();
             Load += ReadData;
         }
-        
-<<<<<<< HEAD
         private void ReadData(object sender, EventArgs args)
         {
             RoadData.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
             RoadData.Show();
         }
-        
-=======
->>>>>>> 5447adf44d52027880e0dca8adb9d71f5d29bba6
         private void Setup()
         {
             Text = "Roads";
@@ -89,11 +84,7 @@ namespace A319TS
             RoadData.Size = new Size(243, 193);
             Controls.Add(RoadData);
         }
-        private void ReadData(object sender, EventArgs args)
-        {
-            RoadData.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
-            RoadData.Show();
-        }
+
         private void AddClick(object sender, EventArgs e)
         {
             if (SetName.Text.Length > 0 && Project.RoadTypes.Find(d => d.Name == SetName.Text) == null)
