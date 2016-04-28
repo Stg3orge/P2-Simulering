@@ -9,12 +9,12 @@ namespace A319TS
 {
     public class VehicleType
     {
-        public string Name;
-        public int MaxSpeed;
-        public int Acceleration;
-        public int Deceleration;
+        public string Name { get; set; }
+        public int MaxSpeed { get; set; }
+        public double Acceleration { get; set; }
+        public double Deceleration { get; set; }
 
-        public VehicleType(string name, int maxSpeed, int acceleration, int deceleration)
+        public VehicleType(string name, int maxSpeed, double acceleration, double deceleration)
         {
             Name = name;
             MaxSpeed = maxSpeed;

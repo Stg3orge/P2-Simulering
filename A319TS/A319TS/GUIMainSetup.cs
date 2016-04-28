@@ -71,6 +71,10 @@ namespace A319TS
                 MenuSettingsRoads.Text = "Roads";
                 MenuSettingsRoads.Click += MenuSettingsRoadsClick;
 
+            MenuSettingsDistribution = new ToolStripMenuItem();
+            MenuSettingsDistribution.Text = "Distribution";
+            MenuSettingsDistribution.Click += MenuSettingsDistributionClick;
+
             MenuFile.DropDownItems.Add(MenuFileNew);
             MenuFile.DropDownItems.Add(MenuFileOpen);
             MenuFile.DropDownItems.Add(MenuFileSave);
@@ -79,6 +83,7 @@ namespace A319TS
             MenuSettings.DropDownItems.Add(MenuSettingsDestinations);   // addet
             MenuSettings.DropDownItems.Add(MenuSettingsVehicles);   // addet
             MenuSettings.DropDownItems.Add(MenuSettingsRoads);   // addet
+            MenuSettings.DropDownItems.Add(MenuSettingsDistribution);
             GUIMainMenuStrip.Items.Add(MenuFile);
             GUIMainMenuStrip.Items.Add(MenuSettings);
         }
@@ -93,6 +98,7 @@ namespace A319TS
         private ToolStripMenuItem MenuSettingsDestinations;
         private ToolStripMenuItem MenuSettingsVehicles;
         private ToolStripMenuItem MenuSettingsRoads;
+        private ToolStripMenuItem MenuSettingsDistribution;
 
         // MainToolStrip
         private void InitGUIMainToolStrip()

@@ -66,7 +66,8 @@ namespace A319TS
         }
         private void MenuSettingsVehiclesClick(object sender, EventArgs args)
         {
-
+            GUIMenuSettingsVehicle project = new GUIMenuSettingsVehicle(CurrentProject);
+            project.ShowDialog();
         }
         private void MenuSettingsRoadsClick(object sender, EventArgs args)
         {
@@ -75,6 +76,11 @@ namespace A319TS
             ToolRoadTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<RoadType>(CurrentProject.RoadTypes), null);
         }
 
+        private void MenuSettingsDistributionClick(object sender, EventArgs args)
+        {
+            GUIMenuSettingsDistribution dest = new GUIMenuSettingsDistribution(CurrentProject);
+            dest.ShowDialog();
+        }
         // MainToolStrip Events
         private void ToolClick(object sender, EventArgs args)
         {

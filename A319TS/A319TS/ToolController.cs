@@ -277,6 +277,5 @@ namespace A319TS
                 Viewport.HoverConnection = new Point(-1, -1);
             }
         }
-
     }
 }

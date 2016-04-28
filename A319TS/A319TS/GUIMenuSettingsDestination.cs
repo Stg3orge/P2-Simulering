@@ -10,6 +10,7 @@ namespace A319TS
         private TextBox NameSet;
         private Button ColorSet;
         private Button Add;
+        private Button Remove;
         private Label NameLabel;
         private Label ColorLabel;
         private DataGridView DestData;
@@ -19,8 +20,8 @@ namespace A319TS
         {
             Project = project;
             Text = "Destination";
-            Size = new Size(582, 269);
-            MinimumSize = new Size(582, 269);
+            Size = new Size(500, 269);
+            MinimumSize = new Size(500, 269);
             MaximumSize = new Size(1000, 1000);
             ShowIcon = false;
             MinimizeBox = false;
@@ -35,6 +36,7 @@ namespace A319TS
             Controls.Add(Add);
             Controls.Add(ColorLabel);
             Controls.Add(DestData);
+            Controls.Add(Remove);
         }
         private void InitializeGUISettingsDestination()
         {
@@ -56,23 +58,36 @@ namespace A319TS
             ColorSet.Size = new Size(131, 24);
             ColorSet.Click += ClickColor;
 
+            Remove = new Button();
+            Remove.Text = "Remove";
+            Remove.Location = new Point(12, 159);
+            Remove.Size = new Size(183, 46);
+            Remove.Click += RemoveClick;
+
             SetColorForDest = new ColorDialog();
             SetColorForDest.AllowFullOpen = false;
 
             Add = new Button();
             Add.Text = "Add";
-            Add.Location = new Point(12, 159);
+            Add.Location = new Point(12, 105);
             Add.Size = new Size(183, 46);
             Add.Click += AddClick;
 
             DestData = new DataGridView();
             DestData.Text = "SetOfDestinations";
             DestData.Location = new Point(218, 12);
-            DestData.Size = new Size(329, 193);
+            DestData.Size = new Size(250, 193);
             DestData.DataSource = Project.DestinationTypes;
+            DestData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DestData.ReadOnly = true;
             DestData.Show();
         }
 
+        private void RemoveClick(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in DestData.SelectedRows)
+                DestData.Rows.Remove(row);
+        }
         private void AddClick(object sender, EventArgs e)
         {
             if (NameSet.Text.Length > 0 && Project.DestinationTypes.Find(d => d.Name == NameSet.Text) == null)

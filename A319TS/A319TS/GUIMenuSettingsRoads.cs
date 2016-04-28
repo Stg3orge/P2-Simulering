@@ -17,6 +17,7 @@ namespace A319TS
         private TextBox SetName;
         private TextBox SetSpeed;
         private Button Add;
+        private Button Remove;
         private DataGridView RoadData;
         
         public GUIMenuSettingsRoads(Project project)
@@ -25,12 +26,16 @@ namespace A319TS
             Setup();
             Load += ReadData;
         }
-        
+        private void ReadData(object sender, EventArgs args)
+        {
+            RoadData.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
+            RoadData.Show();
+        }
         private void Setup()
         {
-            Text = "Road";
-            Size = new Size(582, 269);
-            MinimumSize = new Size(582, 269);
+            Text = "Roads";
+            Size = new Size(490, 269);
+            MinimumSize = new Size(490, 269);
             MaximumSize = new Size(1000, 1000);
             ShowIcon = false;
             MinimizeBox = false;
@@ -62,21 +67,24 @@ namespace A319TS
 
             Add = new Button();
             Add.Text = "Add";
-            Add.Location = new Point(12, 159);
+            Add.Location = new Point(12, 105); 
             Add.Size = new Size(183, 46);
             Add.Click += AddClick;
             Controls.Add(Add);
 
+            Remove = new Button();
+            Remove.Text = "Remove";
+            Remove.Location = new Point(12, 159);
+            Remove.Size = new Size(183, 46);
+            Remove.Click += RemoveClick;
+            Controls.Add(Remove);
+
             RoadData = new DataGridView();
-            RoadData.Location = new Point(218, 12);
-            RoadData.Size = new Size(329, 193);
+            RoadData.Location = new Point(211, 12);
+            RoadData.Size = new Size(243, 193);
             Controls.Add(RoadData);
         }
-        private void ReadData(object sender, EventArgs args)
-        {
-            RoadData.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
-            RoadData.Show();
-        }
+
         private void AddClick(object sender, EventArgs e)
         {
             if (SetName.Text.Length > 0 && Project.RoadTypes.Find(d => d.Name == SetName.Text) == null)
@@ -89,6 +97,12 @@ namespace A319TS
             {
                 NameLabel.ForeColor = Color.Red;
             }
+        }
+        private void RemoveClick(object sender, EventArgs e)
+        {
+
+            foreach (DataGridViewRow row in RoadData.SelectedRows)
+                RoadData.Rows.Remove(row);
         }
     }
 }
