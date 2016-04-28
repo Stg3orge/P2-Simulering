@@ -16,7 +16,14 @@ namespace A319TS
         {
             get
             {
-                return (DestinationType)((ToolStripComboBox)Tools.Find("ToolRoadTypeSelect", false)[0]).SelectedItem;
+                return (DestinationType)((ToolStripComboBox)Tools.Find("ToolDestinationTypeSelect", false)[0]).SelectedItem;
+            }
+        }
+        public RoadType SelectedRoadType
+        {
+            get
+            {
+                return (RoadType)((ToolStripComboBox)Tools.Find("ToolRoadTypeSelect", false)[0]).SelectedItem;
             }
         }
         public ToolStripButton ActiveTool;
@@ -102,7 +109,7 @@ namespace A319TS
                         node.Roads.Remove(node.Roads[i]);
 
             Project.Nodes.Remove(target);
-            Viewport.Roads.Refresh();
+            Viewport.Connections.Refresh();
         }
         private void AddRoad()
         {
@@ -119,7 +126,7 @@ namespace A319TS
 
                     else
                     {
-                        FirstRoad.Roads.Add(new Road(FirstRoad, node, Project.RoadTypes[0]));
+                        FirstRoad.Roads.Add(new Road(FirstRoad, node, SelectedRoadType));
                         if (Control.ModifierKeys == Keys.Shift)
                         {
                             FirstRoad = node;
@@ -131,7 +138,7 @@ namespace A319TS
                             Viewport.HoverConnection = new Point(-1, -1);
                         }
 
-                        Viewport.Roads.Refresh();
+                        Viewport.Connections.Refresh();
                     }
                 }
             }
@@ -172,7 +179,7 @@ namespace A319TS
                     Project.Destinations.Remove((Destination)target);
                 else if (target.GetType() == typeof(LightController))
                     Project.LightControllers.Remove((LightController)target);
-                Viewport.Roads.Refresh();
+                Viewport.Connections.Refresh();
             }
         }
         private void ToolMoveObject()
@@ -247,7 +254,7 @@ namespace A319TS
                     FirstLightController = (LightController)obj;
                     FirstLightControllerConnection = false;
                     Viewport.HoverConnection = FirstLightController.Position;
-                    Viewport.Roads.Refresh();
+                    Viewport.Connections.Refresh();
                 }
                 else if (!FirstLightControllerConnection && obj.GetType() == typeof(Node))
                 {
@@ -255,7 +262,7 @@ namespace A319TS
                     FirstLightController.Lights.Add(node);
                     FirstLightControllerConnection = true;
                     Viewport.HoverConnection = new Point(-1, -1);
-                    Viewport.Roads.Refresh();
+                    Viewport.Connections.Refresh();
                 }
             }
         }
