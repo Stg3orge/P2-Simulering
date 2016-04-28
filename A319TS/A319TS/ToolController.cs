@@ -154,7 +154,7 @@ namespace A319TS
                 if (obj is Node)
                     EditDialog = new GUIToolEditNode(obj as Node, Project);
                 else if (obj is Destination)
-                    EditDialog = new GUIToolEditDestination(obj as Destination);
+                    EditDialog = new GUIToolEditDestination(obj as Destination, Project);
                 else if (obj is LightController)
                     EditDialog = new GUIToolEditLightController(obj as LightController);
                 EditDialog.ShowDialog();
