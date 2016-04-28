@@ -8,10 +8,10 @@ namespace A319TS
     public class Node
     {
         public enum NodeType { Yield, Home, Parking, Light, None, Inbound, Outbound }
-        public NodeType Type;
+        public NodeType Type { get; set; }
         public List<Road> Roads = new List<Road>();
-        public Point Position;
-        public bool Green;
+        public Point Position { get; set; }
+        public bool Green { get; set; }
         public int ID { get { return Position.GetHashCode(); } }
 
         protected Node() { } // Serialize
