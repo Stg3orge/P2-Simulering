@@ -67,9 +67,15 @@ namespace A319TS
         }
         private void MenuSettingsVehiclesClick(object sender, EventArgs args)
         {
-
+            GUIMenuSettingsVehicle project = new GUIMenuSettingsVehicle(CurrentProject);
+            project.ShowDialog();
         }
 
+        private void MenuSettingsDistributionClick(object sender, EventArgs args)
+        {
+            GUIMenuSettingsDistribution dest = new GUIMenuSettingsDistribution(CurrentProject);
+            dest.ShowDialog();
+        }
         // MainToolStrip Events
         private void ToolClick(object sender, EventArgs args)
         {
