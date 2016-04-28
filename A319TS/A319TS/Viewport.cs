@@ -6,7 +6,7 @@ namespace A319TS
 {
     partial class Viewport : Panel
     {
-        public readonly int GridLength = 4000;
+        public readonly int GridLength = 1000;
         public readonly int GridSize = 16;
         public readonly int EntitySize = 12;
         public readonly int NodeSize = 8;

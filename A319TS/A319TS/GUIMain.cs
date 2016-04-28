@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Drawing;
+using System.ComponentModel;
 
 namespace A319TS
 {
@@ -48,7 +49,9 @@ namespace A319TS
         }
         private void MenuSettingsProjectClick(object sender, EventArgs args)
         {
-
+            GUIMenuSettingsProject project = new GUIMenuSettingsProject(CurrentProject);
+            project.ShowDialog();
+            UpdateTitle();
         }
         private void MenuSettingsSimulationClick(object sender, EventArgs args)
         {
@@ -56,17 +59,32 @@ namespace A319TS
         }
         private void MenuSettingsDestinationsClick(object sender, EventArgs args)
         {
+            GUIMenuSettingsDestination dest = new GUIMenuSettingsDestination(CurrentProject);
+            dest.ShowDialog();
+            ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
 
         }
         private void MenuSettingsVehiclesClick(object sender, EventArgs args)
         {
-
+            GUIMenuSettingsVehicle project = new GUIMenuSettingsVehicle(CurrentProject);
+            project.ShowDialog();
+        }
+        private void MenuSettingsRoadsClick(object sender, EventArgs args)
+        {
+            GUIMenuSettingsRoads road = new GUIMenuSettingsRoads(CurrentProject);
+            road.ShowDialog();
+            ToolRoadTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<RoadType>(CurrentProject.RoadTypes), null);
         }
 
+        private void MenuSettingsDistributionClick(object sender, EventArgs args)
+        {
+            GUIMenuSettingsDistribution dest = new GUIMenuSettingsDistribution(CurrentProject);
+            dest.ShowDialog();
+        }
         // MainToolStrip Events
         private void ToolClick(object sender, EventArgs args)
         {
-            ToolController.ToggleTool((ToolStripButton)sender);
+            ToolController.ToggleTool(sender as ToolStripButton);
         }
 
         // Update GUI Methods

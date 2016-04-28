@@ -24,13 +24,13 @@ namespace A319TS
         private void DrawGrid(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighSpeed, args);
-            for (int i = 0; i < GridLength; i += GridSize)
+            for (int i = 0; i < GridLength * GridSize; i += GridSize)
             {
-                args.Graphics.DrawLine(Pens.LightGray, i, 0, i, GridLength);
-                args.Graphics.DrawLine(Pens.LightGray, 0, i, GridLength, i);
+                args.Graphics.DrawLine(Pens.LightGray, i, 0, i, GridLength * GridSize);
+                args.Graphics.DrawLine(Pens.LightGray, 0, i, GridLength * GridSize, i);
             }
         }
-        private void DrawRoads(object sender, PaintEventArgs args)
+        private void DrawConnections(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
 
@@ -42,13 +42,24 @@ namespace A319TS
                     args.Graphics.DrawLine(linkPen, GetDrawPosition(controller.Position), GetDrawPosition(light.Position));
 
             // Draw Roads
-            Pen roadPen = new Pen(Color.Black, 2);
-            roadPen.CustomEndCap = new AdjustableArrowCap(4, 4);
             foreach (Node node in Project.Nodes)
                 foreach (Road road in node.Roads)
-                    args.Graphics.DrawLine(roadPen, GetDrawPosition(node.Position),
-                        GetDrawPosition(road.Destination.Position));
+                    DrawRoad(road, args);
         }
+        private void DrawRoad(Road road, PaintEventArgs args)
+        {
+            Pen roadPen = new Pen(Color.Black, 2);
+            roadPen.CustomEndCap = new AdjustableArrowCap(4, 4);
+
+            if(road.Differentiation == Road.RoadDifferentiation.Primary)
+                roadPen.Color = Color.Blue;
+            if (road.Differentiation == Road.RoadDifferentiation.Secondary)
+                roadPen.Color = Color.Red;
+
+            args.Graphics.DrawLine(roadPen, GetDrawPosition(road.From.Position), GetDrawPosition(road.Destination.Position));
+        }
+
+
         private void DrawNodes(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
@@ -73,6 +84,14 @@ namespace A319TS
                         if (node.Green) DrawNode(Brushes.LimeGreen, position, args);
                         else DrawNode(Brushes.Red, position, args);
                         break;
+                    case Node.NodeType.Inbound:
+                        DrawNode(Brushes.Black, position, args);
+                        DrawArrow(node, true, args);
+                        break;
+                    case Node.NodeType.Outbound:
+                        DrawNode(Brushes.Black, position, args);
+                        DrawArrow(node, false, args);
+                        break;
                     default:
                         DrawNode(Brushes.White, position, args);
                         break;
@@ -83,6 +102,23 @@ namespace A319TS
         {
             args.Graphics.FillEllipse(fill, position.X, position.Y, NodeSize, NodeSize);
             args.Graphics.DrawEllipse(Pens.Black, position.X, position.Y, NodeSize, NodeSize);
+        }
+        private void DrawArrow(Node node, bool left, PaintEventArgs args)
+        {
+            Point PosNode = GetDrawPosition(node.Position);
+            Point offset;
+            Pen arrow = new Pen(Color.White, 2);
+            arrow.CustomEndCap = new AdjustableArrowCap(3, 3);
+            if (left)
+            {
+                offset = new Point(PosNode.X - 4, PosNode.Y);
+                args.Graphics.DrawLine(arrow, PosNode, offset);
+            }
+            else
+            {
+                offset = new Point(PosNode.X + 4, PosNode.Y);
+                args.Graphics.DrawLine(arrow, PosNode, offset);
+            }
         }
         private void DrawEntities(object sender, PaintEventArgs args)
         {
@@ -136,7 +172,7 @@ namespace A319TS
         {
             GraphicsPath path = new GraphicsPath();
             path.AddString(text, FontFamily.GenericMonospace, (int)FontStyle.Regular, args.Graphics.DpiY * 8 / 72, position, new StringFormat());
-            args.Graphics.DrawPath(Pens.DarkSlateGray, path);
+            args.Graphics.DrawPath(Pens.Black, path);
         }
     }
 }

@@ -5,8 +5,8 @@ namespace A319TS
     [Serializable]
     public class RoadType
     {
-        public string Name;
-        public int Speed;
+        public string Name { get; set; }
+        public int Speed { get; set; }
 
         private RoadType(){} // Serialize
         public RoadType(string name, int speed)

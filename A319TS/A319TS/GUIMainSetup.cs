@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.ComponentModel;
 
 namespace A319TS
 {
@@ -66,6 +67,14 @@ namespace A319TS
                 MenuSettingsVehicles.Text = "Vehicles";
                 MenuSettingsVehicles.Click += MenuSettingsVehiclesClick;
 
+                MenuSettingsRoads = new ToolStripMenuItem();
+                MenuSettingsRoads.Text = "Roads";
+                MenuSettingsRoads.Click += MenuSettingsRoadsClick;
+
+            MenuSettingsDistribution = new ToolStripMenuItem();
+            MenuSettingsDistribution.Text = "Distribution";
+            MenuSettingsDistribution.Click += MenuSettingsDistributionClick;
+
             MenuFile.DropDownItems.Add(MenuFileNew);
             MenuFile.DropDownItems.Add(MenuFileOpen);
             MenuFile.DropDownItems.Add(MenuFileSave);
@@ -73,6 +82,8 @@ namespace A319TS
             MenuSettings.DropDownItems.Add(MenuSettingsSimulation);   // addet
             MenuSettings.DropDownItems.Add(MenuSettingsDestinations);   // addet
             MenuSettings.DropDownItems.Add(MenuSettingsVehicles);   // addet
+            MenuSettings.DropDownItems.Add(MenuSettingsRoads);   // addet
+            MenuSettings.DropDownItems.Add(MenuSettingsDistribution);
             GUIMainMenuStrip.Items.Add(MenuFile);
             GUIMainMenuStrip.Items.Add(MenuSettings);
         }
@@ -86,6 +97,8 @@ namespace A319TS
         private ToolStripMenuItem MenuSettingsSimulation;
         private ToolStripMenuItem MenuSettingsDestinations;
         private ToolStripMenuItem MenuSettingsVehicles;
+        private ToolStripMenuItem MenuSettingsRoads;
+        private ToolStripMenuItem MenuSettingsDistribution;
 
         // MainToolStrip
         private void InitGUIMainToolStrip()
@@ -125,6 +138,18 @@ namespace A319TS
             ToolSetNodeParking.Image = Resources.ToolSetNodeParking;
             ToolSetNodeParking.Click += ToolClick;
 
+            ToolSetNodeInbound = new ToolStripButton();
+            ToolSetNodeInbound.Name = "ToolSetNodeInbound";
+            ToolSetNodeInbound.ToolTipText = "Set Node Inbound";
+            ToolSetNodeInbound.Image = Resources.ToolSetNodeInbound;
+            ToolSetNodeInbound.Click += ToolClick;
+
+            ToolSetNodeOutbound = new ToolStripButton();
+            ToolSetNodeOutbound.Name = "ToolSetNodeOutbound";
+            ToolSetNodeOutbound.ToolTipText = "Set Node Outbound";
+            ToolSetNodeOutbound.Image = Resources.ToolSetNodeOutbound;
+            ToolSetNodeOutbound.Click += ToolClick;
+
             ToolAddLightController = new ToolStripButton();
             ToolAddLightController.Name = "ToolAddLightController";
             ToolAddLightController.ToolTipText = "Add Light Controller";
@@ -144,10 +169,10 @@ namespace A319TS
             ToolAddDestination.Click += ToolClick;
 
             ToolDestinationTypeSelect = new ToolStripComboBox();
-            ToolDestinationTypeSelect.Name = "ToolRoadTypeSelect";
+            ToolDestinationTypeSelect.Name = "ToolDestinationTypeSelect";
             ToolDestinationTypeSelect.FlatStyle = FlatStyle.Standard;
             ToolDestinationTypeSelect.DropDownStyle = ComboBoxStyle.DropDownList;
-            ToolDestinationTypeSelect.ComboBox.DataSource = CurrentProject.DestinationTypes;
+            ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
 
             ToolAddRoad = new ToolStripButton();
             ToolAddRoad.Name = "ToolAddRoad";
@@ -190,12 +215,14 @@ namespace A319TS
             ToolMove.ToolTipText = "Move Object";
             ToolMove.Image = Resources.ToolMove;
             ToolMove.Click += ToolClick;
-
+            
             GUIMainToolStrip.Items.Add(ToolAddNode);
             GUIMainToolStrip.Items.Add(ToolSetNodeLight);
             GUIMainToolStrip.Items.Add(ToolSetNodeYield);
             GUIMainToolStrip.Items.Add(ToolSetNodeHome);
             GUIMainToolStrip.Items.Add(ToolSetNodeParking);
+            GUIMainToolStrip.Items.Add(ToolSetNodeInbound);
+            GUIMainToolStrip.Items.Add(ToolSetNodeOutbound);
             GUIMainToolStrip.Items.Add(new ToolStripSeparator());
             GUIMainToolStrip.Items.Add(ToolAddLightController);
             GUIMainToolStrip.Items.Add(ToolLinkLight);
@@ -217,6 +244,8 @@ namespace A319TS
         public ToolStripButton ToolSetNodeYield;
         public ToolStripButton ToolSetNodeHome;
         public ToolStripButton ToolSetNodeParking;
+        public ToolStripButton ToolSetNodeInbound;
+        public ToolStripButton ToolSetNodeOutbound;
         public ToolStripButton ToolAddLightController;
         public ToolStripButton ToolLinkLight;
         public ToolStripButton ToolAddDestination;
