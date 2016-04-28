@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace A319TS
 {
+    [Serializable]
     public class LightController : Entity
     {
         public List<Node> Lights { get; private set; }
-        public int FirstTime;
-        public int SecondTime;
+        public int FirstTime { get; set; }
+        public int SecondTime { get; set; }
         private int _current;
         private int _counter = 0;
 
+        protected LightController(){} // Serialize
         public LightController(Point position) : base(position)
         {
             Lights = new List<Node>();
@@ -28,15 +27,6 @@ namespace A319TS
         {
             return "(" + Position.X + "," + Position.Y + ") " + FirstTime + "/" + SecondTime;
         }
-
-        public void AddLight(Node node)
-        {
-            if (node.Type != Node.NodeType.Light)
-                throw new Exception("Wrong Type");
-            else
-                Lights.Add(node);
-        }
-
         public void Update(int ms)
         {
             _counter += ms;
@@ -50,7 +40,6 @@ namespace A319TS
                 _counter = 0;
             }
         }
-
         private void ToggleLights()
         {
             foreach (Node light in Lights)

@@ -8,12 +8,14 @@ namespace A319TS
     {
         public string Name { get; set; }
         public Color Color { get; set; }
+        public double Destribution { get; set; }
 
         private DestinationType(){} // Serialize
         public DestinationType(string name, Color color)
         {
             Name = name;
             Color = color;
+            Destribution = 0;
         }
 
         public override string ToString()

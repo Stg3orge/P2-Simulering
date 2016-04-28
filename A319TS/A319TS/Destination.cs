@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace A319TS
 {
+    [Serializable]
     public class Destination : Entity
     {
-        public DestinationType Type;
+        public DestinationType Type { get; set; }
+
+        protected Destination() { } // Serialize
         public Destination(Point position, DestinationType type) : base(position)
         {
             Type = type;

@@ -11,29 +11,23 @@ namespace A319TS
         private Node FirstRoad;
         private bool FirstLightControllerConnection = true;
         private LightController FirstLightController;
+        private bool FirstMove = true;
+        private object FirstObjectMove;
 
         public DestinationType SelectedDestinationType
         {
-            get
-            {
-                return (DestinationType)((ToolStripComboBox)Tools.Find("ToolDestinationTypeSelect", false)[0]).SelectedItem;
-            }
+            get { return (DestinationType)((ToolStripComboBox)Tools.Find("ToolDestinationTypeSelect", false)[0]).SelectedItem; }
         }
         public RoadType SelectedRoadType
         {
-            get
-            {
-                return (RoadType)((ToolStripComboBox)Tools.Find("ToolRoadTypeSelect", false)[0]).SelectedItem;
-            }
+            get { return (RoadType)((ToolStripComboBox)Tools.Find("ToolRoadTypeSelect", false)[0]).SelectedItem; }
         }
+
         public ToolStripButton ActiveTool;
         public ToolStripItemCollection Tools;
         public Viewport Viewport;
         public Project Project;
-
-        bool FirstMove = true;
-        object FirstObjectMove;
-
+        
         public ToolController(ToolStripItemCollection collection, Viewport viewport, Project project)
         {
             Tools = collection;
@@ -63,7 +57,6 @@ namespace A319TS
                 }
             }
         }
-
         private void ViewportClick(object sender, MouseEventArgs args)
         {
             if (ActiveTool != null && args.Button == MouseButtons.Left)
@@ -81,14 +74,24 @@ namespace A319TS
                     case "ToolLinkLight": LinkLight(); break;
                     case "ToolAddDestination": ToolAddDestination(); break;
                     case "ToolAddRoad": AddRoad(); break;
-                    // Combine into AddRoad Function, below cases of primary and secondary
-                    case "ToolPrimaryRoad": PrimaryRoad(); break;
-                    case "ToolSecondaryRoad": SecondaryRoad(); break;
+                    case "ToolPrimaryRoad": AddRoad(); break; // Not Done
+                    case "ToolSecondaryRoad": AddRoad(); break; // Not Done
                     case "ToolEdit": Edit(); break;
                     case "ToolRemove": Remove(); break;
                     case "ToolMoveObject": ToolMoveObject(); break;
                     default: break;
                 }
+            }
+        }
+        public void StopConnection(object sender, KeyEventArgs args)
+        {
+            if (args.KeyCode == Keys.Escape)
+            {
+                FirstRoad = null;
+                FirstLightController = null;
+                FirstRoadConnection = true;
+                FirstLightControllerConnection = true;
+                Viewport.HoverConnection = new Point(-1, -1);
             }
         }
 
@@ -142,15 +145,6 @@ namespace A319TS
                     }
                 }
             }
-        }
-
-        private void PrimaryRoad()
-        {
-
-        }
-        private void SecondaryRoad()
-        {
-
         }
         private void Edit()
         {
@@ -217,7 +211,6 @@ namespace A319TS
                 }
             }
         }
-
         private void SetNodeType(Node.NodeType type)
         {
             Node target = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
@@ -264,17 +257,6 @@ namespace A319TS
                     Viewport.HoverConnection = new Point(-1, -1);
                     Viewport.Connections.Refresh();
                 }
-            }
-        }
-        public void StopConnection(object sender, KeyEventArgs args)
-        {
-            if (args.KeyCode == Keys.Escape)
-            {
-                FirstRoad = null;
-                FirstLightController = null;
-                FirstRoadConnection = true;
-                FirstLightControllerConnection = true;
-                Viewport.HoverConnection = new Point(-1, -1);
             }
         }
     }

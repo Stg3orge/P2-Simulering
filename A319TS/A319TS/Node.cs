@@ -15,10 +15,6 @@ namespace A319TS
         public int ID { get { return Position.GetHashCode(); } }
 
         protected Node() { } // Serialize
-        public Node(Point position, NodeType type) : this(position)
-        {
-            Type = type;
-        }
         public Node(Point position)
         {
             Position = position;
@@ -26,17 +22,12 @@ namespace A319TS
             Green = true;
         }
 
-
         public override string ToString()
         {
             return "(" + Position.X + "," + Position.Y + ") " + Type;
         }
-
-
-
-
+        
         // A star stuff //
-
         public Node(int x, int y, bool isWalkable, Point endNodeLocation)
         {
             Position = new Point(x, y);
@@ -45,12 +36,7 @@ namespace A319TS
             H = CalculateCost(Position, endNodeLocation);
             G = 0;
         }
-
-
-        public enum NodeState { Untested, Open, Closed }
-
-        private Node parentNode;
-
+        
         // True when the node may be traversed, otherwise false
         public bool IsWalkable { get; set; }
 
@@ -61,6 +47,7 @@ namespace A319TS
         public float H { get; private set; }
 
         // Flags whether the node is open, closed or untested by the PathFinder
+        public enum NodeState { Untested, Open, Closed }
         public NodeState State { get; set; }
 
         // Estimated total cost (F = G + H)
@@ -70,12 +57,13 @@ namespace A319TS
         }
 
         // Gets or sets the parent node. The start node's parent will always be null.
+        private Node parentNode;
         public Node ParentNode
         {
             get { return parentNode; }
             set
             {
-                // When setting the parentnide, the traversal cost from the start node to here (the 'G' value) will be calculated
+                // When setting the parentnode, the traversal cost from the start node to here (the 'G' value) will be calculated
                 parentNode = value;
                 G = parentNode.G + CalculateCost(Position, parentNode.Position);
             }
@@ -88,6 +76,5 @@ namespace A319TS
             float deltaY = position2.Y - position1.Y;
             return (float)Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
         }
-
     }
 }

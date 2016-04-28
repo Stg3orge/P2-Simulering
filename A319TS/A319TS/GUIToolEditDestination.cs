@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
@@ -24,15 +20,7 @@ namespace A319TS
             Load += ReadData;
             FormClosing += SaveData;
         }
-        private void ReadData(object sender, EventArgs args)
-        {
-            Type.DataSource = new BindingSource(new BindingList<DestinationType>(Project.DestinationTypes), null);
-            Type.SelectedItem = Destination.Type;
-        }
-        private void SaveData(object sender, EventArgs args)
-        {
-            Destination.Type = Type.SelectedItem as DestinationType;
-        }
+        
         private void SetSize(int width, int height)
         {
             Size = new Size(width, height);
@@ -46,7 +34,7 @@ namespace A319TS
             MinimizeBox = false;
             MaximizeBox = false;
             SizeGripStyle = SizeGripStyle.Hide;
-            SetSize(201, 84);
+            SetSize(212, 93);
 
             TypeLabel = new Label();
             TypeLabel.Text = "Type";
@@ -55,10 +43,19 @@ namespace A319TS
             Controls.Add(TypeLabel);
 
             Type = new ComboBox();
-            Type.Location = new Point(49, 12);
+            Type.Location = new Point(58, 12);
             Type.Size = new Size(121, 21);
             Type.DropDownStyle = ComboBoxStyle.DropDownList;
             Controls.Add(Type);
+        }
+        private void ReadData(object sender, EventArgs args)
+        {
+            Type.DataSource = new BindingSource(new BindingList<DestinationType>(Project.DestinationTypes), null);
+            Type.SelectedItem = Destination.Type;
+        }
+        private void SaveData(object sender, EventArgs args)
+        {
+            Destination.Type = Type.SelectedItem as DestinationType;
         }
     }
 }

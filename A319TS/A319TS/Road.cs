@@ -18,7 +18,7 @@ namespace A319TS
         public double Length { get { return GetLength(); } }
         public double Cost { get; set; }
 
-        private Road(){} // Serialize
+        protected Road(){} // Serialize
         public Road(Node from, Node destination, RoadType type)
         {
             From = from;

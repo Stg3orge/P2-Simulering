@@ -16,14 +16,13 @@ namespace A319TS
         public List<DestinationType> DestinationTypes = new List<DestinationType>();
         public List<VehicleType> VehicleTypes = new List<VehicleType>();
 
-        private Project() { } // Serialize
+        protected Project(){} // Serialize
         public Project(string name)
         {
             Name = name;
-
             RoadTypes.Add(new RoadType("Default", 50));
             DestinationTypes.Add(new DestinationType("Default", Color.LightSlateGray));
-            VehicleTypes.Add(new VehicleType("Default", 130, 5, 5));
+            VehicleTypes.Add(new VehicleType("Default", 130, 5, 5, Color.LightSlateGray));
         }
     }
 }

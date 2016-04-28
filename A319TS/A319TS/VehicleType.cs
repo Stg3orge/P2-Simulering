@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace A319TS
@@ -13,13 +9,23 @@ namespace A319TS
         public int MaxSpeed { get; set; }
         public double Acceleration { get; set; }
         public double Deceleration { get; set; }
+        public Color Color { get; set; }
+        public double Destribution { get; set; }
 
-        public VehicleType(string name, int maxSpeed, double acceleration, double deceleration)
+        protected VehicleType(){} // Serialize
+        public VehicleType(string name, int maxSpeed, double acceleration, double deceleration, Color color)
         {
             Name = name;
             MaxSpeed = maxSpeed;
             Acceleration = acceleration;
             Deceleration = deceleration;
+            Color = color;
+            Destribution = 0;
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

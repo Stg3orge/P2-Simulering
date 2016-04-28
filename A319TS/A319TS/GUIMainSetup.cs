@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.Drawing;
-using System.ComponentModel;
 
 namespace A319TS
 {
@@ -13,17 +7,15 @@ namespace A319TS
     {
         private void InitGUIMain()
         {
-            Text = "A319TS - " + CurrentProject.Name; // Window Title
+            Text = "A319TS - " + CurrentProject.Name;
             Size = new Size(700, 350);
             MinimumSize = new Size(300, 150);
             Icon = Resources.P2;
-
-            InitGUIMainStatusStrip();
+            
             InitGUIMainViewport();
             InitGUIMainToolStrip();
             InitGUIMainMenuStrip();
-
-            Controls.Add(GUIMainStatusStrip);
+            
             Controls.Add(GUIMainViewport);
             Controls.Add(GUIMainToolStrip);
             Controls.Add(GUIMainMenuStrip);
@@ -58,34 +50,57 @@ namespace A319TS
                 MenuSettingsSimulation = new ToolStripMenuItem();
                 MenuSettingsSimulation.Text = "Simulation";
                 MenuSettingsSimulation.Click += MenuSettingsSimulationClick;
+            
+                MenuSettingsDistribution = new ToolStripMenuItem();
+                MenuSettingsDistribution.Text = "Distribution";
+                MenuSettingsDistribution.Click += MenuSettingsDistributionClick;
 
-                MenuSettingsDestinations = new ToolStripMenuItem();
-                MenuSettingsDestinations.Text = "Destinations";
-                MenuSettingsDestinations.Click += MenuSettingsDestinationsClick;
+                MenuSettingsDistribution2 = new ToolStripMenuItem();
+                MenuSettingsDistribution2.Text = "Distribution2";
+                MenuSettingsDistribution2.Click += MenuSettingsDistribution2Click;
 
-                MenuSettingsVehicles = new ToolStripMenuItem();
-                MenuSettingsVehicles.Text = "Vehicles";
-                MenuSettingsVehicles.Click += MenuSettingsVehiclesClick;
+            MenuTypes = new ToolStripMenuItem();
+            MenuTypes.Text = "Types";
 
-                MenuSettingsRoads = new ToolStripMenuItem();
-                MenuSettingsRoads.Text = "Roads";
-                MenuSettingsRoads.Click += MenuSettingsRoadsClick;
+                MenuTypesDestinations = new ToolStripMenuItem();
+                MenuTypesDestinations.Text = "Destinations";
+                MenuTypesDestinations.Click += MenuTypesDestinationsClick;
 
-            MenuSettingsDistribution = new ToolStripMenuItem();
-            MenuSettingsDistribution.Text = "Distribution";
-            MenuSettingsDistribution.Click += MenuSettingsDistributionClick;
+                MenuTypesVehicles = new ToolStripMenuItem();
+                MenuTypesVehicles.Text = "Vehicles";
+                MenuTypesVehicles.Click += MenuTypesVehiclesClick;
+
+                MenuTypesRoads = new ToolStripMenuItem();
+                MenuTypesRoads.Text = "Roads";
+                MenuTypesRoads.Click += MenuTypesRoadsClick;
+
+            MenuSimulation = new ToolStripMenuItem();
+            MenuSimulation.Text = "Simulation";
+
+                MenuSimulationRun = new ToolStripMenuItem();
+                MenuSimulationRun.Text = "Run";
+                MenuSimulationRun.Click += MenuSimulationRunClick;
+
+                MenuSimulationView = new ToolStripMenuItem();
+                MenuSimulationView.Text = "View";
+                MenuSimulationView.Click += MenuSimulationViewClick;
 
             MenuFile.DropDownItems.Add(MenuFileNew);
             MenuFile.DropDownItems.Add(MenuFileOpen);
             MenuFile.DropDownItems.Add(MenuFileSave);
             MenuSettings.DropDownItems.Add(MenuSettingsProject);
-            MenuSettings.DropDownItems.Add(MenuSettingsSimulation);   // addet
-            MenuSettings.DropDownItems.Add(MenuSettingsDestinations);   // addet
-            MenuSettings.DropDownItems.Add(MenuSettingsVehicles);   // addet
-            MenuSettings.DropDownItems.Add(MenuSettingsRoads);   // addet
+            MenuSettings.DropDownItems.Add(MenuSettingsSimulation);
             MenuSettings.DropDownItems.Add(MenuSettingsDistribution);
+            MenuSettings.DropDownItems.Add(MenuSettingsDistribution2);
+            MenuTypes.DropDownItems.Add(MenuTypesDestinations);
+            MenuTypes.DropDownItems.Add(MenuTypesVehicles);
+            MenuTypes.DropDownItems.Add(MenuTypesRoads);
+            MenuSimulation.DropDownItems.Add(MenuSimulationRun);
+            MenuSimulation.DropDownItems.Add(MenuSimulationView);
             GUIMainMenuStrip.Items.Add(MenuFile);
             GUIMainMenuStrip.Items.Add(MenuSettings);
+            GUIMainMenuStrip.Items.Add(MenuTypes);
+            GUIMainMenuStrip.Items.Add(MenuSimulation);
         }
         private MenuStrip GUIMainMenuStrip;
         private ToolStripMenuItem MenuFile;
@@ -95,10 +110,15 @@ namespace A319TS
         private ToolStripMenuItem MenuSettings;
         private ToolStripMenuItem MenuSettingsProject;
         private ToolStripMenuItem MenuSettingsSimulation;
-        private ToolStripMenuItem MenuSettingsDestinations;
-        private ToolStripMenuItem MenuSettingsVehicles;
-        private ToolStripMenuItem MenuSettingsRoads;
         private ToolStripMenuItem MenuSettingsDistribution;
+        private ToolStripMenuItem MenuSettingsDistribution2;
+        private ToolStripMenuItem MenuTypes;
+        private ToolStripMenuItem MenuTypesDestinations;
+        private ToolStripMenuItem MenuTypesVehicles;
+        private ToolStripMenuItem MenuTypesRoads;
+        private ToolStripMenuItem MenuSimulation;
+        private ToolStripMenuItem MenuSimulationRun;
+        private ToolStripMenuItem MenuSimulationView;
 
         // MainToolStrip
         private void InitGUIMainToolStrip()
@@ -172,7 +192,7 @@ namespace A319TS
             ToolDestinationTypeSelect.Name = "ToolDestinationTypeSelect";
             ToolDestinationTypeSelect.FlatStyle = FlatStyle.Standard;
             ToolDestinationTypeSelect.DropDownStyle = ComboBoxStyle.DropDownList;
-            ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
+            ToolDestinationTypeSelect.ComboBox.DataSource = CurrentProject.DestinationTypes;
 
             ToolAddRoad = new ToolStripButton();
             ToolAddRoad.Name = "ToolAddRoad";
@@ -264,35 +284,7 @@ namespace A319TS
             GUIMainViewport = new Viewport(CurrentProject);
             GUIMainViewport.Dock = DockStyle.Fill;
             GUIMainViewport.BorderStyle = BorderStyle.Fixed3D;
-            GUIMainViewport.Padding = new Padding(0, 0, 0, 20);
         }
         private Viewport GUIMainViewport;
-
-        // MainStatusStrip
-        private void InitGUIMainStatusStrip()
-        {
-            GUIMainStatusStrip = new StatusStrip();
-            GUIMainStatusStrip.BackColor = SystemColors.ControlLight;
-
-            StatusZoomLabel = new ToolStripStatusLabel();
-            StatusZoomLabel.Text = "Zoom:";
-            StatusZoom = new ToolStripStatusLabel();
-            StatusZoom.Text = "100%";
-
-            StatusNodesLabel = new ToolStripStatusLabel();
-            StatusNodesLabel.Text = "Nodes:";
-            StatusNodes = new ToolStripStatusLabel();
-            StatusNodes.Text = "0";
-
-            GUIMainStatusStrip.Items.Add(StatusZoomLabel);
-            GUIMainStatusStrip.Items.Add(StatusZoom);
-            GUIMainStatusStrip.Items.Add(StatusNodesLabel);
-            GUIMainStatusStrip.Items.Add(StatusNodes);
-        }
-        private StatusStrip GUIMainStatusStrip;
-        private ToolStripStatusLabel StatusZoomLabel;
-        public ToolStripStatusLabel StatusZoom;
-        private ToolStripStatusLabel StatusNodesLabel;
-        public ToolStripStatusLabel StatusNodes;
     }
 }

@@ -8,7 +8,7 @@ namespace A319TS
         public string Name { get; set; }
         public int Speed { get; set; }
 
-        private RoadType(){} // Serialize
+        protected RoadType(){} // Serialize
         public RoadType(string name, int speed)
         {
             Name = name;

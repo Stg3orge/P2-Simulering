@@ -15,18 +15,11 @@ namespace A319TS
         public Point HoverConnection = new Point(-1, -1);
         public Point MousePos = new Point(0, 0);
         public Point GridPos { get { return GetGridPos(); } }
+
         private Point _viewPos = new Point(0, 0);
-        public Point ViewPos
-        {
-            get { return _viewPos; }
-            private set { SetViewPos(value); }
-        }
         private float _zoom = 1;
-        public float Zoom
-        {
-            get { return _zoom; }
-            set { SetZoom(value); }
-        }
+        public Point ViewPos { get { return _viewPos; } private set { SetViewPos(value); } }
+        public float Zoom { get { return _zoom; } set { SetZoom(value); } }
 
         public Viewport(Project project) : base()
         {
@@ -83,27 +76,27 @@ namespace A319TS
         }
         private void OnWheel(object sender, MouseEventArgs args)
         {
-
             if (args.Delta > 0)
                 Zoom += 0.25F;
             else
                 Zoom -= 0.25F;
             Refresh();
         }
-
         public object GetObjByGridPos()
         {
             Node node = Project.Nodes.Find(n => n.Position == GridPos);
-            LightController controller = Project.LightControllers.Find(l => l.Position == GridPos);
-            Destination dest = Project.Destinations.Find(d => d.Position == GridPos);
             if (node != null)
                 return node;
-            else if (controller != null)
+
+            LightController controller = Project.LightControllers.Find(l => l.Position == GridPos);
+            if (controller != null)
                 return controller;
-            else if (dest != null)
+
+            Destination dest = Project.Destinations.Find(d => d.Position == GridPos);
+            if (dest != null)
                 return dest;
-            else
-                return null;
+
+            return null;
         }
     }
 }

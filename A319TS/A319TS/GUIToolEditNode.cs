@@ -9,15 +9,14 @@ namespace A319TS
     {
         public Node Node;
         public Project Project;
-
         private Label PositionLabel;
         private Label TypeLabel;
         private TextBox Position;
         private ComboBox Type;
         private CheckBox GreenCheck;
         private Label RoadsLabel;
-        private DataGridView RoadData;
-        private Button RemoveRoad;
+        private DataGridView Roads;
+        private Button Remove;
 
         public GUIToolEditNode(Node node, Project project)
         {
@@ -25,68 +24,14 @@ namespace A319TS
             Project = project;
             Setup();
             Load += ReadData;
-            FormClosing += Save;
+            FormClosing += SaveData;
         }
-
-        private void ReadData(object sender, EventArgs args)
-        {
-            Position.BringToFront();
-            Type.BringToFront();
-
-            Type.DataSource = Enum.GetValues(typeof(Node.NodeType));
-            Type.SelectedItem = Node.Type;
-
-            if (Node.Roads.Count > 0)
-            {
-                RoadData.DataError += DataErrorHandler;
-                RoadData.BringToFront();
-                RoadData.DataSource = new BindingSource(new BindingList<Road>(Node.Roads), null);
-                foreach (DataGridViewColumn column in RoadData.Columns)
-                    column.Resizable = DataGridViewTriState.False;
-                foreach (DataGridViewRow row in RoadData.Rows)
-                    row.Resizable = DataGridViewTriState.False;
-                RoadData.Columns[0].ReadOnly = true;
-                RoadData.Columns[1].ReadOnly = true;
-                RoadData.Columns[2].Visible = false;
-                RoadData.Columns[3].Visible = false;
-                RoadData.Columns[4].Visible = false;
-                var RoadTypeColumn = new DataGridViewComboBoxColumn() { HeaderText = "Type" };
-                RoadData.Columns.Insert(3, RoadTypeColumn);
-                RoadTypeColumn.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
-                foreach (DataGridViewRow row in RoadData.Rows)
-                    foreach (DataGridViewCell cell in row.Cells)
-                        if (cell is DataGridViewComboBoxCell)
-                            cell.Value = ((Road)row.DataBoundItem).Type;
-                RoadData.Show();
-            }
-        }
-        private void DataErrorHandler(object sender, DataGridViewDataErrorEventArgs args)
-        {
-            if (args.Exception is ArgumentException)
-            {
-                args.Cancel = true;
-            }
-            else
-            {
-                MessageBox.Show(args.Exception.Message);
-                args.Cancel = true;
-            }
-        }
-        private void Save(object sender, EventArgs args)
-        {
-            Node.Green = GreenCheck.Checked;
-            Node.Type = (Node.NodeType)Type.SelectedItem;
-        }
+        
         private void SetSize(int width, int height)
         {
             Size = new Size(width, height);
             MinimumSize = new Size(width, height);
             MaximumSize = new Size(width, height);
-        }
-        private void RemoveRoadClick(object sender, EventArgs args)
-        {
-            foreach (DataGridViewRow row in RoadData.SelectedRows)
-                RoadData.Rows.Remove(row);
         }
         private void Setup()
         {
@@ -95,7 +40,7 @@ namespace A319TS
             MinimizeBox = false;
             MaximizeBox = false;
             SizeGripStyle = SizeGripStyle.Hide;
-            SetSize(193, 130);
+            SetSize(229, 145);
 
             PositionLabel = new Label();
             PositionLabel.Text = "Position";
@@ -105,65 +50,85 @@ namespace A319TS
 
             Position = new TextBox();
             Position.Text = Node.Position.X + ", " + Node.Position.Y;
-            Position.Location = new Point(62, 12);
-            Position.Size = new Size(100, 20);
+            Position.Location = new Point(76, 12);
+            Position.Size = new Size(120, 22);
             Position.Enabled = false;
             Controls.Add(Position);
 
             TypeLabel = new Label();
             TypeLabel.Text = "Type";
-            TypeLabel.Location = new Point(12, 41);
+            TypeLabel.Location = new Point(12, 43);
             TypeLabel.AutoSize = true;
             Controls.Add(TypeLabel);
 
             Type = new ComboBox();
-            Type.Location = new Point(62, 38);
-            Type.Size = new Size(100, 21);
+            Type.Location = new Point(76, 40);
+            Type.Size = new Size(120, 24);
             Type.DropDownStyle = ComboBoxStyle.DropDownList;
             Controls.Add(Type);
 
             GreenCheck = new CheckBox();
             GreenCheck.Text = "Green (Light)";
-            GreenCheck.Location = new Point(62, 65);
+            GreenCheck.Location = new Point(76, 70);
             GreenCheck.AutoSize = true;
             GreenCheck.Checked = Node.Green;
             Controls.Add(GreenCheck);
 
             if (Node.Roads.Count > 0)
             {
-                Size GridViewSize = new Size(303, 140);
-                Point RemoveLocation = new Point(398, 179);
-                if (Node.Roads.Count > 5)
-                {
-                    GridViewSize.Width += 17;
-                    RemoveLocation.X += 17;
-                    SetSize(522, 252);
-                }
-                else
-                {
-                    SetSize(505, 252);
-                }
+                SetSize(547, 280);
 
                 RoadsLabel = new Label();
                 RoadsLabel.Text = "Roads";
-                RoadsLabel.Location = new Point(168, 15);
+                RoadsLabel.Location = new Point(208, 15);
                 RoadsLabel.AutoSize = true;
                 Controls.Add(RoadsLabel);
 
-                RoadData = new DataGridView();
-                RoadData.Location = new Point(171, 32);
-                RoadData.Size = GridViewSize;
-                RoadData.RowHeadersVisible = false;
-                RoadData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                Controls.Add(RoadData);
+                Roads = new DataGridView();
+                Roads.Location = new Point(221, 36);
+                Roads.Size = new Size(303, 158);
+                Roads.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                Roads.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+                Roads.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                Roads.AllowUserToResizeColumns = false;
+                Roads.AllowUserToResizeRows = false;
+                Roads.RowHeadersVisible = false;
+                Roads.ReadOnly = true;
+                Controls.Add(Roads);
+                Roads.Show();
 
-                RemoveRoad = new Button();
-                RemoveRoad.Location = RemoveLocation;
-                RemoveRoad.Size = new Size(75, 23);
-                RemoveRoad.Text = "Remove";
-                RemoveRoad.Click += RemoveRoadClick;
-                Controls.Add(RemoveRoad);
+                Remove = new Button();
+                Remove.Location = new Point(439, 200);
+                Remove.Size = new Size(75, 23);
+                Remove.Text = "Remove";
+                Remove.Click += RemoveRoadClick;
+                Controls.Add(Remove);
             }
+        }
+        private void ReadData(object sender, EventArgs args)
+        {
+            Type.DataSource = Enum.GetValues(typeof(Node.NodeType));
+            Type.SelectedItem = Node.Type;
+
+            if (Node.Roads.Count > 0)
+            {
+                Roads.DataSource = new BindingSource(new BindingList<Road>(Node.Roads), null);
+                foreach (DataGridViewColumn column in Roads.Columns)
+                    column.Visible = false;
+                Roads.Columns[0].Visible = true;
+                Roads.Columns[1].Visible = true;
+                Roads.Columns[2].Visible = true;
+            }
+        }
+        private void SaveData(object sender, EventArgs args)
+        {
+            Node.Green = GreenCheck.Checked;
+            Node.Type = (Node.NodeType)Type.SelectedItem;
+        }
+        private void RemoveRoadClick(object sender, EventArgs args)
+        {
+            foreach (DataGridViewRow row in Roads.SelectedRows)
+                Roads.Rows.Remove(row);
         }
     }
 }
