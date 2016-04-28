@@ -69,6 +69,9 @@
     <Compile Include="GUIMenuSettingsDestination.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GUIMenuSettingsRoads.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUIToolEditDestination.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -69,6 +69,12 @@ namespace A319TS
         {
 
         }
+        private void MenuSettingsRoadsClick(object sender, EventArgs args)
+        {
+            GUIMenuSettingsRoads road = new GUIMenuSettingsRoads(CurrentProject);
+            road.ShowDialog();
+            ToolRoadTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<RoadType>(CurrentProject.RoadTypes), null);
+        }
 
         // MainToolStrip Events
         private void ToolClick(object sender, EventArgs args)
