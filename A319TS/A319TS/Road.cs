@@ -10,18 +10,11 @@ namespace A319TS
     [Serializable]
     public class Road
     {
-<<<<<<< HEAD
         public Node From;
         public Node Destination;
         public RoadType Type;
         public enum RoadDifferentiation { Primary, Secondary, Shared };
         public RoadDifferentiation Differentiation;
-=======
-        public Node From { get; set; }
-        public Node Destination { get; set; }
-        public RoadType Type { get; set; }
-        public enum RoadDifferentiation {Primary, Secondary, Shared };
->>>>>>> b4df7891640376b80944b35bbd0bb0db3f8c048e
         public double Length { get { return GetLength(); } }
         public double Cost { get; set; }
 
