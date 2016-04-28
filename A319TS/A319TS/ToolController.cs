@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace A319TS
 {
@@ -11,6 +12,13 @@ namespace A319TS
         private bool FirstLightControllerConnection = true;
         private LightController FirstLightController;
 
+        public DestinationType SelectedDestinationType
+        {
+            get
+            {
+                return (DestinationType)((ToolStripComboBox)Tools.Find("ToolRoadTypeSelect", false)[0]).SelectedItem;
+            }
+        }
         public ToolStripButton ActiveTool;
         public ToolStripItemCollection Tools;
         public Viewport Viewport;
@@ -60,6 +68,8 @@ namespace A319TS
                     case "ToolSetNodeYield": SetNodeType(Node.NodeType.Yield); break;
                     case "ToolSetNodeHome": SetNodeType(Node.NodeType.Home); break;
                     case "ToolSetNodeParking": SetNodeType(Node.NodeType.Parking); break;
+                    case "ToolSetNodeInbound": SetNodeType(Node.NodeType.Inbound); break;
+                    case "ToolSetNodeOutbound": SetNodeType(Node.NodeType.Outbound); break;
                     case "ToolAddLightController": AddLightController(); break;
                     case "ToolLinkLight": LinkLight(); break;
                     case "ToolAddDestination": ToolAddDestination(); break;
@@ -70,9 +80,6 @@ namespace A319TS
                     case "ToolEdit": Edit(); break;
                     case "ToolRemove": Remove(); break;
                     case "ToolMoveObject": ToolMoveObject(); break;
-                    case "ToolInbound": SetNodeType(Node.NodeType.Inbound); break;
-                    case "ToolOutbound": SetNodeType(Node.NodeType.Outbound); break;
-
                     default: break;
                 }
             }
@@ -112,7 +119,7 @@ namespace A319TS
 
                     else
                     {
-                        FirstRoad.Roads.Add(new Road(FirstRoad, node, new RoadType("New Road", 90)));
+                        FirstRoad.Roads.Add(new Road(FirstRoad, node, Project.RoadTypes[0]));
                         if (Control.ModifierKeys == Keys.Shift)
                         {
                             FirstRoad = node;
@@ -143,8 +150,15 @@ namespace A319TS
             object obj = Viewport.GetObjByGridPos();
             if (obj != null)
             {
-                GUIToolEdit EditDialog = new GUIToolEdit(obj, Project);
+                Form EditDialog = null;
+                if (obj is Node)
+                    EditDialog = new GUIToolEditNode(obj as Node, Project);
+                else if (obj is Destination)
+                    EditDialog = new GUIToolEditDestination(obj as Destination);
+                else if (obj is LightController)
+                    EditDialog = new GUIToolEditLightController(obj as LightController);
                 EditDialog.ShowDialog();
+                Viewport.Nodes.Refresh();
             }
         }
         private void Remove()
@@ -213,7 +227,7 @@ namespace A319TS
         private void ToolAddDestination()
         {
             if (Viewport.GetObjByGridPos() == null)
-                Project.Destinations.Add(new Destination(Viewport.GridPos, new DestinationType("Test", Color.Green)));
+                Project.Destinations.Add(new Destination(Viewport.GridPos, SelectedDestinationType));
             Viewport.Entities.Refresh();
         }
         private void AddLightController()

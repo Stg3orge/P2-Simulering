@@ -7,9 +7,15 @@ using System.Windows.Forms;
 
 namespace A319TS
 {
-    partial class GUIToolEdit : Form
+    class GUIToolEditDestination : Form
     {
-        private void InitEditDestination(Destination dest)
+        public Destination Destination;
+        public GUIToolEditDestination(Destination dest)
+        {
+            Destination = dest;
+            Setup();
+        }
+        private void Setup()
         {
 
         }
