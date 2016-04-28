@@ -2,160 +2,200 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace A319TS
 {
-    static class Pathfinder
+     class Pathfinder
     {
-        
-        // Resulting arrays {disk = arc, path = nodes}(components to create final graph)
-        static private double[] dist { get; set; }
-        static private double[] path { get; set; }
+        private int width;
+        private int height;
+        private Node[,] nodes;
+        private Node startNode;
+        private Node endNode;
 
-        // Holds queue for the nodes to be evaluated 
-        static private List<int> queue = new List<int>();   // NOTE: Use nodeList[i].ID insted?
+        public Point StartNodeLocation { get; set; }
+        public Point EndNodeLocation { get; set; }
+        public bool[,] Gridmap { get; set; }
 
 
-        static double[,] FindPath(List<Node> nodeList, Node startNode, Node endNode)
+        public List<Point> FindPath(Point startLocation, Point endLocation, bool[,] gridmap)
         {
-            double[,] adj = CreateAdjMatrix(nodeList);
+            StartNodeLocation = startLocation;
+            EndNodeLocation = endLocation;
+            Gridmap = gridmap;
 
-            Dijkstra(adj, startNode, endNode);
+            InitializeNodes(Gridmap);
+            startNode = nodes[StartNodeLocation.X, StartNodeLocation.Y];
+            startNode.State = Node.NodeState.Open;
+            endNode = nodes[EndNodeLocation.X, EndNodeLocation.Y];
 
-            // Createing final route
-            double[,] Route = To2DArray(path, dist);
-
-            return Route;
-        }
-
-        // Creates adj Matrix from a List of Nodes
-        static private double[,] CreateAdjMatrix(List<Node> nodeList)
-        {
-            double[,] adj = new double[nodeList.Count, nodeList.Count];
-
-            for (int i = 0; i < nodeList.Count; i++)
+            // PathFinding - A Star
+            List<Point> path = new List<Point>();
+            bool success = Search(startNode);
+            
+            if (success)
             {
-                Node node1 = nodeList[i];
-
-                for (int j = 0; j < nodeList.Count; j++)
+                // If a path was found, follow the parents from the end node to build a list of locations
+                Node node = endNode;
+                while (node.ParentNode != null)
                 {
-                    Node node2 = nodeList[j];
-
-                    Road arc = node1.Roads.FirstOrDefault(a => a.Destination == node2);
-
-                    if (arc != null)
-                    {
-                        adj[i, j] = arc.Length;
-                    }
+                    path.Add(node.Position);
+                    node = node.ParentNode;
                 }
+
+                // Reverse the list so it's in the correct order when returned
+                path.Reverse();
             }
-            return adj;
+
+            return path;
         }
 
-        // Takes a adjacency matrix[graph], and a start/end nodes
-        static private void Dijkstra(double[,] adj, Node startNode, Node endNode)
+        // Creating the nodes[] and calculates the cost to endNode for each node. Also sets if(walkeable)
+        private void InitializeNodes(bool[,] gridmap)
         {
-            int len = adj.GetLength(0);
-
-            Initialize(startNode.ID, len);
-
-            while (queue.Count > 0)
+            width = gridmap.GetLength(0);
+            height = gridmap.GetLength(1);
+            nodes = new Node[width, height];
+            for (int y = 0; y < height; y++)
             {
-                int u = GetNextVertex();
-
-                // Find the nodes that u connects to and perform relax
-                for (int v = 0; v < len; v++)
+                for (int x = 0; x < width; x++)
                 {
-                    // Checks for edges(roads) with negative weight
-                    if (adj[u, v] < 0)
-                    {
-                        throw new ArgumentException("Graph contains road(s) with negative length");
-                    }
-                    // checking if the next node is the endNode
-                    if(u == endNode.ID)
-                    {
-                        break;
-                    }
-
-                    // Check for an edge(road) between u and v
-                    if (adj[u, v] > 0)
-                    {
-                        // Edge exists
-                        if (dist[v] > dist[u] + adj[u, v])
-                        {
-                            dist[v] = dist[u] + adj[u, v];
-                            path[v] = u;
-                        }
-                    }
+                    nodes[x, y] = new Node(x, y, gridmap[x, y], EndNodeLocation);
                 }
             }
         }
 
-        // Sets up initial settings
-        static private void Initialize(int startNodeID, int len)
+
+        private bool Search(Node currentNode)
         {
-            dist = new double[len];
-            path = new double[len];
+            // Sets the current node state to Closed, since it cannot be traversed more than once
+            currentNode.State = Node.NodeState.Closed;
+            List<Node> nextNodes = GetAdjacentWalkableNodes(currentNode);
 
-            // Set distance to all nodes to MAX
-            for (int i = 0; i < len; i++)
+            // Sort nodes[] by F-value so that the shortest possible routes are considered first
+            nextNodes.Sort((node1, node2) => node1.F.CompareTo(node2.F));
+
+            foreach (Node node in nextNodes)
             {
-                dist[i] = double.MaxValue;
-
-                queue.Add(i);
-            }
-
-            // Set distance to 0 for starting point and the previous node to null (-1)
-            dist[startNodeID] = 0;
-            path[startNodeID] = -1;
-        }
-
-        // Retrives next node to evaluate from the queue
-        static private int GetNextVertex()
-        {
-            double min = double.MaxValue;
-            int Vertex = -1;
-
-            // Search through queue to find the next node having the smallest distance
-            foreach (int j in queue)
-            {
-                if (dist[j] <= min)
+                // Check if the endnode has been reached
+                if (node.Position == endNode.Position)
                 {
-                    min = dist[j];
-                    Vertex = j;
+                    return true;
+                }
+                else
+                {
+                    // Recursive : until the endnode is reached
+                    if (Search(node))
+                        return true;
                 }
             }
 
-            queue.Remove(Vertex);
-
-            return Vertex;
+            // The method returns false if the path leads to a dead end
+            return false;
         }
 
 
-
-        // http://stackoverflow.com/questions/18735376/combining-two-double-arrays-into-double/18735632#18735632
-        static private T[,] To2DArray<T>(params T[][] arrays)
+        private List<Node> GetAdjacentWalkableNodes(Node currentNode)
         {
-            if (arrays == null) throw new ArgumentNullException("arrays");
-            foreach (var a in arrays)
+            List<Node> walkableNodes = new List<Node>();
+            IEnumerable<Point> adjacenPositions = GetAdjacentPositions(currentNode.Position);
+
+            foreach (Point location in adjacenPositions)
             {
-                if (a == null) throw new ArgumentException("can not contain null arrays");
-                if (a.Length != arrays[0].Length) throw new ArgumentException("input arrays should have the same length");
-            }
+                int x = location.X;
+                int y = location.Y;
 
-            var height = arrays.Length;
-            var width = arrays[0].Length;
-
-            var result = new T[width, height];
-
-            for (int i = 0; i < height; i++)
-                for (int j = 0; j < width; j++)
+                // Makeing sure positions aint out of grid size
+                if (x < 0 || x >= width || y < 0 || y >= height)
                 {
-                    result[i, j] = arrays[i][j];
+                    continue;
                 }
 
-            return result;
+                Node node = nodes[x, y];
+                // Ignore non-walkable nodes
+                if (!node.IsWalkable)
+                {
+                    continue;
+                }
+
+                // Ignore already-closed nodes
+                if (node.State == Node.NodeState.Closed)
+                {
+                    continue;
+                }
+
+                // Already open nodes will only be added to the list if their G-value is lower by going the current route
+                if (node.State == Node.NodeState.Open)
+                {
+                    float travelCost = Node.CalculateCost(node.Position, node.ParentNode.Position);
+                    float gValue = currentNode.G + travelCost;
+
+                    if (gValue < node.G)
+                    {
+                        node.ParentNode = currentNode;
+                        walkableNodes.Add(node);
+                    }
+                }
+                else
+                {
+                    // If the node is untested. Sets the parent and flag it as Open
+                    node.ParentNode = currentNode;
+                    node.State = Node.NodeState.Open;
+                    walkableNodes.Add(node);
+                }
+            }
+
+            return walkableNodes;
         }
-        
+
+        // Gets the locations of all the adjancent nodes from a current node
+        private IEnumerable<Point> GetAdjacentPositions(Point currentNode)
+        {
+            return new Point[]
+            {
+                new Point(currentNode.X-1, currentNode.Y-1),
+                new Point(currentNode.X-1, currentNode.Y  ),
+                new Point(currentNode.X-1, currentNode.Y+1),
+                new Point(currentNode.X,   currentNode.Y+1),
+                new Point(currentNode.X+1, currentNode.Y+1),
+                new Point(currentNode.X+1, currentNode.Y  ),
+                new Point(currentNode.X+1, currentNode.Y-1),
+                new Point(currentNode.X,   currentNode.Y-1)
+            };
+        }
+
+
+
+
+
+        // Test Metode til print i console
+        public void ShowRoute(IEnumerable<Point> path, bool[,] gridmap)
+        {
+            for (int y = gridmap.GetLength(1) - 1; y >= 0; y--) // Invert the Y-axis so that coordinate 0,0 is shown in the bottom-left
+            {
+                for (int x = 0; x < gridmap.GetLength(0); x++)
+                {
+                    if (StartNodeLocation.Equals(new Point(x, y)))
+                        // Show the start position
+                        Console.Write('A');
+                    else if (EndNodeLocation.Equals(new Point(x, y)))
+                        // Show the end position
+                        Console.Write('B');
+                    else if (gridmap[x, y] == false)
+                        // Show any barriers
+                        Console.Write('░');
+                    else if (path.Where(p => p.X == x && p.Y == y).Any())
+                        // Show the path in between
+                        Console.Write('*');
+                    else
+                        // Show nodes that aren't part of the path
+                        Console.Write('·');
+                }
+
+                Console.WriteLine();
+            }
+        }
+
     }
 }
