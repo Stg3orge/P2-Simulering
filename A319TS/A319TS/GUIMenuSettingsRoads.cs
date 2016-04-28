@@ -11,16 +11,28 @@ namespace A319TS
 {
     class GUIMenuSettingsRoads : Form
     {
-        private TextBox NameSet;
-        private TextBox SpeedSet;
-        private Button Add;
+        private Project Project;
         private Label NameLabel;
         private Label SpeedLabel;
+        private TextBox SetName;
+        private TextBox SetSpeed;
+        private Button Add;
         private DataGridView RoadData;
-        Project Project;
+        
         public GUIMenuSettingsRoads(Project project)
         {
             Project = project;
+            Setup();
+            Load += ReadData;
+        }
+
+        private void ReadData(object sender, EventArgs args)
+        {
+            RoadData.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
+            RoadData.Show();
+        }
+        private void Setup()
+        {
             Text = "Road";
             Size = new Size(582, 269);
             MinimumSize = new Size(582, 269);
@@ -30,62 +42,53 @@ namespace A319TS
             MaximizeBox = false;
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
-            InitializeGUISettingsRoads();
-
-            Controls.Add(NameSet);
-            Controls.Add(NameLabel);
-            Controls.Add(SpeedSet);
-            Controls.Add(Add);
-            //Controls.Add(ColorLabel);
-            Controls.Add(RoadData);
-        }
-        private void InitializeGUISettingsRoads()
-        {
-            NameSet = new TextBox();
-            NameSet.Location = new Point(64, 12);
-            NameSet.Size = new Size(131, 22);
 
             NameLabel = new Label();
             NameLabel.Text = "Name";
             NameLabel.Location = new Point(13, 12);
+            NameLabel.AutoSize = true;
+            Controls.Add(NameLabel);
 
-            
+            SetName = new TextBox();
+            SetName.Location = new Point(64, 12);
+            SetName.Size = new Size(131, 22);
+            Controls.Add(SetName);
+
             SpeedLabel = new Label();
             SpeedLabel.Text = "Speed";
             SpeedLabel.Location = new Point(13, 46);
-            
-            SpeedSet = new TextBox();
-            SpeedSet.Location = new Point(64, 43);
-            SpeedSet.Size = new Size(131, 24);
+            SpeedLabel.AutoSize = true;
+            Controls.Add(SpeedLabel);
+
+            SetSpeed = new TextBox();
+            SetSpeed.Location = new Point(64, 43);
+            SetSpeed.Size = new Size(131, 24);
+            Controls.Add(SetSpeed);
 
             Add = new Button();
             Add.Text = "Add";
             Add.Location = new Point(12, 159);
             Add.Size = new Size(183, 46);
             Add.Click += AddClick;
+            Controls.Add(Add);
 
             RoadData = new DataGridView();
-            RoadData.Text = "SetOfRoads";
             RoadData.Location = new Point(218, 12);
             RoadData.Size = new Size(329, 193);
-            RoadData.DataSource = Project.RoadTypes; //RoadData.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
-            RoadData.Show();
+            Controls.Add(RoadData);
         }
-
         private void AddClick(object sender, EventArgs e)
         {
-
-
-            if (NameSet.Text.Length > 0 && Project.RoadTypes.Find(d => d.Name == NameSet.Text) == null)
+            if (SetName.Text.Length > 0 && Project.RoadTypes.Find(d => d.Name == SetName.Text) == null)
             {
-                Project.RoadTypes.Add(new RoadType(NameSet.Text, Convert.ToInt32(SpeedSet.Text)));
+                Project.RoadTypes.Add(new RoadType(SetName.Text, Convert.ToInt32(SetSpeed.Text)));
+                RoadData.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
                 NameLabel.ForeColor = Color.Black;
             }
             else
             {
                 NameLabel.ForeColor = Color.Red;
             }
-            RoadData.DataSource = new BindingSource(new BindingList<RoadType>(Project.RoadTypes), null);
         }
     }
 }

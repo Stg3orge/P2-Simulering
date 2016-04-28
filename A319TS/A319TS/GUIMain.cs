@@ -61,7 +61,6 @@ namespace A319TS
         {
             GUIMenuSettingsDestination dest = new GUIMenuSettingsDestination(CurrentProject);
             dest.ShowDialog();
-            ToolDestinationTypeSelect.ComboBox.Show();
             ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
 
         }
