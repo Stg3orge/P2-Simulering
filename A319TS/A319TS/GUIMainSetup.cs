@@ -163,11 +163,9 @@ namespace A319TS
             ToolAddDestination.Click += ToolClick;
 
             ToolDestinationTypeSelect = new ToolStripComboBox();
-            ToolDestinationTypeSelect.Name = "ToolRoadTypeSelect";
+            ToolDestinationTypeSelect.Name = "ToolDestinationTypeSelect";
             ToolDestinationTypeSelect.FlatStyle = FlatStyle.Standard;
             ToolDestinationTypeSelect.DropDownStyle = ComboBoxStyle.DropDownList;
-
-
             ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
 
             ToolAddRoad = new ToolStripButton();

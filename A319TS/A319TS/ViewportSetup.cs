@@ -11,7 +11,7 @@ namespace A319TS
     partial class Viewport : Panel
     {
         public Layer Grid = new Layer();
-        public Layer Roads = new Layer();
+        public Layer Connections = new Layer();
         public Layer Nodes = new Layer();
         public Layer Entities = new Layer();
         public Layer Information = new Layer();
@@ -21,27 +21,22 @@ namespace A319TS
         {
             Grid.Dock = DockStyle.Fill;
             Grid.BackColor = Color.Transparent;
-            Grid.Region = null;
             Grid.Paint += DrawGrid;
 
-            Roads.Dock = DockStyle.Fill;
-            Roads.BackColor = Color.Transparent;
-            Roads.Region = null;
-            Roads.Paint += DrawRoads;
+            Connections.Dock = DockStyle.Fill;
+            Connections.BackColor = Color.Transparent;
+            Connections.Paint += DrawConnections;
 
             Nodes.Dock = DockStyle.Fill;
             Nodes.BackColor = Color.Transparent;
-            Nodes.Region = null;
             Nodes.Paint += DrawNodes;
 
             Entities.Dock = DockStyle.Fill;
             Entities.BackColor = Color.Transparent;
-            Entities.Region = null;
             Entities.Paint += DrawEntities;
 
             Information.Dock = DockStyle.Fill;
             Information.BackColor = Color.Transparent;
-            Information.Region = null;
             Information.Paint += DrawInformation;
 
             Input.Dock = DockStyle.Fill;
@@ -50,8 +45,8 @@ namespace A319TS
             Input.MouseWheel += OnWheel;
 
             Controls.Add(Grid);
-            Grid.Controls.Add(Roads);
-            Roads.Controls.Add(Nodes);
+            Grid.Controls.Add(Connections);
+            Connections.Controls.Add(Nodes);
             Nodes.Controls.Add(Entities);
             Entities.Controls.Add(Information);
             Information.Controls.Add(Input);
