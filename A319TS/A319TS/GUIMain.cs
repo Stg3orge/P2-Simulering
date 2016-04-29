@@ -47,15 +47,9 @@ namespace A319TS
             GUIMenuSettingsSimulation simulation = new GUIMenuSettingsSimulation(CurrentProject);
             simulation.ShowDialog();
         }
-        
         private void MenuSettingsDistributionClick(object sender, EventArgs args)
         {
             GUIMenuSettingsDistribution distribution = new GUIMenuSettingsDistribution(CurrentProject);
-            distribution.ShowDialog();
-        }
-        private void MenuSettingsDistribution2Click(object sender, EventArgs args)
-        {
-            GUIMenuSettingsDistribution2 distribution = new GUIMenuSettingsDistribution2(CurrentProject);
             distribution.ShowDialog();
         }
         // TYPES MENU

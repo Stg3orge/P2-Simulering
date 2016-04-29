@@ -89,6 +89,13 @@ namespace A319TS
         }
         private void RemoveClick(object sender, EventArgs e)
         {
+            // Set Destination Types to Default if the type is to be removed.
+            foreach (Destination dest in Project.Destinations)
+                foreach (DataGridViewRow row in Destinations.SelectedRows)
+                    if (dest.Type == (DestinationType)row.DataBoundItem)
+                        dest.Type = Project.DestinationTypes[0]; // Default
+
+            // Remove Selected Rows
             foreach (DataGridViewRow row in Destinations.SelectedRows)
                 if (((DestinationType)row.DataBoundItem).Name != "Default")
                     Destinations.Rows.Remove(row);

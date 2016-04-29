@@ -66,9 +66,6 @@
     <Compile Include="GUIMenuSettingsDistribution.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUIMenuSettingsDistribution2.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="GUIMenuSettingsProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +90,9 @@
     <Compile Include="GUIToolEditNode.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IColorable.cs" />
+    <Compile Include="IDistributable.cs" />
+    <Compile Include="IPositionable.cs" />
     <Compile Include="Layer.cs">
       <SubType>Component</SubType>
     </Compile>
