@@ -55,10 +55,6 @@ namespace A319TS
                 MenuSettingsDistribution.Text = "Distribution";
                 MenuSettingsDistribution.Click += MenuSettingsDistributionClick;
 
-                MenuSettingsDistribution2 = new ToolStripMenuItem();
-                MenuSettingsDistribution2.Text = "Distribution2";
-                MenuSettingsDistribution2.Click += MenuSettingsDistribution2Click;
-
             MenuTypes = new ToolStripMenuItem();
             MenuTypes.Text = "Types";
 
@@ -91,7 +87,6 @@ namespace A319TS
             MenuSettings.DropDownItems.Add(MenuSettingsProject);
             MenuSettings.DropDownItems.Add(MenuSettingsSimulation);
             MenuSettings.DropDownItems.Add(MenuSettingsDistribution);
-            MenuSettings.DropDownItems.Add(MenuSettingsDistribution2);
             MenuTypes.DropDownItems.Add(MenuTypesDestinations);
             MenuTypes.DropDownItems.Add(MenuTypesVehicles);
             MenuTypes.DropDownItems.Add(MenuTypesRoads);
@@ -111,7 +106,6 @@ namespace A319TS
         private ToolStripMenuItem MenuSettingsProject;
         private ToolStripMenuItem MenuSettingsSimulation;
         private ToolStripMenuItem MenuSettingsDistribution;
-        private ToolStripMenuItem MenuSettingsDistribution2;
         private ToolStripMenuItem MenuTypes;
         private ToolStripMenuItem MenuTypesDestinations;
         private ToolStripMenuItem MenuTypesVehicles;

@@ -21,8 +21,8 @@ namespace A319TS
         {
             Name = name;
             RoadTypes.Add(new RoadType("Default", 50));
-            DestinationTypes.Add(new DestinationType("Default", Color.LightSlateGray));
-            VehicleTypes.Add(new VehicleType("Default", 130, 5, 5, Color.LightSlateGray));
+            DestinationTypes.Add(new DestinationType("Default", Color.LightSlateGray) { Distribution = 100 });
+            VehicleTypes.Add(new VehicleType("Default", 130, 5, 5, Color.LightSlateGray) { Distribution = 100 });
         }
     }
 }
