@@ -27,7 +27,7 @@ namespace A319TS
         public ToolStripItemCollection Tools;
         public Viewport Viewport;
         public Project Project;
-        
+
         public ToolController(ToolStripItemCollection collection, Viewport viewport, Project project)
         {
             Tools = collection;
@@ -73,9 +73,9 @@ namespace A319TS
                     case "ToolAddLightController": AddLightController(); break;
                     case "ToolLinkLight": LinkLight(); break;
                     case "ToolAddDestination": ToolAddDestination(); break;
-                    case "ToolAddRoad": AddRoad(); break;
-                    case "ToolPrimaryRoad": AddRoad(); break; // Not Done
-                    case "ToolSecondaryRoad": AddRoad(); break; // Not Done
+                    case "ToolAddRoad": AddRoad(Road.RoadDifferentiation.Shared); break;
+                    case "ToolPrimaryRoad": AddRoad(Road.RoadDifferentiation.Primary); break;
+                    case "ToolSecondaryRoad": AddRoad(Road.RoadDifferentiation.Secondary); break;
                     case "ToolEdit": Edit(); break;
                     case "ToolRemove": Remove(); break;
                     case "ToolMoveObject": ToolMoveObject(); break;
@@ -114,7 +114,7 @@ namespace A319TS
             Project.Nodes.Remove(target);
             Viewport.Connections.Refresh();
         }
-        private void AddRoad()
+        private void AddRoad(Road.RoadDifferentiation differentiation)
         {
             foreach (Node node in Project.Nodes)
             {
@@ -129,7 +129,7 @@ namespace A319TS
 
                     else
                     {
-                        FirstRoad.Roads.Add(new Road(FirstRoad, node, SelectedRoadType));
+                        FirstRoad.Roads.Add(new Road(FirstRoad, node, SelectedRoadType, differentiation));
                         if (Control.ModifierKeys == Keys.Shift)
                         {
                             FirstRoad = node;
