@@ -105,6 +105,14 @@ namespace A319TS
         }
         private void RemoveClick(object sender, EventArgs e)
         {
+            // Set Road Types to Default if the type is to be removed.
+            foreach (Node node in Project.Nodes)
+                foreach (Road road in node.Roads)
+                    foreach (DataGridViewRow row in Roads.SelectedRows)
+                        if (road.Type == (RoadType)row.DataBoundItem)
+                            road.Type = Project.RoadTypes[0]; // Default
+
+            // Remove Selected Rows
             foreach (DataGridViewRow row in Roads.SelectedRows)
                 if (((RoadType)row.DataBoundItem).Name != "Default")
                     Roads.Rows.Remove(row);
