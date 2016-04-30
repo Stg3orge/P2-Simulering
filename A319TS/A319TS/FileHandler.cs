@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 
 namespace A319TS
 {
@@ -17,28 +19,34 @@ namespace A319TS
         }
         static public Project OpenProject()
         {
+            FileStream file = null;
             try
             {
                 OpenFileDialog fileOpen = new OpenFileDialog();
                 fileOpen.Filter = "TSP Files|*.tsp";
                 if (fileOpen.ShowDialog() == DialogResult.OK)
                 {
-                    XmlSerializer reader = new XmlSerializer(typeof(Project));
-                    StreamReader file = new StreamReader(fileOpen.FileName);
-                    Project project = (Project)reader.Deserialize(file);
-                    file.Close();
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    file = new FileStream(fileOpen.FileName, FileMode.Open);
+                    Project project = (Project)formatter.Deserialize(file);
                     return project;
                 }
                 return null;
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Error: " + e.Message);
                 return null;
+            }
+            finally
+            {
+                if (file != null)
+                    file.Close();
             }
         }
         static public void SaveProject(Project project)
-        {
+        { 
+            FileStream file = null;
             try
             {
                 SaveFileDialog fileSave = new SaveFileDialog();
@@ -47,15 +55,19 @@ namespace A319TS
                 fileSave.Filter = "TSP Files|*.tsp";
                 if (fileSave.ShowDialog() == DialogResult.OK)
                 {
-                    XmlSerializer writer = new XmlSerializer(typeof(Project));
-                    FileStream file = File.Create(fileSave.FileName);
-                    writer.Serialize(file, project);
-                    file.Close();
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    file = new FileStream(fileSave.FileName, FileMode.Create);
+                    formatter.Serialize(file, project);
                 }
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Error: " + e.Message);
+            }
+            finally
+            {
+                if (file != null)
+                    file.Close();
             }
         }
     }

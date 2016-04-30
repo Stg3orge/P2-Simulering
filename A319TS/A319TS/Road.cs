@@ -13,9 +13,8 @@ namespace A319TS
         public Node From { get; set; }
         public Node Destination { get; set; }
         public RoadType Type { get; set; }
-        public Partitions Partition;
-
-        protected Road() { } // Serialize
+        public Partitions Partition { get; set; }
+        
         public Road(Node from, Node dest, RoadType type, Partitions partition)
         {
             From = from;

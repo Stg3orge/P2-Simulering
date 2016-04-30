@@ -3,6 +3,7 @@ using System.Drawing;
 
 namespace A319TS
 {
+    [Serializable]
     public class VehicleType : IColorable, IDistributable
     {
         public string Name { get; set; }

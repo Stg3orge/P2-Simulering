@@ -57,7 +57,7 @@ namespace A319TS
         {
             GUIMenuTypesDestinations dest = new GUIMenuTypesDestinations(CurrentProject);
             dest.ShowDialog();
-            ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
+            UpdateDestinationTypeSelect();
         }
         private void MenuTypesVehiclesClick(object sender, EventArgs args)
         {
@@ -68,7 +68,7 @@ namespace A319TS
         {
             GUIMenuTypesRoads road = new GUIMenuTypesRoads(CurrentProject);
             road.ShowDialog();
-            ToolRoadTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<RoadType>(CurrentProject.RoadTypes), null);
+            UpdateRoadTypeSelect();
         }
         // SIMULATION MENU
         private void MenuSimulationRunClick(object sender, EventArgs args)
@@ -95,6 +95,16 @@ namespace A319TS
             GUIMainViewport.Project = project;
             GUIMainViewport.Reset();
             UpdateTitle();
+            UpdateDestinationTypeSelect();
+            UpdateRoadTypeSelect();
+        }
+        public void UpdateDestinationTypeSelect()
+        {
+            ToolDestinationTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<DestinationType>(CurrentProject.DestinationTypes), null);
+        }
+        public void UpdateRoadTypeSelect()
+        {
+            ToolRoadTypeSelect.ComboBox.DataSource = new BindingSource(new BindingList<RoadType>(CurrentProject.RoadTypes), null);
         }
     }
 }

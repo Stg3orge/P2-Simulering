@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 
 namespace A319TS
 {
@@ -11,8 +13,7 @@ namespace A319TS
         public List<Road> Roads = new List<Road>();
         public Point Position { get; set; }
         public bool Green { get; set; }
-
-        protected Node() { } // Serialize
+        
         public Node(Point position)
         {
             Position = position;
@@ -88,5 +89,5 @@ namespace A319TS
 
         */
     }
-    public enum NodeTypes { Yield, Home, Parking, Light, None, Inbound, Outbound }
+    public enum NodeTypes { None, Yield, Home, Parking, Light, Inbound, Outbound }
 }

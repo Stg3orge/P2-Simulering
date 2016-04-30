@@ -4,7 +4,7 @@ using System.Drawing;
 namespace A319TS
 {
     [Serializable]
-    class Vehicle : IPositionable
+    public class Vehicle : IPositionable
     {
         public Node Home;
         public Destination Destination;
