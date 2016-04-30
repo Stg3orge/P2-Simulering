@@ -12,7 +12,6 @@ namespace A319TS
         public List<Road> Roads = new List<Road>();
         public Point Position { get; set; }
         public bool Green { get; set; }
-        public int ID { get { return Position.GetHashCode(); } }
 
         protected Node() { } // Serialize
         public Node(Point position)
@@ -27,6 +26,17 @@ namespace A319TS
             return "(" + Position.X + "," + Position.Y + ") " + Type;
         }
         
+        // Vertex Constructor
+        protected Node(NodeType type, List<Road> roads, Point position, bool green)
+        {
+            Type = type;
+            Roads = roads;
+            Position = position;
+            Green = green;
+        }
+
+        /*
+
         // A star stuff //
         public Node(int x, int y, bool isWalkable, Point endNodeLocation)
         {
@@ -76,5 +86,7 @@ namespace A319TS
             float deltaY = position2.Y - position1.Y;
             return (float)Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
         }
+
+        */
     }
 }

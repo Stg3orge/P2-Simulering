@@ -15,21 +15,20 @@ namespace A319TS
         public RoadType Type { get; set; }
         public enum RoadDifferentiation { Primary, Secondary, Shared };
         public RoadDifferentiation Differentiation;
-        public double Length { get { return GetLength(); } }
-        public double Cost { get; set; }
 
         protected Road(){} // Serialize
-        public Road(Node from, Node destination, RoadType type)
+        public Road(Node from, Node dest, RoadType type)
         {
             From = from;
-            Destination = destination;
+            Destination = dest;
             Type = type;
         }
 
-        private double GetLength()
+        // Edge Constructor
+        protected Road(Node from, Node dest, RoadType type, RoadDifferentiation diff) : this(from, dest, type)
         {
-            return (Math.Sqrt(Math.Pow(Math.Abs(From.Position.X - Destination.Position.X), 2) 
-                            + Math.Pow(Math.Abs(From.Position.Y - Destination.Position.Y), 2)));
+            Differentiation = diff;
         }
+        
     }
 }

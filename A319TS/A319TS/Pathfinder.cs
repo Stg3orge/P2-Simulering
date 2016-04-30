@@ -6,8 +6,10 @@ using System.Windows.Forms;
 
 namespace A319TS
 {
-     class Pathfinder
+    class Pathfinder
     {
+        /*
+
         private int width;
         private int height;
         private Node[,] nodes;
@@ -197,5 +199,6 @@ namespace A319TS
             }
         }
 
+        */
     }
 }
