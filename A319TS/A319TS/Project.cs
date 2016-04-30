@@ -15,6 +15,7 @@ namespace A319TS
         public List<RoadType> RoadTypes = new List<RoadType>();
         public List<DestinationType> DestinationTypes = new List<DestinationType>();
         public List<VehicleType> VehicleTypes = new List<VehicleType>();
+        public List<Road> Path = null;
 
         protected Project(){} // Serialize
         public Project(string name)

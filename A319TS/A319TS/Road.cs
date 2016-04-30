@@ -17,16 +17,11 @@ namespace A319TS
         public RoadDifferentiation Differentiation;
 
         protected Road() { } // Serialize
-        public Road(Node from, Node destination, RoadType type, RoadDifferentiation differentiation = RoadDifferentiation.Shared) // added default value
+        public Road(Node from, Node dest, RoadType type, RoadDifferentiation diff) // added default value
         {
             From = from;
             Destination = dest;
             Type = type;
-            Differentiation = differentiation;
-        }
-
-        private double GetLength()
-        {
             Differentiation = diff;
         }
     }

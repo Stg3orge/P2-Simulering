@@ -216,7 +216,41 @@ namespace A319TS
             Node target = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
             if (target != null)
             {
-                if (type == Node.NodeType.Light && target.Type == Node.NodeType.Light)
+                if (type == Node.NodeType.Inbound)
+                {
+                    if (target.Type == Node.NodeType.Inbound)
+                    {
+                        target.Type = Node.NodeType.None;
+                        RunPathwerk();
+                    }
+                    if (target.Type != Node.NodeType.Inbound)
+                    {
+                        foreach (Node node in Project.Nodes)
+                            if (node.Type == Node.NodeType.Inbound)
+                                node.Type = Node.NodeType.None;
+                        target.Type = Node.NodeType.Inbound;
+                        Start = target;
+                        RunPathwerk();
+                    }
+                }
+                else if (type == Node.NodeType.Outbound)
+                {
+                    if (target.Type == Node.NodeType.Outbound)
+                    {
+                        target.Type = Node.NodeType.None;
+                        RunPathwerk();
+                    }
+                    if (target.Type != Node.NodeType.Outbound)
+                    {
+                        foreach (Node node in Project.Nodes)
+                            if (node.Type == Node.NodeType.Outbound)
+                                node.Type = Node.NodeType.None;
+                        target.Type = Node.NodeType.Outbound;
+                        End = target;
+                        RunPathwerk();
+                    }
+                }
+                else if (type == Node.NodeType.Light && target.Type == Node.NodeType.Light)
                     target.Green = !target.Green;
                 else
                     target.Type = type;
@@ -224,6 +258,23 @@ namespace A319TS
                 Viewport.Nodes.Refresh();
             }
         }
+        private Node Start;
+        private Node End;
+        private void RunPathwerk()
+        {
+            Pathwerk.AddProject(Project, Road.RoadDifferentiation.Primary);
+            try
+            {
+                Project.Path = Pathwerk.FindPath(Start, End);
+                Viewport.Connections.Refresh();
+            }
+            catch
+            {
+                Project.Path = null;
+                Viewport.Connections.Refresh();
+            }
+        }
+
         private void ToolAddDestination()
         {
             if (Viewport.GetObjByGridPos() == null)

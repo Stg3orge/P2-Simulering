@@ -57,6 +57,9 @@ namespace A319TS
                 roadPen.Color = Color.Red;
 
             args.Graphics.DrawLine(roadPen, GetDrawPosition(road.From.Position), GetDrawPosition(road.Destination.Position));
+
+            if (Project.Path != null && Project.Path.Contains(road))
+                args.Graphics.DrawLine(Pens.HotPink, GetDrawPosition(road.From.Position), GetDrawPosition(road.Destination.Position));
         }
 
 

@@ -24,7 +24,7 @@ namespace A319TS
 
         public int CompareTo(Vertex that)
         {
-            if (this.Estimate > that.Estimate) return -1;
+            if (this.Estimate < that.Estimate) return -1;
             if (this.Estimate == that.Estimate) return 0;
             return 1;
         }

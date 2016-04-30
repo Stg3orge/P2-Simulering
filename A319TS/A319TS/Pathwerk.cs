@@ -66,6 +66,7 @@ namespace A319TS
             while (Open.LongCount() > 0)
             {
                 current = Open.Min();
+                // current = GetSmallest();
                 Console.WriteLine(current.ToString());
                 if (current == End)
                 {
@@ -91,7 +92,7 @@ namespace A319TS
             foreach (Edge edge in current.Edges)
             {
                 Vertex neighbor = edge.VertexTo;
-                if (Open.Find(n => n == neighbor) == null && Closed.Find(n => n == neighbor) == null)
+                if (!Open.Contains(neighbor) && !Closed.Contains(neighbor))
                 {
                     neighbor.CalculateEstimate(current, edge, End);
                     Open.Add(neighbor);

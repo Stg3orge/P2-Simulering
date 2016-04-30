@@ -73,7 +73,14 @@ namespace A319TS
         // SIMULATION MENU
         private void MenuSimulationRunClick(object sender, EventArgs args)
         {
-
+            Random r = new Random();
+            foreach (Node node in CurrentProject.Nodes)
+            {
+                Node randomNode = CurrentProject.Nodes[r.Next(0, CurrentProject.Nodes.Count - 1)];
+                node.Roads.Add(new Road(node, randomNode, new RoadType("Test", 50), Road.RoadDifferentiation.Shared));
+                randomNode.Roads.Add(new Road(randomNode, node, new RoadType("Test", 50), Road.RoadDifferentiation.Shared));
+            }
+            GUIMainViewport.Connections.Refresh();
         }
         private void MenuSimulationViewClick(object sender, EventArgs args)
         {
