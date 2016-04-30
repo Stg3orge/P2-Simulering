@@ -51,9 +51,9 @@ namespace A319TS
             Pen roadPen = new Pen(Color.Black, 2);
             roadPen.CustomEndCap = new AdjustableArrowCap(4, 4);
 
-            if(road.Differentiation == Road.RoadDifferentiation.Primary)
+            if(road.Partition == Partitions.Primary)
                 roadPen.Color = Color.Blue;
-            if (road.Differentiation == Road.RoadDifferentiation.Secondary)
+            if (road.Partition == Partitions.Secondary)
                 roadPen.Color = Color.Red;
 
             args.Graphics.DrawLine(roadPen, GetDrawPosition(road.From.Position), GetDrawPosition(road.Destination.Position));
@@ -71,24 +71,24 @@ namespace A319TS
 
                 switch (node.Type)
                 {
-                    case Node.NodeType.Yield:
+                    case NodeTypes.Yield:
                         DrawNode(Brushes.Yellow, position, args);
                         break;
-                    case Node.NodeType.Home:
+                    case NodeTypes.Home:
                         DrawNode(Brushes.Magenta, position, args);
                         break;
-                    case Node.NodeType.Parking:
+                    case NodeTypes.Parking:
                         DrawNode(Brushes.Blue, position, args);
                         break;
-                    case Node.NodeType.Light:
+                    case NodeTypes.Light:
                         if (node.Green) DrawNode(Brushes.LimeGreen, position, args);
                         else DrawNode(Brushes.Red, position, args);
                         break;
-                    case Node.NodeType.Inbound:
+                    case NodeTypes.Inbound:
                         DrawNode(Brushes.Black, position, args);
                         DrawArrow(node, true, args);
                         break;
-                    case Node.NodeType.Outbound:
+                    case NodeTypes.Outbound:
                         DrawNode(Brushes.Black, position, args);
                         DrawArrow(node, false, args);
                         break;
@@ -165,14 +165,8 @@ namespace A319TS
             textPosition.X += EntitySize;
             textPosition.Y -= EntitySize / 2;
             args.Graphics.DrawEllipse(Pens.Black, new Rectangle(ellipsePosition, new Size(EntitySize, EntitySize)));
-            if (obj != null) DrawOutlinedString(obj.ToString(), textPosition, args);
+            if (obj != null) args.Graphics.DrawString(obj.ToString(), SystemFonts.DialogFont, Brushes.Black, textPosition);
             if (HoverConnection != new Point(-1, -1)) args.Graphics.DrawLine(Pens.Black, GetDrawPosition(HoverConnection), GetDrawPosition(GridPos));
-        }
-        private void DrawOutlinedString(string text, Point position, PaintEventArgs args)
-        {
-            GraphicsPath path = new GraphicsPath();
-            path.AddString(text, FontFamily.GenericMonospace, (int)FontStyle.Regular, args.Graphics.DpiY * 8 / 72, position, new StringFormat());
-            args.Graphics.DrawPath(Pens.Black, path);
         }
     }
 }

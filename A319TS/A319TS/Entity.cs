@@ -4,7 +4,7 @@ using System.Drawing;
 namespace A319TS
 {
     [Serializable]
-    public abstract class Entity
+    public abstract class Entity : IPositionable
     {
         public Point Position { get; set; }
         protected Entity(){} // Serialize

@@ -151,10 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\ToggleRoad.bmp" />
+    <None Include="Resources\ToolRemove.png" />
     <None Include="Resources\ToolSetNodeOutbound.png" />
     <None Include="Resources\ToolSetNodeInbound.png" />
     <None Include="Resources\ToolMove.png" />
-    <None Include="Resources\ToolRemove.png" />
     <None Include="Resources\ToolLinkLight.png" />
     <None Include="Resources\ToolSetNodeYield.png" />
     <None Include="Resources\ToolSetNodeParking.png" />

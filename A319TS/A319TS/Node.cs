@@ -5,10 +5,9 @@ using System.Drawing;
 namespace A319TS
 {
     [Serializable]
-    public class Node
+    public class Node : IPositionable
     {
-        public enum NodeType { Yield, Home, Parking, Light, None, Inbound, Outbound }
-        public NodeType Type { get; set; }
+        public NodeTypes Type { get; set; }
         public List<Road> Roads = new List<Road>();
         public Point Position { get; set; }
         public bool Green { get; set; }
@@ -17,7 +16,7 @@ namespace A319TS
         public Node(Point position)
         {
             Position = position;
-            Type = NodeType.None;
+            Type = NodeTypes.None;
             Green = true;
         }
 
@@ -27,7 +26,7 @@ namespace A319TS
         }
         
         // Vertex Constructor
-        protected Node(NodeType type, List<Road> roads, Point position, bool green)
+        protected Node(NodeTypes type, List<Road> roads, Point position, bool green)
         {
             Type = type;
             Roads = roads;
@@ -89,4 +88,5 @@ namespace A319TS
 
         */
     }
+    public enum NodeTypes { Yield, Home, Parking, Light, None, Inbound, Outbound }
 }

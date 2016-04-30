@@ -13,16 +13,16 @@ namespace A319TS
         public Node From { get; set; }
         public Node Destination { get; set; }
         public RoadType Type { get; set; }
-        public enum RoadDifferentiation { Primary, Secondary, Shared };
-        public RoadDifferentiation Differentiation;
+        public Partitions Partition;
 
         protected Road() { } // Serialize
-        public Road(Node from, Node dest, RoadType type, RoadDifferentiation diff)
+        public Road(Node from, Node dest, RoadType type, Partitions partition)
         {
             From = from;
             Destination = dest;
             Type = type;
-            Differentiation = diff;
+            Partition = partition;
         }
     }
+    public enum Partitions { Shared, Primary, Secondary };
 }

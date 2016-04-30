@@ -4,7 +4,7 @@ using System.Drawing;
 namespace A319TS
 {
     [Serializable]
-    public class Destination : Entity
+    public class Destination : Entity, IPositionable
     {
         public DestinationType Type { get; set; }
 

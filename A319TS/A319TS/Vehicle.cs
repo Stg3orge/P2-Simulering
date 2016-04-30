@@ -4,11 +4,11 @@ using System.Drawing;
 namespace A319TS
 {
     [Serializable]
-    class Vehicle
+    class Vehicle : IPositionable
     {
         public Node Home;
         public Destination Destination;
-        public Point Position;
+        public Point Position { get; set; }
         public VehicleType Type;
         public int ToDestTime;
         public int ToHomeTime;

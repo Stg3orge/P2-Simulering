@@ -2,17 +2,18 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System;
 
 namespace A319TS
 {
     class ToolController
     {
-        private bool FirstRoadConnection = true;
-        private Node FirstRoad;
-        private bool FirstLightControllerConnection = true;
-        private LightController FirstLightController;
-        private bool FirstMove = true;
-        private object FirstObjectMove;
+        private Node _firstNode;
+        private LightController _firstController;
+        private IPositionable _firstMoveObject;
+        private bool _firstNodeConnection = true;
+        private bool _firstControllerConnection = true;
+        private bool _firstMove = true;
 
         public DestinationType SelectedDestinationType
         {
@@ -46,16 +47,11 @@ namespace A319TS
             else
             {
                 foreach (ToolStripButton tool in Tools.OfType<ToolStripButton>())
-                {
-                    if (tool == clickedTool)
-                    {
-                        tool.Checked = true;
-                        ActiveTool = tool;
-                    }
-                    else
-                        tool.Checked = false;
-                }
+                    tool.Checked = false;
+                clickedTool.Checked = true;
+                ActiveTool = clickedTool;
             }
+            StopConnection();
         }
         private void ViewportClick(object sender, MouseEventArgs args)
         {
@@ -63,86 +59,128 @@ namespace A319TS
             {
                 switch (ActiveTool.Name)
                 {
-                    case "ToolAddNode": AddNode(); break;
-                    case "ToolSetNodeLight": SetNodeType(Node.NodeType.Light); break;
-                    case "ToolSetNodeYield": SetNodeType(Node.NodeType.Yield); break;
-                    case "ToolSetNodeHome": SetNodeType(Node.NodeType.Home); break;
-                    case "ToolSetNodeParking": SetNodeType(Node.NodeType.Parking); break;
-                    case "ToolSetNodeInbound": SetNodeType(Node.NodeType.Inbound); break;
-                    case "ToolSetNodeOutbound": SetNodeType(Node.NodeType.Outbound); break;
-                    case "ToolAddLightController": AddLightController(); break;
+                    case "ToolAddNode": Add(typeof(Node)); break;
+                    case "ToolSetNodeLight": SetNodeType(NodeTypes.Light); break;
+                    case "ToolSetNodeYield": SetNodeType(NodeTypes.Yield); break;
+                    case "ToolSetNodeHome": SetNodeType(NodeTypes.Home); break;
+                    case "ToolSetNodeParking": SetNodeType(NodeTypes.Parking); break;
+                    case "ToolSetNodeInbound": SetNodeType(NodeTypes.Inbound); break;
+                    case "ToolSetNodeOutbound": SetNodeType(NodeTypes.Outbound); break;
+                    case "ToolAddLightController": Add(typeof(LightController)); break;
                     case "ToolLinkLight": LinkLight(); break;
-                    case "ToolAddDestination": ToolAddDestination(); break;
-                    case "ToolAddRoad": AddRoad(Road.RoadDifferentiation.Shared); break;
-                    case "ToolPrimaryRoad": AddRoad(Road.RoadDifferentiation.Primary); break;
-                    case "ToolSecondaryRoad": AddRoad(Road.RoadDifferentiation.Secondary); break;
+                    case "ToolAddDestination": Add(typeof(Destination)); break;
+                    case "ToolAddRoad": AddRoad(Partitions.Shared); break;
+                    case "ToolPrimaryRoad": AddRoad(Partitions.Primary); break;
+                    case "ToolSecondaryRoad": AddRoad(Partitions.Secondary); break;
                     case "ToolEdit": Edit(); break;
                     case "ToolRemove": Remove(); break;
-                    case "ToolMoveObject": ToolMoveObject(); break;
+                    case "ToolMoveObject": Move(); break;
                     default: break;
                 }
             }
         }
-        public void StopConnection(object sender, KeyEventArgs args)
+        public void OnKeyDown(object sender, KeyEventArgs args)
         {
             if (args.KeyCode == Keys.Escape)
+                StopConnection();
+        }
+        private void StopConnection()
+        {
+            _firstNode = null;
+            _firstController = null;
+            _firstMoveObject = null;
+            _firstNodeConnection = true;
+            _firstControllerConnection = true;
+            _firstMove = true;
+            Viewport.HoverConnection = new Point(-1, -1);
+        }
+
+        // TOOLS
+        private void Add(Type type)
+        {
+            object obj = Viewport.GetObjByGridPos();
+            if (obj == null)
             {
-                FirstRoad = null;
-                FirstLightController = null;
-                FirstRoadConnection = true;
-                FirstLightControllerConnection = true;
-                Viewport.HoverConnection = new Point(-1, -1);
+                if (type == typeof(Node))
+                {
+                    Project.Nodes.Add(new Node(Viewport.GridPos));
+                    Viewport.Nodes.Refresh();
+                }
+                else if (type == typeof(Destination))
+                {
+                    Project.Destinations.Add(new Destination(Viewport.GridPos, SelectedDestinationType));
+                    Viewport.Entities.Refresh();
+                }
+                else if (type == typeof(LightController))
+                {
+                    Project.LightControllers.Add(new LightController(Viewport.GridPos));
+                    Viewport.Entities.Refresh();
+                }
+            }
+            else if (obj is Node)
+            {
+                ((Node)obj).Type = NodeTypes.None;
+                Viewport.Nodes.Refresh();
             }
         }
-
-        private void AddNode()
+        private void SetNodeType(NodeTypes type)
         {
-            object target = Viewport.GetObjByGridPos();
-            if (target == null)
-                Project.Nodes.Add(new Node(Viewport.GridPos));
-            else if (target is Node)
-                ((Node)target).Type = Node.NodeType.None;
-            Viewport.Nodes.Refresh();
-        }
-        private void RemoveNode(Node target)
-        {
-            foreach (Node node in Project.Nodes)
-                for (int i = 0; i < node.Roads.Count; i++)
-                    if (node.Roads[i].Destination == target)
-                        node.Roads.Remove(node.Roads[i]);
-
-            Project.Nodes.Remove(target);
-            Viewport.Connections.Refresh();
-        }
-        private void AddRoad(Road.RoadDifferentiation differentiation)
-        {
-            foreach (Node node in Project.Nodes)
+            object obj = Viewport.GetObjByGridPos();
+            if (obj is Node)
             {
-                if (Viewport.GridPos == node.Position)
-                {
-                    if (FirstRoadConnection)
-                    {
-                        FirstRoad = node;
-                        FirstRoadConnection = false;
-                        Viewport.HoverConnection = node.Position;
-                    }
+                if (type == NodeTypes.Light && ((Node)obj).Type == NodeTypes.Light)
+                    ((Node)obj).Green = !((Node)obj).Green;
+                else
+                    ((Node)obj).Type = type;
 
+                Viewport.Nodes.Refresh();
+            }
+        }
+        private void LinkLight()
+        {
+            object obj = Viewport.GetObjByGridPos();
+            if (obj != null)
+            {
+                if (_firstControllerConnection && obj is LightController)
+                {
+                    _firstController = (LightController)obj;
+                    _firstControllerConnection = false;
+                    Viewport.HoverConnection = _firstController.Position;
+                }
+                else if (!_firstControllerConnection && obj is Node)
+                {
+                    _firstController.Lights.Add(obj as Node);
+                    _firstControllerConnection = true;
+                    Viewport.HoverConnection = new Point(-1, -1);
+                }
+                Viewport.Connections.Refresh();
+            }
+        }
+        private void AddRoad(Partitions partition)
+        {
+            object obj = Viewport.GetObjByGridPos();
+            if (obj != null && obj is Node)
+            {
+                if (_firstNodeConnection)
+                {
+                    _firstNode = (Node)obj;
+                    _firstNodeConnection = false;
+                    Viewport.HoverConnection = ((Node)obj).Position;
+                }
+                else
+                {
+                    _firstNode.Roads.Add(new Road(_firstNode, (Node)obj, SelectedRoadType, partition));
+                    if (Control.ModifierKeys == Keys.Shift)
+                    {
+                        _firstNode = (Node)obj;
+                        Viewport.HoverConnection = ((Node)obj).Position;
+                    }
                     else
                     {
-                        FirstRoad.Roads.Add(new Road(FirstRoad, node, SelectedRoadType, differentiation));
-                        if (Control.ModifierKeys == Keys.Shift)
-                        {
-                            FirstRoad = node;
-                            Viewport.HoverConnection = FirstRoad.Position;
-                        }
-                        else
-                        {
-                            FirstRoadConnection = true;
-                            Viewport.HoverConnection = new Point(-1, -1);
-                        }
-
-                        Viewport.Connections.Refresh();
+                        _firstNodeConnection = true;
+                        Viewport.HoverConnection = new Point(-1, -1);
                     }
+                    Viewport.Connections.Refresh();
                 }
             }
         }
@@ -176,87 +214,30 @@ namespace A319TS
                 Viewport.Connections.Refresh();
             }
         }
-        private void ToolMoveObject()
+        private void RemoveNode(Node target)
+        {
+            foreach (Node node in Project.Nodes)
+                for (int i = 0; i < node.Roads.Count; i++)
+                    if (node.Roads[i].Destination == target)
+                        node.Roads.Remove(node.Roads[i]);
+
+            Project.Nodes.Remove(target);
+            Viewport.Connections.Refresh();
+        }
+        private void Move()
         {
             object obj = Viewport.GetObjByGridPos();
-
-            if (FirstMove && obj != null)
+            if (_firstMove && obj != null && obj is IPositionable)
             {
-                FirstObjectMove = obj;
+                _firstMoveObject = obj as IPositionable;
                 Viewport.HoverConnection = Viewport.GridPos;
-                FirstMove = false;
+                _firstMove = false;
             }
-            else if (!FirstMove && obj == null)
+            else if (!_firstMove && obj == null)
             {
-                if (FirstObjectMove.GetType() == typeof(Node))
-                {
-                    Node node = (Node)FirstObjectMove;
-                    node.Position = Viewport.GridPos;
-                    Viewport.HoverConnection = new Point(-1, -1);
-                    FirstMove = true;
-                }
-                else if (FirstObjectMove.GetType() == typeof(LightController))
-                {
-                    LightController lightcontrol = (LightController)FirstObjectMove;
-                    lightcontrol.Position = Viewport.GridPos;
-                    Viewport.HoverConnection = new Point(-1, -1);
-                    FirstMove = true;
-                }
-                else if (FirstObjectMove.GetType() == typeof(Destination))
-                {
-                    Destination dest = (Destination)FirstObjectMove;
-                    dest.Position = Viewport.GridPos;
-                    Viewport.HoverConnection = new Point(-1, -1);
-                    FirstMove = true;
-                }
-            }
-        }
-        private void SetNodeType(Node.NodeType type)
-        {
-            Node target = Project.Nodes.Find(n => n.Position == Viewport.GridPos);
-            if (target != null)
-            {
-                if (type == Node.NodeType.Light && target.Type == Node.NodeType.Light)
-                    target.Green = !target.Green;
-                else
-                    target.Type = type;
-
-                Viewport.Nodes.Refresh();
-            }
-        }
-        private void ToolAddDestination()
-        {
-            if (Viewport.GetObjByGridPos() == null)
-                Project.Destinations.Add(new Destination(Viewport.GridPos, SelectedDestinationType));
-            Viewport.Entities.Refresh();
-        }
-        private void AddLightController()
-        {
-            if (Viewport.GetObjByGridPos() == null)
-                Project.LightControllers.Add(new LightController(Viewport.GridPos));
-            Viewport.Entities.Refresh();
-        }
-        private void LinkLight()
-        {
-            object obj = Viewport.GetObjByGridPos();
-            if (obj != null)
-            {
-
-                if (FirstLightControllerConnection && obj.GetType() == typeof(LightController))
-                {
-                    FirstLightController = (LightController)obj;
-                    FirstLightControllerConnection = false;
-                    Viewport.HoverConnection = FirstLightController.Position;
-                    Viewport.Connections.Refresh();
-                }
-                else if (!FirstLightControllerConnection && obj.GetType() == typeof(Node))
-                {
-                    Node node = (Node)obj;
-                    FirstLightController.Lights.Add(node);
-                    FirstLightControllerConnection = true;
-                    Viewport.HoverConnection = new Point(-1, -1);
-                    Viewport.Connections.Refresh();
-                }
+                _firstMoveObject.Position = Viewport.GridPos;
+                Viewport.HoverConnection = new Point(-1, -1);
+                _firstMove = true;
             }
         }
     }

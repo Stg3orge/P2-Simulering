@@ -107,7 +107,7 @@ namespace A319TS
         }
         private void ReadData(object sender, EventArgs args)
         {
-            Type.DataSource = Enum.GetValues(typeof(Node.NodeType));
+            Type.DataSource = Enum.GetValues(typeof(NodeTypes));
             Type.SelectedItem = Node.Type;
 
             if (Node.Roads.Count > 0)
@@ -123,7 +123,7 @@ namespace A319TS
         private void SaveData(object sender, EventArgs args)
         {
             Node.Green = GreenCheck.Checked;
-            Node.Type = (Node.NodeType)Type.SelectedItem;
+            Node.Type = (NodeTypes)Type.SelectedItem;
         }
         private void RemoveRoadClick(object sender, EventArgs args)
         {

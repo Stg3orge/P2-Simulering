@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace A319TS
 {
-    class Vertex : Node, IComparable<Vertex>
+    class Vertex : Node, IComparable<Vertex>, IPositionable
     {
         public Node Source;
         public List<Edge> Edges;

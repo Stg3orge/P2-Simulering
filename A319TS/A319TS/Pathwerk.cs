@@ -8,12 +8,12 @@ namespace A319TS
 {
     static class Pathwerk
     {
-        // SetProject takes a project and converts the nodes and roads to vertices and egdes. Only has to be done once.
-        public static void SetProject(Project project, Road.RoadDifferentiation diff)
+        // SetProject takes a project and converts the nodes and roads to vertices and edges. Only has to be done once.
+        public static void SetProject(Project project, Partitions partition)
         {
             Vertices = new List<Vertex>();
             ConvertNodes(project);
-            ConvertRoads(project, diff);
+            ConvertRoads(project, partition);
             MaxSpeed = project.RoadTypes.Max().Speed;
         }
         private static void ConvertNodes(Project project)
@@ -21,12 +21,12 @@ namespace A319TS
             foreach (Node node in project.Nodes)
                 Vertices.Add(new Vertex(node));
         }
-        private static void ConvertRoads(Project project, Road.RoadDifferentiation diff)
+        private static void ConvertRoads(Project project, Partitions partition)
         {
             foreach (Node node in project.Nodes)
                 foreach (Road road in node.Roads)
                     foreach (Vertex vertex in Vertices)
-                        if (road.From.Position == vertex.Position && (road.Differentiation == diff || road.Differentiation == Road.RoadDifferentiation.Shared))
+                        if (road.From.Position == vertex.Position && (road.Partition == partition || road.Partition == Partitions.Shared))
                             vertex.Edges.Add(new Edge(road, vertex, Vertices.Find(v => v.Position == road.Destination.Position)));
         }
 

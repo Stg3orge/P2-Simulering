@@ -5,7 +5,7 @@ using System.Drawing;
 namespace A319TS
 {
     [Serializable]
-    public class LightController : Entity
+    public class LightController : Entity, IPositionable
     {
         public List<Node> Lights { get; private set; }
         public int FirstTime { get; set; }

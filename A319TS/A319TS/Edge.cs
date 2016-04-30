@@ -14,7 +14,7 @@ namespace A319TS
         public double Length { get; private set; }
         public double Cost { get; private set; }
 
-        public Edge(Road road, Vertex from, Vertex to) : base(road.From, road.Destination, road.Type, road.Differentiation)
+        public Edge(Road road, Vertex from, Vertex to) : base(road.From, road.Destination, road.Type, road.Partition)
         {
             Source = road;
             VertexFrom = from;
