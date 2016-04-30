@@ -13,6 +13,7 @@ namespace A319TS
             Vertices = new List<Vertex>();
             ConvertNodes(project);
             ConvertRoads(project, diff);
+            MaxSpeed = project.RoadTypes.Max().Speed;
         }
         private static void ConvertNodes(Project project)
         {
@@ -33,6 +34,17 @@ namespace A319TS
         private static List<Vertex> Open;
         private static Vertex Start;
         private static Vertex End;
+        private static int MaxSpeed;
+
+        public static List<Node> GetSearched()
+        {
+            List<Node> nodes = new List<Node>();
+            foreach (Vertex vertex in Open)
+                nodes.Add(vertex.Source);
+            foreach (Vertex vertex in Closed)
+                nodes.Add(vertex.Source);
+            return nodes;
+        }
 
         private static void InitLists()
         {
@@ -94,7 +106,7 @@ namespace A319TS
                 Vertex neighbor = edge.VertexTo;
                 if (!Open.Contains(neighbor) && !Closed.Contains(neighbor))
                 {
-                    neighbor.CalculateEstimate(current, edge, End);
+                    neighbor.CalculateEstimate(current, edge, End, MaxSpeed);
                     Open.Add(neighbor);
                     if (neighbor.Cost <= current.Cost + edge.Cost)
                         neighbor.Previous = current;

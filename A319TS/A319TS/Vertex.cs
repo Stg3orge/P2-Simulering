@@ -28,10 +28,10 @@ namespace A319TS
             if (this.Estimate == that.Estimate) return 0;
             return 1;
         }
-        public void CalculateEstimate(Vertex previous, Edge edge, Vertex end)
+        public void CalculateEstimate(Vertex previous, Edge edge, Vertex end, int maxSpeed)
         {
             Cost = previous.Cost + edge.Cost;
-            double heuristic = Distance(this, end) / 1228; // Highest Possible Speed
+            double heuristic = Distance(this, end) / maxSpeed;
             Estimate = Cost + heuristic;
         }
         private double Distance(Vertex from, Vertex to)

@@ -266,11 +266,13 @@ namespace A319TS
             try
             {
                 Project.Path = Pathwerk.FindPath(Start, End);
+                Project.Searched = Pathwerk.GetSearched();
                 Viewport.Connections.Refresh();
             }
             catch
             {
                 Project.Path = null;
+                Project.Searched.Clear();
                 Viewport.Connections.Refresh();
             }
         }

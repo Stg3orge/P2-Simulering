@@ -99,6 +99,11 @@ namespace A319TS
                         DrawNode(Brushes.White, position, args);
                         break;
                 }
+
+                if (Project.Searched.Contains(node))
+                {
+                    args.Graphics.DrawEllipse(Pens.HotPink, position.X - 2, position.Y - 2, EntitySize, EntitySize);
+                }
             }
         }
         private void DrawNode(Brush fill, Point position, PaintEventArgs args)
