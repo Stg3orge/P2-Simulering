@@ -8,7 +8,7 @@ namespace A319TS
 {
     static class Pathwerk
     {
-        public static void AddProject(Project project, Road.RoadDifferentiation diff)
+        public static void SetProject(Project project, Road.RoadDifferentiation diff)
         {
             Vertices = new List<Vertex>();
             ConvertNodes(project);
@@ -91,7 +91,7 @@ namespace A319TS
             foreach (Edge edge in current.Edges)
             {
                 Vertex neighbor = edge.VertexTo;
-                if (Open.Find(n => n == neighbor) == null && Closed.Find(n => n == neighbor) == null)
+                if (!Open.Contains(neighbor) && !Closed.Contains(neighbor))
                 {
                     neighbor.CalculateEstimate(current, edge, End);
                     Open.Add(neighbor);
