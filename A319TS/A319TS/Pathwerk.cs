@@ -8,11 +8,13 @@ namespace A319TS
 {
     static class Pathwerk
     {
+        // SetProject takes a project and converts the nodes and roads to vertices and egdes. Only has to be done once.
         public static void SetProject(Project project, Road.RoadDifferentiation diff)
         {
             Vertices = new List<Vertex>();
             ConvertNodes(project);
             ConvertRoads(project, diff);
+            MaxSpeed = project.RoadTypes.Max().Speed;
         }
         private static void ConvertNodes(Project project)
         {
@@ -28,12 +30,14 @@ namespace A319TS
                             vertex.Edges.Add(new Edge(road, vertex, Vertices.Find(v => v.Position == road.Destination.Position)));
         }
 
+        private static int MaxSpeed;
         private static List<Vertex> Vertices;
         private static List<Vertex> Closed;
         private static List<Vertex> Open;
         private static Vertex Start;
         private static Vertex End;
 
+        // Initialize to remove old data;
         private static void InitLists()
         {
             Closed = new List<Vertex>();
@@ -86,25 +90,27 @@ namespace A319TS
             Open.Remove(vertex);
             Closed.Add(vertex);
         }
+        // Looks at neighbor vertices that haven't been evaluated, and evaluates them.
         private static void EstimateNeighbors(Vertex current)
         {
             foreach (Edge edge in current.Edges)
             {
                 Vertex neighbor = edge.VertexTo;
-                if (!Open.Contains(neighbor) && !Closed.Contains(neighbor))
+                if (!Open.Contains(neighbor) && !Closed.Contains(neighbor)) // Skip evaluated
                 {
-                    neighbor.CalculateEstimate(current, edge, End);
+                    neighbor.CalculateEstimate(current, edge, End, MaxSpeed); 
                     Open.Add(neighbor);
-                    if (neighbor.Cost <= current.Cost + edge.Cost)
+                    if (neighbor.Cost <= current.Cost + edge.Cost) 
                         neighbor.Previous = current;
                 }
             }
         }
+        // Traces the path from the end verte to the start vertex, via vertex.Previous.
         private static List<Road> TracePath()
         {
             List<Road> roads = new List<Road>();
             Vertex current = End;
-            while (current.Previous != null)
+            while (current.Previous != null) // When the previous vertex is null, we are at the start.
             {
                 roads.Add(current.Previous.Edges.Find(edge => edge.VertexTo == current).Source);
                 current = current.Previous;

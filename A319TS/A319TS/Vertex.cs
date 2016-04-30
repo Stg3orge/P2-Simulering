@@ -22,16 +22,16 @@ namespace A319TS
             Estimate = Double.MaxValue;
         }
 
-        public int CompareTo(Vertex that)
+        public int CompareTo(Vertex other)
         {
-            if (this.Estimate < that.Estimate) return -1;
-            if (this.Estimate == that.Estimate) return 0;
+            if (this.Estimate < other.Estimate) return -1;
+            if (this.Estimate == other.Estimate) return 0;
             return 1;
         }
-        public void CalculateEstimate(Vertex previous, Edge edge, Vertex end)
+        public void CalculateEstimate(Vertex previous, Edge edge, Vertex end, int maxSpeed)
         {
             Cost = previous.Cost + edge.Cost;
-            double heuristic = Distance(this, end) / 1228; // Highest Possible Speed
+            double heuristic = Distance(this, end) / maxSpeed;
             Estimate = Cost + heuristic;
         }
         private double Distance(Vertex from, Vertex to)
