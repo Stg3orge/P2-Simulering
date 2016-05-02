@@ -1,0 +1,108 @@
+\chapter{File Handler}\label{FileHandler}
+
+FileHandleren er sat op så at man har mulighed for at lave et ny projekt, åbne og gemme projektet. Der er bleveet dannet tre metoder som håndtere de tre valg for brugeren, for at gøre det mest læsevenligt for dem der skal læse koden.
+
+\vspace{5mm}
+
+Den første metode der er blevet lavet i denne klasse er NewProject. Denne metode NewProject laver en ny instans af klassen GUIMenuFileNew, hvor den klasse indeholder GUI og kode der sker, når man trykker på New Project i programmet. Vi har benyttet ShowDialog metoden til at vise dialog boks i vores program, hvilket ligger inde under System.Windows.Forms.
+
+\begin{figure}[H]
+\begin{lstlisting}
+ 		static public Project NewProject()
+        {
+            GUIMenuFileNew fileNew = new GUIMenuFileNew();
+            fileNew.ShowDialog();
+            return fileNew.NewProject;
+        }
+\end{lstlisting}
+\caption{NewProject metoden}
+\end{figure}
+
+\vspace{5mm}
+
+Her er koden der sker, når brugeren trykker på New Project, som ligger inden under GUIMenuFileNew klassen. Koden går ind og tjekker om der er blevet skrevet navn til projektet, hvis navnet er skrevet, så vil programmet opdatere projektet. Når programmet programmet har opdateret, så vil det nye projekt få det valgte navn.
+
+\begin{figure}[H]
+\begin{lstlisting}
+        private void MenuFileNewClick(object sender, EventArgs args)
+        {
+            Project project = FileHandler.NewProject();
+            if (project != null)
+                UpdateProject(project);
+        }
+\end{lstlisting}
+\caption{MenuFileNewClick metoden}
+\end{figure}
+
+\vspace{5mm}
+
+Metoden som skal åbne et eksisterende projekt, når brugeren trykker på Open Project i programmet. Denne metode benytter sig af OpenFileDialog, som ligger under System.Windows.Forms. Koden benytter sig af try-catch-finally, hvor den går ind i try fasen og tjekker om der om brugeren har valgt en TSP fil (traffic simulation project), hvis TSP filen er valgt så vil programmet åbne et gemt projekt op. Hvis den ikke fanger filen i catch, så vil den gå til try fasen og kaste en exception. Finally fasen vil den så frigøre ressourcerne igen. Programmet gør sig brug af BinaryFormatter for at gemme de forskellige objekter i binær form, så den f.eks. gemmer de forskellige klasser i binær form og så når man skal bruge dem, så konverterer man det binære kode om til klasser igen. Vi startede ud med at bruge XmlSerializer, da vi lavede FileHandleren. Vi stødte ind på nogle problemer da xmlserializer skulle læse to objekter som har en reference til hinanden, og det skabte en loop som var årsagen til vores program crashede på daværende tidspunkt. 
+
+\begin{figure}[H]
+\begin{lstlisting}
+static public Project OpenProject()
+        {
+            FileStream file = null;
+            try
+            {
+                OpenFileDialog fileOpen = new OpenFileDialog();
+                fileOpen.Filter = "TSP Files|*.tsp";
+                if (fileOpen.ShowDialog() == DialogResult.OK)
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    file = new FileStream(fileOpen.FileName, FileMode.Open);
+                    Project project = (Project)formatter.Deserialize(file);
+                    return project;
+                }
+                return null;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+                return null;
+            }
+            finally
+            {
+                if (file != null)
+                    file.Close();
+            }
+        }
+\end{lstlisting}
+\caption{OpenProject metoden}
+\end{figure}
+
+\vspace{5mm}
+
+Igen benytter programmet af en try-catch-finally, hvor programmet i try fasen laver en ny instans af System.Windows.Forms'ens SaveFileDialog, på den måde kan programmet gemme et projekt som man har arbejdet på. Programmet er sat op at den skal gemme projektet som tsp fil (traffic simulation project). Hvis det ikke lykkes, så vil den kaste en exception med fejlen der er sket. Finally fasen vil den så frigøre ressourcerne igen.
+
+\begin{figure}[H]
+\begin{lstlisting}
+static public void SaveProject(Project project)
+        { 
+            FileStream file = null;
+            try
+            {
+                SaveFileDialog fileSave = new SaveFileDialog();
+                fileSave.AddExtension = true;
+                fileSave.DefaultExt = "tsp";
+                fileSave.Filter = "TSP Files|*.tsp";
+                if (fileSave.ShowDialog() == DialogResult.OK)
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    file = new FileStream(fileSave.FileName, FileMode.Create);
+                    formatter.Serialize(file, project);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+            }
+            finally
+            {
+                if (file != null)
+                    file.Close();
+            }
+        }
+\end{lstlisting}
+\caption{SaveProject metoden}
+\end{figure}

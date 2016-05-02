@@ -1,0 +1,73 @@
+\usepackage{listing}
+\chapter{Implementation}\label{Implementation}
+
+I dette afsnit vil vi beskrive implementeringen af de forskellige dele af gruppens løsningsforslag. Efter vi havde kigget på problemanalysen, problemformuleringen og de succeskritiere vi havde udvundet fra dem, mente vi at det var vigtigt at planlægge hvad vores program skulle bestå af. Med dette menes det at lave en strukturert plan over hvilke klasser der skal bruges og vilke metoder disse klasser skal benytte sig af for at kunne give os den løsning vi mener besvare problemformuleringen og retter op på de problemer vi fandt fra problemanalyse. Til dette formål blev der opstillet et klasse diagram der beskriver disse forskellige klasser og sætter dem op i et hieraki således. Klasse diagramet figur(ikke indsat endnu) kan ses herunder:
+
+{indsæt klasse diagram}
+
+Farvekoden for klassediagrammet er som følgende:
+
+\begin{enumerate}
+\item Grøn: Prioriteret
+\item Gul: Sekundært
+\item Rød: Ikke prioriteret til prototype
+\end{enumerate}
+
+Vi har såvidt muligt forsøgt at opstille et klassediagram for alle de forskellige funktioner vi godt kunne tænke os af den "Idele" prototype indeholder. Da vi har en begrænset mængde tid så har vi været nød til at prioritere hvilke funktioner vi i gruppen anser for at være primære og som der skal være fokus på (Grønt) og hvilke som kan arbejdes på hvis der er tid bagefter eller som kan arbejdes på efter deadline. Som det ses på klasse diagrammet har vi valgt at fokuserer på 3 græne af programmet. Vehicle, Road og Trafic Components. Vi mener at disse tre græne af programmet kan give os en funktionel prototype og indeholder de nøglekomponenter som programmet skal bruge for at kunne simulerer trafik i en dynamisk kontekst.
+
+Vi vil derfor i dette afsnit fokuserer på at dokumentere de mest væsentlige klasser og metoder i programmet og diskuterer for hvorfor netop disse dele af programmet er essentielle
+
+\subsection{Road Klassen}
+Road klassen indeholder de metoder der skal anvendes for at brugeren kan opstille veje i programmet.
+\begin{lstlisting}
+public class Road
+    {
+        public Node From { get; set; }
+        public Node Destination { get; set; }
+        public RoadType Type { get; set; }
+        public enum RoadDifferentiation {Primary, Secondary, Shared };
+        public double Length { get { return GetLength(); } }
+        public double Cost { get; set; }
+
+        private Road(){} // Serialize
+        public Road(Node from, Node destination, RoadType type)
+        {
+            From = from;
+            Destination = destination;
+            Type = type;
+        }
+
+        private double GetLength()
+        {
+            return (Math.Sqrt(Math.Pow(Math.Abs(From.Position.X - Destination.Position.X), 2) 
+                            + Math.Pow(Math.Abs(From.Position.Y - Destination.Position.Y), 2)));
+        }
+    }
+\end{lstlisting}
+Road klassen tager imod en instans af RoadType som brugeren selv har defineret via RoadType klassen. På denne måde har brugeren kontrol over hvilken type vej der tale om og hvordan vejen opfører sig i programmet, f.eks. om det er en motorvej. Vejene er programmeret således at brugeren selv kan opstille forskellige kryds, rundkørsler eller andre avanceret afkørsels baner. RoadType er en seperat klasse hvori brugeren give et "Name" og en "Speed", på denne måde definere brugeren selv hvilke typer veje der optræder i deres simulation.
+
+\subsection{Vehicle klassen}
+Vores vehicle klasse er ikke meget anderledes fra vores Road klasse. Denne klasse, meget ligesom Road klassen, er implementeret således at brugeren kan definerer deres egne vehicles til deres simulering.
+\begin{lstlisting}
+ class Vehicle
+    {
+        public Node Home;
+        public Destination Destination;
+        public Point Position;
+        public VehicleType Type;
+        public int TravelTime;
+        public int HomeTime;
+
+        public Vehicle(Node home, Destination destination, VehicleType type, int travelTime, int homeTime)
+        {
+            Home = home;
+            Destination = destination;
+            Position = Home.Position;
+            Type = type;
+            TravelTime = travelTime;
+            HomeTime = homeTime;
+        }
+    }
+\end{lstlisting}
+Igen bliver der brugt en klasse kaldt VehicleType. Igen bruges denne klasse til at brugeren kan oprette deres egne VehicleTypes, så vis brugeren skal bruge en bus, en varevogn eller noget helt tredje til deres simulering, så har de muligheden for at definere disse og beskrive deres opførsel.
+
