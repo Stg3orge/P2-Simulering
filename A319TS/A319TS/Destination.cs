@@ -8,7 +8,6 @@ namespace A319TS
     {
         public DestinationType Type { get; set; }
 
-        protected Destination() { } // Serialize
         public Destination(Point position, DestinationType type) : base(position)
         {
             Type = type;

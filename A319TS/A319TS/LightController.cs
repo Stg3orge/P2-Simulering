@@ -12,8 +12,7 @@ namespace A319TS
         public int SecondTime { get; set; }
         private int _current;
         private int _counter = 0;
-
-        protected LightController(){} // Serialize
+        
         public LightController(Point position) : base(position)
         {
             Lights = new List<Node>();

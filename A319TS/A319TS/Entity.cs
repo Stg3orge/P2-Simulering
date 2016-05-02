@@ -7,7 +7,6 @@ namespace A319TS
     public abstract class Entity : IPositionable
     {
         public Point Position { get; set; }
-        protected Entity(){} // Serialize
         public Entity(Point position)
         {
             Position = position;

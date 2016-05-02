@@ -11,17 +11,16 @@ namespace A319TS
     public class Road
     {
         public Node From { get; set; }
-        public Node Destination { get; set; }
+        public Node To { get; set; }
         public RoadType Type { get; set; }
         public Partitions Partition { get; set; }
         
-        public Road(Node from, Node dest, RoadType type, Partitions partition)
+        public Road(Node from, Node to, RoadType type, Partitions partition)
         {
             From = from;
-            Destination = dest;
+            To = to;
             Type = type;
             Partition = partition;
         }
     }
-    public enum Partitions { Shared, Primary, Secondary };
 }

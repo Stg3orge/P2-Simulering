@@ -73,7 +73,8 @@ namespace A319TS
         // SIMULATION MENU
         private void MenuSimulationRunClick(object sender, EventArgs args)
         {
-
+            GUIMenuSimulationRun run = new GUIMenuSimulationRun(CurrentProject);
+            run.ShowDialog();
         }
         private void MenuSimulationViewClick(object sender, EventArgs args)
         {

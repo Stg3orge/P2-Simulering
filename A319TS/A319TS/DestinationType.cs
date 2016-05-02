@@ -9,8 +9,7 @@ namespace A319TS
         public string Name { get; set; }
         public Color Color { get; set; }
         public double Distribution { get; set; }
-
-        private DestinationType(){} // Serialize
+        
         public DestinationType(string name, Color color)
         {
             Name = name;

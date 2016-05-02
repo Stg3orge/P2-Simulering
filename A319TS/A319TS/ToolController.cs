@@ -218,7 +218,7 @@ namespace A319TS
         {
             foreach (Node node in Project.Nodes)
                 for (int i = 0; i < node.Roads.Count; i++)
-                    if (node.Roads[i].Destination == target)
+                    if (node.Roads[i].To == target)
                         node.Roads.Remove(node.Roads[i]);
 
             Project.Nodes.Remove(target);

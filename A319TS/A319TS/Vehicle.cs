@@ -3,7 +3,6 @@ using System.Drawing;
 
 namespace A319TS
 {
-    [Serializable]
     public class Vehicle : IPositionable
     {
         public Node Home;
@@ -12,16 +11,20 @@ namespace A319TS
         public VehicleType Type;
         public int ToDestTime;
         public int ToHomeTime;
-
-        protected Vehicle(){} // Serialize
-        public Vehicle(Node home, Destination destination, VehicleType type, int toDestTime, int toHomeTime)
+        
+        public Vehicle(Node home, Destination dest, VehicleType type, int toDestTime, int toHomeTime)
         {
             Home = home;
-            Destination = destination;
+            Destination = dest;
             Position = Home.Position;
             Type = type;
             ToDestTime = toDestTime;
             ToHomeTime = toHomeTime;
+        }
+
+        public PointF Drive(int stepSize)
+        {
+            return new PointF(-1, -1);
         }
     }
 }

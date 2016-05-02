@@ -27,7 +27,7 @@ namespace A319TS
                 foreach (Road road in node.Roads)
                     foreach (Vertex vertex in Vertices)
                         if (road.From.Position == vertex.Position && (road.Partition == partition || road.Partition == Partitions.Shared))
-                            vertex.Edges.Add(new Edge(road, vertex, Vertices.Find(v => v.Position == road.Destination.Position)));
+                            vertex.Edges.Add(new Edge(road, vertex, Vertices.Find(v => v.Position == road.To.Position)));
         }
 
         private static int MaxSpeed;

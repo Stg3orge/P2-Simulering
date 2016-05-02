@@ -12,8 +12,7 @@ namespace A319TS
         public double Deceleration { get; set; }
         public Color Color { get; set; }
         public double Distribution { get; set; }
-
-        protected VehicleType(){} // Serialize
+        
         public VehicleType(string name, int maxSpeed, double acceleration, double deceleration, Color color)
         {
             Name = name;

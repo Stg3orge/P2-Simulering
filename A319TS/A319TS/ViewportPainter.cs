@@ -56,7 +56,7 @@ namespace A319TS
             if (road.Partition == Partitions.Secondary)
                 roadPen.Color = Color.Red;
 
-            args.Graphics.DrawLine(roadPen, GetDrawPosition(road.From.Position), GetDrawPosition(road.Destination.Position));
+            args.Graphics.DrawLine(roadPen, GetDrawPosition(road.From.Position), GetDrawPosition(road.To.Position));
         }
 
 
