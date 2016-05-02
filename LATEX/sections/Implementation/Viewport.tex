@@ -1,0 +1,45 @@
+/section{ViewPort}\label{ViewPort}
+
+ViewPort klassen har til formål at sætte rammerne for brugergrænsefladen og området hvori man kan tegne objekter til brug i simuleringen. Klassen arver fra \textbf{WinForms} Panel klasse. Til dette formål er det nødvendigt for ViewPort and være en del af et nydt projekt og derfor instansieres der en nydt projekt og en række parametre set i figur \ref{ViewportParameters}. Readonly variablerne for "GridLength", "GridSize", "EntitySize" og "NodeSize" er størrelserne for de visuelle objekter på Viewporten.
+
+\vspace{5mm}
+
+Der bliver instansieret en variabel af typen "Project" da Viewporten skal kunne repræsentere projektet. "HoverConnection" visualiserer den forbindelse man prøver at lave mellem to objekter. "MousePos" indikerer det aktuelle punkt hvor musen befinder sig i gitteret, selv ved en nedskalering vil den altid finde det samme koordinat. "GridPos" får data igennem en metode der indikerer alle mulige koordinater i gitteret. Dette er brugbart til at finde koordinaterne til objekterne der bliver tegnet i gitteret.
+
+\begin{figure}[H]
+\begin{lstlisting}
+public readonly int GridLength = 1000;
+public readonly int GridSize = 16;
+public readonly int EntitySize = 12;
+public readonly int NodeSize = 8;
+
+public Project Project;
+public Point HoverConnection = new Point(-1, -1);
+public Point MousePos = new Point(0, 0);
+public Point GridPos { get { return GetGridPos(); } }
+\end{lstlisting}
+\caption{}
+\label{ViewportParameters}
+\end{figure}
+
+Som sagt kan ViewPort indikere koordinaterne til indsatte objekter og dette gør den igennem metoden "GetObjByGridPos" som set i figur \ref{ViewportGetObjByGridPos}. Her henter den koordinaterne for instanser af Node, LightController og Destination klasserne.
+
+\begin{figure}
+\begin{lstlisting}
+public object GetObjByGridPos()
+{
+Node node = Project.Nodes.Find(n => n.Position == GridPos);
+if (node != null)
+return node;
+LightController controller = Project.LightControllers.Find(l => l.Position == GridPos);
+if (controller != null)
+return controller;
+Destination dest = Project.Destinations.Find(d => d.Position == GridPos);
+if (dest != null)
+return dest;
+return null;
+}
+\end{lstlisting}
+\caption{}
+\label{ViewportGetObjByGridPos}
+\end{figure}

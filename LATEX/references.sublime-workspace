@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-{}
-=======
 {
 	"auto_complete":
 	{
@@ -161,10 +158,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/C/Programs/Githubp2/P2-Simulering/LATEX"
-	],
 	"file_history":
 	[
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup/variables.tex",
@@ -353,7 +346,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "sublime_ux.sublime-project",
+	"project": "references.sublime-project",
 	"replace":
 	{
 		"height": 52.0
@@ -404,4 +397,3 @@
 	{
 	}
 }
->>>>>>> 25ad3e035f278917ecad6de7c702cf1c4ba3bd09
