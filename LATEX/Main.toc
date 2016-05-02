@@ -50,8 +50,9 @@
 \contentsline {chapter}{\numberline {10}Black Box Test - Unit Test}{36}{chapter.2.10}
 \contentsline {chapter}{\numberline {11}Implementation}{38}{chapter.2.11}
 \contentsline {chapter}{\numberline {12}File Handler}{39}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Diskussion}{42}{chapter.2.13}
-\contentsline {chapter}{\numberline {14}Konklusion}{43}{chapter.2.14}
-\contentsline {chapter}{\numberline {15}Perspektivering}{44}{chapter.2.15}
-\contentsline {chapter}{Bibliography}{45}{chapter*.17}
-\contentsline {chapter}{\numberline {A}Appendix}{47}{appendix.A}
+\contentsline {chapter}{\numberline {13}ToolController}{43}{chapter.2.13}
+\contentsline {chapter}{\numberline {14}Diskussion}{47}{chapter.2.14}
+\contentsline {chapter}{\numberline {15}Konklusion}{48}{chapter.2.15}
+\contentsline {chapter}{\numberline {16}Perspektivering}{49}{chapter.2.16}
+\contentsline {chapter}{Bibliography}{50}{chapter*.22}
+\contentsline {chapter}{\numberline {A}Appendix}{52}{appendix.A}
