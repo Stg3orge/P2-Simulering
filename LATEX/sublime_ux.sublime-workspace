@@ -118,6 +118,31 @@
 				"buffer_size": 6124,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "sections/sections.tex",
+			"settings":
+			{
+				"buffer_size": 878,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Teori/Teori.tex",
+			"settings":
+			{
+				"buffer_size": 15676,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Implementation/Viewport.tex",
+			"settings":
+			{
+				"buffer_size": 2233,
+				"line_ending": "Windows",
+				"name": "/section{ViewPort}\\label{ViewPort}"
+			}
 		}
 	],
 	"build_system": "",
@@ -169,6 +194,11 @@
 	"expanded_folders":
 	[
 		"/C/Programs/Githubp2/P2-Simulering/LATEX",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Kravspecifikationer",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Simulering",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teori",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup"
 	],
 	"file_history":
@@ -318,7 +348,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -345,10 +375,96 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 864.0,
+						"translation.y": 972.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sections/sections.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 878,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								685,
+								685
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Teori/Teori.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 15676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8376,
+								8376
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1890.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sections/Implementation/Viewport.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1748,
+								1748
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/section{ViewPort}\\label{ViewPort}",
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
