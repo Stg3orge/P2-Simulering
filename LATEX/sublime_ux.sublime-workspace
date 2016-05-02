@@ -112,9 +112,10 @@
 	"buffers":
 	[
 		{
-			"file": "Main.tex",
+			"file": "setup/preamble.tex",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 1098,
 				"line_ending": "Windows"
 			}
@@ -210,39 +211,10 @@
 			"settings":
 			{
 				"buffer_size": 3743,
+=======
+				"buffer_size": 6124,
+>>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "aau/frontpage.tex",
-			"settings":
-			{
-				"buffer_size": 950,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "aau/titlepages.tex",
-			"settings":
-			{
-				"buffer_size": 1347,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "aau/signatures.tex",
-			"settings":
-			{
-				"buffer_size": 1115,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "setup/variables.tex",
-			"settings":
-			{
-				"buffer_size": 601,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -294,14 +266,35 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Konteksten",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Teknologianalyse"
+=======
+		"/C/Programs/Githubp2/P2-Simulering/LATEX",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup"
+>>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 	],
 	"file_history":
 	[
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup/variables.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/signatures.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/titlepages.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/frontpage.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Metode/Metode.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Problemformulering/Problemformulering.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.tex",
+		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
+		"/C/Programs/Git/Gundamnation/Programs/Eksamensopgave2016/External/products.csv",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
@@ -311,7 +304,6 @@
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
 		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
 		"/C/Programs/C/Lektionone/helppage.c",
-		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
 		"/C/Programs/C/Lektionone/adresserfratxt.c",
 		"/C/Programs/C/Lektionone/superliga-2014-2015.txt",
 		"/C/Programs/C/Lektionone/adresser.txt",
@@ -432,15 +424,20 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
 			"selected": 3,
+=======
+			"selected": 0,
+>>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Main.tex",
+					"file": "setup/preamble.tex",
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 1098,
 						"regions":
 						{
@@ -586,18 +583,27 @@
 					"settings":
 					{
 						"buffer_size": 5824,
+=======
+						"buffer_size": 6124,
+>>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								0,
 								0
+=======
+								2219,
+								2219
+>>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -796,13 +802,17 @@
 						"settings":
 						{
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+>>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 864.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 13,
 					"type": "text"
 				},
@@ -890,6 +900,9 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 12,
+=======
+					"stack_index": 0,
+>>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 					"type": "text"
 				}
 			]
@@ -926,10 +939,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.exec":
-	{
-		"height": 165.0
-	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -980,7 +989,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 307.0,
+	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
