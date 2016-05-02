@@ -112,10 +112,9 @@
 	"buffers":
 	[
 		{
-			"file": "setup/preamble.tex",
+			"file": "Main.tex",
 			"settings":
 			{
-<<<<<<< HEAD
 				"buffer_size": 1098,
 				"line_ending": "Windows"
 			}
@@ -140,14 +139,27 @@
 			}
 		},
 		{
-			"contents": "\\chapter{Implementation}\\label{Implementation}\n\n\\section{GUI}\nDer er valgt at opstille en GUI til brugeren igennem windowsforms aplication.\nDette gøres for at brugeren har et bedre overblik over programmet.\nGUI er opdelt i flere forskellige klasser, hver klasse håndtere enkle områder af programmet.\nDer er valgt at opstille det på denne måde, således at vi som programmøre får et overblik over kildekoden.\nI hver klasse er der programmeret diverse værktøjer såsom knapper, tekstbokse osv.\nHerinde er der valgt at opstille størrelser og positioner på de forskellige værktøjer.\nVi har valgt selv at programmere værktøjerne i stedet for at få dem auto generet af Visual Studio,\nfordi det optimere koden, og skaber et overblik, således vi selv har styr på hvor værktøjerne ligger i kildekoden.\n\n\\begin {lstlisting}\n\\end {lstlisting}\n\nGUIMain\n\nGUIMain er hvor alle underklasserne bliver samlet.\n\nAndre klasser\n",
 			"file": "sections/Implementation/Implementation.tex",
-			"file_size": 46,
-			"file_write_time": 131037084139677563,
 			"settings":
 			{
-				"buffer_size": 906,
+				"buffer_size": 49,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Implementation/oversigt.tex",
+			"settings":
+			{
+				"buffer_size": 2777,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Implementation/FileHandler.tex",
+			"settings":
+			{
+				"buffer_size": 4747,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -178,7 +190,7 @@
 			"file": "sections/sections.tex",
 			"settings":
 			{
-				"buffer_size": 833,
+				"buffer_size": 881,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,10 +223,39 @@
 			"settings":
 			{
 				"buffer_size": 3743,
-=======
-				"buffer_size": 6124,
->>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "aau/frontpage.tex",
+			"settings":
+			{
+				"buffer_size": 950,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "aau/titlepages.tex",
+			"settings":
+			{
+				"buffer_size": 1347,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "aau/signatures.tex",
+			"settings":
+			{
+				"buffer_size": 1115,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "setup/variables.tex",
+			"settings":
+			{
+				"buffer_size": 601,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -266,35 +307,14 @@
 	},
 	"expanded_folders":
 	[
-<<<<<<< HEAD
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Konteksten",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Teknologianalyse"
-=======
-		"/C/Programs/Githubp2/P2-Simulering/LATEX",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup"
->>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 	],
 	"file_history":
 	[
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup/variables.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/signatures.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/titlepages.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/frontpage.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Metode/Metode.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/sections.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Problemformulering/Problemformulering.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/references.bib",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.tex",
-		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
-		"/C/Programs/Git/Gundamnation/Programs/Eksamensopgave2016/External/products.csv",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
@@ -304,6 +324,7 @@
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
 		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
 		"/C/Programs/C/Lektionone/helppage.c",
+		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
 		"/C/Programs/C/Lektionone/adresserfratxt.c",
 		"/C/Programs/C/Lektionone/superliga-2014-2015.txt",
 		"/C/Programs/C/Lektionone/adresser.txt",
@@ -424,20 +445,15 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
-			"selected": 3,
-=======
-			"selected": 0,
->>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "setup/preamble.tex",
+					"file": "Main.tex",
 					"semi_transient": false,
 					"settings":
 					{
-<<<<<<< HEAD
 						"buffer_size": 1098,
 						"regions":
 						{
@@ -457,7 +473,7 @@
 						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -485,7 +501,7 @@
 						"translation.y": 2883.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -515,7 +531,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -524,15 +540,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 906,
+						"buffer_size": 49,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								830,
-								830
+								49,
+								49
 							]
 						],
 						"settings":
@@ -543,11 +559,69 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
+					"file": "sections/Implementation/oversigt.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2777,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1392,
+								1392
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sections/Implementation/FileHandler.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "references.bib",
 					"semi_transient": false,
 					"settings":
@@ -573,48 +647,39 @@
 						"translation.y": 4050.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 5824,
-=======
-						"buffer_size": 6124,
->>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
 								0,
 								0
-=======
-								2219,
-								2219
->>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 1080.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "sections/Problemformulering/Problemformulering.tex",
 					"semi_transient": false,
 					"settings":
@@ -638,16 +703,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 833,
+						"buffer_size": 881,
 						"regions":
 						{
 						},
@@ -666,11 +731,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "sections/Metode/Metode.tex",
 					"semi_transient": false,
 					"settings":
@@ -694,11 +759,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "sections/Teori/Teori.tex",
 					"semi_transient": false,
 					"settings":
@@ -723,11 +788,11 @@
 						"translation.y": 2856.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "sections/Teknologianalyse/altransWTF.tex",
 					"semi_transient": false,
 					"settings":
@@ -751,11 +816,11 @@
 						"translation.y": 2700.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 13,
 					"file": "sections/Indledning/Indledning.tex",
 					"semi_transient": false,
 					"settings":
@@ -779,11 +844,11 @@
 						"translation.y": 972.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 14,
 					"file": "aau/frontpage.tex",
 					"semi_transient": false,
 					"settings":
@@ -802,22 +867,18 @@
 						"settings":
 						{
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-=======
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
->>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 864.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-<<<<<<< HEAD
-					"stack_index": 13,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 15,
 					"file": "aau/titlepages.tex",
 					"semi_transient": false,
 					"settings":
@@ -843,11 +904,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 16,
 					"file": "aau/signatures.tex",
 					"semi_transient": false,
 					"settings":
@@ -871,11 +932,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 17,
 					"file": "setup/variables.tex",
 					"semi_transient": false,
 					"settings":
@@ -899,10 +960,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
-=======
-					"stack_index": 0,
->>>>>>> 890fb6a25c0ec0db5f7dee9fe424950bcfe3fa59
+					"stack_index": 14,
 					"type": "text"
 				}
 			]
@@ -939,6 +997,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 165.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -989,7 +1051,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 307.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
