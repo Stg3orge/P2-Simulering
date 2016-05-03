@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.16)  2 MAY 2016 14:59
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  2 MAY 2016 14:55
->>>>>>> ca84ffef5393334f8e0aaa8e006ab6c716e59ee3
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.16)  2 MAY 2016 15:19
 entering extended mode
 **Main
 (Main.tex
@@ -1529,10 +1525,6 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 35.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-
-LaTeX Warning: Reference `LastPage' on page i undefined on input line 35.
-
-
 Underfull \hbox (badness 4217) in paragraph at lines 35--35
 \T1/lmr/m/n/10 penne lisce tagli-atelle conchiglie.
  []
@@ -1592,12 +1584,12 @@ l.35 }
 ] (aau/preface.tex) [3
 
 
-] (Main.toc)
+] (Main.toc [4
+
+
+])
 \tf@toc=\write4
- [4
-
-
-] (sections/sections.tex
+ [5] (sections/sections.tex
 (sections/Indledning/Indledning.tex
 Chapter 1.
 LaTeX Font Info:    Try loading font information for OT1+pzc on input line 1.
@@ -1611,27 +1603,12 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-
-LaTeX Warning: Citation `dtfnotat' on page 1 undefined on input line 2.
-
-
-LaTeX Warning: Citation `trafikoekonomi' on page 1 undefined on input line 9.
-
-
-LaTeX Warning: Citation `forurening' on page 1 undefined on input line 13.
-
 [1
 
 
 ]
-
-LaTeX Warning: Citation `stress' on page 2 undefined on input line 17.
-
-
-LaTeX Warning: Citation `udrykning' on page 2 undefined on input line 21.
-
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 37.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
@@ -1643,10 +1620,6 @@ Chapter 2.
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
-
-
-LaTeX Warning: Citation `SimulationHandbook' on page 3 undefined on input line 
-3.
 
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 10.
@@ -1665,11 +1638,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-<<<<<<< HEAD
-<Pictures/Metode/metodebillede.jpg, id=74, 733.74126pt x 519.9425pt>
-=======
-<Pictures/Metode/metodebillede.jpg, id=201, 733.74126pt x 519.9425pt>
->>>>>>> ca84ffef5393334f8e0aaa8e006ab6c716e59ee3
+<Pictures/Metode/metodebillede.jpg, id=211, 733.74126pt x 519.9425pt>
 File: Pictures/Metode/metodebillede.jpg Graphic file (type jpg)
 
 <use Pictures/Metode/metodebillede.jpg>
@@ -1715,14 +1684,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 
-<<<<<<< HEAD
-LaTeX Warning: Citation `vissimfunker' on page 13 undefined on input line 12.
-
-
-<Pictures/Teknologianalyse/vissimfunker.jpg, id=123, 1926.19624pt x 747.79375pt
-=======
-<Pictures/Teknologianalyse/vissimfunker.jpg, id=240, 1926.19624pt x 747.79375pt
->>>>>>> ca84ffef5393334f8e0aaa8e006ab6c716e59ee3
+<Pictures/Teknologianalyse/vissimfunker.jpg, id=250, 1926.19624pt x 747.79375pt
 >
 File: Pictures/Teknologianalyse/vissimfunker.jpg Graphic file (type jpg)
  <use Pictures/Teknologianalyse/vissimfunker.jpg>
@@ -1743,11 +1705,7 @@ fly-delse på trafikafviklin-
  []
 
 [14 <./Pictures/Teknologianalyse/vissimfunker.jpg>]
-<<<<<<< HEAD
-<Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png, id=140, 543.53062p
-=======
-<Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png, id=253, 543.53062p
->>>>>>> ca84ffef5393334f8e0aaa8e006ab6c716e59ee3
+<Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png, id=263, 543.53062p
 t x 249.18094pt>
 File: Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png Graphic file (
 type png)
@@ -1757,11 +1715,7 @@ Package pdftex.def Info: Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS
 .png used on input line 56.
 (pdftex.def)             Requested size: 345.0pt x 158.1711pt.
 
-<<<<<<< HEAD
-<Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png, id=143, 545.03625p
-=======
-<Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png, id=256, 545.03625p
->>>>>>> ca84ffef5393334f8e0aaa8e006ab6c716e59ee3
+<Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png, id=266, 545.03625p
 t x 222.07968pt>
 File: Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png Graphic file (
 type png)
@@ -1771,81 +1725,23 @@ Package pdftex.def Info: Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS
 .png used on input line 66.
 (pdftex.def)             Requested size: 345.0pt x 140.57172pt.
  [15 <./Pictures/Teknologianalyse/GrafForAccelerationVisSimGPS.png>])
-(sections/Teknologianalyse/altransWTF.tex
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 16 undefined on input line 2
-.
-
-
-LaTeX Warning: Citation `dmuadfaerdsmodel' on page 16 undefined on input line 2
-.
-
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 16 undefined on input line 1
-3.
-
-[16 <./Pictures/Teknologianalyse/GrafForDecelerationVisSimGPS.png>]
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 1
-7.
-
-
-LaTeX Warning: Citation `dmuadfaerdsmodel' on page 17 undefined on input line 2
-1.
-
-
+(sections/Teknologianalyse/altransWTF.tex [16 <./Pictures/Teknologianalyse/Graf
+ForDecelerationVisSimGPS.png>]
 Overfull \hbox (13.8901pt too wide) in paragraph at lines 21--22
 []\T1/lmr/m/n/10 Modellen af ser-viceniveau udreg-ner ser-viceniveauet med vari
 -ablerne tid, omkost-
  []
 
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 2
-5.
-
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 4
-2.
-
-[17]
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 18 undefined on input line 5
-0.
-
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 18 undefined on input line 5
-4.
-
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 18 undefined on input line 5
-8.
-
-[18]) (sections/Interessentanalyse/Interessentanalyse.tex [19]
+[17] [18]) (sections/Interessentanalyse/Interessentanalyse.tex [19]
 Chapter 6.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
-
-LaTeX Warning: Citation `Vejdirektoratet' on page 20 undefined on input line 12
-.
-
 [20
 
-]
-
-LaTeX Warning: Citation `VisualSolutions' on page 21 undefined on input line 26
-.
-
-
-LaTeX Warning: Citation `DtuForskning' on page 21 undefined on input line 34.
-
-[21]
-
-LaTeX Warning: Citation `benjasfar' on page 22 undefined on input line 42.
-
-) (sections/Problemformulering/Problemformulering.tex [22]
+] [21]) (sections/Problemformulering/Problemformulering.tex [22]
 Chapter 7.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -1869,9 +1765,6 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-
-LaTeX Warning: Citation `trafdyn' on page 25 undefined on input line 11.
-
 [25
 
 ] [26]
@@ -1880,11 +1773,7 @@ Overfull \hbox (3.22461pt too wide) in paragraph at lines 59--59
  []
 
 [27]
-<<<<<<< HEAD
-<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=233, 845.559pt x 598.235pt>
-=======
-<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=346, 845.559pt x 598.235pt>
->>>>>>> ca84ffef5393334f8e0aaa8e006ab6c716e59ee3
+<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=356, 845.559pt x 598.235pt>
 File: Pictures/Teoriafsnit/Figurfiler/Grid2.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid2.png>
@@ -1910,15 +1799,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 93.
 
-<<<<<<< HEAD
-
-LaTeX Warning: Citation `stanfordredblobgamesAstar' on page 29 undefined on inp
-ut line 105.
-
-<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=244, 844.756pt x 597.432pt>
-=======
-<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=358, 844.756pt x 597.432pt>
->>>>>>> ca84ffef5393334f8e0aaa8e006ab6c716e59ee3
+<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=368, 844.756pt x 597.432pt>
 File: Pictures/Teoriafsnit/Figurfiler/Grid3.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid3.png>
@@ -1926,22 +1807,13 @@ Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid3.png used on inpu
 t line 111.
 (pdftex.def)             Requested size: 345.0pt x 243.99152pt.
  [29 <./Pictures/Teoriafsnit/Figurfiler/Grid3.png>]
-
-LaTeX Warning: Citation `stanfordredblobgamesAstar' on page 30 undefined on inp
-ut line 121.
-
-
-LaTeX Warning: Citation `DMATBOGEN' on page 30 undefined on input line 126.
+Overfull \hbox (2.24129pt too wide) in paragraph at lines 121--123
+\T1/lmr/m/n/10 tiske datasæt[[]]. A* er en heuris-tisk frem-gangsmåde afledt af
+ Di-jk-stras generelle
+ []
 
 
-LaTeX Warning: Citation `DMATBOGEN' on page 30 undefined on input line 130.
-
-
-<<<<<<< HEAD
-<Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png, id=268, 784.43062pt x 307.1
-=======
-<Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png, id=386, 784.43062pt x 307.1
->>>>>>> ca84ffef5393334f8e0aaa8e006ab6c716e59ee3
+<Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png, id=396, 784.43062pt x 307.1
 475pt>
 File: Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png Graphic file (type png)
 
@@ -1989,85 +1861,53 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 
 [36
 
-]) (sections/Implementation/Implementation.tex [37]
+]) (sections/Implementation/ImplementationAU.tex [37]
 Chapter 11.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Implementation/oversigt.tex
-<Pictures/Implementation/program.png, id=342, 516.42938pt x 258.21469pt>
+[38
+
+] [39]) (sections/Implementation/oversigt.tex
+<Pictures/Implementation/program.png, id=518, 516.42938pt x 258.21469pt>
 File: Pictures/Implementation/program.png Graphic file (type png)
 
-<<<<<<< HEAD
 <use Pictures/Implementation/program.png>
 Package pdftex.def Info: Pictures/Implementation/program.png used on input line
  6.
 (pdftex.def)             Requested size: 345.013pt x 172.50648pt.
- [38
-
- <./Pictures/Implementation/program.png>])))
-! Emergency stop.
-<*> Main
-        
-*** (job aborted, no legal \end found)
-
- 
-Here is how much of TeX's memory you used:
- 33142 strings out of 493673
- 742568 string characters out of 3141503
- 1006603 words of memory out of 3000000
- 35556 multiletter control sequences out of 15000+200000
- 92774 words of font info for 72 fonts, out of 3000000 for 9000
- 1030 hyphenation exceptions out of 8191
- 64i,15n,100p,1538b,1939s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
-=======
-]
+ [40 <./Pictures/Implementation/program.png>]) (sections/Implementation/Viewpor
+t.tex [41])
+(sections/Implementation/FileHandler.tex [42] [43])
+(sections/Implementation/ToolController.tex [44] [45] [46] [47])
+(sections/Diskussion/Diskussion.tex [48]
 Chapter 12.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-[39
+) (sections/Konklusion/Konklusion.tex [49
 
-] [40]) (sections/Implementation/ToolController.tex [41] [42]
+]
 Chapter 13.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-[43
+) (sections/Perspektivering/Perspektivering.tex [50
 
-] [44] [45]) (sections/Diskussion/Diskussion.tex [46]
+]
 Chapter 14.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Konklusion/Konklusion.tex [47
-
-]
-Chapter 15.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
-[][][][][][][][][]  
- []
-
-) (sections/Perspektivering/Perspektivering.tex [48
-
-]
-Chapter 16.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
-[][][][][][][][][]  
- []
-
-)) (Main.bbl [49
+)) (Main.bbl [51
 
 ]
 Underfull \hbox (badness 1675) in paragraph at lines 23--29
@@ -2135,7 +1975,7 @@ Underfull \hbox (badness 2547) in paragraph at lines 65--69
 blobgames . com / pathfinding /$
  []
 
-[50
+[52
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 82--87
@@ -2161,7 +2001,7 @@ $\T1/lmtt/m/n/10 vejdirektoratet . dk / DA / viden _ og _ data / statistik / ve
 jeneital /$
  []
 
-) [51] (appendix.tex
+) [53] (appendix.tex
 Appendix A.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -2170,11 +2010,9 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 
 )
 \tf@thm=\write5
-\openout5 = `Main.thm'.
-
  
 AED: lastpage setting LastPage
-[52
+[54
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
@@ -2184,47 +2022,40 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 33630 strings out of 493634
- 752217 string characters out of 3134831
- 1260181 words of memory out of 3000000
- 35840 multiletter control sequences out of 15000+200000
- 93075 words of font info for 73 fonts, out of 3000000 for 9000
+ 33773 strings out of 493673
+ 751682 string characters out of 3141503
+ 1259603 words of memory out of 3000000
+ 35866 multiletter control sequences out of 15000+200000
+ 93093 words of font info for 73 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
- 64i,15n,100p,1544b,1930s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.e
-nc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
-hsy.enc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/l
-m-mathit.enc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
-/lm/lm-mathex.enc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
-dvips/lm/lm-rm.enc}{C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc
-/dvips/fontname/8r.enc}<C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/lm/lmbsy10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Rasmus/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Rasmus/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Users/Rasmus/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Rasmus/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Rasmus/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Rasmus/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Rasm
-us/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/
-Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Use
-rs/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/
-Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb
-><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri8
-.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
-mss9.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-lm/lmssbx10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/lm/lmsy10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmsy7.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/lm/lmsy8.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Rasmus/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Users/Rasmus/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on Main.pdf (58 pages, 913704 bytes).
+ 64i,15n,100p,1538b,1939s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.9/
+fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/d
+vips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
+r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi8
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
+/lmri8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmss9.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
+/lmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on Main.pdf (60 pages, 947535 bytes).
 PDF statistics:
- 1066 PDF objects out of 1200 (max. 8388607)
- 372 named destinations out of 1000 (max. 500000)
- 533 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1183 PDF objects out of 1200 (max. 8388607)
+ 444 named destinations out of 1000 (max. 500000)
+ 578 words of extra memory for PDF output out of 10000 (max. 10000000)
 
->>>>>>> ca84ffef5393334f8e0aaa8e006ab6c716e59ee3
