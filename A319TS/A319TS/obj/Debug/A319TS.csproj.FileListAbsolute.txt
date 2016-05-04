@@ -1,0 +1,3 @@
+C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.exe.config
+C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.exe
+C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.pdb

@@ -11,7 +11,6 @@ namespace A319TS
         public Road Source;
         public Vertex VertexFrom;
         public Vertex VertexTo;
-        public double Length { get; private set; }
         public double Cost { get; private set; }
 
         public Edge(Road road, Vertex from, Vertex to) : base(road.From, road.To, road.Type, road.Partition)
@@ -19,13 +18,7 @@ namespace A319TS
             Source = road;
             VertexFrom = from;
             VertexTo = to;
-            Cost = GetLength() / Type.Speed;
-        }
-
-        private double GetLength()
-        {
-            return (Math.Sqrt(Math.Pow(Math.Abs(VertexFrom.Position.X - VertexTo.Position.X), 2)
-                            + Math.Pow(Math.Abs(VertexFrom.Position.Y - VertexTo.Position.Y), 2)));
+            Cost = MathExtension.Distance(VertexFrom.Position, VertexTo.Position) / Type.Speed;
         }
     }
 }

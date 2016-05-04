@@ -48,6 +48,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Destination.cs" />
@@ -101,10 +102,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="LightController.cs" />
+    <Compile Include="MathExtension.cs" />
     <Compile Include="MessageEventArgs.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Pathfinder.cs" />
-    <Compile Include="Pathwerk.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgressEventArgs.cs" />
     <Compile Include="Project.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="SimulationData.cs" />
     <Compile Include="SimulationSettings.cs" />
     <Compile Include="ToolController.cs" />
+    <Compile Include="2DVector.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="VehicleType.cs" />
     <Compile Include="Vertex.cs" />

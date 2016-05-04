@@ -1,204 +1,122 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Windows.Forms;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace A319TS
 {
-    class Pathfinder
+    static class Pathfinder
     {
-        /*
-
-        private int width;
-        private int height;
-        private Node[,] nodes;
-        private Node startNode;
-        private Node endNode;
-
-        public Point StartNodeLocation { get; set; }
-        public Point EndNodeLocation { get; set; }
-        public bool[,] Gridmap { get; set; }
-
-
-        public List<Point> FindPath(Point startLocation, Point endLocation, bool[,] gridmap)
+        // SetProject takes a project and converts the nodes and roads to vertices and edges. Only has to be done once.
+        public static void SetProject(Project project, Partitions partition)
         {
-            StartNodeLocation = startLocation;
-            EndNodeLocation = endLocation;
-            Gridmap = gridmap;
-
-            InitializeNodes(Gridmap);
-            startNode = nodes[StartNodeLocation.X, StartNodeLocation.Y];
-            startNode.State = Node.NodeState.Open;
-            endNode = nodes[EndNodeLocation.X, EndNodeLocation.Y];
-
-            // PathFinding - A Star
-            List<Point> path = new List<Point>();
-            bool success = Search(startNode);
-            
-            if (success)
-            {
-                // If a path was found, follow the parents from the end node to build a list of locations
-                Node node = endNode;
-                while (node.ParentNode != null)
-                {
-                    path.Add(node.Position);
-                    node = node.ParentNode;
-                }
-
-                // Reverse the list so it's in the correct order when returned
-                path.Reverse();
-            }
-
-            return path;
+            Vertices = new List<Vertex>();
+            ConvertNodes(project);
+            ConvertRoads(project, partition);
+            MaxSpeed = project.RoadTypes.Max().Speed;
+        }
+        private static void ConvertNodes(Project project)
+        {
+            foreach (Node node in project.Nodes)
+                Vertices.Add(new Vertex(node));
+        }
+        private static void ConvertRoads(Project project, Partitions partition)
+        {
+            foreach (Node node in project.Nodes)
+                foreach (Road road in node.Roads)
+                    foreach (Vertex vertex in Vertices)
+                        if (road.From.Position == vertex.Position && (road.Partition == partition || road.Partition == Partitions.Shared))
+                            vertex.Edges.Add(new Edge(road, vertex, Vertices.Find(v => v.Position == road.To.Position)));
         }
 
-        // Creating the nodes[] and calculates the cost to endNode for each node. Also sets if(walkeable)
-        private void InitializeNodes(bool[,] gridmap)
+        private static int MaxSpeed;
+        private static List<Vertex> Vertices;
+        private static List<Vertex> Closed;
+        private static List<Vertex> Open;
+        private static Vertex Start;
+        private static Vertex End;
+
+        // Initialize to remove old data;
+        private static void InitLists()
         {
-            width = gridmap.GetLength(0);
-            height = gridmap.GetLength(1);
-            nodes = new Node[width, height];
-            for (int y = 0; y < height; y++)
+            Closed = new List<Vertex>();
+            Open = new List<Vertex>();
+            Start = null;
+            End = null;
+        }
+        private static void SetStartEnd(Node start, Node end)
+        {
+            foreach (Vertex vertex in Vertices)
             {
-                for (int x = 0; x < width; x++)
-                {
-                    nodes[x, y] = new Node(x, y, gridmap[x, y], EndNodeLocation);
-                }
+                if (vertex.Position == start.Position)
+                    Start = vertex;
+                else if (vertex.Position == end.Position)
+                    End = vertex;
             }
         }
 
-
-        private bool Search(Node currentNode)
+        public static List<Road> FindPath(Node start, Node end)
         {
-            // Sets the current node state to Closed, since it cannot be traversed more than once
-            currentNode.State = Node.NodeState.Closed;
-            List<Node> nextNodes = GetAdjacentWalkableNodes(currentNode);
+            if (Vertices == null || start == null || end == null)
+                throw new ArgumentNullException("Why you want hurt Path?");
 
-            // Sort nodes[] by F-value so that the shortest possible routes are considered first
-            nextNodes.Sort((node1, node2) => node1.F.CompareTo(node2.F));
+            InitLists();
+            SetStartEnd(start, end);
+            Start.Cost = 0;
+            Open.Add(Start);
 
-            foreach (Node node in nextNodes)
+            Vertex current;
+            while (Open.LongCount() > 0)
             {
-                // Check if the endnode has been reached
-                if (node.Position == endNode.Position)
+                current = Open.Min();
+                Console.WriteLine(current.ToString());
+                if (current == End)
                 {
-                    return true;
-                }
+                    return TracePath();
+                } 
                 else
                 {
-                    // Recursive : until the endnode is reached
-                    if (Search(node))
-                        return true;
+                    MoveToClosed(current);
+                    EstimateNeighbors(current);
                 }
             }
 
-            // The method returns false if the path leads to a dead end
-            return false;
+            throw new Exception("No more play?"); // Start doesn't connect with end.
         }
-
-
-        private List<Node> GetAdjacentWalkableNodes(Node currentNode)
+        
+        private static void MoveToClosed(Vertex vertex)
         {
-            List<Node> walkableNodes = new List<Node>();
-            IEnumerable<Point> adjacenPositions = GetAdjacentPositions(currentNode.Position);
-
-            foreach (Point location in adjacenPositions)
+            Open.Remove(vertex);
+            Closed.Add(vertex);
+        }
+        // Looks at neighbor vertices that haven't been evaluated, and evaluates them.
+        private static void EstimateNeighbors(Vertex current)
+        {
+            foreach (Edge edge in current.Edges)
             {
-                int x = location.X;
-                int y = location.Y;
-
-                // Makeing sure positions aint out of grid size
-                if (x < 0 || x >= width || y < 0 || y >= height)
+                Vertex neighbor = edge.VertexTo;
+                if (!Open.Contains(neighbor) && !Closed.Contains(neighbor)) // Skip evaluated
                 {
-                    continue;
-                }
-
-                Node node = nodes[x, y];
-                // Ignore non-walkable nodes
-                if (!node.IsWalkable)
-                {
-                    continue;
-                }
-
-                // Ignore already-closed nodes
-                if (node.State == Node.NodeState.Closed)
-                {
-                    continue;
-                }
-
-                // Already open nodes will only be added to the list if their G-value is lower by going the current route
-                if (node.State == Node.NodeState.Open)
-                {
-                    float travelCost = Node.CalculateCost(node.Position, node.ParentNode.Position);
-                    float gValue = currentNode.G + travelCost;
-
-                    if (gValue < node.G)
-                    {
-                        node.ParentNode = currentNode;
-                        walkableNodes.Add(node);
-                    }
-                }
-                else
-                {
-                    // If the node is untested. Sets the parent and flag it as Open
-                    node.ParentNode = currentNode;
-                    node.State = Node.NodeState.Open;
-                    walkableNodes.Add(node);
+                    neighbor.CalculateCostEstimate(current, edge, End, MaxSpeed); 
+                    Open.Add(neighbor);
+                    if (neighbor.Cost <= current.Cost + edge.Cost) 
+                        neighbor.Previous = current;
                 }
             }
-
-            return walkableNodes;
         }
-
-        // Gets the locations of all the adjancent nodes from a current node
-        private IEnumerable<Point> GetAdjacentPositions(Point currentNode)
+        // Traces the path from the end verte to the start vertex, via vertex.Previous.
+        private static List<Road> TracePath()
         {
-            return new Point[]
+            List<Road> roads = new List<Road>();
+            Vertex current = End;
+            while (current.Previous != null) // When the previous vertex is null, we are at the start.
             {
-                new Point(currentNode.X-1, currentNode.Y-1),
-                new Point(currentNode.X-1, currentNode.Y  ),
-                new Point(currentNode.X-1, currentNode.Y+1),
-                new Point(currentNode.X,   currentNode.Y+1),
-                new Point(currentNode.X+1, currentNode.Y+1),
-                new Point(currentNode.X+1, currentNode.Y  ),
-                new Point(currentNode.X+1, currentNode.Y-1),
-                new Point(currentNode.X,   currentNode.Y-1)
-            };
-        }
-
-
-
-
-
-        // Test Metode til print i console
-        public void ShowRoute(IEnumerable<Point> path, bool[,] gridmap)
-        {
-            for (int y = gridmap.GetLength(1) - 1; y >= 0; y--) // Invert the Y-axis so that coordinate 0,0 is shown in the bottom-left
-            {
-                for (int x = 0; x < gridmap.GetLength(0); x++)
-                {
-                    if (StartNodeLocation.Equals(new Point(x, y)))
-                        // Show the start position
-                        Console.Write('A');
-                    else if (EndNodeLocation.Equals(new Point(x, y)))
-                        // Show the end position
-                        Console.Write('B');
-                    else if (gridmap[x, y] == false)
-                        // Show any barriers
-                        Console.Write('░');
-                    else if (path.Where(p => p.X == x && p.Y == y).Any())
-                        // Show the path in between
-                        Console.Write('*');
-                    else
-                        // Show nodes that aren't part of the path
-                        Console.Write('·');
-                }
-
-                Console.WriteLine();
+                roads.Add(current.Previous.Edges.Find(edge => edge.VertexTo == current).Source);
+                current = current.Previous;
             }
+            roads.Reverse();
+            return roads;
         }
-
-        */
     }
 }

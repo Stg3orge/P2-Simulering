@@ -71,7 +71,7 @@ namespace A319TS
             PointF[,] record = new PointF[vehicles.Count, MsInDay / Project.Settings.StepSize];
             for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
                 for (int j = 0; j < vehicles.Count; j++)
-                    record[j, i / Project.Settings.StepSize] = vehicles[j].Drive(Project.Settings.StepSize);
+                    record[j, i / Project.Settings.StepSize] = vehicles[j].Drive(Project.Settings.StepSize, i);
             return record;
         }
 
