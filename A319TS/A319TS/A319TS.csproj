@@ -106,6 +106,7 @@
     <Compile Include="MessageEventArgs.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Pathfinder.cs" />
+    <Compile Include="PointD.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgressEventArgs.cs" />
     <Compile Include="Project.cs" />
@@ -121,7 +122,7 @@
     <Compile Include="SimulationData.cs" />
     <Compile Include="SimulationSettings.cs" />
     <Compile Include="ToolController.cs" />
-    <Compile Include="2DVector.cs" />
+    <Compile Include="Vector2D.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="VehicleType.cs" />
     <Compile Include="Vertex.cs" />

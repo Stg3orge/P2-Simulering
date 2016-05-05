@@ -14,14 +14,14 @@ namespace A319TS
             return (Math.Sqrt(Math.Pow(Math.Abs(from.X - to.X), 2)
                             + Math.Pow(Math.Abs(from.Y - to.Y), 2)));
         }
-        static public double Distance(PointF from, PointF to)
+        static public double Distance(PointD from, PointD to)
         {
             return (Math.Sqrt(Math.Pow(Math.Abs(from.X - to.X), 2)
                             + Math.Pow(Math.Abs(from.Y - to.Y), 2)));
         }
-        static public double KmhToMetersPerMs(double kmh)
+        static public double KmhToMms(double kmh)
         {
-            return kmh * 0.000277778;
+            return kmh / 3600;
         }
     }
 }
