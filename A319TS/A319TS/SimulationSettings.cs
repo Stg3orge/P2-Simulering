@@ -11,6 +11,8 @@ namespace A319TS
     {
         // Shared
         public int StepSize { get; set; }
+        public int VehicleSpace { get; set; }
+        public int IncommingRange { get; set; }
 
         // Primary
         public int PrimaryCarCount { get; set; }
@@ -25,7 +27,9 @@ namespace A319TS
         // Defaults
         public SimulationSettings()
         {
-            StepSize = 100;
+            StepSize = 10;
+            VehicleSpace = 2;
+            IncommingRange = 10;
             PrimaryCarCount = 1000;
             PrimaryInbound = 100;
             PrimaryOutbound = 100;

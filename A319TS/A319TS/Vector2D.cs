@@ -13,7 +13,7 @@ namespace A319TS
         public double Y { get; set; }
         public double Length
         {
-            get { return MathExtension.Distance(new PointF(0, 0), new PointF(Convert.ToSingle(X), Convert.ToSingle(Y))); }
+            get { return MathExtension.Distance(new PointD(0, 0), new PointD(X, Y)); }
         }
 
         public Vector2D()
@@ -34,8 +34,9 @@ namespace A319TS
         }
         public void ToUnit()
         {
-            X /= Length;
-            Y /= Length;
+            double magnitude = Length;
+            X /= magnitude;
+            Y /= magnitude;
         }
         public static Vector2D FromRoad(Road road)
         {

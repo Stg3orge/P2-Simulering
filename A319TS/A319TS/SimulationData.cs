@@ -13,12 +13,12 @@ namespace A319TS
         public Project Project { get; private set; }
         public List<Vehicle> PrimaryVehicles { get; private set; }
         public List<Vehicle> SecondaryVehicles { get; private set; }
-        public PointF[,] PrimaryRecord { get; private set; }
-        public PointF[,] SecondaryRecord { get; private set; }
+        public PointD[,] PrimaryRecord { get; private set; }
+        public PointD[,] SecondaryRecord { get; private set; }
         public DateTime Date { get; private set; }
         
         public SimulationData(Project project, List<Vehicle> primaryVehicles, List<Vehicle> secondaryVehicles, 
-                              PointF[,] primaryRecord, PointF[,] secondaryRecord)
+                              PointD[,] primaryRecord, PointD[,] secondaryRecord)
         {
             Project = project;
             PrimaryVehicles = primaryVehicles;

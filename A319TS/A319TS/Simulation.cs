@@ -58,20 +58,20 @@ namespace A319TS
             List<Vehicle> secondaryVehicles = vehicles.Item2;
 
             OnProcessStart("Running Primary Simulation");
-            PointF[,] primaryRecord = Simulate(primaryVehicles);
+            PointD[,] primaryRecord = Simulate(primaryVehicles);
             OnProcessStart("Running Secondary Simulation");
-            PointF[,] secondaryRecord = Simulate(secondaryVehicles);
+            PointD[,] secondaryRecord = Simulate(secondaryVehicles);
 
             OnProcessStart("Saving Simulation Data");
             Project.Simulations.Add(new SimulationData(Project.Clone() as Project,
                 primaryVehicles, secondaryVehicles, primaryRecord, secondaryRecord));
         }
-        private PointF[,] Simulate(List<Vehicle> vehicles)
+        private PointD[,] Simulate(List<Vehicle> vehicles)
         {
-            PointF[,] record = new PointF[vehicles.Count, MsInDay / Project.Settings.StepSize];
+            PointD[,] record = new PointD[vehicles.Count, MsInDay / Project.Settings.StepSize];
             for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
                 for (int j = 0; j < vehicles.Count; j++)
-                    record[j, i / Project.Settings.StepSize] = vehicles[j].Drive(Project.Settings.StepSize, i);
+                    record[j, i / Project.Settings.StepSize] = vehicles[j].Drive(i);
             return record;
         }
 

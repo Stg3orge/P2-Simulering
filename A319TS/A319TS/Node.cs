@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization;
 
 namespace A319TS
 {
@@ -12,15 +10,18 @@ namespace A319TS
     public class Node : IPositionable
     {
         public NodeTypes Type { get; set; }
-        public List<Road> Roads = new List<Road>();
+        public List<Road> Roads { get; set; }
         public Point Position { get; set; }
         public bool Green { get; set; }
+        public List<Vehicle> IncomingVehicles { get; set; }
         
         public Node(Point position)
         {
-            Position = position;
             Type = NodeTypes.None;
+            Roads = new List<Road>();
+            Position = position;
             Green = true;
+            IncomingVehicles = new List<Vehicle>();
         }
 
         public override string ToString()
