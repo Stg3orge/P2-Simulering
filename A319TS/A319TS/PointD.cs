@@ -23,5 +23,10 @@ namespace A319TS
             X = point.X;
             Y = point.Y;
         }
+        public PointD(PointD point)
+        {
+            X = point.X;
+            Y = point.Y;
+        }
     }
 }

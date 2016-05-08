@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace A319TS
 {
+    [Serializable]
     public class Vehicle
     {
         ////////// PROPERTIES //////////
@@ -12,7 +13,9 @@ namespace A319TS
         public PointD Position { get; set; }
         public VehicleType Type { get; set; }
         public bool Active { get; set; }
-        
+        public List<PointD> ToDestRecord { get; set; }
+        public List<PointD> ToHomeRecord { get; set; }
+
         private double _speed;
         public double Speed
         {
@@ -38,11 +41,11 @@ namespace A319TS
         private Node _currentNode;
         private List<Node> _nodesIncommingAt;
 
-        private int _toDestTime;
+        public int ToDestTime;
         private bool _toDestStarted;
         private List<Road> _toDestPath;
 
-        private int _toHomeTime;
+        public int ToHomeTime;
         private bool _toHomeStarted;
         private List<Road> _toHomePath;
 
@@ -50,33 +53,49 @@ namespace A319TS
         public Vehicle(Project project, Node home, Destination dest, VehicleType type, int toDestTime, int toHomeTime)
         {
             _settings = project.Settings;
+            ToDestRecord = new List<PointD>();
+            ToHomeRecord = new List<PointD>();
 
             Home = home;
             Destination = dest;
             Type = type;
 
-            if (_toDestTime > _toHomeTime)
+            if (ToDestTime > ToHomeTime)
                 throw new ArgumentException("ToDestinationTime cannot be later than ToHomeTime");
 
-            _toDestTime = toDestTime;
-            _toHomeTime = toHomeTime;
+            ToDestTime = toDestTime;
+            ToHomeTime = toHomeTime;
             _toDestStarted = false;
             _toHomeStarted = false;
+            
+            Node end = FindEnd(project);
+            _toDestPath = Pathfinder.FindPath(Home, end);
+            _toHomePath = Pathfinder.FindPath(end, Home);
 
-            Node parking = FindParking(project, Destination);
-            _toDestPath = Pathfinder.FindPath(Home, parking);
-            _toHomePath = Pathfinder.FindPath(parking, Home);
-
+            _nodesIncommingAt = new List<Node>();
             Active = false;
             Speed = 0;
         }
-        private Node FindParking(Project project, Destination dest)
+        private Node FindEnd(Project project)
+        {
+            if (Destination == null) return FindOutbound(project);
+            else return FindParking(project);
+        }
+        private Node FindOutbound(Project project)
+        {
+            Random random = new Random();
+            List<Node> OutboundNodes = project.Nodes.FindAll(n => n.Type == NodeTypes.Outbound);
+            if (OutboundNodes.Count == 0)
+                throw new Exception("No Outbound Nodes");
+            return OutboundNodes[random.Next(OutboundNodes.Count - 1)];
+        }
+        private Node FindParking(Project project)
         {
             int closestIndex = 0;
             double closestDistance = double.MaxValue;
             for (int i = 0; i < project.Nodes.Count; i++)
             {
-                double distance = MathExtension.Distance(project.Nodes[i].Position, dest.Position);
+                double distance = MathExtension.Distance(project.Nodes[i].Position, Destination.Position);
                 if (distance < closestDistance)
                 {
                     closestIndex = i;
@@ -87,31 +106,33 @@ namespace A319TS
         }
 
         ////////// DRIVE //////////
-        public PointD Drive(int time)
+        public void Drive(int time)
         {
             if (!Active)
             {
                 CheckActive(time);
-                return new PointD(-1, -1);
             }
             else
             {
                 Speed = GetSpeed();
                 if (Speed != 0)
                     Move(MathExtension.KmhToMms(Speed) * _settings.StepSize);
-                return Position;
+                if (time % 1000 == 0 && !_toHomeStarted)
+                    ToDestRecord.Add(new PointD(Position));
+                else if (time % 1000 == 0 && _toHomeStarted)
+                    ToHomeRecord.Add(new PointD(Position));
             }
         }
 
         ////////// ACTIVATION //////////
         private void CheckActive(int time)
         {
-            if (time > _toDestTime && !_toDestStarted)
+            if (time > ToDestTime && !_toDestStarted)
             {
                 Activate(_toDestPath);
                 _toDestStarted = true;
             } 
-            else if(time > _toHomeTime && !_toHomeStarted)
+            else if(time > ToHomeTime && !_toHomeStarted)
             {
                 Activate(_toHomePath);
                 _toHomeStarted = true;
@@ -298,6 +319,12 @@ namespace A319TS
                 node.IncomingVehicles.Add(this);
                 _nodesIncommingAt.Add(node);
             }
+        }
+
+        ////////// EXTRACT DATA //////////
+        public VehicleData ExtractData()
+        {
+            return new VehicleData(Type, ToDestRecord, ToHomeRecord, ToDestTime, ToHomeTime);
         }
     }
 }

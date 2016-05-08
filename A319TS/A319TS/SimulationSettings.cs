@@ -18,24 +18,36 @@ namespace A319TS
         public int PrimaryCarCount { get; set; }
         public int PrimaryInbound { get; set; }
         public int PrimaryOutbound { get; set; }
+        public int PrimaryToDestTime { get; set; }
+        public int PrimaryToHomeTime { get; set; }
+        public int PrimaryTimeSpread { get; set; }
 
         // Secondary
         public int SecondaryCarCount { get; set; }
         public int SecondaryInbound { get; set; }
         public int SecondaryOutbound { get; set; }
+        public int SecondaryToDestTime { get; set; }
+        public int SecondaryToHomeTime { get; set; }
+        public int SecondaryTimeSpread { get; set; }
 
         // Defaults
         public SimulationSettings()
         {
-            StepSize = 10;
+            StepSize = 100;
             VehicleSpace = 2;
             IncommingRange = 10;
             PrimaryCarCount = 1000;
             PrimaryInbound = 100;
             PrimaryOutbound = 100;
+            PrimaryToDestTime = 28800000; // 08:00
+            PrimaryToHomeTime = 57600000; // 16:00
+            PrimaryTimeSpread = 14400000; // 4h
             SecondaryCarCount = 1000;
             SecondaryInbound = 100;
             SecondaryOutbound = 100;
+            SecondaryToDestTime = 28800000; // 08:00
+            SecondaryToHomeTime = 57600000; // 16:00
+            SecondaryTimeSpread = 14400000; // 4h
         }
     }
 }

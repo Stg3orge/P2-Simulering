@@ -70,5 +70,25 @@ namespace A319TS
                     file.Close();
             }
         }
+        static public void SaveSimulation(SimulationData data)
+        {
+            FileStream file = null;
+            try
+            {
+                string path = AppDomain.CurrentDomain.BaseDirectory + "\\" + data.Filename;
+                BinaryFormatter formatter = new BinaryFormatter();
+                file = new FileStream(path, FileMode.Create);
+                formatter.Serialize(file, data); 
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+            }
+            finally
+            {
+                if (file != null)
+                    file.Close();
+            }
+        }
     }
 }

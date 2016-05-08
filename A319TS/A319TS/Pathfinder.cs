@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace A319TS
 {
@@ -40,6 +41,7 @@ namespace A319TS
         // Initialize to remove old data;
         private static void InitLists()
         {
+            Vertices.ForEach(v => v.Previous = null);
             Closed = new List<Vertex>();
             Open = new List<Vertex>();
             Start = null;
@@ -59,7 +61,7 @@ namespace A319TS
         public static List<Road> FindPath(Node start, Node end)
         {
             if (Vertices == null || start == null || end == null)
-                throw new ArgumentNullException("Why you want hurt Path?");
+                throw new ArgumentNullException();
 
             InitLists();
             SetStartEnd(start, end);
@@ -70,7 +72,6 @@ namespace A319TS
             while (Open.LongCount() > 0)
             {
                 current = Open.Min();
-                Console.WriteLine(current.ToString());
                 if (current == End)
                 {
                     return TracePath();
@@ -82,7 +83,7 @@ namespace A319TS
                 }
             }
 
-            throw new Exception("No more play?"); // Start doesn't connect with end.
+            throw new Exception("No route found between " + start + " and " + end);
         }
         
         private static void MoveToClosed(Vertex vertex)
@@ -105,7 +106,7 @@ namespace A319TS
                 }
             }
         }
-        // Traces the path from the end verte to the start vertex, via vertex.Previous.
+        // Traces the path from the end vertex to the start vertex, via vertex.Previous.
         private static List<Road> TracePath()
         {
             List<Road> roads = new List<Road>();

@@ -11,26 +11,26 @@ namespace A319TS
     public class SimulationData
     {
         public Project Project { get; private set; }
-        public List<Vehicle> PrimaryVehicles { get; private set; }
-        public List<Vehicle> SecondaryVehicles { get; private set; }
-        public PointD[,] PrimaryRecord { get; private set; }
-        public PointD[,] SecondaryRecord { get; private set; }
+        public List<VehicleData> PrimaryData { get; private set; }
+        public List<VehicleData> SecondaryData { get; private set; }
         public DateTime Date { get; private set; }
+        public string Filename
+        {
+            get { return Project.Name + "_" + Date.ToString("dd") + "-" + Date.ToString("MM") + "-" + 
+                    Date.ToString("yy") + "_" + Date.ToString("HH") + Date.ToString("mm") + ".sim"; }
+        }
         
-        public SimulationData(Project project, List<Vehicle> primaryVehicles, List<Vehicle> secondaryVehicles, 
-                              PointD[,] primaryRecord, PointD[,] secondaryRecord)
+        public SimulationData(Project project, List<VehicleData> primary, List<VehicleData> secondary)
         {
             Project = project;
-            PrimaryVehicles = primaryVehicles;
-            SecondaryVehicles = secondaryVehicles;
-            PrimaryRecord = primaryRecord;
-            SecondaryRecord = secondaryRecord;
+            PrimaryData = primary;
+            SecondaryData = secondary;
             Date = DateTime.Now;
         }
 
         public override string ToString()
         {
-            return Date.ToString();
+            return Project.Name + " " + Date;
         }
     }
 }
