@@ -22,7 +22,7 @@ public Point GridPos { get { return GetGridPos(); } }
 \label{ViewportParameters}
 \end{figure}
 
-Som sagt kan ViewPort indikere koordinaterne til indsatte objekter og dette gør den igennem metoden "GetObjByGridPos" som set i figur \ref{ViewportGetObjByGridPos}. Her henter den koordinaterne for instanser af Node, LightController og Destination klasserne.
+Som sagt kan ViewPort indikere koordinaterne til indsatte objekter og dette gør den igennem metoden "GetObjByGridPos" som set i figur \ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle Node, LightController og Destination om deres position er lig GridPos. Hvis den har fundet en, så retunere den det fundne objekt.
 
 \begin{figure}
 \begin{lstlisting}
