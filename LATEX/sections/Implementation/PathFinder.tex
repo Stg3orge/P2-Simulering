@@ -1,0 +1,102 @@
+\chapter{Path Finder}\label{PathFinder}
+I dette afsnit vil vi komme ind på hvordan vores pathfinder klasse fungerer. Vi tager udgangspunkt i tre metoder som befinder sig i Pathfinder klassen, altså FindPath, EstimateNeighbors og TracePath. Grunden til at vi udvælger disse metoder er fordi de er vigtige i forhold til hvordan programmet skal finde frem til den hurtigste vej i programmet. Derudover vil vi også vise en metode som ligger i Vertex klassen, hvilket indeholder selveste udregningen af vejene. 
+
+\vspace{5mm}
+
+Den første metode er FindPath, hvor den starter ud med at finde ud af hvis vertices, start og end er null, så vil den kaste en exception. Derefter vil den lave en instans af nogle lister som findes i metoden som InitLists. Hvis det ikke er første gang programmet skal benytte InitLists, så vil den rydde listerne i metoden. I SetStartEnd metoden vil programmet får at vide hvilke punkter der er start og slut punkt. I while løkken kigger den på Open listen og tjekker om det er større end nul, hvis det ikke er større end nul, vil den kaste en exception som siger at der ikke findes en rute.
+
+\begin{figure}[H]
+\begin{lstlisting}
+		public static List<Road> FindPath(Node start, Node end)
+        {
+            if (Vertices == null || start == null || end == null)
+                throw new ArgumentNullException();
+
+            InitLists();
+            SetStartEnd(start, end);
+            Start.Cost = 0;
+            Open.Add(Start);
+
+            Vertex current;
+            while (Open.LongCount() > 0)
+            {
+                current = Open.Min();
+                Console.WriteLine(current.ToString());
+                if (current == End)
+                {
+                    return TracePath();
+                } 
+                else
+                {
+                    MoveToClosed(current);
+                    EstimateNeighbors(current);
+                }
+            }
+
+            throw new Exception("There isn't any route");
+        }
+\end{lstlisting}
+\caption{FindPath metoden}\label{FindPathCode}
+\end{figure}
+
+\vspace{5mm}
+
+I denne metode kigger vi på \%" vertex naboerne", altså de nodes som er bundet til den nuvæende node. Metoden går så ind og evaluerer dem, hvis de ikke er blevet evalueret. Måden metoden gør dette på, er ved at opstille en foreach løkke, hvori den programmet kigger på de forskellige Vertex naboere. 
+\begin{figure}[H]
+\begin{lstlisting}
+private static void EstimateNeighbors(Vertex current)
+        {
+            foreach (Edge edge in current.Edges)
+            {
+                Vertex neighbor = edge.VertexTo;
+                if (!Open.Contains(neighbor) && !Closed.Contains(neighbor)) // Skip evaluated
+                {
+                    neighbor.CalculateEstimate(current, edge, End, MaxSpeed); 
+                    Open.Add(neighbor);
+                    if (neighbor.Cost <= current.Cost + edge.Cost) 
+                        neighbor.Previous = current;
+                }
+            }
+        }
+\end{lstlisting}
+\caption{EstimateNeighbors metoden}\label{EstimateNeighborsCode}
+\end{figure}
+
+\vspace{5mm}
+
+Metode TracePath er den del som sporer en rute igennem vores grid, altså den går ud fra vores start og slut node, og går igennem vejene via vertex.Previous. På den måde kan programmet finde/spore frem til den korteste vej. Metoden indeholder en while løkke som går ind og kigger om den forrige node er lig med null, hvis den er lig med null, det vil betyde at vi er ved start noden. Hvis det ikke er start noden, så vil den gå ind i while løkken og tilføje en ny vej i en liste som indeholder vejene.
+\begin{figure}[H]
+\begin{lstlisting}
+private static List<Road> TracePath()
+        {
+            List<Road> roads = new List<Road>();
+            Vertex current = End;
+            while (current.Previous != null)              
+            { 
+                roads.Add(current.Previous.Edges.Find(edge => edge.VertexTo == current).Source);
+                current = current.Previous;
+            }
+            roads.Reverse();
+            return roads;
+        }}
+\end{lstlisting}
+\caption{TracePath metoden}\label{TracePathCode}
+\end{figure}
+
+
+\vspace{5mm}
+
+Metode CalculateCostEstimate er den metode som kan findes i Vertex klassen. Det er den metode som beregner afstanden mellem vejene, hvor andre metode kan kalde denne metode for at beregne nogle specifikke veje. 
+\begin{figure}[H]
+\begin{lstlisting}
+public void CalculateCostEstimate(Vertex previous, Edge edge, Vertex end, int maxSpeed)
+        {
+            Cost = previous.Cost + edge.Cost;
+            double heuristic = MathExtension.Distance(this.Position, end.Position) / maxSpeed;
+            Estimate = Cost + heuristic;
+        }
+\end{lstlisting}
+\caption{CalculateCostEstimate metoden}\label{CalculateCostEstimateCode}
+\end{figure}
+
+

@@ -73,18 +73,32 @@ namespace A319TS
                 throw new ArgumentException();
             
             List<Vehicle> vehicles = args.Argument as List<Vehicle>;
+            int vehicleCount = vehicles.Count;
+            int msInDaydivied = MsInDay / 100;
+
+            int activeCount = 0;
+
             for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
             {
                 if (MasterWorker.CancellationPending)
                     throw new OperationCanceledException("Simulation canceled");
-                if (i % (MsInDay / 100) == 0)
+                if (i % (msInDaydivied) == 0)
                 {
                     ((BackgroundWorker)sender).ReportProgress(i);
                     Console.WriteLine("SIM: " + i);
+                    activeCount = 0;
+                    foreach (var item in vehicles)
+                    {
+                        if (item.Active) activeCount++;
+                       
+                    }
+                    Console.WriteLine(activeCount);
                 }
-                for (int j = 0; j < vehicles.Count; j++)
+
+                for (int j = 0; j < vehicleCount; j++)
                     vehicles[j].Drive(i);
             }
+
         }
         private void Run(object sender, DoWorkEventArgs args)
         {
@@ -153,6 +167,7 @@ namespace A319TS
             List<int> toHomeTimes = GetTimes(carCount, timeSpread, toHomeTime);
 
             List<Vehicle> vehicles = new List<Vehicle>();
+
             for (int i = 0; i < carCount; i++)
                 vehicles.Add(new Vehicle(Project, homes[i], destinations[i], vehicleTypes[i], toDestTimes[i], toHomeTimes[i]));
 
@@ -163,26 +178,32 @@ namespace A319TS
             List<Node> homes = new List<Node>();
 
             List<Node> inboundNodes = Project.Nodes.FindAll(n => n.Type == NodeTypes.Inbound);
-            if (inboundNodes.Count == 0)
+
+            int inboundNodesCount = inboundNodes.Count;
+
+            if (inboundNodesCount == 0)
                 throw new Exception("No inbound nodes found");
             
             int inboundIndex = 0;
             for (int i = 0; i < inbound; i++)
             {
                 homes.Add(inboundNodes[inboundIndex]);
-                if (inboundIndex + 1 == inboundNodes.Count) inboundIndex = 0;
+                if (inboundIndex + 1 == inboundNodesCount) inboundIndex = 0;
                 else inboundIndex++;
             }
 
             List<Node> homeNodes = Project.Nodes.FindAll(n => n.Type == NodeTypes.Home);
-            if (homeNodes.Count == 0)
+
+            int homeNodesCount = homeNodes.Count;
+
+            if (homeNodesCount == 0)
                 throw new Exception("No home nodes found");
 
             int homeIndex = 0;
             for (int i = 0; i < carCount - inbound; i++)
             {
                 homes.Add(homeNodes[homeIndex]);
-                if (homeIndex + 1 == homeNodes.Count) homeIndex = 0;
+                if (homeIndex + 1 == homeNodesCount) homeIndex = 0;
                 else homeIndex++;
             }
 
@@ -200,7 +221,10 @@ namespace A319TS
                     continue;
 
                 List<Destination> destsWithType = Project.Destinations.FindAll(d => d.Type == destType);
-                if (destsWithType.Count == 0)
+
+                int destsWithTypeCount = destsWithType.Count;
+
+                if (destsWithTypeCount == 0)
                     throw new Exception("No destinations with type: " + destType.Name);
 
                 double addAmount = (destType.Distribution / 100) * (carCount - outbound);
@@ -209,7 +233,7 @@ namespace A319TS
                 for (int i = 0; i < Math.Round(addAmount); i++)
                 {
                     destinations.Add(destsWithType[index]);
-                    if (index + 1 == destsWithType.Count) index = 0;
+                    if (index + 1 == destsWithTypeCount) index = 0;
                     else index++;
                 }
             }
