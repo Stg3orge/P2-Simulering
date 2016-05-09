@@ -28,8 +28,7 @@ namespace A319TS
                 {
                     BinaryFormatter formatter = new BinaryFormatter();
                     file = new FileStream(fileOpen.FileName, FileMode.Open);
-                    Project project = (Project)formatter.Deserialize(file);
-                    return project;
+                    return (Project)formatter.Deserialize(file);
                 }
                 return null;
             }
@@ -83,6 +82,32 @@ namespace A319TS
             catch (Exception e)
             {
                 MessageBox.Show("Error: " + e.Message);
+            }
+            finally
+            {
+                if (file != null)
+                    file.Close();
+            }
+        }
+        static public SimulationData OpenSimulation()
+        {
+            FileStream file = null;
+            try
+            {
+                OpenFileDialog fileOpen = new OpenFileDialog();
+                fileOpen.Filter = "SIM Files|*.sim";
+                if (fileOpen.ShowDialog() == DialogResult.OK)
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    file = new FileStream(fileOpen.FileName, FileMode.Open);
+                    return (SimulationData)formatter.Deserialize(file);
+                }
+                return null;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+                return null;
             }
             finally
             {

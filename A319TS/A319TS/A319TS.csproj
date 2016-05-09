@@ -106,7 +106,6 @@
     </Compile>
     <Compile Include="LightController.cs" />
     <Compile Include="MathExtension.cs" />
-    <Compile Include="MessageEventArgs.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Pathfinder.cs" />
     <Compile Include="PointD.cs" />
@@ -123,6 +122,9 @@
     <Compile Include="Simulation.cs" />
     <Compile Include="SimulationData.cs" />
     <Compile Include="SimulationSettings.cs" />
+    <Compile Include="SimulationViewport.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ToolController.cs" />
     <Compile Include="Vector2D.cs" />
     <Compile Include="Vehicle.cs" />

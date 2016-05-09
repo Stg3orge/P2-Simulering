@@ -21,7 +21,7 @@ namespace A319TS
             args.Graphics.TranslateTransform(ViewPos.X, ViewPos.Y);
             args.Graphics.ScaleTransform(Zoom, Zoom);
         }
-        private void DrawGrid(object sender, PaintEventArgs args)
+        protected void DrawGrid(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighSpeed, args);
             for (int i = 0; i < GridLength * GridSize; i += GridSize)

@@ -78,7 +78,8 @@ namespace A319TS
         }
         private void MenuSimulationViewClick(object sender, EventArgs args)
         {
-
+            GUIMenuSimulationView view = new GUIMenuSimulationView();
+            view.ShowDialog();
         }
 
         // MainToolStrip Events
