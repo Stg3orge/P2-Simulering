@@ -14,7 +14,9 @@ namespace A319TS
         public Point Position { get; set; }
         public bool Green { get; set; }
         public List<Vehicle> IncomingVehicles { get; set; }
-        
+        public bool IsEmpty { get; set; }
+
+
         public Node(Point position)
         {
             Type = NodeTypes.None;

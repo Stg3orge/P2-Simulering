@@ -23,7 +23,7 @@ namespace A319TS
             private set
             {
                 _speed = value;
-                if (value == 0)
+                if (_speed == 0)
                     foreach (Node node in _nodesIncommingAt)
                         node.IncomingVehicles.Remove(this);
                 _nodesIncommingAt.Clear();
@@ -38,7 +38,30 @@ namespace A319TS
         {
             get { return _currentPath[_currentPathIndex]; }
         }
+        private Node CurrentNode
+        {
+            get
+            {
+                return _currentNode;
+            }
+            set
+            {
+                if(value == null)
+                {
+                    _currentNode.IsEmpty = true;
+                    _currentNode = value;
+                }
+                else
+                {
+                    _currentNode = value;
+                    _currentNode.IsEmpty = false;
+                }
+
+            }
+        }
+
         private Node _currentNode;
+
         private List<Node> _nodesIncommingAt;
 
         public int ToDestTime;
@@ -93,7 +116,9 @@ namespace A319TS
         {
             int closestIndex = 0;
             double closestDistance = double.MaxValue;
-            for (int i = 0; i < project.Nodes.Count; i++)
+            int nodesCount = project.Nodes.Count;
+
+            for (int i = 0; i < nodesCount; i++)
             {
                 double distance = MathExtension.Distance(project.Nodes[i].Position, Destination.Position);
                 if (distance < closestDistance)
@@ -129,15 +154,22 @@ namespace A319TS
         {
             if (time > ToDestTime && !_toDestStarted)
             {
-                Activate(_toDestPath);
-                _toDestStarted = true;
+                if (_toDestPath[0].From.IsEmpty)
+                {
+                    Activate(_toDestPath);
+                    _toDestStarted = true;
+                }
             } 
             else if(time > ToHomeTime && !_toHomeStarted)
             {
-                Activate(_toHomePath);
-                _toHomeStarted = true;
+                if (_toHomePath[0].From.IsEmpty)
+                {
+                    Activate(_toHomePath);
+                    _toHomeStarted = true;
+                }
             }
         }
+
         private void Activate(List<Road> path)
         {
             Active = true;
@@ -156,16 +188,20 @@ namespace A319TS
         ////////// SPEED //////////
         private double GetSpeed()
         {
+            int incomingVehiclesCount = _currentRoad.To.IncomingVehicles.Count;
+
             Vehicle vehicleInfront = VehicleInfront(_settings.VehicleSpace);
-            if (_currentNode != null && _currentNode.Type == NodeTypes.Light && !_currentNode.Green) // If at red light;
+            if (CurrentNode != null && CurrentNode.Type == NodeTypes.Light && !CurrentNode.Green) // If at red light;
             {
                 return 0;
             }
-            else if (_currentNode != null && _currentNode.Type == NodeTypes.Yield
-                     && _currentRoad.To.IncomingVehicles.Count > 0) // If at yield and cars are passing
+            else if (CurrentNode != null && CurrentNode.Type == NodeTypes.Yield
+                     && incomingVehiclesCount > 0 && 
+                     !(incomingVehiclesCount == 1 && _currentRoad.To.IncomingVehicles.Contains(this))) // If at yield and cars are passing
             {
                 return 0;
             }
+
             else if (vehicleInfront != null)
             {
                 return vehicleInfront.Speed;
@@ -185,9 +221,12 @@ namespace A319TS
             Vehicle vehicleInfront = null;
             double distanceChecked = MathExtension.Distance(Position, new PointD(_currentRoad.To.Position));
             int index = _currentPathIndex;
+            int currentPathCount = _currentPath.Count;
+
             do
             {
-                if (index == _currentPathIndex) vehicleInfront = CheckCurrentRoad(distanceToCheck);
+                if (index == _currentPathIndex)
+                    vehicleInfront = CheckCurrentRoad(distanceToCheck);
                 else
                 {
                     vehicleInfront = CheckFutureRoad(index, distanceToCheck - distanceChecked);
@@ -196,7 +235,7 @@ namespace A319TS
 
                 if (vehicleInfront != null) break;
 
-                if (index + 1 < _currentPath.Count) index++;
+                if (index + 1 < currentPathCount) index++;
                 else break;
             }
             while (distanceChecked < distanceToCheck);
@@ -236,7 +275,9 @@ namespace A319TS
         {
             int closestIndex = 0;
             double closestDistance = double.MaxValue;
-            for (int i = 0; i < vehicles.Count; i++)
+            int vehicleCount = vehicles.Count;
+
+            for (int i = 0; i < vehicleCount; i++)
             {
                 double distance = MathExtension.Distance(vehicles[i].Position, new PointD(vehicles[i]._currentRoad.From.Position));
                 if (distance < closestDistance)
@@ -251,7 +292,7 @@ namespace A319TS
         ////////// MOVE //////////
         private void Move(double distanceToMove)
         {
-            _currentNode = null;
+            CurrentNode = null;
             TranslateVehicle(distanceToMove);
             ControlOverreach();
             ShowAsIncoming();
@@ -296,7 +337,7 @@ namespace A319TS
             _currentPathIndex++;
             _currentRoad.Vehicles.Add(this);
             Position = new PointD(_currentRoad.From.Position);
-            _currentNode = _currentRoad.From;
+            CurrentNode = _currentRoad.From;
         }
         private void ShowAsIncoming()
         {
@@ -304,7 +345,9 @@ namespace A319TS
             if (distance < _settings.IncommingRange)
                 SetIncoming(_currentRoad.To);
 
-            for (int i = _currentPathIndex + 1; i < _currentPath.Count; i++)
+            int currentPathCount = _currentPath.Count;
+
+            for (int i = _currentPathIndex + 1; i < currentPathCount; i++)
             {
                 distance += _currentPath[i].Length;
                 if (distance < _settings.IncommingRange)
