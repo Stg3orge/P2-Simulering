@@ -1,6 +1,6 @@
 \section{File Handler}\label{FileHandler}
 
-FileHandleren er sat op så at man har mulighed for at lave et ny projekt, åbne og gemme projektet. Der er bleveet dannet tre metoder som håndtere de tre valg for brugeren, for at gøre det mest læsevenligt for dem der skal læse koden.
+FileHandleren er sat op så at man har mulighed for at lave et ny projekt, åbne og gemme projektet. Der er blevet dannet tre metoder som håndtere de tre valg for brugeren, for at gøre det mest læsevenligt for dem der skal læse koden.
 
 \vspace{5mm}
 
@@ -8,12 +8,12 @@ Den første metode der er blevet lavet i denne klasse er NewProject. Denne metod
 
 \begin{figure}[H]
 \begin{lstlisting}
- 		static public Project NewProject()
-        {
-            GUIMenuFileNew fileNew = new GUIMenuFileNew();
-            fileNew.ShowDialog();
-            return fileNew.NewProject;
-        }
+static public Project NewProject()
+{
+   GUIMenuFileNew fileNew = new GUIMenuFileNew();
+   fileNew.ShowDialog();
+   return fileNew.NewProject;
+}
 \end{lstlisting}
 \caption{NewProject metoden}\label{NewProjectCode}
 \end{figure}
@@ -24,12 +24,12 @@ Her er koden der sker, når brugeren trykker på New Project, som ligger inden u
 
 \begin{figure}[H]
 \begin{lstlisting}
-        private void MenuFileNewClick(object sender, EventArgs args)
-        {
-            Project project = FileHandler.NewProject();
-            if (project != null)
-                UpdateProject(project);
-        }
+private void MenuFileNewClick(object sender, EventArgs args)
+{
+   Project project = FileHandler.NewProject();
+   if (project != null)
+   UpdateProject(project);
+}
 \end{lstlisting}
 \caption{MenuFileNewClick metoden}\label{MenuFileNewClickCode}
 \end{figure}
@@ -41,32 +41,32 @@ Metoden som skal åbne et eksisterende projekt, når brugeren trykker på Open P
 \begin{figure}[H]
 \begin{lstlisting}
 static public Project OpenProject()
-        {
-            FileStream file = null;
-            try
-            {
-                OpenFileDialog fileOpen = new OpenFileDialog();
-                fileOpen.Filter = "TSP Files|*.tsp";
-                if (fileOpen.ShowDialog() == DialogResult.OK)
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    file = new FileStream(fileOpen.FileName, FileMode.Open);
-                    Project project = (Project)formatter.Deserialize(file);
-                    return project;
-                }
-                return null;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error: " + e.Message);
-                return null;
-            }
-            finally
-            {
-                if (file != null)
-                    file.Close();
-            }
-        }
+{
+   FileStream file = null;
+   try
+   {
+      OpenFileDialog fileOpen = new OpenFileDialog();
+      fileOpen.Filter = "TSP Files|*.tsp";
+      if (fileOpen.ShowDialog() == DialogResult.OK)
+      {
+         BinaryFormatter formatter = new BinaryFormatter();
+         file = new FileStream(fileOpen.FileName, FileMode.Open);
+         Project project = (Project)formatter.Deserialize(file);
+         return project;
+      }
+      return null;
+   }
+   catch (Exception e)
+   {
+      MessageBox.Show("Error: " + e.Message);
+      return null;
+   }
+   finally
+   {
+      if (file != null)
+      file.Close();
+   }
+}
 \end{lstlisting}
 \caption{OpenProject metoden}\label{OpenProjectCode}
 \end{figure}
@@ -78,31 +78,31 @@ Igen benytter programmet af en try-catch-finally, hvor programmet i try fasen la
 \begin{figure}[H]
 \begin{lstlisting}
 static public void SaveProject(Project project)
-        { 
-            FileStream file = null;
-            try
-            {
-                SaveFileDialog fileSave = new SaveFileDialog();
-                fileSave.AddExtension = true;
-                fileSave.DefaultExt = "tsp";
-                fileSave.Filter = "TSP Files|*.tsp";
-                if (fileSave.ShowDialog() == DialogResult.OK)
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    file = new FileStream(fileSave.FileName, FileMode.Create);
-                    formatter.Serialize(file, project);
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error: " + e.Message);
-            }
-            finally
-            {
-                if (file != null)
-                    file.Close();
-            }
-        }
+{ 
+   FileStream file = null;
+   try
+   {
+      SaveFileDialog fileSave = new SaveFileDialog();
+      fileSave.AddExtension = true;
+      fileSave.DefaultExt = "tsp";
+      fileSave.Filter = "TSP Files|*.tsp";
+      if (fileSave.ShowDialog() == DialogResult.OK)
+      {
+         BinaryFormatter formatter = new BinaryFormatter();
+         file = new FileStream(fileSave.FileName, FileMode.Create);
+         formatter.Serialize(file, project);
+      }
+    }
+    catch (Exception e)
+    {
+       MessageBox.Show("Error: " + e.Message);
+    }
+    finally
+    {
+       if (file != null)
+           file.Close();
+    }
+}
 \end{lstlisting}
 \caption{SaveProject metoden}\label{SaveProjectCode}
 \end{figure}

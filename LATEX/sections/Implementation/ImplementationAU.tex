@@ -21,53 +21,53 @@ Vi vil derfor i dette afsnit fokuserer på at dokumentere de mest væsentlige kl
 Road klassen indeholder de metoder der skal anvendes for at brugeren kan opstille veje i programmet.
 \begin{lstlisting}
 public class Road
-    {
-        public Node From { get; set; }
-        public Node Destination { get; set; }
-        public RoadType Type { get; set; }
-        public enum RoadDifferentiation {Primary, Secondary, Shared };
-        public double Length { get { return GetLength(); } }
-        public double Cost { get; set; }
+{
+   public Node From { get; set; }
+   public Node Destination { get; set; }
+   public RoadType Type { get; set; }
+   public enum RoadDifferentiation {Primary, Secondary, Shared };
+   public double Length { get { return GetLength(); } }
+   public double Cost { get; set; }
 
-        private Road(){} // Serialize
-        public Road(Node from, Node destination, RoadType type)
-        {
-            From = from;
-            Destination = destination;
-            Type = type;
-        }
+   private Road(){} // Serialize
+   public Road(Node from, Node destination, RoadType type)
+   {
+      From = from;
+      Destination = destination;
+      Type = type;
+   }
 
-        private double GetLength()
-        {
-            return (Math.Sqrt(Math.Pow(Math.Abs(From.Position.X - Destination.Position.X), 2) 
-                            + Math.Pow(Math.Abs(From.Position.Y - Destination.Position.Y), 2)));
-        }
-    }
+   private double GetLength()
+   {
+      return (Math.Sqrt(Math.Pow(Math.Abs(From.Position.X - Destination.Position.X), 2) 
+              + Math.Pow(Math.Abs(From.Position.Y - Destination.Position.Y), 2)));
+   }
+}
 \end{lstlisting}
 Road klassen tager imod en instans af RoadType som brugeren selv har defineret via RoadType klassen. På denne måde har brugeren kontrol over hvilken type vej der tale om og hvordan vejen opfører sig i programmet, f.eks. om det er en motorvej. Vejene er programmeret således at brugeren selv kan opstille forskellige kryds, rundkørsler eller andre avanceret afkørsels baner. RoadType er en seperat klasse hvori brugeren give et "Name" og en "Speed", på denne måde definere brugeren selv hvilke typer veje der optræder i deres simulation.
 
 \subsection{Vehicle klassen}
 Vores vehicle klasse er ikke meget anderledes fra vores Road klasse. Denne klasse, meget ligesom Road klassen, er implementeret således at brugeren kan definerer deres egne vehicles til deres simulering.
 \begin{lstlisting}
- class Vehicle
-    {
-        public Node Home;
-        public Destination Destination;
-        public Point Position;
-        public VehicleType Type;
-        public int TravelTime;
-        public int HomeTime;
+class Vehicle
+{
+   public Node Home;
+   public Destination Destination;
+   public Point Position;
+   public VehicleType Type;
+   public int TravelTime;
+   public int HomeTime;
 
-        public Vehicle(Node home, Destination destination, VehicleType type, int travelTime, int homeTime)
-        {
-            Home = home;
-            Destination = destination;
-            Position = Home.Position;
-            Type = type;
-            TravelTime = travelTime;
-            HomeTime = homeTime;
-        }
-    }
+   public Vehicle(Node home, Destination destination, VehicleType type, int travelTime, int homeTime)
+   {
+      Home = home;
+      Destination = destination;
+      Position = Home.Position;
+      Type = type;
+      TravelTime = travelTime;
+      HomeTime = homeTime;
+   }
+}
 \end{lstlisting}
 Igen bliver der brugt en klasse kaldt VehicleType. Igen bruges denne klasse til at brugeren kan oprette deres egne VehicleTypes, så vis brugeren skal bruge en bus, en varevogn eller noget helt tredje til deres simulering, så har de muligheden for at definere disse og beskrive deres opførsel. I vores program har brugeren mulighed for at definere følgende: Name, MaxSpeed, Acceleration, Deceleration, Color (En instance af endnu en klasse) og Distribution. Destribution er en procentsats som brugeren kan sætte for at udtrykke hvor mange procent af biler i deres simulering der skal være af denne VehicleType.
 
@@ -77,121 +77,52 @@ Destination klassen i vores program er et punkt hvorpå bilerne vil søge henimo
 \subsection{Node}
 I vores program anvender vi et grid hvorpå brugeren indsætter noder der udgør de forskellige vejnet der bliver oprettet. Disse noder kan have forskellige funktioner. Dette er gjort således at processen i at oprette vejnet er relativt simple. Et simpelt eksempel ville være at brugeren indsætte to noder, den første node hvor brugeren ønsker biler køre fra, den næste er en Parking node tæt på de bilers Destination. Således kan et meget simpelt vejnet opstille. Men det er også muligt for brugeren at opstille meget mere komplekse vejnet med lyskryds.
 
-\subsection{Project}
-Ligesom i mange andre programmer, så er det tænkeligt at brugeren vil arbejde med forskellige projekter og gerne vil gemme deres arbejde i en fil. Til dette formål har vi vores Project class som gør det muligt for brugeren at oprette flere forskellige projekter.
 
-\begin{figure}[H]
-\begin{lstlisting}
-public class Project : ICloneable
-    {
-        public string Name;
-        public List<Node> Nodes = new List<Node>();
-        public List<Destination> Destinations = new List<Destination>();
-        public List<LightController> LightControllers = new List<LightController>();
-        public List<RoadType> RoadTypes = new List<RoadType>();
-        public List<DestinationType> DestinationTypes = new List<DestinationType>();
-        public List<VehicleType> VehicleTypes = new List<VehicleType>();
-        public List<SimulationData> Simulations = new List<SimulationData>();
-        public SimulationSettings Settings = new SimulationSettings();
-        
-        public Project(string name)
-        {
-            Name = name;
-            RoadTypes.Add(new RoadType("Default", 50));
-            DestinationTypes.Add(new DestinationType("Default", Color.LightSlateGray) { Distribution = 100 });
-            VehicleTypes.Add(new VehicleType("Default", 130, 5, 5, Color.LightSlateGray) { Distribution = 100 });
-        }
-
-        public object Clone()
-        {
-            return DeepCopy(this);
-        }
-
-        // http://www.codeproject.com/Articles/38270/Deep-copy-of-objects-in-C
-        private static object DeepCopy(object obj)
-        {
-            if (obj == null)
-                return null;
-            Type type = obj.GetType();
-
-            if (obj is string || type.IsValueType)
-                return obj;
-            else if (type.IsArray)
-            {
-                Type elementType = Type.GetType(type.FullName.Replace("[]", string.Empty));
-                var array = obj as Array;
-                Array copied = Array.CreateInstance(elementType, array.Length);
-                for (int i = 0; i < array.Length; i++)
-                    copied.SetValue(DeepCopy(array.GetValue(i)), i);
-                return Convert.ChangeType(copied, obj.GetType());
-            }
-            else if (type.IsClass)
-            {
-                object toret = Activator.CreateInstance(obj.GetType());
-                FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-                foreach (FieldInfo field in fields)
-                {
-                    object fieldValue = field.GetValue(obj);
-                    if (fieldValue == null)
-                        continue;
-                    field.SetValue(toret, DeepCopy(fieldValue));
-                }
-                return toret;
-            }
-            else throw new ArgumentException("Unknown Type");
-        }
-    }
-\end{lstlisting}
-\caption{Project Klassen}\label{projectClass}
-\end{figure}
-Når et nyt projekt bliver oprettet af brugeren, så istanceres der nogle default instancer af de før nævnte klasser. Dvs. at programmet har en Default RoadType, DestinationType, og VehicleType.
-(indsæt forklaring af deepcopy?)
 
 \subsection{Lightcontroller}
 LightController klassen er den del af programmet hvori brugeren kan indstille på deres trafiklys's noders opførsel.
 
 \begin{figure]{H}
 \begin{lstlisting}
- public class LightController : Entity, IPositionable
-    {
-        public List<Node> Lights { get; private set; }
-        public int FirstTime { get; set; }
-        public int SecondTime { get; set; }
-        private int _current;
-        private int _counter = 0;
+public class LightController : Entity, IPositionable
+{
+   public List<Node> Lights { get; private set; }
+   public int FirstTime { get; set; }
+   public int SecondTime { get; set; }
+   private int _current;
+   private int _counter = 0;
         
-        public LightController(Point position) : base(position)
-        {
-            Lights = new List<Node>();
-            FirstTime = 10;
-            SecondTime = 10;
-            _current = FirstTime;
-            
-        }
+   public LightController(Point position) : base(position)
+   {
+      Lights = new List<Node>();
+      FirstTime = 10;
+      SecondTime = 10;
+      _current = FirstTime;      
+   }
 
-        public override string ToString()
-        {
-            return "(" + Position.X + "," + Position.Y + ") " + FirstTime + "/" + SecondTime;
-        }
-        public void Update(int ms)
-        {
-            _counter += ms;
-            if (_counter > _current)
-            {
-                if (_current == FirstTime)
-                    _current = SecondTime;
-                else
-                    _current = FirstTime;
-                ToggleLights();
-                _counter = 0;
-            }
-        }
-        private void ToggleLights()
-        {
-            foreach (Node light in Lights)
-                light.Green = !light.Green;
-        }
-    }
+   public override string ToString()
+   {
+      return "(" + Position.X + "," + Position.Y + ") " + FirstTime + "/" + SecondTime;
+   }
+   public void Update(int ms)
+   {
+      _counter += ms;
+      if (_counter > _current)
+      {
+         if (_current == FirstTime)
+             _current = SecondTime;
+         else
+             _current = FirstTime;
+             ToggleLights();
+             _counter = 0;
+       }
+   }
+   private void ToggleLights()
+   {
+      foreach (Node light in Lights)
+      light.Green = !light.Green;
+   }
+}
 \end{lstlisting}
 \caption{LightController Klasse}\label{LightControllerClass}
 \end{figure}
