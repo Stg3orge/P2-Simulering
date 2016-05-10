@@ -24,6 +24,7 @@ namespace A319TS
             Position = position;
             Green = true;
             IncomingVehicles = new List<Vehicle>();
+            IsEmpty = true;
         }
 
         public override string ToString()

@@ -28,5 +28,10 @@ namespace A319TS
             X = point.X;
             Y = point.Y;
         }
+
+        public override string ToString()
+        {
+            return "{" + X + "," + Y + "}";
+        }
     }
 }

@@ -47,26 +47,6 @@ namespace A319TS
                 ResetButtons();
                 ProgressBar.Value = 0;
                 OpenLabel.Text = data.Filename;
-
-                // Debug stuff
-                Console.WriteLine("PrimaryData Times");
-                foreach (VehicleData vData in data.PrimaryData)
-                {
-                    Console.WriteLine("D" + vData.ToDestTime + " H" + vData.ToHomeTime);
-
-                    Console.Write("  ");
-                    Console.Write(vData.ToDestRecord.Count() + " ");
-                    foreach (PointD pos in vData.ToDestRecord)
-                        Console.Write(pos + " ");
-                    Console.WriteLine();
-
-                    Console.Write("  ");
-                    Console.Write(vData.ToHomeRecord.Count() + " ");
-                    foreach (PointD pos in vData.ToHomeRecord)
-                        Console.Write(pos + " ");
-                    Console.WriteLine();
-                    Console.WriteLine();
-                }
             }
         }
         private void ResetButtons()
@@ -108,7 +88,7 @@ namespace A319TS
         }
         private void UpdateRateChanged(object sender, EventArgs args)
         {
-            TimeTimer.Interval = 1000 / GetUpdateRate();
+            TimeTimer.Interval = Simulation.RecordInterval / GetUpdateRate();
             if (SimViewport != null)
                 ProgressBar.Value = SimViewport.Time;
             
@@ -129,7 +109,7 @@ namespace A319TS
         }
         private void Tick(object sender, EventArgs args)
         {
-            SimViewport.Time += 1000;
+            SimViewport.Time += Simulation.RecordInterval;
             SimViewport.Vehicles.Refresh();
             ProgressBar.Value = SimViewport.Time;
             TimeLabel.Text = SimViewport.Time.ToString();
@@ -228,7 +208,7 @@ namespace A319TS
             Controls.Add(SetTime);
 
             TimeTimer.Enabled = false;
-            TimeTimer.Interval = 1000;
+            TimeTimer.Interval = Simulation.RecordInterval;
             TimeTimer.Tick += Tick;
         }
         private void OnLoad(object sender, EventArgs args)

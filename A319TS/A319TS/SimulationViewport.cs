@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace A319TS
 {
     class SimulationViewport : Viewport
     {
-        private const int VehicleSize = 12;
+        private const int VehicleSize = 16;
         public Layer Vehicles = new Layer();
         public SimulationData SimData;
         public Partitions CurrentPartition = Partitions.Primary;
@@ -43,6 +44,8 @@ namespace A319TS
 
         private void DrawVehicles(object sender, PaintEventArgs args)
         {
+            ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
+
             List<VehicleData> vehicleData;
             if (CurrentPartition == Partitions.Primary) vehicleData = SimData.PrimaryData;
             else vehicleData = SimData.SecondaryData;
@@ -51,39 +54,40 @@ namespace A319TS
 
             foreach (VehicleData data in SimData.PrimaryData)
             {
-                if (Time > data.ToDestTime && Time < data.ToDestTime + (data.ToDestRecord.Count() * SimData.Project.Settings.StepSize))
+                if (Time > data.ToDestTime && Time < data.ToDestTime + (data.ToDestRecord.Count() * Simulation.RecordInterval))
                 {
                     DrawVehicle(data, true, args);
                     vehiclesDrawn++;
                 }
-                else if (Time > data.ToHomeTime && Time < data.ToHomeTime + (data.ToHomeRecord.Count() * SimData.Project.Settings.StepSize))
+                else if (Time > data.ToHomeTime && Time < data.ToHomeTime + (data.ToHomeRecord.Count() * Simulation.RecordInterval))
                 {
                     DrawVehicle(data, false, args);
                     vehiclesDrawn++;
                 }
             }
-
-            Console.Write("VDrawn: " + vehiclesDrawn);
+            Console.WriteLine("VDrawn: " + vehiclesDrawn);
         }
         private void DrawVehicle(VehicleData vehicle, bool toDest, PaintEventArgs args)
         {
-                Brush brush = new SolidBrush(vehicle.Type.Color);
-                PointF position;
-                if (toDest) position = GetDrawPosition(vehicle.ToDestRecord[GetRecordIndex(vehicle.ToDestTime)]);
-                else position = GetDrawPosition(vehicle.ToHomeRecord[GetRecordIndex(vehicle.ToHomeTime)]);
-                int offset = VehicleSize / 2;
-                position.X -= offset;
-                position.Y -= offset;
-                args.Graphics.FillEllipse(brush, position.X, position.Y, VehicleSize, VehicleSize);
+            Pen pen = new Pen(vehicle.Type.Color);
+            PointF position;
+            if (toDest) position = GetDrawPosition(vehicle.ToDestRecord[GetRecordIndex(vehicle.ToDestTime)]);
+            else position = GetDrawPosition(vehicle.ToHomeRecord[GetRecordIndex(vehicle.ToHomeTime)]);
+            int offset = VehicleSize / 2;
+            position.X -= offset;
+            position.Y -= offset;
+            args.Graphics.DrawEllipse(Pens.Black, position.X, position.Y, VehicleSize, VehicleSize);
+            args.Graphics.DrawEllipse(pen, position.X + 1, position.Y + 1, VehicleSize - 2, VehicleSize - 2);
+            args.Graphics.DrawEllipse(pen, position.X + 2, position.Y + 2, VehicleSize - 4, VehicleSize - 4);
+            args.Graphics.DrawEllipse(Pens.Black, position.X + 3, position.Y + 3, VehicleSize - 6, VehicleSize - 6);
         }
-
         private PointF GetDrawPosition(PointD position)
         {
             return new PointF(Convert.ToSingle(position.X) * GridSize, Convert.ToSingle(position.Y) * GridSize);
         }
         private int GetRecordIndex(int recordStartTime)
         {
-            return Convert.ToInt32((Time - recordStartTime) / SimData.Project.Settings.StepSize) - 1;
+            return Convert.ToInt32((Time - recordStartTime) / Simulation.RecordInterval); // -1 ??
         }
     }
 }

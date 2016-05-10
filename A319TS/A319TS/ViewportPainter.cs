@@ -15,7 +15,7 @@ namespace A319TS
         {
             return new Point(position.X * GridSize, position.Y * GridSize);
         }
-        private void ScaleTranslateSmooth(SmoothingMode mode, PaintEventArgs args)
+        protected void ScaleTranslateSmooth(SmoothingMode mode, PaintEventArgs args)
         {
             args.Graphics.SmoothingMode = mode;
             args.Graphics.TranslateTransform(ViewPos.X, ViewPos.Y);
