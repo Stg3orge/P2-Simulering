@@ -151,9 +151,9 @@ SetNodeType() benyttes til at give den enkelte Node en type som f.eks. Light, Yi
 
 
 \textbf{AddRoad:} \newline
-AddRoad() bruges til at tilføje en vej mellem 2 noder, derfor checkes der først om object på den nuværrende positon i griddet er en node. Hvis det er en node vil der blive checkket om _firstNodeConnection er sket, altså om startpunktet til vejen er blevet valgt. Hvis _firstNodeConnection er ture, betyder det at det ikke er sket, og noden på den nuværrendeposition i griddet vil blive sat til _firstNode, og _firstNodeConnection vil blive false. Det betyder at næste gang brugeren trykker på en node i griddet vil programmet vide at _firstNode er blevet sat, og derfor tilføjes der en vej mellem _firstNode og noden på den nuværrende position i griddet.
+AddRoad() bruges til at tilføje en vej mellem 2 noder, derfor checkes der først om object på den nuværrende positon i griddet er en node. Hvis det er en node vil der blive checket om \_firstNodeConnection er sket, altså om startpunktet til vejen er blevet valgt. Hvis \_firstNodeConnection er ture, betyder det at det ikke er sket, og noden på den nuværrendeposition i griddet vil blive sat til \_firstNode, og \_firstNodeConnection vil blive false. Det betyder at næste gang brugeren trykker på en node i griddet vil programmet vide at \_firstNode er blevet sat, og derfor tilføjes der en vej mellem \_firstNode og noden på den nuværrende position i griddet.
 
-Hvis brugern holder "Shift" nede imens, vil programmet sætte _firstNode til den nuværrende node efter at der er blevet tilføjet en vej, da den node vil være startpunktet for den næste vej. Det er en implementation som gør det nemmere og hurtigere for brugeren at tilføje veje. 
+Hvis brugern holder "Shift" nede imens, vil programmet sætte \_firstNode til den nuværrende node efter at der er blevet tilføjet en vej, da den node vil være startpunktet for den næste vej. Det er en implementation som gør det nemmere og hurtigere for brugeren at tilføje veje. 
 
 
 \begin{figure}[H]

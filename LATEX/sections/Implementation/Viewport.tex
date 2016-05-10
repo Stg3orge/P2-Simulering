@@ -28,16 +28,16 @@ Som sagt kan ViewPort indikere koordinaterne til indsatte objekter og dette gør
 \begin{lstlisting}
 public object GetObjByGridPos()
 {
-Node node = Project.Nodes.Find(n => n.Position == GridPos);
-if (node != null)
-return node;
-LightController controller = Project.LightControllers.Find(l => l.Position == GridPos);
-if (controller != null)
-return controller;
-Destination dest = Project.Destinations.Find(d => d.Position == GridPos);
-if (dest != null)
-return dest;
-return null;
+	Node node = Project.Nodes.Find(n => n.Position == GridPos);
+	if (node != null)
+		return node;
+	LightController controller = Project.LightControllers.Find(l => l.Position == GridPos);
+	if (controller != null)
+		return controller;
+	Destination dest = Project.Destinations.Find(d => d.Position == GridPos);
+	if (dest != null)
+		return dest;
+	return null;
 }
 \end{lstlisting}
 \caption{}
