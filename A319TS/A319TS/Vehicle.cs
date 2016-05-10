@@ -46,22 +46,24 @@ namespace A319TS
             }
             set
             {
-                if(value == null)
+                if(value == null && _currentNode != null)
                 {
                     _currentNode.IsEmpty = true;
+                    _currentNode = value;
+                }
+                else if(value != null && _currentNode != null)
+                {
+                    _currentNode.IsEmpty = false;
                     _currentNode = value;
                 }
                 else
                 {
                     _currentNode = value;
-                    _currentNode.IsEmpty = false;
                 }
-
             }
         }
 
         private Node _currentNode;
-
         private List<Node> _nodesIncommingAt;
 
         public int ToDestTime;
@@ -142,9 +144,9 @@ namespace A319TS
                 Speed = GetSpeed();
                 if (Speed != 0)
                     Move(MathExtension.KmhToMms(Speed) * _settings.StepSize);
-                if (time % 1000 == 0 && !_toHomeStarted)
+                if (time % Simulation.RecordInterval == 0 && !_toHomeStarted)
                     ToDestRecord.Add(new PointD(Position));
-                else if (time % 1000 == 0 && _toHomeStarted)
+                else if (time % Simulation.RecordInterval == 0 && _toHomeStarted)
                     ToHomeRecord.Add(new PointD(Position));
             }
         }
@@ -154,7 +156,7 @@ namespace A319TS
         {
             if (time > ToDestTime && !_toDestStarted)
             {
-                if (_toDestPath[0].From.IsEmpty)
+                if (true) // _toDestPath[0].From.IsEmpty
                 {
                     Activate(_toDestPath);
                     _toDestStarted = true;
@@ -162,14 +164,13 @@ namespace A319TS
             } 
             else if(time > ToHomeTime && !_toHomeStarted)
             {
-                if (_toHomePath[0].From.IsEmpty)
+                if (true) // _toHomePath[0].From.IsEmpty
                 {
                     Activate(_toHomePath);
                     _toHomeStarted = true;
                 }
             }
         }
-
         private void Activate(List<Road> path)
         {
             Active = true;

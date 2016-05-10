@@ -36,13 +36,13 @@ namespace A319TS
             StepSize = 100;
             VehicleSpace = 2;
             IncommingRange = 10;
-            PrimaryCarCount = 1000;
+            PrimaryCarCount = 10000;
             PrimaryInbound = 100;
             PrimaryOutbound = 100;
             PrimaryToDestTime = 28800000; // 08:00
             PrimaryToHomeTime = 57600000; // 16:00
             PrimaryTimeSpread = 14400000; // 4h
-            SecondaryCarCount = 1000;
+            SecondaryCarCount = 10000;
             SecondaryInbound = 100;
             SecondaryOutbound = 100;
             SecondaryToDestTime = 28800000; // 08:00

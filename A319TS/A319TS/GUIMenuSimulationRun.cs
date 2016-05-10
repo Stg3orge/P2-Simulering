@@ -103,13 +103,5 @@ namespace A319TS
         {
             ProgressBar.Value = args.ProgressPercentage;
         }
-        private void OnProcessStart(object sender, MessageEventArgs args)
-        {
-            ProcessLabel.Text = args.Message;
-        }
-        public void OnOperationCompleted(object sender, MessageEventArgs args)
-        {
-            Information.AppendText("\r" + args.Message);
-        }
     }
 }

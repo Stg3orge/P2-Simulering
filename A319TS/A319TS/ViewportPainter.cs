@@ -15,13 +15,13 @@ namespace A319TS
         {
             return new Point(position.X * GridSize, position.Y * GridSize);
         }
-        private void ScaleTranslateSmooth(SmoothingMode mode, PaintEventArgs args)
+        protected void ScaleTranslateSmooth(SmoothingMode mode, PaintEventArgs args)
         {
             args.Graphics.SmoothingMode = mode;
             args.Graphics.TranslateTransform(ViewPos.X, ViewPos.Y);
             args.Graphics.ScaleTransform(Zoom, Zoom);
         }
-        private void DrawGrid(object sender, PaintEventArgs args)
+        protected void DrawGrid(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighSpeed, args);
             for (int i = 0; i < GridLength * GridSize; i += GridSize)

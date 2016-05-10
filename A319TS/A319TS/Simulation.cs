@@ -12,7 +12,8 @@ namespace A319TS
     public enum Partitions { Shared, Primary, Secondary };
     class Simulation
     {
-        private const int MsInDay = 86400000;
+        public const int MsInDay = 86400000;
+        public const int RecordInterval = 100;
         private int _primaryProgress = 0;
         private int _secondaryProgress = 0;
         private BackgroundWorker MasterWorker;
@@ -74,29 +75,21 @@ namespace A319TS
             
             List<Vehicle> vehicles = args.Argument as List<Vehicle>;
             int vehicleCount = vehicles.Count;
-            int msInDaydivied = MsInDay / 100;
-
-            int activeCount = 0;
+            int onePercent = MsInDay / 100;
 
             for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
             {
                 if (MasterWorker.CancellationPending)
                     throw new OperationCanceledException("Simulation canceled");
-                if (i % (msInDaydivied) == 0)
+                if (i % (onePercent) == 0)
                 {
                     ((BackgroundWorker)sender).ReportProgress(i);
-                    Console.WriteLine("SIM: " + i);
-                    activeCount = 0;
-                    foreach (var item in vehicles)
-                    {
-                        if (item.Active) activeCount++;
-                       
-                    }
-                    Console.WriteLine(activeCount);
+                    Console.WriteLine("SIM: " + i + " ");
                 }
-
                 for (int j = 0; j < vehicleCount; j++)
+                {
                     vehicles[j].Drive(i);
+                } 
             }
 
         }
