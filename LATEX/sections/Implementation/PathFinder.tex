@@ -7,34 +7,33 @@ Den første metode er FindPath, hvor den starter ud med at finde ud af hvis vert
 
 \begin{figure}[H]
 \begin{lstlisting}
-		public static List<Road> FindPath(Node start, Node end)
-        {
-            if (Vertices == null || start == null || end == null)
-                throw new ArgumentNullException();
+public static List<Road> FindPath(Node start, Node end)
+{
+   if (Vertices == null || start == null || end == null)
+         throw new ArgumentNullException();
 
-            InitLists();
-            SetStartEnd(start, end);
-            Start.Cost = 0;
-            Open.Add(Start);
+   InitLists();
+   SetStartEnd(start, end);
+   Start.Cost = 0;
+   Open.Add(Start);
 
-            Vertex current;
-            while (Open.LongCount() > 0)
-            {
-                current = Open.Min();
-                Console.WriteLine(current.ToString());
-                if (current == End)
-                {
-                    return TracePath();
-                } 
-                else
-                {
-                    MoveToClosed(current);
-                    EstimateNeighbors(current);
-                }
-            }
-
-            throw new Exception("There isn't any route");
-        }
+   Vertex current;
+   while (Open.LongCount() > 0)
+   {
+      current = Open.Min();
+      Console.WriteLine(current.ToString());
+      if (current == End)
+      {
+         return TracePath();
+      } 
+      else
+      {
+      MoveToClosed(current);
+      EstimateNeighbors(current);
+      }
+   }
+   throw new Exception("There isn't any route");
+}
 \end{lstlisting}
 \caption{FindPath metoden}\label{FindPathCode}
 \end{figure}
@@ -45,19 +44,19 @@ I denne metode kigger vi på \%" vertex naboerne", altså de nodes som er bundet
 \begin{figure}[H]
 \begin{lstlisting}
 private static void EstimateNeighbors(Vertex current)
-        {
-            foreach (Edge edge in current.Edges)
-            {
-                Vertex neighbor = edge.VertexTo;
-                if (!Open.Contains(neighbor) && !Closed.Contains(neighbor)) // Skip evaluated
-                {
-                    neighbor.CalculateEstimate(current, edge, End, MaxSpeed); 
-                    Open.Add(neighbor);
-                    if (neighbor.Cost <= current.Cost + edge.Cost) 
-                        neighbor.Previous = current;
-                }
-            }
-        }
+{
+   foreach (Edge edge in current.Edges)
+   {
+     Vertex neighbor = edge.VertexTo;
+     if (!Open.Contains(neighbor) && !Closed.Contains(neighbor)) // Skip evaluated
+     {
+       neighbor.CalculateEstimate(current, edge, End, MaxSpeed); 
+       Open.Add(neighbor);
+       if (neighbor.Cost <= current.Cost + edge.Cost) 
+       neighbor.Previous = current;
+     }
+   }
+}
 \end{lstlisting}
 \caption{EstimateNeighbors metoden}\label{EstimateNeighborsCode}
 \end{figure}
@@ -68,17 +67,17 @@ Metode TracePath er den del som sporer en rute igennem vores grid, altså den g�
 \begin{figure}[H]
 \begin{lstlisting}
 private static List<Road> TracePath()
-        {
-            List<Road> roads = new List<Road>();
-            Vertex current = End;
-            while (current.Previous != null)              
-            { 
-                roads.Add(current.Previous.Edges.Find(edge => edge.VertexTo == current).Source);
-                current = current.Previous;
-            }
-            roads.Reverse();
-            return roads;
-        }}
+{
+   List<Road> roads = new List<Road>();
+   Vertex current = End;
+   while (current.Previous != null)              
+   { 
+      roads.Add(current.Previous.Edges.Find(edge => edge.VertexTo == current).Source);
+      current = current.Previous;
+   }
+   roads.Reverse();
+   return roads;
+}
 \end{lstlisting}
 \caption{TracePath metoden}\label{TracePathCode}
 \end{figure}
@@ -90,11 +89,11 @@ Metode CalculateCostEstimate er den metode som kan findes i Vertex klassen. Det 
 \begin{figure}[H]
 \begin{lstlisting}
 public void CalculateCostEstimate(Vertex previous, Edge edge, Vertex end, int maxSpeed)
-        {
-            Cost = previous.Cost + edge.Cost;
-            double heuristic = MathExtension.Distance(this.Position, end.Position) / maxSpeed;
-            Estimate = Cost + heuristic;
-        }
+{
+   Cost = previous.Cost + edge.Cost;
+   double heuristic = MathExtension.Distance(this.Position, end.Position) / maxSpeed;
+   Estimate = Cost + heuristic;
+}
 \end{lstlisting}
 \caption{CalculateCostEstimate metoden}\label{CalculateCostEstimateCode}
 \end{figure}
