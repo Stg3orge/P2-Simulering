@@ -66,11 +66,11 @@ namespace A319TS
         private Node _currentNode;
         private List<Node> _nodesIncommingAt;
 
-        public int ToDestTime;
+        private int _toDestTime;
         private bool _toDestStarted;
         private List<Road> _toDestPath;
 
-        public int ToHomeTime;
+        private int _toHomeTime;
         private bool _toHomeStarted;
         private List<Road> _toHomePath;
 
@@ -85,11 +85,11 @@ namespace A319TS
             Destination = dest;
             Type = type;
 
-            if (ToDestTime > ToHomeTime)
+            if (_toDestTime > _toHomeTime)
                 throw new ArgumentException("ToDestinationTime cannot be later than ToHomeTime");
 
-            ToDestTime = toDestTime;
-            ToHomeTime = toHomeTime;
+            _toDestTime = toDestTime;
+            _toHomeTime = toHomeTime;
             _toDestStarted = false;
             _toHomeStarted = false;
             
@@ -154,7 +154,7 @@ namespace A319TS
         ////////// ACTIVATION //////////
         private void CheckActive(int time)
         {
-            if (time > ToDestTime && !_toDestStarted)
+            if (time > _toDestTime && !_toDestStarted)
             {
                 if (true) // _toDestPath[0].From.IsEmpty
                 {
@@ -162,7 +162,7 @@ namespace A319TS
                     _toDestStarted = true;
                 }
             } 
-            else if(time > ToHomeTime && !_toHomeStarted)
+            else if(time > _toHomeTime && !_toHomeStarted)
             {
                 if (true) // _toHomePath[0].From.IsEmpty
                 {
@@ -368,7 +368,7 @@ namespace A319TS
         ////////// EXTRACT DATA //////////
         public VehicleData ExtractData()
         {
-            return new VehicleData(Type, ToDestRecord, ToHomeRecord, ToDestTime, ToHomeTime);
+            return new VehicleData(Type, ToDestRecord, ToHomeRecord, _toDestTime, _toHomeTime);
         }
     }
 }

@@ -43,10 +43,10 @@ namespace A319TS
             Ok.Text = "Ok";
             Ok.Location = new Point(12, 38);
             Ok.Size = new Size(170, 23);
-            Ok.Click += CreateClick;
+            Ok.Click += OkClick;
             Controls.Add(Ok);
         }
-        private void CreateClick(object sender, EventArgs e)
+        private void OkClick(object sender, EventArgs args)
         {
             if (NameOfProject.Text.Length > 0)
             {

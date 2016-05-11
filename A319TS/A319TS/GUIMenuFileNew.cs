@@ -46,7 +46,7 @@ namespace A319TS
             Controls.Add(Create);
         }
         
-        private void CreateClick(object sender, EventArgs e)
+        private void CreateClick(object sender, EventArgs args)
         {
             if (ProjectName.Text.Length > 0)
             {

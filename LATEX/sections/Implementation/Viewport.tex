@@ -1,10 +1,5 @@
-\section{ViewPort}\label{ViewPort}
-
-ViewPort klassen har til formål at sætte rammerne for brugergrænsefladen og området hvori man kan tegne objekter til brug i simuleringen. Klassen arver fra \textbf{WinForms} Panel klasse. Til dette formål er det nødvendigt for ViewPort and være en del af et nyt projekt og derfor instansieres der en nyt projekt og en række parametre set i figur \ref{ViewportParameters}. Readonly variablerne for "GridLength", "GridSize", "EntitySize" og "NodeSize" er størrelserne for de visuelle objekter på Viewporten.
-
-\vspace{5mm}
-
-Der bliver instansieret en variabel af typen "Project" da Viewporten skal kunne repræsentere projektet. "HoverConnection" visualiserer den forbindelse man prøver at lave mellem to objekter. "MousePos" indikerer det aktuelle punkt hvor musen befinder sig i gitteret, selv ved en nedskalering vil den altid finde det samme koordinat. "GridPos" får data igennem en metode der indikerer alle mulige koordinater i gitteret. Dette er brugbart til at finde koordinaterne til objekterne der bliver tegnet i gitteret.
+\section{Viewport}\label{Viewport}
+\texttt{Viewport} klassen har til formål at sætte rammerne for området hvori man kan tegne elementerne i vejnettet.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -22,24 +17,33 @@ public Point GridPos { get { return GetGridPos(); } }
 \label{ViewportParameters}
 \end{figure}
 
-Som sagt kan ViewPort indikere koordinaterne til indsatte objekter og dette gør den igennem metoden "GetObjByGridPos" som set i figur \ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle Node, LightController og Destination om deres position er lig GridPos. Hvis den har fundet en, så retunere den det fundne objekt.
+Klassen arver fra \texttt{Panel} klassen. Til dette formål er det nødvendigt for \texttt{Viewport} and være en del af et nyt projekt og derfor instansieres der en nyt projekt og en række parametre set i figur \ref{ViewportParameters}. Readonly variablerne for \texttt{GridLength}, \texttt{GridSize}, \texttt{EntitySize} og \texttt{NodeSize} er størrelserne for de visuelle objekter på Viewporten.
 
-\begin{figure}
+\vspace{5mm}
+
+Der bliver instansieret en variabel af typen \texttt{Project} da Viewporten skal kunne repræsentere projektet. \texttt{HoverConnection} visualiserer den forbindelse man prøver at lave mellem to objekter. \texttt{MousePos} indikerer det aktuelle punkt hvor musen befinder sig i gitteret, selv ved en nedskalering vil den altid finde det samme koordinat. \texttt{GridPos} får data igennem en metode der indikerer alle mulige koordinater i gitteret. Dette er brugbart til at finde koordinaterne til objekterne der bliver tegnet i gitteret.
+
+\begin{figure}[H]
 \begin{lstlisting}
 public object GetObjByGridPos()
 {
-   Node node = Project.Nodes.Find(n => n.Position == GridPos);
-   if (node != null)
-       return node;
-   LightController controller = Project.LightControllers.Find(l => l.Position == GridPos);
-   if (controller != null)
-	   return controller;
-   Destination dest = Project.Destinations.Find(d => d.Position == GridPos);
-   if (dest != null)
-	   return dest;
-   return null;
+  Node node = Project.Nodes.Find(n => 
+              n.Position == GridPos);
+  if (node != null)
+      return node;
+  LightController controller = Project.LightControllers.Find(l => 
+                               l.Position == GridPos);
+  if (controller != null)
+    return controller;
+  Destination dest = Project.Destinations.Find(d => 
+                     d.Position == GridPos);
+  if (dest != null)
+    return dest;
+  return null;
 }
 \end{lstlisting}
 \caption{}
 \label{ViewportGetObjByGridPos}
 \end{figure}
+
+Som sagt kan \texttt{Viewport} indikere koordinaterne til indsatte objekter og dette gør den igennem metoden \texttt{GetObjByGridPos} som set i figur \ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle \texttt{Node}, \texttt{LightController} og \texttt{Destination} om deres position er lig \texttt{GridPos}. Hvis den har fundet en, så retunere den det fundne objekt.
