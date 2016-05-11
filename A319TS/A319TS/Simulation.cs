@@ -22,8 +22,8 @@ namespace A319TS
         private Project Project;
         private Project PrimaryProject;
         private Project SecondaryProject;
-        List<Vehicle> _primaryVehicles;
-        List<Vehicle> _secondaryVehicles;
+        private List<Vehicle> _primaryVehicles;
+        private List<Vehicle> _secondaryVehicles;
 
         public event EventHandler<ProgressChangedEventArgs> ProgressChanged;
         protected virtual void OnProgressChanged() 

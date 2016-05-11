@@ -1,0 +1,256 @@
+\section{Funktionelle}\label{Funktionelle}
+%//////////////////////////////// ToolController ////////////////////////////////%
+\subsection{ToolController}
+\texttt{ToolController} klassen har til formål at forbinde de forskellige værktøjer så når brugeren f.eks. trykker på et af værktøjerne vil \texttt{ToolControlleren} kalde de tilsvarende metoder til værktøjet. Samt at der kun at være valgt et værktøj af gangen. \texttt{ToolController} er altså klassen som står for funktionerne som f.eks. \texttt{AddNode}, \texttt{AddRoad}, \texttt{AddLightController} osv.
+
+\begin{figure}[H]
+\begin{lstlisting}
+public ToolController(ToolStripItemCollection collection, 
+                      Viewport viewport, Project project)
+{
+   Tools = collection;
+   Viewport = viewport;
+   Viewport.Input.MouseClick += ViewportClick;
+   Project = project;
+}
+\end{lstlisting}
+\caption{ToolController metoden}\label{ToolControllerCode}
+\end{figure}
+
+På figur \ref{ToolControllerCode} ses constructoren til \texttt{ToolController}, der bliver kaldt via GUIMain som sender alle værktøjerne, nuværende viewport samt projekt. Herved har \texttt{ToolController} alle elementerne til f.eks at tilføje en \texttt{Node}.
+
+\begin{figure}[H]
+\begin{lstlisting}
+private void ViewportClick(object sender, MouseEventArgs args)
+{
+  if (ActiveTool != null && args.Button == MouseButtons.Left)
+  {
+    switch (ActiveTool.Name)
+    {
+      ...
+      case "ToolAddNode": Add(typeof(Node)); break;
+      case "ToolLinkLight": LinkLight(); break;
+      case "ToolAddDestination": Add(typeof(Destination)); break;
+      case "ToolAddRoad": AddRoad(Partitions.Shared); break;
+      case "ToolPrimaryRoad": AddRoad(Partitions.Primary); break;
+      case "ToolEdit": Edit(); break;
+      ...
+    }
+  }
+}
+\end{lstlisting}
+\caption{ViewportClick metoden}\label{ViewportClickCode}
+\end{figure}
+
+Derudover bliver click eventen på \texttt{Input} lageret af \texttt{Viewporten} i constructoren sat til at blive håndteret af metoden \texttt{ViewportClick}. \texttt{ViewportClick} der kan ses på figur \ref{ViewportClickCode} tjekker hvilket værktøj der er aktivt og kalder den tilsvarende metode.
+
+\begin{figure}[H]
+\begin{lstlisting}
+public void ToggleTool(ToolStripButton clickedTool)
+{
+  if (clickedTool.Checked)
+  {
+    clickedTool.Checked = false;
+    ActiveTool = null;
+  }
+  else
+  {
+    foreach (ToolStripButton tool in 
+      Tools.OfType<ToolStripButton>())
+      tool.Checked = false;
+    clickedTool.Checked = true;
+    ActiveTool = clickedTool;
+  }
+  StopConnection();
+}
+\end{lstlisting}
+\caption{ToggleTool metoden}\label{ToggleToolCode}
+\end{figure}
+
+For at sikre at der ikke er “valgt” flere værktøjer på samme tid, kaldes metoden på figur \ref{ToggleToolCode} \texttt{ToogleTool}, hvergang et værktøj bliver trykket på. Metoden fravælger alle \texttt{ToolStripButtons} i værktøjsListen, hvorefter det nuværende værktøj bliver sat til \texttt{true} (active). Derefter bliver det valgte værktøj sat over i \texttt{ActiveTool} variablen. Til sidst bliver \texttt{StopConnection()} kaldt, som er en metode til at nulstille værktøjets handling, så hvis man f.eks. har valgt \texttt{AddRoad} så vil \texttt{StopConnection()} sikre at det næste klik på gitteret vil tilføje vejens startpunkt og ikke slutpunkt.
+
+\vspace{5mm}
+
+Klassen indeholder som sagt alle værktøjerne og derfor indeholder klassen også en del metoder, derfor vil kun de mest væsentlige værktøjer blive beskrevet.
+
+\begin{figure}[H]
+\begin{lstlisting}
+private void Add(Type type)
+{
+  object obj = Viewport.GetObjByGridPos();
+  if (obj == null)
+  {
+    if (type == typeof(Node))
+    {
+      Project.Nodes.Add(new Node(Viewport.GridPos));
+      Viewport.Nodes.Refresh();
+    }
+    else if (type == typeof(Destination))
+    {
+      Project.Destinations.Add(new Destination(Viewport.GridPos,  
+                                   SelectedDestinationType));
+      Viewport.Entities.Refresh();
+    }
+    else if (type == typeof(LightController))
+    {
+      Project.LightControllers.Add(new 
+        LightController(Viewport.GridPos));
+      Viewport.Entities.Refresh();
+    }
+  }
+  else if (obj is Node)
+  {
+    ((Node)obj).Type = NodeTypes.None;
+    Viewport.Nodes.Refresh();
+  }
+}
+\end{lstlisting}
+\caption{Add metoden}\label{AddCode}
+\end{figure}
+
+\texttt{Add} metoden der ses på figur \ref{AddCode} benyttes til flere værktøjer som f.eks. at tilføje en \texttt{Node}, \texttt{LightController} eller \texttt{Destination}. Udfra typen som bliver sendt fra metodekaldet bestemmes hvilket objekt som skal tilføjes. Hvis den nuværende position i gitteret er en \texttt{Node} bliver \texttt{NodeTypen} sat til \texttt{None} og gitteret vil blive opdateret med \texttt{Refresh()}.
+
+\begin{figure}[H]
+\begin{lstlisting}
+private void SetNodeType(NodeTypes type)
+{
+  object obj = Viewport.GetObjByGridPos();
+  if (obj is Node)
+  {
+    if (type == NodeTypes.Light && 
+        ((Node)obj).Type == NodeTypes.Light)
+      ((Node)obj).Green = !((Node)obj).Green;
+    else
+      ((Node)obj).Type = type;
+    Viewport.Nodes.Refresh();
+  }
+}
+\end{lstlisting}
+\caption{SetNodeType metoden}\label{SetNodeTypeCode}
+\end{figure}
+
+\texttt{SetNodeType()} som er vist på \ref{SetNodeTypeCode}, benyttes til at give den enkelte \texttt{Node} en type som f.eks. \texttt{Light}, \texttt{Yield}, \texttt{Home}, \texttt{Parking} osv. Metoden modtager en \texttt{NodeType} som bliver bestemt fra \texttt{ViewportClick()}. Hvorefter den checker om objektet på den nuværende position i gitteret er en \texttt{Node}. Hvis det er en \texttt{Node} vil \texttt{NodeTypen} blive sat til den modtaget type. Til sidst vil gitteret blive opdateret med \texttt{Refresh()}.
+
+\begin{figure}[H]
+\begin{lstlisting}
+private void AddRoad(Partitions partition)
+{
+ object obj = Viewport.GetObjByGridPos();
+ if (obj != null && obj is Node)
+ {
+    if (_firstNodeConnection)
+    {
+      _firstNode = (Node)obj;
+      _firstNodeConnection = false;
+      Viewport.HoverConnection = ((Node)obj).Position;
+    }
+    else
+    {
+      _firstNode.Roads.Add(new Road(_firstNode, (Node)obj, 
+                               SelectedRoadType, partition));
+      if (Control.ModifierKeys == Keys.Shift)
+      {
+        _firstNode = (Node)obj;
+        Viewport.HoverConnection = ((Node)obj).Position;
+      }
+      else
+      {
+        _firstNodeConnection = true;
+        Viewport.HoverConnection = new Point(-1, -1);
+      }
+      Viewport.Connections.Refresh();
+    }
+  }
+}
+\end{lstlisting}
+\caption{AddRoad metoden}\label{AddRoadCode}
+\end{figure}
+
+\texttt{AddRoad()} som kan ses på figur \ref{AddRoadCode}, bruges til at tilføje en vej mellem 2 noder, derfor checkes der først om object på den nuværrende positon i gitteret er en node. Hvis det er en node vil der blive checket om \texttt{\_firstNodeConnection} er sket, altså om startpunktet til vejen er blevet valgt. Hvis \texttt{\_firstNodeConnection} er \texttt{true}, betyder det at det ikke er sket, og noden på den nuværrendeposition i gitteret vil blive sat til \texttt{\_firstNode}, og \texttt{\_firstNodeConnection} vil blive \texttt{false}. Det betyder at næste gang brugeren trykker på en node i gitteret vil programmet vide at \texttt{\_firstNode} er blevet sat, og derfor tilføjes der en vej mellem \texttt{\_firstNode} og noden på den nuværrende position i gitteret.
+
+\vspace{5mm}
+
+Hvis brugern holder "Shift" nede imens, vil programmet sætte \texttt{\_firstNode} til den nuværrende \texttt{Node} efter at der er blevet tilføjet en vej, da den \texttt{Node} vil være startpunktet for den næste vej. Det er en implementation som gør det nemmere og hurtigere for brugeren at tilføje veje. 
+
+%//////////////////////////////// FileHandler ////////////////////////////////%
+\subsection{FileHandler}
+\texttt{FileHandleren} er sat op så at man har mulighed for at lave et ny projekt, åbne og gemme projektet. Der er blevet dannet tre metoder som håndtere de tre valg for brugeren, for at gøre det mest læsevenligt for dem der skal læse koden. \texttt{FileHandler} gør sig brug af \texttt{BinaryFormatter} for at gemme og åbne de forskellige objekter i binær form. Vi startede ud med at bruge \texttt{XMLSerializer}, da vi lavede \texttt{FileHandleren}. Vi stødte ind på nogle problemer da \texttt{XMLSerializer} skulle læse to objekter som har en reference til hinanden, og det skabte en circular reference som var årsagen til vores program crashede på daværende tidspunkt. Ved denne fejl skiftede vi til \texttt{BinaryFormatter}, da den er i stand til at håndtere en circular reference.
+
+\vspace{5mm}
+
+Metoden \texttt{NewProject} er meget simpel, den åbner et vindue med en \texttt{TextBox}, der beder om et navn til det nye projekt. Hvis et navn blev indtastet vil der så blive oprettet et nyt projekt med det navn, og det vil erstatte \texttt{CurrentProject} i \texttt{GUIMain}.
+
+\begin{figure}[H]
+\begin{lstlisting}
+static public Project OpenProject()
+{
+  FileStream file = null;
+  try
+  {
+    OpenFileDialog fileOpen = new OpenFileDialog();
+    fileOpen.Filter = "TSP Files|*.tsp";
+    if (fileOpen.ShowDialog() == DialogResult.OK)
+    {
+      BinaryFormatter formatter = new BinaryFormatter();
+      file = new FileStream(fileOpen.FileName, FileMode.Open);
+      return (Project)formatter.Deserialize(file);
+    }
+    return null;
+  }
+  catch (Exception e)
+  {
+    MessageBox.Show("Error: " + e.Message);
+    return null;
+  }
+  finally
+  {
+    if (file != null)
+    file.Close();
+  }
+}
+\end{lstlisting}
+\caption{OpenProject metoden}\label{OpenProjectCode}
+\end{figure}
+
+Metoden \texttt{OpenProject}, der vises på figur \ref{OpenProjectCode}, kan åbne et eksisterende projekt, når brugeren trykker på Open Project i menuen. Denne metode benytter sig af \texttt{OpenFileDialog}, som ligger under \texttt{System.Windows.Forms}. Koden benytter sig af try-catch-finally, hvor den går ind i try fasen og tjekker om der om brugeren har valgt en TSP fil (traffic simulation project), hvis TSP filen er valgt så vil metoden deserialisere og åbne det gemte projekt op. Sidst vil finally lukke filen, så andre kan komme til.
+
+\begin{figure}[H]
+\begin{lstlisting}
+static public void SaveProject(Project project)
+{ 
+  FileStream file = null;
+  try
+  {
+    SaveFileDialog fileSave = new SaveFileDialog();
+    fileSave.AddExtension = true;
+    fileSave.DefaultExt = "tsp";
+    fileSave.Filter = "TSP Files|*.tsp";
+    if (fileSave.ShowDialog() == DialogResult.OK)
+    {
+      BinaryFormatter formatter = new BinaryFormatter();
+      file = new FileStream(fileSave.FileName, FileMode.Create);
+      formatter.Serialize(file, project);
+    }
+  }
+  catch (Exception e)
+  {
+    MessageBox.Show("Error: " + e.Message);
+  }
+  finally
+  {
+    if (file != null)
+      file.Close();
+  }
+}
+\end{lstlisting}
+\caption{SaveProject metoden}\label{SaveProjectCode}
+\end{figure}
+
+På figur \ref{SaveProjectCode} ses metoden til at gemme et projekt. Igen benytter programmet af en try-catch-finally, hvor programmet i try fasen laver en ny instans af \texttt{SaveFileDialog}, på den måde kan programmet gemme et projekt som man har arbejdet på. Programmet er sat op at den skal gemme projektet som tsp fil (traffic simulation project). Hvis det ikke lykkes, så vil den kaste en exception med fejlen der er sket. Finally fasen vil den så frigøre resourcerne igen.
+
+\vspace{5mm}
+
+\textbf{MANGLER: Noget om åbning og gemning af SimulationData}
+
+%//////////////////////////////// Simulation ////////////////////////////////%
+\subsection{Simulation}

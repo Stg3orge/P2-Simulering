@@ -1,0 +1,71 @@
+\section{Elementerne i Vejnettet}\label{ElementerVejnettet}
+\subsection{Node}
+I vores program anvender vi et grid hvorpå brugeren indsætter noder der udgør de forskellige vejnet der bliver oprettet. Disse noder kan være forskellige typer. Dette er gjort således at processen i at oprette vejnet er relativt simple. Et simpelt eksempel ville være at brugeren indsætter to noder, den første node hvor brugeren ønsker køretøjerne skal køre fra, og en node med typen \texttt{Parking} tæt på køretøjernes \texttt{Destination}. Således kan et meget simpelt vejnet opstille. Men det er også muligt for brugeren at opstille meget mere komplekse vejnet med lyskryds.
+
+\subsection{Destination}
+\texttt{Destination} klassen i vores program er et punkt hvorpå køretøjerne vil søge henimod. Dette er ikke det punkt hvor køretøjerne stopper, til dette formål anvendes der en \texttt{Node} som er angivet til at være til parkering i nærheden af en \texttt{Destination}. \texttt{Destination} klassen består af en instans af \texttt{DestionationType} klassen, dette er, ligesom med \texttt{Vehicle} og \texttt{Road} klasserne, en klasse der bruges til at brugerdefinere forskellige typer af destinations med forskellige parametre.
+
+\subsection{LightController}
+\texttt{LightController} klassen er den del af programmet hvori brugeren kan indstille på deres trafiklys noders opførsel.
+
+\begin{figure}[H]
+\begin{lstlisting}
+public void Update(int ms)
+{
+  _counter += ms;
+  if (_counter > _current)
+  {
+    if (_current == FirstTime)
+      _current = SecondTime;
+    else
+      _current = FirstTime;
+     ToggleLights();
+    _counter = 0;
+  }
+}
+private void ToggleLights()
+{
+  foreach (Node light in Lights)
+  light.Green = !light.Green;
+}
+\end{lstlisting}
+\caption{LightController klassen}\label{LightControllerKlassen}
+\end{figure}
+
+\texttt{LightControllerens} funktioner er at skrifte trafiklys fra rød til grøn og tilbage igen. Dette er muligt at gøre ved to seperate intervaller sådan at trafiklysene skifter efter forskellige mængder tid. Dette valg blev truffet efter det blev iagtaget at denne samme opførsel ses også på trafikkryds rundt omkring i Aalborg. Dette er idelt hvis brugeren prøver at simulerer et trafikryds hvor den ene vej er mere anvendt en den anden, f.eks. En vej der leder ind i byen fra en motorvej der krydser med en vej der leder ind til mindre boligkompleks.
+
+\subsection{Road}
+Road klassen indeholder de variabler der skal anvendes for at kunne beskrive en vej i programmet.
+
+\begin{figure}[H]
+\begin{lstlisting}
+[Serializable]
+public class Road
+{
+  public Node From { get; set; }
+  public Node To { get; set; }
+  public RoadType Type { get; set; }
+  public Partitions Partition { get; set; }
+  public List<Vehicle> Vehicles { get; set; }
+  public double Length
+  {
+    get { return MathExtension.Distance(From.Position, 
+                                        To.Position); }
+  }   
+  public Road(Node from, Node to, RoadType type, 
+              Partitions partition)
+  {
+    From = from;
+    To = to;
+    Type = type;
+    Partition = partition;
+    Vehicles = new List<Vehicle>();
+  }
+}
+\end{lstlisting}
+\caption{Road klassen}\label{RoadKlassen}
+\end{figure}
+
+Road klassen tager imod en instans af \texttt{RoadType} som brugeren selv har defineret via \texttt{RoadType} klassen. På denne måde har brugeren kontrol over hvilken type vej der tale om og hvordan vejen opfører sig i programmet, f.eks. om det er en motorvej. Vejene er programmeret således at brugeren selv kan opstille forskellige kryds, rundkørsler eller andre avanceret afkørsels baner. \texttt{RoadType} er en seperat klasse hvori brugeren give et \texttt{Name} og en \texttt{Speed}, på denne måde definere brugeren selv hvilke typer veje der optræder i deres simulation.
+
+\subsection{Typer}
