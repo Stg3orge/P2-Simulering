@@ -30,6 +30,8 @@ namespace A319TS
             Project project = FileHandler.OpenProject();
             if (project != null)
                 UpdateProject(project);
+            CurrentProject.Settings.PrimaryCarCount = 2000;
+            CurrentProject.Settings.SecondaryCarCount = 2000;
         }
         private void MenuFileSaveClick(object sender, EventArgs args)
         {
