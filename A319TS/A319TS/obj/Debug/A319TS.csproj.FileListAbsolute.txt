@@ -22,6 +22,7 @@ C:\Users\Fisker\Documents\GitHub\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.pd
 C:\Users\Fisker\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csprojResolveAssemblyReference.cache
 C:\Users\Fisker\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.Resources.resources
 C:\Users\Fisker\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Programs\Githubp2\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.exe.config
 C:\Programs\Githubp2\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.exe
 C:\Programs\Githubp2\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.pdb
@@ -30,3 +31,8 @@ C:\Programs\Githubp2\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.pdb
 C:\Programs\Githubp2\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csprojResolveAssemblyReference.cache
 C:\Programs\Githubp2\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.Resources.resources
 C:\Programs\Githubp2\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csproj.GenerateResource.Cache
+=======
+C:\Users\Niclas\Desktop\A319GitHub\Simulering-P2\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.exe.config
+C:\Users\Niclas\Desktop\A319GitHub\Simulering-P2\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.exe
+C:\Users\Niclas\Desktop\A319GitHub\Simulering-P2\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.pdb
+>>>>>>> 553ff43e148cb5a26b78f5ccc200f82b51979def

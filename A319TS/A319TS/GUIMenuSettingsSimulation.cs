@@ -8,6 +8,7 @@ namespace A319TS
     class GUIMenuSettingsSimulation : Form
     {
         List<Label> labels = new List<Label>();
+        private Project Project;
         private SimulationSettings simulationsettings;
         private GroupBox SimulationGroup;
         private GroupBox Shared;
@@ -43,6 +44,7 @@ namespace A319TS
 
         public GUIMenuSettingsSimulation(Project project)
         {
+            Project = project;
             simulationsettings = project.Settings;
             Load += ReadSettings;
             Setup();
@@ -308,7 +310,7 @@ namespace A319TS
         //Methods
         private void SetDefaultClick(object sender, EventArgs args)
         {
-            simulationsettings = new SimulationSettings();
+            Project.Settings = new SimulationSettings();
             MessageBox.Show("Default Values are set.");
         }
         private void SaveClick(object sender, EventArgs args)
