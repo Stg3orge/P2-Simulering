@@ -1,0 +1,42 @@
+\section{Project}
+
+Project klassen har til formål at sætte de forskellige klasser op i lister, som skal bruges til , mens Project (string name) samtidig sætter default values når man laver en ny RoadType, DestinationType eller VehicleType i programmet. Project Clones gør det muligt at gemme det man har lavet i en ny fil, som så kan bruges senere såfremt det skal sættes ind andre steder i programmet ved eksempelvis at copy-paste det. 
+
+\begin{figure}[H]
+\begin{lstlisting} namespace A319TS
+{ 
+    [Serializable]
+    public class Project : ICloneable
+    {
+        public string Name;
+        public List<Node> Nodes = new List<Node>();
+        public List<Destination> Destinations = new List<Destination>();
+        public List<LightController> LightControllers = new List<LightController>();
+        public List<RoadType> RoadTypes = new List<RoadType>();
+        public List<DestinationType> DestinationTypes = new List<DestinationType>();
+        public List<VehicleType> VehicleTypes = new List<VehicleType>();
+        public List<SimulationData> Simulations = new List<SimulationData>();
+        public SimulationSettings Settings = new SimulationSettings();
+        
+        public Project(string name)
+        {
+            Name = name;
+            RoadTypes.Add(new RoadType("Default", 50));
+            DestinationTypes.Add(new DestinationType("Default", Color.LightSlateGray) { Distribution = 100 });
+            VehicleTypes.Add(new VehicleType("Default", 130, 5, 5, Color.LightSlateGray) { Distribution = 100 });
+        }
+
+        public object Clone()
+        {
+            MemoryStream memory = new MemoryStream();
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(memory, this);
+            memory.Position = 0;
+            return formatter.Deserialize(memory);
+        }
+    }
+}
+\end{lstlisting}
+\caption{Project.cs}\label{project.cs}
+\end{figure}
+
