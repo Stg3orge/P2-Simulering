@@ -1,1 +1,15 @@
 \chapter{Perspektivering}\label{Perspektivering}
+Vi har igennem programmet benyttet os af Window Forms for at kunne fremstille et GUI, som brugeren kan benytte sig af. Problemet er bare at når programmet skal tegne simuleringen, og når glitteret skal tegnes, og dette bliver gjort hver gang noget rykker sig på glitteret. Dette bliver gjort på cpu'en, hvilket bruger meget kraft og ressourcer. Istedet kunne man taget Windows Presentation Foundation (WPF) i brug, da WPF benytter sig af GPU'en når der skal tegnes, og så skal processeren kun tænke over det input der kommer fra simuleringen. Dette vil have en positiv effekt på programmet, da programmet ikke vil kræve for mange ressourcer for at lave en simulering.
+
+\vspace{5mm}
+
+Vores program ville være bedre hvis vi benyttede bedre multithreading, da vores program kører på to tråde ved simuleringsdelen. Vi bruger kun 50 procent af en CPU på 4 kerner og 25 procent på en med 8 kerner. Hvis vi havde håndterert at kunne benytte 100 procent af en cpu, ved f.eks. bedre multithreading såsom et variabelt antal tråde der var igang, så vi fuldt ud benyttede af de ressourcer CPU'en har.
+
+\vspace{5mm}
+
+En anden måde at kigge på det kunne også være at man kunne optimere processen bag simulering, ved at sætte GPU'en til at beregne simulering beregningerne. Vores gruppe har benyttet CPU'en til at lave beregningerne, men vi kunne have benyttet GPU'en for at gøre processen hurtigere.
+
+
+\vspace{5mm}
+
+Når vores program kører i simulationen, så bilerne som der er i simulationen kender ikke noget til de modkørende. Det er grunden til at bilerne ikke har muligheden for at overhale hinanden. Den måde vi har sat vejene op, er ved at tegne to veje lige ovenpå hinanden, bare i modsatte retninger. vejene er heller ikke sammensat, så der er plads til at kunne overhale. Så hvis der er en bil kørende bag en der kører langsommere, så vil han sætte farten ned og blive bag ved bilen.
