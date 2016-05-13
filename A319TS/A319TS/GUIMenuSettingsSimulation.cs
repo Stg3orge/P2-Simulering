@@ -49,6 +49,7 @@ namespace A319TS
             labels.AddRange(new Label[] { StepSizeLabel, VehicleSpaceLabel, RangeLabel, VehicleCountLabel,
                 InboundLabel, OutboundLabel, TimeSpreadLabel, ToDestTimeLabel, ToHomeTimeLabel, Primary, Secondary });
         }
+
         private void ReadSettings(object sender, EventArgs args)
         {
             StepSize.SelectedItem = simulationsettings.StepSize;
@@ -404,6 +405,7 @@ namespace A319TS
             {
                 ToDestTimeLabel.ForeColor = Color.Red;
             }
+
             if (PrimaryVehicleCount.Value > 0 && SecondaryVehicleCount.Value > 0)
             {
                 if ((SecondaryVehicleCount.Value > SecondaryOutBound.Value) && (PrimaryVehicleCount.Value > PrimaryOutBound.Value)
@@ -440,6 +442,7 @@ namespace A319TS
             {
                 InboundLabel.ForeColor = Color.Red;
             }
+
             bool succes = true;
             foreach (Label label in labels)
             {
