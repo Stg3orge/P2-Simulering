@@ -102,5 +102,85 @@ SimulationSettings sætter defaultværdierne til de forskellige variabler, og gi
 \end{figure}
 
 \subsection{Data}
+Dataen fra simuleringen i programmet gives til brugeren igennem to klasser. SimulationData, er en klasse som modtager to lister fra VehicleData og derudover tager den imod information fra Project og Datetime. Metoden SimulationData læser disse data ind til de forskelige typer i klassen. Der retuneres dernæst Project.name og en DateTime type.
+
+\begin{figure}[H]
+\begin{lstlisting}
+public class SimulationData
+{
+     public Project Project { get; private set; }
+     public List<VehicleData> PrimaryData { get; private set; }
+     public List<VehicleData> SecondaryData { get; private set; }
+     public DateTime Date { get; private set; }
+     public string Filename
+     {
+        get { return Project.Name + "_" + Date.ToString("dd") + "-" + Date.ToString("MM") + "-" + 
+              Date.ToString("yy") + "_" + Date.ToString("HH") + Date.ToString("mm") + ".sim"; }
+     }
+        
+     public SimulationData(Project project, List<VehicleData> primary, List<VehicleData> secondary)
+     {
+        Project = project;
+        PrimaryData = primary;
+        SecondaryData = secondary;
+        Date = DateTime.Now;
+     }
+
+     public override string ToString()
+     {
+       return Project.Name + " " + Date;
+     }
+}
+\end{lstlisting}
+\caption{SimulationData Klasse} \label{SimulatonDataClass}
+\end{figure}
+Som nævnt over figuren så bliver der anvendt en klasse til SimulationData. VehicleData er som pointeret data der bliver lagt over i to liste, PrimaryData og SecondaryData. VehicleData består ikke af nogle større funktioner og derfor vil der ikke være nogle dybbere forklaring dertil. Den består af nogle typer der læser data fra PointD klassen og VehicleType.
 \subsection{MathExtension}
+MathExtension er en klasse der er lavet for at håndtere udregningerne fra Point til Point, fra PointD til PointD samt en kort kovertering af kmh til mms. Der gøres bruge af klasser fra math library. Disse udregninger anvendes bl.a i Vector2D klassen.
 \subsection{Vector2D}
+Vector2D klassen anvendes til at opsætte de metoder som gør det muligt at bl.a. vehicles kan udregne hvor hen de skal bevæge sig i simuleringen. Metoderne er for det meste til at indlæse koordinter på gridded i simuleringen til anvendelse når simuleringen køre.
+\begin{figure}[H]
+\begin{lstlisting}
+class Vector2D
+{
+   public double X { get; set; }
+   public double Y { get; set; }
+   public double Length
+   {
+      get { return MathExtension.Distance(new PointD(0, 0), new PointD(X, Y)); }
+   }
+
+   public Vector2D()
+   {
+      X = 0;
+      Y = 0;
+   }
+   public Vector2D(double x, double y)
+   {
+      X = x;
+      Y = y;
+   }
+
+   public void Scale(double scalar)
+   {
+      X *= scalar;
+      Y *= scalar;
+   }
+   public void ToUnit()
+   {
+      double magnitude = Length;
+      X /= magnitude;
+      Y /= magnitude;
+   }
+      public static Vector2D FromRoad(Road road)
+      {
+         Vector2D vector = new Vector2D();
+         vector.X = road.To.Position.X - road.From.Position.X;
+         vector.Y = road.To.Position.Y - road.From.Position.Y;
+         return vector;
+      }
+   }
+}
+\end{lstlisting}
+\caption{MathExtension Klasse}\label{MathExtensionClass}
+\end{figure}
