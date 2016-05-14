@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.15)  14 MAY 2016 10:20
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.3)  14 MAY 2016 13:47
->>>>>>> 74f8ab4e820ec307bf2b303c464e39b94a5a7912
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.15)  14 MAY 2016 13:58
 entering extended mode
 **Main
 (Main.tex
@@ -1363,17 +1359,7 @@ File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 ) (setup/variables.tex
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-<<<<<<< HEAD
-)) (Main.aux
-
-LaTeX Warning: Label `fig:grafteori' multiply defined.
-
-)
-=======
 )) (Main.aux)
-\openout1 = `Main.aux'.
-
->>>>>>> 74f8ab4e820ec307bf2b303c464e39b94a5a7912
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
@@ -1389,12 +1375,8 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 7.
-<<<<<<< HEAD
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
-=======
 
-("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
->>>>>>> 74f8ab4e820ec307bf2b303c464e39b94a5a7912
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -1615,7 +1597,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-<Pictures/Metode/metodebillede.jpg, id=250, 733.74126pt x 519.9425pt>
+<Pictures/Metode/metodebillede.jpg, id=252, 733.74126pt x 519.9425pt>
 File: Pictures/Metode/metodebillede.jpg Graphic file (type jpg)
 
 <use Pictures/Metode/metodebillede.jpg>
@@ -1661,7 +1643,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 
-<Pictures/Teknologianalyse/vissimfunker.jpg, id=290, 1926.19624pt x 747.79375pt
+<Pictures/Teknologianalyse/vissimfunker.jpg, id=292, 1926.19624pt x 747.79375pt
 >
 File: Pictures/Teknologianalyse/vissimfunker.jpg Graphic file (type jpg)
  <use Pictures/Teknologianalyse/vissimfunker.jpg>
@@ -1756,31 +1738,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 9.
  [25
 
-<<<<<<< HEAD
 ])
 (sections/Teori/Grafteori.tex
-<Pictures/Teoriafsnit/Figurfiler/Grafteori_graf.png, id=368, 1163.34625pt x 451
-.6875pt>
-File: Pictures/Teoriafsnit/Figurfiler/Grafteori_graf.png Graphic file (type png
-)
- <use Pictures/Teoriafsnit/Figurfiler/Grafteori_graf.png>
-Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grafteori_graf.png use
-d on input line 13.
-(pdftex.def)             Requested size: 413.99895pt x 160.73958pt.
-
-Overfull \hbox (83.72122pt too wide) in paragraph at lines 23--24
-\T1/lmr/m/n/10 terne []\T1/lmtt/m/n/10 "{A,B} , {A,C} , {B,C} , {B,D} , {C,E} ,
- {C,D} , {D,E} , {D,Z} , {E,Z} \in E" 
-=======
-[25
-
-]) (sections/Teori/Grafteori.tex
 
 LaTeX Warning: Reference `weighted-directed-graph' on page 26 undefined on inpu
 t line 9.
 
 
-<Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG, id=375, 1123.1962
+<Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG, id=377, 1123.1962
 4pt x 1336.995pt>
 File: Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG Graphic file 
 (type png)
@@ -1799,7 +1764,6 @@ Overfull \hbox (9.85329pt too wide) in paragraph at lines 22--23
 Overfull \hbox (149.97194pt too wide) in paragraph at lines 43--45
 [][]\T1/lmtt/m/n/10 E = { {A,B} , {A,F} , {B,D} , {C,A} , {C,B} , {D,C} , {D,E}
  , [] {E,D} , {E,F}, {F,C}, {F,E} } 
->>>>>>> 74f8ab4e820ec307bf2b303c464e39b94a5a7912
  []
 
 
@@ -1808,7 +1772,7 @@ undefined on input line 48.
 
 
 <Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.PNG, 
-id=394, 199.947pt x 154.77824pt>
+id=396, 199.947pt x 154.77824pt>
 File: Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.
 PNG Graphic file (type png)
 
@@ -1818,7 +1782,7 @@ Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weigh
 ted_directed_graph.PNG used on input line 55.
 (pdftex.def)             Requested size: 172.5pt x 133.53651pt.
 ) (sections/Teori/Dijkstra.tex
-<Pictures/Teoriafsnit/Figurfiler/Graf.png, id=395, 416.30531pt x 163.3603pt>
+<Pictures/Teoriafsnit/Figurfiler/Graf.png, id=397, 416.30531pt x 163.3603pt>
 File: Pictures/Teoriafsnit/Figurfiler/Graf.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Graf.png>
@@ -1827,7 +1791,7 @@ Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Graf.png used on input
 (pdftex.def)             Requested size: 155.24895pt x 60.92094pt.
 
 
-Package caption Warning: \label without proper reference on input line 5.
+Package caption Warning: \label without proper \caption on input line 5.
 See the caption package documentation for explanation.
 
 
@@ -1839,43 +1803,17 @@ Underfull \hbox (badness 1038) in paragraph at lines 9--10
 \T1/lmr/m/n/10 er dette ek-sem-pelvis ruten mellem et
  []
 
-<<<<<<< HEAD
-[26 <./Pictures/Teoriafsnit/Figurfiler/Grafteori_graf.png>]
-<Pictures/Teoriafsnit/Figurfiler/Grafteori_matrix.png, id=386, 209.583pt x 151.
-767pt>
-File: Pictures/Teoriafsnit/Figurfiler/Grafteori_matrix.png Graphic file (type p
-ng)
- <use Pictures/Teoriafsnit/Figurfiler/Grafteori_matrix.png>
-Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grafteori_matrix.png u
-sed on input line 41.
-(pdftex.def)             Requested size: 413.99895pt x 299.81873pt.
-)
-(sections/Teori/Dijkstra.tex [27 <./Pictures/Teoriafsnit/Figurfiler/Grafteori_m
-atrix.png>]
-<Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png, id=401, 784.43062pt x 307.1
-475pt>
-File: Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png Graphic file (type png)
-
- <use Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png>
-Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png used
- on input line 12.
-(pdftex.def)             Requested size: 413.99895pt x 162.10782pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 22.
- [28 <./Pictures/Teoriafsnit/Figurfiler/dijkstrasgraf.png>]
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-=======
 [27 <./Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph
 .PNG> <./Pictures/Teoriafsnit/Figurfiler/Graf.png>]
 
-Package caption Warning: \label without proper reference on input line 35.
+Package caption Warning: \label without proper \caption on input line 35.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `dijktabel' on page 28 undefined on input line 20.
 
 ) (sections/Teori/AStjerne.tex [28]
-<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=424, 845.559pt x 598.235pt>
+<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=426, 845.559pt x 598.235pt>
 File: Pictures/Teoriafsnit/Figurfiler/Grid2.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid2.png>
@@ -1883,29 +1821,13 @@ Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid2.png used on inpu
 t line 16.
 (pdftex.def)             Requested size: 413.99895pt x 292.9095pt.
  [29]
-("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.
-sty"
->>>>>>> 74f8ab4e820ec307bf2b303c464e39b94a5a7912
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-<<<<<<< HEAD
-))
-(sections/Teori/AStjerne.tex [29]
-<Pictures/Teoriafsnit/Figurfiler/Grid2.png, id=432, 845.559pt x 598.235pt>
-File: Pictures/Teoriafsnit/Figurfiler/Grid2.png Graphic file (type png)
-
-<use Pictures/Teoriafsnit/Figurfiler/Grid2.png>
-Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/Grid2.png used on inpu
-t line 16.
-(pdftex.def)             Requested size: 413.99895pt x 292.9095pt.
- [30 <./Pictures/Teoriafsnit/Figurfiler/Grid2.png>]
-<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=445, 844.756pt x 597.432pt>
-=======
 ) [30 <./Pictures/Teoriafsnit/Figurfiler/Grid2.png>]
-<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=453, 844.756pt x 597.432pt>
->>>>>>> 74f8ab4e820ec307bf2b303c464e39b94a5a7912
+<Pictures/Teoriafsnit/Figurfiler/Grid3.png, id=455, 844.756pt x 597.432pt>
 File: Pictures/Teoriafsnit/Figurfiler/Grid3.png Graphic file (type png)
 
 <use Pictures/Teoriafsnit/Figurfiler/Grid3.png>
@@ -1948,7 +1870,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 (sections/Implementation/Klassediagrammer.tex
-<Pictures/Klassediagram/VejElementer.png, id=498, 823.57687pt x 639.13782pt>
+<Pictures/Klassediagram/VejElementer.png, id=500, 823.57687pt x 639.13782pt>
 File: Pictures/Klassediagram/VejElementer.png Graphic file (type png)
 
 <use Pictures/Klassediagram/VejElementer.png>
@@ -1958,7 +1880,7 @@ line 10.
  [38
 
 ]
-<Pictures/Klassediagram/Diverse.png, id=504, 740.7675pt x 377.91188pt>
+<Pictures/Klassediagram/Diverse.png, id=506, 740.7675pt x 377.91188pt>
 File: Pictures/Klassediagram/Diverse.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Diverse.png>
@@ -1966,7 +1888,7 @@ Package pdftex.def Info: Pictures/Klassediagram/Diverse.png used on input line
 19.
 (pdftex.def)             Requested size: 483.0078pt x 246.4125pt.
  [39 <./Pictures/Klassediagram/VejElementer.png>]
-<Pictures/Klassediagram/Viewport.png, id=511, 638.385pt x 565.36218pt>
+<Pictures/Klassediagram/Viewport.png, id=513, 638.385pt x 565.36218pt>
 File: Pictures/Klassediagram/Viewport.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Viewport.png>
@@ -1979,7 +1901,7 @@ Overfull \hbox (25.11923pt too wide) in paragraph at lines 33--34
 n redi-geres i ve-jnet-tet. Klassen \T1/lmtt/m/n/10 SimulationViewport
  []
 
-<Pictures/Klassediagram/Pathfinder.png, id=518, 617.30624pt x 312.41719pt>
+<Pictures/Klassediagram/Pathfinder.png, id=520, 617.30624pt x 312.41719pt>
 File: Pictures/Klassediagram/Pathfinder.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Pathfinder.png>
@@ -1987,7 +1909,7 @@ Package pdftex.def Info: Pictures/Klassediagram/Pathfinder.png used on input li
 ne 37.
 (pdftex.def)             Requested size: 483.01344pt x 244.45192pt.
  [41 <./Pictures/Klassediagram/Viewport.png>]
-<Pictures/Klassediagram/Funktionalitet.png, id=525, 604.50844pt x 527.72156pt>
+<Pictures/Klassediagram/Funktionalitet.png, id=527, 604.50844pt x 527.72156pt>
 File: Pictures/Klassediagram/Funktionalitet.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Funktionalitet.png>
@@ -1996,7 +1918,7 @@ t line 46.
 (pdftex.def)             Requested size: 482.99861pt x 421.64636pt.
  [42 <./Pictures/Klassediagram/Pathfinder.png>]) (sections/Implementation/Hoved
 Brugerfladen.tex
-<Pictures/Implementation/program.png, id=533, 516.42938pt x 258.21469pt>
+<Pictures/Implementation/program.png, id=535, 516.42938pt x 258.21469pt>
 File: Pictures/Implementation/program.png Graphic file (type png)
 
 <use Pictures/Implementation/program.png>
@@ -2012,33 +1934,34 @@ m/n/10 .
 
 ) (sections/Implementation/ElementerVejnettet.tex [44 <./Pictures/Implementatio
 n/program.png>] [45]) (sections/Implementation/Diverse.tex [46] [47] [48])
-(sections/Implementation/Viewport.tex [49] [50])
-(sections/Implementation/Pathfinder.tex
+(sections/Implementation/Viewport.tex [49] [50] [51]
+Overfull \hbox (16.43373pt too wide) in paragraph at lines 72--73
+\T1/lmr/m/n/10 I [][]10.16[][] bliver der in-stan-sieret et nyt lag \T1/lmtt/m/
+n/10 Vehicles \T1/lmr/m/n/10 og en vari-abel for \T1/lmtt/m/n/10 SimulationData
+
+ []
+
+) (sections/Implementation/Pathfinder.tex [52]
 Overfull \hbox (19.357pt too wide) in paragraph at lines 2--3
 \T1/lmr/m/n/10 metoder som befinder sig i \T1/lmtt/m/n/10 Pathfinder \T1/lmr/m/
 n/10 klassen, altså \T1/lmtt/m/n/10 FindPath\T1/lmr/m/n/10 , \T1/lmtt/m/n/10 Es
 timateNeighbors
  []
 
-[51] [52] [53]) (sections/Implementation/Funktionelle.tex
+[53] [54]) (sections/Implementation/Funktionelle.tex
 Overfull \hbox (4.72705pt too wide) in paragraph at lines 20--21
 \T1/lmr/m/n/10 GUIMain som sender alle værk-tø-jerne, nu-værende view-port samt
  pro-jekt. Herved
  []
 
-[54] [55] [56]
+[55] [56] [57]
 Overfull \hbox (3.18683pt too wide) in paragraph at lines 169--170
 \T1/lmr/m/n/10 sket, altså om start-punk-tet til ve-jen er blevet valgt. Hvis \
 T1/lmtt/m/n/10 _firstNodeConnection
  []
 
-<<<<<<< HEAD
-[56] [57]) (sections/Implementation/Vehicle.tex [58] [59] [60]
-<Pictures/Implementation/TranslateVehicle.png, id=1172, 150.5625pt x 207.02344p
-=======
-[57] [58]) (sections/Implementation/Vehicle.tex [59] [60] [61]
-<Pictures/Implementation/TranslateVehicle.png, id=1175, 150.5625pt x 207.02344p
->>>>>>> 74f8ab4e820ec307bf2b303c464e39b94a5a7912
+[58] [59]) (sections/Implementation/Vehicle.tex [60] [61] [62]
+<Pictures/Implementation/TranslateVehicle.png, id=1228, 150.5625pt x 207.02344p
 t>
 File: Pictures/Implementation/TranslateVehicle.png Graphic file (type png)
  <use Pictures/Implementation/TranslateVehicle.png>
@@ -2061,15 +1984,15 @@ Underfull \hbox (badness 7273) in paragraph at lines 101--102
 []\T1/lmr/m/n/10 Vektoren skaleres med af-s-
  []
 
-[62 <./Pictures/Implementation/TranslateVehicle.png>]))
-(sections/Diskussion/Diskussion.tex [63]
+[63 <./Pictures/Implementation/TranslateVehicle.png>]))
+(sections/Diskussion/Diskussion.tex [64]
 Chapter 11.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Konklusion/Konklusion.tex [64
+) (sections/Konklusion/Konklusion.tex [65
 
 ]
 Chapter 12.
@@ -2078,7 +2001,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Perspektivering/Perspektivering.tex [65
+) (sections/Perspektivering/Perspektivering.tex [66
 
 ]
 Chapter 13.
@@ -2087,7 +2010,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-)) (Main.bbl [66
+)) (Main.bbl [67
 
 ]
 Underfull \hbox (badness 1675) in paragraph at lines 23--29
@@ -2155,7 +2078,7 @@ Underfull \hbox (badness 2547) in paragraph at lines 65--69
 blobgames . com / pathfinding /$
  []
 
-[67
+[68
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 81--86
@@ -2181,7 +2104,7 @@ $\T1/lmtt/m/n/10 vejdirektoratet . dk / DA / viden _ og _ data / statistik / ve
 jeneital /$
  []
 
-) [68] (appendix.tex
+) [69] (appendix.tex
 Appendix A.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -2192,7 +2115,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 \tf@thm=\write5
  
 AED: lastpage setting LastPage
-[69
+[70
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
@@ -2206,14 +2129,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 34468 strings out of 493673
- 758022 string characters out of 3141520
- 1287603 words of memory out of 3000000
- 36173 multiletter control sequences out of 15000+200000
- 93093 words of font info for 73 fonts, out of 3000000 for 9000
+ 34570 strings out of 493673
+ 760318 string characters out of 3141520
+ 1288603 words of memory out of 3000000
+ 36226 multiletter control sequences out of 15000+200000
+ 89076 words of font info for 68 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
- 64i,15n,100p,1574b,1939s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,19n,100p,2505b,2124s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.9/
@@ -2235,49 +2157,9 @@ m/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on Main.pdf (75 pages, 1185091 bytes).
+Output written on Main.pdf (77 pages, 1228207 bytes).
 PDF statistics:
- 1724 PDF objects out of 1728 (max. 8388607)
- 802 named destinations out of 1000 (max. 500000)
- 706 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
- 34509 strings out of 493634
- 766910 string characters out of 3135240
- 1289181 words of memory out of 3000000
- 36246 multiletter control sequences out of 15000+200000
- 89076 words of font info for 68 fonts, out of 3000000 for 9000
- 1030 hyphenation exceptions out of 8191
- 64i,19n,100p,2561b,2122s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
-c}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
-t.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
-athsy.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
-lm-rm.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fon
-tname/8r.enc}<C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmbx10.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/lm/lmbx12.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmbx8.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/lm/lmmi10.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/lm/lmmi8.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/lm/lmr10.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/fiske/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/fiske/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/fiske/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/fiske/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/lm/lmri8.pfb><C:/Users/fiske/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/fiske/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/fiske/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/fiske/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Users/fiske
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Users/f
-iske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/User
-s/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:
-/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a
-.pfb>
-Output written on Main.pdf (76 pages, 1216393 bytes).
-PDF statistics:
- 1744 PDF objects out of 2073 (max. 8388607)
- 801 named destinations out of 1000 (max. 500000)
- 744 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 74f8ab4e820ec307bf2b303c464e39b94a5a7912
+ 1808 PDF objects out of 2073 (max. 8388607)
+ 846 named destinations out of 1000 (max. 500000)
+ 752 words of extra memory for PDF output out of 10000 (max. 10000000)
 

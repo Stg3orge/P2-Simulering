@@ -41,38 +41,6 @@
 \contentsline {section}{\numberline {8.2}Grafteori}{26}{section.2.8.2}
 \contentsline {section}{\numberline {8.3}Dijkstras Algoritme}{27}{section.2.8.3}
 \contentsline {section}{\numberline {8.4}A* Algoritmen}{29}{section.2.8.4}
-<<<<<<< HEAD
-\contentsline {chapter}{\numberline {9}Kravspecifikationer}{33}{chapter.2.9}
-\contentsline {subsection}{\numberline {9.0.1}Succeskriterier}{34}{subsection.2.9.0.1}
-\contentsline {section}{\numberline {9.1}Black Box Test - Unit Test}{35}{section.2.9.1}
-\contentsline {chapter}{\numberline {10}Implementation}{37}{chapter.2.10}
-\contentsline {section}{\numberline {10.1}Klassediagrammer}{37}{section.2.10.1}
-\contentsline {section}{\numberline {10.2}Hoved Brugerfladen}{43}{section.2.10.2}
-\contentsline {section}{\numberline {10.3}Elementerne i Vejnettet}{44}{section.2.10.3}
-\contentsline {subsection}{\numberline {10.3.1}Node}{44}{subsection.2.10.3.1}
-\contentsline {subsection}{\numberline {10.3.2}Destination}{44}{subsection.2.10.3.2}
-\contentsline {subsection}{\numberline {10.3.3}LightController}{44}{subsection.2.10.3.3}
-\contentsline {subsection}{\numberline {10.3.4}Road}{45}{subsection.2.10.3.4}
-\contentsline {subsection}{\numberline {10.3.5}Typer}{45}{subsection.2.10.3.5}
-\contentsline {section}{\numberline {10.4}Diverse}{45}{section.2.10.4}
-\contentsline {section}{\numberline {10.5}Project}{45}{section.2.10.5}
-\contentsline {section}{\numberline {10.6}SimulationSettings}{46}{section.2.10.6}
-\contentsline {subsection}{\numberline {10.6.1}Data}{47}{subsection.2.10.6.1}
-\contentsline {subsection}{\numberline {10.6.2}MathExtension}{48}{subsection.2.10.6.2}
-\contentsline {subsection}{\numberline {10.6.3}Vector2D}{48}{subsection.2.10.6.3}
-\contentsline {section}{\numberline {10.7}Viewport}{49}{section.2.10.7}
-\contentsline {section}{\numberline {10.8}Pathfinder}{50}{section.2.10.8}
-\contentsline {section}{\numberline {10.9}Funktionelle}{53}{section.2.10.9}
-\contentsline {subsection}{\numberline {10.9.1}ToolController}{53}{subsection.2.10.9.1}
-\contentsline {subsection}{\numberline {10.9.2}FileHandler}{57}{subsection.2.10.9.2}
-\contentsline {subsection}{\numberline {10.9.3}Simulation}{58}{subsection.2.10.9.3}
-\contentsline {section}{\numberline {10.10}Vehicle}{58}{section.2.10.10}
-\contentsline {chapter}{\numberline {11}Diskussion}{63}{chapter.2.11}
-\contentsline {chapter}{\numberline {12}Konklusion}{64}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Perspektivering}{65}{chapter.2.13}
-\contentsline {chapter}{Bibliography}{66}{chapter*.48}
-\contentsline {chapter}{\numberline {A}Appendix}{68}{appendix.A}
-=======
 \contentsline {chapter}{\numberline {9}Design af program}{33}{chapter.2.9}
 \contentsline {subsection}{\numberline {9.0.1}Minimalistisk design}{33}{subsection.2.9.0.1}
 \contentsline {subsubsection}{Implementation af vejsystemer}{33}{section*.17}
@@ -101,15 +69,15 @@
 \contentsline {subsection}{\numberline {10.6.2}MathExtension}{49}{subsection.2.10.6.2}
 \contentsline {subsection}{\numberline {10.6.3}Vector2D}{49}{subsection.2.10.6.3}
 \contentsline {section}{\numberline {10.7}Viewport}{50}{section.2.10.7}
-\contentsline {section}{\numberline {10.8}Pathfinder}{52}{section.2.10.8}
-\contentsline {section}{\numberline {10.9}Funktionelle}{54}{section.2.10.9}
-\contentsline {subsection}{\numberline {10.9.1}ToolController}{54}{subsection.2.10.9.1}
-\contentsline {subsection}{\numberline {10.9.2}FileHandler}{58}{subsection.2.10.9.2}
-\contentsline {subsection}{\numberline {10.9.3}Simulation}{59}{subsection.2.10.9.3}
-\contentsline {section}{\numberline {10.10}Vehicle}{59}{section.2.10.10}
-\contentsline {chapter}{\numberline {11}Diskussion}{64}{chapter.2.11}
-\contentsline {chapter}{\numberline {12}Konklusion}{65}{chapter.2.12}
-\contentsline {chapter}{\numberline {13}Perspektivering}{66}{chapter.2.13}
-\contentsline {chapter}{Bibliography}{67}{chapter*.51}
-\contentsline {chapter}{\numberline {A}Appendix}{69}{appendix.A}
->>>>>>> 74f8ab4e820ec307bf2b303c464e39b94a5a7912
+\contentsline {subsection}{\numberline {10.7.1}SimulationViewport}{52}{subsection.2.10.7.1}
+\contentsline {section}{\numberline {10.8}Pathfinder}{53}{section.2.10.8}
+\contentsline {section}{\numberline {10.9}Funktionelle}{55}{section.2.10.9}
+\contentsline {subsection}{\numberline {10.9.1}ToolController}{55}{subsection.2.10.9.1}
+\contentsline {subsection}{\numberline {10.9.2}FileHandler}{59}{subsection.2.10.9.2}
+\contentsline {subsection}{\numberline {10.9.3}Simulation}{60}{subsection.2.10.9.3}
+\contentsline {section}{\numberline {10.10}Vehicle}{60}{section.2.10.10}
+\contentsline {chapter}{\numberline {11}Diskussion}{65}{chapter.2.11}
+\contentsline {chapter}{\numberline {12}Konklusion}{66}{chapter.2.12}
+\contentsline {chapter}{\numberline {13}Perspektivering}{67}{chapter.2.13}
+\contentsline {chapter}{Bibliography}{68}{chapter*.55}
+\contentsline {chapter}{\numberline {A}Appendix}{70}{appendix.A}
