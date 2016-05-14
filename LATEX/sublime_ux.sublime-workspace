@@ -113,6 +113,7 @@
 	[
 		{
 			"file": "Main.tex",
+<<<<<<< HEAD
 			"settings":
 			{
 				"buffer_size": 1098,
@@ -247,6 +248,11 @@
 			"settings":
 			{
 				"buffer_size": 1347,
+=======
+			"settings":
+			{
+				"buffer_size": 1098,
+>>>>>>> d813b2d5282586965a5c1a309cd9297898914160
 				"line_ending": "Windows"
 			}
 		},
@@ -315,6 +321,7 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation",
@@ -327,6 +334,51 @@
 	[
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/oversigt.tex",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/FileHandler.tex",
+=======
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Test"
+	],
+	"file_history":
+	[
+		"/C/Users/Rasmus Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Simulering/Simulering.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Test/Test.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Design.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/Main.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/aau/titlepages.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Viewport.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/PathFinder.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/C/Lektionone/pascal.c",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Design.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sublime_ux.sublime-project",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/oversigt.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/ImplementationAU.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/FileHandler.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/ToolController.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.aux",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup/variables.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/signatures.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/titlepages.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/frontpage.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Metode/Metode.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Problemformulering/Problemformulering.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.tex",
+		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
+		"/C/Programs/Git/Gundamnation/Programs/Eksamensopgave2016/External/products.csv",
+>>>>>>> d813b2d5282586965a5c1a309cd9297898914160
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
@@ -390,7 +442,11 @@
 	],
 	"find":
 	{
+<<<<<<< HEAD
 		"height": 28.0
+=======
+		"height": 23.0
+>>>>>>> d813b2d5282586965a5c1a309cd9297898914160
 	},
 	"find_in_files":
 	{
@@ -459,12 +515,17 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
 			"selected": 3,
+=======
+			"selected": 0,
+>>>>>>> d813b2d5282586965a5c1a309cd9297898914160
 			"sheets":
 			[
 				{
 					"buffer": 0,
 					"file": "Main.tex",
+<<<<<<< HEAD
 					"semi_transient": false,
 					"settings":
 					{
@@ -493,6 +554,8 @@
 				{
 					"buffer": 1,
 					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+=======
+>>>>>>> d813b2d5282586965a5c1a309cd9297898914160
 					"semi_transient": false,
 					"settings":
 					{
@@ -503,8 +566,13 @@
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								6329,
 								6329
+=======
+								969,
+								969
+>>>>>>> d813b2d5282586965a5c1a309cd9297898914160
 							]
 						],
 						"settings":
@@ -512,6 +580,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 2883.0,
 						"zoom_level": 1.0
 					},
@@ -572,10 +641,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+=======
+>>>>>>> d813b2d5282586965a5c1a309cd9297898914160
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+<<<<<<< HEAD
 					"type": "text"
 				},
 				{
@@ -1004,13 +1076,16 @@
 					},
 					"stack_index": 15,
 					"type": "text"
+=======
+					"type": "text"
+>>>>>>> d813b2d5282586965a5c1a309cd9297898914160
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -1051,7 +1126,7 @@
 	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
