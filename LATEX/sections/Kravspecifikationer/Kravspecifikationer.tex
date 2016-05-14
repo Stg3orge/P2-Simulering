@@ -1,49 +1,40 @@
-\chapter{Kravspecifikationer}\label{Kravspecifikationer}
+\section{Kravspecifikationer}
+I dette afsnit vil der blive forklaret hvilke kravspecifikationer programmet skal opfylde. På tabel \ref{fig:KravspecifikationerTabel} vises en samlet tabel over de kravspecifikationer der er sat for programmet. Tabellen er opdelte i 3 katagorier \texttit{Generelt}, \texttit{Brugerflade} og \texttit{Simulering}. I de følgende afsnit bliver tabel \ref{fig:KravspecifikationerTabel} beskrevet.
 
-\begin{enumerate}
-\item Generelt
-	\begin{description}
-	\item [Gem og Åben] For at brugeren ikke skal starte forfra ved genstart af programmet, skal der være mulighed for at gemme vejnettet i en fil, og åbne det igen på et senere tidspunkt.
-	\item [Importering fra kort] Indlæse fra OpenStreetMap og opstille dataen for et område i programmet.
-	\end{description}
-\item Brugerflade
-	\begin{description}
-	\item [Gitter] Ved indsætning af veje og elementer som lyskryds, vil man indsætte disse i et gitter system, der kan panoreres, forstørres og formindskes. Formålet med gitteret er at kunne opstille vejnettet på en systematisk måde.
-	\item [Knudepunkter] Bruges til at forbinde veje.
-	\item [Veje] Tegnes mellem knudepunkterne, og har en maksimal hastighed.
-	\item [Eksklusive Veje] Ligesom almindelige veje, de bliver kun taget med i en af simuleringerne, så der kan måles på forskellen disse veje gør for trafikken.
-	\item [Kryds] Man skal kunne indsætte komplekse elementer som eksempelvis kryds med signaler.
-	\item [Vigepligt] Brugeren skal være i stand til at specificere hvilke veje, der har vigepligt i et kryds.
-	\item [Huse] Huse indsættes og bruges som bilrejsernes startpunkt, og slutpunkt ved tilbage rejsen.
-	\item [Destinationer] Brugerne skal kunne opstille forskellige typer destinationer og indsætte disse i gitteret. Ved simuleringen af vejnettet, vil brugeren så være i stand til at bestemme hvor stor en procentdel af bilisterne der vælger en destination.
-	\item [Parkeringspladser] For at billisterne ikke bare parkerer på destinationen, vil der skulle indsættes parkeringspladser. Disse parkeringspladser vil være slutpunktet for rejsen fra billistens hus, hvor billisten søger efter den parkeringsplads der er nærmest destinationen.
-	\item [Togbaner] Simuleringen skal tage højde for togenes påvirkning på trafikken.
-	\item [Fodgængerfelt] Trafikkens hastighed bliver påvirket af fodgængere.
-	\end{description}
-\item Simulering
-    \begin{description}
-    \item [Sammenligning] For at simulering kan bruges til at vurdere et system, skal man være i stand til at sammenligne resultaterne med en anden simulation. Dette vil foregå ved at brugeren kan opstille særlige veje, der kun bliver medtaget i en af simulationerne, og brugeren vil derefter kunne sammenligne outputtet.
-    \item [Fodgængere] Simulering af fodgængerne med formålet at gøre simuleringeringen mere virkelighedsnær, i det at bilerne er nødt til at vente når fodgængerne passerer vejen.
-    \item [Cyklister] Lige som fodgængere påvirke cyklister også trafikken i nogle kryds.
-    \item [Køretøjer] Det skal være muligt at opstille forskellige typer køretøjer som for eksempel biler og busser.
-    \item [Pathfinding] Køretøjerne skal kunne beregne den kortest mulige rute til destination. Ved denne beregning skal der overvejes fartgrænser på vejene, derudover skal der tages højde for elementer som lyskryds.
-    \item [Acceleration] Køretøjerne skal ikke kunne nå hastighedsgrænsen øjeblikkeligt.
-    \item [Deceleration] Køretøjerne skal ikke kunne bremse øjeblikkeligt.
-    \end{description}
-    \begin{enumerate}
-    \item Input
-        \begin{enumerate}
-        \item Antallet af køretøjer
-        \item Gennemsnitshastighed for køretøjer
-        \item Destinationsvalg
-        \end{enumerate}
-    \item Output
-        \begin{enumerate}
-        \item Procent af rejsetid brugt i kø
-        \item Procent af rejsetid brugt i en hastighed lavere end den ønskede hastighed.
-        \end{enumerate}
-    \end{enumerate}
-\end{enumerate}
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Generelt} & \textbf{Brugerflade} & \textbf{Simulering} \\ \hline
+Gem og Åben fil   & Gitter               & Sammenligning       \\ \hline
+                  & Noder                & Fodgængere          \\ \hline
+                  & Veje                 & Cyklister           \\ \hline
+                  & Eksklusive veje      & Køretøjer           \\ \hline
+                  & LysKryds             & Pathfinding         \\ \hline
+                  & Vigepligt            & Acceleration        \\ \hline
+                  & Huse                 & Deceleration        \\ \hline
+                  & Destinationer        &                     \\ \hline
+                  & Parkeringspladser    &                     \\ \hline
+\end{tabular}
+\caption{Kravspecifikationer}\label{fig:KravspecifikationerTabel}
+\end{table}
+
+\subsection{Generelt}
+Der er valgt at programmet skal indeholde en gem og åben funktion, dette skal gøres for at brugeren får muligheden for at gemme sit projekt. På denne måde kan brugeren arbejde videre på sit projekt over en større tidsperiode. Der er også valgt at opstille dette, således brugeren har forminsket tidspild.
+
+\vspace{5mm}
+
+\subsection{Brugerflade}
+Der skal opstilles en brugergrænseflade i form af windowsApplication, som har følgende specifikationer. Der skal opsættes et gitter således brugeren kan indsætte noder i form af lyskryds, bindepunkter fra vej til vej, vigepligt, huse og destinationer. På denne måde binder disse noder sig til en af kanterne i gitter systemet. Samtidig bliver det nemt at implementere A* algoritmen, og vejnettet bliver opstilt på en systamatisk måde. Brugeren får også et større overblik over vejnetværket, da brugeren skal kunne se hele gitteret oppefra. Vejene skal implementeres således at de binder sig til noderne, så A* algoritmen kan beregne en vej igennem vejnetværket. Derudover giver det brugeren muligheden at tilkoble veje til lyskryds og vigepligte. Der skal også implementeres eksklusive veje, dette er en central del af simuleringen, da disse veje skal fungere således brugeren kan måle på hvordan trafikken ændre sig, hvis man tilføjer en eksklusiv vej. Udover det fungere de på samme måde som almindelige veje. De eksklusive veje er valgt at have med, så brugeren kan ændre på traffikken og se hvordan netværket udspiller sig, hvis man ændre på de allerede eksisterene veje. Programmet skal også implementere lyskryds og vigepliger, fordi dette er en central del af et vejnetværk i den virkelige verden. Hvis ikke disse bliver implementeret så bliver programmet ikke nær så realistisk, som den virkelige verden. Der skal også indsættes, huse, destinationer og parkeringspladser i form af noder, husene indsættes så diverse køretøjer har et startpunkt og slutpunkt. Destinationerne indsættes så køretøjerne har individuelle destinationer, dvs køretøjet skal starte fra huset, og køre ud til en destination, senere på dagen skal køretøjet køre tilbage til huset. Disse destinationer skal også have en parkeringsplads, i form af en node. Disse parkeringspladser vil være et slutpunkt for rejsen fra køretøjets hus, hvor køretøjet søger efter den parkeringsplads der er nærmest destinationen. Dette er valgt, da billister i den realistiske verden, kan have destinationer uden parkeringspladser. Der skal også tilføjes fodgængerfelt, således køretøjet bremser, hvis en fodgænger vil forbi en vej. På denne måde skaber programmet et realistisk perspektiv i form af simulering. Samtidig skaber det også menneskelig adfærd i trafikken.
+
+\vspace{5mm}
+
+\subsection{Simulering}
+Programmet skal indeholde en sammenligning af to simuleringer, dette vil foregå ved at brugeren kan opstille særlige veje, der kun bliver medtaget i en af simulationerene, og brugeren vil derefter kunne sammenligne outputtet. På denne måde kan brugeren sammenligne to simulationer og vurdere hvilken simulering som er den mest effektive, og derefter kan det udføres til den virkelige verden. Der skal implementeres fodgængere, således det påvirker trafikken i form af fodgængerfelter. Programmet skal indeholde forskellige typer af køretøjer som, biler, busser, lastbilver osv. Dette er valgt, da programmet bliver mere realitisk af at indeholde forskellige typer, da køretøjerne accelerere og decelerere anderledes. Dette vil netop påvirke trafikken, samtidig køre nogle køretøjer langsommere og andre hurtigere. Dette skal opsættes således bruger selv definere et køretøj i programmet.  Diverse køretøjer skal beregne den hurtigste vej til deres destination, da billister i dag foretrækker den hurtigste vej. Programmet skal implementere acceleration og deceleration på køretøjerne, dette er en central del af en simuleringen, da netop acceleration og deceleration kan skabe trafikpropper. Derudover er der også valgt, at implementere dette, da VisSims acceleration og deceleration ikke var præcise se afsnit om Teknologianalyse. 
+
+\vspace{5mm}
 
 \subsection{Succeskriterier}\label{Succeskriterier}
 Den følgende liste beskriver hvilke kriterier programmet skal opfylde, før programmet kan være en løsning til problemformuleringen. Der er lagt fokus på simulering af køretøjer som biler og busser. Andre simulerings enheder som fodgængere, cyklister og toge er udeladt da de har en mindre påvirkning på trafikken på vejnettet. Derudover er importering af kort ikke taget med som et succeskriterie, da det ikke er nødvendigt for at kunne opstille et vejnet. De udeladte elementer bliver diskuteret i perspektiverings afsnittet (reference her).
