@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.15)  14 MAY 2016 20:47
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.3)  14 MAY 2016 20:50
+>>>>>>> 09597c2866853ae693139c5f058273a2eb633e2b
 entering extended mode
 **Main
 (Main.tex
@@ -1819,12 +1823,8 @@ gne af-s-tanden imellem
  []
 
 ) (sections/Design/Test.tex [32])
-(sections/Kravspecifikationer/Kravspecifikationer.tex
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 4.
-
-[33] [34]) (sections/Implementation/Implementation.tex [35]
+(sections/Kravspecifikationer/Kravspecifikationer.tex [33] [34])
+(sections/Implementation/Implementation.tex [35]
 Chapter 10.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -2088,6 +2088,7 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  34213 strings out of 493673
  755456 string characters out of 3141520
  1288603 words of memory out of 3000000
@@ -2117,6 +2118,42 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
 Output written on Main.pdf (77 pages, 1222660 bytes).
+=======
+ 34238 strings out of 493634
+ 763269 string characters out of 3135240
+ 1288181 words of memory out of 3000000
+ 35886 multiletter control sequences out of 15000+200000
+ 89076 words of font info for 68 fonts, out of 3000000 for 9000
+ 1030 hyphenation exceptions out of 8191
+ 64i,19n,100p,1522b,2122s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
+t.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
+athsy.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
+lm-ec.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
+lm-rm.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fon
+tname/8r.enc}<C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmbx10.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/lm/lmbx12.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmbx8.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/lm/lmmi10.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/lm/lmmi8.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/lm/lmr10.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/fiske/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/fiske/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/fiske/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/fiske/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/lm/lmri8.pfb><C:/Users/fiske/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/fiske/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/fiske/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/fiske/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Users/fiske
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Users/f
+iske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/User
+s/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:
+/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a
+.pfb>
+Output written on Main.pdf (77 pages, 1222681 bytes).
+>>>>>>> 09597c2866853ae693139c5f058273a2eb633e2b
 PDF statistics:
  1861 PDF objects out of 2073 (max. 8388607)
  899 named destinations out of 1000 (max. 500000)
