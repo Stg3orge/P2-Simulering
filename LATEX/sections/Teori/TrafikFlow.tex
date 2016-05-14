@@ -1,0 +1,55 @@
+\section{Trafik Model}
+
+Til dette projekt har vi valgt at arbejde med emnet trafik og simulering, mere specifikt simulering af trafik. Vi agter altså at løse et problem inde for dette område hvor i vores fokus ligger på at lave en simulering der kan hjælpe med til at konstruere og udspille forskellige scenarier der kan udspille sig i traffikerede områder og på den måde også simulerer alternativer. Derfor har gruppen valgt at udarbejde en model der beskriver gruppens fælles definition på trafik. Formålet med dette er at have en model at arbejde med og inddrage i programmet der fungerer som produktet i dette projekt.
+
+OBS: Dette afsnit er ikke færdigt og modellen kan og vil med høj sandsynlighed ændre sig igennem projektet af forskellige årsager! 
+
+\subsection{Trafik Flow}
+
+Trafik fænomener har i langt tid ikke været nemt at regne på. En publikation fra 1988 af Paul Ross fra Traffic Systems Division beskriver trafik som at have en vis lighed med væsker som ikke kan komprimeres mere end en vis densitet \cite{trafdyn}. Igennem tiden har der været nogle forskellige teorier om hvorvidt man måler på trafik og mange har forsøgt på forskellige måder. 
+
+%En publikation fra 1988 af en Paul Ross fra Traffic Systems Division, belyser om emnet Traffic Dynamics og herunder Traffic Flow \cite{trafdyn}. Som Paul Ross beskriver så området et af dem der er mindst forstået da der på dette tidspunkt ikke var nogle kontinuum teorier der kunne forudse trafik densitet, volume og fart med den præcision som der forventes for at kunne opstille et timing signal. Derimod er det bedste der kan gøres er at lave et cirka estimate med diskontinuerlig dellinger[Ordliste]. Publikationen forklarer i større detalje hvordan at for at få et udbytte med kontrol, simulation og en general forståelse for emnet, er en beskrivelse af trafik med henhold til fortsættende og differentiable kvantitativer[Ordliste] nødvendig. Formålet med denne publikation er at udvikle en ny formulering til dette som er kvalitativt korrekt. 
+
+Den generelle konsensus for trafik variabler er følgende: Trafik Densiteten, K, farten, v, og volume, Q, er passende og brugbare til formået beskrevet herover. [Note: Cite Dr. Henry Lieu]
+
+
+\[Q = Kv \]\label{eq:Equation1}\begin{flushright}(1)\end{flushright}
+						
+hvor følgende er gældende:
+
+Q = trafik flow (Bil(er)/timen) forbi et punkt.  
+K  = vehicular densitet (bil(er)/km)
+v  = (space-mean-speed) fart (km/t)
+
+Densitet kan beskrives som antallet af fartøjer per længden af en enhed (i dette tilfælde km). De to vigtige former af densitet er kritisk densitet, K\_c og jam densitet, K\_j. K\_c er den maksimale densitet under free flow. k\_j er den maksimale densitet under ophobning. Densitet udregnes som:
+
+\[ k = \frac{1}{s} \]\label{eq:Equation2}\begin{flushright}(2)\end{flushright}
+
+Hvor s er det inverse af densiteten, spacing, som er distancen fra midte til midte mellem fartøjer.
+
+På en vej L vil densiteten K, på et bestemt tidspunkt t\_1, være lig det inverse af spacing mellem n antal fartøjer.
+
+\[ K(L,t_1) = \frac{n}{L} = \frac{1}{\overline{s}(t_1)} \]\label{eq:Equation3}\begin{flushright}(3)\end{flushright}
+
+Space-mean-speed kan forklares som at være en udregning af fart hvori man tager et helt vejbane segment i betragtning. En serie af billeder eller video optager farten på individuelle fartøjer der køre på denne bane, ud fra dette er en gennemsnits fart udregnet. Denne type udregning anses for at være mere præcis end Time-mean-speed metoden som der ikke vil blive forklaret i dette afsnit. Udregningen vor Space-mean-speed ser således ud:
+
+\[ v_t = n (\displaystyle\sum_{i=1}^{n}(1/v_i)^-1 \]\label{eq:Equation4}\begin{flushright}(4)\end{flushright}
+
+Hvor n er det antal af fartøjer der passere vejbane segmentet.
+
+\subsection{Flow}
+Flow er det antal at fartøjer som passere en form for referrence punkt per enhed af tid, som fartøjer/timen. The inverse af flow er togfølge (h) hvilket er den tid der går imellem fartøjer der passere det bestemte punkt og det forrige køretøj (i + 1). Ved overbelastning på veje forbliver h constant. Ved en trafik prop vil h gå mod uendeligt.
+
+\[ q = 1/h \]\label{eq:Equation5}\begin{flushright}(5)\end{flushright}
+
+Flow (q) der passere et bestemt punkt (x\_1) i et interval (T) er lig det inverse af den gennemsnitlige togfølge af m køretøjer.
+
+\[ q(T, x_1) = \frac{m}{T} = \frac{1}{h(x_1} \]\label{eq:Equation6}\begin{flushright}(6)\end{flushright}
+
+Lastbiler:
+Lastbiler og andre transport fartøjer er oftest skyld i at trafikken går langsommere eller i nogle tilfælde stopper helt op. Det er derfor at bl.a. transport af vindmølledele bliver igangsat sent om aften eller meget tidligt på morgenen således at de ikke skaber problemer for andre billister. Dette har altså en stor effekt på trafikken og kunne derfor være relevant at medtage i vores model, dette er dog ikke gruppens fokus da dette er et meget specifikt scenarie.
+NOTE: Kan ændres skulle vi have tid til at lave noget med denne type scenarie.
+
+Tid på dagen / Rush Hour: 
+Rush hour er det scenarie hvori der sker mest trafik i et land. Dette er typisk i de timer hvor de forskellige bilister skal på arbejde, køre børn til skole eller andre institutioner eller lignende og igen når disse samme individer skal hjem igen. Dette kan indskrives i programmet som en form for variable der ændre mængden af trafik ved bestemte tidspunkter.
+NOTE: Mangler kilde på dansk rush hour.
