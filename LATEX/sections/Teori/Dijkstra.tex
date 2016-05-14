@@ -1,9 +1,9 @@
 \section{Dijkstras Algoritme}
 \begin{wrapfigure}{r}{0.45\textwidth}
     \centering
-	\includegraphics[width=0.45\textwidth]{Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png}
-	\label{dijkstrasgraf}
-	\caption{En vægtet graf}
+  \includegraphics[width=0.45\textwidth]{Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png}
+  \label{dijkstrasgraf}
+  \caption{En vægtet graf}
 \end{wrapfigure}
 
 Dijkstra's er en grådig algoritme der kan finde en rute imellem to knudepunkter i en vægtet graf. I gruppens program er dette eksempelvis ruten mellem et køretøjs hjem og destination. Algoritmen starter med at sætte afstanden til alle punkter lig uendelig, udover start punktet da det er det eneste der kendes til på tidspunktet. Når algoritmen kører en graf igennem, kigger den på den node hvor kosten er lavest, og udregner kosten til de naboliggende noder. Når kosten udregnes for en nabo node, tages kosten af ruten til den nuværende node og afstanden til nabo noden bliver adderet. Da algoritmen altid tager noden med den lavest kost, vil den have fundet den korteste rute, når den nuværende node er slutnoden \cite[s. 681-684]{DMATBOGEN}. Som et eksempel kan vejen fra A til Z på figur \ref{dijkstrasgraf} findes:
@@ -18,42 +18,42 @@ Dijkstra's er en grådig algoritme der kan finde en rute imellem to knudepunkter
 \end{enumerate}
 
 Kostene for hver node kan gemmes i en tabel, som set på tabel \ref{dijktabel}.
-	
+  
 \begin{table}[H]
 \centering
-	\begin{tabular}{|l|l|l|l|l|l|l|}
-	\hline
-	                 & A & B & C & D  & E  & Z  \\ \hline
-	                 & 0 & $\infty$ & $\infty$ & $\infty$  & $\infty$  & $\infty$  \\ \hline
-	A                & 0 & 4 & 2 & $\infty$  & $\infty$  & $\infty$  \\ \hline
-	A, C             & 0 & 3 & 2 & 10 & 12 & $\infty$  \\ \hline
-	A, C, B          & 0 & 3 & 2 & 8  & 12 & $\infty$  \\ \hline
-	A, C, B, D       & 0 & 3 & 2 & 8  & 10 & 14 \\ \hline
-	A, C, B, D, E    & 0 & 3 & 2 & 8  & 10 & 13 \\ \hline
-	A, C, B, D, E, Z & 0 & 3 & 2 & 8  & 10 & 13 \\ \hline
-	\end{tabular}
-	\label{dijktabel}
-	\caption{Dijkstra Kost Tabel}
+  \begin{tabular}{|l|l|l|l|l|l|l|}
+  \hline
+                   & A & B & C & D  & E  & Z  \\ \hline
+                   & 0 & $\infty$ & $\infty$ & $\infty$  & $\infty$  & $\infty$  \\ \hline
+  A                & 0 & 4 & 2 & $\infty$  & $\infty$  & $\infty$  \\ \hline
+  A, C             & 0 & 3 & 2 & 10 & 12 & $\infty$  \\ \hline
+  A, C, B          & 0 & 3 & 2 & 8  & 12 & $\infty$  \\ \hline
+  A, C, B, D       & 0 & 3 & 2 & 8  & 10 & 14 \\ \hline
+  A, C, B, D, E    & 0 & 3 & 2 & 8  & 10 & 13 \\ \hline
+  A, C, B, D, E, Z & 0 & 3 & 2 & 8  & 10 & 13 \\ \hline
+  \end{tabular}
+  \label{dijktabel}
+  \caption{Dijkstra Kost Tabel}
 \end{table}
 
 \begin{figure}[H]
 \begin{lstlisting}
 object Node
-	Previous = null
-	Cost = PositiveInfinity
+  Previous = null
+  Cost = PositiveInfinity
 
 procedure FindPath(AllNodes, StartNode, EndNode)
-	StartNode.Cost = 0
-	List Closed.Add(AllNodes - StartNode)
+  StartNode.Cost = 0
+  List Closed.Add(AllNodes - StartNode)
     List Open.Add(StartNode)
     while Open > 0 do
-    	CurrentNode = Find Node with smallest Cost in Open
-    	if CurrentNode is EndNode
-    		return TracePath(CurrentNode)
-    	else
-    		Open.Remove(CurrentNode)
-    		Closed.Add(CurrentNode)
-    		EvaluateNeighbors(CurrentNode)
+      CurrentNode = Find Node with smallest Cost in Open
+      if CurrentNode is EndNode
+        return TracePath(CurrentNode)
+      else
+        Open.Remove(CurrentNode)
+        Closed.Add(CurrentNode)
+        EvaluateNeighbors(CurrentNode)
     end
     return null // No path found
 end
@@ -66,16 +66,16 @@ På figur \ref{DijkstraCodeFindPathNode} ses pseudokode for kernen af Dijkstras 
 \begin{figure}[H]
 \begin{lstlisting}
 procedure EvaluateNeighbors(CurrentNode)
-	for each NeighborNode in CurrentNode
-    	if NeighborNode is not in Open
-    	and NeighborNode is not in Closed
-    		Open.Add(NeighborNode)
-			NeighborNode.Cost = CurrentNode.Cost 
-    						  + DistanceTo(NeighborNode)
-			if NeighborNode.Cost < CurrentNode.Cost
-								   + DistanceTo(NeighborNode)
-				NeighborNode.Previous = CurrentNode
-	end
+  for each NeighborNode in CurrentNode
+      if NeighborNode is not in Open
+      and NeighborNode is not in Closed
+        Open.Add(NeighborNode)
+      NeighborNode.Cost = CurrentNode.Cost 
+                        + DistanceTo(NeighborNode)
+      if NeighborNode.Cost < CurrentNode.Cost
+                             + DistanceTo(NeighborNode)
+        NeighborNode.Previous = CurrentNode
+  end
 end
 \end{lstlisting}
 \caption{Dijkstra pseudo-kode: EvaluateNeighbors}\label{DijkstraCodeEvaluateNeighbors}
@@ -84,13 +84,13 @@ end
 \begin{figure}[H]
 \begin{lstlisting}
 procedure TracePath(CurrentNode)
-	List Path
-	while CurrentNode is not null
-		Path.Add(CurrentNode)
-		CurrentNode = CurrentNode.Previous
-	end
-	Path.Reverse()
-	return Path
+  List Path
+  while CurrentNode is not null
+    Path.Add(CurrentNode)
+    CurrentNode = CurrentNode.Previous
+  end
+  Path.Reverse()
+  return Path
 end
 \end{lstlisting}
 \caption{Dijkstra pseudo-kode: TracePath}\label{DijkstraCodeTracePath}

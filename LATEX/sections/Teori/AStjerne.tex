@@ -15,9 +15,9 @@ Estimationerne der bliver udregnet benyttes hver gang algoritmen skal vælge den
 \begin{figure}[H]
 \begin{lstlisting}
 object Node
-	Previous = null
-	Cost = PositiveInfinity
-	Estimate = PositiveInfinity
+  Previous = null
+  Cost = PositiveInfinity
+  Estimate = PositiveInfinity
 \end{lstlisting}
 \caption{A* pseudo-kode: Node}\label{AStarCodeNode}
 \end{figure}
@@ -32,18 +32,18 @@ CurrentNode = Find Node with smallest Estimate in Open
 \begin{figure}[H]
 \begin{lstlisting}
 procedure EvaluateNeighbors(CurrentNode)
-	for each NeighborNode in CurrentNode
-    	if NeighborNode is not in Open
-    	and NeighborNode is not in Closed
-    		Open.Add(NeighborNode)
-    		NeighborNode.Cost = CurrentNode.Cost 
-    						  + DistanceTo(NeighborNode)
-		    NeighborNode.Estimate = NeighborNode.Cost
-		    					  + Heuristic(NeighborNode)
-			if NeighborNode.Cost < CurrentNode.Cost
-								   + DistanceTo(NeighborNode)
-				NeighborNode.Previous = CurrentNode
-	end
+  for each NeighborNode in CurrentNode
+      if NeighborNode is not in Open
+      and NeighborNode is not in Closed
+        Open.Add(NeighborNode)
+        NeighborNode.Cost = CurrentNode.Cost 
+                          + DistanceTo(NeighborNode)
+        NeighborNode.Estimate = NeighborNode.Cost
+                              + Heuristic(NeighborNode)
+      if NeighborNode.Cost < CurrentNode.Cost
+                             + DistanceTo(NeighborNode)
+        NeighborNode.Previous = CurrentNode
+  end
 end
 \end{lstlisting}
 \caption{A* pseudo-kode: EvaluateNeighbors}\label{AStarCodeEvaluateNeighbors}
