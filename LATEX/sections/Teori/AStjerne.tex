@@ -1,58 +1,50 @@
 \section{A* Algoritmen}
-Primært når det kommer til belægning af en dynamisk rute, foregår det ved at en enhed fortsætter hen i mod et mål indtil den når en forhindring. Dette er et ekstremt simpelt bevægelsesmønster og indebærer in vis in-effektivitet. Rent retorisk kunne man stille spørgsmålet om det ikke ville være smartere at planlægge en rute før man overhovedet bevæger sig.
+A* (A stjerne) er en udvidelse af Dijkstras algoritme. Forskellen ved A* algoritmen er at den estimerer hvor langt noderne i graphen er fra slutnoden, og dermed findes den optimale rute hurtigere da den kun kigger på noder der ligger i retningen af slutnoden. Dette gøres når nabo noderne skal undersøges, ligesom i Dijkstra, vil algoritmen udregne kosten til nabo noderne af det nuværende punkt, og derudover vil der benyttes en heuristik til at estimere kosten fra nabo noden til slutnoden. Det vil sige at algoritmen arbejder med kosten til en node, betegnet \texttt{G}, en heuristik der estimerer kosten fra noden til slutnoden, betegnet \texttt{H}, og den samlede vurdering \texttt{F}, der udregnes som vist på formlen \ref{eq:A*}
 
-\vspace{5mm}
-
-A* er en algoritme til at beregne den korteste rute baseret på en række heuristiske datasæt. A* får input igennem en brugerlavet graf der indeholder en række datasæt for at algoritmen kan fungere.  Først har vi distancen fra punkt til punkt, eksempelvis punkt 'A' til punkt 'B' som vi kalder for f.eks. \textbf{H} og dernæst har vi et datasæt \textbf{G} der indeholder bekostningen for at flytte fra en kant til en anden, denne variabel er bestemt på forhånd. Et virkelighedseksempel kunne være at man vil over på den anden side af en sø, så har man så muligheden for at svømme direkte eller gå uden om og det koster f.eks. 2 gange så meget at bevæge sig direkte igennem søen. Dette er givet ved \textbf{G}, hvor som sagt \textbf{H} er den ultimative korteste længde til det bestemte slutpunkt. \textbf{H} fungerer desuden for hvilket som helst punkt i et system og angiver \textit{altid} den korteste vej til slutpunktet uanset forhindringer. Det skal også nævnes at \textbf{H} ikke er påvirket af bevægelsesbekostningen, til at starte med, som \textbf{G} angiver, dette kommer først senere. Til sidst har vi \textbf{F} der er en samenlagt værdi af både \textbf{H} og \textbf{G}. Dette gælder kun for hver kasse der flyttes til, hvori \textbf{H} er angivet ved kassen man flytter tils \textbf{H} værdi. Det kan vises således i formlen \ref{eq:A*}:
 \begin{equation} \label{eq:A*}
 F(n) = G(n) + H(n)
 \end{equation}
+\vspace{5mm}
 
-En måde man kan visualisere A* på er f.eks. med et gitter-system som set i figur \ref{fig:AKvadrat1}. Her kan vi se at vi har et start punkt (grøn) og et slutpunkts (blå). De kasser vi ikke kan bevæge os igennem er de røde kasser. Figuren angiver ingen heuristiske datasæt endnu.
-
-\begin{figure}[H]
-\begin{adjustbox}{width=1.2\textwidth,center=\textwidth}
-\centering
-\includegraphics[width=1.2\textwidth]{Pictures/Teoriafsnit/Figurfiler/Grid2.png}
-\end{adjustbox}
-\caption{A* gitter-system}
-\label{fig:AKvadrat1}
-\end{figure}
-
-Ud fra figuren kan vi begynde os at forestille hvordan A* fungerer. Når man bevæger sig fra kasse til kasse laver man 2 lister til at holde styr på hvor brikken har været. En liste til at holde styr på hvilke kasser man ikke har besøgt endnu og en liste der holder styr på hvilke man \textbf{har} besøgt. Når man flytter brikken skal man derfor angive hvilken kasse der nu skal på \textit{besøgt} listen. Derfor som nævnt skal vi bruge information om hvor meget \textbf{G} koster. Brikken skal nu til at flytte sig for at komme til slutpunktet. Dette kunne f.eks. være 10 point for at flytte sig i hvilken som helst retning, men man kunne også sagtens angive at diagonal bevægelse ville koste 12 point. Dvs. at ruten ændrer sig til måske ikke at være så direkte som den ellers kunne have været.
+Hvis man ønsker at A* skal finde den absolut korteste rute, kræver det at heuristikken er optimistisk, altså at den aldrig overestimerer kosten til slutpunktet. Som et eksempel på en heuristik der kunne man definere heuristikken som værende afstanden i en lige linje til slutpunktet, da der aldrig ville være en kortere vej end dette. Yderligere, hvis man har informationen, kan der inddrages hastighedsgrænsen på vejene ved at dividere afstanden i en lige linje med den højste hastighedsgrænse der findes på vejnettet.
 
 \vspace{5mm}
 
-Der findes flere metoder man kan anvende A* på og en af dem vises her.
-Det vises her i den lille bid af Python-kode i Listing \ref{lst:Apseudo1}:
-\begin{lstlisting}[caption={A stjerne og pseudo-kode af brug af lister},label={lst:Apseudo1},language=C]
-frontier = Queue()
-frontier.put(start)
-visited = {}
-visited[start] = True
+Estimationerne der bliver udregnet benyttes hver gang algoritmen skal vælge den næste node der skal undersøges. Ligesom Dijkstra tager den node der har den nuværende laveste kost, tager A* den node der har den laveste estimation \texttt{F}.
 
-while not frontier.empty():
-   current = frontier.get()
-   for next in graph.neighbors(current):
-      if next not in visited:
-         frontier.put(next)
-         visited[next] = True
+\begin{figure}[H]
+\begin{lstlisting}
+object Node
+	Previous = null
+	Cost = PositiveInfinity
+	Estimate = PositiveInfinity
 \end{lstlisting}
-\cite{stanfordredblobgamesAstar}
-
-Som set i figur \ref{fig:AKvadrat1} har vi vores liste givet ved kassernes nummerering. Nummereringen kører fra venstre mod højre én række ad gangen. Vi angiver at det tager 10 point af gå lodret og vandret én kasse ad gangen og 12 point at gå diagonalt. I figur \ref{fig:AKvadrat2} kan vi nu se de heuristiske datasæt angivet fra startpunktet (grøn). Hver enkel kasse omkringliggende startpunktet har deres \textbf{H} værdi angivet med lys-lilla tekst og bevægelsesomkostningen \textbf{G} fra startpunktet til kassen angivet i blå tekst.
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=1.00\textwidth]{Pictures/Teoriafsnit/Figurfiler/Grid3.png}
-\end{center}
-\caption{A* der viser bekostning af bevægelse fra startpunkt (grøn) til omkringliggende kasser (G) angivet med blå farve samt H angivet med lys-lilla}
-\label{fig:AKvadrat2}
+\caption{A* pseudo-kode: Node}\label{AStarCodeNode}
 \end{figure}
 
-Nu udregnes \textbf{F} værdien så f.eks. hvis vi går fra kasse 14 (startpunktet) til 15 skal vi lægge 10 (\textbf{G}) og 8 (\textbf{H}) sammen. Dette gør vi så for alle omkringliggende kasser for startpunktet. Dernæst går man til den laveste \textbf{F} værdi og gør helt det samme som før, derudover flyttes den nye kasse man står på til \textit{besøgt} listen. Noget man skal være opmærksom på her er at man stadig skal sammenligne bevægelsesomkostningen fra den tidligere kasse til de kasser der også er relevante for den nye kasse man har flyttet sig til. For dermed at afgøre om man kunne have påført en smartere bevægelse. Det skal igen pointeres at A* modtager data fra en graf og det her modelleres.
+\begin{figure}[H]
+\begin{lstlisting}
+CurrentNode = Find Node with smallest Estimate in Open
+\end{lstlisting}
+\caption{A* pseudo-kode: Find smallest}\label{AStarCodeFindSmallest}
+\end{figure}
 
-\vspace{5mm}
-
-Denne fremgangsmåde er også bedre kendt som Breadth First Search, hvori en frontlinje bliver kontinuerligt fremskyndet baseret på omkostninger og heuristiske datasæt\cite{stanfordredblobgamesAstar}.
-A* er en heuristisk fremgangsmåde afledt af Dijkstras generelle funktionalitet. Dijkstra og A* vil altid give en kortest vej hen til målet.  %\cite{http://search.proquest.com/openview/88fa950a98b308c6687f79f76caeb187/1?pq-origsite=gscholar}
+\begin{figure}[H]
+\begin{lstlisting}
+procedure EvaluateNeighbors(CurrentNode)
+	for each NeighborNode in CurrentNode
+    	if NeighborNode is not in Open
+    	and NeighborNode is not in Closed
+    		Open.Add(NeighborNode)
+    		NeighborNode.Cost = CurrentNode.Cost 
+    						  + DistanceTo(NeighborNode)
+		    NeighborNode.Estimate = NeighborNode.Cost
+		    					  + Heuristic(NeighborNode)
+			if NeighborNode.Cost < CurrentNode.Cost
+								   + DistanceTo(NeighborNode)
+				NeighborNode.Previous = CurrentNode
+	end
+end
+\end{lstlisting}
+\caption{A* pseudo-kode: EvaluateNeighbors}\label{AStarCodeEvaluateNeighbors}
+\end{figure}
