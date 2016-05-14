@@ -1,13 +1,8 @@
 \section{Viewport}\label{Viewport}
-\texttt{Viewport} klassen har til formål at sætte rammerne for området hvori man kan tegne elementerne i vejnettet.
+\texttt{Viewport} klassen har til formål at sætte rammerne for området hvori man kan tegne elementerne i vejnettet. \texttt{Viewport} er opsat til at fungere som en række af lag lagt oven på hinanden. 
 
 \begin{figure}[H]
 \begin{lstlisting}
-public readonly int GridLength = 1000;
-public readonly int GridSize = 16;
-public readonly int EntitySize = 12;
-public readonly int NodeSize = 8;
-
 public Project Project;
 public Point HoverConnection = new Point(-1, -1);
 public Point MousePos = new Point(0, 0);
@@ -17,11 +12,11 @@ public Point GridPos { get { return GetGridPos(); } }
 \label{ViewportParameters}
 \end{figure}
 
-Klassen arver fra \texttt{Panel} klassen. Til dette formål er det nødvendigt for \texttt{Viewport} and være en del af et nyt projekt og derfor instansieres der en nyt projekt og en række parametre set i figur \ref{ViewportParameters}. Readonly variablerne for \texttt{GridLength}, \texttt{GridSize}, \texttt{EntitySize} og \texttt{NodeSize} er størrelserne for de visuelle objekter på Viewporten.
+Klassen arver fra \texttt{Panel} klassen. Til dette formål er det nødvendigt for \texttt{Viewport} and være en del af et nyt projekt og derfor instansieres der en nyt \texttt{Project} og en række parametre set i figur \ref{ViewportParameters}. \texttt{Viewport} visualiserer alle enheder på panelet igennem de datasæt der eksisterer som en del af et \texttt{Project}.
 
 \vspace{5mm}
 
-Der bliver instansieret en variabel af typen \texttt{Project} da Viewporten skal kunne repræsentere projektet. \texttt{HoverConnection} visualiserer den forbindelse man prøver at lave mellem to objekter. \texttt{MousePos} indikerer det aktuelle punkt hvor musen befinder sig i gitteret, selv ved en nedskalering vil den altid finde det samme koordinat. \texttt{GridPos} får data igennem en metode der indikerer alle mulige koordinater i gitteret. Dette er brugbart til at finde koordinaterne til objekterne der bliver tegnet i gitteret.
+\texttt{HoverConnection} visualiserer via en svævende streg, den forbindelse man prøver at lave mellem to objekter. \texttt{MousePos} indikerer det aktuelle punkt hvor musen befinder sig i gitter-systemet, selv ved en nedskalering vil den altid finde det samme koordinat. \texttt{GridPos} får data igennem en metode der indikerer alle mulige koordinater i gitteret. Dette er brugbart til at finde koordinaterne til objekterne der bliver tegnet i gitteret.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -46,4 +41,80 @@ public object GetObjByGridPos()
 \label{ViewportGetObjByGridPos}
 \end{figure}
 
-Som sagt kan \texttt{Viewport} indikere koordinaterne til indsatte objekter og dette gør den igennem metoden \texttt{GetObjByGridPos} som set i figur \ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle \texttt{Node}, \texttt{LightController} og \texttt{Destination} om deres position er lig \texttt{GridPos}. Hvis den har fundet en, så retunere den det fundne objekt.
+Som sagt kan \texttt{Viewport} indikere koordinaterne til indsatte objekter og dette gør den igennem metoden \texttt{GetObjByGridPos} som set i figur \ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle \texttt{Node}, \texttt{LightController} og \texttt{Destination} om deres position er lig \texttt{GridPos}. Hvis den har fundet en, så retunere den det fundne objekt. Grunden til dette er for at være i stand til at arrangere de håndterede objekter så deres koordinat kan identificeres.
+
+\vspace{5mm}
+
+Inde i \texttt{partial} klassen \texttt{ViewportSetup} bliver der angivet en række af lag som set i figur \ref{ViewportSetupLayers}. Disse lag indikerer i hvilken rækkefølge objekterne på panelet skal tegnes. Dette kan ses ved brugen af \texttt{Controls.Add} hvori der gradvist bliver lagt lag på lag.
+
+\begin{figure}[H]
+\begin{lstlisting}
+public Layer Grid = new Layer();
+public Layer Connections = new Layer();
+public Layer Nodes = new Layer();
+public Layer Entities = new Layer();
+public Layer Information = new Layer();
+public Layer Input = new Layer();
+
+Controls.Add(Grid);
+Grid.Controls.Add(Connections);
+Connections.Controls.Add(Nodes);
+Nodes.Controls.Add(Entities);
+Entities.Controls.Add(Information);
+Information.Controls.Add(Input);
+\end{lstlisting}
+\caption{Lag for ViewportSetup, i deres kendetegnede rækkefølge}
+\label{ViewportSetupLayers}
+\end{figure}
+
+\subsection{SimulationViewport}\label{SimulationViewport}
+
+I \ref{ViewPortSimulation} bliver der instansieret et nyt lag \texttt{Vehicles} og en variabel for \texttt{SimulationData} hvori indeholdes nødvendige datasæt for at udføre en simulation. Det kan ses på figur \ref{ViewPortSimulationData} at constructoren modtager et \texttt{Project} og to lister, henholdsvist \texttt{primary} og \texttt{secondary}. \texttt{SimulationViewport} tager derefter \texttt{SimulationData} som en parameter til dens egen constructor som set i figur \ref{ViewportSimulationConstructor}.
+
+\begin{figure}[H]
+\begin{lstlisting}
+private const int VehicleSize = 16;
+public Layer Vehicles = new Layer();
+public SimulationData SimData;
+public Partitions CurrentPartition = Partitions.Primary;
+private int _time = 0;
+public int Time
+\end{lstlisting}
+\caption{Variabler til SimulationViewport}
+\label{ViewPortSimulation}
+\end{figure}
+
+\begin{figure}[H]
+\begin{lstlisting}
+public SimulationData(Project project, List<VehicleData> primary, List<VehicleData> secondary)
+{
+    Project = project;
+    PrimaryData = primary;
+    SecondaryData = secondary;
+    Date = DateTime.Now;
+}
+\end{lstlisting}
+\caption{SimulationData klassen og dens constructor}
+\label{ViewPortSimulationData}
+\end{figure}
+
+\begin{figure}[H]
+\begin{lstlisting}
+public SimulationViewport(SimulationData data) : base(data.Project)
+{
+    SimData = data;
+            
+    Vehicles.Dock = DockStyle.Fill;
+    Vehicles.BackColor = Color.Transparent;
+    Vehicles.Paint += DrawVehicles;
+
+    Grid.Paint -= DrawGrid;
+    Entities.Controls.Remove(Information);
+    Entities.Controls.Add(Vehicles);
+    Vehicles.Controls.Add(Input);
+    Input.BringToFront();
+}
+\end{lstlisting}
+\caption{Constructoren til SimulationViewport}
+\label{ViewportSimulationConstructor}
+\end{figure}
