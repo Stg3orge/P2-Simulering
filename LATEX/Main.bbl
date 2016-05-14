@@ -1,0 +1,99 @@
+\begin{thebibliography}{10}
+
+\bibitem{benjasfar}
+Pshko Aziz.
+\newblock Aalborg kommune teknisk forvaltning, 2016.
+
+\bibitem{SimulationHandbook}
+Christopher~A. Chung.
+\newblock {\em Simulation Handbook - A Prictical Approch}.
+\newblock CRC Press LLC, 2004.
+
+\bibitem{VisualSolutions}
+Altair Engineering.
+\newblock About visual solutions, incorporated.
+\newblock \url{http://www.vissim.com/company.html }, 2016.
+
+\bibitem{DtuForskning}
+Carsten~Broder Hansen.
+\newblock Dtu - forskning.
+\newblock \url{http://www.transport.dtu.dk/Forskning}, 2015.
+
+\bibitem{dmuadfaerdsmodel}
+Danmarks Miljøundersøgelser.
+\newblock Altrans - adfærdsmodel for persontrafik, faglig rapport fra dmu nr.
+  348.
+\newblock
+  \url{http://www.dmu.dk/1_viden/2_Publikationer/3_fagrapporter/rapporter/fr348.pdf},
+  2001.
+
+\bibitem{dmumodelanalyser}
+Danmarks Miljøundersøgelser.
+\newblock Modelanalyser af mobilitet og miljø. slutrapport fra altrans og amor
+  ii, faglig rapport fra dmu nr. 447.
+\newblock
+  \url{http://www.dmu.dk/1_viden/2_publikationer/3_fagrapporter/rapporter/FR447.pdf},
+  2003.
+
+\bibitem{stress}
+Dwight A~Hennessy og~David L~Wiesenthal.
+\newblock Traffic congestion, driver stress, and driver aggression.
+\newblock
+  \url{https://www.researchgate.net/profile/Dwight_Hennessy/publication/229863510_Traffic_congestion_driver_stress_and_driver_aggression/links/0deec53274dd4c9e88000000.pdf},
+  1999.
+
+\bibitem{forurening}
+Matthew~Barth og~Kanok~Boriboonsomsin.
+\newblock Traffic congestion and greenhouse gases.
+\newblock \url{https://escholarship.org/uc/item/3vz7t3db}, 2009.
+
+\bibitem{trafikoekonomi}
+Michael Knørr~Skov og~Karsten Sten~Pedersen.
+\newblock Trafikprop. flere veje vil skabe større vækst.
+\newblock
+  \url{http://www.cowi.dk/menu/tema/infrastruktur-2030/cowi-i-medierne/Documents/Veje%20skaber%20v%C3%A6kst_Politiken%20analyse%2024052014.pdf},
+  2014.
+
+\bibitem{udrykning}
+Henrik Papsø.
+\newblock Trafikpropper kan koste menneskeliv.
+\newblock
+  \url{http://www.tveast.dk/artikler/trafikpropper-kan-koste-menneskeliv},
+  2007.
+
+\bibitem{stanfordredblobgamesAstar}
+{Introduction to A*}.
+\newblock
+  \url{http://www.redblobgames.com/pathfinding/a-star/introduction.html}, 2016.
+\newblock Accessed: 06/03/2016.
+
+\bibitem{DMATBOGEN}
+Kenneth~H. Rosen.
+\newblock {\em Discrete Mathematics and its Applications}.
+\newblock McGraw Hill, 7. global edition, 20113.
+
+\bibitem{Tidskompleksitet}
+Kenneth~H. Rosen.
+\newblock {\em Discrete Mathematics and its applications}.
+\newblock Kamala Krithivasan, 1. edition, 2015.
+
+\bibitem{dtfnotat}
+Danmarks TransportForskning.
+\newblock Trafikmodeller arbejdsnotat til infrastrukturkommissionen notat 3.
+\newblock
+  \url{http://www.transport.dtu.dk/~/media/Institutter/Transport/forskning/publikationer/publikationer%20dtf/2007/arbejdsnotat_om_trafikmodeller_160507.ashx?la=da},
+  2007.
+
+\bibitem{Vejdirektoratet}
+Vejdirektoratet.
+\newblock Længden af offentlige veje.
+\newblock
+  \url{http://www.vejdirektoratet.dk/DA/viden_og_data/statistik/vejeneital/l%C3%A6ngdeoffentligeveje/Sider/default.aspx},
+  2016.
+
+\bibitem{vissimfunker}
+{Vissim.com}.
+\newblock \url{http://www.vissim.com/downloads/doc/VisSim\_UGv80.pdf}, 2015.
+\newblock Accessed: 17-03-2016.
+
+\end{thebibliography}
