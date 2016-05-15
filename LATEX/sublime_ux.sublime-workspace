@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"Neigh",
+				"NeighborNodes"
+			],
+			[
+				"N",
+				"NeighborNode"
+			],
+			[
+				"Ne",
+				"NeighborNodes"
+			],
+			[
+				"P",
+				"PositiveInfinity"
+			],
+			[
+				"E",
+				"EvaluateNeighbors"
+			],
+			[
+				"C",
+				"CurrentNode"
+			],
+			[
 				"allocat",
 				"allocation_of_values_to_team_data"
 			],
@@ -109,6 +133,7 @@
 			]
 		]
 	},
+<<<<<<< HEAD
 	"buffers":
 	[
 		{
@@ -168,6 +193,8 @@
 			}
 		}
 	],
+=======
+>>>>>>> de94473713c7c8084aa808f0c12e03399c7ec38b
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -175,10 +202,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 104.0,
-		"last_filter": "Package Control: install",
+		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"Project: Refresh Folders"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control",
+				"Package Control: List Packages"
+			],
 			[
 				"Package Control: install",
 				"Package Control: Install Package"
@@ -214,6 +253,7 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+<<<<<<< HEAD
 	"expanded_folders":
 	[
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX",
@@ -240,6 +280,34 @@
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Viewport.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori/Teori.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/PathFinder.tex",
+=======
+	"file_history":
+	[
+		"/C/Users/fiske/Desktop/dfdf.txt",
+		"/C/Users/fiske/AppData/Roaming/Sublime Text 3/Packages/PackageResourceViewer/PackageResourceViewer.sublime-settings",
+		"/C/Users/fiske/AppData/Roaming/Sublime Text 3/Packages/User/PackageResourceViewer.sublime-settings",
+		"/C/Users/fiske/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/fiske/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/Klassediagrammer.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/HovedBrugerfladen.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/Diverse.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teori/TrafikFlow.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teori/Tidskompleksitet.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teori/Grafteori.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/setup/preamble.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Kravspecifikationer/Kravspecifikationer.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teknologianalyse/acceleration.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teori/AStjerne.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/dank.txt",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/references.bib",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/PathFinder.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Test/Test.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/Viewport.tex",
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/aau/titlepages.tex",
+>>>>>>> de94473713c7c8084aa808f0c12e03399c7ec38b
 		"/C/Programs/C/Lektionone/pascal.c",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Design.tex",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sublime_ux.sublime-project",
@@ -326,7 +394,11 @@
 	],
 	"find":
 	{
+<<<<<<< HEAD
 		"height": 23.0
+=======
+		"height": 36.0
+>>>>>>> de94473713c7c8084aa808f0c12e03399c7ec38b
 	},
 	"find_in_files":
 	{
@@ -340,6 +412,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
+=======
+			"\\infty",
+			"∞",
+>>>>>>> de94473713c7c8084aa808f0c12e03399c7ec38b
 			"HEAD",
 			"fight",
 			"teams",
@@ -384,6 +461,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$\\infty$",
+			"\\infty"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -391,6 +470,7 @@
 		"whole_word": false,
 		"wrap": true
 	},
+<<<<<<< HEAD
 	"groups":
 	[
 		{
@@ -598,6 +678,8 @@
 			]
 		}
 	],
+=======
+>>>>>>> de94473713c7c8084aa808f0c12e03399c7ec38b
 	"incremental_find":
 	{
 		"height": 23.0
@@ -631,17 +713,24 @@
 	"menu_visible": true,
 	"output.exec":
 	{
+<<<<<<< HEAD
 		"height": 149.0
+=======
+		"height": 273.0
+>>>>>>> de94473713c7c8084aa808f0c12e03399c7ec38b
 	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
+<<<<<<< HEAD
 		"height": 42.0
+=======
+		"height": 62.0
+>>>>>>> de94473713c7c8084aa808f0c12e03399c7ec38b
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -675,7 +764,6 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},

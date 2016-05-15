@@ -51,7 +51,7 @@ namespace A319TS
             labels.AddRange(new Label[] { StepSizeLabel, VehicleSpaceLabel, RangeLabel, VehicleCountLabel,
                 InboundLabel, OutboundLabel, TimeSpreadLabel, ToDestTimeLabel, ToHomeTimeLabel, Primary, Secondary });
         }
-
+    
         private void ReadSettings(object sender, EventArgs args)
         {
             StepSize.SelectedItem = simulationsettings.StepSize;
@@ -185,42 +185,42 @@ namespace A319TS
             PrimaryVehicleCount.Location = new Point(136, 47);
             PrimaryVehicleCount.Size = new Size(120, 22);
             Controls.Add(PrimaryVehicleCount);
-            PrimaryVehicleCount.Maximum = 2000;
+            PrimaryVehicleCount.Maximum = 50000;
             PrimaryVehicleCount.Minimum = 0;
 
             PrimaryInBound = new NumericUpDown();
             PrimaryInBound.Location = new Point(136, 75);
             PrimaryInBound.Size = new Size(120, 22);
             Controls.Add(PrimaryInBound);
-            PrimaryInBound.Maximum = 2000;
+            PrimaryInBound.Maximum = 50000;
             PrimaryInBound.Minimum = 0;
 
             PrimaryOutBound = new NumericUpDown();
             PrimaryOutBound.Location = new Point(136, 106);
             PrimaryOutBound.Size = new Size(120, 22);
             Controls.Add(PrimaryOutBound);
-            PrimaryOutBound.Maximum = 2000;
+            PrimaryOutBound.Maximum = 50000;
             PrimaryOutBound.Minimum = 0;
 
             SecondaryVehicleCount = new NumericUpDown();
             SecondaryVehicleCount.Location = new Point(262, 47);
             SecondaryVehicleCount.Size = new Size(120, 22);
             Controls.Add(SecondaryVehicleCount);
-            SecondaryVehicleCount.Maximum = 2000;
+            SecondaryVehicleCount.Maximum = 50000;
             SecondaryVehicleCount.Minimum = 0;
 
             SecondaryInBound = new NumericUpDown();
             SecondaryInBound.Location = new Point(262, 75);
             SecondaryInBound.Size = new Size(120, 22);
             Controls.Add(SecondaryInBound);
-            SecondaryInBound.Maximum = 2000;
+            SecondaryInBound.Maximum = 50000;
             SecondaryInBound.Minimum = 0;
 
             SecondaryOutBound = new NumericUpDown();
             SecondaryOutBound.Location = new Point(262, 106);
             SecondaryOutBound.Size = new Size(120, 22);
             Controls.Add(SecondaryOutBound);
-            SecondaryOutBound.Maximum = 2000;
+            SecondaryOutBound.Maximum = 50000;
             SecondaryOutBound.Minimum = 0;
 
             // TextBoxs
