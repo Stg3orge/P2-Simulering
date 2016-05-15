@@ -1,9 +1,41 @@
 \section{Elementerne i Vejnettet}\label{ElementerVejnettet}
 \subsection{Node}
-I vores program anvender vi et grid hvorpå brugeren indsætter noder der udgør de forskellige vejnet der bliver oprettet. Disse noder kan være forskellige typer. Dette er gjort således at processen i at oprette vejnet er relativt simple. Et simpelt eksempel ville være at brugeren indsætter to noder, den første node hvor brugeren ønsker køretøjerne skal køre fra, og en node med typen \texttt{Parking} tæt på køretøjernes \texttt{Destination}. Således kan et meget simpelt vejnet opstille. Men det er også muligt for brugeren at opstille meget mere komplekse vejnet med lyskryds.
+I vores program anvender vi et grid hvorpå brugeren indsætter noder der udgør de forskellige vejnet der bliver oprettet. Disse noder kan være forskellige typer se nedenstående liste. Nodetyperne er opsat på en enumerator, således de kan tilgås igennem en variabel se figur \ref{enumNodeTypes}. Dette er gjort således at processen i at oprette vejnet er relativt simple. Et simpelt eksempel ville være at brugeren indsætter to noder, den første node hvor brugeren ønsker køretøjerne skal køre fra, og en node med typen \texttt{Parking} tæt på køretøjernes \texttt{Destination}. Således kan et meget simpelt vejnet opstille. Men det er også muligt for brugeren at opstille meget mere komplekse vejnet med lyskryds.
+
+\begin{figure}[H]
+\begin{lstlisting}
+public enum NodeTypes { None, Yield, Home, Parking, Light, Inbound, Outbound }
+\end{lstlisting}
+\caption{LightController klassen}\label{enumNodeTypes}
+\end{figure}
+
+\begin{desciption}
+\item[None] er en node, som kan tilkobles mellem vejene.
+\item[Parking] er noden hvor køretøjerne parkere ved deres destinationer.
+\item[Home] er startpunkt og slutpunkt for bilen.
+\item[Light] er et lyskryds, hvor køretøjet skal standse hvis noden er rød, ellers skal den køre videre, hvis den er grøn.
+\item[Inbound] er en node, hvor køretøjerne kommer fra og ind til vejnetværket i programmet.
+\item[Outbound] er en node, hvor køretøjerne køre ud fra, når et køretøj forlader vejnetværket.
+\end{desciption}
 
 \subsection{Destination}
-\texttt{Destination} klassen i vores program er et punkt hvorpå køretøjerne vil søge henimod. Dette er ikke det punkt hvor køretøjerne stopper, til dette formål anvendes der en \texttt{Node} som er angivet til at være til parkering i nærheden af en \texttt{Destination}. \texttt{Destination} klassen består af en instans af \texttt{DestionationType} klassen, dette er, ligesom med \texttt{Vehicle} og \texttt{Road} klasserne, en klasse der bruges til at brugerdefinere forskellige typer af destinations med forskellige parametre.
+\texttt{Destination} klassen i vores program er et punkt hvorpå køretøjerne vil søge henimod. Dette er ikke det punkt hvor køretøjerne stopper, til dette formål anvendes der en \texttt{Node} som er angivet til at være til parkering i nærheden af en \texttt{Destination}. \texttt{Destination} klassen består af en instans af \texttt{DestionationType} klassen, dette er, ligesom med \texttt{Vehicle} og \texttt{Road} klasserne, en klasse der bruges til at brugerdefinere forskellige typer af destinations med forskellige parametre, disse parametre kan ses på figur \ref{DestinationTypes}. Den første er \texttt{name} på en \texttt{Destination}, denne anvendes således brugeren kan have overblik over de forskellige destinationer. Derudover bruges \texttt{Color} til at vise farven på de forskellige destinationer, dette gøres også for at have overblik over destiationerne. Samtidig anvendes variablen \texttt{Distribution} til at definerer hvor mange procent af køretøjerne der køre til de individueller distinations typer.
+
+\begin{figure}[H]
+\begin{lstlisting}
+public string Name { get; set; }
+public Color Color { get; set; }
+public double Distribution { get; set; }
+
+public DestinationType(string name, Color color)
+{
+   Name = name;
+   Color = color;
+   Distribution = 0;
+}
+\end{lstlisting}
+\caption{LightController klassen}\label{DestinationTypes}
+\end{figure}
 
 \subsection{LightController}
 \texttt{LightController} klassen er den del af programmet hvori brugeren kan indstille på deres trafiklys noders opførsel.
@@ -32,7 +64,7 @@ private void ToggleLights()
 \caption{LightController klassen}\label{LightControllerKlassen}
 \end{figure}
 
-\texttt{LightControllerens} funktioner er at skrifte trafiklys fra rød til grøn og tilbage igen. Dette er muligt at gøre ved to seperate intervaller sådan at trafiklysene skifter efter forskellige mængder tid. Dette valg blev truffet efter det blev iagtaget at denne samme opførsel ses også på trafikkryds rundt omkring i Aalborg. Dette er idelt hvis brugeren prøver at simulerer et trafikryds hvor den ene vej er mere anvendt en den anden, f.eks. En vej der leder ind i byen fra en motorvej der krydser med en vej der leder ind til mindre boligkompleks.
+\texttt{LightController} klassen har til formål kontrollere et trafiklys over tid. Dette er valgt at gøre ved brug af metoden \texttt{Update()}, se figur \ref{LightControllerKlassen}. I metoden bliver variablen \texttt{_counter} anvendt til at tælle op hvor lang tid der er gået i simuleringen. Den selektivekontrolstruktur bliver udført, hvis \texttt{_counter} er over den tid vi venter på nu, hvor \texttt{_current} enten er \texttt{FirstTime} eller \texttt{SecondTime}. Inde i kontrolstrukturen bliver \texttt{_current} skiftet mellem \texttt{FirstTime} eller \texttt{SecondTime} således at lyskrydset skifter mellem rød og grøn, som ikke er visuelt. Metoden \texttt{ToggleLights()} kigger så igennem de nodetyper som er sat til \texttt{Light} og toggler dem, således de skifter mellem rød og grøn. Der er valgt at toggle lyskrydsene tidsbaseret, fordi flere lyskryds den virkelige verden også er sat op til tid.
 
 \subsection{Road}
 Road klassen indeholder de variabler der skal anvendes for at kunne beskrive en vej i programmet.
