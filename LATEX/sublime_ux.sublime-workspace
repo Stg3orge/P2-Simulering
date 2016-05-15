@@ -137,14 +137,22 @@
 	"buffers":
 	[
 		{
+<<<<<<< HEAD
+			"contents": "\\section{ViewPort}\\label{ViewPort}\n\n",
+			"settings":
+			{
+				"buffer_size": 36,
+=======
 			"file": "Main.tex",
 			"settings":
 			{
 				"buffer_size": 1098,
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
 <<<<<<< HEAD
 			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 			"settings":
@@ -186,6 +194,15 @@
 			{
 				"buffer_size": 5833,
 =======
+			"contents": "\\section{Viewport}\\label{Viewport}\n\\texttt{Viewport} klassen har til formål at sætte rammerne for området hvori man kan tegne elementerne i vejnettet. \\texttt{Viewport} er opsat til at fungere som en række af lag lagt oven på hinanden. \n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic Project Project;\npublic Point HoverConnection = new Point(-1, -1);\npublic Point MousePos = new Point(0, 0);\npublic Point GridPos { get { return GetGridPos(); } }\n\\end{lstlisting}\n\\caption{}\n\\label{ViewportParameters}\n\\end{figure}\n\nKlassen arver fra \\texttt{Panel} klassen. Til dette formål er det nødvendigt for \\texttt{Viewport} and være en del af et nyt projekt og derfor instansieres der en nyt \\texttt{Project} og en række parametre set i figur \\ref{ViewportParameters}. \\texttt{Viewport} visualiserer alle enheder på panelet igennem de datasæt der eksisterer som en del af et \\texttt{Project}.\n\n\\vspace{5mm}\n\n\\texttt{HoverConnection} visualiserer via en svævende streg, den forbindelse man prøver at lave mellem to objekter. \\texttt{MousePos} indikerer det aktuelle punkt hvor musen befinder sig i gitter-systemet, selv ved en nedskalering vil den altid finde det samme koordinat. \\texttt{GridPos} får data igennem en metode der indikerer alle mulige koordinater i gitteret. Dette er brugbart til at finde koordinaterne til objekterne der bliver tegnet i gitteret.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic object GetObjByGridPos()\n{\n  Node node = Project.Nodes.Find(n => \n              n.Position == GridPos);\n  if (node != null)\n      return node;\n  LightController controller = Project.LightControllers.Find(l => \n                               l.Position == GridPos);\n  if (controller != null)\n    return controller;\n  Destination dest = Project.Destinations.Find(d => \n                     d.Position == GridPos);\n  if (dest != null)\n    return dest;\n  return null;\n}\n\\end{lstlisting}\n\\caption{}\n\\label{ViewportGetObjByGridPos}\n\\end{figure}\n\nSom sagt kan \\texttt{Viewport} indikere koordinaterne til indsatte objekter og dette gør den igennem metoden \\texttt{GetObjByGridPos()} som set i figur \\ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle \\texttt{Node}, \\texttt{LightController} og \\texttt{Destination} om deres position er lig \\texttt{GridPos}. Hvis den har fundet en, så retunere den det fundne objekt. Grunden til dette er for at være i stand til at arrangere de håndterede objekter så deres koordinat kan identificeres.\n\n\\vspace{5mm}\n\nInde i \\texttt{partial} klassen \\texttt{ViewportSetup} bliver der angivet en række af lag (\\texttt{Layer) som set i figur \\ref{ViewportSetupLayers}. \\texttt{Layer} er en klasse som arver fra \\texttt{PictureBox} og har en constructor med \\texttt{DoubleBuffered=true}. Grunden til at \\texttt{PictureBox} ikke bare er benyttet alene er fordi måden disse \\texttt{Layer} er anvendt i bl.a. \\texttt{ToolController} klassen afhænger af at de kan genindlæses når et objekt, såsom en \\texttt{Node}, skal skal ændres eller tegnes en ny. Dette gøres som vist i figur \\ref{ToolControllerSetNodeType} fra \\texttt{ToolController} klassen. Heri kan der ses at metoden til sidst genindlæser på \\texttt{Nodes}. Hvis \\texttt{DoubleBuffered} sat til \\texttt{false} ville programmet flimre visuelt, fordi objekter ikke bliver tegnet hurtigt nok til at virke omgående.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\nprivate void SetNodeType(NodeTypes type)\n{\n    object obj = Viewport.GetObjByGridPos();\n    if (obj is Node)\n    {\n        if (type == NodeTypes.Light && ((Node)obj).Type == NodeTypes.Light)\n            ((Node)obj).Green = !((Node)obj).Green;\n        else\n            ((Node)obj).Type = type;\n\n        Viewport.Nodes.Refresh();\n    }\n}\n\\end{lstlisting}\n\\caption{Brug af Control.Refresh() i ToolController klassen}\n\\label{ToolControllerSetNodeType}\n\\end{figure}\n\nDisse lag indikerer i hvilken rækkefølge objekterne på panelet skal tegnes. Dette kan ses ved brugen af \\texttt{Controls.Add} hvori der gradvist bliver lagt lag på lag. Hvis programmet ikke tegnede objekter i lag, så ville de alle skulle tegnes hver gang man udførte en enkelt opdatering, ligesom set i figur \\ref{ToolControllerSetNodeType}.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic Layer Grid = new Layer();\npublic Layer Connections = new Layer();\npublic Layer Nodes = new Layer();\npublic Layer Entities = new Layer();\npublic Layer Information = new Layer();\npublic Layer Input = new Layer();\n\nControls.Add(Grid);\nGrid.Controls.Add(Connections);\nConnections.Controls.Add(Nodes);\nNodes.Controls.Add(Entities);\nEntities.Controls.Add(Information);\nInformation.Controls.Add(Input);\n\\end{lstlisting}\n\\caption{Lag for ViewportSetup, i deres kendetegnede rækkefølge}\n\\label{ViewportSetupLayers}\n\\end{figure}\n\n\\subsection{SimulationViewport}\\label{SimulationViewport}\n\n\\texttt{SimulationViewport} har til formål at visualisere simuleringen, som \\texttt{Simulation} klassen udfører. Klassen bruger den samme fremgangsmåde med lag som gennemgået tidligere.\n\n\\vspace{5mm}\n\nI \\ref{ViewPortSimulation} bliver der instansieret et nyt lag \\texttt{Vehicles} og en variabel for \\texttt{SimulationData} hvori indeholdes nødvendige datasæt for at udføre en simulation. \\texttt{SimulationViewport} tager derudover \\texttt{SimulationData} som en parameter til dens egen constructor som set i figur \\ref{ViewportSimulationConstructor}. I constructoren kan det ses at visualiseringen af simulationen benytter \\texttt{Layer} til at fremstille \\texttt{Vehicle} på \\texttt{Viewport}. \\texttt{Input} er et lag der kan modtage nyt input og ved \\texttt{Input.BringToFront();} angives der at der nu kan afventes nyt input.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\nprivate const int VehicleSize = 16;\npublic Layer Vehicles = new Layer();\npublic SimulationData SimData;\npublic Partitions CurrentPartition = Partitions.Primary;\n\\end{lstlisting}\n\\caption{Variabler til SimulationViewport}\n\\label{ViewPortSimulation}\n\\end{figure}\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic SimulationViewport(SimulationData data) : base(data.Project)\n{\n    SimData = data;\n            \n    Grid.Paint -= DrawGrid;\n    Entities.Controls.Remove(Information);\n    Entities.Controls.Add(Vehicles);\n    Vehicles.Controls.Add(Input);\n    Input.BringToFront();\n}\n\\end{lstlisting}\n\\caption{Constructoren til SimulationViewport}\n\\label{ViewportSimulationConstructor}\n\\end{figure}\n\nTil brug i selve simuleringen bliver der afsat en hel dag i millisekunder (\\texttt{MsInDay} konstanten fra \\texttt{Simulation} klassen). I \\texttt{SimulationSettings} bliver der instansieret en variabel \\texttt{Step} på 100 millisekunder der er afsat som standard, hvorfra denne også kan ændres i brugergrænsefladen. \\texttt{Step} har til formål at opdatere den visuelle simulering som brugeren kan se, men inde i \\texttt{Simulation} klassen er der en konstant ved navn \\texttt{RecordInterval}. Denne variabel er hardcoded, kan ikke ændres af brugeren og indikerer hvornår simulering laver en optagelse af data. \n\n\\vspace{5mm}\n\nDette bliver der gået igennem i et \\textbf{For-loop} som også findes i klassen \\texttt{Simulation}. Simuleringen opdateres efter det antal som \\texttt{Step} dikterer. \\texttt{SimulationViewport} har så til formål at visualisere dette step.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\nprivate int _time = 0;\npublic int Time\n{\n    get { return _time; }\n    set\n    {\n        if (value > MsInDay) _time = MsInDay;\n        else if (value < 0) _time = 0;\n        else _time = value;\n    }\n}\n\\end{lstlisting}\n\\caption{Tids-afsætning for en simulering, MsInDay eller en hel dag.}\n\\label{TimeForSim}\n\\end{figure}\n\n\n",
+			"file": "sections/Implementation/Viewport.tex",
+			"file_size": 7757,
+			"file_write_time": 131077873096392553,
+			"settings":
+			{
+				"buffer_size": 7546,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
+=======
 			"file": "sections/Simulering/Simulering.tex",
 			"settings":
 			{
@@ -211,12 +228,17 @@
 		},
 		{
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"file": "sections/Implementation/Implementation.tex",
 			"settings":
 			{
 				"buffer_size": 533,
 =======
+			"file": "sections/Implementation/PathFinder.tex",
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
+=======
 			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 			"settings":
 			{
 				"buffer_size": 5916,
@@ -225,14 +247,22 @@
 			}
 		},
 		{
+<<<<<<< HEAD
+			"file": "sections/Implementation/Funktionelle.tex",
+			"settings":
+			{
+				"buffer_size": 11933,
+=======
 			"file": "references.bib",
 			"settings":
 			{
 				"buffer_size": 7812,
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
 <<<<<<< HEAD
 			"file": "sections/EksisterendeModeller/eksisterendemodeller.tex",
 			"settings":
@@ -252,14 +282,23 @@
 		{
 =======
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
+=======
+			"file": "sections/Implementation/Implementation.tex",
+			"settings":
+			{
+				"buffer_size": 533,
+=======
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 			"file": "sections/Problemformulering/Problemformulering.tex",
 			"settings":
 			{
 				"buffer_size": 548,
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
 <<<<<<< HEAD
 			"file": "sections/sections.tex",
 			"settings":
@@ -338,6 +377,12 @@
 			{
 				"buffer_size": 601,
 =======
+			"file": "Main.tex",
+			"settings":
+			{
+				"buffer_size": 1098,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
+=======
 			"file": "sections/Design/Test.tex",
 			"settings":
 			{
@@ -356,6 +401,15 @@
 	"build_varint": "",
 	"command_palette":
 	{
+<<<<<<< HEAD
+		"height": 490.0,
+		"last_filter": "vmen",
+		"selected_items":
+		[
+			[
+				"vmen",
+				"View: Toggle Menu"
+=======
 		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
@@ -371,9 +425,34 @@
 			[
 				"Package Control",
 				"Package Control: List Packages"
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 			],
 			[
 				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Instal",
 				"Package Control: Install Package"
 			],
 			[
@@ -389,13 +468,14 @@
 				"Set Syntax: C"
 			]
 		],
-		"width": 400.0
+		"width": 549.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
+			"latexmk -pdf -pv file.tex"
 		]
 	},
 	"distraction_free":
@@ -411,6 +491,7 @@
 	"expanded_folders":
 	[
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Design",
@@ -422,6 +503,40 @@
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Teknologianalyse",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Teori"
 	],
+=======
+		"/C/Programs/Git/P2-Simulering/LATEX",
+		"/C/Programs/Git/P2-Simulering/LATEX/Pictures",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Implementation",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Konklusion",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Metode",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/ProblemetsRelevans",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Simulering",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teknologianalyse",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teori",
+		"/C/Programs/Git/P2-Simulering/LATEX/setup"
+	],
+	"file_history":
+	[
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/ProblemetsRelevans/ProblemetsRelevans.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/setup/preamble.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/setup/macros.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Metode/Metode.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teknologianalyse/altrans.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/Main.tex",
+		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Users/Rasmus/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/tools/.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/teoriafsnit/teoriafsnit.tex",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections",
@@ -505,6 +620,7 @@
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
 		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
 		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/preamble.tex",
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 		"/C/Programs/LaTeX Documents/LaTeX Document 2/assignment2.tex",
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
 		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
@@ -523,7 +639,6 @@
 		"/C/Programs/C/Lektionone/sammensetarrays.c",
 		"/C/Programs/C/Lektionone/afleveringdonger.c",
 		"/C/Programs/C/Lektionone/help.c",
-		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Programs/Git/Rep B2-24/sections/intro/intro.tex",
 		"/C/Programs/Git/Rep B2-24/references.bib",
@@ -563,7 +678,11 @@
 	"find":
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"height": 28.0
+=======
+		"height": 34.0
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 <<<<<<< HEAD
 		"height": 23.0
@@ -585,8 +704,27 @@
 		"find_history":
 		[
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"getobj",
 			"getob",
+=======
+			"double",
+			"GETGRID",
+			"ViewportClick",
+			"tsp",
+			"Funktionelle",
+			"a-stjerne",
+			"Astjerne",
+			"MISC",
+			"60",
+			"cite",
+			"citep",
+			"4",
+			"gitre",
+			"firkant",
+			"firkanter",
+			"MISC",
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 <<<<<<< HEAD
 =======
@@ -652,7 +790,11 @@
 	[
 		{
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"selected": 5,
+=======
+			"selected": 1,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 			"selected": 3,
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
@@ -660,11 +802,18 @@
 			[
 				{
 					"buffer": 0,
+<<<<<<< HEAD
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36,
+=======
 					"file": "Main.tex",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1098,
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 						"regions":
 						{
 						},
@@ -672,8 +821,13 @@
 						[
 							[
 <<<<<<< HEAD
+<<<<<<< HEAD
 								479,
 								479
+=======
+								36,
+								36
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 								1098,
 								1098
@@ -693,7 +847,11 @@
 						"zoom_level": 1.0
 					},
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"stack_index": 9,
+=======
+					"stack_index": 2,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 					"stack_index": 4,
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
@@ -702,11 +860,19 @@
 				{
 					"buffer": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 6617,
+=======
+					"file": "sections/Implementation/Viewport.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7546,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 					"file": "sections/Simulering/Simulering.tex",
 					"semi_transient": false,
@@ -721,8 +887,13 @@
 						[
 							[
 <<<<<<< HEAD
+<<<<<<< HEAD
 								0,
 								0
+=======
+								6930,
+								6930
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 								3680,
 								3680
@@ -732,7 +903,19 @@
 						"settings":
 						{
 <<<<<<< HEAD
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1620.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
@@ -742,6 +925,7 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 					"type": "text"
 				},
 				{
@@ -756,6 +940,9 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
+						"buffer_size": 5003,
+=======
 						"buffer_size": 3284,
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 						"regions":
@@ -765,8 +952,13 @@
 						[
 							[
 <<<<<<< HEAD
+<<<<<<< HEAD
 								3118,
 								3118
+=======
+								2476,
+								2476
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 								1149,
 								1149
@@ -785,6 +977,12 @@
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
+						"translation.y": 465.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+=======
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -797,6 +995,7 @@
 				},
 				{
 					"buffer": 3,
+<<<<<<< HEAD
 <<<<<<< HEAD
 					"file": "sections/Kravspecifikationer/Kravspecifikationer.tex",
 					"semi_transient": false,
@@ -830,12 +1029,20 @@
 					"buffer": 4,
 					"file": "sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
 =======
+					"file": "sections/Implementation/Funktionelle.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11933,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
+=======
 					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 5916,
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 						"regions":
 						{
 						},
@@ -843,8 +1050,13 @@
 						[
 							[
 <<<<<<< HEAD
+<<<<<<< HEAD
 								3922,
 								3922
+=======
+								4846,
+								4850
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 								3730,
 								3730
@@ -853,6 +1065,17 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+=======
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -875,10 +1098,14 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 					"type": "text"
 				},
 				{
 					"buffer": 4,
+<<<<<<< HEAD
+					"file": "sections/Implementation/Implementation.tex",
+=======
 					"file": "references.bib",
 					"semi_transient": false,
 					"settings":
@@ -983,7 +1210,20 @@
 						"zoom_level": 1.0
 					},
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"stack_index": 11,
+=======
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1098,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 					"stack_index": 2,
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
@@ -996,14 +1236,20 @@
 					"settings":
 					{
 						"buffer_size": 2081,
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
+								1098,
+								1098
+=======
 								2065,
 								2065
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 							]
 						],
 						"settings":
@@ -1014,6 +1260,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 <<<<<<< HEAD
 					"stack_index": 4,
 					"type": "text"
@@ -1386,6 +1633,9 @@
 					},
 					"stack_index": 18,
 =======
+					"stack_index": 1,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
+=======
 					"stack_index": 3,
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 					"type": "text"
@@ -1401,7 +1651,7 @@
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 0.0
 	},
 	"layout":
 	{
@@ -1429,7 +1679,11 @@
 	"output.exec":
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"height": 238.0
+=======
+		"height": 100.0
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 <<<<<<< HEAD
 		"height": 149.0
@@ -1448,8 +1702,12 @@
 <<<<<<< HEAD
 		"height": 42.0
 =======
+<<<<<<< HEAD
+		"height": 42.0
+=======
 		"height": 62.0
 >>>>>>> de94473713c7c8084aa808f0c12e03399c7ec38b
+>>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1491,7 +1749,11 @@
 	"show_tabs": true,
 	"side_bar_visible": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"side_bar_width": 307.0,
+=======
+	"side_bar_width": 239.0,
+>>>>>>> b6674e5b487822c8eb33410cd8d68adeca35584c
 =======
 	"side_bar_width": 314.0,
 >>>>>>> 91606fdf985b6e7121b48659ef013f1824d82828
