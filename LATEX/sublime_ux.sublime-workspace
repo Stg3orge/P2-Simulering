@@ -123,7 +123,7 @@
 			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 			"settings":
 			{
-				"buffer_size": 9255,
+				"buffer_size": 9304,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,13 +155,10 @@
 			}
 		},
 		{
-			"contents": "\\section{Elementerne i Vejnettet}\\label{ElementerVejnettet}\n\\subsection{Node}\nI vores program anvender vi et grid hvorpå brugeren indsætter noder der udgør de forskellige vejnet der bliver oprettet. Disse noder kan være forskellige typer se nedenstående liste. Nodetyperne er opsat på en enumerator, således de kan tilgås igennem en variabel se figur \\ref{enumNodeTypes}. Dette er gjort således at processen i at oprette vejnet er relativt simple. Et simpelt eksempel ville være at brugeren indsætter to noder, den første node hvor brugeren ønsker køretøjerne skal køre fra, og en node med typen \\texttt{Parking} tæt på køretøjernes \\texttt{Destination}. Således kan et meget simpelt vejnet opstille. Men det er også muligt for brugeren at opstille meget mere komplekse vejnet med lyskryds.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic enum NodeTypes { None, Yield, Home, Parking, Light, Inbound, Outbound }\n\\end{lstlisting}\n\\caption{LightController klassen}\\label{enumNodeTypes}\n\\end{figure}\n\n\\begin{desciption}\n\\item[None] er en node, som kan tilkobles mellem vejene.\n\\item[Parking] er noden hvor køretøjerne parkere ved deres destinationer.\n\\item[Home] er startpunkt og slutpunkt for bilen.\n\\item[Light] er et lyskryds, hvor køretøjet skal standse hvis noden er rød, ellers skal den køre videre, hvis den er grøn.\n\\item[Inbound] er en node, hvor køretøjerne kommer fra og ind til vejnetværket i programmet.\n\\item[Outbound] er en node, hvor køretøjerne køre ud fra, når et køretøj forlader vejnetværket.\n\\end{desciption}\n\n\\subsection{Destination}\n\\texttt{Destination} klassen i vores program er et punkt hvorpå køretøjerne vil søge henimod. Dette er ikke det punkt hvor køretøjerne stopper, til dette formål anvendes der en \\texttt{Node} som er angivet til at være til parkering i nærheden af en \\texttt{Destination}. \\texttt{Destination} klassen består af en instans af \\texttt{DestionationType} klassen, dette er, ligesom med \\texttt{Vehicle} og \\texttt{Road} klasserne, en klasse der bruges til at brugerdefinere forskellige typer af destinations med forskellige parametre, disse parametre kan ses på figur \\ref{DestinationTypes}. Den første er \\texttt{name} på en \\texttt{Destination}, denne anvendes således brugeren kan have overblik over de forskellige destinationer. Derudover bruges \\texttt{Color} til at vise farven på de forskellige destinationer, dette gøres også for at have overblik over destiationerne. Samtidig anvendes variablen \\texttt{Distribution} til at definerer hvor mange procent af køretøjerne der køre til de individueller distinations typer.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic string Name { get; set; }\npublic Color Color { get; set; }\npublic double Distribution { get; set; }\n\npublic DestinationType(string name, Color color)\n{\n   Name = name;\n   Color = color;\n   Distribution = 0;\n}\n\\end{lstlisting}\n\\caption{LightController klassen}\\label{DestinationTypes}\n\\end{figure}\n\n\\subsection{LightController}\n\\texttt{LightController} klassen er den del af programmet hvori brugeren kan indstille på deres trafiklys noders opførsel.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic void Update(int ms)\n{\n  _counter += ms;\n  if (_counter > _current)\n  {\n    if (_current == FirstTime)\n      _current = SecondTime;\n    else\n      _current = FirstTime;\n     ToggleLights();\n    _counter = 0;\n  }\n}\nprivate void ToggleLights()\n{\n  foreach (Node light in Lights)\n  light.Green = !light.Green;\n}\n\\end{lstlisting}\n\\caption{LightController klassen}\\label{LightControllerKlassen}\n\\end{figure}\n\n\\texttt{LightController} klassen har til formål kontrollere et trafiklys over tid. Dette er valgt at gøre ved brug af metoden \\texttt{Update()}, se figur \\ref{LightControllerKlassen}. I metoden bliver variablen \\texttt{_counter} anvendt til at tælle op hvor lang tid der er gået i simuleringen. Den selektivekontrolstruktur bliver udført, hvis \\texttt{_counter} er over den tid vi venter på nu, hvor \\texttt{_current} enten er \\texttt{FirstTime} eller \\texttt{SecondTime}. Inde i kontrolstrukturen bliver \\texttt{_current} skiftet mellem \\texttt{FirstTime} eller \\texttt{SecondTime} således at lyskrydset skifter mellem rød og grøn, som ikke er visuelt. Metoden \\texttt{ToggleLights()} kigger så igennem de nodetyper som er sat til \\texttt{Light} og toggler dem, således de skifter mellem rød og grøn. Der er valgt at toggle lyskrydsene tidsbaseret, fordi flere lyskryds den virkelige verden også er sat op til tid.\n\n\\subsection{Road}\nRoad klassen indeholder de variabler der skal anvendes for at kunne beskrive en vej i programmet.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\n[Serializable]\npublic class Road\n{\n  public Node From { get; set; }\n  public Node To { get; set; }\n  public RoadType Type { get; set; }\n  public Partitions Partition { get; set; }\n  public List<Vehicle> Vehicles { get; set; }\n  public double Length\n  {\n    get { return MathExtension.Distance(From.Position, \n                                        To.Position); }\n  }   \n  public Road(Node from, Node to, RoadType type, \n              Partitions partition)\n  {\n    From = from;\n    To = to;\n    Type = type;\n    Partition = partition;\n    Vehicles = new List<Vehicle>();\n  }\n}\n\\end{lstlisting}\n\\caption{Road klassen}\\label{RoadKlassen}\n\\end{figure}\n\nRoad klassen tager imod en instans af \\texttt{RoadType} som brugeren selv har defineret via \\texttt{RoadType} klassen. På denne måde har brugeren kontrol over hvilken type vej der tale om og hvordan vejen opfører sig i programmet, f.eks. om det er en motorvej. Vejene er programmeret således at brugeren selv kan opstille forskellige kryds, rundkørsler eller andre avanceret afkørsels baner. \\texttt{RoadType} er en seperat klasse hvori brugeren give et \\texttt{Name} og en \\texttt{Speed}, på denne måde definere brugeren selv hvilke typer veje der optræder i deres simulation.\n\n\\subsection{Typer}",
 			"file": "sections/Implementation/ElementerVejnettet.tex",
-			"file_size": 6019,
-			"file_write_time": 131077876079906867,
 			"settings":
 			{
-				"buffer_size": 5833,
+				"buffer_size": 6003,
 				"line_ending": "Windows"
 			}
 		},
@@ -170,6 +167,30 @@
 			"settings":
 			{
 				"buffer_size": 5529,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Teori/Grafteori.tex",
+			"settings":
+			{
+				"buffer_size": 3013,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Design/Design.tex",
+			"settings":
+			{
+				"buffer_size": 3511,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Design/DesignIndledning.tex",
+			"settings":
+			{
+				"buffer_size": 558,
 				"line_ending": "Windows"
 			}
 		},
@@ -241,7 +262,7 @@
 			"file": "sections/Implementation/Viewport.tex",
 			"settings":
 			{
-				"buffer_size": 7547,
+				"buffer_size": 7548,
 				"line_ending": "Unix"
 			}
 		},
@@ -489,7 +510,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -517,7 +538,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -526,7 +547,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9255,
+						"buffer_size": 9304,
 						"regions":
 						{
 						},
@@ -545,7 +566,7 @@
 						"translation.y": 1903.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -575,7 +596,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -605,7 +626,7 @@
 						"translation.y": 1320.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -633,7 +654,7 @@
 						"translation.y": 41.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -642,15 +663,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5833,
+						"buffer_size": 6003,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3513,
-								3513
+								5026,
+								5026
 							]
 						],
 						"settings":
@@ -660,10 +681,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 1500.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -693,11 +714,95 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
+					"file": "sections/Teori/Grafteori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3013,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1488,
+								1488
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sections/Design/Design.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								532,
+								532
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "sections/Design/DesignIndledning.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								558,
+								558
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "sections/Implementation/Implementation.tex",
 					"semi_transient": false,
 					"settings":
@@ -721,11 +826,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 11,
 					"file": "references.bib",
 					"semi_transient": false,
 					"settings":
@@ -751,11 +856,11 @@
 						"translation.y": 5420.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 12,
 					"file": "sections/EksisterendeModeller/eksisterendemodeller.tex",
 					"semi_transient": false,
 					"settings":
@@ -779,11 +884,11 @@
 						"translation.y": 60.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 13,
 					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
 					"semi_transient": false,
 					"settings":
@@ -807,11 +912,11 @@
 						"translation.y": 1080.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 14,
 					"file": "sections/Problemformulering/Problemformulering.tex",
 					"semi_transient": false,
 					"settings":
@@ -835,11 +940,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 15,
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
@@ -863,11 +968,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 16,
 					"file": "sections/Metode/Metode.tex",
 					"semi_transient": false,
 					"settings":
@@ -891,11 +996,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 17,
 					"file": "sections/Teori/Teori.tex",
 					"semi_transient": false,
 					"settings":
@@ -920,16 +1025,16 @@
 						"translation.y": 520.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 18,
 					"file": "sections/Implementation/Viewport.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7547,
+						"buffer_size": 7548,
 						"regions":
 						{
 						},
@@ -948,11 +1053,11 @@
 						"translation.y": 60.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 19,
 					"file": "sections/Teknologianalyse/altransWTF.tex",
 					"semi_transient": false,
 					"settings":
@@ -976,11 +1081,11 @@
 						"translation.y": 2700.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 20,
 					"file": "sections/Indledning/Indledning.tex",
 					"semi_transient": false,
 					"settings":
@@ -1004,11 +1109,11 @@
 						"translation.y": 972.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 21,
 					"file": "aau/frontpage.tex",
 					"semi_transient": false,
 					"settings":
@@ -1034,11 +1139,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 22,
 					"file": "aau/titlepages.tex",
 					"semi_transient": false,
 					"settings":
@@ -1064,11 +1169,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 23,
 					"file": "aau/signatures.tex",
 					"semi_transient": false,
 					"settings":
@@ -1092,11 +1197,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 24,
 					"file": "setup/variables.tex",
 					"semi_transient": false,
 					"settings":
@@ -1120,7 +1225,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 21,
 					"type": "text"
 				}
 			]
