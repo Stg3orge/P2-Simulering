@@ -120,10 +120,13 @@
 			}
 		},
 		{
+			"contents": "\\section{Viewport}\\label{Viewport}\n\\texttt{Viewport} klassen har til formål at sætte rammerne for området hvori man kan tegne elementerne i vejnettet. \\texttt{Viewport} er opsat til at fungere som en række af lag lagt oven på hinanden. \n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic Project Project;\npublic Point HoverConnection = new Point(-1, -1);\npublic Point MousePos = new Point(0, 0);\npublic Point GridPos { get { return GetGridPos(); } }\n\\end{lstlisting}\n\\caption{}\n\\label{ViewportParameters}\n\\end{figure}\n\nKlassen arver fra \\texttt{Panel} klassen. Til dette formål er det nødvendigt for \\texttt{Viewport} and være en del af et nyt projekt og derfor instansieres der en nyt \\texttt{Project} og en række parametre set i figur \\ref{ViewportParameters}. \\texttt{Viewport} visualiserer alle enheder på panelet igennem de datasæt der eksisterer som en del af et \\texttt{Project}.\n\n\\vspace{5mm}\n\n\\texttt{HoverConnection} visualiserer via en svævende streg, den forbindelse man prøver at lave mellem to objekter. \\texttt{MousePos} indikerer det aktuelle punkt hvor musen befinder sig i gitter-systemet, selv ved en nedskalering vil den altid finde det samme koordinat. \\texttt{GridPos} får data igennem en metode der indikerer alle mulige koordinater i gitteret. Dette er brugbart til at finde koordinaterne til objekterne der bliver tegnet i gitteret.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic object GetObjByGridPos()\n{\n  Node node = Project.Nodes.Find(n => \n              n.Position == GridPos);\n  if (node != null)\n      return node;\n  LightController controller = Project.LightControllers.Find(l => \n                               l.Position == GridPos);\n  if (controller != null)\n    return controller;\n  Destination dest = Project.Destinations.Find(d => \n                     d.Position == GridPos);\n  if (dest != null)\n    return dest;\n  return null;\n}\n\\end{lstlisting}\n\\caption{}\n\\label{ViewportGetObjByGridPos}\n\\end{figure}\n\nSom sagt kan \\texttt{Viewport} indikere koordinaterne til indsatte objekter og dette gør den igennem metoden \\texttt{GetObjByGridPos()} som set i figur \\ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle \\texttt{Node}, \\texttt{LightController} og \\texttt{Destination} om deres position er lig \\texttt{GridPos}. Hvis den har fundet en, så retunere den det fundne objekt. Grunden til dette er for at være i stand til at arrangere de håndterede objekter så deres koordinat kan identificeres.\n\n\\vspace{5mm}\n\nInde i \\texttt{partial} klassen \\texttt{ViewportSetup} bliver der angivet en række af lag (\\texttt{Layer) som set i figur \\ref{ViewportSetupLayers}. \\texttt{Layer} er en klasse som arver fra \\texttt{PictureBox} og har en constructor med \\texttt{DoubleBuffered=true}. Grunden til at \\texttt{PictureBox} ikke bare er benyttet alene er fordi måden disse \\texttt{Layer} er anvendt i bl.a. \\texttt{ToolController} klassen afhænger af at de kan genindlæses når et objekt, såsom en \\texttt{Node}, skal skal ændres eller tegnes en ny. Dette gøres som vist i figur \\ref{ToolControllerSetNodeType} fra \\texttt{ToolController} klassen. Heri kan der ses at metoden til sidst genindlæser på \\texttt{Nodes}. Hvis \\texttt{DoubleBuffered} sat til \\texttt{false} ville programmet flimre visuelt, fordi objekter ikke bliver tegnet hurtigt nok til at virke omgående.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\nprivate void SetNodeType(NodeTypes type)\n{\n    object obj = Viewport.GetObjByGridPos();\n    if (obj is Node)\n    {\n        if (type == NodeTypes.Light && ((Node)obj).Type == NodeTypes.Light)\n            ((Node)obj).Green = !((Node)obj).Green;\n        else\n            ((Node)obj).Type = type;\n\n        Viewport.Nodes.Refresh();\n    }\n}\n\\end{lstlisting}\n\\caption{Brug af Control.Refresh() i ToolController klassen}\n\\label{ToolControllerSetNodeType}\n\\end{figure}\n\nDisse lag indikerer i hvilken rækkefølge objekterne på panelet skal tegnes. Dette kan ses ved brugen af \\texttt{Controls.Add} hvori der gradvist bliver lagt lag på lag. Hvis programmet ikke tegnede objekter i lag, så ville de alle skulle tegnes hver gang man udførte en enkelt opdatering, ligesom set i figur \\ref{ToolControllerSetNodeType}.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic Layer Grid = new Layer();\npublic Layer Connections = new Layer();\npublic Layer Nodes = new Layer();\npublic Layer Entities = new Layer();\npublic Layer Information = new Layer();\npublic Layer Input = new Layer();\n\nControls.Add(Grid);\nGrid.Controls.Add(Connections);\nConnections.Controls.Add(Nodes);\nNodes.Controls.Add(Entities);\nEntities.Controls.Add(Information);\nInformation.Controls.Add(Input);\n\\end{lstlisting}\n\\caption{Lag for ViewportSetup, i deres kendetegnede rækkefølge}\n\\label{ViewportSetupLayers}\n\\end{figure}\n\n\\subsection{SimulationViewport}\\label{SimulationViewport}\n\n\\texttt{SimulationViewport} har til formål at visualisere simuleringen, som \\texttt{Simulation} klassen udfører. Klassen bruger den samme fremgangsmåde med lag som gennemgået tidligere.\n\n\\vspace{5mm}\n\nI \\ref{ViewPortSimulation} bliver der instansieret et nyt lag \\texttt{Vehicles} og en variabel for \\texttt{SimulationData} hvori indeholdes nødvendige datasæt for at udføre en simulation. \\texttt{SimulationViewport} tager derudover \\texttt{SimulationData} som en parameter til dens egen constructor som set i figur \\ref{ViewportSimulationConstructor}. I constructoren kan det ses at visualiseringen af simulationen benytter \\texttt{Layer} til at fremstille \\texttt{Vehicle} på \\texttt{Viewport}. \\texttt{Input} er et lag der kan modtage nyt input og ved \\texttt{Input.BringToFront();} angives der at der nu kan afventes nyt input.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\nprivate const int VehicleSize = 16;\npublic Layer Vehicles = new Layer();\npublic SimulationData SimData;\npublic Partitions CurrentPartition = Partitions.Primary;\n\\end{lstlisting}\n\\caption{Variabler til SimulationViewport}\n\\label{ViewPortSimulation}\n\\end{figure}\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic SimulationViewport(SimulationData data) : base(data.Project)\n{\n    SimData = data;\n            \n    Grid.Paint -= DrawGrid;\n    Entities.Controls.Remove(Information);\n    Entities.Controls.Add(Vehicles);\n    Vehicles.Controls.Add(Input);\n    Input.BringToFront();\n}\n\\end{lstlisting}\n\\caption{Constructoren til SimulationViewport}\n\\label{ViewportSimulationConstructor}\n\\end{figure}\n\nTil brug i selve simuleringen bliver der afsat en hel dag i millisekunder (\\texttt{MsInDay} konstanten fra \\texttt{Simulation} klassen). I \\texttt{SimulationSettings} bliver der instansieret en variabel \\texttt{Step} på 100 millisekunder der er afsat som standard, hvorfra denne også kan ændres i brugergrænsefladen. \\texttt{Step} har til formål at opdatere den visuelle simulering som brugeren kan se, men inde i \\texttt{Simulation} klassen er der en konstant ved navn \\texttt{RecordInterval}. Denne variabel er hardcoded, kan ikke ændres af brugeren og indikerer hvornår simulering laver en optagelse af data. \n\n\\vspace{5mm}\n\nDette bliver der gået igennem i et \\textbf{For-loop} som også findes i klassen \\texttt{Simulation}. Simuleringen opdateres efter det antal som \\texttt{Step} dikterer. \\texttt{SimulationViewport} har så til formål at visualisere dette step.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\nprivate int _time = 0;\npublic int Time\n{\n    get { return _time; }\n    set\n    {\n        if (value > MsInDay) _time = MsInDay;\n        else if (value < 0) _time = 0;\n        else _time = value;\n    }\n}\n\\end{lstlisting}\n\\caption{Tids-afsætning for en simulering, MsInDay eller en hel dag.}\n\\label{TimeForSim}\n\\end{figure}\n\n\n",
 			"file": "sections/Implementation/Viewport.tex",
+			"file_size": 7757,
+			"file_write_time": 131077873096392553,
 			"settings":
 			{
-				"buffer_size": 6647,
+				"buffer_size": 7546,
 				"line_ending": "Windows"
 			}
 		},
@@ -340,6 +343,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"double",
+			"GETGRID",
 			"ViewportClick",
 			"tsp",
 			"Funktionelle",
@@ -435,7 +440,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -444,15 +449,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6647,
+						"buffer_size": 7546,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4154,
-								4154
+								6930,
+								6930
 							]
 						],
 						"settings":
@@ -462,7 +467,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 600.0,
+						"translation.y": 1620.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -495,7 +500,7 @@
 						"translation.y": 465.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -569,8 +574,8 @@
 						"selection":
 						[
 							[
-								1083,
-								1083
+								1098,
+								1098
 							]
 						],
 						"settings":
@@ -581,7 +586,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
