@@ -123,7 +123,86 @@
 			"file": "sections/Indledning til problemanalyse/IndledningProblemanalyse.tex",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 549,
+=======
+				"buffer_size": 9304,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nLaTeXTools\n----------\n\n  LaTeXTools Plugin version 3.7.8 (2016-04-28) changelog:\n  \n  Bugfixes:\n  \n  - Better support for custom syntax files as ST3's new sublime-syntax\n  - Forward sync again send the full path to the source file (#707)\n\n  LaTeXTools Plugin version 3.7.8 (2016-04-21) changelog:\n  \n  Bugfixes:\n  \n  - ST2 will now accept bibliography with just a string\n\n  LaTeXTools Plugin version 3.7.7 (2016-04-21) changelog:\n  \n  **Note**: If you've been following along with the v3.7.x release, v3.7.7 is a major change. I've restored the previous bibliography parsing from v3.6 and earlier as default. If you want to use the new parsing, you need to change the `bibliography` setting to `\"new_bibliography\"`.\n  \n  Features:\n  \n  - Re-added previous bibliography behaviour as default. New bibliography behaviour can be obtained by changing the `bibliography` setting to `\"new_bibliography\"`.\n  \n  Bugfixes:\n  \n  - Properly support \"value and and value\" (interpretted the same as \"value and value\")\n  - KEY now cannot have an equals sign, which solves an issue related to URLs in the bibliography\n\n  LaTeXTools Plugin version 3.7.6 (2016-04-20) changelog:\n  \n  Bugfix:\n  \n  - Fix support for alphanumeric identifiers starting with a number\n\n  LaTeXTools Plugin version 3.7.5 (2016-04-20) changelog:\n  \n  Bugfix:\n  \n  - Fix delete_temp_files reported in #692\n\n  LaTeXTools Plugin version 3.7.4 (2016-04-20) changelog:\n  \n  Bugfix:\n  \n  - Fix additional issues with bib parsing reported in #694\n  - Fix Evince view function reported in #689\n\n  LaTeXTools Plugin version 3.7.3 (2016-04-20) changelog:\n  \n  Bugfix:\n  \n  - Fix additional issues with bib parsing reported on #686\n\n  LaTeXTools Plugin version 3.7.2 (2016-04-19) changelog:\n  \n  Bugfix:\n  \n  - Fix issue #686\n\n  LaTeXTools Plugin version 3.7.1 (2016-04-19) changelog:\n  \n  Bugfix:\n  \n  - Minor but breaking issue in 00_reload_submodules\n\n  LaTeXTools Plugin version 3.7.0 (2016-04-19) changelog:\n  \n  \n  New features:\n  \n  - New Viewers:\n    - Preview.app\n    - Okular\n  - Improved bibiography parsing; should handle UTF-8 and most formatting\n  - Support for most citation commands and support for the various ways BibLaTeX has to add bibliographies\n  - Plugin system for handling viewers, builders, and bibliography file parsing\n  - Some internal improvements\n  \n  Bugfixes:\n  \n  - Internal bugfixes\n\n\nLaTeXTools\n----------\n\n  LaTeXTools Plugin version 3.7.10 (2016-05-12) changelog:\n  \n  Features:\n  \n  - Updated Evince scripts to run on Python3 and try to autodetect Python version (#721, #333, #400)\n  - Support for multiple cursors with \\input, \\include and environment completions (#691)\n  - Ref commands run with only a single label will automatically be completed\n  - keep_focus and forward_sync can be set via arguments to the jump_to_pdf command (#680)\n  \n  Bugfixes:\n  \n  - Improve author_short (#691)\n\n\nLaTeXTools\n----------\n\n  LaTeXTools Plugin version 3.7.11 (2016-05-14) changelog:\n  \n  Bugfixes:\n  \n  - Allow SumatraPDF.exe to be run from PATH (#724)\n  - Honor python2 setting in Evince\n",
+			"settings":
+			{
+				"buffer_size": 3118,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "sections/Kravspecifikationer/Kravspecifikationer.tex",
+			"settings":
+			{
+				"buffer_size": 7020,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
+			"settings":
+			{
+				"buffer_size": 7025,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Implementation/ElementerVejnettet.tex",
+			"settings":
+			{
+				"buffer_size": 6003,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Implementation/Klassediagrammer.tex",
+			"settings":
+			{
+				"buffer_size": 5529,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Teori/Grafteori.tex",
+			"settings":
+			{
+				"buffer_size": 3013,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Design/Design.tex",
+			"settings":
+			{
+				"buffer_size": 3511,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Design/DesignIndledning.tex",
+			"settings":
+			{
+				"buffer_size": 558,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Implementation/Implementation.tex",
+			"settings":
+			{
+				"buffer_size": 533,
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 				"line_ending": "Windows"
 			}
 		},
@@ -150,7 +229,83 @@
 			"file_write_time": 131076932649743186,
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 945,
+=======
+				"buffer_size": 871,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Metode/Metode.tex",
+			"settings":
+			{
+				"buffer_size": 4436,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Teori/Teori.tex",
+			"settings":
+			{
+				"buffer_size": 663,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Implementation/Viewport.tex",
+			"settings":
+			{
+				"buffer_size": 7548,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Teknologianalyse/altransWTF.tex",
+			"settings":
+			{
+				"buffer_size": 11735,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Indledning/Indledning.tex",
+			"settings":
+			{
+				"buffer_size": 3284,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "aau/frontpage.tex",
+			"settings":
+			{
+				"buffer_size": 950,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "aau/titlepages.tex",
+			"settings":
+			{
+				"buffer_size": 1347,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "aau/signatures.tex",
+			"settings":
+			{
+				"buffer_size": 1115,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "setup/variables.tex",
+			"settings":
+			{
+				"buffer_size": 601,
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 				"line_ending": "Windows"
 			}
 		}
@@ -387,7 +542,11 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
 			"selected": 2,
+=======
+			"selected": 9,
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 			"sheets":
 			[
 				{
@@ -415,7 +574,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 4,
+=======
+					"stack_index": 12,
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 					"type": "text"
 				},
 				{
@@ -424,15 +587,112 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 549,
+=======
+						"buffer_size": 9304,
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								549,
 								549
+=======
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1903.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3118,
+								3118
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sections/Kravspecifikationer/Kravspecifikationer.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7020,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3922,
+								3922
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 							]
 						],
 						"settings":
@@ -441,6 +701,69 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
+=======
+						"translation.y": 41.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sections/Implementation/ElementerVejnettet.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6003,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5026,
+								5026
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1500.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "sections/Implementation/Klassediagrammer.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1284,
+								1284
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -448,8 +771,97 @@
 					"type": "text"
 				},
 				{
+<<<<<<< HEAD
 					"buffer": 2,
 					"file": "appendix.tex",
+=======
+					"buffer": 7,
+					"file": "sections/Teori/Grafteori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3013,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1488,
+								1488
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sections/Design/Design.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								532,
+								532
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "sections/Design/DesignIndledning.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								558,
+								558
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "sections/Implementation/Implementation.tex",
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 					"semi_transient": false,
 					"settings":
 					{
@@ -472,6 +884,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 0,
 					"type": "text"
 				},
@@ -479,6 +892,45 @@
 					"buffer": 3,
 					"file": "sections/Teori/Grafteori.tex",
 					"semi_transient": true,
+=======
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "references.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7812,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "sections/EksisterendeModeller/eksisterendemodeller.tex",
+					"semi_transient": false,
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 					"settings":
 					{
 						"buffer_size": 3017,
@@ -497,6 +949,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -505,6 +958,72 @@
 				},
 				{
 					"buffer": 4,
+=======
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1080.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "sections/Problemformulering/Problemformulering.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
@@ -516,8 +1035,98 @@
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								945,
 								945
+=======
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "sections/Metode/Metode.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "sections/Teori/Teori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 520.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "sections/Implementation/Viewport.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 							]
 						],
 						"settings":
@@ -525,10 +1134,189 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+=======
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "sections/Teknologianalyse/altransWTF.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11312,
+								11312
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2700.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "sections/Indledning/Indledning.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 972.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "aau/frontpage.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								623,
+								623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "aau/titlepages.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "aau/signatures.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "setup/variables.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+>>>>>>> 57aeb53cf38e4290698e52097a8f0f8c3232c0ef
 					"type": "text"
 				}
 			]
