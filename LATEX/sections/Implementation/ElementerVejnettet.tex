@@ -9,14 +9,14 @@ public enum NodeTypes { None, Yield, Home, Parking, Light, Inbound, Outbound }
 \caption{LightController klassen}\label{enumNodeTypes}
 \end{figure}
 
-\begin{desciption}
-\item[None] er en node, som kan tilkobles mellem vejene.
-\item[Parking] er noden hvor køretøjerne parkere ved deres destinationer.
-\item[Home] er startpunkt og slutpunkt for bilen.
-\item[Light] er et lyskryds, hvor køretøjet skal standse hvis noden er rød, ellers skal den køre videre, hvis den er grøn.
-\item[Inbound] er en node, hvor køretøjerne kommer fra og ind til vejnetværket i programmet.
-\item[Outbound] er en node, hvor køretøjerne køre ud fra, når et køretøj forlader vejnetværket.
-\end{desciption}
+\begin{description}
+\item [None] er en node, som kan tilkobles mellem vejene.
+\item [Parking] er noden hvor køretøjerne parkere ved deres destinationer.
+\item [Home] er startpunkt og slutpunkt for bilen.
+\item [Light] er et lyskryds, hvor køretøjet skal standse hvis noden er rød, ellers skal den køre videre, hvis den er grøn.
+\item [Inbound] er en node, hvor køretøjerne kommer fra og ind til vejnetværket i programmet.
+\item [Outbound] er en node, hvor køretøjerne køre ud fra, når et køretøj forlader vejnetværket.
+\end{description}
 
 \subsection{Destination}
 \texttt{Destination} klassen i vores program er et punkt hvorpå køretøjerne vil søge henimod. Dette er ikke det punkt hvor køretøjerne stopper, til dette formål anvendes der en \texttt{Node} som er angivet til at være til parkering i nærheden af en \texttt{Destination}. \texttt{Destination} klassen består af en instans af \texttt{DestionationType} klassen, dette er, ligesom med \texttt{Vehicle} og \texttt{Road} klasserne, en klasse der bruges til at brugerdefinere forskellige typer af destinations med forskellige parametre, disse parametre kan ses på figur \ref{DestinationTypes}. Den første er \texttt{name} på en \texttt{Destination}, denne anvendes således brugeren kan have overblik over de forskellige destinationer. Derudover bruges \texttt{Color} til at vise farven på de forskellige destinationer, dette gøres også for at have overblik over destiationerne. Samtidig anvendes variablen \texttt{Distribution} til at definerer hvor mange procent af køretøjerne der køre til de individueller distinations typer.
@@ -64,7 +64,7 @@ private void ToggleLights()
 \caption{LightController klassen}\label{LightControllerKlassen}
 \end{figure}
 
-\texttt{LightController} klassen har til formål kontrollere et trafiklys over tid. Dette er valgt at gøre ved brug af metoden \texttt{Update()}, se figur \ref{LightControllerKlassen}. I metoden bliver variablen \texttt{_counter} anvendt til at tælle op hvor lang tid der er gået i simuleringen. Den selektivekontrolstruktur bliver udført, hvis \texttt{_counter} er over den tid vi venter på nu, hvor \texttt{_current} enten er \texttt{FirstTime} eller \texttt{SecondTime}. Inde i kontrolstrukturen bliver \texttt{_current} skiftet mellem \texttt{FirstTime} eller \texttt{SecondTime} således at lyskrydset skifter mellem rød og grøn, som ikke er visuelt. Metoden \texttt{ToggleLights()} kigger så igennem de nodetyper som er sat til \texttt{Light} og toggler dem, således de skifter mellem rød og grøn. Der er valgt at toggle lyskrydsene tidsbaseret, fordi flere lyskryds den virkelige verden også er sat op til tid.
+\texttt{LightController} klassen har til formål kontrollere et trafiklys over tid. Dette er valgt at gøre ved brug af metoden \texttt{Update()}, se figur \ref{LightControllerKlassen}. I metoden bliver variablen \texttt{\_counter} anvendt til at tælle op hvor lang tid der er gået i simuleringen. Den selektivekontrolstruktur bliver udført, hvis \texttt{\_counter} er over den tid vi venter på nu, hvor \texttt{\_current} enten er \texttt{FirstTime} eller \texttt{SecondTime}. Inde i kontrolstrukturen bliver \texttt{\_current} skiftet mellem \texttt{FirstTime} eller \texttt{SecondTime} således at lyskrydset skifter mellem rød og grøn, som ikke er visuelt. Metoden \texttt{ToggleLights()} kigger så igennem de nodetyper som er sat til \texttt{Light} og toggler dem, således de skifter mellem rød og grøn. Der er valgt at toggle lyskrydsene tidsbaseret, fordi flere lyskryds den virkelige verden også er sat op til tid.
 
 \subsection{Road}
 Road klassen indeholder de variabler der skal anvendes for at kunne beskrive en vej i programmet.
