@@ -1,12 +1,12 @@
 \section{Dijkstras Algoritme}
 \begin{wrapfigure}{r}{0.45\textwidth}
     \centering
-	\includegraphics[width=0.45\textwidth]{Pictures/Teoriafsnit/Figurfiler/Graf.png}
-	\label{fig:dijkstrasgraf}
-	\caption{En vægtet graf}
+  \includegraphics[width=0.45\textwidth]{Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png}
+  \label{dijkstrasgraf}
+  \caption{En vægtet ikke-orienteret graf}
 \end{wrapfigure}
 
-Dijkstra's er en grådig algoritme der kan finde en rute imellem to knudepunkter i en vægtet graf. I gruppens program er dette eksempelvis ruten mellem et køretøjs hjem og destination. Algoritmen starter med at sætte afstanden til alle punkter lig uendelig, udover start punktet da det er det eneste der kendes til på tidspunktet. Når algoritmen kører en graf igennem, kigger den på den node hvor kosten er lavest, og udregner kosten til de naboliggende noder. Når kosten udregnes for en nabo node, tages kosten af ruten til den nuværende node og afstanden til nabo noden bliver adderet. Da algoritmen altid tager noden med den lavest kost, vil den have fundet den korteste rute, når den nuværende node er slutnoden \cite[s. 681-684]{DMATBOGEN}. Som et eksempel kan vejen fra A til Z på figur \ref{fig:dijkstrasgraf} findes:
+Dijkstra's er en grådig algoritme der kan finde en rute imellem to noder i en vægtet graf. Grafen ruten kan findes i kan både være orienteret og ikke orienteret. Algoritmen starter med at sætte afstanden til alle punkter lig uendelig, udover start punktet da det er det eneste der kendes til på tidspunktet. Når algoritmen kører en graf igennem, kigger den på den node hvor kosten er lavest, og udregner kosten til de naboliggende noder. Når kosten udregnes for en nabo node, tages kosten af ruten til den nuværende node og afstanden til nabo noden bliver adderet. Da algoritmen altid tager noden med den lavest kost, vil den have fundet den korteste rute, når den nuværende node er slutnoden \cite[s. 681-684]{DMATBOGEN}. Som et eksempel kan vejen fra A til Z på figur \ref{dijkstrasgraf} findes:
 
 \begin{enumerate}
 \item Algoritmen starter ved A, og kigger på naboerne B og C. Deres kost bliver noteret til at være 4 og 2.
@@ -18,27 +18,82 @@ Dijkstra's er en grådig algoritme der kan finde en rute imellem to knudepunkter
 \end{enumerate}
 
 Kostene for hver node kan gemmes i en tabel, som set på tabel \ref{dijktabel}.
-	
+  
 \begin{table}[H]
 \centering
-	\begin{tabular}{|l|l|l|l|l|l|l|}
-	\hline
-	                 & A & B & C & D  & E  & Z  \\ \hline
-	                 & 0 & $\infty$ & $\infty$ & $\infty$  & $\infty$  & $\infty$  \\ \hline
-	A                & 0 & 4 & 2 & $\infty$  & $\infty$  & $\infty$  \\ \hline
-	A, C             & 0 & 3 & 2 & 10 & 12 & $\infty$  \\ \hline
-	A, C, B          & 0 & 3 & 2 & 8  & 12 & $\infty$  \\ \hline
-	A, C, B, D       & 0 & 3 & 2 & 8  & 10 & 14 \\ \hline
-	A, C, B, D, E    & 0 & 3 & 2 & 8  & 10 & 13 \\ \hline
-	A, C, B, D, E, Z & 0 & 3 & 2 & 8  & 10 & 13 \\ \hline
-	\end{tabular}
-	\label{dijktabel}
-	\caption{Dijkstra Kost Tabel}
+  \begin{tabular}{|l|l|l|l|l|l|l|}
+  \hline
+                   & A & B & C & D  & E  & Z  \\ \hline
+                   & 0 & $\infty$ & $\infty$ & $\infty$  & $\infty$  & $\infty$  \\ \hline
+  A                & 0 & 4 & 2 & $\infty$  & $\infty$  & $\infty$  \\ \hline
+  A, C             & 0 & 3 & 2 & 10 & 12 & $\infty$  \\ \hline
+  A, C, B          & 0 & 3 & 2 & 8  & 12 & $\infty$  \\ \hline
+  A, C, B, D       & 0 & 3 & 2 & 8  & 10 & 14 \\ \hline
+  A, C, B, D, E    & 0 & 3 & 2 & 8  & 10 & 13 \\ \hline
+  A, C, B, D, E, Z & 0 & 3 & 2 & 8  & 10 & 13 \\ \hline
+  \end{tabular}
+  \label{dijktabel}
+  \caption{Dijkstra Kost Tabel}
 \end{table}
 
 \begin{figure}[H]
 \begin{lstlisting}
-Hmm...
+object Node
+  Previous = null
+  Cost = PositiveInfinity
+  List NeighborNodes
+
+procedure FindPath(AllNodes, StartNode, EndNode)
+  StartNode.Cost = 0
+  List Queue.Add(StartNode)
+    while Queue > 0 do
+      CurrentNode = Node with smallest Cost in Queue
+      if CurrentNode is EndNode
+        return TracePath(CurrentNode)
+      else
+        Queue.Remove(CurrentNode)
+        EvaluateNeighbors(CurrentNode)
+    end
+    return null // No path found
+end
 \end{lstlisting}
-\caption{Dijkstra pseudo-kode}\label{DijkstraCode}
+\caption{Dijkstra pseudo-kode: FindPath og Node}\label{DijkstraCodeFindPathNode}
 \end{figure}
+
+På figur \ref{DijkstraCodeFindPathNode} ses pseudokode for kernen af Dijkstras algoritme. En \texttt{Node} er defineret først, hvor \texttt{Previous} til at starte med er \texttt{null} eller 'ikke eksisterende', og \texttt{Cost} er uendelig. \texttt{FindPath} proceduren tager en graph \texttt{AllNodes}, startnoden \texttt{StartNode} og slutnoden \texttt{EndNode}. Listen \texttt{Queue} laves og \texttt{StartNode} indsættes, da den skal findes i første iteration af while løkken. While løkken køres mens der stadig er noder der ikke er undersøgt, altså noder der ligger i \texttt{Queue}, og den starter med at sætte \texttt{CurrentNode} til noden der har den laveste \texttt{Cost}. Hvis \texttt{CurrentNode} er lig \texttt{EndNode} så har algoritmen fundet ruten og den bliver returneret ved brug af proceduren \texttt{TracePath}, som beskrives sidst i dette afsnit. Hvis ikke \texttt{CurrentNode} er lig \texttt{EndNode}, så flyttes den til \texttt{Closed} listen og naboerne til noden bliver evalueret gennem proceduren \texttt{EvaluateNeighbors} som beskrives herunder.
+
+\begin{figure}[H]
+\begin{lstlisting}
+procedure EvaluateNeighbors(CurrentNode)
+  for each NeighborNode in CurrentNode.NeighborNodes
+    if NeighborNode is not in Queue
+      Queue.Add(NeighborNode)
+      PossibleCost = CurrentNode.Cost 
+                     + distance from CurrentNode
+                       to NeighborNode
+      if NeighborNode.Cost > PossibleCost
+        NeighborNode.Cost = PossibleCost
+        NeighborNode.Previous = CurrentNode
+  end
+end
+\end{lstlisting}
+\caption{Dijkstra pseudo-kode: EvaluateNeighbors}\label{DijkstraCodeEvaluateNeighbors}
+\end{figure}
+
+\texttt{EvaluateNeighbors} proceduren som set på figur \ref{DijkstraCodeEvaluateNeighbors}, evaluerer naboerne af en \texttt{Node}, og overskriver \texttt{Cost} og \texttt{Previous}, hvis \texttt{Cost} er lavere fra den nuværende node \texttt{CurrentNode}. 
+
+\begin{figure}[H]
+\begin{lstlisting}
+procedure TracePath(CurrentNode)
+  List Path
+  while CurrentNode is not null
+    Path.Add(CurrentNode)
+    CurrentNode = CurrentNode.Previous
+  end
+  return Reverse(Path)
+end
+\end{lstlisting}
+\caption{Dijkstra pseudo-kode: TracePath}\label{DijkstraCodeTracePath}
+\end{figure}
+
+Figur \ref{DijkstraCodeTracePath} viser proceduren \texttt{TracePath}, der finder vejen tilbage fra slutnoden. Dette gøres gennem en while løkke, der køres indtil at den forrige \texttt{Node} er lig \texttt{null}, hvilket vil sige at startnoden er nået. Noderne overføres til en liste, der bliver invereteret og returneret til brugeren af proceduren.

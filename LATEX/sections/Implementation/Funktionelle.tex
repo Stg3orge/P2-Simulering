@@ -1,7 +1,10 @@
-\section{Funktionelle}\label{Funktionelle}
+\section{Kerne Funktionalitet}\label{Kernefunktionalitet}
+
+For at håndtere alle dele af programmet blev der implementeret en et styringscenter, som heri findes som klassen \texttt{ToolController}. Formålet med denne fremgangsmåde skulle give bedre overblik over programmets mange metoder og give mulighed for let at håndtere fejl og ændringer i funktionaliteten. Klasserne i programmet er til dette formål håndteret objektorienteret og generelt nok til at fremgangsmåden kan fungere i praksis.
+
 %//////////////////////////////// ToolController ////////////////////////////////%
 \subsection{ToolController}
-\texttt{ToolController} klassen har til formål at forbinde de forskellige værktøjer så når brugeren f.eks. trykker på et af værktøjerne vil \texttt{ToolControlleren} kalde de tilsvarende metoder til værktøjet. Samt at der kun at være valgt et værktøj af gangen. \texttt{ToolController} er altså klassen som står for funktionerne som f.eks. \texttt{AddNode}, \texttt{AddRoad}, \texttt{AddLightController} osv.
+\texttt{ToolController} klassen har til formål at forbinde de forskellige værktøjer så når brugeren f.eks. trykker på et af værktøjerne vil \texttt{ToolControlleren} kalde de tilsvarende metoder til værktøjet. Samt at der kun at være valgt et værktøj af gangen. \texttt{ToolController} er altså klassen som står for funktionerne som f.eks. \texttt{AddNode()}, \texttt{AddRoad()}, \texttt{AddLightController()} osv.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -39,10 +42,10 @@ private void ViewportClick(object sender, MouseEventArgs args)
   }
 }
 \end{lstlisting}
-\caption{ViewportClick metoden}\label{ViewportClickCode}
+\caption{ViewportClick() metoden}\label{ViewportClickCode}
 \end{figure}
 
-Derudover bliver click eventen på \texttt{Input} lageret af \texttt{Viewporten} i constructoren sat til at blive håndteret af metoden \texttt{ViewportClick}. \texttt{ViewportClick} der kan ses på figur \ref{ViewportClickCode} tjekker hvilket værktøj der er aktivt og kalder den tilsvarende metode.
+Derudover bliver click eventen på \texttt{Input} laget af \texttt{Viewporten} i constructoren sat til at blive håndteret af metoden \texttt{ViewportClick()}. \texttt{ViewportClick()} der kan ses på figur \ref{ViewportClickCode} tjekker hvilket værktøj der er aktivt og kalder den tilsvarende metode.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -212,7 +215,7 @@ static public Project OpenProject()
 \caption{OpenProject metoden}\label{OpenProjectCode}
 \end{figure}
 
-Metoden \texttt{OpenProject}, der vises på figur \ref{OpenProjectCode}, kan åbne et eksisterende projekt, når brugeren trykker på Open Project i menuen. Denne metode benytter sig af \texttt{OpenFileDialog}, som ligger under \texttt{System.Windows.Forms}. Koden benytter sig af try-catch-finally, hvor den går ind i try fasen og tjekker om der om brugeren har valgt en TSP fil (traffic simulation project), hvis TSP filen er valgt så vil metoden deserialisere og åbne det gemte projekt op. Sidst vil finally lukke filen, så andre kan komme til.
+Metoden \texttt{OpenProject}, der vises på figur \ref{OpenProjectCode}, kan åbne et eksisterende projekt, når brugeren trykker på Open Project i menuen. Denne metode benytter sig af \texttt{OpenFileDialog}, som ligger under \texttt{System.Windows.Forms}. Koden benytter sig af try-catch-finally, hvor den går ind i try fasen og filtrerer alle andre fil-typer væk som ikke er en TSP fil (traffic simulation project), hvis TSP filen er valgt så vil metoden deserialisere og åbne det gemte projekt op. Sidst vil finally lukke filen, så andre kan komme til.
 
 \begin{figure}[H]
 \begin{lstlisting}

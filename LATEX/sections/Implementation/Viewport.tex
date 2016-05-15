@@ -41,11 +41,33 @@ public object GetObjByGridPos()
 \label{ViewportGetObjByGridPos}
 \end{figure}
 
-Som sagt kan \texttt{Viewport} indikere koordinaterne til indsatte objekter og dette gør den igennem metoden \texttt{GetObjByGridPos} som set i figur \ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle \texttt{Node}, \texttt{LightController} og \texttt{Destination} om deres position er lig \texttt{GridPos}. Hvis den har fundet en, så retunere den det fundne objekt. Grunden til dette er for at være i stand til at arrangere de håndterede objekter så deres koordinat kan identificeres.
+Som sagt kan \texttt{Viewport} indikere koordinaterne til indsatte objekter og dette gør den igennem metoden \texttt{GetObjByGridPos()} som set i figur \ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle \texttt{Node}, \texttt{LightController} og \texttt{Destination} om deres position er lig \texttt{GridPos}. Hvis den har fundet en, så retunere den det fundne objekt. Grunden til dette er for at være i stand til at arrangere de håndterede objekter så deres koordinat kan identificeres.
 
 \vspace{5mm}
 
-Inde i \texttt{partial} klassen \texttt{ViewportSetup} bliver der angivet en række af lag som set i figur \ref{ViewportSetupLayers}. Disse lag indikerer i hvilken rækkefølge objekterne på panelet skal tegnes. Dette kan ses ved brugen af \texttt{Controls.Add} hvori der gradvist bliver lagt lag på lag.
+Inde i \texttt{partial} klassen \texttt{ViewportSetup} bliver der angivet en række af lag (\texttt{Layer()}) som set i figur \ref{ViewportSetupLayers}. \texttt{Layer()} er en klasse som arver fra \texttt{PictureBox} og har en constructor med \texttt{DoubleBuffer=true}. Grunden til at \texttt{PictureBox} ikke bare er benyttet alene er fordi måden disse \texttt{Layer()} er anvendt i bl.a. \texttt{ToolController} klassen afhænger af at de kan genindlæses når et objekt, såsom en \texttt{Node}, skal skal ændres eller tegnes en ny. Dette gøres som vist i figur \ref{ToolControllerSetNodeType} fra \texttt{ToolController} klassen. Heri kan der ses at metoden til sidst genindlæser på \texttt{Nodes}. Hvis \texttt{DoubleBuffer} sat til \texttt{true} ville programmet flimre visuelt, fordi objekter ikke bliver tegnet hurtigt nok til at virke omgående.
+
+\begin{figure}[H]
+\begin{lstlisting}
+private void SetNodeType(NodeTypes type)
+{
+    object obj = Viewport.GetObjByGridPos();
+    if (obj is Node)
+    {
+        if (type == NodeTypes.Light && ((Node)obj).Type == NodeTypes.Light)
+            ((Node)obj).Green = !((Node)obj).Green;
+        else
+            ((Node)obj).Type = type;
+
+        Viewport.Nodes.Refresh();
+    }
+}
+\end{lstlisting}
+\caption{Brug af Control.Refresh() i ToolController klassen}
+\label{ToolControllerSetNodeType}
+\end{figure}
+
+Disse lag indikerer i hvilken rækkefølge objekterne på panelet skal tegnes. Dette kan ses ved brugen af \texttt{Controls.Add} hvori der gradvist bliver lagt lag på lag. Hvis programmet ikke tegnede objekter i lag, så ville de alle skulle tegnes hver gang man udførte en enkelt opdatering, ligesom set i figur \ref{ToolControllerSetNodeType}.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -69,7 +91,7 @@ Information.Controls.Add(Input);
 
 \subsection{SimulationViewport}\label{SimulationViewport}
 
-I \ref{ViewPortSimulation} bliver der instansieret et nyt lag \texttt{Vehicles} og en variabel for \texttt{SimulationData} hvori indeholdes nødvendige datasæt for at udføre en simulation. Det kan ses på figur \ref{ViewPortSimulationData} at constructoren modtager et \texttt{Project} og to lister, henholdsvist \texttt{primary} og \texttt{secondary}. \texttt{SimulationViewport} tager derefter \texttt{SimulationData} som en parameter til dens egen constructor som set i figur \ref{ViewportSimulationConstructor}.
+I \ref{ViewPortSimulation} bliver der instansieret et nyt lag \texttt{Vehicles} og en variabel for \texttt{SimulationData} hvori indeholdes nødvendige datasæt for at udføre en simulation. \texttt{SimulationViewport} tager derudover \texttt{SimulationData} som en parameter til dens egen constructor som set i figur \ref{ViewportSimulationConstructor}. Formålet med .. TBC
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -77,25 +99,9 @@ private const int VehicleSize = 16;
 public Layer Vehicles = new Layer();
 public SimulationData SimData;
 public Partitions CurrentPartition = Partitions.Primary;
-private int _time = 0;
-public int Time
 \end{lstlisting}
 \caption{Variabler til SimulationViewport}
 \label{ViewPortSimulation}
-\end{figure}
-
-\begin{figure}[H]
-\begin{lstlisting}
-public SimulationData(Project project, List<VehicleData> primary, List<VehicleData> secondary)
-{
-    Project = project;
-    PrimaryData = primary;
-    SecondaryData = secondary;
-    Date = DateTime.Now;
-}
-\end{lstlisting}
-\caption{SimulationData klassen og dens constructor}
-\label{ViewPortSimulationData}
 \end{figure}
 
 \begin{figure}[H]
@@ -104,10 +110,6 @@ public SimulationViewport(SimulationData data) : base(data.Project)
 {
     SimData = data;
             
-    Vehicles.Dock = DockStyle.Fill;
-    Vehicles.BackColor = Color.Transparent;
-    Vehicles.Paint += DrawVehicles;
-
     Grid.Paint -= DrawGrid;
     Entities.Controls.Remove(Information);
     Entities.Controls.Add(Vehicles);
@@ -118,3 +120,25 @@ public SimulationViewport(SimulationData data) : base(data.Project)
 \caption{Constructoren til SimulationViewport}
 \label{ViewportSimulationConstructor}
 \end{figure}
+
+Til brug i selve simuleringen bliver der afsat en hel dag i millisekunder (86400000). I \texttt{SimulationSettings} bliver der instansieret en variabel \texttt{Step} på 100 millisekunder. Dette bliver der gået igennem i et \textbf{For-loop} som findes i klassen \texttt{Simulation}. Simuleringen opdateres efter det antal som \texttt{Step} dikterer. \texttt{SimulationViewport} har så til formål at visualisere dette step.
+
+\begin{figure}[H]
+\begin{lstlisting}
+private int _time = 0;
+public int Time
+{
+    get { return _time; }
+    set
+    {
+        if (value > 86400000) _time = 86400000;
+        else if (value < 0) _time = 0;
+        else _time = value;
+    }
+}
+\end{lstlisting}
+\caption{Tids-afsætning for en simulering, 86400000ms eller en hel dag.}
+\label{TimeForSim}
+\end{figure}
+
+
