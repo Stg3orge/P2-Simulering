@@ -1,18 +1,18 @@
-\section{Hoved Brugerfladen}\label{HovedBrugerfladen}
+\section{GUIMain}\label{HovedBrugerfladen}
 Dette afsnit omhandler flowet og indholdet af \texttt{GUIMain}, programmets start og hoved vindue. 
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/Implementation/program}
-    \caption{Programmets hoved vindue GUIMain}
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/Implementation/program2}
+    \caption{Programmets hoved vindue - GUIMain}
     \label{a319program}
 \end{figure}
 
-På figur \ref{a319program} ses \texttt{GUIMain}. GUIMain består af en menulinje, værktøjslinje og en Viewport. Vinduet fungerer udelukkende ved brug af events. Ved tryk på et menupunkt, vil der udløses en event, der åbner det tilsvarende vindue. Menupunkterne er delt op i 4 forskellige kategorier. \texttt{File} indeholder menupunkter der håndtrer fil åbning og gemning. \texttt{Settings} har indstillinger til det nuværende projekt, fordeling af destinationer og transportmiddelvalg, og sidst indstillinger for hvordan simuleringen skal udføres. \texttt{Types} har menupunkter til opsætning af forskellige destination, vej og køretøj typer. Sidst kan man igennem \texttt{Simulation} køre og vise simuleringer.
+På figur \ref{a319program} ses \texttt{GUIMain}. GUIMain består af en menulinje\textbf(1), værktøjslinje\textbf(2) og en Viewport\textbf(3). Vinduet fungerer udelukkende ved brug af events. Ved tryk på et menupunkt, vil der udløses en event, der åbner det tilsvarende vindue. Menupunkterne er delt op i 4 forskellige kategorier. \texttt{File} indeholder menupunkter der håndtrer fil åbning og gemning. \texttt{Settings} har indstillinger til det nuværende projekt, fordeling af destinationer og transportmiddelvalg, og sidst indstillinger for hvordan simuleringen skal udføres. \texttt{Types} har menupunkter til opsætning af forskellige destination, vej og køretøj typer. Sidst kan man igennem \texttt{Simulation} køre og vise simuleringer.
 
 \vspace{5mm}
 
-Værktøjslinjen har en række knapper der kan tjekkes. Når en knap bliver trykket på, bliver der sendt en event der kalder metoden \texttt{ToggleTool} på \texttt{ToolControlleren}. \texttt{ToggleTool} sørger for at der kun er en aktiv knap ad gangen. Derudover er der to lister på værktøjslinjen, i listen til venstre kan brugeren vælge den \texttt{DestinationType} der bliver brugt, og i listen til højre kan brugeren vælge hvilken \texttt{RoadType} der skal bruges.
+Værktøjslinjen har en række knapper der kan tjekkes. Når en knap bliver trykket på, bliver der sendt en event der kalder metoden \texttt{ToggleTool} på \texttt{ToolControlleren}. \texttt{ToggleTool} sørger for at der kun er en aktiv knap ad gangen. Derudover er der to lister på værktøjslinjen, i listen til venstre kan brugeren vælge den \texttt{DestinationType}\textbf(4) der bliver brugt, og i listen til højre kan brugeren vælge hvilken \texttt{RoadType(5)}\textbf(5) der skal bruges.
 
 \vspace{5mm}
 

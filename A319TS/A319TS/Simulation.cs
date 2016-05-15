@@ -97,7 +97,7 @@ namespace A319TS
         {
             _primaryVehicles = CreateVehicles(Partitions.Primary);
             _secondaryVehicles = CreateVehicles(Partitions.Secondary);
-            
+
             PrimaryWorker.RunWorkerAsync(_primaryVehicles);
             SecondaryWorker.RunWorkerAsync(_secondaryVehicles);
         }
@@ -132,6 +132,7 @@ namespace A319TS
         private List<Vehicle> CreateVehicles(Partitions partition)
         {
             int carCount, inbound, outbound, timeSpread, toDestTime, toHomeTime;
+
             if (partition == Partitions.Primary)
             {
                 Pathfinder.SetProject(PrimaryProject, Partitions.Primary);
@@ -161,8 +162,23 @@ namespace A319TS
 
             List<Vehicle> vehicles = new List<Vehicle>();
 
-            for (int i = 0; i < carCount; i++)
-                vehicles.Add(new Vehicle(Project, homes[i], destinations[i], vehicleTypes[i], toDestTimes[i], toHomeTimes[i]));
+            if(partition == Partitions.Primary)
+                for (int i = 0; i < carCount; i++)
+                    vehicles.Add(new Vehicle(Project, homes[i], destinations[i], vehicleTypes[i], toDestTimes[i], toHomeTimes[i]));
+            else
+            {
+                if (carCount >= _primaryVehicles.Count)
+                {
+                    for (int i = 0; i < _primaryVehicles.Count; i++)
+                        vehicles.Add(new Vehicle(Project, _primaryVehicles[i].Home, _primaryVehicles[i].Destination, _primaryVehicles[i].Type, toDestTimes[i], toHomeTimes[i]));
+
+                    for (int i = _primaryVehicles.Count; i < carCount; i++)
+                        vehicles.Add(new Vehicle(Project, homes[i], destinations[i], vehicleTypes[i], toDestTimes[i], toHomeTimes[i]));
+                }
+                else
+                    for (int i = 0; i < carCount; i++)
+                        vehicles.Add(new Vehicle(Project, _primaryVehicles[i].Home, _primaryVehicles[i].Destination, _primaryVehicles[i].Type, toDestTimes[i], toHomeTimes[i]));
+            }
 
             return vehicles;
         }
@@ -264,4 +280,9 @@ namespace A319TS
             return times;
         }
     }
+
+
+
+ 
+
 }

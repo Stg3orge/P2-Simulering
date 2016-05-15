@@ -102,7 +102,7 @@ SimulationSettings sætter defaultværdierne til de forskellige variabler, og gi
 \end{figure}
 
 \subsection{Data}
-Dataen fra simuleringen i programmet gives til brugeren igennem to klasser. SimulationData, er en klasse som modtager to lister fra VehicleData og derudover tager den imod information fra Project og Datetime. Metoden SimulationData læser disse data ind til de forskelige typer i klassen. Der retuneres dernæst Project.name og en DateTime type.
+Dataen fra simuleringen i programmet gives til brugeren igennem to klasser. SimulationData, er en klasse som modtager to lister fra VehicleData og derudover tager den imod information fra Project og Datetime. Metoden SimulationData læser disse data ind til de forskelige typer i klassen. Hvis ToString metoden bliver kaldt, så retuneres Project.name og en DateTime type.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -134,11 +134,23 @@ public class SimulationData
 \end{lstlisting}
 \caption{SimulationData Klasse} \label{SimulatonDataClass}
 \end{figure}
+
 Som nævnt over figuren så bliver der anvendt en klasse til SimulationData. VehicleData er som pointeret data der bliver lagt over i to liste, PrimaryData og SecondaryData. VehicleData består ikke af nogle større funktioner og derfor vil der ikke være nogle dybbere forklaring dertil. Den består af nogle typer der læser data fra PointD klassen og VehicleType.
+
 \subsection{MathExtension}
-MathExtension er en klasse der er lavet for at håndtere udregningerne fra Point til Point, fra PointD til PointD samt en kort kovertering af kmh til mms. Der gøres bruge af klasser fra math library. Disse udregninger anvendes bl.a i Vector2D klassen.
+MathExtension er en klasse der er lavet for at håndtere udregningerne fra Point til Point, fra PointD til PointD samt en kort kovertering af kmh til mms. Der gøres bruge af klasser fra math library. Måden vi udregner kmh til mms, er ved at gange antallet af timer i døgnet med antallet af minutter i en time. Der efter skal det ganges med antallet af sekunder i et minut, hvor til sidst skal ganges med 1000 for at få det til millisekunder \ref{ConvertKthToMms}. Vi benytter også os af afstandsformlen i MathExtension, hvor vi beregner afstanden mellem to noder \ref{AfstandsFormel}. Disse udregninger anvendes bl.a i Vector2D klassen.
+
+\begin{equation} \label{ConvertKthToMms}
+24 * 60 * 60 * 1000 = 86400000
+\end{equation}
+
+\begin{equation} \label{AfstandsFormel}
+\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+\end{equation}
+
 \subsection{Vector2D}
-Vector2D klassen anvendes til at opsætte de metoder som gør det muligt at bl.a. vehicles kan udregne hvor hen de skal bevæge sig i simuleringen. Metoderne er for det meste til at indlæse koordinter på gridded i simuleringen til anvendelse når simuleringen køre.
+Vector2D klassen anvendes til at opsætte de metoder som gør det muligt at bl.a. vehicles kan udregne hvor hen de skal bevæge sig i simuleringen. Metoderne er for det meste til at indlæse koordinter på gridded i simuleringen til anvendelse når simuleringen kører. I denne klasse har vi tre metoder, hvor i den første metode \texttt{Scale()} ganger vi vektoren op med en input parameter der bliver bestemt af brugeren. I \texttt{ToUnit()} bliver vores x og y divideret med størrelsen af vektoren, hvor størrelsen er defineret som længden af vektoren. \texttt{FromRoad()} metoden beregner vektoren der tager udgangspunkt i vejenes position. Ved vektor.X, der trækker man vejens slut position fra start position og ligger ind i variablen \texttt{vector.X}. Samme gør man ved \texttt{vector.Y}, derefter vil metoden returnere vektoren.
+
 \begin{figure}[H]
 \begin{lstlisting}
 class Vector2D
@@ -149,18 +161,6 @@ class Vector2D
    {
       get { return MathExtension.Distance(new PointD(0, 0), new PointD(X, Y)); }
    }
-
-   public Vector2D()
-   {
-      X = 0;
-      Y = 0;
-   }
-   public Vector2D(double x, double y)
-   {
-      X = x;
-      Y = y;
-   }
-
    public void Scale(double scalar)
    {
       X *= scalar;
