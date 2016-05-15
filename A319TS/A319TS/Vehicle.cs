@@ -16,6 +16,7 @@ namespace A319TS
         public List<PointD> ToDestRecord { get; set; }
         public List<PointD> ToHomeRecord { get; set; }
 
+
         private double _speed;
         public double Speed
         {
@@ -370,5 +371,20 @@ namespace A319TS
         {
             return new VehicleData(Type, ToDestRecord, ToHomeRecord, _toDestTime, _toHomeTime);
         }
+
+
+
+
+
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+
+
+
+
     }
 }

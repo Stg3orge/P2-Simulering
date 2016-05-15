@@ -10,7 +10,7 @@ Hvis man ønsker at A* skal finde den absolut korteste rute, kræver det at heur
 
 \vspace{5mm}
 
-Estimationerne der bliver udregnet benyttes hver gang algoritmen skal vælge den næste node der skal undersøges. Ligesom Dijkstra tager den node der har den nuværende laveste kost, tager A* den node der har den laveste estimation \texttt{F}.
+Estimationerne der bliver udregnet benyttes hver gang algoritmen skal vælge den næste \texttt{Node} der skal undersøges. Ligesom Dijkstra tager den node der har den nuværende laveste \texttt{Cost}, tager A* den Node der har den laveste \texttt{Estimation} \texttt{F}.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -18,33 +18,40 @@ object Node
   Previous = null
   Cost = PositiveInfinity
   Estimate = PositiveInfinity
+  List NeighborNodes
 \end{lstlisting}
 \caption{A* pseudo-kode: Node}\label{AStarCodeNode}
 \end{figure}
 
+Forskellen på pseudokoden fra Dijkstras algoritme er lille. Til \texttt{Node} objektet, der ses på figur \ref{AStarCodeNode}, er der tilføjet \texttt{Estimate} variablen, der senere bliver udfyldt af \texttt{EvaluateNeighbors}.
+
 \begin{figure}[H]
 \begin{lstlisting}
-CurrentNode = Find Node with smallest Estimate in Open
+CurrentNode = Node with smallest Estimate in Queue
 \end{lstlisting}
 \caption{A* pseudo-kode: Find smallest}\label{AStarCodeFindSmallest}
 \end{figure}
 
+I stedet for at sortere køen på \texttt{Cost} som der gøres i Dijkstra, bliver køen nu sorteret på \texttt{Estimate}, som set på figur \ref{AStarCodeFindSmallest}.
+
 \begin{figure}[H]
 \begin{lstlisting}
 procedure EvaluateNeighbors(CurrentNode)
-  for each NeighborNode in CurrentNode
-      if NeighborNode is not in Open
-      and NeighborNode is not in Closed
-        Open.Add(NeighborNode)
-        NeighborNode.Cost = CurrentNode.Cost 
-                          + DistanceTo(NeighborNode)
+  for each NeighborNode in CurrentNode.NeighborNodes
+    if NeighborNode is not in Queue
+      Queue.Add(NeighborNode)
+      PossibleCost = CurrentNode.Cost 
+                     + distance from CurrentNode
+                       to NeighborNode
+      if NeighborNode.Cost > PossibleCost
+        NeighborNode.Cost = PossibleCost
+        NeighborNode.Previous = CurrentNode
         NeighborNode.Estimate = NeighborNode.Cost
                               + Heuristic(NeighborNode)
-      if NeighborNode.Cost < CurrentNode.Cost
-                             + DistanceTo(NeighborNode)
-        NeighborNode.Previous = CurrentNode
   end
 end
 \end{lstlisting}
 \caption{A* pseudo-kode: EvaluateNeighbors}\label{AStarCodeEvaluateNeighbors}
 \end{figure}
+
+Den sidste ændring er fortaget i \texttt{EvaluateNeighbors}, set på figur \ref{AStarCodeEvaluateNeighbors}. Efter at en nabo \texttt{Node} er blevet fundet til at have en lavere \texttt{Cost} end den tidligere havde, bliver \texttt{Estimate} udregnet ved brug af nodens \texttt{Cost} eller \texttt{G}, plus heuristikken som eksempelvis kunne være distancen fra noden til slutpunktet.
