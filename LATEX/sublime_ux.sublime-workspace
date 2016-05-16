@@ -109,6 +109,9 @@
 			]
 		]
 	},
+	"buffers":
+	[
+	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -155,36 +158,71 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/IndledningProblemanalyse",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Kravspecifikationer",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Perspektivering",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Simulering",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori"
+	],
 	"file_history":
 	[
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/Main.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Kravspecifikationer/Kravspecifikationer.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/ElementerVejnettet.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/Klassediagrammer.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teori/Grafteori.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Design/Design.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Design/DesignIndledning.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/FejlOgMangler.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/Implementation.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/references.bib",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/EksisterendeModeller/eksisterendemodeller.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Problemformulering/Problemformulering.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/sections.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Metode/Metode.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teori/Teori.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Implementation/Viewport.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/aau/frontpage.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/aau/titlepages.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/aau/signatures.tex",
-		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/setup/variables.tex",
-		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/FejlOgMangler",
-		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/oversigt.tex",
-		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/FileHandler.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Kravspecifikationer/Kravspecifikationer.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/setup/preamble.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Perspektivering/Perspektivering.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Diskussion/Diskussion.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/IndledningProblemanalyse/IndledningProblemanalyse.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Diskussion/Diskussion - Rasmus.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/Main.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Indledning til problemanalyse/IndledningProblemanalyse.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Klassediagrammer.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/appendix.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/HovedBrugerfladen.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Diverse.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/ElementerVejnettet.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Simulering/Simulering.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Test.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Problemformulering/Problemformulering.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/references.bib",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
+		"/C/Users/Rasmus Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Test/Test.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Design.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/aau/titlepages.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Viewport.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/PathFinder.tex",
+		"/C/Programs/C/Lektionone/pascal.c",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Design.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sublime_ux.sublime-project",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/oversigt.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/ImplementationAU.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/FileHandler.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/ToolController.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.aux",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup/variables.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/signatures.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/titlepages.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/frontpage.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Metode/Metode.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Problemformulering/Problemformulering.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.tex",
+		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
+		"/C/Programs/Git/Gundamnation/Programs/Eksamensopgave2016/External/products.csv",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
@@ -194,7 +232,6 @@
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
 		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
 		"/C/Programs/C/Lektionone/helppage.c",
-		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
 		"/C/Programs/C/Lektionone/adresserfratxt.c",
 		"/C/Programs/C/Lektionone/superliga-2014-2015.txt",
 		"/C/Programs/C/Lektionone/adresser.txt",
@@ -248,7 +285,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -262,8 +299,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"getobj",
-			"getob",
+			"HEAD",
 			"fight",
 			"teams",
 			"match_count",
@@ -314,9 +350,17 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -347,16 +391,17 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 238.0
+		"height": 149.0
 	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
 	"pinned_build_system": "",
+	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -390,6 +435,7 @@
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -397,7 +443,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 307.0,
+	"side_bar_width": 314.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
