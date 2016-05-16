@@ -1,5 +1,6 @@
 \chapter{Perspektivering}\label{Perspektivering}
-Vi har igennem programmet benyttet os af Window Forms for at kunne fremstille et GUI, som brugeren kan benytte sig af. Problemet er bare at når programmet skal tegne simuleringen, og når glitteret skal tegnes, og dette bliver gjort hver gang noget rykker sig på glitteret. Dette bliver gjort på cpu'en, hvilket bruger meget kraft og ressourcer. Istedet kunne man taget Windows Presentation Foundation (WPF) i brug, da WPF benytter sig af GPU'en når der skal tegnes, og så skal processeren kun tænke over det input der kommer fra simuleringen. Dette vil have en positiv effekt på programmet, da programmet ikke vil kræve for mange ressourcer for at lave en simulering.
+Vi har igennem programmet benyttet os af Window Forms for at kunne fremstille et GUI, som brugeren kan benytte sig af. Problemet er bare at når programmet skal tegne simuleringen, og når glitteret skal tegnes, og dette bliver gjort hver gang noget rykker sig på glitteret. Dette bliver gjort på cpu'en, hvilket bruger meget kraft og ressourcer. Istedet kunne man taget Windows Presentation Foundation (WPF) i brug, da WPF benytter sig af GPU'en når der skal tegnes, og så skal processeren kun tænke over det input der kommer fra brugeren. Dette vil kræve de samme resourcer at lave en simulering, da denne kører på cpuen. det vil dog gøre at opdateringer af grafik bliver hurtigere og ikke påvirker responstiden fra input lige så meget.
+
 
 \vspace{5mm}
 
@@ -7,9 +8,12 @@ Vores program ville være bedre hvis vi benyttede bedre multithreading, da vores
 
 \vspace{5mm}
 
-En anden måde at kigge på det kunne også være at man kunne optimere processen bag simulering, ved at sætte GPU'en til at beregne simulering beregningerne. Vores gruppe har benyttet CPU'en til at lave beregningerne, men vi kunne have benyttet GPU'en for at gøre processen hurtigere.
-
+En anden måde kunne være at man kunne optimere processen bag simulering, ved at sætte GPU'en til at beregne simulering beregningerne.
 
 \vspace{5mm}
 
-Når vores program kører i simulationen, så bilerne som der er i simulationen kender ikke noget til de modkørende. Det er grunden til at bilerne ikke har muligheden for at overhale hinanden. Den måde vi har sat vejene op, er ved at tegne to veje lige ovenpå hinanden, bare i modsatte retninger. vejene er heller ikke sammensat, så der er plads til at kunne overhale. Så hvis der er en bil kørende bag en der kører langsommere, så vil han sætte farten ned og blive bag ved bilen.
+Når vores program kører i simulationen, så bilerne som der er i simulationen kender de ikke noget til de sideliggende veje, ergo de kender ikke noget til de modkørende. Det er grunden til at bilerne ikke har muligheden for at overhale hinanden. Vejene er heller ikke sammensat, så der er plads til at kunne overhale. Så hvis der er en bil kørende bag en der kører langsommere, så vil han sætte farten ned og blive bag ved bilen.
+
+\vspace{5mm}
+
+Brug af protobuff?
