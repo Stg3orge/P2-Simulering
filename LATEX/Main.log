@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.15)  15 MAY 2016 14:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.15)  15 MAY 2016 14:33
 entering extended mode
 **Main
 (Main.tex
@@ -1484,10 +1484,6 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 35.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-
-LaTeX Warning: Reference `LastPage' on page i undefined on input line 35.
-
-
 Underfull \hbox (badness 4217) in paragraph at lines 35--35
 \T1/lmr/m/n/10 penne lisce tagli-atelle conchiglie.
  []
@@ -1547,12 +1543,12 @@ l.35 }
 ] (aau/preface.tex) [3
 
 
-] (Main.toc)
+] (Main.toc [4
+
+
+] [5])
 \tf@toc=\write4
- [4
-
-
-] (sections/sections.tex
+ [6] (sections/sections.tex
 (sections/Indledning/Indledning.tex
 Chapter 1.
 LaTeX Font Info:    Try loading font information for OT1+pzc on input line 1.
@@ -1566,24 +1562,12 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-
-LaTeX Warning: Citation `dtfnotat' on page 1 undefined on input line 2.
-
-
-LaTeX Warning: Citation `trafikoekonomi' on page 1 undefined on input line 9.
-
-
-LaTeX Warning: Citation `forurening' on page 1 undefined on input line 13.
-
 [1
 
 
 ]
-
-LaTeX Warning: Citation `stress' on page 2 undefined on input line 17.
-
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 33.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
@@ -1596,10 +1580,6 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-
-LaTeX Warning: Citation `SimulationHandbook' on page 3 undefined on input line 
-3.
-
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 10.
 
@@ -1610,19 +1590,14 @@ sys-temet ydeevne
 
 [3
 
-]
-
-LaTeX Warning: Citation `SimulationHandbook' on page 4 undefined on input line 
-59.
-
-) (sections/Metode/Metode.tex [4] [5]
+]) (sections/Metode/Metode.tex [4] [5]
 Chapter 3.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-<Pictures/Metode/metodebillede.jpg, id=74, 733.74126pt x 519.9425pt>
+<Pictures/Metode/metodebillede.jpg, id=244, 733.74126pt x 519.9425pt>
 File: Pictures/Metode/metodebillede.jpg Graphic file (type jpg)
 
 <use Pictures/Metode/metodebillede.jpg>
@@ -1654,40 +1629,11 @@ Overfull \hbox (5.17552pt too wide) in paragraph at lines 38--39
 ks. ap-p-lika-tioner. Simu-
  []
 
-) (sections/EksisterendeModeller/eksisterendemodeller.tex
-
-LaTeX Warning: Citation `dtfnotat' on page 11 undefined on input line 2.
-
-[11]
-
-LaTeX Warning: Citation `dtfnotat' on page 12 undefined on input line 6.
-
-
-LaTeX Warning: Citation `dtfnotat' on page 12 undefined on input line 6.
-
-
-LaTeX Warning: Citation `TrafiksimuleringVisSim' on page 12 undefined on input 
-line 6.
-
-
-LaTeX Warning: Citation `TrafiksimuleringVisSim' on page 12 undefined on input 
-line 11.
-
-
-LaTeX Warning: Citation `dtfnotat' on page 12 undefined on input line 11.
-
-
+) (sections/EksisterendeModeller/eksisterendemodeller.tex [11]
 Overfull \hbox (4.9908pt too wide) in paragraph at lines 11--12
 \T1/lmr/m/n/10 forhold til makro-niveau. De an-vendte mod-eller pÂ dette niveau
  er 4-trinsmodeller.
  []
-
-
-LaTeX Warning: Citation `dtfnotat' on page 12 undefined on input line 15.
-
-
-LaTeX Warning: Citation `TrafiksimuleringVisSim' on page 12 undefined on input 
-line 15.
 
 ) (sections/Teknologianalyse/Teknologianalyse.tex [12]
 Chapter 5.
@@ -1696,13 +1642,10 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-
-LaTeX Warning: Citation `vissimfunker' on page 13 undefined on input line 11.
-
 [13
 
 ]
-<Pictures/Teknologianalyse/vissimfunker.jpg, id=130, 1926.19624pt x 747.79375pt
+<Pictures/Teknologianalyse/vissimfunker.jpg, id=298, 1926.19624pt x 747.79375pt
 >
 File: Pictures/Teknologianalyse/vissimfunker.jpg Graphic file (type jpg)
  <use Pictures/Teknologianalyse/vissimfunker.jpg>
@@ -1729,397 +1672,33 @@ LaTeX Warning: Reference `GrafForAccelerationVisSimGPS' on page 15 undefined on
 LaTeX Warning: Reference `GrafForDecelerationVisSimGPS' on page 15 undefined on
  input line 157.
 
-[15]
-
-! Package caption Error: \caption outside float.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.213 \caption
-              {VisSim Fordele og Ulemper}
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package array Error:  Illegal pream-token (1): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215 \begin{tabular}{111111}
-                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package array Error:  Illegal pream-token (1): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215 \begin{tabular}{111111}
-                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package array Error:  Illegal pream-token (1): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215 \begin{tabular}{111111}
-                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package array Error:  Illegal pream-token (1): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215 \begin{tabular}{111111}
-                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package array Error:  Illegal pream-token (1): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215 \begin{tabular}{111111}
-                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package array Error:  Illegal pream-token (1): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215 \begin{tabular}{111111}
-                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.220 \end{table}
-                 
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (327.18759pt too wide) in paragraph at lines 211--220
-[]$\OML/lmm/m/it/10 table\OT1/lmr/m/n/10 )[][][]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@endfloatbox ...pagefalse \outer@nobreak \egroup 
-                                                  \color@endbox 
-l.220 \end{table}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Too many }'s.
-\color@endbox ->\color@endgroup \egroup 
-                                        
-l.220 \end{table}
-                 
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-! Undefined control sequence.
-\endtable ...ndfloatbox \global \setbox \@currbox 
-                                                  \float@makebox \columnwidt...
-l.220 \end{table}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.220 \end{table}
-                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\caption@ORI@float@makebox ...boxrestore \@fs@pre 
-                                                  \@fs@iftopcapt \ifvoid \@f...
-l.220 \end{table}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\caption@ORI@float@makebox ...@pre \@fs@iftopcapt 
-                                                  \ifvoid \@floatcapt \else ...
-l.220 \end{table}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\caption@ORI@float@makebox ...i \unvbox \@currbox 
-                                                  \else \unvbox \@currbox \i...
-l.220 \end{table}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra \else.
-\caption@ORI@float@makebox ...box \@currbox \else 
-                                                  \unvbox \@currbox \ifvoid ...
-l.220 \end{table}
-                 
-I'm ignoring this; it doesn't match any \if.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \unvbox 
-l.220 \end{table}
-                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\caption@ORI@float@makebox ...e \unvbox \@currbox 
-                                                  \ifvoid \@floatcapt \else ...
-l.220 \end{table}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra \fi.
-\caption@ORI@float@makebox ...\@floatcapt \fi \fi 
-                                                  \par \@fs@post \vskip \z@ }
-l.220 \end{table}
-                 
-I'm ignoring this; it doesn't match any \if.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \par 
-l.220 \end{table}
-                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\caption@ORI@float@makebox ... \fi \par \@fs@post 
-                                                  \vskip \z@ }
-l.220 \end{table}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: \begin{document} ended by \end{table}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.220 \end{table}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.220 \end{table}
-                 
-Things are pretty mixed up, but I think the worst is over.
-
-) (sections/Teknologianalyse/altransWTF.tex
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 16 undefined on input line 2
-.
-
-
-LaTeX Warning: Citation `dmuadfaerdsmodel' on page 16 undefined on input line 2
-.
-
-[16]
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 1
-3.
-
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 1
-7.
-
-
-LaTeX Warning: Citation `dmuadfaerdsmodel' on page 17 undefined on input line 2
-1.
-
-
+[15]) (sections/Teknologianalyse/altransWTF.tex [16]
 Overfull \hbox (13.8901pt too wide) in paragraph at lines 21--22
 []\T1/lmr/m/n/10 Modellen af ser-viceniveau udreg-ner ser-viceniveauet med vari
 -ablerne tid, omkost-
  []
 
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 2
-5.
-
-
-LaTeX Warning: Reference `altranshastigheder' on page 17 undefined on input lin
-e 25.
-
-! Improper \prevdepth.
-<recently read> \prevdepth 
-                           
-l.39 \end{table}
-                
-You can refer to \spacefactor only in horizontal mode;
-you can refer to \prevdepth only in vertical mode; and
-neither of these is meaningful inside \write. So
-I'm forgetting what you said and using zero instead.
-
-! You can't use `\prevdepth' in horizontal mode.
-\end@float ...pdima \prevdepth \vbox {}\prevdepth 
-                                                  \@tempdima \penalty \@floa...
-l.39 \end{table}
-                
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \penalty 
-l.39 \end{table}
-                
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \penalty 
-l.39 \end{table}
-                
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.39 \end{table}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 4
-2.
-
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 5
-0.
-
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 5
-4.
-
-
-LaTeX Warning: Citation `dmumodelanalyser' on page 17 undefined on input line 5
-8.
-
-
-LaTeX Warning: Reference `altranshastigheder' on page 17 undefined on input lin
-e 86.
-
-) (sections/Interessentanalyse/Interessentanalyse.tex
+[17] [18]) (sections/Interessentanalyse/Interessentanalyse.tex [19]
 Chapter 6.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
+[20
 
-LaTeX Warning: Citation `Vejdirektoratet' on page 17 undefined on input line 12
-.
-
-
-LaTeX Warning: Citation `dtfnotat' on page 17 undefined on input line 19.
-
-
-LaTeX Warning: Citation `VisualSolutions' on page 17 undefined on input line 26
-.
-
-
-LaTeX Warning: Citation `DtuForskning' on page 17 undefined on input line 34.
-
-
-LaTeX Warning: Citation `benjasfar' on page 17 undefined on input line 42.
-
-
-LaTeX Warning: Reference `DenKommunaleSektor' on page 17 undefined on input lin
-e 42.
-
-) (sections/Problemformulering/Problemformulering.tex
+] [21]) (sections/Problemformulering/Problemformulering.tex [22]
 Chapter 7.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Teori/Teori.tex
+) [23
+
+] [24
+
+] (sections/Teori/Teori.tex
 Chapter 8.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -2129,14 +1708,16 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 2.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+) [25
+
+]
 (sections/Teori/Grafteori.tex
 
-LaTeX Warning: Reference `weighted-directed-graph' on page 17 undefined on inpu
+LaTeX Warning: Reference `weighted-directed-graph' on page 26 undefined on inpu
 t line 9.
 
 
-<Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG, id=150, 1123.1962
+<Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG, id=376, 1123.1962
 4pt x 1336.995pt>
 File: Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG Graphic file 
 (type png)
@@ -2145,18 +1726,6 @@ File: Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG Graphic file
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/weighted_directed_grap
 h.PNG used on input line 14.
 (pdftex.def)             Requested size: 172.5pt x 205.3348pt.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.18 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 
 Overfull \hbox (9.85329pt too wide) in paragraph at lines 22--23
 \T1/lmr/m/n/10 beskriver tal-let mellem 2 sv-ing(knuder) lÊgn-den(vÊgten) af ve
@@ -2170,12 +1739,12 @@ Overfull \hbox (149.97194pt too wide) in paragraph at lines 43--45
  []
 
 
-LaTeX Warning: Reference `adjacency-matrix-weighted-directed-graph' on page 17 
+LaTeX Warning: Reference `adjacency-matrix-weighted-directed-graph' on page 26 
 undefined on input line 48.
 
-
+[26 <./Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG>]
 <Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.PNG, 
-id=152, 199.947pt x 154.77824pt>
+id=384, 199.947pt x 154.77824pt>
 File: Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.
 PNG Graphic file (type png)
 
@@ -2184,20 +1753,9 @@ NG>
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weigh
 ted_directed_graph.PNG used on input line 55.
 (pdftex.def)             Requested size: 172.5pt x 133.53651pt.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.59 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-) (sections/Teori/Dijkstra.tex
-<Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png, id=153, 2109.8825pt x 1365.1
+) [27 <./Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_gra
+ph.PNG>] (sections/Teori/Dijkstra.tex
+<Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png, id=391, 2109.8825pt x 1365.1
 pt>
 File: Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png Graphic file (type png)
  <use Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png>
@@ -2206,158 +1764,42 @@ on input line 4.
 (pdftex.def)             Requested size: 155.24895pt x 100.44092pt.
 
 
-LaTeX Warning: Citation `DMATBOGEN' on page 17 undefined on input line 9.
+Package caption Warning: \label without proper \caption on input line 5.
+See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `dijkstrasgraf' on page 17 undefined on input line 9.
+LaTeX Warning: Reference `dijkstrasgraf' on page 28 undefined on input line 9.
 
 
-LaTeX Warning: Reference `dijktabel' on page 17 undefined on input line 20.
+Package caption Warning: \label without proper \caption on input line 35.
+See the caption package documentation for explanation.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.37 \end{table}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+
+LaTeX Warning: Reference `dijktabel' on page 28 undefined on input line 20.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 41.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 41.
-! Missing } inserted.
-<inserted text> 
-                }
-l.61 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `DijkstraCodeFindPathNode' on page 17 undefined on inp
-ut line 63.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.81 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `DijkstraCodeEvaluateNeighbors' on page 17 undefined o
-n input line 83.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.97 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `DijkstraCodeTracePath' on page 17 undefined on input 
-line 99.
-
-) (sections/Teori/AStjerne.tex
-
-LaTeX Warning: Reference `eq:A*' on page 17 undefined on input line 2.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.24 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `AStarCodeNode' on page 17 undefined on input line 26.
-
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.33 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `AStarCodeFindSmallest' on page 17 undefined on input 
-line 35.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.55 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `AStarCodeEvaluateNeighbors' on page 17 undefined on i
-nput line 57.
-
-)) (sections/Design/Design.tex
+[28 <./Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png>] [29])
+(sections/Teori/AStjerne.tex [30])) (sections/Design/Design.tex [31]
 Chapter 9.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+[32
 
+]
 Overfull \hbox (9.9996pt too wide) in paragraph at lines 14--15
 \T1/lmr/m/n/10 forbindelsespunk-ter, der ved hjÊlp af ko-or-di-naterne kan bere
 gne af-s-tanden imellem
  []
 
-) (sections/Design/Test.tex)
-(sections/Kravspecifikationer/Kravspecifikationer.tex
-
-LaTeX Warning: Reference `fig:KravspecifikationerTabel' on page 17 undefined on
- input line 2.
-
-
-LaTeX Warning: Reference `fig:KravspecifikationerTabel' on page 17 undefined on
- input line 2.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.22 \end{table}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-) (sections/Implementation/Implementation.tex
+) (sections/Design/Test.tex [33])
+(sections/Kravspecifikationer/Kravspecifikationer.tex [34] [35])
+(sections/Implementation/Implementation.tex [36]
 Chapter 10.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
@@ -2365,1392 +1807,314 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 (sections/Implementation/Klassediagrammer.tex
-<Pictures/Klassediagram/VejElementer.png, id=154, 823.57687pt x 639.13782pt>
+<Pictures/Klassediagram/VejElementer.png, id=534, 823.57687pt x 639.13782pt>
 File: Pictures/Klassediagram/VejElementer.png Graphic file (type png)
 
 <use Pictures/Klassediagram/VejElementer.png>
 Package pdftex.def Info: Pictures/Klassediagram/VejElementer.png used on input 
 line 10.
 (pdftex.def)             Requested size: 483.00322pt x 374.83524pt.
+ [37
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.13 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `kdVejElementer' on page 17 undefined on input line 15
-.
-
-
-LaTeX Warning: Reference `ElementerVejnettet' on page 17 undefined on input lin
-e 15.
-
-
-LaTeX Warning: Reference `Vehicle' on page 17 undefined on input line 15.
-
-<Pictures/Klassediagram/Diverse.png, id=155, 740.7675pt x 377.91188pt>
+]
+<Pictures/Klassediagram/Diverse.png, id=542, 740.7675pt x 377.91188pt>
 File: Pictures/Klassediagram/Diverse.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Diverse.png>
 Package pdftex.def Info: Pictures/Klassediagram/Diverse.png used on input line 
 19.
 (pdftex.def)             Requested size: 483.0078pt x 246.4125pt.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.22 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `kdDiverse' on page 17 undefined on input line 24.
-
-
-LaTeX Warning: Reference `Diverse' on page 17 undefined on input line 24.
-
-
-Overfull \hbox (2.59872pt too wide) in paragraph at lines 24--25
-\T1/lmr/m/n/10 tionelle data fra \T1/lmtt/m/n/10 Vehicle \T1/lmr/m/n/10 in-stan
-serne der be-fÊrd-ede sig pÂ ve-jnet-tet. \T1/lmtt/m/n/10 Partitions
- []
-
-<Pictures/Klassediagram/Viewport.png, id=156, 638.385pt x 565.36218pt>
+ [38 <./Pictures/Klassediagram/VejElementer.png>]
+<Pictures/Klassediagram/Viewport.png, id=550, 638.385pt x 565.36218pt>
 File: Pictures/Klassediagram/Viewport.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Viewport.png>
 Package pdftex.def Info: Pictures/Klassediagram/Viewport.png used on input line
  28.
 (pdftex.def)             Requested size: 482.99565pt x 427.74733pt.
+ [39 <./Pictures/Klassediagram/Diverse.png>]
+Overfull \hbox (25.11923pt too wide) in paragraph at lines 33--34
+\T1/lmr/m/n/10 bruger-flade \T1/lmtt/m/n/10 GUIMain\T1/lmr/m/n/10 , hvor der ka
+n redi-geres i ve-jnet-tet. Klassen \T1/lmtt/m/n/10 SimulationViewport
+ []
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.31 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `kdViewport' on page 17 undefined on input line 33.
-
-
-LaTeX Warning: Reference `HovedBrugerfladen' on page 17 undefined on input line
- 33.
-
-<Pictures/Klassediagram/Pathfinder.png, id=157, 617.30624pt x 312.41719pt>
+<Pictures/Klassediagram/Pathfinder.png, id=558, 617.30624pt x 312.41719pt>
 File: Pictures/Klassediagram/Pathfinder.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Pathfinder.png>
 Package pdftex.def Info: Pictures/Klassediagram/Pathfinder.png used on input li
 ne 37.
 (pdftex.def)             Requested size: 483.01344pt x 244.45192pt.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.40 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `kdPathfinder' on page 17 undefined on input line 42.
-
-
-LaTeX Warning: Reference `Pathfinder' on page 17 undefined on input line 42.
-
-
-<Pictures/Klassediagram/Funktionalitet.png, id=158, 604.50844pt x 527.72156pt>
+ [40 <./Pictures/Klassediagram/Viewport.png>]
+<Pictures/Klassediagram/Funktionalitet.png, id=566, 604.50844pt x 527.72156pt>
 File: Pictures/Klassediagram/Funktionalitet.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Funktionalitet.png>
 Package pdftex.def Info: Pictures/Klassediagram/Funktionalitet.png used on inpu
 t line 46.
 (pdftex.def)             Requested size: 482.99861pt x 421.64636pt.
+ [41 <./Pictures/Klassediagram/Pathfinder.png>]
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.49 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `kdFunktionelle' on page 17 undefined on input line 51
-.
-
-
-LaTeX Warning: Reference `Funktionelle' on page 17 undefined on input line 51.
+LaTeX Warning: Reference `Funktionelle' on page 42 undefined on input line 51.
 
 ) (sections/Implementation/HovedBrugerfladen.tex
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 \begin{figure}[!h]
-                      
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<Pictures/Implementation/program2.png, id=159, 516.42938pt x 258.21469pt>
+<Pictures/Implementation/program2.png, id=573, 516.42938pt x 258.21469pt>
 File: Pictures/Implementation/program2.png Graphic file (type png)
 
 <use Pictures/Implementation/program2.png>
 Package pdftex.def Info: Pictures/Implementation/program2.png used on input lin
 e 6.
 (pdftex.def)             Requested size: 345.013pt x 172.50648pt.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.9 \end{figure}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `a319program' on page 17 undefined on input line 11.
-
-
+ [42 <./Pictures/Klassediagram/Funktionalitet.png>]
 Overfull \hbox (50.15309pt too wide) in paragraph at lines 15--16
 \T1/lmr/m/n/10 trykket pÂ, bliver der sendt en event der kalder meto-den \T1/lm
 tt/m/n/10 ToggleTool \T1/lmr/m/n/10 pÂ \T1/lmtt/m/n/10 ToolControlleren\T1/lmr/
 m/n/10 .
  []
 
-) (sections/Implementation/ElementerVejnettet.tex
+) (sections/Implementation/ElementerVejnettet.tex [43 <./Pictures/Implementatio
+n/program2.png>] [44] [45]) (sections/Implementation/Diverse.tex [46] [47]
+[48] [49]) (sections/Implementation/Viewport.tex [50]
+Overfull \hbox (14.9074pt too wide) in paragraph at lines 48--49
+\T1/lmr/m/n/10 bare er benyt-tet alene er fordi mÂ-den disse \T1/lmtt/m/n/10 La
+yer \T1/lmr/m/n/10 er an-vendt i bl.a. \T1/lmtt/m/n/10 ToolController
+ []
 
-LaTeX Warning: Reference `enumNodeTypes' on page 17 undefined on input line 3.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.10 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-! LaTeX Error: Environment desciption undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 \begin{desciption}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \item[None]
-                 er en node, som kan tilkobles mellem vejene.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 13
-[][]
+[51]
+Overfull \hbox (0.68433pt too wide) in paragraph at lines 94--95
+\T1/lmtt/m/n/10 SimulationViewport \T1/lmr/m/n/10 har til for-mÂl at vi-su-alis
+-ere simu-lerin-gen, som \T1/lmtt/m/n/10 Simulation
  []
 
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 \item[Parking]
-                    er noden hvor k√∏ret√∏jerne parkere ved deres destinatio...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 14
-[][]
+Overfull \hbox (31.43373pt too wide) in paragraph at lines 98--99
+[]\T1/lmr/m/n/10 I [][]10.19[][] bliver der in-stan-sieret et nyt lag \T1/lmtt/
+m/n/10 Vehicles \T1/lmr/m/n/10 og en vari-abel for \T1/lmtt/m/n/10 SimulationDa
+ta
  []
 
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
+Overfull \hbox (29.10114pt too wide) in paragraph at lines 98--99
+\T1/lmr/m/n/10 hvori in-de-holdes n¯d-vendige datasÊt for at ud-f¯re en sim-u-l
+a-tion. \T1/lmtt/m/n/10 SimulationViewport
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 \item[Home]
-                 er startpunkt og slutpunkt for bilen.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[52]
+Overfull \hbox (57.86095pt too wide) in paragraph at lines 132--133
+\T1/lmtt/m/n/10 Simulation\T1/lmr/m/n/10 . Simu-lerin-gen op-dateres efter det 
+an-tal som \T1/lmtt/m/n/10 Step \T1/lmr/m/n/10 dik-terer. \T1/lmtt/m/n/10 Simul
+ationViewport
+ []
 
+) (sections/Implementation/Pathfinder.tex [53] [54] [55])
+(sections/Implementation/Funktionelle.tex
+Overfull \hbox (4.72705pt too wide) in paragraph at lines 23--24
+\T1/lmr/m/n/10 GUIMain som sender alle vÊrk-t¯-jerne, nu-vÊrende view-port samt
+ pro-jekt. Herved
+ []
 
-Underfull \hbox (badness 10000) detected at line 15
-[][]
+[56] [57] [58]
+Overfull \hbox (3.18683pt too wide) in paragraph at lines 172--173
+\T1/lmr/m/n/10 sket, altsÂ om start-punk-tet til ve-jen er blevet valgt. Hvis \
+T1/lmtt/m/n/10 _firstNodeConnection
+ []
+
+[59] [60] [61]) (sections/Implementation/Vehicle.tex [62] [63] [64]
+<Pictures/Implementation/TranslateVehicle.png, id=1304, 150.5625pt x 207.02344p
+t>
+File: Pictures/Implementation/TranslateVehicle.png Graphic file (type png)
+ <use Pictures/Implementation/TranslateVehicle.png>
+Package pdftex.def Info: Pictures/Implementation/TranslateVehicle.png used on i
+nput line 88.
+(pdftex.def)             Requested size: 113.81102pt x 156.496pt.
+
+Overfull \hbox (6.47253pt too wide) in paragraph at lines 95--96
+[][]\T1/lmr/m/n/10 Derefter kaldes \T1/lmtt/m/n/10 TranslateVehicle\T1/lmr/m/n/
+10 ,
  []
 
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \item[Light]
-                  er et lyskryds, hvor k√∏ret√∏jet skal standse hvis noden e...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 16
-[][]
+Underfull \hbox (badness 2753) in paragraph at lines 95--96
+\T1/lmr/m/n/10 hvilket er en metode der fly-t-ter
  []
 
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
+Underfull \hbox (badness 7273) in paragraph at lines 101--102
+[]\T1/lmr/m/n/10 Vektoren skaleres med af-s-
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 \item[Inbound]
-                    er en node, hvor k√∏ret√∏jerne kommer fra og ind til vej...
+[65 <./Pictures/Implementation/TranslateVehicle.png>]))
+(sections/Diskussion/Diskussion.tex [66]
+Chapter 11.
 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
 
+) (sections/Konklusion/Konklusion.tex [67
 
-Underfull \hbox (badness 10000) detected at line 17
-[][]
+]
+Chapter 12.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Perspektivering/Perspektivering.tex [68
+
+]
+Chapter 13.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+)) (Main.bbl [69
+
+]
+Underfull \hbox (badness 1675) in paragraph at lines 23--29
+[]\T1/lmr/m/n/10 Danmarks Milj¯un-der-s¯gelser.  Al-trans - ad-fÊrdsmodel for p
+er-son-
  []
 
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18 \item[Outbound]
-                     er en node, hvor k√∏ret√∏jerne k√∏re ud fra, n√•r et k√...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 18
-[][]
+Underfull \hbox (badness 1062) in paragraph at lines 31--37
+[]\T1/lmr/m/n/10 Danmarks Milj¯un-der-s¯gelser.  Mod-e-l-anal-yser af mo-bilite
+t og milj¯.
  []
 
 
-! LaTeX Error: \begin{figure} on input line 5 ended by \end{desciption}.
+Underfull \hbox (badness 4132) in paragraph at lines 31--37
+\T1/lmr/m/n/10 slu-trap-port fra al-trans og amor ii, faglig rap-port fra dmu n
+r.
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \end{desciption}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
+Underfull \hbox (badness 2229) in paragraph at lines 39--44
+[]\T1/lmr/m/n/10 Dwight A Hen-nessy og David L Wiesen-thal.  Traf-fic con-ges-t
+ion,
+ []
 
-LaTeX Warning: Reference `DestinationTypes' on page 17 undefined on input line 
-22.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.38 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Underfull \hbox (badness 2213) in paragraph at lines 39--44
+\T1/lmr/m/n/10 driver stress, and driver ag-gres-sion.  [][]$\T1/lmtt/m/n/10 ht
+tps : / / www . researchgate .$
+ []
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.65 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+$\T1/lmtt/m/n/10 net / profile / Dwight _ Hennessy / publication / 229863510 _ 
+Traffic _$
+ []
 
-LaTeX Warning: Reference `LightControllerKlassen' on page 17 undefined on input
- line 67.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...metoden bliver variablen \texttt{_counter}
-                                                   anvendt til at t√¶lle op ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+$\T1/lmtt/m/n/10 congestion _ driver _ stress _ and _ driver _ aggression / lin
+ks /$
+ []
 
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.67 ...metoden bliver variablen \texttt{_counter}
-                                                   anvendt til at t√¶lle op ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
+Underfull \hbox (badness 1742) in paragraph at lines 51--56
+[]\T1/lmr/m/n/10 Michael Kn¯rr Skov og Karsten Sten Ped-er-sen.  Trafikprop. fl
+ere
+ []
 
-LaTeX Warning: Command \ae invalid in math mode on input line 67.
 
+Underfull \hbox (badness 7433) in paragraph at lines 51--56
+\T1/lmr/m/n/10 veje vil sk-abe st¯rre vÊkst.  [][]$\T1/lmtt/m/n/10 http : / / w
+ww . cowi . dk / menu / tema /$
+ []
 
-LaTeX Warning: Command \r invalid in math mode on input line 67.
 
+Underfull \hbox (badness 10000) in paragraph at lines 51--56
+$\T1/lmtt/m/n/10 infrastruktur-[]2030 / cowi-[]i-[]medierne / Documents / Veje 
+% 20skaber %$
+ []
 
-LaTeX Warning: Command \o invalid in math mode on input line 67.
+[70
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+]
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
+$\T1/lmtt/m/n/10 Institutter / Transport / forskning / publikationer / publikat
+ioner %$
+ []
 
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
+$\T1/lmtt/m/n/10 20dtf / 2007 / arbejdsnotat _ om _ trafikmodeller _ 160507 . a
+shx ? la = da$[][]\T1/lmr/m/n/10 ,
+ []
 
-! Extra }, or forgotten $.
-\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
-                                                  {\textdef@ \textstyle \f@s...
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Underfull \hbox (badness 10000) in paragraph at lines 76--81
+[]\T1/lmr/m/n/10 Vejdirektoratet.  LÊng-den af of-fentlige veje.  [][]$\T1/lmtt
+/m/n/10 http : / / www .$
+ []
 
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+Underfull \hbox (badness 10000) in paragraph at lines 76--81
+$\T1/lmtt/m/n/10 vejdirektoratet . dk / DA / viden _ og _ data / statistik / ve
+jeneital /$
+ []
 
-! Extra }, or forgotten $.
-\text@ ...xtstyle \f@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \sf@...
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+) [71] (appendix.tex
+Appendix A.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
 
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+)
+\tf@thm=\write5
+ 
+AED: lastpage setting LastPage
+[72
 
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
+ (Main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
 
-! Extra }, or forgotten $.
-\text@ ...tstyle \sf@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \ssf...
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+LaTeX Warning: There were undefined references.
 
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...style \ssf@size {\firstchoice@false #1}}
-                                                  \check@mathfonts }
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...firstchoice@false #1}}\check@mathfonts }
-                                                  
-l.67 ...tur bliver udf√∏rt, hvis \texttt{_counter}
-                                                   er over den tid vi venter...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
-                                                  {\textdef@ \textstyle \f@s...
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...xtstyle \f@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \sf@...
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...tstyle \sf@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \ssf...
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...style \ssf@size {\firstchoice@false #1}}
-                                                  \check@mathfonts }
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...firstchoice@false #1}}\check@mathfonts }
-                                                  
-l.67 ...d vi venter p√• nu, hvor \texttt{_current}
-                                                   enten er \texttt{FirstTim...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
-                                                  {\textdef@ \textstyle \f@s...
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...xtstyle \f@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \sf@...
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...tstyle \sf@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \ssf...
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...style \ssf@size {\firstchoice@false #1}}
-                                                  \check@mathfonts }
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...firstchoice@false #1}}\check@mathfonts }
-                                                  
-l.67 ...kontrolstrukturen bliver \texttt{_current}
-                                                   skiftet mellem \texttt{Fi...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.68 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.69 \subsection{Road}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.69 \subsection{Road}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.69 \subsection{Road}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.69 \subsection{Road}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.69 \subsection{Road}
-                      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.69 \subsection{Road}
-                      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.69 \subsection{Road}
-                      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.69 \subsection{Road}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.69 \subsection{Road}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.69 \subsection{Road}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.69 \subsection{Road}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.69 \subsection{Road}
-                      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.69 \subsection{Road}
-                      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.69 \subsection{Road}
-                      
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.69 \subsection{Road}
-                      
-(That makes 100 errors; please try again.) 
+ ) 
 Here is how much of TeX's memory you used:
- 32998 strings out of 493673
- 737181 string characters out of 3141520
- 1245603 words of memory out of 3000000
- 35493 multiletter control sequences out of 15000+200000
- 92699 words of font info for 71 fonts, out of 3000000 for 9000
+ 34220 strings out of 493673
+ 755487 string characters out of 3141520
+ 1287603 words of memory out of 3000000
+ 35835 multiletter control sequences out of 15000+200000
+ 89076 words of font info for 68 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
- 64i,63n,100p,1466b,2434s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,17n,100p,1466b,1986s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/
+fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/d
+vips/lm/lm-ec.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
+r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmri8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
+/lmss9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmtti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/zap
+fchan/uzcmi8a.pfb>
+Output written on Main.pdf (79 pages, 1243325 bytes).
+PDF statistics:
+ 1890 PDF objects out of 2073 (max. 8388607)
+ 902 named destinations out of 1000 (max. 500000)
+ 718 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-!  ==> Fatal error occurred, no output PDF file produced!
