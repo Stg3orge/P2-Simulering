@@ -16,7 +16,6 @@ namespace A319TS
         public const int RecordInterval = 100;
         private int _primaryProgress = 0;
         private int _secondaryProgress = 0;
-        private BackgroundWorker MasterWorker;
         private BackgroundWorker PrimaryWorker;
         private BackgroundWorker SecondaryWorker;
         private Project Project;
@@ -39,11 +38,7 @@ namespace A319TS
             Project = project;
             PrimaryProject = project.Clone() as Project;
             SecondaryProject = project.Clone() as Project;
-
-            MasterWorker = new BackgroundWorker();
-            MasterWorker.WorkerSupportsCancellation = true;
-            MasterWorker.DoWork += Run;
-
+            
             PrimaryWorker = new BackgroundWorker();
             PrimaryWorker.WorkerReportsProgress = true;
             PrimaryWorker.WorkerSupportsCancellation = true;
@@ -79,8 +74,6 @@ namespace A319TS
 
             for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
             {
-                if (MasterWorker.CancellationPending)
-                    throw new OperationCanceledException("Simulation canceled");
                 if (i % (onePercent) == 0)
                 {
                     ((BackgroundWorker)sender).ReportProgress(i);
@@ -93,18 +86,13 @@ namespace A319TS
             }
 
         }
-        private void Run(object sender, DoWorkEventArgs args)
+        public void Run()
         {
             _primaryVehicles = CreateVehicles(Partitions.Primary);
             _secondaryVehicles = CreateVehicles(Partitions.Secondary);
 
             PrimaryWorker.RunWorkerAsync(_primaryVehicles);
             SecondaryWorker.RunWorkerAsync(_secondaryVehicles);
-        }
-        
-        public void Start()
-        {
-            MasterWorker.RunWorkerAsync();
         }
         public void Cancel()
         {
@@ -280,9 +268,4 @@ namespace A319TS
             return times;
         }
     }
-
-
-
- 
-
 }

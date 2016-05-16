@@ -76,7 +76,7 @@ namespace A319TS
             try
             {
                 Information.AppendText("Simulating...");
-                Simulation.Start();
+                Simulation.Run();
             }
             catch (OperationCanceledException e)
             {

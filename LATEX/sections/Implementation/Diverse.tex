@@ -1,139 +1,75 @@
 \section{Diverse}\label{Diverse}
+Dette afsnit dækker over klasserne der ikke ligger under en bred kategori af klasser.
 
 \section{Project}
-
-Project klassen har til formål at sætte de forskellige types klasser op i lister, mens Project (string name) samtidig sætter default values når man laver en ny RoadType, DestinationType eller VehicleType i programmet, hver gang der bliver "addet" noget nyt til de forskellige lister under Types. Project Clones gør det muligt at gemme det man har lavet i en ny fil, som så kan bruges senere såfremt det skal sættes ind andre steder i programmet ved eksempelvis at copy-paste det.
+Project klassens formål er at holde på informationen om elementerne i vejnettet. Derudover holder Project klassen også på brugerens indstillinger for simuleringerne der udføres. Disse indstillinger er gemt i en instans af klassen SimulationSettings. Når Project klassen instansieres, tilføjer constructoren en Default type til RoadTypes, VehicleTypes og DestinationTypes, hvilket er listerne der gemme på alle typerne af deres slags. Default værdierne kan ikke slettes, da det ikke vil give mening for simuleringen at veje, køretøj og destinationer eksisterede uden en type, og programmet ville blive termineret. 
 
 \begin{figure}[H]
 \begin{lstlisting} 
-
-{ 
-    [Serializable]
-    public class Project : ICloneable
-    {
-        public string Name;
-        public List<Node> Nodes = new List<Node>();
-        public List<Destination> Destinations = new List<Destination>();
-        public List<LightController> LightControllers = new List<LightController>();
-        public List<RoadType> RoadTypes = new List<RoadType>();
-        public List<DestinationType> DestinationTypes = new List<DestinationType>();
-        public List<VehicleType> VehicleTypes = new List<VehicleType>();
-        public List<SimulationData> Simulations = new List<SimulationData>();
-        public SimulationSettings Settings = new SimulationSettings();
-        
-        public Project(string name)
-        {
-            Name = name;
-            RoadTypes.Add(new RoadType("Default", 50));
-            DestinationTypes.Add(new DestinationType("Default", Color.LightSlateGray) { Distribution = 100 });
-            VehicleTypes.Add(new VehicleType("Default", 130, 5, 5, Color.LightSlateGray) { Distribution = 100 });
-        }
-
-        public object Clone()
-        {
-            MemoryStream memory = new MemoryStream();
-            BinaryFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(memory, this);
-            memory.Position = 0;
-            return formatter.Deserialize(memory);
-        }
-    }
+public object Clone()
+{
+  MemoryStream memory = new MemoryStream();
+  BinaryFormatter formatter = new BinaryFormatter();
+  formatter.Serialize(memory, this);
+  memory.Position = 0;
+  return formatter.Deserialize(memory);
 }
 \end{lstlisting}
 \caption{Project.cs}\label{Project}
 \end{figure}
 
+Project klassen implementerer interfacet ICloneable, der beder om en implementation af Clone(), der returnerer en kopi af en instans af et Project. Implementationen af Clone() funktionaliteten er vist på figur \ref{Project}, hvor instansen af Project bliver seraliseret vha. BinaryFormatter klassen, og derefter deserliseret samt returneret. Grunden til Clone funktionen er lave en 'deep copy' af projektet, da Simulation klassen har brug for en identisk men adskildt kopi, så køretøjerne i Primary og Secondary simuleringerne ikke kan se og holde for hinanden. En MemberwiseClone() som alle objekter har adgang til, laver kun en 'shallow copy', hvilket vil sige at noderne og vejene stadig ville være referencer til de samme som i det første projekt.
 
 \section{SimulationSettings}
-
-SimulationSettings sætter defaultværdierne til de forskellige variabler, og giver brugeren muligheden for at ændre dem og gemme dem med nye værdier i stedet for de predefineret values, skulle man fortryde de selvdefineret values der er blevet sat, kan man altid vælge SetDefault values, ændre ens settings tilbage til de originale default values.
-
 \begin{figure}[H]
 \begin{lstlisting} 
-
+// Defaults
+public SimulationSettings()
 {
-    [Serializable]
-    public class SimulationSettings
-    {
-        // Shared
-        public int StepSize { get; set; }
-        public int VehicleSpace { get; set; }
-        public int IncommingRange { get; set; }
-
-        // Primary
-        public int PrimaryCarCount { get; set; }
-        public int PrimaryInbound { get; set; }
-        public int PrimaryOutbound { get; set; }
-        public int PrimaryToDestTime { get; set; }
-        public int PrimaryToHomeTime { get; set; }
-        public int PrimaryTimeSpread { get; set; }
-
-        // Secondary
-        public int SecondaryCarCount { get; set; }
-        public int SecondaryInbound { get; set; }
-        public int SecondaryOutbound { get; set; }
-        public int SecondaryToDestTime { get; set; }
-        public int SecondaryToHomeTime { get; set; }
-        public int SecondaryTimeSpread { get; set; }
-
-        // Defaults
-        public SimulationSettings()
-        {
-            StepSize = 100;
-            VehicleSpace = 2;
-            IncommingRange = 10;
-            PrimaryCarCount = 1000;
-            PrimaryInbound = 100;
-            PrimaryOutbound = 100;
-            PrimaryToDestTime = 28800000; // 08:00
-            PrimaryToHomeTime = 57600000; // 16:00
-            PrimaryTimeSpread = 14400000; // 4h
-            SecondaryCarCount = 1000;
-            SecondaryInbound = 100;
-            SecondaryOutbound = 100;
-            SecondaryToDestTime = 28800000; // 08:00
-            SecondaryToHomeTime = 57600000; // 16:00
-            SecondaryTimeSpread = 14400000; // 4h
-        }
-    }
+  StepSize = 100;
+  VehicleSpace = 2;
+  IncommingRange = 10;
+  PrimaryCarCount = 1000;
+  PrimaryInbound = 100;
+  PrimaryOutbound = 100;
+  PrimaryToDestTime = 28800000; // 08:00
+  PrimaryToHomeTime = 57600000; // 16:00
+  PrimaryTimeSpread = 14400000; // 4h
+  SecondaryCarCount = 1000;
+  SecondaryInbound = 100;
+  SecondaryOutbound = 100;
+  SecondaryToDestTime = 28800000; // 08:00
+  SecondaryToHomeTime = 57600000; // 16:00
+  SecondaryTimeSpread = 14400000; // 4h
 }
 \end{lstlisting}
 \caption{SimulationSettings}\label{SimulationSettings}
 \end{figure}
 
+SimulationSettings, som kan ses på figur \ref{SimulationSettings}, indeholder alle indstillingerne der bliver brugt i en simulering. Constructoren til klassen sætter variablerne til de definerede værdier. Værdierne kan justeres gennem brugerfladen GUIMenuSettingsSimulation. I brugerfladen kan værdierne tilgås gennem nogle NumericUpDown elementer, hvor minimum og maximum er sat for at kontrollerer hvordan simuleringen kan indstilles. På tabel \ref{SimulationLimits} kan begrænsningerne ses. Yderligere er der også regler brugeren skal overholde når indstillingerne skal sættes. Inbound og Outbound skal være lavere end VehicleCount, og TimeSpread må ikke gøre det muligt at køretøjer kan starte deres rejser uden for tidsrummet mellem 0 og 86400000 millisekunder. Der er lavet en brugerflade, der kan tilgås ved at trykke på en Info knap, som beskriver hvad variablerne betyder, da navnene muligvis kunne blive misforstået.
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Variable       & Minimum & Maximum  \\ \hline
+StepSize       & 10      & 100      \\ \hline
+VehicleSpace   & 0       & 100      \\ \hline
+IncommingRange & 0       & 100      \\ \hline
+CarCount       & 0       & 10000    \\ \hline
+Inbound        & 0       & 10000    \\ \hline
+Outbound       & 0       & 10000    \\ \hline
+ToDestTime     & 0       & 86400000 \\ \hline
+ToHomeTime     & 0       & 86400000 \\ \hline
+TimeSpread     & 0       & 86400000 \\ \hline
+\caption{Begrænsninger for simulering indstillingerne}
+\label{SimulationLimits}
+\end{tabular}
+\end{table}
+
 \subsection{Data}
 SimulationData, er en klasse, se \ref{SimulatonDataClass}, som modtager to lister fra VehicleData og derudover tager den imod information fra Project og Datetime. Konstruktoren SimulationData læser disse data ind til de forskelige typer i klassen. Hvis ToString metoden bliver kaldt, så retuneres Project.name og en DateTime type.
 
-\begin{figure}[H]
-\begin{lstlisting}
-public class SimulationData
-{
-     public Project Project { get; private set; }
-     public List<VehicleData> PrimaryData { get; private set; }
-     public List<VehicleData> SecondaryData { get; private set; }
-     public DateTime Date { get; private set; }
-     public string Filename
-     {
-        get { return Project.Name + "_" + Date.ToString("dd") + "-" + Date.ToString("MM") + "-" + 
-              Date.ToString("yy") + "_" + Date.ToString("HH") + Date.ToString("mm") + ".sim"; }
-     }
-        
-     public SimulationData(Project project, List<VehicleData> primary, List<VehicleData> secondary)
-     {
-        Project = project;
-        PrimaryData = primary;
-        SecondaryData = secondary;
-        Date = DateTime.Now;
-     }
-
-     public override string ToString()
-     {
-       return Project.Name + " " + Date;
-     }
-}
-\end{lstlisting}
-\caption{SimulationData Klasse} \label{SimulatonDataClass}
-\end{figure}
 
 VehicleData for den enkelte vehicle lagt over i to liste, PrimaryData og SecondaryData. VehicleData består ikke af nogle større funktioner og derfor vil der ikke være nogle dybbere forklaring dertil. Den består af nogle typer der læser data fra PointD klassen og VehicleType.
 
