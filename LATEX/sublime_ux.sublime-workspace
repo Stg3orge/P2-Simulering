@@ -112,6 +112,7 @@
 	"buffers":
 	[
 		{
+<<<<<<< HEAD
 			"file": "Main.tex",
 			"settings":
 			{
@@ -219,6 +220,8 @@
 			}
 		},
 		{
+=======
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 			"file": "references.bib",
 			"settings":
 			{
@@ -227,6 +230,7 @@
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "sections/EksisterendeModeller/eksisterendemodeller.tex",
 			"settings":
 			{
@@ -247,22 +251,42 @@
 			"settings":
 			{
 				"buffer_size": 548,
+=======
+			"file": "sections/Implementation/FejlOgMangler.tex",
+			"settings":
+			{
+				"buffer_size": 4148,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "sections/sections.tex",
 			"settings":
 			{
 				"buffer_size": 986,
+=======
+			"file": "Main.tex",
+			"settings":
+			{
+				"buffer_size": 1098,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 				"line_ending": "Unix"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "sections/Metode/Metode.tex",
 			"settings":
 			{
 				"buffer_size": 4436,
+=======
+			"file": "sections/Implementation/PathFinder.tex",
+			"settings":
+			{
+				"buffer_size": 5003,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 				"line_ending": "Unix"
 			}
 		},
@@ -275,14 +299,22 @@
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "sections/Implementation/Viewport.tex",
 			"settings":
 			{
 				"buffer_size": 7548,
+=======
+			"file": "sections/sections.tex",
+			"settings":
+			{
+				"buffer_size": 986,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 				"line_ending": "Unix"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "sections/Teknologianalyse/altransWTF.tex",
 			"settings":
 			{
@@ -295,15 +327,30 @@
 			"settings":
 			{
 				"buffer_size": 3284,
+=======
+			"file": "sections/Implementation/Viewport.tex",
+			"settings":
+			{
+				"buffer_size": 7548,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 				"line_ending": "Unix"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "aau/frontpage.tex",
 			"settings":
 			{
 				"buffer_size": 950,
 				"line_ending": "Windows"
+=======
+			"file": "/C/Programs/C/Lektionone/pascal.c",
+			"settings":
+			{
+				"buffer_size": 548,
+				"line_ending": "Windows",
+				"name": "#include <stdio.h>"
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 			}
 		},
 		{
@@ -313,6 +360,7 @@
 				"buffer_size": 1347,
 				"line_ending": "Windows"
 			}
+<<<<<<< HEAD
 		},
 		{
 			"file": "aau/signatures.tex",
@@ -329,6 +377,8 @@
 				"buffer_size": 601,
 				"line_ending": "Windows"
 			}
+=======
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 		}
 	],
 	"build_system": "",
@@ -379,6 +429,7 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Design",
@@ -396,6 +447,44 @@
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/FejlOgMangler",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/oversigt.tex",
 		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/FileHandler.tex",
+=======
+<<<<<<< HEAD
+		"/C/Programs/Githubp2/P2-Simulering/LATEX",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup"
+=======
+		"/C/Users/Fisker/Documents/GitHub/P2-Simulering/LATEX"
+>>>>>>> e36609e50f741d1e2ab80c1e4d49e4c022847818
+	],
+	"file_history":
+	[
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Test/Test.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Design.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sublime_ux.sublime-project",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/oversigt.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/ImplementationAU.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/FileHandler.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/ToolController.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.aux",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup/variables.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/signatures.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/titlepages.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/frontpage.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Metode/Metode.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Problemformulering/Problemformulering.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
+		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
+		"/C/Programs/Git/Gundamnation/Programs/Eksamensopgave2016/External/products.csv",
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
@@ -459,7 +548,11 @@
 	],
 	"find":
 	{
+<<<<<<< HEAD
 		"height": 28.0
+=======
+		"height": 36.0
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 	},
 	"find_in_files":
 	{
@@ -473,8 +566,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"getobj",
 			"getob",
+=======
+			"}",
+			"HEAD",
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 			"fight",
 			"teams",
 			"match_count",
@@ -528,11 +626,16 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
 			"selected": 11,
+=======
+			"selected": 2,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 			"sheets":
 			[
 				{
 					"buffer": 0,
+<<<<<<< HEAD
 					"file": "Main.tex",
 					"semi_transient": false,
 					"settings":
@@ -624,6 +727,13 @@
 					"settings":
 					{
 						"buffer_size": 7004,
+=======
+					"file": "references.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7812,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 						"regions":
 						{
 						},
@@ -636,11 +746,16 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+=======
+							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 1320.0,
 						"zoom_level": 1.0
 					},
@@ -712,19 +827,40 @@
 					"settings":
 					{
 						"buffer_size": 5574,
+=======
+						"translation.y": 1026.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sections/Implementation/FejlOgMangler.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4148,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								1284,
 								1284
+=======
+								938,
+								938
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+<<<<<<< HEAD
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -783,11 +919,15 @@
 						"settings":
 						{
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+=======
+							"word_wrap": false
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 5,
 					"type": "text"
 				},
@@ -826,14 +966,31 @@
 					"settings":
 					{
 						"buffer_size": 3672,
+=======
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Main.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1098,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								1619,
 								1619
+=======
+								251,
+								251
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 							]
 						],
 						"settings":
@@ -844,6 +1001,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 3,
 					"type": "text"
 				},
@@ -873,16 +1031,27 @@
 						"translation.y": 240.0,
 						"zoom_level": 1.0
 					},
+=======
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
+<<<<<<< HEAD
 					"buffer": 12,
 					"file": "sections/Implementation/Implementation.tex",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 583,
+=======
+					"buffer": 3,
+					"file": "sections/Implementation/PathFinder.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5003,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 						"regions":
 						{
 						},
@@ -895,12 +1064,19 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 16,
 					"type": "text"
 				},
@@ -911,6 +1087,18 @@
 					"settings":
 					{
 						"buffer_size": 7812,
+=======
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sections/Teori/Teori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 690,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 						"regions":
 						{
 						},
@@ -923,6 +1111,7 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -1020,6 +1209,19 @@
 				},
 				{
 					"buffer": 17,
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5960.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
@@ -1037,6 +1239,7 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1105,6 +1308,19 @@
 				},
 				{
 					"buffer": 20,
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 					"file": "sections/Implementation/Viewport.tex",
 					"semi_transient": false,
 					"settings":
@@ -1122,6 +1338,7 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -1194,19 +1411,8 @@
 					"settings":
 					{
 						"buffer_size": 950,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								623,
-								623
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1214,11 +1420,63 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Programs/C/Lektionone/pascal.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 548,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								623,
+								623
+=======
+								171,
+								171
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+=======
+							"auto_name": "#include <stdio.h>",
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+<<<<<<< HEAD
 					"stack_index": 24,
 					"type": "text"
 				},
 				{
 					"buffer": 24,
+=======
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 					"file": "aau/titlepages.tex",
 					"semi_transient": false,
 					"settings":
@@ -1230,17 +1488,27 @@
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								484,
 								484
+=======
+								490,
+								490
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1301,6 +1569,12 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 23,
+=======
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 					"type": "text"
 				}
 			]
@@ -1339,11 +1613,19 @@
 	"menu_visible": true,
 	"output.exec":
 	{
+<<<<<<< HEAD
 		"height": 238.0
+=======
+		"height": 130.0
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 	},
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 29.0
 	},
 	"pinned_build_system": "",
 	"project": "sublime_ux.sublime-project",

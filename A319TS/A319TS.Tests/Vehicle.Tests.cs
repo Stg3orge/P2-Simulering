@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 namespace A319TS.Tests
 {
     [TestClass]
-    class Class1
+    public class Vehicle
     {
-        
+        [TestMethod]
+        private void TranslateVehicle_Translation(double distanceToMove)
+        {
+
+        }
     }
 }
