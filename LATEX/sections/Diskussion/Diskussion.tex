@@ -36,9 +36,19 @@ I vores program er der taget hensyn til at der er en bil kørende foran, og så 
 
 \vspace{5mm}
 
+\textbf{6.}
 
-Mangler diskussion om:
-grafteori
-valg af A* (djstra bedre?)
-fejl angående i fathfinder (fejl når man dividere med max speed)
-Benytte protobuff eller ligende til optimering
+\subsection{x.xx Valg af kortesterute algoritme.}
+I programmet anvender vi et A* algoritme til at udregne den korteste vej for bilerne til at ankomme til deres destination men efter udvikling af programmet har vi overvejet hvorvidt dette var den mest optimale løsning. I teori afsnittet beskriver vi Dijkstra og A* kortesterute algoritmerne og sammenligner de to samt begrunder valget af A*. Vi har dog kommet på den ide at vores valg har været fejlagtigt og at Dijkstra kunne virker bedre i vores program af følgende grunde. A* er ikke særligt optimalt at anvende da heuristikken bliver meget optimistk ved høje maksimale hastighedsgrænser. Derimod kunne Dijkstra vise sig at være bedre hvis den kunne gøres i stand til at gemme alle de ruter der var fundet når algoritmen køre, således kunne man komme ud for at bruge mindre tid på at finde ruter i andre instancer hvis denne rute allerede er blevet fundet en gang før. 
+
+\subsection{x.xx Realistisk simulering}
+Vores ide om programmet var at det skulle være så realistisk som muligt, men vores program har nogle fejl, som der er blevet beskrevet \ref{FejlOgMangler}. Såsom at alle bilerne kan lave en uvending i alle lyskryds, hvis det forminsker rutens afstand til destination. Hvilket er ikke lovligt i alle lyskryds, hvilket får vores simulering til at være mindre realistisk. Der er mangel på menneskelig adfærd, da bilerne kører deres max hastighed på vejene, hvis det er muligt. Hvis der var variation i hastighederne i vores program, da mennesker kører på deres egen måde.
+
+
+%Realistisk simulering?
+%Mangler diskussion om:
+%grafteori
+%valg af A* (djstra bedre?)
+%fejl angående i fathfinder (fejl når man dividere med max speed)
+%Benytte protobuff eller ligende til optimering
+%Der skal være noget om indlæsning af de der simulations filer, det tager for lang tid at indlæse dem, hvis de er på 300mb eller derover.

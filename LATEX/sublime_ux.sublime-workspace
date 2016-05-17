@@ -233,11 +233,15 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/C/Programs/Githubp2/P2-Simulering/LATEX",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup"
+=======
+		"/C/Users/Fisker/Documents/GitHub/P2-Simulering/LATEX"
+>>>>>>> e36609e50f741d1e2ab80c1e4d49e4c022847818
 	],
 	"file_history":
 	[
