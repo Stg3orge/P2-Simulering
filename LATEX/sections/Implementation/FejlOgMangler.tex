@@ -1,33 +1,44 @@
-\section{Fejl og mangler i programmet}
+\section{Fejl og mangler i programmet}\label{FejlOgMangler}
 Ikke alle programmets kravspecifikationer er blevet implementeret med ønsket effekt. I et af kriterierne ønskes det, at simuleringen også kan foregå med cyklister og fodgængere. Dette er dog ikke tilfældet, programmet simulere kun med køretøjer, så derfor har vi valgt at tage dette med i videreudvikling. Programmet opfylder dog heller ikke ønsket om acceleration og deceleration dvs. programmet bliver mindre realistisk, da dette var en central del af kriterierne. Samtidig var dette også vigtigt fordi VisSims acceleration og deceleration udspillede sig lineær, meningen var at lave en acceleration og deceleration som udspillede sig eksponentielt, da dette var mere realistisk. I tabel \ref{Fejl og mangler} er de følgende fejl og mangler.
 
-
-\begin{table}[H]
-\centering
-\caption{Fejl og mangler}
-\label{Fejl og mangler}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{Manglende funktioner}                                                                               & \textbf{I klasse}                  & \textbf
-Forslag til løsning                                                                                                                                       \\ \hline
-Programmet implementere ikke Fodgængere                                                                     & Implementer ny klasse              & Skal implementeres på samme måde som køretøjerne, dog skal der lave en node, der hedder fodgængerfelt.                                                             \\ \hline
-Programmet implementere ikke cyklister                                                                      & Implementer ny klasse              & Skal implementeres således der laves en separat cykelsti, som cyklerne kan cykle på. derudover skal vejene ændres, således cyklister og bliver kan være på en vej. \\ \hline
-Programmet implementere ikke acceleration                                                                   & \texttt{VehicleType}               &                                                                                                                                                                    \\ \hline
-Programmet implementere ikke deceleration                                                                   & \texttt{VehicleType}               &                                                                                                                                                                    \\ \hline
-Køretøjer kan køre ovenpå hinanden                                                                          & \texttt{Vehicle}                   &                                                                                                                                                                    \\ \hline
-Simuleringen tager for lang tid at gennemgå.                                                                & \texttt{Simulation}                &                                                                                                                                                                    \\ \hline
-TimeSpread skal ændres således brugeren ikke indtaster millisekunder                                        & \texttt{GuiMenuSettingsSimulation} &                                                                                                                                                                    \\ \hline
-ToDestinationTime skal ændres således brugeren ikke indtaster millisekunder                                 & \texttt{GuiMenuSettingsSimulation} &                                                                                                                                                                    \\ \hline
-ToHomeTime skal ændres således brugeren ikke indtaster millisekunder                                        & \texttt{GuiMenuSettingsSimulation} &                                                                                                                                                                    \\ \hline
-Programmets zoom funktion skal ordnes, således den zoomer ved muse positionen.                              & \texttt{Viewport}                  &                                                                                                                                                                    \\ \hline
-Programmet skal implementere, således bilerne ikke altid køre deres MaxSpeed, hvis det er muligt på vejene. & \texttt{Vehicle}                   &                                                                                                                                                                    \\ \hline
-Der skal implementeres UnitTest på alle klasser i kildekoden.                                               & Alle Klasser                       &                                                                                                                                                                    \\ \hline
-SetTime skal redigeres, således brugeren kan indtaste et klokkeslæt og ikke indtaste millisekunder.         & \texttt{GuiMenuSimulationView}     &                                                                                                                                                                    \\ \hline
-Programmet skal generelt optimeres, således programmet køre hurtigere.                                      & Alle Klasser                       &                                                                                                                                                                    \\ \hline
-                                                                                                            &                                    &                                                                                                                                                                    \\ \hline
-                                                                                                            &                                    &                                                                                                                                                                    \\ \hline
-                                                                                                            &                                    &                                                                                                                                                                    \\ \hline
-                                                                                                            &                                    &                                                                                                                                                                    \\ \hline
-                                                                                                            &                                    &                                                                                                                                                                    \\ \hline
-\end{tabular}
-\end{table}
+%\centering
+%\setlength\LTleft{\fill}
+%\setlength\LTright{\fill}
+\setlength{\LTleft}{-20cm plus -1fill}
+\setlength{\LTright}{\LTleft}
+\begin{longtable}{| p{0.60\textwidth} | p{0.60\textwidth} |}
+	\hline
+\textbf{Funktioner} & \textbf{Løsningsforslag} \\
+	\hline
+Programmet implementere ikke Fodgængere & Skal implementeres på samme måde som køretøjerne, dog skal der lave en node, der hedder fodgængerfelt. \\
+	\hline
+Programmet implementerer ikke cyklister & Skal implementeres således der laves en separat cykelsti, som cyklerne kan cykle på. derudover skal vejene ændres, således cyklister og bliver kan være på en vej. \\ 
+	\hline
+Programmet implementerer ikke acceleration & Step skal ændre sig på en bestemt måde, således at step forøges gradvist ud fra køretøjets acceleration. Derudover holde øje med om der findes et objekt foran den.\\ 
+	\hline
+Programmet implementerer ikke deceleration & Køretøjerne skal kunne se yield fra en bestemt distance, så de kan nå at decellerere på samme måde som acceleration, bortset fra at de skal kunne bremse i stedet. \\ 
+	\hline
+Simuleringen bruger for meget hukommelse og tid. &  Programmets åbne og gemme funktionalitet skal forbedres ved brug af \texttt{Protobuf}. \\ 
+	\hline
+TimeSpread skal ændres således brugeren ikke indtaster millisekunder & Det der står i tekstboksen skal ændres så der står klokkeslæt eller timer, derefter skal teksten konverteres til en integer og ganges op. \\ 
+	\hline
+ToDestinationTime skal ændres således brugeren ikke indtaster millisekunder & Det der står i tekstboksen skal ændres så der står klokkeslæt eller timer, derefter skal teksten konverteres til en integer og ganges op. \\ 
+	\hline
+ToHomeTime skal ændres således brugeren ikke indtaster millisekunder & Det der står i tekstboksen skal ændres så der står klokkeslæt eller timer, derefter skal teksten konverteres til en integer og ganges op. \\ 
+	\hline
+Programmets skal implementere menneskelig adfærd så bilerne ikke altid kører deres maksimale hastighed på vejene. & Lave en ny klasse \texttt{Driver}, hvor man kan indstille menneskelig adfærd. \\ 
+	\hline
+Der skal implementeres UnitTest på alle klasser i kildekoden. & Implementer UnitTests. \\ 
+	\hline
+SetTime skal redigeres, således brugeren kan indtaste et klokkeslæt og ikke indtaste millisekunder. & Det der står i tekstboksen skal ændres så der står klokkeslæt eller timer, derefter skal teksten konverteres til en integer og ganges op. \\ 
+	\hline
+Viewport går ud over kanterne i højre side og bunden. & Når programmet genererer gitteret, skal den tjekke programvinduets bredde og højde. Samt sørge for at Viewport positionen ikke kommer til at være større end hele størrelsen minus bredden og højden. \\ 
+	\hline
+Samling og analyse af simuleringens data. & \texttt{SimulationData} skal gemme alt data som simuleringen har, ved at programmet skal kigge på de forskellige positioner. Hvis positionen er lig hinanden så står den stille, ellers skal den måle hastigheden.\\ 
+	\hline
+Implementere en hjælpeside til information omkring programmets dele. & Lave en hjælpe knappe, som forklarer med tekst, hvordan programmet fungere. \\ 
+	\hline
+I et lyskryds kan køretøjerne lave u-vendinger. & Der skal laves en ny vej, som man kun må køre ind på fra bestemte noder. \\ 
+	\hline 
+\caption{Fejl og mangler}\label{Fejl og mangler}
+\end{longtable}
