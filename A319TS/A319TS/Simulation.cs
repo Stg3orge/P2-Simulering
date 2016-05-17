@@ -65,10 +65,12 @@ namespace A319TS
         }
         private void Simulate(object sender, DoWorkEventArgs args)
         {
-            if (args.Argument == null || !(args.Argument is List<Vehicle>))
+            if (args.Argument == null)
                 throw new ArgumentException();
-            
-            List<Vehicle> vehicles = args.Argument as List<Vehicle>;
+
+            Tuple<List<Vehicle>, Project> stuff = args.Argument as Tuple<List<Vehicle>, Project>;
+            List<Vehicle> vehicles = stuff.Item1;
+            Project someProject = stuff.Item2;
             int vehicleCount = vehicles.Count;
             int onePercent = MsInDay / 100;
 
@@ -78,6 +80,10 @@ namespace A319TS
                 {
                     ((BackgroundWorker)sender).ReportProgress(i);
                     Console.WriteLine("SIM: " + i + " ");
+                }
+                foreach (LightController controller in someProject.LightControllers)
+                {
+                    controller.Update(someProject.Settings.StepSize);
                 }
                 for (int j = 0; j < vehicleCount; j++)
                 {
@@ -91,8 +97,8 @@ namespace A319TS
             _primaryVehicles = CreateVehicles(Partitions.Primary);
             _secondaryVehicles = CreateVehicles(Partitions.Secondary);
 
-            PrimaryWorker.RunWorkerAsync(_primaryVehicles);
-            SecondaryWorker.RunWorkerAsync(_secondaryVehicles);
+            PrimaryWorker.RunWorkerAsync(new Tuple<List<Vehicle>, Project>(_primaryVehicles, PrimaryProject));
+            SecondaryWorker.RunWorkerAsync(new Tuple<List<Vehicle>, Project>(_secondaryVehicles, SecondaryProject));
         }
         public void Cancel()
         {
