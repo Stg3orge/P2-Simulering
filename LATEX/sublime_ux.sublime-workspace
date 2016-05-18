@@ -111,6 +111,49 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "sections/Implementation/Klassediagrammer.tex",
+			"settings":
+			{
+				"buffer_size": 5579,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Main.tex",
+			"settings":
+			{
+				"buffer_size": 1098,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\\chapter{Diskussion}\\label{Diskussion}\n\\externaldocument{Pathfinder}\n\\externaldocument{FejlOgMangler}\n\nDet udviklede program er udviklet med den tilstræbelse, at få opfyldt et eller flere af de opstillede succeskritierer inde for hvad gruppen har været i stand til givet de faglige og tidsmæssige resourcer der er blevet sat af til projektet. Dette afsnit belyser på de tanker gruppen har gjort sig i forhold til succeskritierene post-løsningsudvikling.\n\n\\subsection{x.xx Succeskriterier}\n\n\\textbf{1. Brugeren skal være i stand til at opsætte et vejnet, der indeholder objekter som trafiklys, huse, parkeringpladser og destinationer.}\n\nNår programmet åbnes bliver brugeren præsenteret med et grid hvor på noder og veje kan indtegnes samt andre objekter. Dette gør brugeren i stand til at opsætte deres eget vejnet, både simpelt eller avanceret efter deres eget behov. Det er muligt at forbinde veje til forskellige noder og give disse veje og noder forskellige egenskaber. Derudover kan der indsættes destinations objekter på gitteret som kan laves til at modtage en hvis procentsats af alle bil objekter der opstår igennem simuleringen. Lightcontrollere kan tilkobles noder til at simulerer et trafiklys opførsel.\n\n\\vspace{5mm}\n\n\\textbf{2. Det skal være muligt for brugeren at kunne gemme deres arbejde, lukke programmet og forsætte deres arbejde næste de åbner programmet.}\n\nNår brugeren åbner programmet, kan de navigerer til dropdown menuen file hvor de kan vælge at gemme deres nuværende fil, åbne en fil, samt at oprette en ny fil. Dette gør brugeren i stand til at gemme deres arbejde og åbne det igen på et senere tidspunkt eller sende til en anden bruger med programmet.\n\n\\vspace{5mm}\n\n\\textbf{3. Simuleringen skal kunne sammenligne trafikafvikling på vejnettet med og uden de ekslusive veje. Køretøjerne i de to simuleringer skal være de samme, så resultaet ikke er tilfældigt.}\n\nBrugeren er i stand til at sætte primære og sekundære veje til at måle effektiviteten af trafikafviklingen. Derudover er det muligt at afsætte en hvis procent del af billerne til at ankomme til de forskellige indsatte destinationer, hvilket betyder at der altid vil ankomme en lige stor del af bilerne til disse destinationer så resultatet er ikke tilfældigt.\n\n\\vspace{5mm}\n\n\\textbf{4. Køretøjerne skal kunne finde den hurtigste rute til den parkeringsplads der ligger nærmest destinationen. Denne udregning skal tage højde for hastighedsgrænserne på vejene.}\n\nDer er blevet implementeret en klasse som står for at finde den hurtigste rute fra et startpunkt til et slutpunkt, se \\ref{Pathfinder}. Den tager også højde for hastighedsgrænserne der er på de forskellige veje. \n\n\\vspace{5mm}\n\n\\textbf{5. Køretøjernes bevælgse skal gøres realistisk med hensyn til acceleration og deceleration.}\n\nI vores program er der taget hensyn til at der er en bil kørende foran, og så sænker den bagkørende bilist sin fart, men den rigtige deceleration er ikke taget i brug her. Da vi skulle prioritere succeskriterier, så valgte vi at sætte fokus på nogle af de andre kriteriere som er essentielt for at få programmet til at virke. Det betød bilernes acceleration og deceleration er ikke blevet implementeret, men vil så være en af punkterne som er med i videreudvikling af programmet. Dette betyder at simuleringen bliver mindre realistisk, da bilerne ikke vil opføre sig optimalt.\n\n\\vspace{5mm}\n\n\\textbf{Realistisk simulering}\nVores ide om programmet var at det skulle være så realistisk som muligt, men vores program har nogle fejl, som der er blevet beskrevet \\ref{FejlOgMangler}. Såsom at alle bilerne kan lave en uvending i alle lyskryds, hvis det forminsker rutens afstand til destination. Uvending er ikke lovligt i alle lyskryds, hvilket får vores simulering til at være mindre realistisk. Der er mangel på menneskelig adfærd, da bilerne kører deres max hastighed på vejene, hvis det er muligt. Hvis der var variation i hastighederne i vores program, da mennesker kører på deres egen måde.\n\n\\vspace{5mm}\n\nMangler diskussion om:\ngrafteori\nvalg af A* (djstra bedre?)\nfejl angående i fathfinder (fejl når man dividere med max speed)\nBenytte protobuff eller ligende til optimering\nDer skal være noget om indlæsning af de der simulations filer, det tager for lang tid at indlæse dem, hvis de er på 300mb eller derover.",
+			"file": "sections/Diskussion/Diskussion.tex",
+			"file_size": 3793,
+			"file_write_time": 131079413152556775,
+			"settings":
+			{
+				"buffer_size": 4297,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "appendix.tex",
+			"settings":
+			{
+				"buffer_size": 419,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "setup/preamble.tex",
+			"settings":
+			{
+				"buffer_size": 6173,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -160,18 +203,15 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/IndledningProblemanalyse",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Kravspecifikationer",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Perspektivering",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Simulering",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori"
+		"/C/Programs/Git/Git Repository/Repository2/LATEX",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Diskussion",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Implementation",
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/setup"
 	],
 	"file_history":
 	[
+		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Implementation/FejlOgMangler.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/sections.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Kravspecifikationer/Kravspecifikationer.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/setup/preamble.tex",
@@ -353,8 +393,153 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "sections/Implementation/Klassediagrammer.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								508,
+								508
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1098,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1056,
+								1056
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Diskussion/Diskussion.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4048,
+								4039
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 517.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "appendix.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								419,
+								419
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "setup/preamble.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3385.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
 			]
 		}
 	],
