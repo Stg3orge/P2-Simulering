@@ -112,22 +112,184 @@
 	"buffers":
 	[
 		{
+<<<<<<< HEAD
 			"file": "sections/Implementation/Klassediagrammer.tex",
 			"settings":
 			{
 				"buffer_size": 5579,
-				"line_ending": "Windows"
-			}
-		},
-		{
+=======
+<<<<<<< HEAD
 			"file": "Main.tex",
 			"settings":
 			{
 				"buffer_size": 1098,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+			"settings":
+			{
+				"buffer_size": 9304,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "Package Control Messages\n========================\n\nLaTeXTools\n----------\n\n  LaTeXTools Plugin version 3.7.8 (2016-04-28) changelog:\n  \n  Bugfixes:\n  \n  - Better support for custom syntax files as ST3's new sublime-syntax\n  - Forward sync again send the full path to the source file (#707)\n\n  LaTeXTools Plugin version 3.7.8 (2016-04-21) changelog:\n  \n  Bugfixes:\n  \n  - ST2 will now accept bibliography with just a string\n\n  LaTeXTools Plugin version 3.7.7 (2016-04-21) changelog:\n  \n  **Note**: If you've been following along with the v3.7.x release, v3.7.7 is a major change. I've restored the previous bibliography parsing from v3.6 and earlier as default. If you want to use the new parsing, you need to change the `bibliography` setting to `\"new_bibliography\"`.\n  \n  Features:\n  \n  - Re-added previous bibliography behaviour as default. New bibliography behaviour can be obtained by changing the `bibliography` setting to `\"new_bibliography\"`.\n  \n  Bugfixes:\n  \n  - Properly support \"value and and value\" (interpretted the same as \"value and value\")\n  - KEY now cannot have an equals sign, which solves an issue related to URLs in the bibliography\n\n  LaTeXTools Plugin version 3.7.6 (2016-04-20) changelog:\n  \n  Bugfix:\n  \n  - Fix support for alphanumeric identifiers starting with a number\n\n  LaTeXTools Plugin version 3.7.5 (2016-04-20) changelog:\n  \n  Bugfix:\n  \n  - Fix delete_temp_files reported in #692\n\n  LaTeXTools Plugin version 3.7.4 (2016-04-20) changelog:\n  \n  Bugfix:\n  \n  - Fix additional issues with bib parsing reported in #694\n  - Fix Evince view function reported in #689\n\n  LaTeXTools Plugin version 3.7.3 (2016-04-20) changelog:\n  \n  Bugfix:\n  \n  - Fix additional issues with bib parsing reported on #686\n\n  LaTeXTools Plugin version 3.7.2 (2016-04-19) changelog:\n  \n  Bugfix:\n  \n  - Fix issue #686\n\n  LaTeXTools Plugin version 3.7.1 (2016-04-19) changelog:\n  \n  Bugfix:\n  \n  - Minor but breaking issue in 00_reload_submodules\n\n  LaTeXTools Plugin version 3.7.0 (2016-04-19) changelog:\n  \n  \n  New features:\n  \n  - New Viewers:\n    - Preview.app\n    - Okular\n  - Improved bibiography parsing; should handle UTF-8 and most formatting\n  - Support for most citation commands and support for the various ways BibLaTeX has to add bibliographies\n  - Plugin system for handling viewers, builders, and bibliography file parsing\n  - Some internal improvements\n  \n  Bugfixes:\n  \n  - Internal bugfixes\n\n\nLaTeXTools\n----------\n\n  LaTeXTools Plugin version 3.7.10 (2016-05-12) changelog:\n  \n  Features:\n  \n  - Updated Evince scripts to run on Python3 and try to autodetect Python version (#721, #333, #400)\n  - Support for multiple cursors with \\input, \\include and environment completions (#691)\n  - Ref commands run with only a single label will automatically be completed\n  - keep_focus and forward_sync can be set via arguments to the jump_to_pdf command (#680)\n  \n  Bugfixes:\n  \n  - Improve author_short (#691)\n\n\nLaTeXTools\n----------\n\n  LaTeXTools Plugin version 3.7.11 (2016-05-14) changelog:\n  \n  Bugfixes:\n  \n  - Allow SumatraPDF.exe to be run from PATH (#724)\n  - Honor python2 setting in Evince\n",
+			"settings":
+			{
+				"buffer_size": 3118,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "sections/Kravspecifikationer/Kravspecifikationer.tex",
+			"settings":
+			{
+				"buffer_size": 7004,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
+			"settings":
+			{
+				"buffer_size": 7025,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Implementation/ElementerVejnettet.tex",
+			"settings":
+			{
+				"buffer_size": 6003,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Implementation/Klassediagrammer.tex",
+			"settings":
+			{
+				"buffer_size": 5574,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Teori/Grafteori.tex",
+			"settings":
+			{
+				"buffer_size": 3013,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Design/Design.tex",
+			"settings":
+			{
+				"buffer_size": 3511,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Design/DesignIndledning.tex",
+			"settings":
+			{
+				"buffer_size": 558,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Diskussion/Diskussion.tex",
+			"settings":
+			{
+				"buffer_size": 3672,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Implementation/FejlOgMangler.tex",
+			"settings":
+			{
+				"buffer_size": 7320,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Implementation/Implementation.tex",
+			"settings":
+			{
+				"buffer_size": 583,
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+				"line_ending": "Windows"
+			}
+		},
+		{
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+			"file": "references.bib",
+			"settings":
+			{
+				"buffer_size": 7812,
+				"line_ending": "Windows"
+			}
+		},
+		{
+<<<<<<< HEAD
+			"file": "sections/EksisterendeModeller/eksisterendemodeller.tex",
+			"settings":
+			{
+				"buffer_size": 3122,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+			"settings":
+			{
+				"buffer_size": 5916,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Problemformulering/Problemformulering.tex",
+			"settings":
+			{
+				"buffer_size": 548,
+=======
+			"file": "sections/Implementation/FejlOgMangler.tex",
+			"settings":
+			{
+				"buffer_size": 4148,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+				"line_ending": "Windows"
+			}
+		},
+		{
+<<<<<<< HEAD
+			"file": "sections/sections.tex",
+			"settings":
+			{
+				"buffer_size": 986,
+=======
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+			"file": "Main.tex",
+			"settings":
+			{
+				"buffer_size": 1098,
+<<<<<<< HEAD
+=======
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+				"line_ending": "Unix"
+			}
+		},
+		{
+<<<<<<< HEAD
 			"contents": "\\chapter{Diskussion}\\label{Diskussion}\n\\externaldocument{Pathfinder}\n\\externaldocument{FejlOgMangler}\n\nDet udviklede program er udviklet med den tilstræbelse, at få opfyldt et eller flere af de opstillede succeskritierer inde for hvad gruppen har været i stand til givet de faglige og tidsmæssige resourcer der er blevet sat af til projektet. Dette afsnit belyser på de tanker gruppen har gjort sig i forhold til succeskritierene post-løsningsudvikling.\n\n\\subsection{x.xx Succeskriterier}\n\n\\textbf{1. Brugeren skal være i stand til at opsætte et vejnet, der indeholder objekter som trafiklys, huse, parkeringpladser og destinationer.}\n\nNår programmet åbnes bliver brugeren præsenteret med et grid hvor på noder og veje kan indtegnes samt andre objekter. Dette gør brugeren i stand til at opsætte deres eget vejnet, både simpelt eller avanceret efter deres eget behov. Det er muligt at forbinde veje til forskellige noder og give disse veje og noder forskellige egenskaber. Derudover kan der indsættes destinations objekter på gitteret som kan laves til at modtage en hvis procentsats af alle bil objekter der opstår igennem simuleringen. Lightcontrollere kan tilkobles noder til at simulerer et trafiklys opførsel.\n\n\\vspace{5mm}\n\n\\textbf{2. Det skal være muligt for brugeren at kunne gemme deres arbejde, lukke programmet og forsætte deres arbejde næste de åbner programmet.}\n\nNår brugeren åbner programmet, kan de navigerer til dropdown menuen file hvor de kan vælge at gemme deres nuværende fil, åbne en fil, samt at oprette en ny fil. Dette gør brugeren i stand til at gemme deres arbejde og åbne det igen på et senere tidspunkt eller sende til en anden bruger med programmet.\n\n\\vspace{5mm}\n\n\\textbf{3. Simuleringen skal kunne sammenligne trafikafvikling på vejnettet med og uden de ekslusive veje. Køretøjerne i de to simuleringer skal være de samme, så resultaet ikke er tilfældigt.}\n\nBrugeren er i stand til at sætte primære og sekundære veje til at måle effektiviteten af trafikafviklingen. Derudover er det muligt at afsætte en hvis procent del af billerne til at ankomme til de forskellige indsatte destinationer, hvilket betyder at der altid vil ankomme en lige stor del af bilerne til disse destinationer så resultatet er ikke tilfældigt.\n\n\\vspace{5mm}\n\n\\textbf{4. Køretøjerne skal kunne finde den hurtigste rute til den parkeringsplads der ligger nærmest destinationen. Denne udregning skal tage højde for hastighedsgrænserne på vejene.}\n\nDer er blevet implementeret en klasse som står for at finde den hurtigste rute fra et startpunkt til et slutpunkt, se \\ref{Pathfinder}. Den tager også højde for hastighedsgrænserne der er på de forskellige veje. \n\n\\vspace{5mm}\n\n\\textbf{5. Køretøjernes bevælgse skal gøres realistisk med hensyn til acceleration og deceleration.}\n\nI vores program er der taget hensyn til at der er en bil kørende foran, og så sænker den bagkørende bilist sin fart, men den rigtige deceleration er ikke taget i brug her. Da vi skulle prioritere succeskriterier, så valgte vi at sætte fokus på nogle af de andre kriteriere som er essentielt for at få programmet til at virke. Det betød bilernes acceleration og deceleration er ikke blevet implementeret, men vil så være en af punkterne som er med i videreudvikling af programmet. Dette betyder at simuleringen bliver mindre realistisk, da bilerne ikke vil opføre sig optimalt.\n\n\\vspace{5mm}\n\n\\textbf{Realistisk simulering}\nVores ide om programmet var at det skulle være så realistisk som muligt, men vores program har nogle fejl, som der er blevet beskrevet \\ref{FejlOgMangler}. Såsom at alle bilerne kan lave en uvending i alle lyskryds, hvis det forminsker rutens afstand til destination. Uvending er ikke lovligt i alle lyskryds, hvilket får vores simulering til at være mindre realistisk. Der er mangel på menneskelig adfærd, da bilerne kører deres max hastighed på vejene, hvis det er muligt. Hvis der var variation i hastighederne i vores program, da mennesker kører på deres egen måde.\n\n\\vspace{5mm}\n\nMangler diskussion om:\ngrafteori\nvalg af A* (djstra bedre?)\nfejl angående i fathfinder (fejl når man dividere med max speed)\nBenytte protobuff eller ligende til optimering\nDer skal være noget om indlæsning af de der simulations filer, det tager for lang tid at indlæse dem, hvis de er på 300mb eller derover.",
 			"file": "sections/Diskussion/Diskussion.tex",
 			"file_size": 3793,
@@ -143,16 +305,120 @@
 			"settings":
 			{
 				"buffer_size": 419,
+=======
+<<<<<<< HEAD
+			"file": "sections/Metode/Metode.tex",
+			"settings":
+			{
+				"buffer_size": 4436,
+=======
+			"file": "sections/Implementation/PathFinder.tex",
+			"settings":
+			{
+				"buffer_size": 5003,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Teori/Teori.tex",
+			"settings":
+			{
+				"buffer_size": 690,
+				"line_ending": "Unix"
+			}
+		},
+		{
+<<<<<<< HEAD
+			"file": "sections/Implementation/Viewport.tex",
+			"settings":
+			{
+				"buffer_size": 7548,
+=======
+			"file": "sections/sections.tex",
+			"settings":
+			{
+				"buffer_size": 986,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+				"line_ending": "Unix"
+			}
+		},
+		{
+<<<<<<< HEAD
+			"file": "sections/Teknologianalyse/altransWTF.tex",
+			"settings":
+			{
+				"buffer_size": 11735,
 				"line_ending": "Windows"
 			}
 		},
 		{
+			"file": "sections/Indledning/Indledning.tex",
+			"settings":
+			{
+				"buffer_size": 3284,
+=======
+			"file": "sections/Implementation/Viewport.tex",
+			"settings":
+			{
+				"buffer_size": 7548,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+				"line_ending": "Unix"
+			}
+		},
+		{
+<<<<<<< HEAD
+			"file": "aau/frontpage.tex",
+			"settings":
+			{
+				"buffer_size": 950,
+				"line_ending": "Windows"
+=======
+			"file": "/C/Programs/C/Lektionone/pascal.c",
+			"settings":
+			{
+				"buffer_size": 548,
+				"line_ending": "Windows",
+				"name": "#include <stdio.h>"
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+			}
+		},
+		{
+			"file": "aau/titlepages.tex",
+			"settings":
+			{
+				"buffer_size": 1347,
+				"line_ending": "Windows"
+			}
+<<<<<<< HEAD
+		},
+		{
+			"file": "aau/signatures.tex",
+			"settings":
+			{
+				"buffer_size": 1115,
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+				"line_ending": "Windows"
+			}
+		},
+		{
+<<<<<<< HEAD
 			"file": "setup/preamble.tex",
 			"settings":
 			{
 				"buffer_size": 6173,
 				"line_ending": "Windows"
 			}
+=======
+			"file": "setup/variables.tex",
+			"settings":
+			{
+				"buffer_size": 601,
+				"line_ending": "Windows"
+			}
+=======
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 		}
 	],
 	"build_system": "",
@@ -203,6 +469,7 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/C/Programs/Git/Git Repository/Repository2/LATEX",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections",
 		"/C/Programs/Git/Git Repository/Repository2/LATEX/sections/Diskussion",
@@ -240,6 +507,41 @@
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori/Teori.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/PathFinder.tex",
 		"/C/Programs/C/Lektionone/pascal.c",
+=======
+<<<<<<< HEAD
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Design",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Design/Kravspecifikationer",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Diskussion",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/EksisterendeModeller",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Konteksten",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Simulering",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Teknologianalyse",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Teori"
+	],
+	"file_history":
+	[
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/FejlOgMangler",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/oversigt.tex",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation/FileHandler.tex",
+=======
+<<<<<<< HEAD
+		"/C/Programs/Githubp2/P2-Simulering/LATEX",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup"
+=======
+		"/C/Users/Fisker/Documents/GitHub/P2-Simulering/LATEX"
+>>>>>>> e36609e50f741d1e2ab80c1e4d49e4c022847818
+	],
+	"file_history":
+	[
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Test/Test.tex",
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Design.tex",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sublime_ux.sublime-project",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Implementation/oversigt.tex",
@@ -260,9 +562,9 @@
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Problemformulering/Problemformulering.tex",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
 		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
-		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.tex",
 		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
 		"/C/Programs/Git/Gundamnation/Programs/Eksamensopgave2016/External/products.csv",
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
@@ -272,6 +574,7 @@
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
 		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
 		"/C/Programs/C/Lektionone/helppage.c",
+		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
 		"/C/Programs/C/Lektionone/adresserfratxt.c",
 		"/C/Programs/C/Lektionone/superliga-2014-2015.txt",
 		"/C/Programs/C/Lektionone/adresser.txt",
@@ -325,7 +628,11 @@
 	],
 	"find":
 	{
-		"height": 34.0
+<<<<<<< HEAD
+		"height": 28.0
+=======
+		"height": 36.0
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 	},
 	"find_in_files":
 	{
@@ -339,7 +646,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
+			"getobj",
+			"getob",
+=======
+			"}",
 			"HEAD",
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 			"fight",
 			"teams",
 			"match_count",
@@ -393,41 +706,22 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
 			"selected": 2,
+=======
+<<<<<<< HEAD
+			"selected": 11,
+=======
+			"selected": 2,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "sections/Implementation/Klassediagrammer.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5579,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								508,
-								508
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 					"file": "Main.tex",
 					"semi_transient": false,
 					"settings":
@@ -439,8 +733,136 @@
 						"selection":
 						[
 							[
-								1056,
-								1056
+								479,
+								479
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1903.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3118,
+								3118
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sections/Kravspecifikationer/Kravspecifikationer.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7004,
+=======
+					"file": "references.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7812,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+=======
+							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+<<<<<<< HEAD
+						"translation.y": 1320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3922,
+								3922
 							]
 						],
 						"settings":
@@ -448,9 +870,184 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
+						"translation.y": 91.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sections/Implementation/ElementerVejnettet.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6003,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5026,
+								5026
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 340.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+					"file": "sections/Implementation/Klassediagrammer.tex",
+					"semi_transient": false,
+					"settings":
+					{
+<<<<<<< HEAD
+						"buffer_size": 5579,
+=======
+						"buffer_size": 5574,
+=======
+						"translation.y": 1026.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sections/Implementation/FejlOgMangler.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4148,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								508,
+								508
+=======
+<<<<<<< HEAD
+								1284,
+								1284
+=======
+								938,
+								938
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1098,
+=======
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sections/Teori/Grafteori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3013,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1488,
+								1488
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sections/Design/Design.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3511,
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								1056,
+								1056
+=======
+								532,
+								532
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+<<<<<<< HEAD
+=======
+=======
+							"word_wrap": false
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+<<<<<<< HEAD
 					"stack_index": 1,
 					"type": "text"
 				},
@@ -461,14 +1058,32 @@
 					"settings":
 					{
 						"buffer_size": 4297,
+=======
+<<<<<<< HEAD
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "sections/Design/DesignIndledning.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 558,
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								4048,
 								4039
+=======
+								558,
+								558
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 							]
 						],
 						"settings":
@@ -476,6 +1091,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 517.0,
 						"zoom_level": 1.0
 					},
@@ -489,14 +1105,51 @@
 					"settings":
 					{
 						"buffer_size": 419,
+=======
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "sections/Diskussion/Diskussion.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3672,
+=======
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Main.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1098,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								419,
 								419
+=======
+<<<<<<< HEAD
+								1619,
+								1619
+=======
+								251,
+								251
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 							]
 						],
 						"settings":
@@ -507,16 +1160,69 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
+<<<<<<< HEAD
 					"buffer": 4,
 					"file": "setup/preamble.tex",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 6173,
+=======
+					"buffer": 11,
+					"file": "sections/Implementation/FejlOgMangler.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86,
+								86
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+=======
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+<<<<<<< HEAD
+					"buffer": 12,
+					"file": "sections/Implementation/Implementation.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 583,
+=======
+					"buffer": 3,
+					"file": "sections/Implementation/PathFinder.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5003,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 						"regions":
 						{
 						},
@@ -529,6 +1235,7 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -539,13 +1246,527 @@
 					},
 					"stack_index": 4,
 					"type": "text"
+=======
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+<<<<<<< HEAD
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "references.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7812,
+=======
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sections/Teori/Teori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 690,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "sections/EksisterendeModeller/eksisterendemodeller.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1366,
+								1366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1080.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "sections/Problemformulering/Problemformulering.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5960.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+					"file": "sections/sections.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 986,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "sections/Metode/Metode.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "sections/Teori/Teori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 520.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+					"file": "sections/Implementation/Viewport.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "sections/Teknologianalyse/altransWTF.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11312,
+								11312
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2700.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "sections/Indledning/Indledning.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 972.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "aau/frontpage.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Programs/C/Lektionone/pascal.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 548,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								623,
+								623
+=======
+								171,
+								171
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+=======
+							"auto_name": "#include <stdio.h>",
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+<<<<<<< HEAD
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+=======
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+					"file": "aau/titlepages.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+<<<<<<< HEAD
+								484,
+								484
+=======
+								490,
+								490
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+=======
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+<<<<<<< HEAD
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "aau/signatures.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "setup/variables.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+=======
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
+					"type": "text"
+>>>>>>> 6bc551dfb2e12d688194c5ac49356adcb19c8edf
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -576,17 +1797,25 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 149.0
+<<<<<<< HEAD
+		"height": 238.0
+=======
+		"height": 130.0
+>>>>>>> 979e6ca4d72d1bd1d68f6418bba83af8f4b47663
 	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
+	"output.unsaved_changes":
+	{
+		"height": 29.0
+	},
 	"pinned_build_system": "",
 	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -628,7 +1857,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 314.0,
+	"side_bar_width": 307.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

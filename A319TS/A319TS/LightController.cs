@@ -16,8 +16,8 @@ namespace A319TS
         public LightController(Point position) : base(position)
         {
             Lights = new List<Node>();
-            FirstTime = 10;
-            SecondTime = 10;
+            FirstTime = 10000;
+            SecondTime = 10000;
             _current = FirstTime;
             
         }

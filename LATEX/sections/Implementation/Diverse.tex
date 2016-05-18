@@ -1,8 +1,8 @@
 \section{Diverse}\label{Diverse}
 Dette afsnit dækker over klasserne der ikke ligger under en bred kategori af klasser.
 
-\section{Project}
-Project klassens formål er at holde på informationen om elementerne i vejnettet. Derudover holder Project klassen også på brugerens indstillinger for simuleringerne der udføres. Disse indstillinger er gemt i en instans af klassen SimulationSettings. Når Project klassen instansieres, tilføjer constructoren en Default type til RoadTypes, VehicleTypes og DestinationTypes, hvilket er listerne der gemme på alle typerne af deres slags. Default værdierne kan ikke slettes, da det ikke vil give mening for simuleringen at veje, køretøj og destinationer eksisterede uden en type, og programmet ville blive termineret. 
+\subsection{Project}
+\texttt{Project} klassens formål er at holde på informationen om elementerne i vejnettet. Derudover holder \texttt{Project} klassen også på brugerens indstillinger for simuleringerne der udføres. Disse indstillinger er gemt i en instans af klassen \texttt{SimulationSettings}. Når \texttt{Project} klassen instansieres, tilføjer constructoren en \texttt{Default} type til \texttt{RoadTypes}, \texttt{VehicleTypes} og \texttt{DestinationTypes}, hvilket er listerne der gemme på alle typerne af deres slags. \texttt{Default} værdierne kan ikke slettes, da det ikke vil give mening for simuleringen at veje, køretøj og destinationer eksisterede uden en type, og programmet ville blive termineret. 
 
 \begin{figure}[H]
 \begin{lstlisting} 
@@ -18,9 +18,9 @@ public object Clone()
 \caption{Project.cs}\label{Project}
 \end{figure}
 
-Project klassen implementerer interfacet ICloneable, der beder om en implementation af Clone(), der returnerer en kopi af en instans af et Project. Implementationen af Clone() funktionaliteten er vist på figur \ref{Project}, hvor instansen af Project bliver seraliseret vha. BinaryFormatter klassen, og derefter deserliseret samt returneret. Grunden til Clone funktionen er lave en 'deep copy' af projektet, da Simulation klassen har brug for en identisk men adskildt kopi, så køretøjerne i Primary og Secondary simuleringerne ikke kan se og holde for hinanden. En MemberwiseClone() som alle objekter har adgang til, laver kun en 'shallow copy', hvilket vil sige at noderne og vejene stadig ville være referencer til de samme som i det første projekt.
+\texttt{Project} klassen implementerer interfacet \texttt{ICloneable}, der beder om en implementation af \texttt{Clone()}, der returnerer en kopi af en instans af et \texttt{Project}. Implementationen af \texttt{Clone()} funktionaliteten er vist på figur \ref{Project}, hvor instansen af \texttt{Project} bliver seraliseret vha. \texttt{BinaryFormatter} klassen, og derefter deserliseret samt returneret. Grunden til \texttt{Clone()} funktionen er at lave en 'deep copy' af projektet, da Simulation klassen har brug for en identisk men adskildt kopi, så køretøjerne i \texttt{Primary} og \texttt{Secondary} simuleringerne ikke kan se og holde for hinanden. En \texttt{MemberwiseClone()} som alle objekter har adgang til, laver kun en 'shallow copy', hvilket vil sige at noderne og vejene stadig ville være referencer til de samme som i det første \texttt{Project}.
 
-\section{SimulationSettings}
+\subsection{SimulationSettings}
 \begin{figure}[H]
 \begin{lstlisting} 
 // Defaults
@@ -46,38 +46,62 @@ public SimulationSettings()
 \caption{SimulationSettings}\label{SimulationSettings}
 \end{figure}
 
-SimulationSettings, som kan ses på figur \ref{SimulationSettings}, indeholder alle indstillingerne der bliver brugt i en simulering. Constructoren til klassen sætter variablerne til de definerede værdier. Værdierne kan justeres gennem brugerfladen GUIMenuSettingsSimulation. I brugerfladen kan værdierne tilgås gennem nogle NumericUpDown elementer, hvor minimum og maximum er sat for at kontrollerer hvordan simuleringen kan indstilles. På tabel \ref{SimulationLimits} kan begrænsningerne ses. Yderligere er der også regler brugeren skal overholde når indstillingerne skal sættes. Inbound og Outbound skal være lavere end VehicleCount, og TimeSpread må ikke gøre det muligt at køretøjer kan starte deres rejser uden for tidsrummet mellem 0 og 86400000 millisekunder. Der er lavet en brugerflade, der kan tilgås ved at trykke på en Info knap, som beskriver hvad variablerne betyder, da navnene muligvis kunne blive misforstået.
+\texttt{SimulationSettings}, som kan ses på figur \ref{SimulationSettings}, indeholder alle indstillingerne der bliver brugt i en simulering. Constructoren til klassen sætter variablerne til de definerede værdier. Værdierne kan justeres gennem brugerfladen \texttt{GUIMenuSettingsSimulation}. I brugerfladen kan værdierne tilgås gennem nogle \texttt{NumericUpDown} elementer, hvor minimum og maximum er sat for at kontrollerer hvordan simuleringen kan indstilles. På tabel \ref{SimulationLimits} kan begrænsningerne ses. Yderligere er der også regler brugeren skal overholde når indstillingerne skal sættes. \texttt{Inbound} og \texttt{Outbound} skal være lavere end \texttt{VehicleCount}, og \texttt{TimeSpread} må ikke gøre det muligt at køretøjer kan starte deres rejser uden for tidsrummet mellem 0 og 86400000 millisekunder. Der er lavet en brugerflade, der kan tilgås ved at trykke på en \texttt{Info} knap, som beskriver hvad variablerne betyder, da navnene muligvis kunne blive misforstået.
 
 \begin{table}[]
 \centering
-\begin{tabular}{|l|l|l|}
-\hline
-Variable       & Minimum & Maximum  \\ \hline
-StepSize       & 10      & 100      \\ \hline
-VehicleSpace   & 0       & 100      \\ \hline
-IncommingRange & 0       & 100      \\ \hline
-CarCount       & 0       & 10000    \\ \hline
-Inbound        & 0       & 10000    \\ \hline
-Outbound       & 0       & 10000    \\ \hline
-ToDestTime     & 0       & 86400000 \\ \hline
-ToHomeTime     & 0       & 86400000 \\ \hline
-TimeSpread     & 0       & 86400000 \\ \hline
-\caption{Begrænsninger for simulering indstillingerne}
-\label{SimulationLimits}
+%\begin{adjustbox}{height=0.12\textheight}
+\begin{tabular}{| c | c | c |}
+  \hline
+Variable & Minimum & Maximum \\
+  \hline
+StepSize & 10 & 100 \\
+  \hline
+VehicleSpace & 0 & 100 \\
+  \hline
+IncomingRange & 0 & 100 \\
+  \hline
+CarCount & 0 & 10000 \\
+  \hline
+Inbound & 0 & 10000 \\
+  \hline
+Outbound & 0 & 10000 \\
+  \hline
+ToDestTime & 0 & 86400000 \\
+  \hline
+ToHomeTime & 0 & 86400000 \\
+  \hline
+TimeSpread & 0 & 86400000 \\
+  \hline
 \end{tabular}
+%\end{adjustbox}
+\caption{Begrænsninger for simulering indstillingerne}\label{SimulationLimits}
 \end{table}
 
 \subsection{Data}
-SimulationData, er en klasse, se \ref{SimulatonDataClass}, som modtager to lister fra VehicleData og derudover tager den imod information fra Project og Datetime. Konstruktoren SimulationData læser disse data ind til de forskelige typer i klassen. Hvis ToString metoden bliver kaldt, så retuneres Project.name og en DateTime type.
+\texttt{SimulationData} er en klasse der indeholder dataen fra køretøjerne (\texttt{VehicleData}) fra en \texttt{Primary} og \texttt{Secondary} simulering, og en kopi af projektet simuleringen blev kørt på. Det er denne klasse der bliver gemt i en fil efter simuleringen, så brugeren kan åbne den senere gennem \texttt{SimulationView} brugerfladen. \texttt{VehicleData} indeholder arrays af punkterne der blev optaget gennem simuleringen, tiden på starten af rejsen mod og fra destinationen, samt køretøjets type. Ved begge klasser sættes dataen ind gennem constructoren, og det kan derefter ikke ændres igen, da egenskaberne for variablerne er med private settere. Data klasserne kan ses på figur \ref{SimData} og \ref{VehicleData}.
 
-
-VehicleData for den enkelte vehicle lagt over i to liste, PrimaryData og SecondaryData. VehicleData består ikke af nogle større funktioner og derfor vil der ikke være nogle dybbere forklaring dertil. Den består af nogle typer der læser data fra PointD klassen og VehicleType.
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/SimulationData}
+\caption{SimulationData klassen}
+\label{SimData}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=1\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/VehicleData}
+\caption{VehicleData klassen}
+\label{VehicleData}
+\end{minipage}
+\end{figure}
 
 \subsection{MathExtension}
-MathExtension er en klasse der er lavet for at håndtere udregningerne fra \texttt{Point} til \texttt{Point}, fra \texttt{PointD} til \texttt{PointD} samt en kort kovertering af km/h til m/ms. Der gøres bruge af klasser fra \texttt{Math} bibliotek. Måden vi udregner km/h til m/ms, er ved at tage kt/h og dividere med 3600(60*60) Se udregning \ref{ConvertKthToMms}. Vi benytter os af afstandsformlen i MathExtension, hvor vi beregner afstanden mellem to noder via deres koordinater \ref{AfstandsFormel}. Disse udregninger anvendes bl.a i Vector2D klassen.
+\texttt{MathExtension} er en klasse der er lavet for at håndtere udregningerne fra \texttt{Point} til \texttt{Point}, fra \texttt{PointD} til \texttt{PointD} samt en kort kovertering af km/h til m/ms. Der gøres bruge af klasser fra \texttt{Math} bibliotek. Måden vi udregner km/h til m/ms, er ved at tage km/h og dividere med 3600(60*60), se udregning \ref{ConvertKmhToMms}. Vi benytter os af afstandsformlen i \texttt{MathExtension}, hvor vi beregner afstanden mellem to noder via deres koordinater \ref{AfstandsFormel}. Afstandsformlen benyttes flere steder i programmet, men primært i \texttt{Pathfinder} og \texttt{Vehicle}, og konverteringen til meter på millisekund bliver kun bruger i \texttt{Vehicle.Drive()}.
 
-\begin{equation} \label{ConvertKthToMms}
-kt/h / 3600
+\begin{equation} \label{ConvertKmhToMms}
+km/h / 3600
 \end{equation}
 
 \begin{equation} \label{AfstandsFormel}
@@ -85,40 +109,29 @@ kt/h / 3600
 \end{equation}
 
 \subsection{Vector2D}
-Vector2D klassen anvendes til at opsætte de metoder som gør det muligt at bl.a. vehicles kan udregne hvor hen de skal bevæge sig i simuleringen. Metoderne er for det meste til at indlæse koordinter på gridded i simuleringen til anvendelse når simuleringen kører, se \ref{MathExtensionClass}. I denne klasse har vi tre metoder, hvor i den første metode \texttt{Scale()} ganger vi vektoren op med en input parameter der bliver bestemt af brugeren. I \texttt{ToUnit()} bliver vores x og y divideret med størrelsen af vektoren. \texttt{FromRoad()} metoden beregner vektoren der tager udgangspunkt i vejenes position. Ved vektor.X, der trækker man vejens slut position fra start position og ligger ind i variablen \texttt{vector.X}. Samme gør man ved \texttt{vector.Y}, derefter vil metoden returnere vektoren.
-
 \begin{figure}[H]
 \begin{lstlisting}
-class Vector2D
+public void Scale(double scalar)
 {
-   public double X { get; set; }
-   public double Y { get; set; }
-   public double Length
-   {
-      get { return MathExtension.Distance(new PointD(0, 0), new PointD(X, Y)); }
-   }
-   public void Scale(double scalar)
-   {
-      X *= scalar;
-      Y *= scalar;
-   }
-   public void ToUnit()
-   {
-      double magnitude = Length;
-      X /= magnitude;
-      Y /= magnitude;
-   }
-      public static Vector2D FromRoad(Road road)
-      {
-         Vector2D vector = new Vector2D();
-         vector.X = road.To.Position.X - road.From.Position.X;
-         vector.Y = road.To.Position.Y - road.From.Position.Y;
-         return vector;
-      }
-   }
+  X *= scalar;
+  Y *= scalar;
+}
+public void ToUnit()
+{
+  double magnitude = Length;
+  X /= magnitude;
+  Y /= magnitude;
+}
+public static Vector2D FromRoad(Road road)
+{
+  Vector2D vector = new Vector2D();
+  vector.X = road.To.Position.X - road.From.Position.X;
+  vector.Y = road.To.Position.Y - road.From.Position.Y;
+  return vector;
 }
 \end{lstlisting}
-\caption{Vector2D Klasse}\label{MathExtensionClass}
+\caption{Vector2D klasse}\label{Vector2D}
 \end{figure}
 
-ref til figur
+Formålet med \texttt{Vector2D} klassen er at gøre det nemt at flytte køretøjer, som bliver gjort i \texttt{TranslateVehicle()} metoden, der ligger i \texttt{Vehicle} klassen. \texttt{Vector2D} klassen har tre metoder, \texttt{Scale()}, \texttt{ToUnit()} og \texttt{FromRoad()}, som vises på figur \ref{Vector2D}. Den første metode \texttt{Scale()} ganger vektoren op med en scalar der bliver taget som input parameter. I \texttt{ToUnit()} bliver vektorens \texttt{X} og \texttt{Y} divideret med størrelsen af vektoren, således at vektorens størrelse bliver lig 1. \texttt{FromRoad()} metoden laver en \texttt{Vector2D} ud fra en \texttt{Road} instans koordinater.
+
