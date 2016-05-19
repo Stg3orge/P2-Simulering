@@ -4,86 +4,6 @@
 		"selected_items":
 		[
 			[
-				"allocat",
-				"allocation_of_values_to_team_data"
-			],
-			[
-				"foot",
-				"football_data_array"
-			],
-			[
-				"match",
-				"matchescount"
-			],
-			[
-				"write",
-				"write_teamname_into_array"
-			],
-			[
-				"foo",
-				"football_data_array"
-			],
-			[
-				"mat",
-				"matches"
-			],
-			[
-				"fo",
-				"football_data_array"
-			],
-			[
-				"num",
-				"number_of_matches"
-			],
-			[
-				"print",
-				"print_match"
-			],
-			[
-				"ma",
-				"matchdatapointer"
-			],
-			[
-				"fot",
-				"football_data_array"
-			],
-			[
-				"footbal",
-				"football_data_array"
-			],
-			[
-				"football_d",
-				"football_data_array"
-			],
-			[
-				"football",
-				"football_data"
-			],
-			[
-				"footb",
-				"football_data_array"
-			],
-			[
-				"spec",
-				"spectators"
-			],
-			[
-				"gen",
-				"general_help"
-			],
-			[
-				"general",
-				"general_FAQ"
-			],
-			[
-				"hel",
-				"help_options"
-			],
-			[
-				"help",
-				"help_options"
-			],
-			[
 				"In",
 				"InputString"
 			],
@@ -112,45 +32,34 @@
 	"buffers":
 	[
 		{
-			"contents": "\\section{ViewPort}\\label{ViewPort}\n\n",
-			"settings":
-			{
-				"buffer_size": 36,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "\\section{Viewport}\\label{Viewport}\n\\texttt{Viewport} klassen har til formål at sætte rammerne for området hvori man kan tegne elementerne i vejnettet. \\texttt{Viewport} er opsat til at fungere som en række af lag lagt oven på hinanden. \n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic Project Project;\npublic Point HoverConnection = new Point(-1, -1);\npublic Point MousePos = new Point(0, 0);\npublic Point GridPos { get { return GetGridPos(); } }\n\\end{lstlisting}\n\\caption{}\n\\label{ViewportParameters}\n\\end{figure}\n\nKlassen arver fra \\texttt{Panel} klassen. Til dette formål er det nødvendigt for \\texttt{Viewport} and være en del af et nyt projekt og derfor instansieres der en nyt \\texttt{Project} og en række parametre set i figur \\ref{ViewportParameters}. \\texttt{Viewport} visualiserer alle enheder på panelet igennem de datasæt der eksisterer som en del af et \\texttt{Project}.\n\n\\vspace{5mm}\n\n\\texttt{HoverConnection} visualiserer via en svævende streg, den forbindelse man prøver at lave mellem to objekter. \\texttt{MousePos} indikerer det aktuelle punkt hvor musen befinder sig i gitter-systemet, selv ved en nedskalering vil den altid finde det samme koordinat. \\texttt{GridPos} får data igennem en metode der indikerer alle mulige koordinater i gitteret. Dette er brugbart til at finde koordinaterne til objekterne der bliver tegnet i gitteret.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic object GetObjByGridPos()\n{\n  Node node = Project.Nodes.Find(n => \n              n.Position == GridPos);\n  if (node != null)\n      return node;\n  LightController controller = Project.LightControllers.Find(l => \n                               l.Position == GridPos);\n  if (controller != null)\n    return controller;\n  Destination dest = Project.Destinations.Find(d => \n                     d.Position == GridPos);\n  if (dest != null)\n    return dest;\n  return null;\n}\n\\end{lstlisting}\n\\caption{}\n\\label{ViewportGetObjByGridPos}\n\\end{figure}\n\nSom sagt kan \\texttt{Viewport} indikere koordinaterne til indsatte objekter og dette gør den igennem metoden \\texttt{GetObjByGridPos()} som set i figur \\ref{ViewportGetObjByGridPos}. Metoden Tjekker for alle \\texttt{Node}, \\texttt{LightController} og \\texttt{Destination} om deres position er lig \\texttt{GridPos}. Hvis den har fundet en, så retunere den det fundne objekt. Grunden til dette er for at være i stand til at arrangere de håndterede objekter så deres koordinat kan identificeres.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic Layer Grid = new Layer();\npublic Layer Connections = new Layer();\npublic Layer Nodes = new Layer();\npublic Layer Entities = new Layer();\npublic Layer Information = new Layer();\npublic Layer Input = new Layer();\n\nControls.Add(Grid);\nGrid.Controls.Add(Connections);\nConnections.Controls.Add(Nodes);\nNodes.Controls.Add(Entities);\nEntities.Controls.Add(Information);\nInformation.Controls.Add(Input);\n\\end{lstlisting}\n\\caption{Lag for ViewportSetup, i deres kendetegnede rækkefølge}\n\\label{ViewportSetupLayers}\n\\end{figure}\n\nInde i \\texttt{partial} klassen \\texttt{ViewportSetup} bliver der angivet en række af lag (\\texttt{Layer}) som set i figur \\ref{ViewportSetupLayers}. \\texttt{Layer} er en klasse som arver fra \\texttt{PictureBox} og har en constructor med \\texttt{DoubleBuffered=true}. Grunden til at \\texttt{PictureBox} ikke bare er benyttet alene er fordi måden disse \\texttt{Layer} er anvendt i bl.a. \\texttt{ToolController} klassen afhænger af at de kan genindlæses når et objekt, såsom en \\texttt{Node}, skal skal ændres eller tegnes en ny. Dette gøres som vist i figur \\ref{ToolControllerSetNodeType} fra \\texttt{ToolController} klassen. Heri kan der ses at metoden til sidst genindlæser på \\texttt{Nodes}. Hvis \\texttt{DoubleBuffered} sat til \\texttt{false} ville programmet flimre visuelt, fordi objekter ikke bliver tegnet hurtigt nok til at virke omgående.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\nprivate void SetNodeType(NodeTypes type)\n{\n    object obj = Viewport.GetObjByGridPos();\n    if (obj is Node)\n    {\n        if (type == NodeTypes.Light && ((Node)obj).Type == NodeTypes.Light)\n            ((Node)obj).Green = !((Node)obj).Green;\n        else\n            ((Node)obj).Type = type;\n\n        Viewport.Nodes.Refresh();\n    }\n}\n\\end{lstlisting}\n\\caption{Brug af Control.Refresh() i ToolController klassen}\n\\label{ToolControllerSetNodeType}\n\\end{figure}\n\nDisse lag indikerer i hvilken rækkefølge objekterne på panelet skal tegnes. Dette kan ses ved brugen af \\texttt{Controls.Add} hvori der gradvist bliver lagt lag på lag. Hvis programmet ikke tegnede objekter i lag, så ville de alle skulle tegnes hver gang man udførte en enkelt opdatering, ligesom set i figur \\ref{ToolControllerSetNodeType}.\n\n\\subsection{SimulationViewport}\\label{SimulationViewport}\n\n\\texttt{SimulationViewport} har til formål at visualisere simuleringen, som \\texttt{Simulation} klassen udfører. Klassen bruger den samme fremgangsmåde med lag som gennemgået tidligere.\n\n\\vspace{5mm}\n\nI \\ref{ViewPortSimulation} bliver der instansieret et nyt lag \\texttt{Vehicles} og en variabel for \\texttt{SimulationData} hvori indeholdes nødvendige datasæt for at udføre en simulation. \\texttt{SimulationViewport} tager derudover \\texttt{SimulationData} som en parameter til dens egen constructor som set i figur \\ref{ViewportSimulationConstructor}. I constructoren kan det ses at visualiseringen af simulationen benytter \\texttt{Layer} til at fremstille \\texttt{Vehicle} på \\texttt{Viewport}. \\texttt{Input} er et lag der kan modtage nyt input og ved \\texttt{Input.BringToFront();} angives der at der nu kan afventes nyt input.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\nprivate const int VehicleSize = 16;\npublic Layer Vehicles = new Layer();\npublic SimulationData SimData;\npublic Partitions CurrentPartition = Partitions.Primary;\n\\end{lstlisting}\n\\caption{Variabler til SimulationViewport}\n\\label{ViewPortSimulation}\n\\end{figure}\n\n\\begin{figure}[H]\n\\begin{lstlisting}\npublic SimulationViewport(SimulationData data) : base(data.Project)\n{\n    SimData = data;\n            \n    Grid.Paint -= DrawGrid;\n    Entities.Controls.Remove(Information);\n    Entities.Controls.Add(Vehicles);\n    Vehicles.Controls.Add(Input);\n    Input.BringToFront();\n}\n\\end{lstlisting}\n\\caption{Constructoren til SimulationViewport}\n\\label{ViewportSimulationConstructor}\n\\end{figure}\n\nTil brug i selve simuleringen bliver der afsat en hel dag i millisekunder (\\texttt{MsInDay} konstanten fra \\texttt{Simulation} klassen). I \\texttt{SimulationSettings} bliver der instansieret en variabel \\texttt{Step} på 100 millisekunder der er afsat som standard, hvorfra denne også kan ændres i brugergrænsefladen. \\texttt{Step} har til formål at opdatere den visuelle simulering som brugeren kan se, men inde i \\texttt{Simulation} klassen er der en konstant ved navn \\texttt{RecordInterval}. Denne variabel er hardcoded, kan ikke ændres af brugeren og indikerer hvornår simulering laver en optagelse af data. \n\n\\vspace{5mm}\n\nDette bliver der gået igennem i et \\textbf{For-loop} som også findes i klassen \\texttt{Simulation}. Simuleringen opdateres efter det antal som \\texttt{Step} dikterer. \\texttt{SimulationViewport} har så til formål at visualisere dette step.\n\n\\begin{figure}[H]\n\\begin{lstlisting}\nprivate int _time = 0;\npublic int Time\n{\n    get { return _time; }\n    set\n    {\n        if (value > MsInDay) _time = MsInDay;\n        else if (value < 0) _time = 0;\n        else _time = value;\n    }\n}\n\\end{lstlisting}\n\\caption{Tids-afsætning for en simulering, MsInDay eller en hel dag.}\n\\label{TimeForSim}\n\\end{figure}\n\n\n",
 			"file": "sections/Implementation/Viewport.tex",
-			"file_size": 7757,
-			"file_write_time": 131077891243050483,
 			"settings":
 			{
-				"buffer_size": 7533,
+				"buffer_size": 7591,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/Implementation/PathFinder.tex",
+			"file": "sections/sections.tex",
 			"settings":
 			{
-				"buffer_size": 5003,
+				"buffer_size": 1035,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/Implementation/Funktionelle.tex",
+			"file": "sections/Laesevejledning/Laesevejledning.tex",
 			"settings":
 			{
-				"buffer_size": 11933,
+				"buffer_size": 1876,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/Implementation/Implementation.tex",
+			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
 			"settings":
 			{
-				"buffer_size": 583,
+				"buffer_size": 9462,
 				"line_ending": "Windows"
 			}
 		},
@@ -163,29 +72,34 @@
 			}
 		},
 		{
-			"file": "sections/Simulering/Simulering.tex",
+			"file": "sections/Konklusion/Konklusion.tex",
 			"settings":
 			{
-				"buffer_size": 5101,
+				"buffer_size": 1499,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "\\chapter{Teknologianalyse}\\label{Teknologianalyse}\nI dette kapitel vil der blive gennemgået en analyse af simulationsprogrammerne VisSim og Altrans. En mangel på informationer om andre programmer har i en stor grad påvirket valget af VisSim og Altrans, derudover er de to programmer forskellige i deres formål, hvor Altrans har et specifikt formål, og VisSim er beregnet til at kunne løse flere forskellige formål. Altrans bliver ikke længere vedligeholdt, mens VisSim stadig bliver brugt i dag. Begge programmer vil blive vurderet i forhold til de aspekter der gør dem nemme at vedligeholde.\n\nInden da vil vi beskrive gruppens definition på hvad vedligeholdelse betyder for gruppen. Da der er tale om programmer og simuleringsmodeller, er der ikke tale om slid og skader, dog er der stadig tale om at sørge for at bevare disse løsninger. Derfor, når vi kigger på de to følgende to eksisterende løsninger, bliver de bedømt ikke kun på design, funktionalitet og deres kompleksitet, men også den eksisterende løsnings evne til at fortsat kunne blive anvendt ud i fremtiden.\n\n\\section{VisSim}\nVisSim er et mikrosimuleringsprogram, som bliver anendt i Danmark. VisSim udgør en stor del af beslutningsgrundlaget for udvidelsen i trafikken i dag. Programmet bruges til at konstruere og simulere større dynamiske systemer. VisSim er et diskret simuleringsprogram som modellerer adfærden for den enkle billist. VisSim benyttes for general modellering, simulation og designe simulations applikationer, dvs. at VisSim ikke nødvendigvis bruges til trafik simulering. VisSim er programmeret i ANSI C, og under processen af et VisSim projekt kan projektet kompileres.\n\nVisSim benytter sig af psyko fysisk model, som benytter en regelbaseret algoritme ved bevægelser på tværs af banerne. Den psykologiske del bliver brugt til bilistens ønske om aggressivitet, hastighed, reaktionsevne og generelt menneskelige forhold til trafikken. Den fysiske del bruges til bilens adfærd, så som bilens hastighed, størrelse, position. \n\nHerunder på figur \\ref{vissim} kan det ses at VisSim består af en værktøjslinje, som repræsentere kommandoer og blokke. Disse blokke og diagrammer bruges til at forme simuleringen. Det er et blokprogrammerings sprog, man programmere ved brug af blokke og diagrammer. På figur \\ref{vissim} kan man se at VisSim består af forskellige blokke, disse blokke er forskellige parametre og variabler, som udformer det kørende program \\cite{vissimfunker}.\n\n\\begin{figure}\n\\begin{center}\n\\includegraphics[width=1.2\\textwidth]{Pictures/Teknologianalyse/vissimfunker.jpg}\n\\end{center}\n\\caption{Værktøjer i VisSim}\n\\label{vissim}\n\\end{figure}\n\n\\subsection{VisSim - Bilen}\nDen enkle bil spiller også en stor rolle i VisSim, bilen er bestående af forskellige parametre, og det er ofte disse parametre der bliver anvendt. Denne rapport vurdere nogle af VisSims parametre, da det ikke er muligt for os at vurdere alle parametrene, fordi rapporten også fokusere på andre aspekter end VisSim. Der vil også vurderes vedligeholdelsen af VisSim. Bilens parametre i VisSim er beskrevet nedenfor.\n\n\\begin{itemize}\n\\item Ønsket acceleration.\n\\item Deceleration.\n\\item Acceleration\n\\item Vægtfordeling.\n\\item Hastighedsfordeling.\n\\item Afstand mellem køretøjer.\n\\item Størrelsen på køretøjet.\n\\end{itemize}\n\n\\ref{alstransWTF.tex/\n\n\\subsection{VisSim - Netværket}\nNetværket er bestående af de visuelle elementer, som har indflydelse på trafikafviklingen. Der er valgt at beskrive disse parametre, da det er disse der udgør største delen af VisSims parametre.\nNetværkets parametre er beskrevet nedenfor.\n\n\\begin{itemize}\n\\item Rundkørsler.\n\\item Vigepligt.\n\\item Lyskryds(signalregulering).\n\\item Hastighedszone.\n\\item Vejbredde.\n\\item Vejlængde.\n\\end{itemize}\n\n\\subsection{Analyse af acceleration og deceleration}\nUd fra en undersøgelse foretaget af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik, viser det sig at nogle af VisSims accelerations og decelerations værdier kan være upræcise. Undersøgelsen er foretaget ved analysering af VisSim på de danske vej-netværk, hvor der sammenlignes med GPS acceleration og decleration med VisSims data. Her er der blevet indsat GPS i 166 bilister som skal repræsentere acceleration og deceleration i Danmark.\n\nPå figur \\ref{GrafForAccelerationVisSimGPS}, kan man se at accelerations fordelingen for VisSim er markant højere end GPS daten. Dette viser sig, at være pga. VisSim er henvendt til de tyske-vejnetværk. I undersøgelsen beskriver de, at det skyldes de tyske biler er større og hurtigere. Det vurderes at VisSims data er upræcis, dette kan resultere forkerte simuleringer, hvilket resultere i forkert planlægning af nye vejnetværk. \n\n\\begin{tikzpicture}\n    \\begin{axis}\n    [\n        xlabel=km/t, \n        ylabel=m/s\\textsuperscript{2}, \n        ymin=-1, \n        ymax=4,\n        width=320,\n        height=150\n    ]\n    \\addplot[blue, thick] coordinates \n    {\n    	(5, 3.2)\n    	(10, 3)\n    	(15, 2.8)\n	    (20, 2.7)\n	    (25, 2.6)\n	    (30, 2.5)\n	    (35, 2.4)\n    	(40, 2.3)\n    	(45, 2.2)\n    	(50, 2)\n    	(55, 1.9)\n    	(60, 1.8)\n    	(65, 1.6)\n	    (70, 1.5)\n	    (75, 1.4)\n	    (80, 1.3)\n	    (85, 1.1)\n    	(90, 1.1)\n    	(95, 1.08)\n    	(100, 1.06)\n    	(105, 1.03)\n    	(110, 0.9)\n    	(115, 0.87)\n	    (120, 0.83)\n	    (125, 0.8)\n	    (130, 0.77)\n	    (135, 0.73)\n    	(140, 0.7)\n    	(145, 0.69)\n    	(150, 0.66)\n    	(155, 0.64)\n    	(160, 0.62)\n    	(165, 0.6)\n    	(170, 0.59)\n	    (175, 0.57)\n	    (180, 0.55)\n	    (185, 0.52)\n	    (190, 0.5)\n    	(195, 0.48)\n    	(200, 0.45)\n    	(205, 0.42)\n    	(210, 0.4)\n    };\n    \\addlegendentry{VisSim}\n    \\addplot[red, thick] coordinates \n    {\n    	(5, 2.1)\n    	(10, 2.5)\n    	(15, 2)\n	    (20, 1.8)\n	    (25, 1.6)\n	    (30, 1.57)\n	    (35, 1.53)\n    	(40, 1.4)\n    	(45, 1.3)\n    	(50, 1.2)\n    	(55, 1)\n    	(60, 0.97)\n    	(65, 0.94)\n	    (70, 0.91)\n	    (75, 0.88)\n	    (80, 0.8)\n	    (85, 0.74)\n    	(90, 0.7)\n    	(95, 0.6)\n    	(100, 0.5)\n    	(105, 0.47)\n    	(110, 0.45)\n    	(115, 0.4)\n	    (120, 0.37)\n	    (125, 0.36)\n	    (130, 0.33)\n	    (135, 0.3)\n    	(140, 0.28)\n    	(145, 0.26)\n    	(150, 0.23)\n    	(155, 0.2)\n    	(160, 0.17)\n    	(165, 0.15)\n    	(170, 0.13)\n	    (175, 0.1)\n	    (180, 0)\n	    (185, 0)\n	    (190, 0)\n    	(195, 0)\n    	(200, 0)\n    	(205, 0)\n    	(210, 0)\n    };\n    \\addlegendentry{GPS}\n    \\end{axis}\n\\end{tikzpicture}\n\nSamtidig er der undersøgt af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik om deceleration for bilister er præcise i VisSim, dette er også gjort ved sammenligning af VisSim data, med GPS data. På figur \\ref{GrafForDecelerationVisSimGPS} kan man se, at VisSims deceleration er markant højere end GPS dataen, man ser også at VisSim er lineæret udspillet. Det vurderes at dette kan have betydning for udfaldet i simleringen, hvis VisSims data var nær GPS daten, så ville udfaldet blive mere præcist. Man ser også at VisSims data er konstant, dette betyder at programmet ikke varierer decelerationen i forhold til farten. \n\n\\begin{tikzpicture}\n    \\begin{axis}\n    [\n        xlabel=km/t, \n        ylabel=m/s\\textsuperscript{2}, \n        ymin=-4, \n        ymax=4,\n        width=320,\n        height=150\n    ]\n    \\addplot[blue, thick] coordinates \n    {\n    	(0, -2.8)\n    	(10, -2.8)\n	    (20, -2.8)\n	    (30, -2.8)\n    	(40, -2.8)\n    	(50, -2.8)\n    	(60, -2.8)\n	    (70, -2.8)\n	    (80, -2.8)\n    	(90, -2.8)\n    	(100, -2.8)\n    	(110, -2.8)\n    };\n    \\addlegendentry{VisSim}\n    \\addplot[red, thick] coordinates \n    {\n    	(0, -1.22)\n    	(10, -1.22)\n	    (20, -1.6)\n	    (30, -1.94)\n    	(40, -1.93)\n    	(50, -1.98)\n    	(60, -1.9)\n	    (70, -1.5)\n	    (80, -1)\n    	(90, -0.8)\n    	(100, -0.8)\n    	(110, -0.56)\n    };\n    \\addlegendentry{GPS}\n    \\end{axis}\n\\end{tikzpicture}\n\n\\subsection{Vudering}\nVisSim kan anvendes således, at det kan opstilles til hvilket som helst formål. Dette er en god detalje for VisSim, da brugeren selv kan opstille specifikke scenerier og simuleringer som ikke nødvendigvis er trafik relateret. Dette vurderes til at være godt for vedligeholdelsen, da brugeren selv har muligheden for at opstille scenarier. Dette gør VisSim fremtidssikret, således at udviklerne af VisSim ikke selv skal sørger for vedligeholdelsen.\n\nVisSim er et stort program dette kræver viden omkring anvendelsen af VisSim for at brugeren kan benytte programmet til simulering af trafik. Da VisSim ikke kun er beregnet til trafik simulering, så kræver programmet mange detaljer og viden for brugeren, for at udføre en trafik simulering. Der vurderes at det vil være hjælpsomt for brugeren, hvis brugeren ikke skal anvende tid på at lære et nyt program, men i stedet anvende et program, som kun er egnet specifikt til simulering af trafik. \n\nVi har opstillet en tabel over de overvejelser vi har gjort os omkring VisSims fordele og ulemper.\n\n\\textbf{ILLEGAL TABLE WAS HERE}\n\n%\\begin{table}[]\n%\\centering\n%caption{VisSim Fordele og Ulemper}\n%\\label{VisSimProsAndCons}\n%\\begin{tabular}{|1|1|1|1|1|1|}\n%		& VisSim Fordele og Ulemper				&								&						   &						    & \\\\\n%Fordele & Kan tilpasses til en givet konteksts	& Brugeren kan programere logik & Vedligeholdes af brugere & Kan give meget præcis data & \\\\\n%Ulemper & Besværligt at sætte sig ind i			& Ikke brugervenligt			&						   &							&\n%\\end{tabular} \n%\\end{table}\n\n\n",
-			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
-			"file_size": 9639,
-			"file_write_time": 131077891242970478,
+			"file": "sections/Teori/Grafteori.tex",
 			"settings":
 			{
-				"buffer_size": 9327,
+				"buffer_size": 3060,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "sections/Teknologianalyse/altransWTF.tex",
+			"file": "sections/Teori/Dijkstra.tex",
 			"settings":
 			{
-				"buffer_size": 11735,
+				"buffer_size": 5937,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Implementation/Klassediagrammer.tex",
+			"settings":
+			{
+				"buffer_size": 5586,
 				"line_ending": "Windows"
 			}
 		}
@@ -197,40 +111,12 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 490.0,
-		"last_filter": "vmen",
+		"height": 392.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
 			[
-				"vmen",
-				"View: Toggle Menu"
-			],
-			[
-				"Package Control: install",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: ins",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: inst",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: insta",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: instal",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: Install",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: Instal",
+				"Package Control: ",
 				"Package Control: Install Package"
 			],
 			[
@@ -246,14 +132,13 @@
 				"Set Syntax: C"
 			]
 		],
-		"width": 549.0
+		"width": 400.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
-			"latexmk -pdf -pv file.tex"
 		]
 	},
 	"distraction_free":
@@ -268,62 +153,30 @@
 	"expanded_folders":
 	[
 		"/C/Programs/Git/P2-Simulering/LATEX",
-		"/C/Programs/Git/P2-Simulering/LATEX/Pictures",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Implementation",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Konklusion",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Metode",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/ProblemetsRelevans",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Simulering",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teknologianalyse",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Laesevejledning",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teori",
 		"/C/Programs/Git/P2-Simulering/LATEX/setup"
 	],
 	"file_history":
 	[
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/references.bib",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/ProblemetsRelevans/ProblemetsRelevans.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/sections.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/setup/preamble.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/setup/macros.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Metode/Metode.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teknologianalyse/altrans.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/Main.tex",
-		"/C/Programs/Git/New-P2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
-		"/C/Users/Rasmus/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
-		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/tools/.tex",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/references.bib",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/teoriafsnit/teoriafsnit.tex",
-		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Programs/LaTeX Documents/LaTeX Document 2/assignment2.tex",
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
-		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
 		"/C/Programs/C/Lektionone/helppage.c",
-		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
-		"/C/Programs/C/Lektionone/adresserfratxt.c",
-		"/C/Programs/C/Lektionone/superliga-2014-2015.txt",
-		"/C/Programs/C/Lektionone/adresser.txt",
-		"/C/Programs/C/Lektionone/aflevering4.c",
-		"/C/Programs/C/Lektionone/9.5.c",
-		"/C/Programs/C/Lektionone/testaflevering2.c",
-		"/C/Programs/C/Lektionone/opg2.7.c",
-		"/C/Programs/C/Lektionone/12.2.c",
-		"/C/Programs/C/Lektionone/deckofcards.c",
-		"/C/Programs/C/Lektionone/testintro.c",
-		"/C/Programs/C/Lektionone/contactinfo.txt",
-		"/C/Programs/C/Lektionone/sammensetarrays.c",
-		"/C/Programs/C/Lektionone/afleveringdonger.c",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/C/Programs/Git/Rep B2-24/sections/sections.tex",
+		"/C/Programs/Git/Rep B2-24/setup/variables.tex",
 		"/C/Programs/C/Lektionone/help.c",
+		"/C/Programs/C/Lektionone/afleveringdonger.c",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Programs/C/Lektionone/testaflevering2.c",
 		"/C/Programs/Git/Rep B2-24/sections/intro/intro.tex",
 		"/C/Programs/Git/Rep B2-24/references.bib",
-		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
 		"/C/Programs/C/Lektionone/examplemalloc.c",
 		"/C/Programs/C/Lektionone/10.3.c",
+		"/C/Programs/C/Lektionone/9.5.c",
+		"/C/Programs/C/Lektionone/sammensetarrays.c",
 		"/C/Programs/C/Lektionone/mad.c",
 		"/C/Programs/C/Lektionone/exampleqsort.c",
 		"/C/Programs/C/Lektionone/functions_root_2_slide.c",
@@ -331,6 +184,7 @@
 		"/C/Programs/C/Lektionone/nyhms.c",
 		"/C/Programs/C/Lektionone/opg6.6.c",
 		"/C/Programs/C/Lektionone/test-prime.c",
+		"/C/Programs/C/Lektionone/aflevering4.c",
 		"/C/Programs/C/Lektionone/opg_267.c",
 		"/C/Programs/C/Lektionone/3.1.c",
 		"/C/Programs/C/Lektionone/primes.h",
@@ -349,6 +203,7 @@
 		"/C/Programs/C/Lektionone/sc2.3-1.c",
 		"/C/Programs/C/Lektionone/pythagorean.c",
 		"/C/Programs/C/Lektionone/opgave9.c",
+		"/C/Programs/C/Lektionone/opg2.7.c",
 		"/C/Programs/MinGW/msys/1.0/etc/profile",
 		"/C/Programs/MinGW/msys/1.0/etc/fstab",
 		"/C/MinGW/msys/1.0/etc/profile",
@@ -367,61 +222,137 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
-			"double",
-			"GETGRID",
-			"ViewportClick",
-			"tsp",
-			"Funktionelle",
-			"a-stjerne",
-			"Astjerne",
-			"MISC",
-			"60",
-			"cite",
-			"citep",
-			"4",
-			"gitre",
-			"firkant",
-			"firkanter",
-			"MISC",
-			"fight",
-			"teams",
-			"match_count",
-			"league_table",
-			".",
-			"->",
-			"had",
-			"H",
-			"BIG_NUMBER",
-			":",
-			"Spectators in total: ",
-			"team_id",
-			"team",
-			"spectators",
-			"football_data_array",
-			"spectators",
-			"i",
-			"football_data_array[i].spectators",
-			"team_spectator",
-			"team_id",
-			"current_high",
-			"round_goal_amount",
-			"total_lines",
-			"number_of_lines",
-			"spectators",
-			"matchdata",
-			"General",
-			"Ret",
-			"%c",
-			"shelf",
-			"Location",
-			"Qualifiers",
-			"ProductCode",
-			"​",
-			"uigytgu",
-			"dickbutt"
+			"table",
+			"TABLE",
+			"\\/{}",
+			"//",
+			"_",
+			"\"",
+			"\\verb\"",
+			"”",
+			"\\/{}",
+			"vurdering",
+			"overvægt",
+			"Programmets ",
+			"height=\\textheight,",
+			"HEAD",
+			"make_exception_array",
+			"fig:makeexceptionarray",
+			"makeexceptionarray",
+			"hovedmenu",
+			"structed",
+			"structed ",
+			"HEAD",
+			"wrapfigure",
+			"wrapfigure\n",
+			"}\n",
+			"wrapfigure",
+			"ht",
+			"subsubsection",
+			"variabler",
+			"Linje tæller",
+			"calorie_need_calculator",
+			"I funktionen \\verb\"calorie_need_calculator\"(se figur \\ref{fig:Kalorie behov})",
+			"Algoritme",
+			"algoritme",
+			"ht!",
+			"Large",
+			"Rasmus_05",
+			"Rasmus_04",
+			"datasortering",
+			"Rasmus_03",
+			"Rasmus_02",
+			"wrapfigure",
+			"flowchartimage",
+			". Dette skulle ",
+			"øn tilfø",
+			"es sammen m",
+			"s daglige kcal. behov er.\nSamtidig skal der oprettes en opskrifts database, som indeholder opskrifter på henholdsvis morgen, middag og aftensmadsretter. Disse skal opstilles intuitivt, med en identificator så retterne kan findes frem mod forlangen. Opskrifterne, skrives sammen med deres respektive",
+			"nteres en indkøbsli",
+			"designes der",
+			"Ud fra problemformulering,",
+			"or overhoved",
+			"HEAD",
+			"\\verb\"New_user_basic_input\" er en funktion der spørger brugeren, som ønsker at lave en ny profil, om deres fysiske fremtoning, aktivitetsniveau og navn. På figueren \\ref{fig:profilopsaetning2}",
+			">>>>>>>>",
+			"en generelle hjælpemenu aflæs",
+			"en eller fjerne et. ",
+			"Funktionen \\verb\"general_FAQ\"",
+			"(SE FIGUR 519)",
+			" kalder en anden del af programdelen ved brugerpro",
+			"per god orden.",
+			"funktion der spørger",
+			"skal dog skrives som enten",
+			"verb\"age\" skal dog skrives som enten \\verb\"m\" eller \\verb\"f\", for male eller female. Dette gøres for at spare tid på input for brugeren og indeholder den samme information som at skrive det fulde køn. \\verb\"age\" er en integer da det ikke er nødvendigt at have som decimalt tal. Ligeledes er højden en int, hvor der bedes om et tal i centimeter som er det almindelige at bruge i Danmark. Derefter senere til beregning af dagligt indtag skal der oftest bruges centimeter, hvilket betyder at vi ikke skal omregne resultatet.\nTil sidst er vægten af brugeren en double. Dette gøres fordi vægte som vejer personer er i decimaltal, så bliver det nemmest for brugeren at indtaste det direkte ind i programmet.",
+			"HEAD",
+			"Profilopsaetning",
+			"adjustbox",
+			"[",
+			"]",
+			"{",
+			"}",
+			"{",
+			"]",
+			"[",
+			"]",
+			"}",
+			"{",
+			"]",
+			"{",
+			"FIGUR",
+			"Profil",
+			">>>>>>",
+			"h!",
+			"!ht",
+			"!h",
+			"HEAD",
+			"Det næste der sker er at der bliver tjekket om den givende \\textit{\"i\"} værdi skulle stå i \\verb\"exception list\" (undtagelses liste), og hvis den gør, så springes den følgende iteration for i over ved kald af \\verb\"continue\"",
+			"Da vi arbejder med en database med linjer af data som altid har et ID, og som står i numerisk rækkefølge (1, 2, 3, 4...) kan det antages at variablen i er ækvivalent med rettens id altså -> \\textit{i=Rettens Id}",
+			"Da vi",
+			"meal",
+			"HEAD",
+			"”",
+			"”w",
+			"”",
+			"'meal'",
+			"'",
+			"\"meal\"",
+			"flowchartimage",
+			"flowchart",
+			"[h]",
+			"h",
+			"[h]",
+			"\\pdfbookmark[0]{Front page}{label:frontpage}%\n\\begin{titlepage}\n  \\addtolength{\\hoffset}{0.5\\evensidemargin-0.5\\oddsidemargin} %set equal margins on the frontpage - remove this line if you want default margins\n  \\noindent%\n  \\begin{tabular}{@{}p{\\textwidth}@{}}\n    \\toprule[2pt]\n    \\midrule\n    \\vspace{0.2cm}\n    \\begin{center}\n        \\Huge{\\textbf{%\n      \\papername %found in variables.tex\n    }}\n    \\end{center}\n    \\begin{center}\n      \\Large{%\n          \n      }\n    \\end{center}\n    \\vspace{0.2cm}\\\\\n    \\midrule\n    \\toprule[2pt]\n  \\end{tabular}\n  \\vspace{4 cm}\n  \\begin{center}\n    {\\large\n      Project Report%Insert document type (e.g., Project Report)\n    }\\\\\n    \\vspace{0.2cm}\n    {\\Large\n      Group \\groupname%found in variables.tex\n    }\n  \\end{center}\n  \\vfill\n  \\begin{center}\n  Aalborg University\\\\\n  Department of Computer Science\\\\\n  Selma Lagerlöfs Vej 300\\\\\n  DK-9220 Aalborg\n  \\end{center}\n\\end{titlepage}\n\\clearpage",
+			"path",
+			"\\graphic",
+			"graphicspath",
+			"fora",
+			"ernæringsmæssig",
+			"ernærings",
+			"fremme",
+			"baserer",
+			"vaegtklassifikationer",
+			"\\ldots",
+			"teknologiana",
+			"sciencedirect",
+			"[1ex]",
+			"fontspec",
+			"pagestyle",
+			"@array",
+			"@arraypar",
+			"\\usepackage",
+			"tab",
+			"tabular",
+			"tabluar",
+			"pagestyle",
+			"\\headheight",
+			"12.0",
+			"hdr",
+			"todo",
+			"fncyhdr"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -439,52 +370,24 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 36,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								36,
-								36
-							]
-						],
-						"settings":
-						{
-							"default_dir": "C:\\Programs\\Git\\P2-Simulering\\LATEX\\sections\\Implementation",
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "sections/Implementation/Viewport.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7533,
+						"buffer_size": 7591,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3557,
-								3582
+								4960,
+								4960
 							]
 						],
 						"settings":
@@ -492,94 +395,6 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1065.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sections/Implementation/PathFinder.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5003,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2476,
-								2476
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 465.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "sections/Implementation/Funktionelle.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11933,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4846,
-								4850
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 900.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "sections/Implementation/Implementation.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 583,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -589,20 +404,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Main.tex",
+					"buffer": 1,
+					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1098,
+						"buffer_size": 1035,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								656,
-								656
+								107,
+								107
 							]
 						],
 						"settings":
@@ -613,74 +428,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "sections/Simulering/Simulering.tex",
+					"buffer": 2,
+					"file": "sections/Laesevejledning/Laesevejledning.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5101,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1799,
-								1799
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9327,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3311,
-								3311
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "sections/Teknologianalyse/altransWTF.tex",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 11735,
+						"buffer_size": 1876,
 						"regions":
 						{
 						},
@@ -699,7 +456,182 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9462,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4678,
+								4678
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Main.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1098,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sections/Konklusion/Konklusion.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								497,
+								515
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "sections/Teori/Grafteori.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3060,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1926,
+								1926
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sections/Teori/Dijkstra.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5937,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2077,
+								2086
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sections/Implementation/Klassediagrammer.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5586,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4958,
+								4958
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -711,7 +643,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -790,7 +722,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 239.0,
+	"side_bar_width": 166.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
