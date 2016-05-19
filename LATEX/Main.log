@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.15)  15 MAY 2016 14:33
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.16)  17 MAY 2016 13:43
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 entering extended mode
 **Main
 (Main.tex
@@ -23,7 +27,12 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fncychap\fncychap.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\fncychap\fncychap
+.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \RW=\skip43
 \mylen=\skip44
@@ -32,8 +41,12 @@ Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \py=\skip47
 \pyy=\skip48
 \pxx=\skip49
+<<<<<<< HEAD
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+=======
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -278,23 +291,39 @@ Package: babel 2015/08/03 3.9m The Babel package
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-danish\danish.ldf"
 Language: danish 2009/09/19 v1.3r Danish support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-danish\dani
+sh.ldf"
+Language: danish 2009/09/19 v1.3r Danish support from the babel system
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: babel.def 2015/08/03 3.9m Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 82.
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-english\eng
+lish.ldf"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Language: english 2012/08/20 v3.3p English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
+<<<<<<< HEAD
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+=======
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -346,18 +375,32 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 \@float@every@table=\toks18
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\colortbl\colortbl
+.sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen104
 \extrarowheight=\dimen105
@@ -401,10 +444,19 @@ Package graphics Info: Driver file: pdftex.def on input line 94.
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.s
+ty"
+Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.
+sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen108
@@ -418,7 +470,12 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \c@ContinuedFloat=\count92
 Package caption Info: float package is loaded.
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs
+.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen115
 \lightrulewidth=\dimen116
@@ -438,7 +495,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count96
 \@thisrulewidth=\dimen127
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\framed\framed.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
+"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip53
 \fb@frw=\dimen128
@@ -446,7 +508,12 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen130
 \FrameSep=\dimen131
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings
+.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \lst@mode=\count97
 \lst@gtempboxa=\box28
 \lst@token=\toks22
@@ -460,18 +527,32 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \lst@lineno=\count102
 \lst@maxwidth=\dimen135
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.
+sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count103
 \lst@skipnumbers=\count104
 \lst@framebox=\box29
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings
+.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip54
 
@@ -539,7 +620,12 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ntheorem\ntheorem.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\ntheorem\ntheorem
+.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Style `ntheorem', Version 1.33 <2011/08/15>
 Package: ntheorem 2011/08/15 1.33
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -585,11 +671,21 @@ Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
 \tagwidth=\dimen150
 \shadecolor=\toks46
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count119
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox
+.sty"
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count119
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr
+.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \fancy@headwidth=\skip66
 \f@ncyO@elh=\skip67
 \f@ncyO@erh=\skip68
@@ -599,8 +695,12 @@ Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 \f@ncyO@erf=\skip72
 \f@ncyO@olf=\skip73
 \f@ncyO@orf=\skip74
+<<<<<<< HEAD
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+=======
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count120
 \calc@Bcount=\count121
@@ -613,6 +713,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count122
 \calc@Cskip=\skip77
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -620,6 +721,16 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1
+.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\bbding\bbding.sty
+"
+Package: bbding 1999/04/15 v1.01 Dingbats symbols
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
 \c@tracingmulticols=\count123
 \mult@box=\box32
@@ -668,6 +779,7 @@ Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
 \colbreak@box=\box57
 \mc@col@check@num=\count131
 )
+<<<<<<< HEAD
 (C:\Users\Stgeorge\AppData\Roaming\MiKTeX\2.9\tex\latex\tocbibind\tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
@@ -682,6 +794,26 @@ Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
 Package: todonotes 2012/07/25
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\tocbibind\tocbibi
+nd.sty"
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\lastpage\lastpage
+.sty"
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\todonotes\todonot
+es.sty"
+Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
@@ -692,15 +824,27 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@depth=\count132
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
 x"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer
+\tikz.sty"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pg
+f.sty"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgf
+rcs.sty"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
+gfutil-common.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \pgfutil@everybye=\toks49
 \pgfutil@tempdima=\dimen162
 \pgfutil@tempdimb=\dimen163
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-li
 sts.tex"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
@@ -725,6 +869,38 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
 ode.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
+gfutil-common-lists.tex"))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
+gfutil-latex.def"
+\pgfutil@abb=\box58
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
+gfrcs.code.tex"
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pg
+fcore.sty"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\p
+gfsys.sty"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
+\pgfsys.code.tex"
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
+gfkeys.code.tex"
+\pgfkeys@pathtoks=\toks50
+\pgfkeys@temptoks=\toks51
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
+gfkeysfiltered.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \pgfkeys@tmptoks=\toks52
 ))
 \pgf@x=\dimen164
@@ -745,11 +921,17 @@ ode.tex"
 \t@pgf@tokb=\toks54
 \t@pgf@tokc=\toks55
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
+\pgf.cfg"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.d
 ef"
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
@@ -760,10 +942,23 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
 code.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
+\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
+\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
+\pgfsyssoftpath.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count137
 \pgfsyssoftpath@bigbuffer@items=\count138
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
 code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -776,6 +971,24 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
 "
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer
+\pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcore.code.tex"
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+h.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hcalc.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hutil.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hparser.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \pgfmath@dimen=\dimen172
 \pgfmath@count=\count139
 \pgfmath@box=\box59
@@ -783,6 +996,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 \pgfmath@stack@operand=\toks57
 \pgfmath@stack@operation=\toks58
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
 tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
@@ -806,6 +1020,32 @@ erarithmetics.code.tex")))
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
 de.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfunctions.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfunctions.basic.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfunctions.trigonometric.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfunctions.random.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfunctions.comparison.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfunctions.base.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfunctions.round.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfunctions.misc.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfunctions.integerarithmetics.code.tex")))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+hfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count140
+))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcorepoints.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen173
 \pgf@picmaxx=\dimen174
@@ -822,26 +1062,42 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen185
 \pgf@zy=\dimen186
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
 ruct.code.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcorepathconstruct.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen187
 \pgf@path@lasty=\dimen188
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
 .code.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcorepathusage.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen189
 \pgf@shorten@start@additional=\dimen190
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
 de.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcorescopes.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box60
 \pgf@hbox=\box61
 \pgf@layerbox@main=\box62
 \pgf@picture@serial@count=\count141
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
 ate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
@@ -849,11 +1105,21 @@ File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
 ations.code.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen191
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcoretransformations.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen192
 \pgf@pt@y=\dimen193
 \pgf@pt@temp=\dimen194
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
 e.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -873,10 +1139,32 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
 e.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen195
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcoreshade.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen196
 \pgf@sys@shading@range@num=\count142
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
 e.tex"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -909,10 +1197,45 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
 -0-65.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box63
+))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\
+pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgf
+moduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box64
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgf
+moduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility
+\pgfcomp-version-0-65.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen197
 \pgf@nodesepend=\dimen198
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
 -1-18.sty"
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
@@ -926,17 +1249,48 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility
+\pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgf
+for.sty"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgf
+keys.sty"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
+gfkeys.code.tex"))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\math\pgfmath.
+sty"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+h.code.tex"))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\p
+gffor.code.tex"
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmat
+h.code.tex")
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \pgffor@iter=\dimen199
 \pgffor@skip=\dimen200
 \pgffor@stack=\toks59
 \pgffor@toks=\toks60
 ))
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
 e.tex"
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
 dlers.code.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
+er\tikz\tikz.code.tex"
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\p
+gflibraryplothandlers.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count143
 \pgfplotmarksize=\dimen201
@@ -956,8 +1310,13 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikznumberofcurrentchild=\count146
 \tikz@fig@count=\count147
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
 e.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgf
+modulematrix.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count148
 \pgfmatrixcurrentcolumn=\count149
@@ -965,20 +1324,36 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count151
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarypositioning.code.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
+er\tikz\libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
+er\tikz\libraries\tikzlibrarypositioning.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 \c@@todonotes@numberoftodonotes=\count152
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\genmisc\nth.sty"
 Package: nth 2002/02/27
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\genmisc\nth.sty
+"
+Package: nth 2002/02/27
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
@@ -1057,7 +1432,11 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count156
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -1107,15 +1486,24 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count163
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\rotating\rotating
+.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \c@r@tfl@t=\count164
 \rotFPtop=\skip81
 \rotFPbot=\skip82
 \rot@float@box=\box69
 \rot@mess@toks=\toks61
+<<<<<<< HEAD
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+=======
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
 
@@ -1141,22 +1529,38 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty"
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\chngcntr\chngcntr
+.sty"
+Package: chngcntr 2009/09/02 v1.0a change counter resetting
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count165
 ))
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
 Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
 \c@subfigure=\count166
 \c@subtable=\count167
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pbox\pbox.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaptio
+n.sty"
+Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
+\c@subfigure=\count166
+\c@subtable=\count167
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pbox\pbox.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: pbox 2011/12/07 v1.2 Dynamic parboxes
 \pb@xlen=\skip83
 )
@@ -1170,7 +1574,12 @@ Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
 Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\collectbox\collec
+tbox.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box70
 )
@@ -1179,8 +1588,12 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@urx=\dimen214
 \tc@ury=\dimen215
 Package trimclip Info: Using driver 'tc-pdftex.def'.
+<<<<<<< HEAD
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+=======
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen216
@@ -1188,26 +1601,43 @@ File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 \adjbox@Depth=\dimen218
 \adjbox@Totalheight=\dimen219
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
 \c@checkoddpage=\count168
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\ifoddpage\ifoddpa
+ge.sty"
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count168
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box71
 \sift@deathcycles=\count169
 \@vwid@loff=\dimen220
 \@vwid@roff=\dimen221
 ))
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.s
+ty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \wrapoverhang=\dimen222
 \WF@size=\dimen223
 \c@WF@wrappedlines=\count170
 \WF@box=\box72
 \WF@everypar=\toks62
 Package: wrapfig 2003/01/31  v 3.6
+<<<<<<< HEAD
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+=======
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip84
 \LTright=\skip85
@@ -1225,12 +1655,25 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count175
 \LT@p@ftn=\toks63
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgfplots\pgfplots.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.revision.tex"
 )
 Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplotscore.code.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\pgfplots\pgfplots
+.sty"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+ts.revision.tex")
+Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+ts.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+tscore.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \t@pgfplots@toka=\toks64
 \t@pgfplots@tokb=\toks65
 \t@pgfplots@tokc=\toks66
@@ -1238,6 +1681,7 @@ Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
 \c@pgfplots@coordindex=\count176
 \c@pgfplots@scanlineindex=\count177
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\sys\pgfplotssysgeneric
 .code.tex"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\libs\pgfplotslibrary.c
@@ -1313,6 +1757,83 @@ x")
 s\tikzlibrarydecorations.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecoration
 s.code.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\sys\pg
+fplotssysgeneric.code.tex"))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\libs\p
+gfplotslibrary.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\oldpgf
+compatib\pgfplotsoldpgfsupp_loader.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\p
+gflibraryfpu.code.tex")
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\oldpgf
+compatib\pgfplotsoldpgfsupp_pgflibraryfpu.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\oldpgf
+compatib\pgfplotsoldpgfsupp_pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count178
+))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\p
+gfplotsutil.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\listst
+ructure\pgfplotsliststructure.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\listst
+ructure\pgfplotsliststructureext.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\listst
+ructure\pgfplotsarray.code.tex"
+\c@pgfplotsarray@tmp=\count179
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\listst
+ructure\pgfplotsmatrix.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\numtab
+le\pgfplotstableshared.code.tex"
+\c@pgfplotstable@counta=\count180
+\t@pgfplotstable@a=\toks67
+)
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\listst
+ructure\pgfplotsdeque.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\p
+gfplotsbinary.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\p
+gfplotsbinary.data.code.tex"))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\p
+gfplotsutil.verb.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\libs\p
+gflibrarypgfplots.surfshading.code.tex"
+\c@pgfplotslibrarysurf@no=\count181
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\sys\pg
+flibrarypgfplots.surfshading.pgfsys-pdftex.def")))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\p
+gfplotscolormap.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\p
+gfplotscolor.code.tex"))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+tsstackedplots.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+tsplothandlers.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+tsmeshplothandler.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+tsmeshplotimage.code.tex")))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+ts.scaling.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+tscoordprocessing.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+ts.errorbars.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+ts.markers.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+tsticks.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplo
+ts.paths.code.tex")
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
+er\tikz\libraries\tikzlibrarydecorations.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgf
+moduledecorations.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \pgfdecoratedcompleteddistance=\dimen226
 \pgfdecoratedremainingdistance=\dimen227
 \pgfdecoratedinputsegmentcompleteddistance=\dimen228
@@ -1324,6 +1845,7 @@ s.code.tex"
 )
 \tikz@lib@dec@box=\box77
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarydecorations.pathmorphing.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
@@ -1332,6 +1854,16 @@ brarydecorations.pathmorphing.code.tex"))
 s\tikzlibrarydecorations.pathreplacing.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
 brarydecorations.pathreplacing.code.tex"))
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
+er\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\d
+ecorations\pgflibrarydecorations.pathmorphing.code.tex"))
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
+er\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex"
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\d
+ecorations\pgflibrarydecorations.pathreplacing.code.tex"))
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \pgfplots@numplots=\count183
 \pgfplots@xmin@reg=\dimen233
 \pgfplots@xmax@reg=\dimen256
@@ -1340,19 +1872,36 @@ brarydecorations.pathreplacing.code.tex"))
 \pgfplots@zmin@reg=\dimen259
 \pgfplots@zmax@reg=\dimen260
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibraryplotmarks.code.tex"
 File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplotmar
 ks.code.tex"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
+er\tikz\libraries\tikzlibraryplotmarks.code.tex"
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\p
+gflibraryplotmarks.code.tex"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 )))
 \c@currtheoremctr=\count184
 \c@endtheoremctr=\count185
 \c@theorem=\count186
+<<<<<<< HEAD
  (setup/todo/todo.tex)) (setup/hyphenations.tex)
 (setup/macros.tex
+=======
+ (setup/todo/todo.tex))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xr.sty"
+Package: xr 1994/05/28 v5.02 eXternal References (DPC)
+)
+(setup/hyphenations.tex) (setup/macros.tex
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \c@currexactr=\count187
 \c@endexactr=\count188
 \c@exa=\count189
@@ -1379,7 +1928,12 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 7.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+=======
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
+kii"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count190
 \scratchdimen=\dimen261
@@ -1397,7 +1951,13 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
+<<<<<<< HEAD
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+=======
+
+("C:\Users\Jacob Thomsen\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\ltcaption
+.sty"
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -1407,8 +1967,12 @@ Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 7.
+<<<<<<< HEAD
 
 ABD: EveryShipout initializing macros
+=======
+ ABD: EveryShipout initializing macros
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \AtBeginShipoutBox=\box79
 Package hyperref Info: Link coloring ON on input line 7.
 LaTeX Info: Redefining \ref on input line 7.
@@ -1454,6 +2018,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
+<<<<<<< HEAD
 {C:/Users/Stgeorge/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]) (aau/ti
 tlepages.tex
 \titlepageleftcolumnwidth=\skip88
@@ -1463,11 +2028,26 @@ Package epstopdf Info: Source file: <aau/aau_logo_en.eps>
 (epstopdf)                    size: 17997 bytes
 (epstopdf)             Output file: <aau/aau_logo_en-eps-converted-to.pdf>
 (epstopdf)                    date: 2016-05-12 22:52:07
+=======
+{C:/Users/Jacob Thomsen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+(aau/titlepages.tex
+\titlepageleftcolumnwidth=\skip88
+\titlepagerightcolumnwidth=\skip89
+Package epstopdf Info: Source file: <aau/aau_logo_en.eps>
+(epstopdf)                    date: 2015-09-20 12:21:11
+(epstopdf)                    size: 17997 bytes
+(epstopdf)             Output file: <aau/aau_logo_en-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-13 08:51:15
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 (epstopdf)                    size: 9257 bytes
 (epstopdf)             Command: <epstopdf --outfile=aau/aau_logo_en-eps-convert
 ed-to.pdf aau/aau_logo_en.eps>
 (epstopdf)             \includegraphics on input line 35.
 Package epstopdf Info: Output file is already uptodate.
+<<<<<<< HEAD
+=======
+
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 <aau/aau_logo_en-eps-converted-to.pdf, id=15, 115.43124pt x 77.28876pt>
 File: aau/aau_logo_en-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1597,7 +2177,11 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 <Pictures/Metode/metodebillede.jpg, id=244, 733.74126pt x 519.9425pt>
+=======
+<Pictures/Metode/metodebillede.jpg, id=250, 733.74126pt x 519.9425pt>
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: Pictures/Metode/metodebillede.jpg Graphic file (type jpg)
 
 <use Pictures/Metode/metodebillede.jpg>
@@ -1614,14 +2198,33 @@ endt prøve-fejl-metoden,
 
 ) [8] [9
 
+<<<<<<< HEAD
 ] (sections/Konteksten/Konteksten.tex
 Chapter 4.
 
+=======
+] (sections/IndledningProblemanalyse/IndledningProblemanalyse.tex
+Chapter 4.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
+[][][][][][][][][]  
+ []
+
+) (sections/Konteksten/Konteksten.tex [10
+
+]
+Chapter 5.
+
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 (sections/Konteksten/vaekstbiler.tex) [10
+=======
+(sections/Konteksten/vaekstbiler.tex) [11
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 ]
 Overfull \hbox (5.17552pt too wide) in paragraph at lines 38--39
@@ -1629,23 +2232,39 @@ Overfull \hbox (5.17552pt too wide) in paragraph at lines 38--39
 ks. ap-p-lika-tioner. Simu-
  []
 
+<<<<<<< HEAD
 ) (sections/EksisterendeModeller/eksisterendemodeller.tex [11]
+=======
+) (sections/EksisterendeModeller/eksisterendemodeller.tex [12]
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Overfull \hbox (4.9908pt too wide) in paragraph at lines 11--12
 \T1/lmr/m/n/10 forhold til makro-niveau. De an-vendte mod-eller på dette niveau
  er 4-trinsmodeller.
  []
 
+<<<<<<< HEAD
 ) (sections/Teknologianalyse/Teknologianalyse.tex [12]
 Chapter 5.
+=======
+) (sections/Teknologianalyse/Teknologianalyse.tex [13]
+Chapter 6.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 [13
 
 ]
 <Pictures/Teknologianalyse/vissimfunker.jpg, id=298, 1926.19624pt x 747.79375pt
+=======
+[14
+
+]
+<Pictures/Teknologianalyse/vissimfunker.jpg, id=308, 1926.19624pt x 747.79375pt
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 >
 File: Pictures/Teknologianalyse/vissimfunker.jpg Graphic file (type jpg)
  <use Pictures/Teknologianalyse/vissimfunker.jpg>
@@ -1663,6 +2282,7 @@ Overfull \hbox (18.91762pt too wide) in paragraph at lines 35--37
 fly-delse på trafikafviklin-
  []
 
+<<<<<<< HEAD
 [14 <./Pictures/Teknologianalyse/vissimfunker.jpg>]
 
 LaTeX Warning: Reference `GrafForAccelerationVisSimGPS' on page 15 undefined on
@@ -1673,33 +2293,66 @@ LaTeX Warning: Reference `GrafForDecelerationVisSimGPS' on page 15 undefined on
  input line 157.
 
 [15]) (sections/Teknologianalyse/altransWTF.tex [16]
+=======
+[15 <./Pictures/Teknologianalyse/vissimfunker.jpg>]
+
+LaTeX Warning: Reference `GrafForAccelerationVisSimGPS' on page 16 undefined on
+ input line 50.
+
+
+LaTeX Warning: Reference `GrafForDecelerationVisSimGPS' on page 16 undefined on
+ input line 157.
+
+[16]) (sections/Teknologianalyse/altransWTF.tex [17]
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Overfull \hbox (13.8901pt too wide) in paragraph at lines 21--22
 []\T1/lmr/m/n/10 Modellen af ser-viceniveau udreg-ner ser-viceniveauet med vari
 -ablerne tid, omkost-
  []
 
+<<<<<<< HEAD
 [17] [18]) (sections/Interessentanalyse/Interessentanalyse.tex [19]
 Chapter 6.
+=======
+[18] [19]) (sections/Interessentanalyse/Interessentanalyse.tex [20]
+Chapter 7.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 [20
 
 ] [21]) (sections/Problemformulering/Problemformulering.tex [22]
 Chapter 7.
+=======
+[21
+
+] [22]) (sections/Problemformulering/Problemformulering.tex [23]
+Chapter 8.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 ) [23
 
 ] [24
 
 ] (sections/Teori/Teori.tex
 Chapter 8.
+=======
+) [24
+
+] [25
+
+] (sections/Teori/Teori.tex
+Chapter 9.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
@@ -1708,16 +2361,28 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 2.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+<<<<<<< HEAD
 ) [25
+=======
+) [26
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 ]
 (sections/Teori/Grafteori.tex
 
+<<<<<<< HEAD
 LaTeX Warning: Reference `weighted-directed-graph' on page 26 undefined on inpu
 t line 9.
 
 
 <Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG, id=376, 1123.1962
+=======
+LaTeX Warning: Reference `weighted-directed-graph' on page 27 undefined on inpu
+t line 9.
+
+
+<Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG, id=388, 1123.1962
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 4pt x 1336.995pt>
 File: Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG Graphic file 
 (type png)
@@ -1739,12 +2404,21 @@ Overfull \hbox (149.97194pt too wide) in paragraph at lines 43--45
  []
 
 
+<<<<<<< HEAD
 LaTeX Warning: Reference `adjacency-matrix-weighted-directed-graph' on page 26 
 undefined on input line 48.
 
 [26 <./Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG>]
 <Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.PNG, 
 id=384, 199.947pt x 154.77824pt>
+=======
+LaTeX Warning: Reference `adjacency-matrix-weighted-directed-graph' on page 27 
+undefined on input line 48.
+
+[27 <./Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG>]
+<Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.PNG, 
+id=396, 199.947pt x 154.77824pt>
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.
 PNG Graphic file (type png)
 
@@ -1753,9 +2427,15 @@ NG>
 Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weigh
 ted_directed_graph.PNG used on input line 55.
 (pdftex.def)             Requested size: 172.5pt x 133.53651pt.
+<<<<<<< HEAD
 ) [27 <./Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_gra
 ph.PNG>] (sections/Teori/Dijkstra.tex
 <Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png, id=391, 2109.8825pt x 1365.1
+=======
+) [28 <./Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_gra
+ph.PNG>] (sections/Teori/Dijkstra.tex
+<Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png, id=403, 2109.8825pt x 1365.1
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 pt>
 File: Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png Graphic file (type png)
  <use Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png>
@@ -1768,89 +2448,166 @@ Package caption Warning: \label without proper \caption on input line 5.
 See the caption package documentation for explanation.
 
 
+<<<<<<< HEAD
 LaTeX Warning: Reference `dijkstrasgraf' on page 28 undefined on input line 9.
+=======
+LaTeX Warning: Reference `dijkstrasgraf' on page 29 undefined on input line 9.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 
 Package caption Warning: \label without proper \caption on input line 35.
 See the caption package documentation for explanation.
 
 
+<<<<<<< HEAD
 LaTeX Warning: Reference `dijktabel' on page 28 undefined on input line 20.
+=======
+LaTeX Warning: Reference `dijktabel' on page 29 undefined on input line 20.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 41.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 41.
+<<<<<<< HEAD
 [28 <./Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png>] [29])
 (sections/Teori/AStjerne.tex [30])) (sections/Design/Design.tex [31]
 Chapter 9.
+=======
+[29 <./Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png>] [30])
+(sections/Teori/AStjerne.tex [31])) (sections/Design/DesignIndledning.tex
+[32]
+Chapter 10.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 [32
 
 ]
 Overfull \hbox (9.9996pt too wide) in paragraph at lines 14--15
+=======
+) (sections/Design/Design.tex [33
+
+]
+Chapter 11.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+
+Overfull \hbox (9.9996pt too wide) in paragraph at lines 11--12
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \T1/lmr/m/n/10 forbindelsespunk-ter, der ved hjælp af ko-or-di-naterne kan bere
 gne af-s-tanden imellem
  []
 
+<<<<<<< HEAD
 ) (sections/Design/Test.tex [33])
 (sections/Kravspecifikationer/Kravspecifikationer.tex [34] [35])
 (sections/Implementation/Implementation.tex [36]
 Chapter 10.
+=======
+[34
+
+]) (sections/Design/Test.tex [35])
+(sections/Kravspecifikationer/Kravspecifikationer.tex [36] [37])
+(sections/Implementation/Implementation.tex [38]
+Chapter 12.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
 (sections/Implementation/Klassediagrammer.tex
+<<<<<<< HEAD
 <Pictures/Klassediagram/VejElementer.png, id=534, 823.57687pt x 639.13782pt>
+=======
+<Pictures/Klassediagram/VejElementer.png, id=551, 823.57687pt x 639.13782pt>
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: Pictures/Klassediagram/VejElementer.png Graphic file (type png)
 
 <use Pictures/Klassediagram/VejElementer.png>
 Package pdftex.def Info: Pictures/Klassediagram/VejElementer.png used on input 
+<<<<<<< HEAD
 line 10.
 (pdftex.def)             Requested size: 483.00322pt x 374.83524pt.
  [37
 
 ]
 <Pictures/Klassediagram/Diverse.png, id=542, 740.7675pt x 377.91188pt>
+=======
+line 12.
+(pdftex.def)             Requested size: 483.00322pt x 374.83524pt.
+ [39
+
+]
+<Pictures/Klassediagram/Diverse.png, id=560, 740.7675pt x 377.91188pt>
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: Pictures/Klassediagram/Diverse.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Diverse.png>
 Package pdftex.def Info: Pictures/Klassediagram/Diverse.png used on input line 
+<<<<<<< HEAD
 19.
 (pdftex.def)             Requested size: 483.0078pt x 246.4125pt.
  [38 <./Pictures/Klassediagram/VejElementer.png>]
 <Pictures/Klassediagram/Viewport.png, id=550, 638.385pt x 565.36218pt>
+=======
+21.
+(pdftex.def)             Requested size: 483.0078pt x 246.4125pt.
+ [40 <./Pictures/Klassediagram/VejElementer.png>]
+<Pictures/Klassediagram/Viewport.png, id=568, 638.385pt x 565.36218pt>
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: Pictures/Klassediagram/Viewport.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Viewport.png>
 Package pdftex.def Info: Pictures/Klassediagram/Viewport.png used on input line
+<<<<<<< HEAD
  28.
 (pdftex.def)             Requested size: 482.99565pt x 427.74733pt.
  [39 <./Pictures/Klassediagram/Diverse.png>]
 Overfull \hbox (25.11923pt too wide) in paragraph at lines 33--34
+=======
+ 30.
+(pdftex.def)             Requested size: 482.99565pt x 427.74733pt.
+ [41 <./Pictures/Klassediagram/Diverse.png>]
+Overfull \hbox (25.11923pt too wide) in paragraph at lines 35--36
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 \T1/lmr/m/n/10 bruger-flade \T1/lmtt/m/n/10 GUIMain\T1/lmr/m/n/10 , hvor der ka
 n redi-geres i ve-jnet-tet. Klassen \T1/lmtt/m/n/10 SimulationViewport
  []
 
+<<<<<<< HEAD
 <Pictures/Klassediagram/Pathfinder.png, id=558, 617.30624pt x 312.41719pt>
+=======
+<Pictures/Klassediagram/Pathfinder.png, id=576, 617.30624pt x 312.41719pt>
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: Pictures/Klassediagram/Pathfinder.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Pathfinder.png>
 Package pdftex.def Info: Pictures/Klassediagram/Pathfinder.png used on input li
+<<<<<<< HEAD
 ne 37.
 (pdftex.def)             Requested size: 483.01344pt x 244.45192pt.
  [40 <./Pictures/Klassediagram/Viewport.png>]
 <Pictures/Klassediagram/Funktionalitet.png, id=566, 604.50844pt x 527.72156pt>
+=======
+ne 39.
+(pdftex.def)             Requested size: 483.01344pt x 244.45192pt.
+ [42 <./Pictures/Klassediagram/Viewport.png>]
+<Pictures/Klassediagram/Funktionalitet.png, id=585, 604.50844pt x 527.72156pt>
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: Pictures/Klassediagram/Funktionalitet.png Graphic file (type png)
 
 <use Pictures/Klassediagram/Funktionalitet.png>
 Package pdftex.def Info: Pictures/Klassediagram/Funktionalitet.png used on inpu
+<<<<<<< HEAD
 t line 46.
 (pdftex.def)             Requested size: 482.99861pt x 421.64636pt.
  [41 <./Pictures/Klassediagram/Pathfinder.png>]
@@ -1859,12 +2616,23 @@ LaTeX Warning: Reference `Funktionelle' on page 42 undefined on input line 51.
 
 ) (sections/Implementation/HovedBrugerfladen.tex
 <Pictures/Implementation/program2.png, id=573, 516.42938pt x 258.21469pt>
+=======
+t line 48.
+(pdftex.def)             Requested size: 482.99861pt x 421.64636pt.
+ [43 <./Pictures/Klassediagram/Pathfinder.png>]
+
+LaTeX Warning: Reference `Funktionelle' on page 44 undefined on input line 53.
+
+) (sections/Implementation/HovedBrugerfladen.tex
+<Pictures/Implementation/program2.png, id=592, 516.42938pt x 258.21469pt>
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 File: Pictures/Implementation/program2.png Graphic file (type png)
 
 <use Pictures/Implementation/program2.png>
 Package pdftex.def Info: Pictures/Implementation/program2.png used on input lin
 e 6.
 (pdftex.def)             Requested size: 345.013pt x 172.50648pt.
+<<<<<<< HEAD
  [42 <./Pictures/Klassediagram/Funktionalitet.png>]
 Overfull \hbox (50.15309pt too wide) in paragraph at lines 15--16
 \T1/lmr/m/n/10 trykket på, bliver der sendt en event der kalder meto-den \T1/lm
@@ -1875,12 +2643,37 @@ m/n/10 .
 ) (sections/Implementation/ElementerVejnettet.tex [43 <./Pictures/Implementatio
 n/program2.png>] [44] [45]) (sections/Implementation/Diverse.tex [46] [47]
 [48] [49]) (sections/Implementation/Viewport.tex [50]
+=======
+ [44 <./Pictures/Klassediagram/Funktionalitet.png>]) (sections/Implementation/E
+lementerVejnettet.tex [45 <./Pictures/Implementation/program2.png>] [46] [47]) 
+(sections/Implementation/Diverse.tex
+[48]
+Overfull \hbox (6.14305pt too wide) in paragraph at lines 49--50
+\T1/lmr/m/n/10 de de-finerede værdier. Værdierne kan jus-teres gen-nem bruger-f
+laden GUIMenuSet-
+ []
+
+[49]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 51.
+
+
+LaTeX Warning: Reference `SimulatonDataClass' on page 50 undefined on input lin
+e 71.
+
+[50]) (sections/Implementation/Viewport.tex [51]
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Overfull \hbox (14.9074pt too wide) in paragraph at lines 48--49
 \T1/lmr/m/n/10 bare er benyt-tet alene er fordi må-den disse \T1/lmtt/m/n/10 La
 yer \T1/lmr/m/n/10 er an-vendt i bl.a. \T1/lmtt/m/n/10 ToolController
  []
 
+<<<<<<< HEAD
 [51]
+=======
+[52]
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Overfull \hbox (0.68433pt too wide) in paragraph at lines 94--95
 \T1/lmtt/m/n/10 SimulationViewport \T1/lmr/m/n/10 har til for-mål at vi-su-alis
 -ere simu-lerin-gen, som \T1/lmtt/m/n/10 Simulation
@@ -1888,7 +2681,11 @@ Overfull \hbox (0.68433pt too wide) in paragraph at lines 94--95
 
 
 Overfull \hbox (31.43373pt too wide) in paragraph at lines 98--99
+<<<<<<< HEAD
 []\T1/lmr/m/n/10 I [][]10.19[][] bliver der in-stan-sieret et nyt lag \T1/lmtt/
+=======
+[]\T1/lmr/m/n/10 I [][]12.18[][] bliver der in-stan-sieret et nyt lag \T1/lmtt/
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 m/n/10 Vehicles \T1/lmr/m/n/10 og en vari-abel for \T1/lmtt/m/n/10 SimulationDa
 ta
  []
@@ -1899,28 +2696,45 @@ Overfull \hbox (29.10114pt too wide) in paragraph at lines 98--99
 a-tion. \T1/lmtt/m/n/10 SimulationViewport
  []
 
+<<<<<<< HEAD
 [52]
+=======
+[53]
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Overfull \hbox (57.86095pt too wide) in paragraph at lines 132--133
 \T1/lmtt/m/n/10 Simulation\T1/lmr/m/n/10 . Simu-lerin-gen op-dateres efter det 
 an-tal som \T1/lmtt/m/n/10 Step \T1/lmr/m/n/10 dik-terer. \T1/lmtt/m/n/10 Simul
 ationViewport
  []
 
+<<<<<<< HEAD
 ) (sections/Implementation/Pathfinder.tex [53] [54] [55])
+=======
+) (sections/Implementation/Pathfinder.tex [54] [55] [56])
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 (sections/Implementation/Funktionelle.tex
 Overfull \hbox (4.72705pt too wide) in paragraph at lines 23--24
 \T1/lmr/m/n/10 GUIMain som sender alle værk-tø-jerne, nu-værende view-port samt
  pro-jekt. Herved
  []
 
+<<<<<<< HEAD
 [56] [57] [58]
+=======
+[57] [58] [59]
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Overfull \hbox (3.18683pt too wide) in paragraph at lines 172--173
 \T1/lmr/m/n/10 sket, altså om start-punk-tet til ve-jen er blevet valgt. Hvis \
 T1/lmtt/m/n/10 _firstNodeConnection
  []
 
+<<<<<<< HEAD
 [59] [60] [61]) (sections/Implementation/Vehicle.tex [62] [63] [64]
 <Pictures/Implementation/TranslateVehicle.png, id=1304, 150.5625pt x 207.02344p
+=======
+[60] [61] [62]) (sections/Implementation/Vehicle.tex [63] [64] [65]
+<Pictures/Implementation/TranslateVehicle.png, id=1229, 150.5625pt x 207.02344p
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 t>
 File: Pictures/Implementation/TranslateVehicle.png Graphic file (type png)
  <use Pictures/Implementation/TranslateVehicle.png>
@@ -1943,33 +2757,82 @@ Underfull \hbox (badness 7273) in paragraph at lines 101--102
 []\T1/lmr/m/n/10 Vektoren skaleres med af-s-
  []
 
+<<<<<<< HEAD
 [65 <./Pictures/Implementation/TranslateVehicle.png>]))
 (sections/Diskussion/Diskussion.tex [66]
 Chapter 11.
+=======
+[66 <./Pictures/Implementation/TranslateVehicle.png>])
+(sections/Implementation/FejlOgMangler.tex
+Underfull \hbox (badness 1033) in paragraph at lines 21--22
+[]|\T1/lmr/m/n/10 Programmets åbne og gemme funk-tion-alitet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/10 ToDestinationTime skal æn-dres således
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 39--39
+[]|\T1/lmr/m/n/10 Implementere en hjælpe-side til in-for-ma-tion
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 44
+ []
+
+[67])) (sections/Diskussion/Diskussion.tex [68]
+Chapter 13.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 ) (sections/Konklusion/Konklusion.tex [67
 
 ]
 Chapter 12.
+=======
+
+Package xr Warning: 
+No file Pathfinder.aux
+LABELS NOT IMPORTED.
+ on input line 2.
+
+[69
+
+]) (sections/Konklusion/Konklusion.tex [70]
+Chapter 14.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 ) (sections/Perspektivering/Perspektivering.tex [68
 
 ]
 Chapter 13.
+=======
+) (sections/Perspektivering/Perspektivering.tex [71
+
+]
+Chapter 15.
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
+<<<<<<< HEAD
 )) (Main.bbl [69
+=======
+)) (Main.bbl [72
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 ]
 Underfull \hbox (badness 1675) in paragraph at lines 23--29
@@ -2031,7 +2894,11 @@ $\T1/lmtt/m/n/10 infrastruktur-[]2030 / cowi-[]i-[]medierne / Documents / Veje
 % 20skaber %$
  []
 
+<<<<<<< HEAD
 [70
+=======
+[73
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 69--74
@@ -2057,6 +2924,7 @@ $\T1/lmtt/m/n/10 vejdirektoratet . dk / DA / viden _ og _ data / statistik / ve
 jeneital /$
  []
 
+<<<<<<< HEAD
 ) [71] (appendix.tex
 Appendix A.
 
@@ -2071,6 +2939,36 @@ AED: lastpage setting LastPage
 [72
 
 ]
+=======
+) [74] (appendix.tex
+Appendix A.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
+[][][][][][][][][]  
+ []
+
+<Pictures/Klassediagram/GUI.png, id=1325, 864.22874pt x 1008.76875pt>
+File: Pictures/Klassediagram/GUI.png Graphic file (type png)
+
+<use Pictures/Klassediagram/GUI.png>
+Package pdftex.def Info: Pictures/Klassediagram/GUI.png used on input line 6.
+(pdftex.def)             Requested size: 344.99963pt x 402.69994pt.
+ [75
+
+]
+<Pictures/Klassediagram/GUIEdit.png, id=1330, 694.84593pt x 399.74344pt>
+File: Pictures/Klassediagram/GUIEdit.png Graphic file (type png)
+
+<use Pictures/Klassediagram/GUIEdit.png>
+Package pdftex.def Info: Pictures/Klassediagram/GUIEdit.png used on input line 
+12.
+(pdftex.def)             Requested size: 344.99414pt x 198.47441pt.
+ [76 <./Pictures/Klassediagram/GUI.png>])
+\tf@thm=\write5
+ 
+AED: lastpage setting LastPage
+[77 <./Pictures/Klassediagram/GUIEdit.png>]
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
  (Main.aux)
@@ -2082,10 +2980,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  34220 strings out of 493673
  755487 string characters out of 3141520
  1287603 words of memory out of 3000000
  35835 multiletter control sequences out of 15000+200000
+=======
+ 34159 strings out of 493673
+ 759950 string characters out of 3141503
+ 1056603 words of memory out of 3000000
+ 35842 multiletter control sequences out of 15000+200000
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
  89076 words of font info for 68 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
  64i,17n,100p,1466b,1986s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2112,9 +3017,17 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files (x8
 .9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmtti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/zap
 fchan/uzcmi8a.pfb>
+<<<<<<< HEAD
 Output written on Main.pdf (79 pages, 1243325 bytes).
 PDF statistics:
  1890 PDF objects out of 2073 (max. 8388607)
  902 named destinations out of 1000 (max. 500000)
  718 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+Output written on Main.pdf (84 pages, 1301213 bytes).
+PDF statistics:
+ 1828 PDF objects out of 2073 (max. 8388607)
+ 819 named destinations out of 1000 (max. 500000)
+ 752 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> d84af099bfcdf408790e1dda4962443de17714c7
 

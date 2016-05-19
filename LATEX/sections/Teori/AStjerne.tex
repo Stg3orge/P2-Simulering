@@ -1,4 +1,4 @@
-\section{A* Algoritmen}
+\section{A* Algoritmen}\label{AStjerneTeori}
 A* (A stjerne) er en udvidelse af Dijkstras algoritme. Forskellen ved A* algoritmen er at den estimerer hvor langt noderne i graphen er fra slutnoden, og dermed findes den optimale rute hurtigere da den kun kigger på noder der ligger i retningen af slutnoden. Dette gøres når nabo noderne skal undersøges, ligesom i Dijkstra, vil algoritmen udregne kosten til nabo noderne af det nuværende punkt, og derudover vil der benyttes en heuristik til at estimere kosten fra nabo noden til slutnoden. Det vil sige at algoritmen arbejder med kosten til en node, betegnet \texttt{G}, en heuristik der estimerer kosten fra noden til slutnoden, betegnet \texttt{H}, og den samlede vurdering \texttt{F}, der udregnes som vist på formlen \ref{eq:A*}
 
 \begin{equation} \label{eq:A*}

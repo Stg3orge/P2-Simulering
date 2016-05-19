@@ -1,25 +1,61 @@
 \chapter{Diskussion}\label{Diskussion}
+\externaldocument{Pathfinder}
+
+
 Det udviklede program er udviklet med den tilstræbelse, at få opfyldt et eller flere af de opstillede succeskritierer inde for hvad gruppen har været i stand til givet de faglige og tidsmæssige resourcer der er blevet sat af til projektet. Dette afsnit belyser på de tanker gruppen har gjort sig i forhold til succeskritierene post-løsningsudvikling.
 
 \subsection{x.xx Succeskriterier}
 
 \textbf{1. Brugeren skal være i stand til at opsætte et vejnet, der indeholder objekter som trafiklys, huse, parkeringpladser og destinationer.}
 
-Når programmet åbnes bliver brugeren præsenteret med et grid hvor på knudder og veje kan indtegnes samt andre objekter. Dette gør brugeren i stand til at opsætte deres eget vejnet, både simpelt eller avanceret efter deres eget behov. Det er muligt at forbinde veje til forskellige knuder og give disse veje og knuder forskellige egenskaber. Derudover kan der indsættes destinations objekter på gridded som kan laves til at modtage en hvis procentsats af alle bil objekter der opstår igennem simuleringen. Lightcontrollere kan tilkobles knuder til at simulerer et trafiklys opførsel.
+Når programmet åbnes bliver brugeren præsenteret med et grid hvor på noder og veje kan indtegnes samt andre objekter. Dette gør brugeren i stand til at opsætte deres eget vejnet, både simpelt eller avanceret efter deres eget behov. Det er muligt at forbinde veje til forskellige noder og give disse veje og noder forskellige egenskaber. Derudover kan der indsættes destinations objekter på gitteret som kan laves til at modtage en hvis procentsats af alle bil objekter der opstår igennem simuleringen. Lightcontrollere kan tilkobles noder til at simulerer et trafiklys opførsel.
+
+\vspace{5mm}
 
 \textbf{2. Det skal være muligt for brugeren at kunne gemme deres arbejde, lukke programmet og forsætte deres arbejde næste de åbner programmet.}
 
 Når brugeren åbner programmet, kan de navigerer til dropdown menuen file hvor de kan vælge at gemme deres nuværende fil, åbne en fil, samt at oprette en ny fil. Dette gør brugeren i stand til at gemme deres arbejde og åbne det igen på et senere tidspunkt eller sende til en anden bruger med programmet.
 
+\vspace{5mm}
+
 \textbf{3. Simuleringen skal kunne sammenligne trafikafvikling på vejnettet med og uden de ekslusive veje. Køretøjerne i de to simuleringer skal være de samme, så resultaet ikke er tilfældigt.}
 
 Brugeren er i stand til at sætte primære og sekundære veje til at måle effektiviteten af trafikafviklingen. Derudover er det muligt at afsætte en hvis procent del af billerne til at ankomme til de forskellige indsatte destinationer, hvilket betyder at der altid vil ankomme en lige stor del af bilerne til disse destinationer så resultatet er ikke tilfældigt.
 
+\vspace{5mm}
+
 \textbf{4. Køretøjerne skal kunne finde den hurtigste rute til den parkeringsplads der ligger nærmest destinationen. Denne udregning skal tage højde for hastighedsgrænserne på vejene.}
 
-Der er blevet implementeret en klasse som står for at finde den hurtigste rute fra et startpunkt til et slutpunkt, se PathFinder i Implemantation afsnittet. Den tager også højde for hastighedsgrænserne der er på de forskellige veje. 
+Der er blevet implementeret en klasse som står for at finde den hurtigste rute fra et startpunkt til et slutpunkt, se \ref{Pathfinder}. Den tager også højde for hastighedsgrænserne der er på de forskellige veje. 
 
+\vspace{5mm}
 
 \textbf{5. Køretøjernes bevælgse skal gøres realistisk med hensyn til acceleration og deceleration.}
 
-I vores program er der taget hensyn til at der er en bil kørende foran, og så sænker den bagkørende bilist sin fart, men den rigtige deceleration er ikke taget i brug her. Da vi skulle prioritere succeskriterier, så valgte vi at sætte fokus på nogle af de andre kriteriere som er essentielt for at få programmet til at virke. Det betød bilernes acceleration og deceleration er ikke blevet implementeret, men vil så være en af punkterne som er med i videreudvikling af programmet.
+I vores program er der taget hensyn til at der er en bil kørende foran, og så sænker den bagkørende bilist sin fart, men den rigtige deceleration er ikke taget i brug her. Da vi skulle prioritere succeskriterier, så valgte vi at sætte fokus på nogle af de andre kriteriere som er essentielt for at få programmet til at virke. Det betød bilernes acceleration og deceleration er ikke blevet implementeret, men vil så være en af punkterne som er med i videreudvikling af programmet. Dette betyder at simuleringen bliver mindre realistisk, da bilerne ikke vil opføre sig optimalt.
+
+\vspace{5mm}
+
+\textbf{6.}
+
+\subsection{x.xx Valg af kortesterute algoritme.}
+I programmet anvender vi et A* algoritme til at udregne den korteste vej for bilerne til at ankomme til deres destination men efter udvikling af programmet har vi overvejet hvorvidt dette var den mest optimale løsning. I teori afsnittet beskriver vi Dijkstra og A* kortesterute algoritmerne og sammenligner de to samt begrunder valget af A*. Vi har dog kommet på den ide at vores valg har været fejlagtigt og at Dijkstra kunne virker bedre i vores program af følgende grunde. A* er ikke særligt optimalt at anvende da heuristikken bliver meget optimistk ved høje maksimale hastighedsgrænser. Derimod kunne Dijkstra vise sig at være bedre hvis den kunne gøres i stand til at gemme alle de ruter der var fundet når algoritmen køre, således kunne man komme ud for at bruge mindre tid på at finde ruter i andre instancer hvis denne rute allerede er blevet fundet en gang før. 
+
+\subsection{x.xx Realistisk simulering}
+Vores ide om programmet var at det skulle være så realistisk som muligt, men vores program har nogle fejl, som der er blevet beskrevet \ref{FejlOgMangler}. Såsom at alle bilerne kan lave en uvending i alle lyskryds, hvis det forminsker rutens afstand til destination. Uvendinger er ikke lovligt i alle lyskryds, hvilket får vores simulering til at være mindre realistisk. Der er mangel på menneskelig adfærd, da bilerne kører deres max hastighed på vejene, hvis det er muligt. Hvis der var variation i hastighederne i vores program, da mennesker kører på deres egen måde.
+
+\subsection{x.xx Pathfinder problem}
+problemet er at vores program benytter sig at A*, hvor vi også har muligheden for forskellige hastigheder på vejene, hvilket går ind og laver problemer for pathfinderen. Så vores program går hen mod at minde meget om Dijkstras, da der kommer flere beregninger som algoritmen benytter sig af.
+
+
+\subsection{x.xx protobuff}
+
+
+
+%Realistisk simulering?
+%Mangler diskussion om:
+%grafteori
+%valg af A* (djstra bedre?)
+%fejl angående i fathfinder (fejl når man dividere med max speed)
+%Benytte protobuff eller ligende til optimering
+%Der skal være noget om indlæsning af de der simulations filer, det tager for lang tid at indlæse dem, hvis de er på 300mb eller derover.
