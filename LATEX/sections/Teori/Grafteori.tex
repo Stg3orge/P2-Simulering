@@ -23,12 +23,17 @@ Man kan forstille sig dette er et vejnetværk, hvor punkterne(knuderne) represen
 
 \vspace{5mm}
 
-Vi kan udfra grafen se at knuderne \verb"A, B, C, D, E, F \in V"!. 
+Vi kan udfra grafen se at knuderne \verb!"A, B, C, D, E, F \in V"!. 
 
 \vspace{5mm}
 
-Samt at kanterne \verb!"{A,B} , {A,F} , {B,D} , {C,A} , {C,B} , {D,C} ,!
-\verb! {D,E} , {E,D} , {E,F}, {F,C}, {F,E} \in E"!
+Samt at kanterne \verb!"{A,B} \rightarrow 4 , {A,F} \rightarrow 5 , 
+						{B,D} \rightarrow 7 , {C,A} \rightarrow 3 , 
+						{C,B} \rightarrow 4 , {D,C} \rightarrow 2 ,!
+						\\
+				  \verb!{D,E} \rightarrow 3 , {E,D} \rightarrow 3 , 
+				  		{E,F} \rightarrow 2 , {F,C} \rightarrow 1 , 
+				  		{F,E} \rightarrow 1 \in  E"!
 
 \vspace{5mm}
 
@@ -40,12 +45,17 @@ Grafen her kan derfor skrives rent matematisk:
 
 \vspace{5mm}
 
-\verb!E = { {A,B} , {A,F} , {B,D} , {C,A} , {C,B} , {D,C} , {D,E} ,!
-\verb! {E,D} , {E,F}, {F,C}, {F,E} }!
+			\verb!E = { {A,B} \rightarrow 4 , {A,F} \rightarrow 5 , 
+						{B,D} \rightarrow 7 , {C,A} \rightarrow 3 , 
+						{C,B} \rightarrow 4 , {D,C} \rightarrow 2 ,!
+						\\
+				  \verb!{D,E} \rightarrow 3 , {E,D} \rightarrow 3 , 
+				  		{E,F} \rightarrow 2 , {F,C} \rightarrow 1 , 
+				  		{F,E} \rightarrow 1 \in  E" }!
 
 \vspace{5mm}
 
-En anden måde at repræsentere grafen på er ved hjælp af en "adjacency matrix weighted directed graph" VxE, hvor v1, v2...vn, er knuderne, og e1, e2...en, er kanterne. Se figur \ref{adjacency-matrix-weighted-directed-graph}. 
+En anden måde at repræsentere grafen på er ved hjælp af en nabo-matrix VxE, hvor v1, v2...vn, er knuderne, og e1, e2...en, er kanterne. Se figur \ref{adjacency-matrix-weighted-directed-graph}. 
 
 I matrixen beskrives forbindelser mellem 2 knuder med et tal, og knudere uden forbindelse beskrives med $\infty$. Man vil altså derfor kunne tegne en graf alene ud fra matrixens værdier.
 
@@ -58,13 +68,6 @@ I matrixen beskrives forbindelser mellem 2 knuder med et tal, og knudere uden fo
 \label{fig:adjacency-matrix-weighted-directed-graph}
 \end{figure}
 
-Grafteori er et vigtigt emne, da f.eks. korteste rute algoritmer som Dijkstra's har brug for at vide hvordan knuderne er forbundet, samt graden(hvor mange kanter knuden har) af den enktle knude, for at kun udregne den korteste rute. Derudover vil en grafmetode som "adjacency matrix weighted directed graph" være en god måde at beskrive et vejnætværk på programerings niveau, da man kan have alle sine værdier i en variable.
-
-\vspace{5mm}
-
-
-NOTE: \\
-vi bruger ikke 100\% "adjacency matrix weighted directed graph", da vi bruger en liste af noder/knuder, som så indeholder de reseterene veje(kanter). som så ydlere indeholder vægte for den enktle vej.
-
+Grafteori er et vigtigt emne, da f.eks. korteste rute algoritmer som Dijkstra's har brug for at vide hvordan knuderne er forbundet, samt graden(hvor mange kanter knuden har) af den enktle knude, for at kun udregne den korteste rute. Derudover vil en grafmetode som en nabo-matix være en god måde at beskrive et vejnætværk på programerings niveau, da man kan have alle sine værdier i en variable.
 
 
