@@ -1,1 +1,25 @@
 \chapter{Diskussion}\label{Diskussion}
+Det udviklede program er udviklet med den tilstræbelse, at få opfyldt et eller flere af de opstillede succeskritierer inde for hvad gruppen har været i stand til givet de faglige og tidsmæssige resourcer der er blevet sat af til projektet. Dette afsnit belyser på de tanker gruppen har gjort sig i forhold til succeskritierene post-løsningsudvikling.
+
+\subsection{x.xx Succeskriterier}
+
+\textbf{1. Brugeren skal være i stand til at opsætte et vejnet, der indeholder objekter som trafiklys, huse, parkeringpladser og destinationer.}
+
+Når programmet åbnes bliver brugeren præsenteret med et grid hvor på knudder og veje kan indtegnes samt andre objekter. Dette gør brugeren i stand til at opsætte deres eget vejnet, både simpelt eller avanceret efter deres eget behov. Det er muligt at forbinde veje til forskellige knuder og give disse veje og knuder forskellige egenskaber. Derudover kan der indsættes destinations objekter på gridded som kan laves til at modtage en hvis procentsats af alle bil objekter der opstår igennem simuleringen. Lightcontrollere kan tilkobles knuder til at simulerer et trafiklys opførsel.
+
+\textbf{2. Det skal være muligt for brugeren at kunne gemme deres arbejde, lukke programmet og forsætte deres arbejde næste de åbner programmet.}
+
+Når brugeren åbner programmet, kan de navigerer til dropdown menuen file hvor de kan vælge at gemme deres nuværende fil, åbne en fil, samt at oprette en ny fil. Dette gør brugeren i stand til at gemme deres arbejde og åbne det igen på et senere tidspunkt eller sende til en anden bruger med programmet.
+
+\textbf{3. Simuleringen skal kunne sammenligne trafikafvikling på vejnettet med og uden de ekslusive veje. Køretøjerne i de to simuleringer skal være de samme, så resultaet ikke er tilfældigt.}
+
+Brugeren er i stand til at sætte primære og sekundære veje til at måle effektiviteten af trafikafviklingen. Derudover er det muligt at afsætte en hvis procent del af billerne til at ankomme til de forskellige indsatte destinationer, hvilket betyder at der altid vil ankomme en lige stor del af bilerne til disse destinationer så resultatet er ikke tilfældigt.
+
+\textbf{4. Køretøjerne skal kunne finde den hurtigste rute til den parkeringsplads der ligger nærmest destinationen. Denne udregning skal tage højde for hastighedsgrænserne på vejene.}
+
+Der er blevet implementeret en klasse som står for at finde den hurtigste rute fra et startpunkt til et slutpunkt, se PathFinder i Implemantation afsnittet. Den tager også højde for hastighedsgrænserne der er på de forskellige veje. 
+
+
+\textbf{5. Køretøjernes bevælgse skal gøres realistisk med hensyn til acceleration og deceleration.}
+
+I vores program er der taget hensyn til at der er en bil kørende foran, og så sænker den bagkørende bilist sin fart, men den rigtige deceleration er ikke taget i brug her. Da vi skulle prioritere succeskriterier, så valgte vi at sætte fokus på nogle af de andre kriteriere som er essentielt for at få programmet til at virke. Det betød bilernes acceleration og deceleration er ikke blevet implementeret, men vil så være en af punkterne som er med i videreudvikling af programmet.

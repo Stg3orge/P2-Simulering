@@ -10,7 +10,6 @@ namespace A319TS.Tests
     [TestClass]
     class Class1
     {
-        [TestMethod]
-        public void Vehicle_TranslateVehicle_
+        
     }
 }

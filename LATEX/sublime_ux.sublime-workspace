@@ -150,7 +150,7 @@
 			"file": "sections/Implementation/Implementation.tex",
 			"settings":
 			{
-				"buffer_size": 533,
+				"buffer_size": 583,
 				"line_ending": "Windows"
 			}
 		},
@@ -163,10 +163,29 @@
 			}
 		},
 		{
-			"file": "setup/macros.tex",
+			"file": "sections/Simulering/Simulering.tex",
 			"settings":
 			{
-				"buffer_size": 3800,
+				"buffer_size": 5101,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\\chapter{Teknologianalyse}\\label{Teknologianalyse}\nI dette kapitel vil der blive gennemgået en analyse af simulationsprogrammerne VisSim og Altrans. En mangel på informationer om andre programmer har i en stor grad påvirket valget af VisSim og Altrans, derudover er de to programmer forskellige i deres formål, hvor Altrans har et specifikt formål, og VisSim er beregnet til at kunne løse flere forskellige formål. Altrans bliver ikke længere vedligeholdt, mens VisSim stadig bliver brugt i dag. Begge programmer vil blive vurderet i forhold til de aspekter der gør dem nemme at vedligeholde.\n\nInden da vil vi beskrive gruppens definition på hvad vedligeholdelse betyder for gruppen. Da der er tale om programmer og simuleringsmodeller, er der ikke tale om slid og skader, dog er der stadig tale om at sørge for at bevare disse løsninger. Derfor, når vi kigger på de to følgende to eksisterende løsninger, bliver de bedømt ikke kun på design, funktionalitet og deres kompleksitet, men også den eksisterende løsnings evne til at fortsat kunne blive anvendt ud i fremtiden.\n\n\\section{VisSim}\nVisSim er et mikrosimuleringsprogram, som bliver anendt i Danmark. VisSim udgør en stor del af beslutningsgrundlaget for udvidelsen i trafikken i dag. Programmet bruges til at konstruere og simulere større dynamiske systemer. VisSim er et diskret simuleringsprogram som modellerer adfærden for den enkle billist. VisSim benyttes for general modellering, simulation og designe simulations applikationer, dvs. at VisSim ikke nødvendigvis bruges til trafik simulering. VisSim er programmeret i ANSI C, og under processen af et VisSim projekt kan projektet kompileres.\n\nVisSim benytter sig af psyko fysisk model, som benytter en regelbaseret algoritme ved bevægelser på tværs af banerne. Den psykologiske del bliver brugt til bilistens ønske om aggressivitet, hastighed, reaktionsevne og generelt menneskelige forhold til trafikken. Den fysiske del bruges til bilens adfærd, så som bilens hastighed, størrelse, position. \n\nHerunder på figur \\ref{vissim} kan det ses at VisSim består af en værktøjslinje, som repræsentere kommandoer og blokke. Disse blokke og diagrammer bruges til at forme simuleringen. Det er et blokprogrammerings sprog, man programmere ved brug af blokke og diagrammer. På figur \\ref{vissim} kan man se at VisSim består af forskellige blokke, disse blokke er forskellige parametre og variabler, som udformer det kørende program \\cite{vissimfunker}.\n\n\\begin{figure}\n\\begin{center}\n\\includegraphics[width=1.2\\textwidth]{Pictures/Teknologianalyse/vissimfunker.jpg}\n\\end{center}\n\\caption{Værktøjer i VisSim}\n\\label{vissim}\n\\end{figure}\n\n\\subsection{VisSim - Bilen}\nDen enkle bil spiller også en stor rolle i VisSim, bilen er bestående af forskellige parametre, og det er ofte disse parametre der bliver anvendt. Denne rapport vurdere nogle af VisSims parametre, da det ikke er muligt for os at vurdere alle parametrene, fordi rapporten også fokusere på andre aspekter end VisSim. Der vil også vurderes vedligeholdelsen af VisSim. Bilens parametre i VisSim er beskrevet nedenfor.\n\n\\begin{itemize}\n\\item Ønsket acceleration.\n\\item Deceleration.\n\\item Acceleration\n\\item Vægtfordeling.\n\\item Hastighedsfordeling.\n\\item Afstand mellem køretøjer.\n\\item Størrelsen på køretøjet.\n\\end{itemize}\n\n\\ref{alstransWTF.tex/\n\n\\subsection{VisSim - Netværket}\nNetværket er bestående af de visuelle elementer, som har indflydelse på trafikafviklingen. Der er valgt at beskrive disse parametre, da det er disse der udgør største delen af VisSims parametre.\nNetværkets parametre er beskrevet nedenfor.\n\n\\begin{itemize}\n\\item Rundkørsler.\n\\item Vigepligt.\n\\item Lyskryds(signalregulering).\n\\item Hastighedszone.\n\\item Vejbredde.\n\\item Vejlængde.\n\\end{itemize}\n\n\\subsection{Analyse af acceleration og deceleration}\nUd fra en undersøgelse foretaget af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik, viser det sig at nogle af VisSims accelerations og decelerations værdier kan være upræcise. Undersøgelsen er foretaget ved analysering af VisSim på de danske vej-netværk, hvor der sammenlignes med GPS acceleration og decleration med VisSims data. Her er der blevet indsat GPS i 166 bilister som skal repræsentere acceleration og deceleration i Danmark.\n\nPå figur \\ref{GrafForAccelerationVisSimGPS}, kan man se at accelerations fordelingen for VisSim er markant højere end GPS daten. Dette viser sig, at være pga. VisSim er henvendt til de tyske-vejnetværk. I undersøgelsen beskriver de, at det skyldes de tyske biler er større og hurtigere. Det vurderes at VisSims data er upræcis, dette kan resultere forkerte simuleringer, hvilket resultere i forkert planlægning af nye vejnetværk. \n\n\\begin{tikzpicture}\n    \\begin{axis}\n    [\n        xlabel=km/t, \n        ylabel=m/s\\textsuperscript{2}, \n        ymin=-1, \n        ymax=4,\n        width=320,\n        height=150\n    ]\n    \\addplot[blue, thick] coordinates \n    {\n    	(5, 3.2)\n    	(10, 3)\n    	(15, 2.8)\n	    (20, 2.7)\n	    (25, 2.6)\n	    (30, 2.5)\n	    (35, 2.4)\n    	(40, 2.3)\n    	(45, 2.2)\n    	(50, 2)\n    	(55, 1.9)\n    	(60, 1.8)\n    	(65, 1.6)\n	    (70, 1.5)\n	    (75, 1.4)\n	    (80, 1.3)\n	    (85, 1.1)\n    	(90, 1.1)\n    	(95, 1.08)\n    	(100, 1.06)\n    	(105, 1.03)\n    	(110, 0.9)\n    	(115, 0.87)\n	    (120, 0.83)\n	    (125, 0.8)\n	    (130, 0.77)\n	    (135, 0.73)\n    	(140, 0.7)\n    	(145, 0.69)\n    	(150, 0.66)\n    	(155, 0.64)\n    	(160, 0.62)\n    	(165, 0.6)\n    	(170, 0.59)\n	    (175, 0.57)\n	    (180, 0.55)\n	    (185, 0.52)\n	    (190, 0.5)\n    	(195, 0.48)\n    	(200, 0.45)\n    	(205, 0.42)\n    	(210, 0.4)\n    };\n    \\addlegendentry{VisSim}\n    \\addplot[red, thick] coordinates \n    {\n    	(5, 2.1)\n    	(10, 2.5)\n    	(15, 2)\n	    (20, 1.8)\n	    (25, 1.6)\n	    (30, 1.57)\n	    (35, 1.53)\n    	(40, 1.4)\n    	(45, 1.3)\n    	(50, 1.2)\n    	(55, 1)\n    	(60, 0.97)\n    	(65, 0.94)\n	    (70, 0.91)\n	    (75, 0.88)\n	    (80, 0.8)\n	    (85, 0.74)\n    	(90, 0.7)\n    	(95, 0.6)\n    	(100, 0.5)\n    	(105, 0.47)\n    	(110, 0.45)\n    	(115, 0.4)\n	    (120, 0.37)\n	    (125, 0.36)\n	    (130, 0.33)\n	    (135, 0.3)\n    	(140, 0.28)\n    	(145, 0.26)\n    	(150, 0.23)\n    	(155, 0.2)\n    	(160, 0.17)\n    	(165, 0.15)\n    	(170, 0.13)\n	    (175, 0.1)\n	    (180, 0)\n	    (185, 0)\n	    (190, 0)\n    	(195, 0)\n    	(200, 0)\n    	(205, 0)\n    	(210, 0)\n    };\n    \\addlegendentry{GPS}\n    \\end{axis}\n\\end{tikzpicture}\n\nSamtidig er der undersøgt af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik om deceleration for bilister er præcise i VisSim, dette er også gjort ved sammenligning af VisSim data, med GPS data. På figur \\ref{GrafForDecelerationVisSimGPS} kan man se, at VisSims deceleration er markant højere end GPS dataen, man ser også at VisSim er lineæret udspillet. Det vurderes at dette kan have betydning for udfaldet i simleringen, hvis VisSims data var nær GPS daten, så ville udfaldet blive mere præcist. Man ser også at VisSims data er konstant, dette betyder at programmet ikke varierer decelerationen i forhold til farten. \n\n\\begin{tikzpicture}\n    \\begin{axis}\n    [\n        xlabel=km/t, \n        ylabel=m/s\\textsuperscript{2}, \n        ymin=-4, \n        ymax=4,\n        width=320,\n        height=150\n    ]\n    \\addplot[blue, thick] coordinates \n    {\n    	(0, -2.8)\n    	(10, -2.8)\n	    (20, -2.8)\n	    (30, -2.8)\n    	(40, -2.8)\n    	(50, -2.8)\n    	(60, -2.8)\n	    (70, -2.8)\n	    (80, -2.8)\n    	(90, -2.8)\n    	(100, -2.8)\n    	(110, -2.8)\n    };\n    \\addlegendentry{VisSim}\n    \\addplot[red, thick] coordinates \n    {\n    	(0, -1.22)\n    	(10, -1.22)\n	    (20, -1.6)\n	    (30, -1.94)\n    	(40, -1.93)\n    	(50, -1.98)\n    	(60, -1.9)\n	    (70, -1.5)\n	    (80, -1)\n    	(90, -0.8)\n    	(100, -0.8)\n    	(110, -0.56)\n    };\n    \\addlegendentry{GPS}\n    \\end{axis}\n\\end{tikzpicture}\n\n\\subsection{Vudering}\nVisSim kan anvendes således, at det kan opstilles til hvilket som helst formål. Dette er en god detalje for VisSim, da brugeren selv kan opstille specifikke scenerier og simuleringer som ikke nødvendigvis er trafik relateret. Dette vurderes til at være godt for vedligeholdelsen, da brugeren selv har muligheden for at opstille scenarier. Dette gør VisSim fremtidssikret, således at udviklerne af VisSim ikke selv skal sørger for vedligeholdelsen.\n\nVisSim er et stort program dette kræver viden omkring anvendelsen af VisSim for at brugeren kan benytte programmet til simulering af trafik. Da VisSim ikke kun er beregnet til trafik simulering, så kræver programmet mange detaljer og viden for brugeren, for at udføre en trafik simulering. Der vurderes at det vil være hjælpsomt for brugeren, hvis brugeren ikke skal anvende tid på at lære et nyt program, men i stedet anvende et program, som kun er egnet specifikt til simulering af trafik. \n\nVi har opstillet en tabel over de overvejelser vi har gjort os omkring VisSims fordele og ulemper.\n\n\\textbf{ILLEGAL TABLE WAS HERE}\n\n%\\begin{table}[]\n%\\centering\n%caption{VisSim Fordele og Ulemper}\n%\\label{VisSimProsAndCons}\n%\\begin{tabular}{|1|1|1|1|1|1|}\n%		& VisSim Fordele og Ulemper				&								&						   &						    & \\\\\n%Fordele & Kan tilpasses til en givet konteksts	& Brugeren kan programere logik & Vedligeholdes af brugere & Kan give meget præcis data & \\\\\n%Ulemper & Besværligt at sætte sig ind i			& Ikke brugervenligt			&						   &							&\n%\\end{tabular} \n%\\end{table}\n\n\n",
+			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+			"file_size": 9639,
+			"file_write_time": 131077891242970478,
+			"settings":
+			{
+				"buffer_size": 9327,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Teknologianalyse/altransWTF.tex",
+			"settings":
+			{
+				"buffer_size": 11735,
 				"line_ending": "Windows"
 			}
 		}
@@ -420,7 +439,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -448,7 +467,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -478,7 +497,7 @@
 						"translation.y": 1065.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -508,7 +527,7 @@
 						"translation.y": 465.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -538,7 +557,7 @@
 						"translation.y": 900.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -547,7 +566,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 533,
+						"buffer_size": 583,
 						"regions":
 						{
 						},
@@ -566,7 +585,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -594,16 +613,74 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "setup/macros.tex",
+					"file": "sections/Simulering/Simulering.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5101,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1799,
+								1799
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3311,
+								3311
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sections/Teknologianalyse/altransWTF.tex",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 3800,
+						"buffer_size": 11735,
 						"regions":
 						{
 						},
@@ -616,12 +693,10 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 660.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
