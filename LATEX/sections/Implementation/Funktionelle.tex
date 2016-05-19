@@ -217,39 +217,9 @@ static public Project OpenProject()
 
 Metoden \texttt{OpenProject}, der vises på figur \ref{OpenProjectCode}, kan åbne et eksisterende projekt, når brugeren trykker på Open Project i menuen. Denne metode benytter sig af \texttt{OpenFileDialog}, som ligger under \texttt{System.Windows.Forms}. Koden benytter sig af try-catch-finally, hvor den går ind i try fasen og filtrerer alle andre fil-typer væk som ikke er en TSP fil (traffic simulation project), hvis TSP filen er valgt så vil metoden deserialisere og åbne det gemte projekt op. Sidst vil finally lukke filen, så andre kan komme til.
 
-\begin{figure}[H]
-\begin{lstlisting}
-static public void SaveProject(Project project)
-{ 
-  FileStream file = null;
-  try
-  {
-    SaveFileDialog fileSave = new SaveFileDialog();
-    fileSave.AddExtension = true;
-    fileSave.DefaultExt = "tsp";
-    fileSave.Filter = "TSP Files|*.tsp";
-    if (fileSave.ShowDialog() == DialogResult.OK)
-    {
-      BinaryFormatter formatter = new BinaryFormatter();
-      file = new FileStream(fileSave.FileName, FileMode.Create);
-      formatter.Serialize(file, project);
-    }
-  }
-  catch (Exception e)
-  {
-    MessageBox.Show("Error: " + e.Message);
-  }
-  finally
-  {
-    if (file != null)
-      file.Close();
-  }
-}
-\end{lstlisting}
-\caption{SaveProject metoden}\label{SaveProjectCode}
-\end{figure}
+\vspace{5mm}
 
-På figur \ref{SaveProjectCode} ses metoden til at gemme et projekt. Igen benytter programmet af en try-catch-finally, hvor programmet i try fasen laver en ny instans af \texttt{SaveFileDialog}, på den måde kan programmet gemme et projekt som man har arbejdet på. Programmet er sat op at den skal gemme projektet som tsp fil (traffic simulation project). Hvis det ikke lykkes, så vil den kaste en exception med fejlen der er sket. Finally fasen vil den så frigøre resourcerne igen.
+I FileHandler klassen findes der også en SaveProject metode som gemmer projektet, som brugeren har arbejdet på. SaveProject metoden benytter den samme kode struktur som OpenProjekt metoden, som ses på figur \ref{OpenProjectCode}. Metoden minder meget om hinanden, hvor SaveProjekt gemmer istedet for at åbne et projekt.
 
 \vspace{5mm}
 

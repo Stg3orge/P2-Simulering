@@ -95,7 +95,7 @@ Information.Controls.Add(Input);
 
 \vspace{5mm}
 
-I \ref{ViewPortSimulation} bliver der instansieret et nyt lag \texttt{Vehicles} og en variabel for \texttt{SimulationData} hvori indeholdes nødvendige datasæt for at udføre en simulation. \texttt{SimulationViewport} tager derudover \texttt{SimulationData} som en parameter til dens egen constructor som set i figur \ref{ViewportSimulationConstructor}. I constructoren kan det ses at visualiseringen af simulationen benytter \texttt{Layer} til at fremstille \texttt{Vehicle} på \texttt{Viewport}. \texttt{Input} er et lag der kan modtage nyt input og ved \texttt{Input.BringToFront();} angives der at der nu kan afventes nyt input. 
+SimulationViewport nedarver fra viewport. I \ref{ViewPortSimulation1} bliver der instansieret et nyt lag \texttt{Vehicles} og en variabel for \texttt{SimulationData} hvori indeholdes nødvendige datasæt for at udføre en simulation. \texttt{SimulationViewport} tager derudover \texttt{SimulationData} som en parameter til dens egen constructor som set i figur \ref{ViewportSimulationConstructor}. I constructoren kan det ses at visualiseringen af simulationen benytter \texttt{Layer} til at fremstille \texttt{Vehicle} på \texttt{Viewport}. \texttt{Input} er et lag der kan modtage nyt input og ved \texttt{Input.BringToFront();} angives der at der nu kan afventes nyt input. 
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -105,7 +105,7 @@ public SimulationData SimData;
 public Partitions CurrentPartition = Partitions.Primary;
 \end{lstlisting}
 \caption{Variabler til SimulationViewport}
-\label{ViewPortSimulation}
+\label{ViewPortSimulation1}
 \end{figure}
 
 \begin{figure}[H]
