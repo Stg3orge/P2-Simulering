@@ -42,7 +42,22 @@ I vores program er der taget hensyn til at der er en bil kørende foran, og så 
 I programmet anvender vi et A* algoritme til at udregne den korteste vej for bilerne til at ankomme til deres destination men efter udvikling af programmet har vi overvejet hvorvidt dette var den mest optimale løsning. I teori afsnittet beskriver vi Dijkstra og A* kortesterute algoritmerne og sammenligner de to samt begrunder valget af A*. Vi har dog kommet på den ide at vores valg har været fejlagtigt og at Dijkstra kunne virker bedre i vores program af følgende grunde. A* er ikke særligt optimalt at anvende da heuristikken bliver meget optimistk ved høje maksimale hastighedsgrænser. Derimod kunne Dijkstra vise sig at være bedre hvis den kunne gøres i stand til at gemme alle de ruter der var fundet når algoritmen køre, således kunne man komme ud for at bruge mindre tid på at finde ruter i andre instancer hvis denne rute allerede er blevet fundet en gang før. 
 
 \subsection{x.xx Realistisk simulering}
-Vores ide om programmet var at det skulle være så realistisk som muligt, men vores program har nogle fejl, som der er blevet beskrevet \ref{FejlOgMangler}. Såsom at alle bilerne kan lave en uvending i alle lyskryds, hvis det forminsker rutens afstand til destination. Uvendinger er ikke lovligt i alle lyskryds, hvilket får vores simulering til at være mindre realistisk. Der er mangel på menneskelig adfærd, da bilerne kører deres max hastighed på vejene, hvis det er muligt. Hvis der var variation i hastighederne i vores program, da mennesker kører på deres egen måde.
+Vores ide om programmet var at det skulle være så realistisk som muligt, men vores program har nogle fejl, som der er blevet beskrevet \ref{FejlOgMangler}. Såsom at alle bilerne kan lave en uvending i alle lyskryds, hvis det forminsker rutens afstand til destination. Uvendinger er ikke lovligt i alle lyskryds, hvilket får vores simulering til at være mindre realistisk. Lyskrydsene har ikke gul farve, hvilket ellers signalere at lyskrydset er ved at skifte farve. Det er en faktor som påvirker menneskerne i virkeligheden. Lyskryds i vores program er tidsbestemt, hvilket ikke er helt realistisk, da i virkeligheden er der forskellige faktorer som bestemmer om lyset skal skifte. Påvirkningsfaktorerne kan være at lyskrydset har sensore som registere at den skal skifte lys, eller en fodgænger har trykket på knappen for at komme over vejen.
+
+\vspace{5mm}
+
+Der er mangel på menneskelig adfærd, da bilerne kører deres max hastighed på vejene, hvis det er muligt. Hvis der var variation i hastighederne i vores program, da mennesker kører på deres egen måde. Bilerne har en bestemt destination, som de kører til og fra. De har ikke flere forskellige destinationer, hvilket gør det mindre realistisk. Brugeren sætter bilerne til at køre til og fra en distination indenfor en tidsrum, men simuleringen tager ikke højde for at folk de kører alle sammen på arbejde/skole om morgen, og så kl. 12 kører der ikke nær så mange. Så simuleringen fordeler bilerne lige ud over den valgte tidsrum. 
+
+\vspace{5mm}
+
+Når vores program kører i simulationen, så bilerne som der er i simulationen kender de ikke noget til de sideliggende veje, ergo de kender ikke noget til de modkørende. Det er grunden til at bilerne ikke har muligheden for at overhale hinanden. Vejene er heller ikke sammensat, så der er plads til at kunne overhale. Så hvis der er en bil kørende bag en der kører langsommere, så vil han sætte farten ned og blive bag ved bilen. Bilerne har heller ikke muligheden for at køre over andre veje, hvis den gjorde det, så ville den dreje og køre langs den vej den ellers ville over. Der er heller ikke taget højde for forgænger eller cyklister, hvilket også går ind og påvirker trafikken. 
+
+
+
+
+lydskryds er tidsbegrænset
+
+
 
 \subsection{x.xx Pathfinder problem}
 problemet er at vores program benytter sig at A*, hvor vi også har muligheden for forskellige hastigheder på vejene, hvilket går ind og laver problemer for pathfinderen. Så vores program går hen mod at minde meget om Dijkstras, da der kommer flere beregninger som algoritmen benytter sig af.
