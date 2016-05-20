@@ -58,7 +58,7 @@ end
 \caption{Dijkstra pseudo-kode: FindPath og Node}\label{DijkstraCodeFindPathNode}
 \end{figure}
 
-På figur \ref{DijkstraCodeFindPathNode} ses pseudokode for kernen af Dijkstras algoritme. En \texttt{Node} er defineret først, hvor \texttt{Previous} til at starte med er \texttt{null} eller 'ikke eksisterende', og \texttt{Cost} er uendelig. \texttt{FindPath} proceduren tager en graph \texttt{AllNodes}, startnoden \texttt{StartNode} og slutnoden \texttt{EndNode}. Listen \texttt{Queue} laves og \texttt{StartNode} indsættes, da den skal findes i første iteration af while løkken. While løkken køres mens der stadig er noder der ikke er undersøgt, altså noder der ligger i \texttt{Queue}, og den starter med at sætte \texttt{CurrentNode} til noden der har den laveste \texttt{Cost}. Hvis \texttt{CurrentNode} er lig \texttt{EndNode} så har algoritmen fundet ruten og den bliver returneret ved brug af proceduren \texttt{TracePath}, som beskrives sidst i dette afsnit. Hvis ikke \texttt{CurrentNode} er lig \texttt{EndNode}, så flyttes den til \texttt{Closed} listen og naboerne til noden bliver evalueret gennem proceduren \texttt{EvaluateNeighbors} som beskrives herunder.
+På figur \ref{DijkstraCodeFindPathNode} ses pseudokode for kernen af Dijkstras algoritme. En \texttt{Node} er defineret først, hvor \texttt{Previous} til at starte med er \texttt{null} eller 'ikke eksisterende', og \texttt{Cost} er uendelig. \texttt{FindPath} proceduren tager en graph \texttt{AllNodes}, startnoden \texttt{StartNode} og slutnoden \texttt{EndNode}. Listen \texttt{Queue} laves og \texttt{StartNode} indsættes, da den skal findes i første iteration af while løkken. While løkken køres mens der stadig er noder der ikke er undersøgt, altså noder der ligger i \texttt{Queue}, og den starter med at sætte \texttt{CurrentNode} til noden der har den laveste \texttt{Cost}. Hvis \texttt{CurrentNode} er lig \texttt{EndNode} så har algoritmen fundet ruten og den bliver returneret ved brug af proceduren \texttt{TracePath}, som beskrives sidst i dette afsnit. Hvis ikke \texttt{CurrentNode} er lig \texttt{EndNode}, så fjernes noden fra \texttt{Queue} listen og naboerne til noden bliver evalueret gennem proceduren \texttt{EvaluateNeighbors} som beskrives herunder.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -78,7 +78,7 @@ end
 \caption{Dijkstra pseudo-kode: EvaluateNeighbors}\label{DijkstraCodeEvaluateNeighbors}
 \end{figure}
 
-\texttt{EvaluateNeighbors} proceduren som set på figur \ref{DijkstraCodeEvaluateNeighbors}, evaluerer naboerne af en \texttt{Node}, og overskriver \texttt{Cost} og \texttt{Previous}, hvis \texttt{Cost} er lavere fra den nuværende node \texttt{CurrentNode}. 
+\texttt{EvaluateNeighbors} proceduren som set på figur \ref{DijkstraCodeEvaluateNeighbors}, evaluerer naboerne af en \texttt{Node}, og hvis naboen ikker er i \texttt{Queue}, vil den blive tilføjet til listen. Mens evalueringen er igang så overskriver \texttt{Cost} og \texttt{Previous}, hvis \texttt{Cost} er lavere fra den nuværende node \texttt{CurrentNode}. 
 
 \begin{figure}[H]
 \begin{lstlisting}
