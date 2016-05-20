@@ -35,13 +35,14 @@ namespace A319TS
             Vehicles.BackColor = Color.Transparent;
             Vehicles.Paint += DrawVehicles;
 
+            Nodes.Paint += DrawLights;
             Grid.Paint -= DrawGrid;
             Entities.Controls.Remove(Information);
             Entities.Controls.Add(Vehicles);
             Vehicles.Controls.Add(Input);
             Input.BringToFront();
         }
-
+        
         private void DrawVehicles(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
@@ -49,23 +50,14 @@ namespace A319TS
             List<VehicleData> vehicleData;
             if (CurrentPartition == Partitions.Primary) vehicleData = SimData.PrimaryData;
             else vehicleData = SimData.SecondaryData;
-
-            int vehiclesDrawn = 0;
-
-            foreach (VehicleData data in SimData.PrimaryData)
+            
+            foreach (VehicleData data in vehicleData)
             {
                 if (Time > data.ToDestTime && Time < data.ToDestTime + (data.ToDestRecord.Count() * Simulation.RecordInterval))
-                {
                     DrawVehicle(data, true, args);
-                    vehiclesDrawn++;
-                }
                 else if (Time > data.ToHomeTime && Time < data.ToHomeTime + (data.ToHomeRecord.Count() * Simulation.RecordInterval))
-                {
                     DrawVehicle(data, false, args);
-                    vehiclesDrawn++;
-                }
             }
-            Console.WriteLine("VDrawn: " + vehiclesDrawn);
         }
         private void DrawVehicle(VehicleData vehicle, bool toDest, PaintEventArgs args)
         {
@@ -87,7 +79,48 @@ namespace A319TS
         }
         private int GetRecordIndex(int recordStartTime)
         {
-            return Convert.ToInt32((Time - recordStartTime) / Simulation.RecordInterval); // -1 ??
+            return Convert.ToInt32((Time - recordStartTime) / Simulation.RecordInterval);
+        }
+        
+        protected override void DrawConnections(object sender, PaintEventArgs args)
+        {
+            ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
+            foreach (Node node in Project.Nodes)
+                foreach (Road road in node.Roads)
+                    DrawRoad(road, args);
+        }
+        protected override void DrawEntities(object sender, PaintEventArgs args)
+        {
+            ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
+            foreach (Destination dest in Project.Destinations)
+            {
+                Point position = GetDrawPosition(dest.Position);
+                position.X -= EntitySize / 2;
+                position.Y -= EntitySize / 2;
+                DrawDestination(dest.Type.Color, position, args);
+            }
+        }
+        private void DrawLights(object sender, PaintEventArgs args)
+        {
+            foreach (LightController controller in Project.LightControllers)
+            {
+                bool switched;
+                if (Convert.ToInt32(Time / ((controller.FirstTime + controller.SecondTime) / 2)) % 2 == 1)
+                    switched = true;
+                else switched = false;
+
+                foreach (Node light in controller.Lights)
+                {
+                    Point position = GetDrawPosition(light.Position);
+                    position.X -= NodeSize / 2;
+                    position.Y -= NodeSize / 2;
+
+                    if (switched && light.Green) DrawNode(Brushes.Red, position, args);
+                    else if (switched && !light.Green) DrawNode(Brushes.Green, position, args);
+                    else if (!switched && light.Green) DrawNode(Brushes.Green, position, args);
+                    else DrawNode(Brushes.Red, position, args);
+                }
+            }
         }
     }
 }

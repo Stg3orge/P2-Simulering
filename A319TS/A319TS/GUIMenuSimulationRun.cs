@@ -18,13 +18,17 @@ namespace A319TS
         private Label ProcessLabel = new Label();
         private Button Start = new Button();
         private Button Cancel = new Button();
+        private int _primaryProgress = 0;
+        private int _secondaryProgress = 0;
 
         public GUIMenuSimulationRun(Project project)
         {
             Project = project;
             Setup();
             Simulation = new Simulation(project);
-            Simulation.ProgressChanged += WorkerProgressChanged;
+            Simulation.PrimaryWorker.ProgressChanged += PrimaryProgressChanged;
+            Simulation.SecondaryWorker.ProgressChanged += SecondaryProgressChanged;
+            Simulation.SimulationDone += OnSimulationDone;
         }
 
         private void Setup()
@@ -49,6 +53,7 @@ namespace A319TS
             
             ProgressBar.Location = new Point(12, 197);
             ProgressBar.Size = new Size(460, 23);
+            ProgressBar.Maximum = 86400000;
             Controls.Add(ProgressBar);
             
             ProcessLabel.Location = new Point(12, 223);
@@ -75,21 +80,13 @@ namespace A319TS
             Cancel.Enabled = true;
             try
             {
-                Information.AppendText("Simulating...");
+                InformationWriteLine("Simulating...");
                 Simulation.Run();
             }
-            catch (OperationCanceledException e)
+            catch (ArgumentException e)
             {
-                Information.AppendText("\r" + e.Message);
-                ProcessLabel.Text = "Cancelled";
-            }
-            catch (Exception e)
-            {
-                Information.AppendText("\r" + "ERROR: " + e.Message);
+                InformationWriteLine("ERROR: " + e.Message);
                 ProcessLabel.Text = "Failure";
-            }
-            finally
-            {
                 Simulation = null;
                 Cancel.Enabled = false;
             }
@@ -99,9 +96,37 @@ namespace A319TS
             Simulation.Cancel();
             Cancel.Enabled = false;
         }
-        private void WorkerProgressChanged(object sender, ProgressChangedEventArgs args)
+        private void InformationWriteLine(string text)
         {
-            ProgressBar.Value = args.ProgressPercentage;
+            Information.AppendText(text + "\r");
+        }
+        private void PrimaryProgressChanged(object sender, ProgressChangedEventArgs args)
+        {
+            _primaryProgress = args.ProgressPercentage;
+            ProgressBar.Value = (_primaryProgress + _secondaryProgress) / 2;
+            InformationWriteLine(args.UserState as string);
+        }
+        private void SecondaryProgressChanged(object sender, ProgressChangedEventArgs args)
+        {
+            _secondaryProgress = args.ProgressPercentage;
+            ProgressBar.Value = (_primaryProgress + _secondaryProgress) / 2;
+            InformationWriteLine(args.UserState as string);
+        }
+        private void OnSimulationDone(object sender, EventArgs args)
+        {
+            if (Simulation.Filename != null)
+            {
+                ProgressBar.Value = Simulation.MsInDay;
+                ProcessLabel.Text = "Success";
+                InformationWriteLine("Simulation saved as: " + Simulation.Filename);
+            }
+            else
+            {
+                ProgressBar.Value = 0;
+                ProcessLabel.Text = "Cancelled";
+            }
+            Simulation = null;
+            Cancel.Enabled = false;
         }
     }
 }

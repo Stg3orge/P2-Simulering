@@ -110,7 +110,7 @@ namespace A319TS
         private void Tick(object sender, EventArgs args)
         {
             SimViewport.Time += Simulation.RecordInterval;
-            SimViewport.Vehicles.Refresh();
+            SimViewport.Nodes.Refresh();
             ProgressBar.Value = SimViewport.Time;
             TimeLabel.Text = SimViewport.Time.ToString();
         }
@@ -126,6 +126,7 @@ namespace A319TS
             SimContainer.Size = new Size(860, 279);
             SimContainer.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
             SimContainer.BorderStyle = BorderStyle.Fixed3D;
+            SimContainer.BackColor = Color.White;
             Controls.Add(SimContainer);
 
             ProgressBar.Location = new Point(12, 297);
