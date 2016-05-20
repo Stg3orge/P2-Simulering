@@ -1,4 +1,4 @@
-\chapter{Teknologianalyse}\label{Teknologianalyse}
+\chapter{Teknologianalyse}Teknologianalyse
 I dette kapitel vil der blive gennemgået en analyse af simulationsprogrammerne VisSim og Altrans. En mangel på informationer om andre programmer har i en stor grad påvirket valget af VisSim og Altrans, derudover er de to programmer forskellige i deres formål, hvor Altrans har et specifikt formål, og VisSim er beregnet til at kunne løse flere forskellige formål. Altrans bliver ikke længere vedligeholdt, mens VisSim stadig bliver brugt i dag. Begge programmer vil blive vurderet i forhold til de aspekter der gør dem nemme at vedligeholde.
 
 Inden da vil vi beskrive gruppens definition på hvad vedligeholdelse betyder for gruppen. Da der er tale om programmer og simuleringsmodeller, er der ikke tale om slid og skader, dog er der stadig tale om at sørge for at bevare disse løsninger. Derfor, når vi kigger på de to følgende to eksisterende løsninger, bliver de bedømt ikke kun på design, funktionalitet og deres kompleksitet, men også den eksisterende løsnings evne til at fortsat kunne blive anvendt ud i fremtiden.
@@ -49,6 +49,7 @@ Ud fra en undersøgelse foretaget af Pihlkjær afgangsprojekt Aalborg Universite
 
 På figur \ref{GrafForAccelerationVisSimGPS}, kan man se at accelerations fordelingen for VisSim er markant højere end GPS daten. Dette viser sig, at være pga. VisSim er henvendt til de tyske-vejnetværk. I undersøgelsen beskriver de, at det skyldes de tyske biler er større og hurtigere. Det vurderes at VisSims data er upræcis, dette kan resultere forkerte simuleringer, hvilket resultere i forkert planlægning af nye vejnetværk. 
 
+\begin{figure}[ht]
 \begin{tikzpicture}
     \begin{axis}
     [
@@ -153,9 +154,12 @@ På figur \ref{GrafForAccelerationVisSimGPS}, kan man se at accelerations fordel
     \addlegendentry{GPS}
     \end{axis}
 \end{tikzpicture}
+\caption{}\label{GrafForAccelerationVisSimGPS}
+\end{figure}
 
 Samtidig er der undersøgt af Pihlkjær afgangsprojekt Aalborg Universitet - Vej og Trafikteknik om deceleration for bilister er præcise i VisSim, dette er også gjort ved sammenligning af VisSim data, med GPS data. På figur \ref{GrafForDecelerationVisSimGPS} kan man se, at VisSims deceleration er markant højere end GPS dataen, man ser også at VisSim er lineæret udspillet. Det vurderes at dette kan have betydning for udfaldet i simleringen, hvis VisSims data var nær GPS daten, så ville udfaldet blive mere præcist. Man ser også at VisSims data er konstant, dette betyder at programmet ikke varierer decelerationen i forhold til farten. 
 
+\begin{figure}[ht]
 \begin{tikzpicture}
     \begin{axis}
     [
@@ -200,6 +204,8 @@ Samtidig er der undersøgt af Pihlkjær afgangsprojekt Aalborg Universitet - Vej
     \addlegendentry{GPS}
     \end{axis}
 \end{tikzpicture}
+\caption{}\label{GrafForDecelerationVisSimGPS}
+\end{figure}
 
 \subsection{Vudering}
 VisSim kan anvendes således, at det kan opstilles til hvilket som helst formål. Dette er en god detalje for VisSim, da brugeren selv kan opstille specifikke scenerier og simuleringer som ikke nødvendigvis er trafik relateret. Dette vurderes til at være godt for vedligeholdelsen, da brugeren selv har muligheden for at opstille scenarier. Dette gør VisSim fremtidssikret, således at udviklerne af VisSim ikke selv skal sørger for vedligeholdelsen.

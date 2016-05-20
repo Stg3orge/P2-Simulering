@@ -3,6 +3,7 @@
 	{
 		"selected_items":
 		[
+<<<<<<< HEAD
 			[
 				"allocat",
 				"allocation_of_values_to_team_data"
@@ -109,6 +110,85 @@
 			]
 		]
 	},
+=======
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Kildekritik.tex",
+			"settings":
+			{
+				"buffer_size": 824,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Konklusion/Konklusion-B.tex",
+			"settings":
+			{
+				"buffer_size": 1671,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+			"settings":
+			{
+				"buffer_size": 5916,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+			"settings":
+			{
+				"buffer_size": 9454,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/sections.tex",
+			"settings":
+			{
+				"buffer_size": 1034,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Kravspecifikationer/Kravspecifikationer.tex",
+			"settings":
+			{
+				"buffer_size": 7589,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Implementation/FejlOgMangler.tex",
+			"settings":
+			{
+				"buffer_size": 6260,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Diskussion/Diskussion.tex",
+			"settings":
+			{
+				"buffer_size": 7751,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/Diskussion/Diskussion2.tex",
+			"settings":
+			{
+				"buffer_size": 3608,
+				"line_ending": "Windows"
+			}
+		}
+	],
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -116,6 +196,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
+<<<<<<< HEAD
 		"height": 104.0,
 		"last_filter": "Package Control: install",
 		"selected_items":
@@ -144,6 +225,29 @@
 		"height": 126.0,
 		"history":
 		[
+=======
+		"height": 101.0,
+		"last_filter": "install package",
+		"selected_items":
+		[
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 549.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 		]
 	},
 	"distraction_free":
@@ -155,6 +259,7 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+<<<<<<< HEAD
 	"file_history":
 	[
 		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/Main.tex",
@@ -249,6 +354,27 @@
 	"find":
 	{
 		"height": 28.0
+=======
+	"expanded_folders":
+	[
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Diskussion",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Implementation",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Interessentanalyse",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Konklusion",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Teknologianalyse"
+	],
+	"file_history":
+	[
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sections/Diskussion/ss",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/Main.sublime-workspace",
+		"/C/Users/hype7/Desktop/Git/P2-Simulering/LATEX/sublime_ux.sublime-project"
+	],
+	"find":
+	{
+		"height": 0.0
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 	},
 	"find_in_files":
 	{
@@ -262,6 +388,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"getobj",
 			"getob",
 			"fight",
@@ -300,6 +427,8 @@
 			"​",
 			"uigytgu",
 			"dickbutt"
+=======
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -314,6 +443,7 @@
 		"whole_word": false,
 		"wrap": true
 	},
+<<<<<<< HEAD
 	"incremental_find":
 	{
 		"height": 28.0
@@ -321,6 +451,280 @@
 	"input":
 	{
 		"height": 31.0
+=======
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Kildekritik.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 824,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								824,
+								824
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sections/Konklusion/Konklusion-B.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1671,
+								1671
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Interessentanalyse/Interessentanalyse.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								62
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								42,
+								42
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sections/sections.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1034,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								510,
+								510
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sections/Kravspecifikationer/Kravspecifikationer.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "sections/Implementation/FejlOgMangler.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sections/Diskussion/Diskussion.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1140.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sections/Diskussion/Diskussion2.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1804,
+								1804
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 38.0
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 	},
 	"layout":
 	{
@@ -345,18 +749,28 @@
 		]
 	},
 	"menu_visible": true,
+<<<<<<< HEAD
 	"output.exec":
 	{
 		"height": 100.0
 	},
+=======
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 	"output.find_results":
 	{
 		"height": 0.0
 	},
 	"pinned_build_system": "",
+<<<<<<< HEAD
 	"replace":
 	{
 		"height": 52.0
+=======
+	"project": "sublime_ux.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -365,10 +779,13 @@
 		"last_filter": "",
 		"selected_items":
 		[
+<<<<<<< HEAD
 			[
 				"",
 				"with <stdio.h>"
 			]
+=======
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 		],
 		"width": 0.0
 	},
@@ -390,6 +807,10 @@
 		],
 		"width": 0.0
 	},
+<<<<<<< HEAD
+=======
+	"selected_group": 0,
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 	"settings":
 	{
 	},
@@ -397,7 +818,11 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
+<<<<<<< HEAD
 	"side_bar_width": 307.0,
+=======
+	"side_bar_width": 280.0,
+>>>>>>> b9a9682dae7df4196fc422cb0b0148e7d268cab7
 	"status_bar_visible": true,
 	"template_settings":
 	{

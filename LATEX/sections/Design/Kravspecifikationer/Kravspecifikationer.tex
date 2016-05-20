@@ -45,8 +45,58 @@ Programmet skal indeholde en sammenligning af to simuleringer, dette vil foregå
 
 \vspace{5mm}
 
+\subsection{Program opbygning}\label{ProgramOpbygning}
+Følgende afsnit beskriver hvordan opbygning af programmet forventets at blive, ud fra de forrige afsnit hvor de hovedsaglige komponenter er blevet beskrevt.
+
+Programmet forventets at blive opdelt i 6 hovedområder som kan ses på figur \ref{fig:ProgramOpdeling}. 
+
+\begin{figure}[H]
+\begin{adjustbox}{width=0.4\textwidth,center=\textwidth}
+\centering
+\includegraphics[width=0.4\textwidth]{Pictures/Design/Opdeling.PNG}
+\end{adjustbox}
+\caption{Opdeling}
+\label{fig:ProgramOpdeling}
+\end{figure}
+
+\textbf{Main()} vil være områder som fremstiller de hovedsaglige objecter til sammenkoblig af programmet.
+
+\vspace{5mm}
+
+\textbf{Core Classes} er de grundlæggende klasser som forbinder de mindre klasser med hiandnen. Disse klasser vil derfor stå få komunikationen mellem programmet.
+
+\vspace{5mm}
+
+\textbf{Elements} vil være de komponeter som bruges til simulation, samt visualsering, det kunne f.eks. være veje, parkeringspladser osv. Det er altså elementer som bruges til både at opretholde retningslinjerne for simuleringen, men også visualiseringen af simulationen.
+
+\vspace{5mm}
+
+\textbf{Simulation Parts} er de dele af programet som kun bruges til simuleringdelen.
+
+\vspace{5mm}
+
+\textbf{Filehandling Parts} er de dele af programet som kun bruges til håntering af filer, som f.eks projekt og simulations filer. Disse dele bruges altså til at sende generalle data fra forskelige dele, som så bruges af resten af programet.  
+
+\vspace{5mm}
+
+\textbf{Visualization Parts} er de dele af programet som kun bruges til visualisere programmet og dens simulationer.
+
+\begin{figure}[H]
+\begin{adjustbox}{width=1.0\textwidth,center=\textwidth}
+\centering
+\includegraphics[width=1.0\textwidth]{Pictures/Design/ProgramOversigt.PNG}
+\end{adjustbox}
+\caption{Program opbygning}
+\label{fig:ProgramOversigt}
+\end{figure}
+
+\vspace{5mm}
+På figur \ref{fig:ProgramOversigt} ses hvordan vi forventer de 6 beskrevet dele arbejder sammen, for at opfylde vores krav til programet.
+
+\vspace{5mm}
+
 \subsection{Succeskriterier}\label{Succeskriterier}
-Den følgende liste beskriver hvilke kriterier programmet skal opfylde, før programmet kan være en løsning til problemformuleringen. Der er lagt fokus på simulering af køretøjer som biler og busser. Andre simulerings enheder som fodgængere, cyklister og toge er udeladt da de har en mindre påvirkning på trafikken på vejnettet. Derudover er importering af kort ikke taget med som et succeskriterie, da det ikke er nødvendigt for at kunne opstille et vejnet. De udeladte elementer bliver diskuteret i perspektiverings afsnittet (reference her).
+Den følgende liste beskriver hvilke kriterier programmet skal opfylde, før programmet kan være en løsning til problemformuleringen. Der er lagt fokus på simulering af køretøjer som biler og busser. Andre simulerings enheder som fodgængere, cyklister og toge er udeladt da de har en mindre påvirkning på trafikken på vejnettet. Derudover er importering af kort ikke taget med som et succeskriterie, da det ikke er nødvendigt for at kunne opstille et vejnet. De udeladte elementer bliver diskuteret senere i rapporten.
 
 \begin{enumerate}
 \item Brugeren skal være i stand til at opsætte et vejnet, der indeholder objekter som trafiklys, huse, parkeringspladser og destinationer.

@@ -1,10 +1,10 @@
 \chapter{Design af program}
 Dette afsnit har til formål at give et indblik over dem indledende fase af programmeringsstadiet, hvilket blev brugt til at finde frem til hvordan programmet skulle udvikles og hvordan brugerfladen skulle se ud. De valg som blev truffet og hvilke overvejelser der blev foretaget over programmet opbygningen vil blive gennemgået. Hovedmålet har været at konstruere et program, som har til formål at løse den opstillet problemformulering bedst muligt. 
 
-\subsubsection{Implementation af vejsystemer}
+\subsection{Implementation af vejsystemer}
 Grundstenen i programmet er at gøre det muligt, at lave et vejsystem der kan bruges til at simulere forskellige scenarier i trafikken og trafikmønstre, således at det er muligt at optimere trafikken for motoriseret køretøjer. Eftersom det kun er optimeringen af motoriseret køretøjer, med tilladelse til at køre på alle de danske veje (derfor ses der bort fra køretøjer som bl.a. scootere og traktorer, da de er begrænset til visse typer af veje), bliver der ikke taget højde for bl.a. fodgængere og cyklister. Dette giver dog en fejlmargin, da disse også påvirker trafikanterne når de eksempelvis skal passere hinanden. Men da det er begrænset i hvor stort et omfang de påvirkes, vælges der at se bort fra disse faktorer, primært fordi det hovedsageligt kun påvirkes under bykørsel. 
 
-\subsubsection{Simulering af trafik}
+\subsection{Simulering af trafik}
 Idéen ved programmets simulering, er at det skal være muligt for brugeren at se, hvor det vil være mest optimalt at implementere nye strækninger for at optimere trafikken og undgå eventuelle trafikpropper og problemer som ofte skyldes ruter der er stærkt trafikeret. Brugeren vil altså få mulighed for at kunne ændre på variablerne såsom hvor vejen skal implementeres, men antallet af trafikanter der benytter en vilkårlig vej samt deres hastighed. På denne måde vil det altså være muligt for brugeren at se hvor meget trykket ville kunne lettes for problematiske ruter, ved at tilføje alternativer, således at det er muligt at vurdere om det ville være omkostningerne værd at implementere. 
 
 \subsection{Opbygning af vejnet ved brug af grid}

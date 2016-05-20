@@ -1,5 +1,7 @@
 \section{Kravspecifikationer}
-I dette afsnit vil der blive forklaret hvilke kravspecifikationer programmet skal opfylde. På tabel \ref{fig:KravspecifikationerTabel} vises en samlet tabel over de kravspecifikationer der er sat for programmet. Tabellen er opdelte i 3 katagorier \texttt{Generelt}, \texttt{Brugerflade} og \texttt{Simulering}. I de følgende afsnit bliver tabel \ref{fig:KravspecifikationerTabel} beskrevet.
+\externaldocument{Teknologianalyse}
+\externaldocument{Interessentanalyse}
+I dette afsnit vil der blive forklaret hvilke kravspecifikationer programmet skal opfylde. Dette er baseret ud fra teknologi og interessent analysen se afsnit \ref{Teknologianalyse} og \ref{Interessentanalyse}. På tabel \ref{fig:KravspecifikationerTabel} vises en samlet tabel over de kravspecifikationer der er sat for programmet. Tabellen er opdelte i 3 katagorier \texttt{Generelt}, \texttt{Brugerflade} og \texttt{Simulering}. I de følgende afsnit bliver tabel \ref{fig:KravspecifikationerTabel} beskrevet.
 
 \begin{table}[H]
 \centering
@@ -22,7 +24,7 @@ Gem og Åben fil   & Gitter               & Sammenligning       \\ \hline
 \end{table}
 
 \subsection{Generelt}
-Der er valgt at programmet skal indeholde en gem og åben funktion, dette skal gøres for at brugeren får muligheden for at gemme sit projekt. På denne måde kan brugeren arbejde videre på sit projekt over en større tidsperiode. Der er også valgt at opstille dette, således brugeren har forminsket tidspild.
+Der er valgt at programmet skal indeholde en gem og åben funktion, dette skal gøres for at brugeren får muligheden for at gemme sit projekt. På denne måde kan brugeren arbejde videre på sit projekt over en større tidsperiode. Der er også valgt at opstille dette, således brugeren har forminsket tidspild. Derudover skal programmet implementere således der føres to simuleringer, hvor den ene har eksklusive veje hvorimod den anden har almindelige veje. Den ene simulering vil så have ekstra veje, dvs. at simuleringen kan udspille sig anderledes. På denne måde kan brugeren opstille to vejnetværk og sammenligne dataen og dermed komme frem til en konklusion, for se at hvilke veje der er de mest optimale.
 
 \vspace{5mm}
 
@@ -45,7 +47,7 @@ Programmet skal indeholde en sammenligning af to simuleringer, dette vil foregå
 \vspace{5mm}
 
 \subsection{Succeskriterier}\label{Succeskriterier}
-Den følgende liste beskriver hvilke kriterier programmet skal opfylde, før programmet kan være en løsning til problemformuleringen. Der er lagt fokus på simulering af køretøjer som biler og busser. Andre simulerings enheder som fodgængere, cyklister og toge er udeladt da de har en mindre påvirkning på trafikken på vejnettet. Derudover er importering af kort ikke taget med som et succeskriterie, da det ikke er nødvendigt for at kunne opstille et vejnet. De udeladte elementer bliver diskuteret i perspektiverings afsnittet.
+Den følgende liste beskriver hvilke kriterier programmet skal opfylde, før programmet kan være en løsning til problemformuleringen. Der er lagt fokus på simulering af køretøjer som biler og busser. Andre simulerings enheder som fodgængere, cyklister og toge er udeladt da de har en mindre påvirkning på trafikken på vejnettet. Derudover er importering af kort ikke taget med som et succeskriterie, da det ikke er nødvendigt for at kunne opstille et vejnet. De udeladte elementer bliver diskuteret senere i rapporten.
 
 \begin{enumerate}
 \item Brugeren skal være i stand til at opsætte et vejnet, der indeholder objekter som trafiklys, huse, parkeringspladser og destinationer.
