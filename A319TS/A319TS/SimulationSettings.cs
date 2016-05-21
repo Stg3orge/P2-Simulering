@@ -13,6 +13,7 @@ namespace A319TS
         public int StepSize { get; set; }
         public int VehicleSpace { get; set; }
         public int IncommingRange { get; set; }
+        public int TrailingSpeed { get; set; }
 
         // Primary
         public int PrimaryCarCount { get; set; }
@@ -36,6 +37,7 @@ namespace A319TS
             StepSize = 100;
             VehicleSpace = 2;
             IncommingRange = 10;
+            TrailingSpeed = 100;
             PrimaryCarCount = 1000;
             PrimaryInbound = 100;
             PrimaryOutbound = 100;

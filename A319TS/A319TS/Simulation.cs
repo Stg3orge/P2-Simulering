@@ -96,8 +96,7 @@ namespace A319TS
                 worker.ReportProgress(0, partition + " cancelled");
                 args.Cancel = true;
             }
-            else
-                worker.ReportProgress(MsInDay, partition + " completed");
+            else worker.ReportProgress(MsInDay, partition + " completed");
         }
         private void SimulationCompleted(object sender, RunWorkerCompletedEventArgs args)
         {
@@ -119,6 +118,136 @@ namespace A319TS
                 OnSimulationDone();
             }
         }
+        private enum SetupOrder { Equal, PrimaryFirst, SecondaryFirst }
+        private void SetupVehicles()
+        {
+            SetupOrder order = GetOrder();
+        }
+        private SetupOrder GetOrder()
+        {
+            if (Project.Settings.PrimaryCarCount == Project.Settings.SecondaryCarCount)
+                return SetupOrder.Equal;
+            else if (Project.Settings.PrimaryCarCount < Project.Settings.SecondaryCarCount)
+                return SetupOrder.PrimaryFirst;
+            else return SetupOrder.SecondaryFirst;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // CreateVehicles //
         private List<Vehicle> CreateVehicles(Partitions partition)

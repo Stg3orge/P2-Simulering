@@ -200,7 +200,7 @@ namespace A319TS
             else if (vehicleInfront != null)
             {
                 if (Type.MaxSpeed > vehicleInfront.Speed)
-                    return vehicleInfront.Speed;
+                    return vehicleInfront.Speed * (_settings.TrailingSpeed / 100);
                 else
                     return Type.MaxSpeed;
             }

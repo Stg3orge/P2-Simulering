@@ -109,25 +109,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-		{
-			"file": "sections/Diskussion/Diskussion2.tex",
-			"settings":
-			{
-				"buffer_size": 4674,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/Konteksten/konteksten.tex",
-			"settings":
-			{
-				"buffer_size": 3620,
-				"line_ending": "Windows"
-			}
-		}
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -174,18 +155,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Kravspecifikationer",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Diskussion",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konteksten",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Kravspecifikationer",
-		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teknologianalyse"
-	],
 	"file_history":
 	[
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konteksten/konteksten.tex",
@@ -352,71 +321,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "sections/Diskussion/Diskussion2.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4674,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2316,
-								2316
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "sections/Konteksten/konteksten.tex",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3620,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								690,
-								690
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 23.0
@@ -457,7 +361,6 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
 		"height": 42.0
@@ -494,7 +397,6 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},
