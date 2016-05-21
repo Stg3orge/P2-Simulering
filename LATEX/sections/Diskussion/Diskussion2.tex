@@ -11,6 +11,9 @@ Som det første der beskrives i problemformuleringen, har vi at nuværende simul
 Problemformuleringen spørger dernæst hvordan et mesosimuleringsværktøj kan optimeres i forhold til vedligeholdse. I afsnit \ref{AenderingerAfKonteksten}, der omhandlede ændringerne i konteksten, fandt vi at antallet af køretøjer var stigende, og at der skete ændringer i befolkningens valg af transportmidler. I gruppens program er det muligt at indstille antallet af køretøjer der skal simuleres, og programmet kan dermed tilpasses til stigningen af antallet af køretøjer. Det er også muligt for brugeren at opsætte forskellige køretøjs-typer, og indstille hvor mange af køretøjerne skal have de forskellige typer. Det er ikke muligt i programmet at simulere cyklister, hvilket betyder at i tilfælde hvor transportmiddelvalget for en del af befolkningen ændrer sig til cykler, vil man ikke kunne vise dette i programmet, udover at der vil være færre køretøjer på vejnettet. 
 
 \vspace{5mm}
+Programmet tager heller ikke højde for menneskelig adfærd, fodgænger og cyklister. Dette er også centrale dele, som vil påvirke trafikken. Køretøjerne køre deres max hastighed på vejene, hvilket betyder at der ikke er menneskelig adfærd i programmet. Dog burde der være variation af bilisternes adfærd, det er feks. ikke alle bilister som overholder hastighedsgrænsen, eller alle bilister som køre præcis hvad de må køre. 
+
+\vspace{5mm}
 Samlet set er det gruppens mening at programmet er en løsning på problemformuleringen, i det at programmet blev videreudviklet og funktionalitet som cyklister blev implementeret.
 
 \subsection{Succeskriterier}
@@ -18,9 +21,6 @@ Alle succeskriterierne er blevet løst udover kriterien om køretøjernes bevæl
 
 \subsection{Realisme}
 En af programmets formål var at det skulle være realistisk, dog har programmet nogle fejl, som der er beskrevet i afsnit \ref{FejlOgMangler}.  Derudover kan køretøjerne lave uvendiger i alle lyskryds, dette er heller ikke realistisk, da det ikke er lovligt i alle lyskryds. Vejnetværket er opstillet såleves en vej er et spor for en bil, dette gør også programmet urealistisk, da en vej kan indholde flere spor. Køretøjerne kan heller ikke overhale andre køretøjet, hvilket også er betydelig del af programmet. 
-
-\vspace{5mm}
-Programmet tager heller ikke højde for menneskelig adfærd, fodgænger og cyklister. Dette er også centrale dele, som vil påvirke trafikken. Køretøjerne køre deres max hastighed på vejene, hvilket betyder at der ikke er menneskelig adfærd i programmet. Dog burde der være variation af bilisternes adfærd, det er feks. ikke alle bilister som overholder hastighedsgrænsen, eller alle bilister som køre præcis hvad de må køre. Programmet har ikke implementeret deceleration og acceleration, som var en central del af simuleringen, da dette ville gøre programmet realistisk.
 
 \vspace{5mm}
 Dog er programmet realistisk på synspunkter så som, vigepligt, lyskryds, køretøjerne ikke køre ind i hinanden, køretøjerner holder en afstand til de andre køretøjer, hastighedsgrænser osv. Derudover kan brugeren opstille et tidsrum, som er meget trafikeret hvilket gør programmet realistisk, da disse tidsrum også forekommer i traffikken idag. 
