@@ -11,7 +11,7 @@ namespace A319TS
 {
     partial class Viewport
     {
-        private Point GetDrawPosition(Point position)
+        protected Point GetDrawPosition(Point position)
         {
             return new Point(position.X * GridSize, position.Y * GridSize);
         }
@@ -30,7 +30,7 @@ namespace A319TS
                 args.Graphics.DrawLine(Pens.LightGray, 0, i, GridLength * GridSize, i);
             }
         }
-        private void DrawConnections(object sender, PaintEventArgs args)
+        protected virtual void DrawConnections(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
 
@@ -46,7 +46,7 @@ namespace A319TS
                 foreach (Road road in node.Roads)
                     DrawRoad(road, args);
         }
-        private void DrawRoad(Road road, PaintEventArgs args)
+        protected void DrawRoad(Road road, PaintEventArgs args)
         {
             Pen roadPen = new Pen(Color.Black, 2);
             roadPen.CustomEndCap = new AdjustableArrowCap(4, 4);
@@ -60,7 +60,7 @@ namespace A319TS
         }
 
 
-        private void DrawNodes(object sender, PaintEventArgs args)
+        protected void DrawNodes(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
             foreach (Node node in Project.Nodes)
@@ -98,12 +98,12 @@ namespace A319TS
                 }
             }
         }
-        private void DrawNode(Brush fill, Point position, PaintEventArgs args)
+        protected void DrawNode(Brush fill, Point position, PaintEventArgs args)
         {
             args.Graphics.FillEllipse(fill, position.X, position.Y, NodeSize, NodeSize);
             args.Graphics.DrawEllipse(Pens.Black, position.X, position.Y, NodeSize, NodeSize);
         }
-        private void DrawArrow(Node node, bool left, PaintEventArgs args)
+        protected void DrawArrow(Node node, bool left, PaintEventArgs args)
         {
             Point PosNode = GetDrawPosition(node.Position);
             Point offset;
@@ -120,7 +120,7 @@ namespace A319TS
                 args.Graphics.DrawLine(arrow, PosNode, offset);
             }
         }
-        private void DrawEntities(object sender, PaintEventArgs args)
+        protected virtual void DrawEntities(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
             foreach (LightController controller in Project.LightControllers)
@@ -138,7 +138,7 @@ namespace A319TS
                 DrawDestination(dest.Type.Color, position, args);
             }
         }
-        private void DrawLightController(Point position, PaintEventArgs args)
+        protected void DrawLightController(Point position, PaintEventArgs args)
         {
             Rectangle rect = new Rectangle(position.X, position.Y, EntitySize, EntitySize);
             Rectangle pieRect = new Rectangle(position.X + 1, position.Y + 1, EntitySize - 2, EntitySize - 2);
@@ -146,7 +146,7 @@ namespace A319TS
             args.Graphics.DrawRectangle(Pens.Black, rect);
             args.Graphics.FillPie(Brushes.Black, pieRect, 0, 270);
         }
-        private void DrawDestination(Color color, Point position, PaintEventArgs args)
+        protected void DrawDestination(Color color, Point position, PaintEventArgs args)
         {
             Rectangle rect = new Rectangle(position.X, position.Y, EntitySize, EntitySize);
             Rectangle innerRect = new Rectangle(position.X + 2, position.Y + 2, EntitySize - 4, EntitySize - 4);
@@ -154,7 +154,7 @@ namespace A319TS
             args.Graphics.DrawRectangle(Pens.Black, rect);
             args.Graphics.DrawRectangle(Pens.Black, innerRect);
         }
-        private void DrawInformation(object sender, PaintEventArgs args)
+        protected void DrawInformation(object sender, PaintEventArgs args)
         {
             ScaleTranslateSmooth(SmoothingMode.HighQuality, args);
             object obj = GetObjByGridPos();

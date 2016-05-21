@@ -14,23 +14,19 @@ namespace A319TS
     {
         public const int MsInDay = 86400000;
         public const int RecordInterval = 100;
-        private int _primaryProgress = 0;
-        private int _secondaryProgress = 0;
-        private BackgroundWorker PrimaryWorker;
-        private BackgroundWorker SecondaryWorker;
+        public BackgroundWorker PrimaryWorker;
+        public BackgroundWorker SecondaryWorker;
+        public string Filename;
         private Project Project;
         private Project PrimaryProject;
         private Project SecondaryProject;
         private List<Vehicle> _primaryVehicles;
         private List<Vehicle> _secondaryVehicles;
 
-        public event EventHandler<ProgressChangedEventArgs> ProgressChanged;
-        protected virtual void OnProgressChanged() 
+        public event EventHandler<EventArgs> SimulationDone;
+        protected virtual void OnSimulationDone()
         {
-            int primaryProgressPercentage = Convert.ToInt32(((_primaryProgress / MsInDay) * 100) / 2);
-            int secondaryProgressPercentage = Convert.ToInt32(((_secondaryProgress / MsInDay) * 100) / 2);
-            int progress = primaryProgressPercentage + secondaryProgressPercentage;
-            ProgressChanged?.Invoke(this, new ProgressChangedEventArgs(progress, null));
+            SimulationDone?.Invoke(this, new EventArgs());
         }
 
         public Simulation(Project project)
@@ -43,71 +39,69 @@ namespace A319TS
             PrimaryWorker.WorkerReportsProgress = true;
             PrimaryWorker.WorkerSupportsCancellation = true;
             PrimaryWorker.DoWork += Simulate;
-            PrimaryWorker.ProgressChanged += PrimaryProgressReport;
             PrimaryWorker.RunWorkerCompleted += SimulationCompleted;
 
             SecondaryWorker = new BackgroundWorker();
             SecondaryWorker.WorkerReportsProgress = true;
             SecondaryWorker.WorkerSupportsCancellation = true;
             SecondaryWorker.DoWork += Simulate;
-            SecondaryWorker.ProgressChanged += SecondaryProgressReport;
             SecondaryWorker.RunWorkerCompleted += SimulationCompleted;
         }
-        private void PrimaryProgressReport(object sender, ProgressChangedEventArgs args)
-        {
-            _primaryProgress = args.ProgressPercentage;
-            OnProgressChanged();
-        }
-        private void SecondaryProgressReport(object sender, ProgressChangedEventArgs args)
-        {
-            _secondaryProgress = args.ProgressPercentage;
-            OnProgressChanged();
-        }
-        private void Simulate(object sender, DoWorkEventArgs args)
-        {
-            if (args.Argument == null)
-                throw new ArgumentException();
 
-            Tuple<List<Vehicle>, Project> stuff = args.Argument as Tuple<List<Vehicle>, Project>;
-            List<Vehicle> vehicles = stuff.Item1;
-            Project someProject = stuff.Item2;
-            int vehicleCount = vehicles.Count;
-            int onePercent = MsInDay / 100;
-
-            for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
-            {
-                if (i % (onePercent) == 0)
-                {
-                    ((BackgroundWorker)sender).ReportProgress(i);
-                    Console.WriteLine("SIM: " + i + " ");
-                }
-                foreach (LightController controller in someProject.LightControllers)
-                {
-                    controller.Update(someProject.Settings.StepSize);
-                }
-                for (int j = 0; j < vehicleCount; j++)
-                {
-                    vehicles[j].Drive(i);
-                } 
-            }
-
-        }
         public void Run()
         {
             _primaryVehicles = CreateVehicles(Partitions.Primary);
             _secondaryVehicles = CreateVehicles(Partitions.Secondary);
 
-            PrimaryWorker.RunWorkerAsync(new Tuple<List<Vehicle>, Project>(_primaryVehicles, PrimaryProject));
-            SecondaryWorker.RunWorkerAsync(new Tuple<List<Vehicle>, Project>(_secondaryVehicles, SecondaryProject));
+            Tuple<List<Vehicle>, Project, Partitions> primaryArguments;
+            primaryArguments = new Tuple<List<Vehicle>, Project, Partitions>(_primaryVehicles, PrimaryProject, Partitions.Primary);
+            Tuple<List<Vehicle>, Project, Partitions> secondaryArguments;
+            secondaryArguments = new Tuple<List<Vehicle>, Project, Partitions>(_secondaryVehicles, SecondaryProject, Partitions.Secondary);
+
+            PrimaryWorker.RunWorkerAsync(primaryArguments);
+            SecondaryWorker.RunWorkerAsync(secondaryArguments);
         }
         public void Cancel()
         {
             PrimaryWorker.CancelAsync();
             SecondaryWorker.CancelAsync();
         }
+        private void Simulate(object sender, DoWorkEventArgs args)
+        {
+            if (args.Argument == null && args.GetType() != typeof(Tuple<List<Vehicle>, Project, Partitions>))
+                throw new ArgumentException();
+
+            var arguments = args.Argument as Tuple<List<Vehicle>, Project, Partitions>;
+            BackgroundWorker worker = sender as BackgroundWorker;
+            List<Vehicle> vehicles = arguments.Item1;
+            Project project = arguments.Item2;
+            Partitions partition = arguments.Item3;
+            int vehicleCount = vehicles.Count;
+            int onePercent = MsInDay / 100;
+
+            for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
+            {
+                if (worker.CancellationPending)
+                    break;
+                if (i % onePercent == 0)
+                    worker.ReportProgress(i, i / onePercent + "% " + partition);
+                foreach (LightController controller in project.LightControllers)
+                    controller.Update(project.Settings.StepSize);
+                for (int j = 0; j < vehicleCount; j++)
+                    vehicles[j].Drive(i);
+            }
+
+            if (worker.CancellationPending)
+            {
+                worker.ReportProgress(0, partition + " cancelled");
+                args.Cancel = true;
+            }
+            else
+                worker.ReportProgress(MsInDay, partition + " completed");
+        }
         private void SimulationCompleted(object sender, RunWorkerCompletedEventArgs args)
         {
-            if (PrimaryWorker.IsBusy || SecondaryWorker.IsBusy)
+            if (PrimaryWorker.IsBusy || SecondaryWorker.IsBusy || args.Cancelled)
                 return;
             else
             {
@@ -119,10 +113,14 @@ namespace A319TS
                 foreach (Vehicle vehicle in _secondaryVehicles)
                     secondaryData.Add(vehicle.ExtractData());
 
-                FileHandler.SaveSimulation(new SimulationData(Project.Clone() as Project, primaryData, secondaryData));
+                SimulationData data = new SimulationData(Project.Clone() as Project, primaryData, secondaryData);
+                FileHandler.SaveSimulation(data);
+                Filename = data.Filename;
+                OnSimulationDone();
             }
         }
 
+        // CreateVehicles //
         private List<Vehicle> CreateVehicles(Partitions partition)
         {
             int carCount, inbound, outbound, timeSpread, toDestTime, toHomeTime;
@@ -270,7 +268,7 @@ namespace A319TS
             List<int> times = new List<int>();
             for (int i = 0; i < carCount; i++)
                 times.Add(startTime + random.Next(spread * -1, spread));
-
+            
             return times;
         }
     }

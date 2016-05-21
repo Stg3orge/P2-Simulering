@@ -25,9 +25,7 @@ namespace A319TS
             {
                 _speed = value;
                 if (_speed == 0)
-                    foreach (Node node in _nodesIncommingAt)
-                        node.IncomingVehicles.Remove(this);
-                _nodesIncommingAt.Clear();
+                    RemoveAllIncoming(_currentPath);
             }
         }
         
@@ -65,7 +63,6 @@ namespace A319TS
         }
 
         private Node _currentNode;
-        private List<Node> _nodesIncommingAt;
 
         private int _toDestTime;
         private bool _toDestStarted;
@@ -98,7 +95,6 @@ namespace A319TS
             _toDestPath = Pathfinder.FindPath(Home, end);
             _toHomePath = Pathfinder.FindPath(end, Home);
 
-            _nodesIncommingAt = new List<Node>();
             Active = false;
             Speed = 0;
         }
@@ -197,16 +193,16 @@ namespace A319TS
             {
                 return 0;
             }
-            else if (CurrentNode != null && CurrentNode.Type == NodeTypes.Yield
-                     && incomingVehiclesCount > 0 && 
-                     !(incomingVehiclesCount == 1 && _currentRoad.To.IncomingVehicles.Contains(this))) // If at yield and cars are passing
+            else if (CurrentNode != null && CurrentNode.Type == NodeTypes.Yield && incomingVehiclesCount > 0)
             {
                 return 0;
             }
-
             else if (vehicleInfront != null)
             {
-                return vehicleInfront.Speed;
+                if (Type.MaxSpeed > vehicleInfront.Speed)
+                    return vehicleInfront.Speed;
+                else
+                    return Type.MaxSpeed;
             }
             else
             {
@@ -330,12 +326,6 @@ namespace A319TS
         private void GoToNextRoad()
         {
             _currentRoad.Vehicles.Remove(this);
-            if (_currentRoad.To.IncomingVehicles.Contains(this))
-            {
-                _currentRoad.To.IncomingVehicles.Remove(this);
-                _nodesIncommingAt.Remove(_currentRoad.To);
-            }
-
             _currentPathIndex++;
             _currentRoad.Vehicles.Add(this);
             Position = new PointD(_currentRoad.From.Position);
@@ -343,27 +333,38 @@ namespace A319TS
         }
         private void ShowAsIncoming()
         {
+            RemoveAllIncoming(_currentPath);
             double distance = MathExtension.Distance(Position, new PointD(_currentRoad.To.Position));
             if (distance < _settings.IncommingRange)
-                SetIncoming(_currentRoad.To);
-
-            int currentPathCount = _currentPath.Count;
-
-            for (int i = _currentPathIndex + 1; i < currentPathCount; i++)
             {
-                distance += _currentPath[i].Length;
-                if (distance < _settings.IncommingRange)
-                    SetIncoming(_currentPath[i].To);
-                else break;
+                SetIncoming(_currentRoad.To);
+                for (int i = _currentPathIndex + 1; i < _currentPath.Count; i++)
+                {
+                    if (_currentPath[i].To.Type == NodeTypes.Yield)
+                        break;
+                    distance += _currentPath[i].Length;
+                    if (distance < _settings.IncommingRange)
+                        SetIncoming(_currentPath[i].To);
+                    else break;
+                }
+            }
+        }
+        private void RemoveAllIncoming(List<Road> path)
+        {
+            if (path == null) return;
+
+            foreach (Road road in path)
+            {
+                if (road.From.IncomingVehicles.Contains(this))
+                    road.From.IncomingVehicles.Remove(this);
+                if (road.To.IncomingVehicles.Contains(this))
+                    road.To.IncomingVehicles.Remove(this);
             }
         }
         private void SetIncoming(Node node)
         {
             if (!node.IncomingVehicles.Contains(this))
-            {
                 node.IncomingVehicles.Add(this);
-                _nodesIncommingAt.Add(node);
-            }
         }
 
         ////////// EXTRACT DATA //////////
@@ -371,20 +372,5 @@ namespace A319TS
         {
             return new VehicleData(Type, ToDestRecord, ToHomeRecord, _toDestTime, _toHomeTime);
         }
-
-
-
-
-
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-
-
-
-
     }
 }
