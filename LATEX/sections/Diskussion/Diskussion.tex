@@ -1,69 +1,26 @@
-\chapter{Diskussion}\label{Diskussion}
-\externaldocument{Pathfinder}
-
-
-Det udviklede program er udviklet med den tilstræbelse, at få opfyldt et eller flere af de opstillede succeskritierer inde for hvad gruppen har været i stand til givet de faglige og tidsmæssige resourcer der er blevet sat af til projektet. Dette afsnit belyser på de tanker gruppen har gjort sig i forhold til succeskritierene post-løsningsudvikling.
-
-\subsection{x.xx Succeskriterier}
-
-\textbf{1. Brugeren skal være i stand til at opsætte et vejnet, der indeholder objekter som trafiklys, huse, parkeringpladser og destinationer.}
-
-Når programmet åbnes bliver brugeren præsenteret med et grid hvor på knuder og veje kan indtegnes samt andre objekter. Dette gør brugeren i stand til at opsætte deres eget vejnet, både simpelt eller avanceret efter deres eget behov. Det er muligt at forbinde veje til forskellige knuder og give disse veje og knuder forskellige egenskaber. Disse egenskaber kan indeholde, huse, parkeringspladser, lyskryds og vigepligt. Derudover kan der indsættes destinations objekter på gitteret som kan laves til at modtage en hvis procentsats af alle køretøj objekter der opstår igennem simuleringen. køretøjerne kan dog ikke køre direkte til deres destinationer, men dermod køre køretøjet hen til nærmeste parkeringsplads, ved destinationen. Lightcontrollere kan tilkobles knuder til at simulerer et trafiklys opførsel.
+\chapter{Diskussion}
+Dette afsnit gennemgår de tanker gruppen har gjort sig i forhold til forskellige synspunkter af rapporten. Problemformuleringen er blevet løst ved hjælp af et software værktøj i form af meso simulering, i dette afsnit vil der diskuteres om denne problemformulering er blevet løst. 
 
 \vspace{5mm}
 
-\textbf{2. Det skal være muligt for brugeren at kunne gemme deres arbejde, lukke programmet og forsætte deres arbejde næste de åbner programmet.}
-
-Når brugeren åbner programmet, kan de navigerer til dropdown menuen file hvor de kan vælge at gemme deres nuværende fil, åbne en fil, samt at oprette en ny fil. Dette gør brugeren i stand til at gemme deres arbejde og åbne det igen på et senere tidspunkt eller sende til en anden bruger med programmet.
-
-\vspace{5mm}
-
-\textbf{3. Simuleringen skal kunne sammenligne trafikafvikling på vejnettet med og uden de eksklusive veje. Køretøjerne i de to simuleringer skal være de samme, så resultaet ikke er tilfældigt.}
-
-Brugeren er i stand til at sætte primære og sekundære veje til at måle effektiviteten af trafikafviklingen. Derudover er det muligt at afsætte en hvis procent del af billerne til at ankomme til de forskellige indsatte destinationer, hvilket betyder at der altid vil ankomme en lige stor del af bilerne til disse destinationer så resultatet er ikke tilfældigt. De to simuleringener anvendes således brugeren kan sammenligne to vejnetværker, dog hvor den ene har opsat enten flere veje eller alternative ruter, for at se om det kan optimere trafikken, hvis en alternativ rute blev indsat i vejnetttet. På denne måde bruges de to simuleringer til optimering af et vejnetværk.
+\section{Diskutering af problemformuleringen}
+Der er tidligere beskrevet i problemformuleringen at \textit{Nuværende simuleringsværktøjer til simulering af trafik er enten for svære at anvende eller mangler fleksibilitet}. Programmet som gruppen har lavet har løst dette ved at brugeren ikke selv skal programmere sit vejnetværk ligesom i VisSim, men brugeren skal indsætte veje, huse, destinationer osv. Dog skal brugeren også bestemme enkle variabler i form af køretøjets hastighed, procentvisdeling af destinationer osv. I modsætning til VisSim, så vil vores værktøj være mere overskueligt at anvende, dog er vores programet ikke er lige så præcis som VisSim, fordi værktøjet ikke anvender acceleration og deceleration, dette var en central del af programmet og er ikke blevet implementeret. Fleksibiliteten vil dog menes at være nogen lunde det samme, fordi brugeren selv skal opstille sit vejnetværk i begge programmer. Derudover er vores program mere fleksibelt end Altrans, fordi man ikke kan ændre på vejnetværket i Altrans. Altrans kan heller ikke visualisere simuleringen. Derimod kan Altrans vise en række data af simuleringen, som vores program ikke kan. Dette medføre at vores program er mere fleksibelt end Altrans, men brugeren har ikke noget data at sammenligne med.
 
 \vspace{5mm}
 
-\textbf{4. Køretøjerne skal kunne finde den hurtigste rute til den parkeringsplads der ligger nærmest destinationen. Denne udregning skal tage højde for hastighedsgrænserne på vejene.}
-
-Der er blevet implementeret en klasse som står for at finde den hurtigste rute fra et startpunkt til et slutpunkt, se \ref{Pathfinder}. Den tager også højde for hastighedsgrænserne der er på de forskellige veje. 
+Problemformuleringen nævner også optimering i forhold til vedligeholdelse, trods ændringerne i konteksten se afsnit REFHER. Dette er blevet løst ved at brugeren selv kan ændre konteksten, ved at indtaste forskellige variabler, til diverse funktioner i programmet, så som transportmiddelvalg. Her kan man ændre antallet af køretøjet, hastigher osv. I modsætning til Altrans, hvor Altrans ikke kan ændre konteksten, hvilket betyder at værketøjet ikke kan vedligeholdes i forhold til konteksten.
 
 \vspace{5mm}
 
-\textbf{5. Køretøjernes bevælgse skal gøres realistisk med hensyn til acceleration og deceleration.}
-
-I vores program er der taget hensyn til at der er en bil kørende foran, og så sænker den bagkørende bilist sin fart, men den rigtige deceleration er ikke taget i brug her. Da vi skulle prioritere succeskriterier, så valgte vi at sætte fokus på nogle af de andre kriteriere som er essentielt for at få programmet til at virke. Det betød bilernes acceleration og deceleration er ikke blevet implementeret, men vil så være en af punkterne som er med i videreudvikling af programmet. Dette betyder at simuleringen bliver mindre realistisk, da bilerne ikke vil opføre sig optimalt.
-
-\vspace{5mm}
-
-\textbf{6.}
-
-\subsection{x.xx Valg af kortesterute algoritme.}
-I programmet anvender vi et A* algoritme til at udregne den korteste vej for bilerne til at ankomme til deres destination men efter udvikling af programmet har vi overvejet hvorvidt dette var den mest optimale løsning. I teori afsnittet beskriver vi Dijkstra og A* kortesterute algoritmerne og sammenligner de to samt begrunder valget af A*. Vi har dog kommet på den ide at vores valg har været fejlagtigt og at Dijkstra kunne virker bedre i vores program af følgende grunde. A* er ikke særligt optimalt at anvende da heuristikken bliver meget optimistk ved høje maksimale hastighedsgrænser. Derimod kunne Dijkstra vise sig at være bedre hvis den kunne gøres i stand til at gemme alle de ruter der var fundet når algoritmen køre, således kunne man komme ud for at bruge mindre tid på at finde ruter i andre instancer hvis denne rute allerede er blevet fundet en gang før. 
-
-\subsection{x.xx Realistisk simulering}
-Vores ide om programmet var at det skulle være så realistisk som muligt, men vores program har nogle fejl, som der er blevet beskrevet \ref{FejlOgMangler}. Såsom at alle bilerne kan lave en uvending i alle lyskryds, hvis det forminsker rutens afstand til destination. Uvendinger er ikke lovligt i alle lyskryds, hvilket får vores simulering til at være mindre realistisk. Lyskrydsene har ikke gul farve, hvilket ellers signalere at lyskrydset er ved at skifte farve. Det er en faktor som påvirker menneskerne i virkeligheden. Lyskryds i vores program er tidsbestemt, hvilket ikke er helt realistisk, da i virkeligheden er der forskellige faktorer som bestemmer om lyset skal skifte. Påvirkningsfaktorerne kan være at lyskrydset har sensore som registere at den skal skifte lys, eller en fodgænger har trykket på knappen for at komme over vejen.
+\section{Realitisk simulering}
+En af programmets formål var at det skulle være realistisk, dog har programmet nogle fejl, som der er beskrevet i afsnit \ref{FejlOgMangler}. Programmet implementere ikke deceleration og acceleration, som var en central del af simuleringen, da dette ville gøre programmet realistisk. Derudover kan køretøjerne lave uvendiger i alle lyskryds, dette er heller ikke realistisk, da det ikke er livligt i alle lyskryds. Vejnetværket er opstillet såleves en vej er et spor for en bil, dette gør også programmet urealistisk, da en vej kan indholde flere spor. Køretøjerne kan heller ikke overhale andre køretøjet, hvilket også er betydelig del af programmet. 
 
 \vspace{5mm}
 
-Der er mangel på menneskelig adfærd, da bilerne kører deres max hastighed på vejene, hvis det er muligt. Hvis der var variation i hastighederne i vores program, da mennesker kører på deres egen måde. Bilerne har en bestemt destination, som de kører til og fra. De har ikke flere forskellige destinationer, hvilket gør det mindre realistisk. Brugeren sætter bilerne til at køre til og fra en distination indenfor en tidsrum, men simuleringen tager ikke højde for at folk de kører alle sammen på arbejde/skole om morgen, og så kl. 12 kører der ikke nær så mange. Så simuleringen fordeler bilerne lige ud over den valgte tidsrum. 
+Programmet tager heller ikke højde for menneskelig adfærd, fodgænger og cyklister. Dette er også centrale dele, som vil påvirke trafikken. Køretøjerne køre deres max hastighed på vejene, hvilket betyder at der ikke er menneskelig adfærd i programmet. Dog burde der være variation af bilisternes adfærd, det er feks. ikke alle bilister som overholder hastighedsgrænsen, eller alle bilister som køre præcis hvad de må køre. 
 
 \vspace{5mm}
 
-Når vores program kører i simulationen, så bilerne som der er i simulationen kender de ikke noget til de sideliggende veje, ergo de kender ikke noget til de modkørende. Det er grunden til at bilerne ikke har muligheden for at overhale hinanden. Vejene er heller ikke sammensat, så der er plads til at kunne overhale. Så hvis der er en bil kørende bag en der kører langsommere, så vil han sætte farten ned og blive bag ved bilen. Bilerne har heller ikke muligheden for at køre over andre veje, hvis den gjorde det, så ville den dreje og køre langs den vej den ellers ville over. Der er heller ikke taget højde for forgænger eller cyklister, hvilket også går ind og påvirker trafikken. 
-
-\subsection{x.xx Pathfinder problem}
-problemet er at vores program benytter sig at A*, hvor vi også har muligheden for forskellige hastigheder på vejene, hvilket går ind og laver problemer for pathfinderen. Så vores program går hen mod at minde meget om Dijkstras, da der kommer flere beregninger som algoritmen benytter sig af.
+Dog er programmet realistisk på synspunkter så som, vigepligt, lyskryds, køretøjerne ikke køre ind i hinanden, køretøjerner holder en afstand til de andre køretøjer, hastighedsgrænser osv. Derudover kan brugeren opstille et tidsrum, som er meget trafikeret hviklet gør programmet realistisk, da disse tidsrum også forekommer i traffikken idag. 
 
 
-\subsection{x.xx protobuff}
-
-
-
-%Realistisk simulering?
-%Mangler diskussion om:
-%grafteori
-%valg af A* (djstra bedre?)
-%fejl angående i fathfinder (fejl når man dividere med max speed)
-%Benytte protobuff eller ligende til optimering
-%Der skal være noget om indlæsning af de der simulations filer, det tager for lang tid at indlæse dem, hvis de er på 300mb eller derover.
