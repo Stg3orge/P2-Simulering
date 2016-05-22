@@ -91,7 +91,49 @@ Programmet forventets at blive opdelt i 6 hovedområder som kan ses på figur \r
 \end{figure}
 
 \vspace{5mm}
+
 På figur \ref{fig:ProgramOversigt} ses hvordan vi forventer de 6 beskrevet dele arbejder sammen, for at opfylde vores krav til programet.
+
+\vspace{5mm}
+
+\textbf{Programmets flow} \\
+Main() vil skulle kalde GUI MAIN når programmet states, da det er brugerens interface kerne, og vil derfor stå for alt input fra brugeren. GUI MAIN forbinder derfor også de resterne "core classes" da simulations delen ikke vil kunne køres uden input fra brugeren, da den f.eks skal kende til "Simulation Settings" som kommer fra Filehandler, som er fobundet med GUI MAIN. \\
+
+Det samme gælder for ToolController som ikke vil kunne vælge/fremstille elementer uden brugeren fortæller hvliket elemnter det er, og samme princip ses ved ViewPort, da den skal have input fra ToolController omkring hvlike elementer som skal vise, samt ved indlæsning af filer, vil ViewPort skulle have data fra FIlehander, som igen skal køres igennem GUI MAIN.
+
+Herved opnår vi en god nedkapslig af programmet.
+
+\vspace{5mm}
+
+
+GUI MAIN skal som sagt intalisere de andre "core classes" ved opstart af programmet, derudover skal GUI MAIN 
+
+
+
+
+\textbf{Programmets Funktioner} \\
+
+GUI MAIN
+ - bruger input
+ 
+ 
+ToolController
+ - 
+ 
+ 
+ViewPort
+ - Visning af simulation, samt projekt
+ - Visning af valge elemter fra toolcontroler, f.eks veje, noder, osv. 
+ 
+ 
+ 
+Simulation
+ -  
+
+
+
+
+
 
 \vspace{5mm}
 
