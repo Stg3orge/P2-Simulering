@@ -42,6 +42,8 @@ namespace A319TS
         private static void InitLists()
         {
             Vertices.ForEach(v => v.Previous = null);
+            Vertices.ForEach(v => v.Cost = double.MaxValue);
+            Vertices.ForEach(v => v.Estimate = double.MaxValue);
             Closed = new List<Vertex>();
             Open = new List<Vertex>();
             Start = null;
@@ -69,7 +71,7 @@ namespace A319TS
             Open.Add(Start);
 
             Vertex current;
-            while (Open.LongCount() > 0)
+            while (Open.Count > 0)
             {
                 current = Open.Min();
                 if (current == End)
@@ -99,10 +101,15 @@ namespace A319TS
                 Vertex neighbor = edge.VertexTo;
                 if (!Open.Contains(neighbor) && !Closed.Contains(neighbor)) // Skip evaluated
                 {
-                    neighbor.CalculateCostEstimate(current, edge, End, MaxSpeed); 
                     Open.Add(neighbor);
-                    if (neighbor.Cost <= current.Cost + edge.Cost) 
+                    double PossibleCost = current.Cost + edge.Cost;
+                    if (neighbor.Cost > PossibleCost)
+                    {
+                        neighbor.Cost = PossibleCost;
                         neighbor.Previous = current;
+                        double heuristic = MathExtension.Distance(neighbor.Position, End.Position) / MaxSpeed;
+                        neighbor.Estimate = neighbor.Cost + heuristic;
+                    }
                 }
             }
         }

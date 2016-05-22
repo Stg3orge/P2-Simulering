@@ -14,7 +14,7 @@ public static List<Road> FindPath(Node start, Node end)
   Open.Add(Start);
 
   Vertex current;
-  while (Open.LongCount() > 0)
+  while (Open.Count > 0)
   {
     current = Open.Min();
     if (current == End)
@@ -27,7 +27,7 @@ public static List<Road> FindPath(Node start, Node end)
       EstimateNeighbors(current);
     }
   }
-  throw new Exception("There isn't any route");
+  throw new Exception("No path found");
 }
 \end{lstlisting}
 \caption{FindPath metoden}\label{FindPathCode}
@@ -45,10 +45,17 @@ private static void EstimateNeighbors(Vertex current)
     if (!Open.Contains(neighbor) && !Closed.Contains(neighbor)) 
     // Skip evaluated
     {
-      neighbor.CalculateEstimate(current, edge, End, MaxSpeed); 
       Open.Add(neighbor);
-      if (neighbor.Cost <= current.Cost + edge.Cost) 
-      neighbor.Previous = current;
+      double PossibleCost = current.Cost + edge.Cost;
+      if (neighbor.Cost > PossibleCost)
+      {
+        neighbor.Cost = PossibleCost;
+        neighbor.Previous = current;
+        double heuristic = 
+          MathExtension.Distance(neighbor.Position, End.Position) 
+          / MaxSpeed;
+        neighbor.Estimate = neighbor.Cost + heuristic;
+      }
     }
   }
 }
@@ -56,38 +63,22 @@ private static void EstimateNeighbors(Vertex current)
 \caption{EstimateNeighbors metoden}\label{EstimateNeighborsCode}
 \end{figure}
 
-I \texttt{EstimateNeighbors} metoden, der kan ses på figur \ref{EstimateNeighborsCode}, kigger vi på naboerne, til den \texttt{Vertex} der bliver givet gennem parameteret. Hvis naboen allerede er evalueret, skal vi ikke gøre det igen, ellers bliver de evalueret gennem metoden \texttt{CalculateCostEstimate}, der ligger i selve \texttt{Vertex} klassen. Sidst tjekkes der om naboens \texttt{Cost} er bedre end den nuværende, hvor vi så vil sætte dens \texttt{Previous} reference til at være den nuværende \texttt{Vertex}, så vi senere kan finde vejen tilbage igen.
-
-\begin{figure}[H]
-\begin{lstlisting}
-public void CalculateCostEstimate(Vertex previous, Edge edge, 
-                                  Vertex end, int maxSpeed)
-{
-   Cost = previous.Cost + edge.Cost;
-   double heuristic = MathExtension.Distance(this.Position, 
-                                  end.Position) / maxSpeed;
-   Estimate = Cost + heuristic;
-}
-\end{lstlisting}
-\caption{CalculateCostEstimate metoden}\label{CalculateCostEstimateCode}
-\end{figure}
-
-\texttt{CalculateCostEstimate} metoden, der er vist på figur \ref{CalculateCostEstimateCode}, udregner hvad kosten er fra start til dette punkt, og estimere med heuristiken hvad den mindst mulige kost kunne være fra her til slut punktet.
+I \texttt{EstimateNeighbors} metoden, der kan ses på figur \ref{EstimateNeighborsCode}, kigger vi på naboerne, til den \texttt{Vertex} der bliver givet gennem parameteret. For hver nabo tjekkes der om naboen allerede er evalueret, hvis den er det bliver den sprunget over, ellers bliver den evalueret. Derefter tjekkes der om naboens mulige \texttt{Cost} fra den nuværende node, er bedre end den \texttt{Cost} der allerede er fundet. Hvis \texttt{PossibleCost} er bedre, bliver nabo knudens \texttt{Cost} og \texttt{Estimate} overskrevet, og \texttt{Previous} sættes til at være den nuværende \texttt{Node}, så ruten senere kan blive fundet igen.
 
 \begin{figure}[H]
 \begin{lstlisting}
 private static List<Road> TracePath()
 {
-   List<Road> roads = new List<Road>();
-   Vertex current = End;
-   while (current.Previous != null)              
-   { 
-      roads.Add(current.Previous.Edges.Find(edge => 
-                edge.VertexTo == current).Source);
-      current = current.Previous;
-   }
-   roads.Reverse();
-   return roads;
+  List<Road> roads = new List<Road>();
+  Vertex current = End;
+  while (current.Previous != null)              
+  { 
+    roads.Add(current.Previous.Edges.Find(edge => 
+              edge.VertexTo == current).Source);
+    current = current.Previous;
+  }
+  roads.Reverse();
+  return roads;
 }
 \end{lstlisting}
 \caption{TracePath metoden}\label{TracePathCode}

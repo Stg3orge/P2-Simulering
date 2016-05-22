@@ -1,14 +1,14 @@
 \chapter{Simulering}\label{Simulering}
 
-Simuleringsmodellering og analyse er en del af processen, når man skal programmere et matematisk model af et fysisk system. Et system er defineret som en samling af dele/komponenter som modtager en form for input og så giver output. Dette output kan så bruges til forskellige formål. Normalt vil ved hjælp af dataene til at kunne analysere nogle forskellige problemer i virkeligheden for at kunne foretage sig vigtige valg inden for drift- eller politiske ressource beslutninger. Man kan også benytte simuleringsmodel til at træne folk i at tage bedre beslutninger eller forbedre ens egen ydeevne inden for et område. \cite[s. 16-20]{SimulationHandbook}
+Simuleringsmodellering og analyse er en del af processen, når man skal programmere et matematisk model af et fysisk system. Et system er defineret som en samling af dele/komponenter som modtager en form for input og så giver output. Dette output kan så bruges til forskellige formål. Man kan ved hjælp af data analysere de forskellige problemer i virkeligheden for at kunne foretage sig vigtige valg inden for drift- eller politiske ressource beslutninger. Man kan også benytte simulatorer til at træne folk i at tage bedre beslutninger eller forbedre ens egen ydeevne inden for et område. \cite[s. 16-20]{SimulationHandbook}
 
 \vspace{5mm}
 
-En anden form for simulering er computer simulation. Simulation er også baseret på eksisterende eller foreslået system. I modsætning til simulationsmodel, hvor valgene er lavet på forhånd, så ved computer simulation bliver valgene genereret mens simulationen er i gang. Meningen med computer simulation er ikke at lave en beslutning, men at udsætte nogle personer for et system og træne deres evne til at lave gode beslutninger. Disse simulatorer er ofte kaldt træningssimulator. Meningen bag modellering og analyse af forskellige typer af systemer er:
+En anden form for simulering er computer simulation. Simulation er også baseret på eksisterende eller foreslået system. I modsætning til simulationsmodeller, hvor valgene er lavet på forhånd, bliver computer simulation valgene genereret mens simulationen er i gang. Meningen med computer simulation er ikke at lave en beslutning, men at udsætte nogle personer for et system og træne deres evne til at lave gode beslutninger. Disse simulatorer er ofte kaldt træningssimulator. Meningen bag modellering og analyse af forskellige typer af systemer er:
 
 \begin{itemize}
 \item Få indblik i hvordan systemet fungerer
-\item Udvikling af drift og ressource beslutninger til at forbedre systemet ydeevne
+\item Udvikling af drift og ressource beslutninger til at forbedre systemets ydeevne
 \item Afprøvning af nye koncepter eller systemer før implementering
 \item Opnå information uden at påvirke det rigtige system
 \end{itemize}
@@ -17,23 +17,25 @@ En anden form for simulering er computer simulation. Simulation er også baseret
 
 Fordelene ved at benytte simulering kan være:
 \begin{itemize}
-\item Hurtig resultater i simulation fremfor i virkeligheden
-\item Det er blevet lettere at analyse et system
+\item Hurtig resultater fremfor i virkeligheden
+\item Det er lettere at analysere et system
 \item Nemt at demonstrere hvordan modellen fungere
 \end{itemize}
 
-\textbf{Hurtigere resultater i simulation fremfor i virkeligheden}
+\textbf{Hurtigere resultater fremfor i virkeligheden}
 Igennem simulering af et system kan man bestemme nogle variabler, det kan være f.eks. tiden som simulationen skal vare over. Dette betyder at man hurtigere kan få resultater fra simuleringen, og så kan man lave flere gentagelser for at kunne komme frem til den bedste metode. Da før i tiden, var det ikke muligt at lave analyse på nogle systemer som varede over langt tid.
 
 \vspace{5mm}
 
-\textbf{Det er blevet lettere at analyse et system}
-Før man kunne benytte computeren til at lave en simulation over et system, så krævede det mange ressourcer at kunne analyser et problem. Hvis man skulle have en meget kompleks system analyseret, så skulle man kontakte matematikkere eller forsknings analytikere. Nu hvor man kan lave en simulering over computeren, så er der flere personer der kan få analyseret noget, da kravene er blevet reduceret.
+\textbf{Det er lettere at analysere et system}
+Før i tiden, hvor man ikke benyttede computeren til at lave en simulation over et system, så krævede det mange ressourcer at kunne analyser et problem. Hvis man skulle have en meget kompleks system analyseret, så skulle man kontakte matematikkere eller forsknings analytikere. Nu hvor man kan lave en simulering over computeren, så er der flere personer der kan få analyseret noget, da kravene er blevet reduceret.
 
 \vspace{5mm}
 
 \textbf{Nemt at demonstrere hvordan modellen fungere}
- De fleste simuleringssoftware har den egenskab, at kunne animere model grafisk. Amimationen er både brugbart for at kunne debugge modellen for at finde fejl, men også for at kunne demonstrere hvordan modellen fungerer. Amimationen kan også hjælpe med at se hvordan systemet opfører sig i løbet af processen. Uden muligheden for amimation, så ville simulation analyse havde været begrænset til mindre effektive tekstuelle og tal baseret præsentationer og dokumentation.
+ De fleste simuleringssoftware har den egenskab, at kunne animere model grafisk. Amimationen er både brugbart for at kunne debugge modellen for at finde fejl, men også for at kunne demonstrere hvordan modellen fungerer. Amimationen kan også hjælpe med at se hvordan systemet opfører sig i løbet af processen. Uden muligheden for amimation, så ville simuleringsanalyse være sværere at forklare uden at bruge visuelle hjælpemidler.
+
+
 
 \vspace{5mm}
 Ulemperne ved at benytte simulering kan være:
@@ -46,7 +48,7 @@ Ulemperne ved at benytte simulering kan være:
 \vspace{5mm}
 
 \textbf{Simulering kan ikke give et præcist resultat, hvis input data ikke er præcise}
-Uanset hvor god modellen er, så er det ikke muligt at forvente et præcis svar, hvis man benytter upræcise svar. Man kan omskrive det til ”Garbage in, garbage out”. Desværre er opsamling af data set som den sværeste del i processen i at lave en simulering. Nogle som står bag simulering af et system har accepteret at nogle gange er man nødt til at bruge historisk data på trods af tvivlsom kvalitet for at spare dataindsamling tid. Hvilket kan føre hen til en mislykket simuleringsprojekt.
+Uanset hvor god modellen er, så er det ikke muligt at forvente et præcis svar, hvis man benytter upræcise svar. Man kan omskrive det til ”Garbage in, garbage out”. Desværre er opsamling af data set som den sværeste del i processen i at lave en simulering. Nogle som står bag simulering af et system har accepteret at nogle gange er man nødt til at bruge historisk data på trods af tvivlsom kvalitet for at spare dataindsamling tid. Hvilket kan føre hen til en mislykket simuleringsprojekt \cite[s. 16-20]{SimulationHandbook}.
 
 \vspace{5mm}
 
