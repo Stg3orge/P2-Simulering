@@ -112,20 +112,19 @@ namespace A319TS
         }
         private Node FindParking(Project project)
         {
-            int closestIndex = 0;
+            List<Node> parkingNodes = project.Nodes.FindAll(n => n.Type == NodeTypes.Parking);
             double closestDistance = double.MaxValue;
-            int nodesCount = project.Nodes.Count;
-
-            for (int i = 0; i < nodesCount; i++)
+            int closestIndex = 0;
+            for (int i = 0; i < parkingNodes.Count; i++)
             {
-                double distance = MathExtension.Distance(project.Nodes[i].Position, Destination.Position);
+                double distance = MathExtension.Distance(parkingNodes[i].Position, Destination.Position);
                 if (distance < closestDistance)
                 {
                     closestIndex = i;
                     closestDistance = distance;
                 }
             }
-            return project.Nodes[closestIndex];
+            return parkingNodes[closestIndex];
         }
 
         ////////// DRIVE //////////
