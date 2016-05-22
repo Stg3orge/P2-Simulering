@@ -6,3 +6,10 @@ C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.Res
 C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csproj.GenerateResource.Cache
 C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.exe
 C:\Users\fiske\Documents\GitHub\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.pdb
+C:\Programs\Git\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.exe.config
+C:\Programs\Git\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.exe
+C:\Programs\Git\P2-Simulering\A319TS\A319TS\bin\Debug\A319TS.pdb
+C:\Programs\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.Resources.resources
+C:\Programs\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csproj.GenerateResource.Cache
+C:\Programs\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.exe
+C:\Programs\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.pdb
