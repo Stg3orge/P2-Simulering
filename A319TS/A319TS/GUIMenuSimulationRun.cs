@@ -29,49 +29,7 @@ namespace A319TS
             Simulation.PrimaryWorker.ProgressChanged += PrimaryProgressChanged;
             Simulation.SecondaryWorker.ProgressChanged += SecondaryProgressChanged;
             Simulation.SimulationDone += OnSimulationDone;
-        }
-
-        private void Setup()
-        {
-            Text = "Run";
-            Size = new Size(500, 300);
-            MinimumSize = new Size(500, 300);
-            MaximumSize = new Size(500, 300);
-            ShowIcon = false;
-            MinimizeBox = false;
-            MaximizeBox = false;
-            SizeGripStyle = SizeGripStyle.Hide;
-            StartPosition = FormStartPosition.CenterParent;
-            
-            Information.Location = new Point(12, 12);
-            Information.Size = new Size(460, 179);
-            Information.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0); // ((byte)(0)));
-            Information.BackColor = SystemColors.WindowText;
-            Information.ForeColor = SystemColors.ControlDark;
-            Information.ReadOnly = true;
-            Controls.Add(Information);
-            
-            ProgressBar.Location = new Point(12, 197);
-            ProgressBar.Size = new Size(460, 23);
-            ProgressBar.Maximum = 86400000;
-            Controls.Add(ProgressBar);
-            
-            ProcessLabel.Location = new Point(12, 223);
-            ProcessLabel.Size = new Size(203, 13);
-            Controls.Add(ProcessLabel);
-
-            Start.Text = "Start";
-            Start.Location = new Point(316, 226);
-            Start.Size = new Size(75, 23);
-            Start.Click += StartClick;
-            Controls.Add(Start);
-
-            Cancel.Text = "Cancel";
-            Cancel.Location = new Point(397, 226);
-            Cancel.Size = new Size(75, 23);
-            Cancel.Enabled = false;
-            Cancel.Click += CancelClick;
-            Controls.Add(Cancel);
+            FormClosing += OnFormClosing;
         }
 
         private void StartClick(object sender, EventArgs args)
@@ -83,7 +41,7 @@ namespace A319TS
                 InformationWriteLine("Simulating...");
                 Simulation.Run();
             }
-            catch (ArgumentException e)
+            catch (Exception e)
             {
                 InformationWriteLine("ERROR: " + e.Message);
                 ProcessLabel.Text = "Failure";
@@ -114,19 +72,63 @@ namespace A319TS
         }
         private void OnSimulationDone(object sender, EventArgs args)
         {
-            if (Simulation.Filename != null)
-            {
-                ProgressBar.Value = Simulation.MsInDay;
-                ProcessLabel.Text = "Success";
-                InformationWriteLine("Simulation saved as: " + Simulation.Filename);
-            }
-            else
-            {
-                ProgressBar.Value = 0;
-                ProcessLabel.Text = "Cancelled";
-            }
+            ProgressBar.Value = Simulation.MsInDay;
+            ProcessLabel.Text = "Success";
+            InformationWriteLine("Simulation saved as: " + Simulation.Filename);
             Simulation = null;
             Cancel.Enabled = false;
+        }
+        private void OnFormClosing(object sender, EventArgs args)
+        {
+            if (Cancel.Enabled)
+            {
+                Simulation.Cancel();
+                Simulation = null;
+                Cancel.Enabled = false;
+            }
+        }
+
+        private void Setup()
+        {
+            Text = "Run";
+            Size = new Size(500, 300);
+            MinimumSize = new Size(500, 300);
+            MaximumSize = new Size(500, 300);
+            ShowIcon = false;
+            MinimizeBox = false;
+            MaximizeBox = false;
+            SizeGripStyle = SizeGripStyle.Hide;
+            StartPosition = FormStartPosition.CenterParent;
+
+            Information.Location = new Point(12, 12);
+            Information.Size = new Size(460, 179);
+            Information.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0); // ((byte)(0)));
+            Information.BackColor = SystemColors.WindowText;
+            Information.ForeColor = SystemColors.ControlDark;
+            Information.ReadOnly = true;
+            Controls.Add(Information);
+
+            ProgressBar.Location = new Point(12, 197);
+            ProgressBar.Size = new Size(460, 23);
+            ProgressBar.Maximum = 86400000;
+            Controls.Add(ProgressBar);
+
+            ProcessLabel.Location = new Point(12, 223);
+            ProcessLabel.Size = new Size(203, 13);
+            Controls.Add(ProcessLabel);
+
+            Start.Text = "Start";
+            Start.Location = new Point(316, 226);
+            Start.Size = new Size(75, 23);
+            Start.Click += StartClick;
+            Controls.Add(Start);
+
+            Cancel.Text = "Cancel";
+            Cancel.Location = new Point(397, 226);
+            Cancel.Size = new Size(75, 23);
+            Cancel.Enabled = false;
+            Cancel.Click += CancelClick;
+            Controls.Add(Cancel);
         }
     }
 }
