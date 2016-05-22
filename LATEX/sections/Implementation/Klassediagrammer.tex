@@ -1,6 +1,6 @@
 \section{Klassediagrammer}\label{Klassediagrammer}
 \externaldocument{appendix}
-For at få et overblik over program delene der skulle til for at kunne løse problemet, er der løbende blevet opstillet klassediagrammer. De følgende diagrammer er de endelige udgaver, under udformningen af programmet er der blevet ændret, tilføjet og fjernet forskellige klasser som diskuteres i afsnit \textbf{REF}. Klassediagrammerne for brugerfladen er ikke vist her, men kan findes i bilag \ref{AppendixA} og \ref{AppendixB}.
+For at få et overblik over program delene der skulle til for at kunne løse problemet, er der løbende blevet opstillet klassediagrammer. Klassediagrammerne for brugerfladen er ikke vist her, men kan findes i bilag \ref{AppendixA} og \ref{AppendixB}.
 
 \vspace{5mm}
 
@@ -13,7 +13,7 @@ I diagrammerne betyder skråtekst at klassen er abstrakt, plus er et offentligt 
     \label{kdVejElementer}
 \end{figure}
 
-Diagrammet der ses på figur \ref{kdVejElementer} indeholder alle klasserne der er en del af vejnettet. Elementerne der arver fra den absktrakte klasse \texttt{Entity}, er elementer der kan positioneres, men ikke forbindes med vejnettet. \texttt{Node} klassen er de noder vejne kan forbindes imellem. \texttt{Road} klassen beskriver vejene køretøjerne kan bevæge sig langs. \texttt{Vehicle} klassen beskriver et køretøj, og hvordan hastighed og bevægelsen skal foregå. \texttt{Destination}, \texttt{Road} og \texttt{Vehicle} klasserne har hver især en tilsvarende type-klasse, som brugeren kan lave nye instanser af og dermed bestemme elementernes egenskaber. Elementerne i dette diagram bliver uddybet på i afsnit \ref{ElementerVejnettet}, bortset fra \texttt{Vehicle} der bliver forklaret i afsnit \ref{Vehicle}.
+Diagrammet der ses på figur \ref{kdVejElementer} indeholder alle klasserne der er en del af vejnettet. Elementerne der arver fra den absktrakte klasse \texttt{Entity}, er elementer der kan positioneres, men ikke forbindes med vejnettet. \texttt{Node} klassen er de knuder vejne kan forbindes imellem. \texttt{Road} klassen beskriver vejene køretøjerne kan bevæge sig langs. \texttt{Vehicle} klassen beskriver et køretøj, og hvordan hastighed og bevægelsen skal foregå. \texttt{Destination}, \texttt{Road} og \texttt{Vehicle} klasserne har hver især en tilsvarende type-klasse, som brugeren kan lave nye instanser af og dermed bestemme elementernes egenskaber. Elementerne i dette diagram bliver uddybet på i afsnit \ref{ElementerVejnettet}, bortset fra \texttt{Vehicle} der bliver forklaret i afsnit \ref{Vehicle}.
 
 \begin{figure}[H]
     \centering

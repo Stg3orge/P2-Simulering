@@ -6,11 +6,11 @@ Ikke alle programmets kravspecifikationer er blevet implementeret med ønsket ef
 %\setlength\LTright{\fill}
 \setlength{\LTleft}{-20cm plus -1fill}
 \setlength{\LTright}{\LTleft}
-\begin{longtable}{| p{0.60\textwidth} | p{0.60\textwidth} |}
+\begin{longtable}{| p{0.50\textwidth} | p{0.50\textwidth} |}
 	\hline
 \textbf{Funktioner} & \textbf{Løsningsforslag} \\
 	\hline
-Programmet implementere ikke Fodgængere & Skal implementeres på samme måde som køretøjerne, dog skal der lave en node, der hedder fodgængerfelt. \\
+Programmet implementere ikke Fodgængere & Skal implementeres på samme måde som køretøjerne, dog skal der lave en knude, der hedder fodgængerfelt. \\
 	\hline
 Programmet implementerer ikke cyklister & Skal implementeres således der laves en separat cykelsti, som cyklerne kan cykle på. derudover skal vejene ændres, således cyklister og bliver kan være på en vej. \\ 
 	\hline
@@ -32,7 +32,7 @@ Samling og analyse af simuleringens data. & \texttt{SimulationData} skal gemme a
 	\hline
 Implementere en hjælpeside til information omkring programmets dele. & Lave en hjælpe knappe, som forklarer med tekst, hvordan programmet fungere. \\ 
 	\hline
-I et lyskryds kan køretøjerne lave u-vendinger. & Der skal laves en ny vej, som man kun må køre ind på fra bestemte noder. \\ 
+I et lyskryds kan køretøjerne lave u-vendinger. & Der skal laves en ny vej, som man kun må køre ind på fra bestemte knude. \\ 
 	\hline 
 \caption{Fejl og mangler}\label{Fejl og mangler}
 \end{longtable}
@@ -61,7 +61,7 @@ Dog vil dette ikke afhjælpe på hukommelses forbruget, for at løse dette vil M
 \vspace{5mm}
 
 \textbf{CPU forbrug} \\
-For at optimere CPU forbruget, vil en mulig løsnig være at få GPU'en til at tegne grafikken i programmet, istedet for CPU'en. Fordelen ved dette er at den mægnde CPU som bliver sparet,  vil kunne bruges på simulationen istedet, samt er GPU'en hurtigere til at tegne grafik end CPU'en. Derudover vil implemitering af flere "threds" kunne udnytte flere kerner i computeren, og herved øge simulationshastigheden.
+For at optimere CPU forbruget, vil en mulig løsnig være at få GPU'en til at tegne grafikken i programmet, istedet for CPU'en. Fordelen ved dette er at den mægnde CPU som bliver sparet,  vil kunne bruges på simulationen istedet, samt er GPU'en hurtigere til at tegne grafik end CPU'en. Derudover vil implemitering af flere "threads" kunne udnytte flere kerner i computeren, og herved øge simulationshastigheden.
 
 
 
