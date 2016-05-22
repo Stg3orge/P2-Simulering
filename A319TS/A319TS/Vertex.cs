@@ -18,8 +18,8 @@ namespace A319TS
         {
             Source = node;
             Edges = new List<Edge>();
-            Cost = Double.MaxValue;
-            Estimate = Double.MaxValue;
+            Cost = double.MaxValue;
+            Estimate = double.MaxValue;
         }
 
         public int CompareTo(Vertex other)
