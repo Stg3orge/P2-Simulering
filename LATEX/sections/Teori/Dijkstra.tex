@@ -5,18 +5,18 @@
 \caption{En vægtet ikke-orienteret graf}\label{dijkstrasgraf}
 \end{wrapfigure}
 
-Dijkstra's er en grådig algoritme der kan finde en rute imellem to noder i en vægtet graf. Grafen ruten kan findes i kan både være orienteret og ikke orienteret. Algoritmen starter med at sætte afstanden til alle punkter lig uendelig, udover start punktet da det er det eneste der kendes til på tidspunktet. Når algoritmen kører en graf igennem, kigger den på den node hvor kosten er lavest, og udregner kosten til de naboliggende noder. Når kosten udregnes for en nabo node, tages kosten af ruten til den nuværende node og afstanden til nabo noden bliver adderet. Da algoritmen altid tager noden med den lavest kost, vil den have fundet den korteste rute, når den nuværende node er slutnoden \cite[s. 681-684]{DMATBOGEN}. Som et eksempel kan vejen fra A til Z på figur \ref{dijkstrasgraf} findes:
+Dijkstra's er en grådig algoritme der kan finde en rute imellem to knuder i en vægtet graf. Grafen ruten kan findes i kan både være orienteret og ikke orienteret. Algoritmen starter med at sætte afstanden til alle punkter lig uendelig, udover start punktet da det er det eneste der kendes til på tidspunktet. Når algoritmen kører en graf igennem, kigger den på den knude hvor kosten er lavest, og udregner kosten til de naboliggende knuder. Når kosten udregnes for en nabo knude, tages kosten af ruten til den nuværende knude og afstanden til nabo knuden bliver adderet. Da algoritmen altid tager knuden med den lavest kost, vil den have fundet den korteste rute, når den nuværende knude er slutknuden \cite[s. 681-684]{DMATBOGEN}. Som et eksempel kan vejen fra A til Z på figur \ref{dijkstrasgraf} findes:
 
 \begin{enumerate}
 \item Algoritmen starter ved A, og kigger på naboerne B og C. Deres kost bliver noteret til at være 4 og 2.
-\item Nu kigges der på noden C, da det er den nuværende korteste rute. Her ses det at kosten til B er 3 (2+1), og det bliver overskrevet da det er mindre end den tidligere værdi 4. Deruodver noteres det at kosten for D og E er 10 og 12.
-\item Så kigges der på noden B, hvor det ses at kosten til D er 8 (2+1+5), og den overskriver den tidligere højere kost.
-\item Derefter bliver noden D kigget på, hvor den noterer kosten for E og Z til at være 10 og 14. Selvom der er fundet en vej til slutnoden, forstættes der, da kosten til noden E er mindre end kosten til Z.
+\item Nu kigges der på knuden C, da det er den nuværende korteste rute. Her ses det at kosten til B er 3 (2+1), og det bliver overskrevet da det er mindre end den tidligere værdi 4. Deruodver noteres det at kosten for D og E er 10 og 12.
+\item Så kigges der på knuden B, hvor det ses at kosten til D er 8 (2+1+5), og den overskriver den tidligere højere kost.
+\item Derefter bliver knuden D kigget på, hvor den noterer kosten for E og Z til at være 10 og 14. Selvom der er fundet en vej til slutknuden, forstættes der, da kosten til knuden E er mindre end kosten til Z.
 \item Så kigges der på noden E, hvor algoritmen ser at kosten til Z er 13, og dermed bliver den tidligere kost 14 overskrevet.
-\item Der er ikke flere noder der har en lavere kost en slutnoden Z, og den korteste rute er fundet.
+\item Der er ikke flere knuden der har en lavere kost en slutknuden Z, og den korteste rute er fundet.
 \end{enumerate}
 
-Kostene for hver node kan gemmes i en tabel, som set på tabel \ref{dijktabel}.
+Kostene for hver knude kan gemmes i en tabel, som set på tabel \ref{dijktabel}.
   
 \begin{table}[H]
 \centering
@@ -58,7 +58,7 @@ end
 \caption{Dijkstra pseudo-kode: FindPath og Node}\label{DijkstraCodeFindPathNode}
 \end{figure}
 
-På figur \ref{DijkstraCodeFindPathNode} ses pseudokode for kernen af Dijkstras algoritme. En \texttt{Node} er defineret først, hvor \texttt{Previous} til at starte med er \texttt{null} eller 'ikke eksisterende', og \texttt{Cost} er uendelig. \texttt{FindPath} proceduren tager en graph \texttt{AllNodes}, startnoden \texttt{StartNode} og slutnoden \texttt{EndNode}. Listen \texttt{Queue} laves og \texttt{StartNode} indsættes, da den skal findes i første iteration af while løkken. While løkken køres mens der stadig er noder der ikke er undersøgt, altså noder der ligger i \texttt{Queue}, og den starter med at sætte \texttt{CurrentNode} til noden der har den laveste \texttt{Cost}. Hvis \texttt{CurrentNode} er lig \texttt{EndNode} så har algoritmen fundet ruten og den bliver returneret ved brug af proceduren \texttt{TracePath}, som beskrives sidst i dette afsnit. Hvis ikke \texttt{CurrentNode} er lig \texttt{EndNode}, så fjernes noden fra \texttt{Queue} listen og naboerne til noden bliver evalueret gennem proceduren \texttt{EvaluateNeighbors} som beskrives herunder.
+På figur \ref{DijkstraCodeFindPathNode} ses pseudokode for kernen af Dijkstras algoritme. En \texttt{Node} er defineret først, hvor \texttt{Previous} til at starte med er \texttt{null} eller 'ikke eksisterende', og \texttt{Cost} er uendelig. \texttt{FindPath} proceduren tager en graph \texttt{AllNodes}, startknuden \texttt{StartNode} og slutknuden \texttt{EndNode}. Listen \texttt{Queue} laves og \texttt{StartNode} indsættes, da den skal findes i første iteration af while løkken. While løkken køres mens der stadig er knuder der ikke er undersøgt, altså knuder der ligger i \texttt{Queue}, og den starter med at sætte \texttt{CurrentNode} til knuden der har den laveste \texttt{Cost}. Hvis \texttt{CurrentNode} er lig \texttt{EndNode} så har algoritmen fundet ruten og den bliver returneret ved brug af proceduren \texttt{TracePath}, som beskrives sidst i dette afsnit. Hvis ikke \texttt{CurrentNode} er lig \texttt{EndNode}, så fjernes knuden fra \texttt{Queue} listen og naboerne til knuden bliver evalueret gennem proceduren \texttt{EvaluateNeighbors} som beskrives herunder.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -78,7 +78,7 @@ end
 \caption{Dijkstra pseudo-kode: EvaluateNeighbors}\label{DijkstraCodeEvaluateNeighbors}
 \end{figure}
 
-\texttt{EvaluateNeighbors} proceduren som set på figur \ref{DijkstraCodeEvaluateNeighbors}, evaluerer naboerne af en \texttt{Node}, og hvis naboen ikker er i \texttt{Queue}, vil den blive tilføjet til listen. Mens evalueringen er igang så overskriver \texttt{Cost} og \texttt{Previous}, hvis \texttt{Cost} er lavere fra den nuværende node \texttt{CurrentNode}. 
+\texttt{EvaluateNeighbors} proceduren som set på figur \ref{DijkstraCodeEvaluateNeighbors}, evaluerer naboerne af en \texttt{Node}, og hvis naboen ikker er i \texttt{Queue}, vil den blive tilføjet til listen. Mens evalueringen er igang så overskriver \texttt{Cost} og \texttt{Previous}, hvis \texttt{Cost} er lavere fra den nuværende knude \texttt{CurrentNode}. 
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -94,4 +94,4 @@ end
 \caption{Dijkstra pseudo-kode: TracePath}\label{DijkstraCodeTracePath}
 \end{figure}
 
-Figur \ref{DijkstraCodeTracePath} viser proceduren \texttt{TracePath}, der finder vejen tilbage fra slutnoden. Dette gøres gennem en while løkke, der køres indtil at den forrige \texttt{Node} er lig \texttt{null}, hvilket vil sige at startnoden er nået. Noderne overføres til en liste, der bliver invereteret og returneret til brugeren af proceduren.
+Figur \ref{DijkstraCodeTracePath} viser proceduren \texttt{TracePath}, der finder vejen tilbage fra slutknuden. Dette gøres gennem en while løkke, der køres indtil at den forrige \texttt{Node} er lig \texttt{null}, hvilket vil sige at startknuden er nået. Knuderne overføres til en liste, der bliver invereteret og returneret til brugeren af proceduren.
