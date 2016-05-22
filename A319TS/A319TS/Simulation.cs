@@ -22,6 +22,10 @@ namespace A319TS
         private Project SecondaryProject;
         private List<Vehicle> _primaryVehicles;
         private List<Vehicle> _secondaryVehicles;
+        private List<Node> _primaryInboundNodes;
+        private List<Node> _secondaryInboundNodes;
+        private List<Node> _primaryHomeNodes;
+        private List<Node> _secondaryHomeNodes;
 
         public event EventHandler<EventArgs> SimulationDone;
         protected virtual void OnSimulationDone()
@@ -46,12 +50,24 @@ namespace A319TS
             SecondaryWorker.WorkerSupportsCancellation = true;
             SecondaryWorker.DoWork += Simulate;
             SecondaryWorker.RunWorkerCompleted += SimulationCompleted;
+
+            _primaryVehicles = new List<Vehicle>();
+            _secondaryVehicles = new List<Vehicle>();
         }
 
         public void Run()
         {
-            _primaryVehicles = CreateVehicles(Partitions.Primary);
-            _secondaryVehicles = CreateVehicles(Partitions.Secondary);
+            _primaryInboundNodes = PrimaryProject.Nodes.FindAll(n => n.Type == NodeTypes.Inbound);
+            _secondaryInboundNodes = SecondaryProject.Nodes.FindAll(n => n.Type == NodeTypes.Inbound);
+            if (_primaryInboundNodes.Count == 0)
+                throw new Exception("No inbound nodes found");
+
+            _primaryHomeNodes = PrimaryProject.Nodes.FindAll(n => n.Type == NodeTypes.Home);
+            _secondaryHomeNodes = SecondaryProject.Nodes.FindAll(n => n.Type == NodeTypes.Home);
+            if (_primaryHomeNodes.Count == 0)
+                throw new Exception("No home nodes found");
+
+            SetupVehicles();
 
             Tuple<List<Vehicle>, Project, Partitions> primaryArguments;
             primaryArguments = new Tuple<List<Vehicle>, Project, Partitions>(_primaryVehicles, PrimaryProject, Partitions.Primary);
@@ -68,9 +84,6 @@ namespace A319TS
         }
         private void Simulate(object sender, DoWorkEventArgs args)
         {
-            if (args.Argument == null && args.GetType() != typeof(Tuple<List<Vehicle>, Project, Partitions>))
-                throw new ArgumentException();
-
             var arguments = args.Argument as Tuple<List<Vehicle>, Project, Partitions>;
             BackgroundWorker worker = sender as BackgroundWorker;
             List<Vehicle> vehicles = arguments.Item1;
@@ -78,26 +91,39 @@ namespace A319TS
             Partitions partition = arguments.Item3;
             int vehicleCount = vehicles.Count;
             int onePercent = MsInDay / 100;
+            bool error = false;
 
-            for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
+            try
             {
-                if (worker.CancellationPending)
-                    break;
-                if (i % onePercent == 0)
-                    worker.ReportProgress(i, i / onePercent + "% " + partition);
-                foreach (LightController controller in project.LightControllers)
-                    controller.Update(project.Settings.StepSize);
-                for (int j = 0; j < vehicleCount; j++)
-                    vehicles[j].Drive(i);
+                for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
+                {
+                    if (worker.CancellationPending)
+                        break;
+                    if (i % onePercent == 0)
+                        worker.ReportProgress(i, i / onePercent + "% " + partition);
+                    foreach (LightController controller in project.LightControllers)
+                        controller.Update(project.Settings.StepSize);
+                    for (int j = 0; j < vehicleCount; j++)
+                        vehicles[j].Drive(i);
+                }
+            }
+            catch (Exception e)
+            {
+                worker.ReportProgress(0, partition + " crashed with error: " + e.Message);
+                error = true;
+                Cancel();
             }
 
-            if (worker.CancellationPending)
+            if (error && worker.CancellationPending)
+            {
+                args.Cancel = true;
+            }
+            else if (worker.CancellationPending)
             {
                 worker.ReportProgress(0, partition + " cancelled");
                 args.Cancel = true;
             }
-            else
-                worker.ReportProgress(MsInDay, partition + " completed");
+            else worker.ReportProgress(MsInDay, partition + " completed");
         }
         private void SimulationCompleted(object sender, RunWorkerCompletedEventArgs args)
         {
@@ -113,138 +139,175 @@ namespace A319TS
                 foreach (Vehicle vehicle in _secondaryVehicles)
                     secondaryData.Add(vehicle.ExtractData());
 
-                SimulationData data = new SimulationData(Project.Clone() as Project, primaryData, secondaryData);
+                SimulationData data = new SimulationData(Project, primaryData, secondaryData);
                 FileHandler.SaveSimulation(data);
                 Filename = data.Filename;
                 OnSimulationDone();
             }
         }
 
-        // CreateVehicles //
-        private List<Vehicle> CreateVehicles(Partitions partition)
+        // SetupVehicles //
+        private enum SetupOrder { Equal, PrimaryFirst, SecondaryFirst }
+        private SetupOrder GetOrder()
         {
-            int carCount, inbound, outbound, timeSpread, toDestTime, toHomeTime;
-
+            if (Project.Settings.PrimaryCarCount == Project.Settings.SecondaryCarCount)
+                return SetupOrder.Equal;
+            else if (Project.Settings.PrimaryCarCount < Project.Settings.SecondaryCarCount)
+                return SetupOrder.PrimaryFirst;
+            else return SetupOrder.SecondaryFirst;
+        }
+        private void SetupVehicles()
+        {
+            SetupOrder order = GetOrder();
+            if (order == SetupOrder.PrimaryFirst)
+            {
+                _primaryVehicles.AddRange(CreateVehicles(Partitions.Primary, Project.Settings.PrimaryCarCount));
+                _secondaryVehicles.AddRange(CopyVehicles(Partitions.Primary));
+                int additionalVehicles = Project.Settings.SecondaryCarCount - Project.Settings.PrimaryCarCount;
+                _secondaryVehicles.AddRange(CreateVehicles(Partitions.Secondary, additionalVehicles));
+            }
+            else if (order == SetupOrder.SecondaryFirst)
+            {
+                _secondaryVehicles.AddRange(CreateVehicles(Partitions.Secondary, Project.Settings.SecondaryCarCount));
+                _primaryVehicles.AddRange(CopyVehicles(Partitions.Secondary));
+                int additionalVehicles = Project.Settings.PrimaryCarCount - Project.Settings.SecondaryCarCount;
+                _primaryVehicles.AddRange(CreateVehicles(Partitions.Primary, additionalVehicles));
+            }
+            else
+            {
+                _primaryVehicles.AddRange(CreateVehicles(Partitions.Primary, Project.Settings.PrimaryCarCount));
+                _secondaryVehicles.AddRange(CopyVehicles(Partitions.Primary));
+            }
+        }
+        private Vehicle[] CopyVehicles(Partitions partition)
+        {
+            List<Vehicle> vehicles = new List<Vehicle>();
             if (partition == Partitions.Primary)
             {
-                Pathfinder.SetProject(PrimaryProject, Partitions.Primary);
-                carCount = Project.Settings.PrimaryCarCount;
-                inbound = Project.Settings.PrimaryInbound;
-                outbound = Project.Settings.PrimaryOutbound;
-                timeSpread = Project.Settings.PrimaryTimeSpread;
-                toDestTime = Project.Settings.PrimaryToDestTime;
-                toHomeTime = Project.Settings.PrimaryToHomeTime;
-            }
-            else
-            {
                 Pathfinder.SetProject(SecondaryProject, Partitions.Secondary);
-                carCount = Project.Settings.SecondaryCarCount;
-                inbound = Project.Settings.SecondaryInbound;
-                outbound = Project.Settings.SecondaryOutbound;
-                timeSpread = Project.Settings.SecondaryTimeSpread;
-                toDestTime = Project.Settings.SecondaryToDestTime;
-                toHomeTime = Project.Settings.SecondaryToHomeTime;
+                foreach (Vehicle vehicle in _primaryVehicles)
+                    vehicles.Add(new Vehicle(SecondaryProject, vehicle.Home, vehicle.Destination,
+                        vehicle.Type, vehicle.ToDestTime, vehicle.ToHomeTime));
             }
-
-            List<Node> homes = GetHomes(carCount, inbound);
-            List<Destination> destinations = GetDestinations(carCount, outbound);
-            List<VehicleType> vehicleTypes = GetVehicleTypes(carCount);
-            List<int> toDestTimes = GetTimes(carCount, timeSpread, toDestTime);
-            List<int> toHomeTimes = GetTimes(carCount, timeSpread, toHomeTime);
-
-            List<Vehicle> vehicles = new List<Vehicle>();
-
-            if(partition == Partitions.Primary)
-                for (int i = 0; i < carCount; i++)
-                    vehicles.Add(new Vehicle(Project, homes[i], destinations[i], vehicleTypes[i], toDestTimes[i], toHomeTimes[i]));
             else
             {
-                if (carCount >= _primaryVehicles.Count)
-                {
-                    for (int i = 0; i < _primaryVehicles.Count; i++)
-                        vehicles.Add(new Vehicle(Project, _primaryVehicles[i].Home, _primaryVehicles[i].Destination, _primaryVehicles[i].Type, toDestTimes[i], toHomeTimes[i]));
-
-                    for (int i = _primaryVehicles.Count; i < carCount; i++)
-                        vehicles.Add(new Vehicle(Project, homes[i], destinations[i], vehicleTypes[i], toDestTimes[i], toHomeTimes[i]));
-                }
-                else
-                    for (int i = 0; i < carCount; i++)
-                        vehicles.Add(new Vehicle(Project, _primaryVehicles[i].Home, _primaryVehicles[i].Destination, _primaryVehicles[i].Type, toDestTimes[i], toHomeTimes[i]));
+                Pathfinder.SetProject(PrimaryProject, Partitions.Primary);
+                foreach (Vehicle vehicle in _secondaryVehicles)
+                    vehicles.Add(new Vehicle(PrimaryProject, vehicle.Home, vehicle.Destination,
+                        vehicle.Type, vehicle.ToDestTime, vehicle.ToHomeTime));
             }
+            return vehicles.ToArray();
+        }
+        private Vehicle[] CreateVehicles(Partitions partition, int count)
+        {
+            Project project;
+            if (partition == Partitions.Primary) project = PrimaryProject;
+            else project = SecondaryProject;
 
+            Node[] homes = GetHomes(partition, count);
+            Destination[] destinations = GetDestinations(partition, count);
+            VehicleType[] vehicleTypes = GetVehicleTypes(count);
+            int[] toDestTimes = GetTimes(partition, count, true);
+            int[] toHomeTimes = GetTimes(partition, count, false);
+
+            Pathfinder.SetProject(project, partition);
+            Vehicle[] vehicles = new Vehicle[count];
+            for (int i = 0; i < count; i++)
+                vehicles[i] = new Vehicle(project, homes[i], destinations[i], 
+                    vehicleTypes[i], toDestTimes[i], toHomeTimes[i]);
             return vehicles;
         }
-        private List<Node> GetHomes(int carCount, int inbound)
+        // GetHomes //
+        private Node[] GetHomes(Partitions partition, int count)
         {
+            int inbound;
+            if (partition == Partitions.Primary) inbound = Project.Settings.PrimaryInbound;
+            else inbound = Project.Settings.SecondaryInbound;
+            int inboundCount = count * (inbound / 100);
+
             List<Node> homes = new List<Node>();
+            for (int i = 0; i < inboundCount; i++)
+                homes.Add(GetNextInbound(partition));
 
-            List<Node> inboundNodes = Project.Nodes.FindAll(n => n.Type == NodeTypes.Inbound);
+            int remaining = count - inboundCount;
+            for (int i = 0; i < remaining; i++)
+                homes.Add(GetNextHome(partition));
 
-            int inboundNodesCount = inboundNodes.Count;
-
-            if (inboundNodesCount == 0)
-                throw new Exception("No inbound nodes found");
-            
-            int inboundIndex = 0;
-            for (int i = 0; i < inbound; i++)
-            {
-                homes.Add(inboundNodes[inboundIndex]);
-                if (inboundIndex + 1 == inboundNodesCount) inboundIndex = 0;
-                else inboundIndex++;
-            }
-
-            List<Node> homeNodes = Project.Nodes.FindAll(n => n.Type == NodeTypes.Home);
-
-            int homeNodesCount = homeNodes.Count;
-
-            if (homeNodesCount == 0)
-                throw new Exception("No home nodes found");
-
-            int homeIndex = 0;
-            for (int i = 0; i < carCount - inbound; i++)
-            {
-                homes.Add(homeNodes[homeIndex]);
-                if (homeIndex + 1 == homeNodesCount) homeIndex = 0;
-                else homeIndex++;
-            }
-
-            return homes;
+            return homes.ToArray();
         }
-        private List<Destination> GetDestinations(int carCount, int outbound)
+        private int _primaryInboundIndex = 0;
+        private int _secondaryInboundIndex = 0;
+        private Node GetNextInbound(Partitions partition)
         {
+            Node inbound;
+            if (partition == Partitions.Primary)
+            {
+                inbound = _primaryInboundNodes[_primaryInboundIndex];
+                if (_primaryInboundIndex + 1 == _primaryInboundNodes.Count) _primaryInboundIndex = 0;
+                else _primaryInboundIndex++;
+            }
+            else
+            {
+                inbound = _secondaryInboundNodes[_primaryInboundIndex];
+                if (_secondaryInboundIndex + 1 == _secondaryInboundNodes.Count) _secondaryInboundIndex = 0;
+                else _secondaryInboundIndex++;
+            }
+            return inbound;
+        }
+        private int _primaryHomeIndex = 0;
+        private int _secondaryHomeIndex = 0;
+        private Node GetNextHome(Partitions partition)
+        {
+            Node home;
+            if (partition == Partitions.Primary)
+            {
+                home = _primaryHomeNodes[_primaryHomeIndex];
+                if (_primaryHomeIndex + 1 == _primaryHomeNodes.Count) _primaryHomeIndex = 0;
+                else _primaryHomeIndex++;
+            }
+            else
+            {
+                home = _secondaryHomeNodes[_secondaryHomeIndex];
+                if (_secondaryHomeIndex + 1 == _secondaryHomeNodes.Count) _secondaryHomeIndex = 0;
+                else _secondaryHomeIndex++;
+            }
+            return home;
+        }
+        // GetDestinations //
+        private Destination[] GetDestinations(Partitions partition, int count)
+        {
+            int outbound;
+            if (partition == Partitions.Primary) outbound = Project.Settings.PrimaryOutbound;
+            else outbound = Project.Settings.SecondaryOutbound;
+            int outboundCount = count * (outbound / 100);
+
             List<Destination> destinations = new List<Destination>();
-            for (int i = 0; i < outbound; i++)
+            for (int i = 0; i < outboundCount; i++)
                 destinations.Add(null);
 
+            int remaining = count - outboundCount;
             foreach (DestinationType destType in Project.DestinationTypes)
             {
                 if (destType.Distribution == 0)
                     continue;
 
                 List<Destination> destsWithType = Project.Destinations.FindAll(d => d.Type == destType);
-
-                int destsWithTypeCount = destsWithType.Count;
-
-                if (destsWithTypeCount == 0)
+                if (destsWithType.Count == 0)
                     throw new Exception("No destinations with type: " + destType.Name);
 
-                double addAmount = (destType.Distribution / 100) * (carCount - outbound);
+                int addAmount = Convert.ToInt32(remaining * (destType.Distribution / 100));
                 int index = 0;
-
-                for (int i = 0; i < Math.Round(addAmount); i++)
+                for (int i = 0; i < addAmount; i++)
                 {
                     destinations.Add(destsWithType[index]);
-                    if (index + 1 == destsWithTypeCount) index = 0;
+                    if (index + 1 == destsWithType.Count) index = 0;
                     else index++;
                 }
             }
 
-            while (destinations.Count > carCount)
-                destinations.Remove(destinations.Last());
-
-            return destinations;
+            return destinations.ToArray();
         }
-        private List<VehicleType> GetVehicleTypes(int carCount)
+        private VehicleType[] GetVehicleTypes(int count)
         {
             List<VehicleType> vehicleTypes = new List<VehicleType>();
             foreach (VehicleType vehicleType in Project.VehicleTypes)
@@ -252,24 +315,33 @@ namespace A319TS
                 if (vehicleType.Distribution == 0)
                     continue;
 
-                double addAmount = (vehicleType.Distribution / 100) * (carCount);
-                for (int i = 0; i < Math.Round(addAmount); i++)
+                int addAmount = Convert.ToInt32(count * (vehicleType.Distribution / 100));
+                for (int i = 0; i < addAmount; i++)
                     vehicleTypes.Add(vehicleType);
             }
-
-            while (vehicleTypes.Count > carCount)
-                vehicleTypes.Remove(vehicleTypes.Last());
-
-            return vehicleTypes;
+            return vehicleTypes.ToArray();
         }
-        private List<int> GetTimes(int carCount, int spread, int startTime)
+        private int[] GetTimes(Partitions partition, int count, bool toDest)
         {
+            int spread, time;
+            if (partition == Partitions.Primary)
+            {
+                spread = Project.Settings.PrimaryTimeSpread;
+                if (toDest) time = Project.Settings.PrimaryToDestTime;
+                else time = Project.Settings.PrimaryToHomeTime;
+            }
+            else
+            {
+                spread = Project.Settings.SecondaryTimeSpread;
+                if (toDest) time = Project.Settings.SecondaryToDestTime;
+                else time = Project.Settings.SecondaryToHomeTime;
+            }
+                
             Random random = new Random();
             List<int> times = new List<int>();
-            for (int i = 0; i < carCount; i++)
-                times.Add(startTime + random.Next(spread * -1, spread));
-            
-            return times;
+            for (int i = 0; i < count; i++)
+                times.Add(time + random.Next(spread * -1, spread));
+            return times.ToArray();
         }
     }
 }
