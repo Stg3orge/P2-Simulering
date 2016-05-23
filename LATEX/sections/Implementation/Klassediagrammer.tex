@@ -4,29 +4,30 @@ For at få et overblik over program delene der skulle til for at kunne løse pro
 
 \vspace{5mm}
 
-I diagrammerne betyder skråtekst at klassen er abstrakt, plus er et offentligt medlem, minus er et privat medlem, hashcode er et beskyttet (protected) medlem og understregning betyder at medlemmet er statisk. Hver klasse har tre kasser, den første indeholder klassens navn, den anden kasse består af klassens fields, og den sidste indeholder klassens properties, metoder og events.
+I diagrammerne betyder skråtekst at klassen er abstrakt, plus er et offentligt medlem, og understregning betyder at medlemmet er statisk. Hver klasse har tre kasser, den første indeholder klassens navn, den anden kasse består af klassens fields, og den sidste indeholder klassens properties, metoder og events.
 
 \begin{figure}[H]
     \centering
-    \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/VejElementer}}
+    \makebox[\textwidth][c]{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/VejElementer}}
     \caption{Elementer i vejnettet}
     \label{kdVejElementer}
 \end{figure}
 
-Diagrammet der ses på figur \ref{kdVejElementer} indeholder alle klasserne der er en del af vejnettet. Elementerne der arver fra den absktrakte klasse \texttt{Entity}, er elementer der kan positioneres, men ikke forbindes med vejnettet. \texttt{Node} klassen er de knuder vejne kan forbindes imellem. \texttt{Road} klassen beskriver vejene køretøjerne kan bevæge sig langs. \texttt{Vehicle} klassen beskriver et køretøj, og hvordan hastighed og bevægelsen skal foregå. \texttt{Destination}, \texttt{Road} og \texttt{Vehicle} klasserne har hver især en tilsvarende type-klasse, som brugeren kan lave nye instanser af og dermed bestemme elementernes egenskaber. Elementerne i dette diagram bliver uddybet på i afsnit \ref{ElementerVejnettet}, bortset fra \texttt{Vehicle} der bliver forklaret i afsnit \ref{Vehicle}.
+Diagrammet der ses på figur \ref{kdVejElementer} indeholder alle klasserne der er en del af vejnettet. \texttt{Node} klassen er de knuder vejne kan forbindes imellem. \texttt{Destination} og \texttt{LightControllerne} kan positioneres ligesom \texttt{Node} klassen, men de kan ikke blive forbundet til vejnettet. \texttt{Road} klassen beskriver vejene køretøjerne kan bevæge sig langs. \texttt{Vehicle} klassen beskriver et køretøj, og hvordan hastighed og bevægelsen skal foregå. \texttt{Destination}, \texttt{Road} og \texttt{Vehicle} klasserne har hver især en tilsvarende type-klasse, som brugeren kan lave nye instanser af og dermed bestemme elementernes egenskaber. Elementerne i dette diagram bliver uddybet på i afsnit \ref{ElementerVejnettet}, bortset fra \texttt{Vehicle} der bliver forklaret i afsnit \ref{Vehicle}.
 
 \begin{figure}[H]
     \centering
-    \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/Diverse}}
+    \makebox[\textwidth][c]{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/Diverse}}
     \caption{Diverse klasser}
     \label{kdDiverse}
 \end{figure}
 
 På figur \ref{kdDiverse} ses diagrammet for nogle forskellige klasser der ikke ligger under en bred kategori. \texttt{Project} klassen indeholder alt informationen om brugerens indstillinger og brugerens opbyggede vejnet. \texttt{SimulationData} indeholder en klon af projektet fra det tidspunkt det blev simuleret, og en optagelse af den positionelle data fra \texttt{Vehicle} instanserne der befærdede sig på vejnettet. \texttt{Partitions} er en enumerator der bliver brugt forskellige steder gennem programmet til at skelne mellem den primære og den sekundære simulering. \texttt{PointD} er en klasse der beskriver et punkt med doubles, for ikke at miste præcision ved at konvertere mellem floats og doubles. Den statiske klasse \texttt{MathExtension} indeholder nogle formler der ikke findes i standard biblioteket \texttt{Math}. \texttt{Vector2D} beskriver en vektor, og har nogle hjælpe metoder til at arbejde med vektorer. Disse klasser bliver uddybet i afsnit \ref{Diverse}.
 
+
 \begin{figure}[H]
     \centering
-    \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/Viewport}}
+    \makebox[\textwidth][c]{\includegraphics[width=0.4\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/Viewport}}
     \caption{Viewport og SimulationViewport}
     \label{kdViewport}
 \end{figure}
@@ -35,7 +36,7 @@ De to klasser på figur \ref{kdViewport} er brugerflade elementerne hvor brugere
 
 \begin{figure}[H]
     \centering
-    \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/Pathfinder}}
+    \makebox[\textwidth][c]{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/Pathfinder}}
     \caption{Pathfinder klassen}
     \label{kdPathfinder}
 \end{figure}
@@ -44,7 +45,7 @@ De to klasser på figur \ref{kdViewport} er brugerflade elementerne hvor brugere
 
 \begin{figure}[H]
     \centering
-    \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/Funktionalitet}}
+    \makebox[\textwidth][c]{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/Klassediagram/Funktionalitet}}
     \caption{De funktionelle klasser}
     \label{kdFunktionelle}
 \end{figure}

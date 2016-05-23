@@ -26,9 +26,9 @@ namespace A319TS
         private void Setup()
         {
             Text = "Destination Types";
-            Size = new Size(281, 400);
-            MinimumSize = new Size(281, 400);
-            MaximumSize = new Size(281, 400);
+            Size = new Size(298, 400);
+            MinimumSize = new Size(298, 400);
+            MaximumSize = new Size(298, 400);
             ShowIcon = false;
             MinimizeBox = false;
             MaximizeBox = false;
@@ -39,7 +39,7 @@ namespace A319TS
 
             SetName = new TextBox();
             SetName.Location = new Point(63, 12);
-            SetName.Size = new Size(100, 22);
+            SetName.Size = new Size(120, 22);
             Controls.Add(SetName);
 
             NameLabel = new Label();
@@ -49,28 +49,28 @@ namespace A319TS
             
             SetColor = new Button();
             SetColor.BackColor = ColorPicker.Color;
-            SetColor.Location = new Point(169, 12);
+            SetColor.Location = new Point(189, 12);
             SetColor.Size = new Size(23, 23);
             SetColor.Click += ClickColor;
             Controls.Add(SetColor);
 
             Add = new Button();
             Add.Text = "Add";
-            Add.Location = new Point(198, 12);
+            Add.Location = new Point(218, 12);
             Add.Size = new Size(50, 23);
             Add.Click += AddClick;
             Controls.Add(Add);
 
             Remove = new Button();
             Remove.Text = "Remove";
-            Remove.Location = new Point(176, 320);
+            Remove.Location = new Point(193, 320);
             Remove.Size = new Size(75, 23);
             Remove.Click += RemoveClick;
             Controls.Add(Remove);
 
             Destinations = new DataGridView();
-            Destinations.Location = new Point(15, 41);
-            Destinations.Size = new Size(233, 273);
+            Destinations.Location = new Point(12, 41);
+            Destinations.Size = new Size(256, 273);
             Destinations.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             Destinations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             Destinations.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

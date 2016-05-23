@@ -109,6 +109,7 @@
 			]
 		]
 	},
+<<<<<<< HEAD
 	"buffers":
 	[
 		{
@@ -168,6 +169,8 @@
 			}
 		}
 	],
+=======
+>>>>>>> 0023b33c5f228330cbdded8e69a2a97db15819d9
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -214,6 +217,7 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+<<<<<<< HEAD
 	"expanded_folders":
 	[
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX",
@@ -244,14 +248,34 @@
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Diskussion/Diskussion.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion/Konklusion-B.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion/Konklusion-Rasmus.tex",
+=======
+	"file_history":
+	[
+		"/C/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/sections/Teori/Grafteori.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konteksten/konteksten.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Diskussion/Diskussion.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion/Konklusion-B.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion/Konklusion-Rasmus.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Diskussion/Diskussion2.tex",
+>>>>>>> 0023b33c5f228330cbdded8e69a2a97db15819d9
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori/Dijkstra.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori/AStjerne.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Kravspecifikationer/Kravspecifikationer.tex",
+<<<<<<< HEAD
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Design.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/Main.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Funktionelle.tex",
+=======
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Perspektivering/Perspektivering.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Design.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/Main.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Funktionelle.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Viewport.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Klassediagrammer.tex",
+>>>>>>> 0023b33c5f228330cbdded8e69a2a97db15819d9
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion/Konklusion.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Laesevejledning/Laesevejledning.tex",
 		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Forord/Forord.tex",
@@ -335,7 +359,11 @@
 	],
 	"find":
 	{
+<<<<<<< HEAD
 		"height": 34.0
+=======
+		"height": 23.0
+>>>>>>> 0023b33c5f228330cbdded8e69a2a97db15819d9
 	},
 	"find_in_files":
 	{
@@ -349,8 +377,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"url",
 			"node",
+=======
+>>>>>>> 0023b33c5f228330cbdded8e69a2a97db15819d9
 			"fight",
 			"teams",
 			"match_count",
@@ -401,6 +432,7 @@
 		"whole_word": false,
 		"wrap": true
 	},
+<<<<<<< HEAD
 	"groups":
 	[
 		{
@@ -611,6 +643,8 @@
 			]
 		}
 	],
+=======
+>>>>>>> 0023b33c5f228330cbdded8e69a2a97db15819d9
 	"incremental_find":
 	{
 		"height": 23.0
@@ -651,7 +685,6 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "sublime_ux.sublime-project",
 	"replace":
 	{
 		"height": 42.0
@@ -688,7 +721,6 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},

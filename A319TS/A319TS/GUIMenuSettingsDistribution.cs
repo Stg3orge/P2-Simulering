@@ -34,9 +34,9 @@ namespace A319TS
         private void Setup()
         {
             Text = "Distribution";
-            Size = new Size(368, 400);
-            MinimumSize = new Size(368, 400);
-            MaximumSize = new Size(368, 400);
+            Size = new Size(378, 350);
+            MinimumSize = new Size(378, 350);
+            MaximumSize = new Size(378, 350);
             ShowIcon = false;
             MinimizeBox = false;
             MaximizeBox = false;
@@ -44,8 +44,8 @@ namespace A319TS
             StartPosition = FormStartPosition.CenterParent;
 
             TabContainer = new TabControl();
-            TabContainer.Location = new Point(13, 13);
-            TabContainer.Size = new Size(323, 301);
+            TabContainer.Location = new Point(12, 12);
+            TabContainer.Size = new Size(336, 252);
             TabContainer.SelectedIndexChanged += OnSelectedChanged;
             Controls.Add(TabContainer);
 
@@ -83,35 +83,35 @@ namespace A319TS
 
             DestinationsPercent = new TextBox();
             DestinationsPercent.Text = "0%";
-            DestinationsPercent.Location = new Point(102, 321);
-            DestinationsPercent.Size = new Size(40, 22);
+            DestinationsPercent.Location = new Point(104, 270);
+            DestinationsPercent.Size = new Size(45, 22);
             DestinationsPercent.Enabled = false;
             DestinationsPercent.ReadOnly = true;
             Controls.Add(DestinationsPercent);
 
             VehiclesPercent = new TextBox();
             VehiclesPercent.Text = "0%";
-            VehiclesPercent.Location = new Point(215, 321);
-            VehiclesPercent.Size = new Size(40, 22);
+            VehiclesPercent.Location = new Point(222, 270);
+            VehiclesPercent.Size = new Size(45, 22);
             VehiclesPercent.Enabled = false;
             VehiclesPercent.ReadOnly = true;
             Controls.Add(VehiclesPercent);
 
             Save = new Button();
             Save.Text = "Save";
-            Save.Location = new Point(261, 320);
+            Save.Location = new Point(273, 270);
             Save.Size = new Size(75, 23);
             Save.Click += SaveData;
             Controls.Add(Save);
 
             DestinationsLabel = new Label();
             DestinationsLabel.Text = "Destinations";
-            DestinationsLabel.Location = new Point(10, 324);
+            DestinationsLabel.Location = new Point(12, 273);
             Controls.Add(DestinationsLabel);
 
             VehiclesLabel = new Label();
             VehiclesLabel.Text = "Vehicles";
-            VehiclesLabel.Location = new Point(148, 324);
+            VehiclesLabel.Location = new Point(155, 273);
             Controls.Add(VehiclesLabel);
         }
         private void OnSelectedChanged(object sender, EventArgs args)

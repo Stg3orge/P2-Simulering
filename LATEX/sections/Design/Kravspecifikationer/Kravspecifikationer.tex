@@ -101,35 +101,23 @@ Main() vil skulle kalde GUI MAIN når programmet states, da det er brugerens int
 
 Det samme gælder for ToolController som ikke vil kunne vælge/fremstille elementer uden brugeren fortæller hvliket elemnter det er, og samme princip ses ved ViewPort, da den skal have input fra ToolController omkring hvlike elementer som skal vise, samt ved indlæsning af filer, vil ViewPort skulle have data fra FIlehander, som igen skal køres igennem GUI MAIN.
 
-Herved opnår vi en god nedkapslig af programmet.
+Herved opnår vi en god nedkapslig af programmet, da der kun vil være 4 kerne klasser som har hvert deres formål, som beskrives nedenfor.
 
 \vspace{5mm}
 
+\textbf{Programmets kerne klasser} \\
 
-GUI MAIN skal som sagt intalisere de andre "core classes" ved opstart af programmet, derudover skal GUI MAIN 
+GUI MAIN skal som sagt intalisere de andre "core classes" ved opstart af programmet, derudover skal GUI MAIN håntere input fra brugeren. Hvis brugeren f.eks. vægler at tilføje en vej(element), sendes inputet til ToolController.
 
+\vspace{5mm}
 
+Ud fra hvlike input ToolControlleren får fra GUI MAIN skal det tilsvarende element vælges f.eks en vej. Hvorefter ToolControlleren udfører handlingen til den valgte element i dette tilfælde tilføje en vej til projektet. Derefter sendes outputet fra ToolController til ViewPort. Da vejen kun er tilføjet i programmets data, men ikke visualiseret. 
 
+\vspace{5mm}
 
-\textbf{Programmets Funktioner} \\
+ViewPorten visualisere derfor elementet, altså i dette tilfælde at tegne vejen i projektet.
 
-GUI MAIN
- - bruger input
  
- 
-ToolController
- - 
- 
- 
-ViewPort
- - Visning af simulation, samt projekt
- - Visning af valge elemter fra toolcontroler, f.eks veje, noder, osv. 
- 
- 
- 
-Simulation
- -  
-
 
 
 

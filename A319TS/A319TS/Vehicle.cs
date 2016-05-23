@@ -65,11 +65,11 @@ namespace A319TS
 
         public int ToDestTime;
         private bool _toDestStarted;
-        public List<Road> _toDestPath;
+        private List<Road> _toDestPath;
 
         public int ToHomeTime;
         private bool _toHomeStarted;
-        public List<Road> _toHomePath;
+        private List<Road> _toHomePath;
 
         ////////// CONSTRUCTOR //////////
         public Vehicle(Project project, Node home, Destination dest, VehicleType type, int toDestTime, int toHomeTime)
