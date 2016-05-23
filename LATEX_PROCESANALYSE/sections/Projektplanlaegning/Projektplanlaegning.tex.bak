@@ -2,12 +2,12 @@
 Dette kapitel vil beskrive hvordan gruppen har planlagt projektforløbet både tidsmæssigt samt opgavemæssigt, og hvilke redskaber vi har benyttet os af til at håndtere planlægningen igennem processen. Således indikere 
 
 \section{Tidsplanlægning}\label{Tidsplanlaegning}
-For at optimere vores arbejdsproces bedst muligt og udnytte projektet tiden optimalt muligt, valgte vi at skabe et overblik over hvordan vores tid skulle bruge både på dags-, uge- og månedsbasis, ved hjælp af forskellige redskaber som dagsorden, trello og Gantt-diagrammer som havde hvert deres formål igennem 
+For at optimere vores arbejdsproces bedst muligt og udnytte projektet tiden optimalt muligt, valgte vi at skabe et overblik over hvordan vores tid skulle bruge både på dags-, uge- og månedsbasis, ved hjælp af forskellige redskaber som dagsorden, Trello og Gantt-diagram som havde hvert deres formål igennem 
 
 
 
 \subsection{Gantt-diagram}\label{Gantt-diagram}
-Efter den første måned af projektarbejdet blev der udviklet et Gantt-diagram, som havde til formål at give os et overblik hvordan vi forventede at vores tid ville blive brugt på de forskellige dele som rapporten skulle indholde.
+Efter den første måned af projektarbejdet blev der udviklet et Gantt-diagram, som havde til formål at give et overblik hvordan forventede at vores tid ville blive brugt på de forskellige dele som rapporten skulle indholde. Gantt-diagrammet var tiltænkt at give et estimat på hvordan projektet skulle struktureres, men ikke til at 
 
 \begin{figure}[h]
 \includegraphics[scale=0.35]{SimuleringGanttdiagramStart}
@@ -16,11 +16,14 @@ Efter den første måned af projektarbejdet blev der udviklet et Gantt-diagram, 
 \end{figure}
 
 \section{Opgaveplanlægning}\label{Opgaveplanlaegning}
-Pasta ipsum dolor sit amet sofa king occhi di lupo occhi di lupo torchio penne lisce fuck cavatappi foglie d'ulivo conchiglie lasagnette fusilli lunghi timpano bucatini trofie fiorentine. Linguettine cencioni sumbitch mezzelune mezzi bombardoni mafalde spiralini pillus ditalini lasagnotte lumaconi capellini pappardelle frak farfalle penne. Croxetti tripoline fettucelle fuck timpano farfalle creste di galli.
+
+For at optimere måden at arbejde på og give et overblik over hvad der var hvad blevet færdiggjort og hvad der manglende på dags- og ugebasis, benyttede vi os af dagsorden på tavlen og Trello til at holde styr på projektopgaverne. 
 
 \subsection{Dagsorden}\label{Dagsorden}
 
 Indledende til projektarbejdsdage valgte vi at benytte en dagsorden på tavlen, hvor der blev diskuteret hvad burde være lavet siden sidst, samt om der var skulle tilføjes yderligere opgaver siden sidst. Alle havde til opgave at læse det nye materiale der var blevet skrevet siden sidst, så hvis der var noget der skulle d 
+
+dagsorden blev brugt til at finde ud af hvad der skulle laves og hvad der skulle tilføjes til trello, mens trello blev brugt til at holde styr om opgaverne blev lavet og hvem der gjorde hvad
 
 
 \subsection{Trello}\label{Trello}
