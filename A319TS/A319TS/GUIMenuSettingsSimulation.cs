@@ -23,6 +23,7 @@ namespace A319TS
         Label StepSizeLabel = new Label();
         Label VehicleSpaceLabel = new Label();
         Label IncommingRangeLabel = new Label();
+        Label TrailingSpeedLabel = new Label();
         NumericUpDown PrimaryVehicleCount = new NumericUpDown();
         NumericUpDown PrimaryInbound = new NumericUpDown();
         NumericUpDown PrimaryOutbound = new NumericUpDown();
@@ -38,6 +39,7 @@ namespace A319TS
         ComboBox SharedStepSize = new ComboBox();
         NumericUpDown SharedVehicleSpace = new NumericUpDown();
         NumericUpDown SharedIncommingRange = new NumericUpDown();
+        NumericUpDown SharedTrailingSpeed = new NumericUpDown();
         Button InfoButton = new Button();
         Button DefaultsButton = new Button();
         Button SaveButton = new Button();
@@ -52,7 +54,7 @@ namespace A319TS
 
         private void InfoButtonClick(object sender, EventArgs args)
         {
-            GUISettingsInfo info = new GUISettingsInfo();
+            GUIInfoSettings info = new GUIInfoSettings();
             info.ShowDialog();
         }
         private void DefaultsButtonClick(object sender, EventArgs args)
@@ -62,38 +64,10 @@ namespace A319TS
         }
         private void SaveButtonClick(object sender, EventArgs args)
         {
-            if (CheckInbound() && CheckOutbound() && CheckTimeSpread())
+            if (CheckTimeSpread())
             {
                 SetProjectToValues();
                 MessageBox.Show("Settings saved");
-            }
-        }
-        private bool CheckInbound()
-        {
-            if (PrimaryInbound.Value > PrimaryVehicleCount.Value ||
-                SecondaryInbound.Value > SecondaryVehicleCount.Value)
-            {
-                InboundLabel.ForeColor = Color.Red;
-                return false;
-            }
-            else
-            {
-                InboundLabel.ForeColor = Color.Black;
-                return true;
-            }
-        }
-        private bool CheckOutbound()
-        {
-            if (PrimaryOutbound.Value > PrimaryVehicleCount.Value ||
-                SecondaryOutbound.Value > SecondaryVehicleCount.Value)
-            {
-                OutboundLabel.ForeColor = Color.Red;
-                return false;
-            }
-            else
-            {
-                OutboundLabel.ForeColor = Color.Black;
-                return true;
             }
         }
         private bool CheckTimeSpread()
@@ -143,6 +117,7 @@ namespace A319TS
             SharedStepSize.SelectedItem = Project.Settings.StepSize;
             SharedVehicleSpace.Value = Project.Settings.VehicleSpace;
             SharedIncommingRange.Value = Project.Settings.IncommingRange;
+            SharedTrailingSpeed.Value = Project.Settings.TrailingSpeed;
         }
         private void SetProjectToValues()
         {
@@ -161,6 +136,7 @@ namespace A319TS
             Project.Settings.StepSize = Convert.ToInt32(SharedStepSize.SelectedItem);
             Project.Settings.VehicleSpace = decimal.ToInt32(SharedVehicleSpace.Value);
             Project.Settings.IncommingRange = decimal.ToInt32(SharedIncommingRange.Value);
+            Project.Settings.TrailingSpeed = decimal.ToInt32(SharedTrailingSpeed.Value);
         }
     }
 }

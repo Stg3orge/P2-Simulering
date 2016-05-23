@@ -91,9 +91,9 @@ namespace A319TS
         private void Setup()
         {
             Text = "Run";
-            Size = new Size(500, 300);
-            MinimumSize = new Size(500, 300);
-            MaximumSize = new Size(500, 300);
+            Size = new Size(600, 400);
+            MinimumSize = new Size(600, 400);
+            MaximumSize = new Size(600, 400);
             ShowIcon = false;
             MinimizeBox = false;
             MaximizeBox = false;
@@ -101,30 +101,30 @@ namespace A319TS
             StartPosition = FormStartPosition.CenterParent;
 
             Information.Location = new Point(12, 12);
-            Information.Size = new Size(460, 179);
+            Information.Size = new Size(558, 273);
             Information.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0); // ((byte)(0)));
             Information.BackColor = SystemColors.WindowText;
             Information.ForeColor = SystemColors.ControlDark;
             Information.ReadOnly = true;
             Controls.Add(Information);
 
-            ProgressBar.Location = new Point(12, 197);
-            ProgressBar.Size = new Size(460, 23);
+            ProgressBar.Location = new Point(12, 291);
+            ProgressBar.Size = new Size(558, 23);
             ProgressBar.Maximum = 86400000;
             Controls.Add(ProgressBar);
 
-            ProcessLabel.Location = new Point(12, 223);
+            ProcessLabel.Location = new Point(12, 317);
             ProcessLabel.Size = new Size(203, 13);
             Controls.Add(ProcessLabel);
 
             Start.Text = "Start";
-            Start.Location = new Point(316, 226);
+            Start.Location = new Point(414, 320);
             Start.Size = new Size(75, 23);
             Start.Click += StartClick;
             Controls.Add(Start);
 
             Cancel.Text = "Cancel";
-            Cancel.Location = new Point(397, 226);
+            Cancel.Location = new Point(495, 320);
             Cancel.Size = new Size(75, 23);
             Cancel.Enabled = false;
             Cancel.Click += CancelClick;

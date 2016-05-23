@@ -5,16 +5,18 @@ using System.Drawing;
 namespace A319TS
 {
     [Serializable]
-    public class LightController : Entity, IPositionable
+    public class LightController : IPositionable
     {
+        public Point Position { get; set; }
         public List<Node> Lights { get; private set; }
         public int FirstTime { get; set; }
         public int SecondTime { get; set; }
         private int _current;
         private int _counter = 0;
         
-        public LightController(Point position) : base(position)
+        public LightController(Point position)
         {
+            Position = position;
             Lights = new List<Node>();
             FirstTime = 10000;
             SecondTime = 10000;

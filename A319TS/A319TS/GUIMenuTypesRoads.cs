@@ -26,31 +26,19 @@ namespace A319TS
         private void Setup()
         {
             Text = "Road Types";
-            Size = new Size(265, 400);
-            MinimumSize = new Size(265, 400);
-            MaximumSize = new Size(265, 400);
+            Size = new Size(243, 400);
+            MinimumSize = new Size(243, 400);
+            MaximumSize = new Size(243, 400);
             ShowIcon = false;
             MinimizeBox = false;
             MaximizeBox = false;
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
-
-            NameLabel = new Label();
-            NameLabel.Text = "Name";
-            NameLabel.Location = new Point(12, 15);
-            NameLabel.AutoSize = true;
-            Controls.Add(NameLabel);
-
+            
             SetName = new TextBox();
             SetName.Location = new Point(67, 12);
             SetName.Size = new Size(80, 22);
             Controls.Add(SetName);
-
-            SpeedLabel = new Label();
-            SpeedLabel.Text = "Speed";
-            SpeedLabel.Location = new Point(12, 42);
-            SpeedLabel.AutoSize = true;
-            Controls.Add(SpeedLabel);
 
             SetSpeed = new NumericUpDown();
             SetSpeed.Location = new Point(67, 40);
@@ -59,23 +47,35 @@ namespace A319TS
             SetSpeed.Minimum = 0;
             Controls.Add(SetSpeed);
 
+            NameLabel = new Label();
+            NameLabel.Text = "Name";
+            NameLabel.Location = new Point(16, 15);
+            NameLabel.AutoSize = true;
+            Controls.Add(NameLabel);
+
+            SpeedLabel = new Label();
+            SpeedLabel.Text = "Speed";
+            SpeedLabel.Location = new Point(12, 42);
+            SpeedLabel.AutoSize = true;
+            Controls.Add(SpeedLabel);
+            
             Add = new Button();
             Add.Text = "Add";
-            Add.Location = new Point(153, 39); 
+            Add.Location = new Point(169, 39); 
             Add.Size = new Size(50, 23);
             Add.Click += AddClick;
             Controls.Add(Add);
 
             Remove = new Button();
             Remove.Text = "Remove";
-            Remove.Location = new Point(156, 320);
+            Remove.Location = new Point(138, 320);
             Remove.Size = new Size(75, 23);
             Remove.Click += RemoveClick;
             Controls.Add(Remove);
 
             Roads = new DataGridView();
-            Roads.Location = new Point(15, 68);
-            Roads.Size = new Size(217, 246);
+            Roads.Location = new Point(12, 68);
+            Roads.Size = new Size(201, 246);
             Roads.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             Roads.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             Roads.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
