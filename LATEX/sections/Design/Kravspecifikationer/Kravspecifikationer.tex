@@ -97,7 +97,7 @@ På figur \ref{fig:ProgramOversigt} ses hvordan vi forventer de 6 beskrevet dele
 \vspace{5mm}
 
 \textbf{Programmets flow} \\
-Main() vil skulle kalde GUI MAIN når programmet states, da det er brugerens interface kerne, og vil derfor stå for alt input fra brugeren. GUI MAIN forbinder derfor også de resterende "core classes" da simulations delen ikke vil kunne køres uden input fra brugeren, da den f.eks skal kende til "Simulation Settings" som kommer fra Filehandler, som er forbundet med GUI MAIN. \\
+Main() vil skulle kalde GUI MAIN når programmet startes, da det er brugerens interface kerne, og vil derfor stå for alt input fra brugeren. GUI MAIN forbinder derfor også de resterende "core classes" da simulations delen ikke vil kunne køres uden input fra brugeren, da den f.eks skal kende til "Simulation Settings" som kommer fra Filehandler, som er forbundet med GUI MAIN. \\
 
 Det samme gælder for ToolController som ikke vil kunne vælge/fremstille elementer uden brugeren fortæller hvilke elementer det er, og samme princip ses ved ViewPort, da den skal have input fra ToolController omkring hvilke elementer som skal vise, samt ved indlæsning af filer, vil ViewPort skulle have data fra FIlehander, som igen skal køres igennem GUI MAIN.
 
