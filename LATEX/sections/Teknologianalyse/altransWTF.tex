@@ -1,6 +1,6 @@
 \section{Altrans}
 Alternativ Transportsystemer (Altrans) er en trafikmodel, hvis formål er at belyse hvordan en øget brug af den kollektive transport vil påvirke miljøet \cite[s. 14]{dmumodelanalyser}. Trafikmodellen er blevet udviklet af Danmarks Miljøundersøgelser (DMU) i 1994. Altrans består af 3 hovedmodeller: en geografisk model, en adfærds model og en emissions model \cite[s. 14]{dmuadfaerdsmodel}. Emissions modellen bliver ikke nævnt i rapporten, da den ikke er relevant for dette projekt.
-\subsection{Geografisk model}
+\subsection*{Geografisk model}
 Den geografiske model bruges til at beregne rejsetider, ventetider og skiftetider. For at udregne disse benyttes følgende undermodeller:
 
 \begin{itemize}
@@ -38,7 +38,7 @@ Veje i byer           & 40  \\ \hline
 \end{tabular}
 \end{table}
 
-\subsection{Adfærds model}
+\subsection*{Adfærds model}
 Adfærds modellens formål er at give et estimat på fordelingen af transportmiddelvalg, populariteten af destinationer, kørekort fordeling, og bilejerskab. For at udregne estimaterne, benytter adfærds modellen sig af 3 undermodller \cite[s. 25-26]{dmumodelanalyser}:
 
 \begin{itemize}
@@ -82,7 +82,7 @@ Modellen for bilejerskab estimerer hvor mange biler en husstand har. Modellen be
 
 %Derudover tager bilmodellen i ALTRANS også motorslid med i beregningerne for koldstartstillæg.
 
-\section{Vurdering}
+\section*{Vurdering}
 Når der i den Geografiske model bliver udregnet rejsetider for biler, bliver der ikke overvejet hvordan trafikken er på vejene. Rejsetiderne bliver udregnet ved at finde ruten gennem vejnettet og derefter gange delafstandene med hastighederne på figur \ref{altranshastigheder}. At udelade trafikdensiteten i udregningen kan dermed gøre bilrejser mere attraktive når et individ skal vælge transportmiddel, hvilket kan føre til et upræcist resultat. Ved simulering kan man selvfølgelig ikke lave en model der passer 100\% på virkeligheden, men i dette tilfælde kunne modellerne muligvis have taget et andet advanceret simulerings program som for eksempel VisSim i brug til at udregne realistiske rejsetider. Et andet problem når der skal udregnes bilrejser, er at afstanden bliver udregnet fra centrum til centrum af byer. Dette kan give et urealistisk billede hvis individet egentlig kun skal fra udkanten af en zone til udkanten af en sidelæggende zone, specielt hvis rejsen foregår i kun et centrum, da modellen da vil tage gennemsnittet for rejser i det centrum. Derudover gør det, at individet bare skal køre til et centrum, at modellen ikke overvejer hvor langt individet skal gå fra en parkeringsplads til destinationen. 
 
 \vspace{5mm}

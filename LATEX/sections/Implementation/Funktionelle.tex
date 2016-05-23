@@ -4,7 +4,7 @@
 For at håndtere alle dele af programmet blev der implementeret en et styringscenter, som heri findes som klassen \texttt{ToolController}. Formålet med denne fremgangsmåde skulle give bedre overblik over programmets mange metoder og give mulighed for let at håndtere fejl og ændringer i funktionaliteten. Klasserne i programmet er til dette formål håndteret objektorienteret og generelt nok til at fremgangsmåden kan fungere i praksis.
 
 %//////////////////////////////// ToolController ////////////////////////////////%
-\subsection{ToolController}
+\subsection*{ToolController}
 \texttt{ToolController} klassen har til formål at forbinde de forskellige værktøjer så når brugeren f.eks. trykker på et af værktøjerne vil \texttt{ToolControlleren} kalde de tilsvarende metoder til værktøjet. Samt at der kun at være valgt et værktøj af gangen. \texttt{ToolController} er altså klassen som står for funktionerne som f.eks. \texttt{AddNode()}, \texttt{AddRoad()}, \texttt{AddLightController()} osv.
 
 \begin{figure}[H]
@@ -177,7 +177,7 @@ private void AddRoad(Partitions partition)
 Hvis brugern holder "Shift" nede imens, vil programmet sætte \texttt{\_firstNode} til den nuværrende \texttt{Node} efter at der er blevet tilføjet en vej, da den \texttt{Node} vil være startpunktet for den næste vej. Det er en implementation som gør det nemmere og hurtigere for brugeren at tilføje veje. 
 
 %//////////////////////////////// FileHandler ////////////////////////////////%
-\subsection{FileHandler}
+\subsection*{FileHandler}
 \texttt{FileHandleren} er sat op så at man har mulighed for at lave et ny projekt, åbne og gemme projektet. Der er blevet dannet tre metoder som håndtere de tre valg for brugeren, for at gøre det mest læsevenligt for dem der skal læse koden. \texttt{FileHandler} gør sig brug af \texttt{BinaryFormatter} for at gemme og åbne de forskellige objekter i binær form. Vi startede ud med at bruge \texttt{XMLSerializer}, da vi lavede \texttt{FileHandleren}. Vi stødte ind på nogle problemer da \texttt{XMLSerializer} skulle læse to objekter som har en reference til hinanden, og det skabte en circular reference som var årsagen til vores program crashede på daværende tidspunkt. Ved denne fejl skiftede vi til \texttt{BinaryFormatter}, da den er i stand til at håndtere en circular reference.
 
 \vspace{5mm}
@@ -223,7 +223,7 @@ Metoden \texttt{OpenProject}, der vises på figur \ref{OpenProjectCode}, kan åb
 I \texttt{FileHandler} klassen findes der også en \texttt{SaveProject()} metode som gemmer projektet, som brugeren har arbejdet på. \texttt{SaveProject()} metoden benytter den samme kode struktur som \texttt{OpenProject()} metoden, som ses på figur \ref{OpenProjectCode}. Metoderne minder meget om hinanden, hvor SaveProjekt gemmer istedet for at åbne et projekt. Til gemning og åbning af simuleringsdata er der metoderne \texttt{OpenSimulation()} og \texttt{SaveSimulation()}, der fungerer på samme måde som \texttt{OpenProject()} og \texttt{SaveProject()}.
 
 %//////////////////////////////// Simulation ////////////////////////////////%
-\subsection{Simulation}\label{SimulationClass}
+\subsection*{Simulation}\label{SimulationClass}
 \texttt{Simulation} klassen indeholder funktionaliteten der bruges til at simulere. Klassen tager to \texttt{BackgroundWorker} instanser i brug til at køre simuleringerne, en til den primære simulering og en til den sekundære. \texttt{BackgroundWorker} er en klasse der kan køre en metode på en ny tråd, så programmet kan multitaske. Begge \texttt{Backgroundworker} instanser er sat til at køre \texttt{Simulate()}, og \texttt{SimulationCompleted()} når \texttt{Simulate()} er færdig. 
 
 \begin{figure}[H]
