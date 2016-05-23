@@ -48,25 +48,27 @@ private double GetSpeed()
     return 0;
   else if (CurrentNode != null 
            && CurrentNode.Type == NodeTypes.Yield
-           && incomingVehiclesCount > 0 
-           && !(incomingVehiclesCount == 1 
-           && _currentRoad.To.IncomingVehicles.Contains(this)))
+           && incomingVehiclesCount > 0)
     return 0;
   else if (vehicleInfront != null)
-    return vehicleInfront.Speed;
+  {
+    if (Type.MaxSpeed > vehicleInfront.Speed)
+      return vehicleInfront.Speed * 
+             (_settings.TrailingSpeed / 100);
+    else return Type.MaxSpeed;
+  }
   else
   {
     if (Type.MaxSpeed > _currentRoad.Type.Speed)
       return _currentRoad.Type.Speed;
-    else
-      return Type.MaxSpeed;
+    else return Type.MaxSpeed;
   }
 }
 \end{lstlisting}
 \caption{GetSpeed metoden}\label{GetSpeedCode}
 \end{figure}
 
-På figur \ref{GetSpeedCode} vises metoden \texttt{GetSpeed}, som var den første der blev kaldet i \texttt{Drive} metoden. Først tjekkes der på linje 6, om køretøjet er på en \texttt{Node}, (\texttt{CurrentNode} er null hvis køretøjet er på en vej mellem to noder), og hvis den \texttt{Node} så har typen \texttt{Light}, og at \texttt{bool} variablen \texttt{Green} er false, svarer det til at køretøjet er ved et rødt lys, og hastigheden bliver dermed returneret som et 0. Derefter tjekkes der på linje 10, om \texttt{Noden} har typen \texttt{Yield}. Hvis det er sandt, og at der er indkommende køretøjer som ikke er dette køretøj, så vil hastigheden også sættes til 0. Hvis ikke de to første er sande, så tjekkes der efter om der er et køretøj foran dette køretøj indenfor rækkeviden \texttt{VehicleSpace}, som brugeren kan indstille i settings. Hvis der findes et køretøj, bliver hastigheden sat lig med køretøjet. Sidst har vi tilfældet hvor der ikke er noget der blokerer køretøjet, hvor hastigheden vil blive sat lig hastighedsgrænsen på vejen, medmindre køretøjets egen max hastighed er lavere hvor hastigheden bare vil sættes til det maksimale.
+På figur \ref{GetSpeedCode} vises metoden \texttt{GetSpeed}, som var den første der blev kaldet i \texttt{Drive} metoden. Først tjekkes der på linje 6, om køretøjet er på en \texttt{Node}, (\texttt{CurrentNode} er null hvis køretøjet er på en vej mellem to noder), og hvis den \texttt{Node} så har typen \texttt{Light}, og at \texttt{bool} variablen \texttt{Green} er false, svarer det til at køretøjet er ved et rødt lys, og hastigheden bliver dermed returneret som et 0. Derefter tjekkes der på linje 10, om \texttt{Noden} har typen \texttt{Yield}. Hvis det er sandt, og at der er indkommende køretøjer som ikke er dette køretøj, så vil hastigheden også sættes til 0. Hvis ikke de to første er sande, så tjekkes der efter om der er et køretøj foran dette køretøj indenfor rækkeviden \texttt{VehicleSpace}, som brugeren kan indstille i settings. Hvis der findes et køretøj, og køretøjet kører langsomere end det nuværende køretøj, bliver hastigheden sat lig med køretøjet gange procentsatsen \texttt{TrailingSpeed}. Hvis køretøjet foran kører hurtigere, sættes hastigheden bare til køretøjets maksimale. Sidst har vi tilfældet hvor der ikke er noget der blokerer køretøjet, hvor hastigheden vil blive sat lig hastighedsgrænsen på vejen, medmindre køretøjets egen max hastighed er lavere hvor hastigheden bare vil sættes til det maksimale.
 
 \begin{figure}[H]
 \begin{lstlisting}
