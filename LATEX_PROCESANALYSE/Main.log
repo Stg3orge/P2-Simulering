@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  18 MAY 2016 12:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.14)  23 MAY 2016 14:27
 entering extended mode
 **Main.tex
 (Main.tex
@@ -1172,7 +1172,17 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 ) (setup/variables.tex
 (P:\MiKTeX\tex\latex\tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)) (Main.aux)
+)) (Main.aux
+
+LaTeX Warning: Label `Gantt-diagram-picture' multiply defined.
+
+
+LaTeX Warning: Label `Gantt-diagram-picture' multiply defined.
+
+
+LaTeX Warning: Label `Gantt-diagram-picture' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
@@ -1188,8 +1198,7 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 7.
-
-(P:\MiKTeX\tex\latex\lm\t1lmr.fd
+ (P:\MiKTeX\tex\latex\lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (P:\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1271,7 +1280,7 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ge.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...over samarbejdsaftalen}{10}{section.0.5.2}
+l.31 ...5.3.3}Google Drev}{12}{subsection.0.5.3.3}
                                                    [1
 
 
@@ -1302,23 +1311,69 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-<./figures/SimuleringGanttdiagramStart.jpg, id=142, 1002.144pt x 333.04425pt>
+[2
+
+]
+<./figures/SimuleringGanttdiagramStart.jpg, id=158, 1002.144pt x 333.04425pt>
 File: ./figures/SimuleringGanttdiagramStart.jpg Graphic file (type jpg)
 
 <use ./figures/SimuleringGanttdiagramStart.jpg>
 Package pdftex.def Info: ./figures/SimuleringGanttdiagramStart.jpg used on inpu
-t line 13.
+t line 11.
 (pdftex.def)             Requested size: 350.75566pt x 116.56723pt.
 
-Overfull \hbox (5.75566pt too wide) in paragraph at lines 13--15
+Overfull \hbox (5.75566pt too wide) in paragraph at lines 11--13
  [][] 
  []
 
-[2
+File: ./figures/SimuleringGanttdiagramStart.jpg Graphic file (type jpg)
+<use ./figures/SimuleringGanttdiagramStart.jpg>
+Package pdftex.def Info: ./figures/SimuleringGanttdiagramStart.jpg used on inpu
+t line 19.
+(pdftex.def)             Requested size: 350.75566pt x 116.56723pt.
 
- <./figures/SimuleringGanttdiagramStart.jpg>])
-(sections/Gruppesamarbejde/Gruppesamarbejde.tex [3]
+Overfull \hbox (5.75566pt too wide) in paragraph at lines 19--21
+ [][] 
+ []
+
+[3 <./figures/SimuleringGanttdiagramStart.jpg>]
+File: ./figures/SimuleringGanttdiagramStart.jpg Graphic file (type jpg)
+
+<use ./figures/SimuleringGanttdiagramStart.jpg>
+Package pdftex.def Info: ./figures/SimuleringGanttdiagramStart.jpg used on inpu
+t line 30.
+(pdftex.def)             Requested size: 350.75566pt x 116.56723pt.
+
+Overfull \hbox (5.75566pt too wide) in paragraph at lines 30--32
+ [][] 
+ []
+
+File: ./figures/SimuleringGanttdiagramStart.jpg Graphic file (type jpg)
+<use ./figures/SimuleringGanttdiagramStart.jpg>
+Package pdftex.def Info: ./figures/SimuleringGanttdiagramStart.jpg used on inpu
+t line 42.
+(pdftex.def)             Requested size: 250.53539pt x 83.26085pt.
+ [4])
+(sections/Arbejdsproces/Arbejdsproces.tex [5]
 Chapter 3.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+[6
+
+]) (sections/Laeringsproces/Laeringsproces.tex [7]
+Chapter 4.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Gruppesamarbejde/Gruppesamarbejde.tex [8
+
+] [9]
+Chapter 5.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
@@ -1330,54 +1385,43 @@ Overfull \hbox (1.6114pt too wide) in paragraph at lines 6--8
 res gruppedemokrati
  []
 
-[4
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 10.
+(P:\MiKTeX\tex\latex\lm\omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 10.
+ [10
 
-] [5] [6]) (sections/Vejledersamarbejde/Vejledersamarbejde.tex [7]
-Chapter 4.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
-[][][][][][][][][]  
- []
-
-) (sections/Samarbejdsaftale/Samarbejdsaftale.tex [8
-
-] [9]
-Chapter 5.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
-[][][][][][][][][]  
- []
-
-) (sections/Arbejdsproces/Arbejdsproces.tex [10
-
-]
+] [11] [12])
+(sections/Vejledersamarbejde/Vejledersamarbejde.tex [13]
 Chapter 6.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-[11
+[14
 
-]
+]) (sections/Samarbejdsaftale/Samarbejdsaftale.tex [15]
 Chapter 7.
 
-Overfull \hbox (10.0pt too wide) in paragraph at lines 12--12
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-[12
+) (sections/Syntese/Syntese.tex [16
 
-]) (sections/Laeringsproces/Laeringsproces.tex [13]
+] [17]
 Chapter 8.
 
 Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
 [][][][][][][][][]  
  []
 
-) (sections/Gruppekontrakt/Gruppekontrakt.tex [14
+[18
 
-]
+]) (sections/Gruppekontrakt/Gruppekontrakt.tex [19]
 Chapter 9.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1388,7 +1432,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
 [][][][][][][][][]  
  []
 
-[15
+[20
 
 ]
 
@@ -1397,14 +1441,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]
+[21]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 22.48878pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]))
+[22]))
 No file Main.bbl.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1412,7 +1456,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]
+[23]
 \tf@thm=\write5
  
 AED: lastpage setting LastPage
@@ -1423,27 +1467,28 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 22209 strings out of 493673
- 386152 string characters out of 3151272
- 474798 words of memory out of 3000000
- 24884 multiletter control sequences out of 15000+200000
+ 22247 strings out of 493673
+ 386651 string characters out of 3151272
+ 475866 words of memory out of 3000000
+ 24905 multiletter control sequences out of 15000+200000
  54251 words of font info for 47 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
- 64i,11n,75p,1190b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
-{P:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{P:/MiKTeX/fonts/enc/dvips/fontname/8
-r.enc}<P:/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><P:/MiKTeX/fonts/type1/public
-/lm/lmbx12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><P:/MiKTeX/fonts/type
-1/public/lm/lmr10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr12.pfb><P:/MiKTeX/fon
-ts/type1/public/lm/lmr8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><P:/M
-iKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on Main.pdf (21 pages, 591681 bytes).
+ 64i,11n,75p,1375b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
+{P:/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-
+ec.enc}{P:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<P:/MiKTeX/fonts/type1/public
+/lm/lmbx10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><P:/MiKTeX/fonts/typ
+e1/public/lm/lmbx8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr10.pfb><P:/MiKTeX/fo
+nts/type1/public/lm/lmr12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr8.pfb><P:/MiK
+TeX/fonts/type1/public/lm/lmssbx10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmsy10.
+pfb><P:/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on Main.pdf (26 pages, 614355 bytes).
 PDF statistics:
- 475 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 474 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 532 PDF objects out of 1000 (max. 8388607)
+ 123 named destinations out of 1000 (max. 500000)
+ 522 words of extra memory for PDF output out of 10000 (max. 10000000)
 

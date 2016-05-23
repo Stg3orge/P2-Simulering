@@ -1,7 +1,7 @@
 \section{Elementerne i Vejnettet}\label{ElementerVejnettet}
 Dette afsnit beskriver de forskellige elementer der eksistere i vejnettet. Disse elementer kan bla. være knuder, destinationer, veje og lyskryds. Der vil i afsnittet blive gennemgået hvordan kildekoden er sat op for de forskellige elementer. 
 
-\subsection{Node}
+\subsection*{Node}
 I vores program anvender vi et grid hvorpå brugeren indsætter knuder der udgør de forskellige vejnet der bliver oprettet. Disse knuder kan være forskellige typer se nedenstående liste. Knudetyperne er opsat på en enumerator, således de kan tilgås igennem en variabel se figur \ref{enumNodeTypes}. Dette er gjort således at processen i at oprette vejnet er relativt simple. Et simpelt eksempel ville være at brugeren indsætter to knuder, den første knude hvor brugeren ønsker køretøjerne skal køre fra, og en knude med typen \texttt{Parking} tæt på køretøjernes \texttt{Destination}. Således kan et meget simpelt vejnet opstille. Men det er også muligt for brugeren at opstille meget mere komplekse vejnet med lyskryds.
 
 \begin{figure}[H]
@@ -20,7 +20,7 @@ public enum NodeTypes { None, Yield, Home, Parking, Light, Inbound, Outbound }
 \item [Outbound] er en knude, hvor køretøjerne køre ud fra, når et køretøj forlader vejnetværket.
 \end{description}
 
-\subsection{Destination}
+\subsection*{Destination}
 \texttt{Destination} klassen i vores program er et punkt hvorpå køretøjerne vil søge henimod. Dette er ikke det punkt hvor køretøjerne stopper, til dette formål anvendes der en \texttt{Node} som er angivet til at være til parkering i nærheden af en \texttt{Destination}. \texttt{Destination} klassen består af en instans af \texttt{DestionationType} klassen, dette er, ligesom med \texttt{Vehicle} og \texttt{Road} klasserne, en klasse der bruges til at brugerdefinere forskellige typer af destinations med forskellige parametre, disse parametre kan ses på figur \ref{DestinationTypes}. Den første er \texttt{name} på en \texttt{Destination}, denne anvendes således brugeren kan have overblik over de forskellige destinationer. Derudover bruges \texttt{Color} til at vise farven på de forskellige destinationer, dette gøres også for at have overblik over destiationerne. Samtidig anvendes variablen \texttt{Distribution} til at definerer hvor mange procent af køretøjerne der køre til de individueller distinations typer.
 
 \begin{figure}[H]
@@ -39,7 +39,7 @@ public DestinationType(string name, Color color)
 \caption{LightController klassen}\label{DestinationTypes}
 \end{figure}
 
-\subsection{LightController}
+\subsection*{LightController}
 \texttt{LightController} klassen er den del af programmet hvori brugeren kan indstille på deres trafiklys knudernes opførsel.
 
 \begin{figure}[H]
@@ -68,7 +68,7 @@ private void ToggleLights()
 
 \texttt{LightController} klassen har til formål kontrollere et trafiklys over tid. Dette er valgt at gøre ved brug af metoden \texttt{Update()}, se figur \ref{LightControllerKlassen}. I metoden tæller \texttt{\_counter} op til den aktive tid, som er current, altså den tæller op til hvor lang tid der har været siden sidste lys skifte. Den selektivekontrolstruktur bliver udført, hvis \texttt{\_counter} er over den tid vi venter på nu, hvor \texttt{\_current} enten er \texttt{FirstTime} eller \texttt{SecondTime}. Inde i kontrolstrukturen bliver \texttt{\_current} skiftet mellem \texttt{FirstTime} eller \texttt{SecondTime} således at lyskrydset skifter mellem rød og grøn, som ikke er visuelt. Metoden \texttt{ToggleLights()} kigger så igennem de knudetyper som er sat til \texttt{Light} og skifter dem, således de skifter mellem rød og grøn. Der er valgt at skifte lyskrydsene tidsbaseret, fordi flere lyskryds i den virkelige verden også er sat op til tid.
 
-\subsection{Road}
+\subsection*{Road}
 Road klassen indeholder de variabler der skal anvendes for at kunne beskrive en vej i programmet.
 
 \begin{figure}[H]

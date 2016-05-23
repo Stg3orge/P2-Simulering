@@ -64,18 +64,10 @@
 			}
 		},
 		{
-			"file": "sections/Design/Test.tex",
-			"settings":
-			{
-				"buffer_size": 2045,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "references.bib",
 			"settings":
 			{
-				"buffer_size": 9740,
+				"buffer_size": 10214,
 				"line_ending": "Windows"
 			}
 		},
@@ -88,10 +80,13 @@
 			}
 		},
 		{
+			"contents": "\\section{Grafteori}\n\nGrafteori handler om at beskrive  modeller matematisk. Grafteori er væslig når man skal optimere et netværk, det kunne f.eks. være en graf som representere et vejnetværk, hvor man her vil kunne bruge grafteori til bla rutefinding.  \n\nEn graf beskriver et par af mægnder, man kunne tag udgangspunkt i grafen G = (V,E) hvor V og E er mægnder. I eksempet her er V en ikke-tom mængde af knuder, og E er mængden af kanter som forbinder knuderne i mægnden V. \n\n\\vspace{5mm}\n\nVi tager udgangpunkt i grafen på figur \\ref{fig:weighted-directed-graph}.\n\n\\begin{figure}[H]\n\\begin{adjustbox}{width=0.5\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=0.5\\textwidth]{Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG}\n\\end{adjustbox}\n\\caption{Orienteret vægtet graf}\n\\label{fig:weighted-directed-graph}\n\\end{figure}\n\n\\vspace{5mm}\n\nMan kan forstille sig dette er et vejnetværk, hvor knuderne repræsentere sving, og linjerne er veje som forbinder svingene, samt beskriver tallet mellem 2 knuder længden af vejen. Herved kan grafen godt forstille et simpel vejnetværk.\n\n\\vspace{5mm}\n\nVi kan ud fra grafen se at knuderne:\n\n\\begin{equation}\nA, B, C, D, E, F \\in V\n\\end{equation}\n\nSamt at kanterne\n\\begin{equation}\\label{grafteori}\n\\begin{split}\n\\{A,B\\} \\rightarrow 4, \\{A,F\\} \\rightarrow 5, \\{B,D\\} \\rightarrow 7, \\{C,A\\} \\rightarrow 3, \\{C,B\\} \\rightarrow 4, \\{D,C\\} \\rightarrow 2, \\\\ \n\\{D,E\\} \\rightarrow 3, \\{E,D\\} \\rightarrow 3, \\{E,F\\} \\rightarrow 2, \\{F,C\\} \\rightarrow 1, \\{F,E\\} \\rightarrow 1 \\in E.\n\\end{split}\n\\end{equation}\n\n\\vspace{5mm}\n\nGrafen her kan derfor skrives rent matematisk:\n\n\\begin{equation}\nG = (V,E), V = {A,B,C,D,E,F}\n\\end{equation}\n\n\\begin{equation}\\label{grafteori2}\n\\begin{split}\nE = \\{ \\{A,B\\} \\rightarrow 4, \\{A,F\\} \\rightarrow 5, \\{B,D\\} \\rightarrow 7, \\{C,A\\} \\\\\n\\rightarrow 3, \\{C,B\\} \\rightarrow 4, \\{D,C\\} \\rightarrow 2, \\{D,E\\} \\\\\n\\rightarrow 3, \\{E,D\\} \\rightarrow 3, \\{E,F\\} \\rightarrow 2, \\{F,C\\} \\rightarrow 1, \\{F,E\\} \\rightarrow 1 \\in  E\\}\n\n\\vspace{5mm}\n\nEn anden måde at repræsentere grafen på er ved hjælp af en nabo-matrix VxE, hvor v1, v2...vn, er knuderne, og e1, e2...en, er kanterne. Se figur \\ref{fig:adjacency-matrix-weighted-directed-graph}. \n\nI matrixen beskrives forbindelser mellem 2 knuder med et tal, og knudere uden forbindelse beskrives med $\\infty$. Man vil altså derfor kunne tegne en graf alene ud fra matrixens værdier.\n\n\\begin{figure}[H]\n\\begin{adjustbox}{width=0.5\\textwidth,center=\\textwidth}\n\\centering\n\\includegraphics[width=0.5\\textwidth]{Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.PNG}\n\\end{adjustbox}\n\\caption{Nabo Matrix af orienteret vægtet graf}\n\\label{fig:adjacency-matrix-weighted-directed-graph}\n\\end{figure}\n\nGrafteori er et vigtigt emne, da f.eks. korteste rute algoritmer som Dijkstra's har brug for at vide hvordan knuderne er forbundet, samt graden(hvor mange kanter knuden har) af den enktle knude, for at kun udregne den korteste rute. Derudover vil en grafmetode som en nabo-matix være en god måde at beskrive et vejnætværk på programerings niveau, da man kan have alle sine værdier i en variable. \\cite{Grafteori1} \\cite{Grafteori2}\n\n\n",
 			"file": "sections/Teori/Grafteori.tex",
+			"file_size": 3706,
+			"file_write_time": 131084833661672149,
 			"settings":
 			{
-				"buffer_size": 3170,
+				"buffer_size": 3179,
 				"line_ending": "Windows"
 			}
 		},
@@ -99,7 +94,7 @@
 			"file": "Main.tex",
 			"settings":
 			{
-				"buffer_size": 1098,
+				"buffer_size": 1102,
 				"line_ending": "Windows"
 			}
 		},
@@ -131,7 +126,7 @@
 			"file": "sections/Design/Design.tex",
 			"settings":
 			{
-				"buffer_size": 3583,
+				"buffer_size": 3585,
 				"line_ending": "Windows"
 			}
 		}
@@ -196,6 +191,7 @@
 	],
 	"file_history":
 	[
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Design/Test.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Implementation/Viewport.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
 		"/C/Programs/Git/P2-Simulering/LATEX/sections/Laesevejledning/Laesevejledning.tex",
@@ -408,7 +404,7 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -466,7 +462,7 @@
 						"translation.y": 240.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -494,7 +490,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -522,52 +518,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "sections/Design/Test.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2045,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								858,
-								858
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "references.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9740,
+						"buffer_size": 10214,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2535,
-								2535
+								0,
+								0
 							]
 						],
 						"settings":
@@ -580,11 +548,11 @@
 						"translation.y": 735.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "sections/Konklusion/Konklusion.tex",
 					"semi_transient": false,
 					"settings":
@@ -608,24 +576,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "sections/Teori/Grafteori.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3170,
+						"buffer_size": 3179,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1895,
-								1895
+								2024,
+								2024
 							]
 						],
 						"settings":
@@ -634,19 +602,19 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 120.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "Main.tex",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1098,
+						"buffer_size": 1102,
 						"regions":
 						{
 						},
@@ -669,7 +637,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "sections/Teori/Dijkstra.tex",
 					"semi_transient": false,
 					"settings":
@@ -699,7 +667,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "sections/Implementation/Klassediagrammer.tex",
 					"semi_transient": false,
 					"settings":
@@ -729,7 +697,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "sections/Perspektivering/Perspektivering.tex",
 					"semi_transient": false,
 					"settings":
@@ -741,8 +709,8 @@
 						"selection":
 						[
 							[
-								2768,
-								2768
+								3323,
+								3323
 							]
 						],
 						"settings":
@@ -753,24 +721,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "sections/Design/Design.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3583,
+						"buffer_size": 3585,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3520,
-								3520
+								0,
+								0
 							]
 						],
 						"settings":
@@ -781,7 +749,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]

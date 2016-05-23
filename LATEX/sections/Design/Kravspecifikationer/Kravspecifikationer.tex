@@ -22,12 +22,12 @@ Gem og Åben fil   & Gitter               & Sammenligning       \\ \hline
 \caption{Kravspecifikationer}\label{fig:KravspecifikationerTabel}
 \end{table}
 
-\subsection{Generelt}
+\subsection*{Generelt}
 Der er valgt at programmet skal indeholde en gem og åben funktion, dette skal gøres for at brugeren får muligheden for at gemme sit projekt. På denne måde kan brugeren arbejde videre på sit projekt over en større tidsperiode. Der er også valgt at opstille dette, således brugeren har forminsket tidspild.
 
 \vspace{5mm}
 
-\subsection{Brugerflade}
+\subsection*{Brugerflade}
 Der skal opstilles en brugerflade i form af et vindue, som ikke er en konsol denne har følgende specifikationer. Der skal opsættes et gitter således brugeren kan indsætte noder i form af lyskryds, bindepunkter fra vej til vej, vigepligt, huse og destinationer. På denne måde binder disse noder sig til en af kanterne i gitter systemet. Samtidig bliver det nemt at implementere A* algoritmen, og vejnettet bliver opstilt på en systamatisk måde. Brugeren får også et større overblik over vejnetværket, da brugeren skal kunne se hele gitteret oppefra.
 
 \vspace{5mm}
@@ -40,12 +40,12 @@ Programmet skal også implementere lyskryds og vigepliger, fordi dette er en cen
 
 \vspace{5mm}
 
-\subsection{Simulering}
+\subsection*{Simulering}
 Programmet skal indeholde en sammenligning af to simuleringer, dette vil foregå ved at brugeren kan opstille særlige veje, der kun bliver medtaget i en af simulationerene, og brugeren vil derefter kunne sammenligne outputtet. På denne måde kan brugeren sammenligne to simulationer og vurdere hvilken simulering som er den mest effektive, og derefter kan det udføres til den virkelige verden. Der skal implementeres fodgængere, således det påvirker trafikken i form af fodgængerfelter. Programmet skal indeholde forskellige typer af køretøjer som, biler, busser, lastbilver osv. Dette er valgt, da programmet bliver mere realitisk af at indeholde forskellige typer, da køretøjerne accelerere og decelerere anderledes. Dette vil netop påvirke trafikken, samtidig køre nogle køretøjer langsommere og andre hurtigere. Dette skal opsættes således bruger selv definere et køretøj i programmet.  Diverse køretøjer skal beregne den hurtigste vej til deres destination, da billister i dag foretrækker den hurtigste vej. Programmet skal implementere acceleration og deceleration på køretøjerne, dette er en central del af en simuleringen, da netop acceleration og deceleration kan skabe trafikpropper. Derudover er der også valgt, at implementere dette, da VisSims acceleration og deceleration ikke var præcise se afsnit om Teknologianalyse. 
 
 \vspace{5mm}
 
-\subsection{Program opbygning}\label{ProgramOpbygning}
+\subsection*{Program opbygning}\label{ProgramOpbygning}
 Følgende afsnit beskriver hvordan opbygning af programmet forventets at blive, ud fra de forrige afsnit hvor de hovedsaglige komponenter er blevet beskrevet.
 
 Programmet forventets at blive opdelt i 6 hovedområder som kan ses på figur \ref{fig:ProgramOpdeling}. 
@@ -75,7 +75,7 @@ Programmet forventets at blive opdelt i 6 hovedområder som kan ses på figur \r
 
 \vspace{5mm}
 
-\textbf{Filehandling Parts} er de dele af programet som kun bruges til håntering af filer, som f.eks projekt og simulations filer. Disse dele bruges altså til at sende generalle data fra forskelige dele, som så bruges af resten af programet.  
+\textbf{Filehandling Parts} er de dele af programmet som kun bruges til håntering af filer, som f.eks projekt og simulations filer. Disse dele bruges altså til at sende generalle data fra forskelige dele, som så bruges af resten af programet.  
 
 \vspace{5mm}
 
@@ -97,32 +97,32 @@ På figur \ref{fig:ProgramOversigt} ses hvordan vi forventer de 6 beskrevet dele
 \vspace{5mm}
 
 \textbf{Programmets flow} \\
-Main() vil skulle kalde GUI MAIN når programmet states, da det er brugerens interface kerne, og vil derfor stå for alt input fra brugeren. GUI MAIN forbinder derfor også de resterne "core classes" da simulations delen ikke vil kunne køres uden input fra brugeren, da den f.eks skal kende til "Simulation Settings" som kommer fra Filehandler, som er fobundet med GUI MAIN. \\
+Main() vil skulle kalde GUI MAIN når programmet states, da det er brugerens interface kerne, og vil derfor stå for alt input fra brugeren. GUI MAIN forbinder derfor også de resterende "core classes" da simulations delen ikke vil kunne køres uden input fra brugeren, da den f.eks skal kende til "Simulation Settings" som kommer fra Filehandler, som er forbundet med GUI MAIN. \\
 
-Det samme gælder for ToolController som ikke vil kunne vælge/fremstille elementer uden brugeren fortæller hvliket elemnter det er, og samme princip ses ved ViewPort, da den skal have input fra ToolController omkring hvlike elementer som skal vise, samt ved indlæsning af filer, vil ViewPort skulle have data fra FIlehander, som igen skal køres igennem GUI MAIN.
+Det samme gælder for ToolController som ikke vil kunne vælge/fremstille elementer uden brugeren fortæller hvilke elementer det er, og samme princip ses ved ViewPort, da den skal have input fra ToolController omkring hvilke elementer som skal vise, samt ved indlæsning af filer, vil ViewPort skulle have data fra FIlehander, som igen skal køres igennem GUI MAIN.
 
 Herved opnår vi en god nedkapslig af programmet, da der kun vil være 4 kerne klasser som har hvert deres formål, som beskrives nedenfor.
 
 \vspace{5mm}
 
-\textbf{Programmets kerne klasser} \\
-
-GUI MAIN skal som sagt intalisere de andre "core classes" ved opstart af programmet, derudover skal GUI MAIN håntere input fra brugeren. GUI MAIN står derfor for "MenuItems" som f. eks. save, load, settings osv. som vil være menupunkter for brugeren. Desuden vil GUIMAIN modtage inputs som valg af tilføje en vej(element). Dette input sendes efterføgende til ToolControlleren.
+GUI MAIN skal som sagt initialisere de andre "core classes" ved opstart af programmet, derudover skal GUI MAIN håntere input fra brugeren. GUI MAIN står derfor for "MenuItems" som f. eks. save, load, settings osv. som vil være menupunkter for brugeren. Desuden vil GUIMAIN modtage inputs som valg af tilføje en vej(element). Dette input sendes efterfølgende til ToolControlleren.
 
 \vspace{5mm}
 
-Ud fra hvlike input ToolControlleren får fra GUI MAIN skal det tilsvarende element vælges f.eks en vej. Hvorefter ToolControlleren udfører handlingen til den valgte element i dette tilfælde tilføje en vej til projektet. Derefter sendes outputet fra ToolController til ViewPort. Da vejen kun er tilføjet i programmets data, men ikke visualiseret. 
+Ud fra hvilke input ToolControlleren får fra GUI MAIN skal det tilsvarende element vælges f.eks en vej. Hvorefter ToolControlleren udfører handlingen til den valgte element i dette tilfælde tilføje en vej til projektet. Derefter sendes outputet fra ToolController til ViewPort. Da vejen kun er tilføjet i programmets data, men ikke visualiseret. 
 
 \vspace{5mm}
 
 ViewPorten visualisere derfor elementet, altså i dette tilfælde at tegne vejen i projektet. Ved indlæsning af et projekt vil samme fremgangsmåde forkomme, GUIMAIN sender dataerne fra projekt filen, hvorefter ToolControlleren fremstiller alle elemnter, og ViewPorten vil til sidst visualisere alle elementer i projektet, 
 
-Alle dele af programmet vil i sidste fører tilbage til GUIMAIN som et loop, hvor brugeren så igen kan vælge sin handling, dette kun f.eks. være at lave simuluationen. Simulationen virker ved at fremstille bilerne ud fra de indstillinger som brugeren har sat, hvor bilens rute bliver beregnet i fremstillingsprocessen. Derefter køres den første simulation, og dernæst den anden. Hvor simulations resultaterne gemmes i en fil, som så kan køres i programmet og vise simulationen.
+Alle dele af programmet vil i sidste fører tilbage til GUIMAIN som et loop, hvor brugeren så igen kan vælge sin handling, dette kunne f.eks. være at lave simulationen. Simulationen virker ved at fremstille køretøjerne ud fra de indstillinger som brugeren har sat, hvor køretøjets rute bliver beregnet i fremstillingsprocessen. Derefter køres den første simulation, og dernæst den anden. Hvor simulations resultaterne gemmes i en fil, som så kan køres i programmet og vise simulationen.
+
+Programmet vil skulle blive ved med at gøre i et loop indtil at brugern lukker programmet.
 
 
 \vspace{5mm}
 
-\subsection{Succeskriterier}\label{Succeskriterier}
+\subsection*{Succeskriterier}\label{Succeskriterier}
 Den følgende liste beskriver hvilke kriterier programmet skal opfylde, før programmet kan være en løsning til problemformuleringen. Der er lagt fokus på simulering af køretøjer som biler og busser. Andre simulerings enheder som fodgængere, cyklister og toge er udeladt da de har en mindre påvirkning på trafikken på vejnettet. Derudover er importering af kort ikke taget med som et succeskriterie, da det ikke er nødvendigt for at kunne opstille et vejnet. De udeladte elementer bliver diskuteret senere i rapporten.
 
 \begin{enumerate}
