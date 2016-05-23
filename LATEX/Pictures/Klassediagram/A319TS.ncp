@@ -5,44 +5,32 @@
     <Language>CSharp</Language>
     <Entities>
       <Entity type="Class">
-        <Name>Entity</Name>
-        <Access>Public</Access>
-        <Location left="10" top="10" />
-        <Size width="163" height="94" />
-        <Collapsed>False</Collapsed>
-        <Member type="Property">public Point Position { get; set; }</Member>
-        <Modifier>Abstract</Modifier>
-      </Entity>
-      <Entity type="Class">
         <Name>Destination</Name>
         <Access>Public</Access>
-        <Location left="10" top="158" />
-        <Size width="203" height="116" />
+        <Location left="10" top="131" />
+        <Size width="203" height="111" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public DestinationType Type { get; set; }</Member>
-        <Member type="Method">public override string ToString()</Member>
+        <Member type="Property">public Point Position { get; set; }</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>LightController</Name>
         <Access>Public</Access>
-        <Location left="230" top="158" />
-        <Size width="199" height="216" />
+        <Location left="230" top="131" />
+        <Size width="199" height="162" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">int _current</Member>
-        <Member type="Field">int _counter</Member>
+        <Member type="Property">public Point Position { get; set; }</Member>
         <Member type="Property">public List&lt;Node&gt; Lights { get; set; }</Member>
         <Member type="Property">public int FirstTime { get; set; }</Member>
         <Member type="Property">public int SecondTime { get; set; }</Member>
         <Member type="Method">public void Update(int ms)</Member>
-        <Member type="Method">public override string ToString()</Member>
-        <Member type="Method">private void ToggleLights()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Interface">
         <Name>IPositionable</Name>
         <Access>Public</Access>
-        <Location left="230" top="10" />
+        <Location left="10" top="10" />
         <Size width="163" height="78" />
         <Collapsed>False</Collapsed>
         <Member type="Property">Point Position { get; set; }</Member>
@@ -50,8 +38,8 @@
       <Entity type="Class">
         <Name>Node</Name>
         <Access>Public</Access>
-        <Location left="443" top="10" />
-        <Size width="262" height="196" />
+        <Location left="442" top="10" />
+        <Size width="262" height="179" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public NodeTypes Type { get; set; }</Member>
         <Member type="Property">public List&lt;Road&gt; Roads { get; set; }</Member>
@@ -59,13 +47,12 @@
         <Member type="Property">public bool Green { get; set; }</Member>
         <Member type="Property">public List&lt;Vehicle&gt; IncommingVehicles { get; set; }</Member>
         <Member type="Property">public bool IsEmpty { get; set; }</Member>
-        <Member type="Method">public override string ToString()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Enum">
         <Name>NodeTypes</Name>
         <Access>Public</Access>
-        <Location left="443" top="216" />
+        <Location left="715" top="10" />
         <Size width="162" height="180" />
         <Collapsed>False</Collapsed>
         <Value>None</Value>
@@ -79,7 +66,7 @@
       <Entity type="Class">
         <Name>DestinationType</Name>
         <Access>Public</Access>
-        <Location left="10" top="411" />
+        <Location left="10" top="296" />
         <Size width="189" height="145" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public string Name { get; set; }</Member>
@@ -91,8 +78,8 @@
       <Entity type="Class">
         <Name>VehicleType</Name>
         <Access>Public</Access>
-        <Location left="505" top="411" />
-        <Size width="199" height="196" />
+        <Location left="671" top="245" />
+        <Size width="199" height="179" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public string Name { get; set; }</Member>
         <Member type="Property">public int MaxSpeed { get; set; }</Member>
@@ -100,26 +87,16 @@
         <Member type="Property">public double Deceleration { get; set; }</Member>
         <Member type="Property">public Color Color { get; set; }</Member>
         <Member type="Property">public double Distribution { get; set; }</Member>
-        <Member type="Method">public override string ToString()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Vehicle</Name>
         <Access>Public</Access>
-        <Location left="718" top="10" />
-        <Size width="341" height="723" />
+        <Location left="533" top="451" />
+        <Size width="341" height="281" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">SimulationSetting _settings</Member>
-        <Member type="Field">List&lt;Road&gt; _currenPath</Member>
-        <Member type="Field">int _currentPathIndex</Member>
-        <Member type="Field">Road _currentRoad</Member>
-        <Member type="Field">List&lt;Node&gt; _nodesIncommingAt</Member>
-        <Member type="Field">int _toDestTime</Member>
-        <Member type="Field">bool _toDestStarted</Member>
-        <Member type="Field">List&lt;Road&gt; _toDestPath</Member>
-        <Member type="Field">int _toHomeTime</Member>
-        <Member type="Field">bool _toHomeStarted</Member>
-        <Member type="Field">List&lt;Road&gt; _toHomePath</Member>
+        <Member type="Field">public int ToDestTime</Member>
+        <Member type="Field">public int ToHomeTime</Member>
         <Member type="Property">public Node Home { get; set; }</Member>
         <Member type="Property">public Destination Destination { get; set; }</Member>
         <Member type="Property">public PointD Position { get; set; }</Member>
@@ -128,31 +105,14 @@
         <Member type="Property">public List&lt;PointD&gt; ToDestRecord { get; set; }</Member>
         <Member type="Property">public List&lt;PointD&gt; ToHomeRecord { get; set; }</Member>
         <Member type="Property">public double Speed { get; set; }</Member>
-        <Member type="Property">private Node CurrentNode { get; set; }</Member>
-        <Member type="Method">private Node FindEnd()</Member>
-        <Member type="Method">private Node FindOutbound()</Member>
-        <Member type="Method">private Node FindParking()</Member>
         <Member type="Method">public void Drive(int time)</Member>
-        <Member type="Method">private void CheckActive()</Member>
-        <Member type="Method">private void Activate(List&lt;Road&gt; path)</Member>
-        <Member type="Method">private void Deactivate()</Member>
-        <Member type="Method">private double GetSpeed()</Member>
-        <Member type="Method">private Vehicle VehicleInfront(double distanceToCheck)</Member>
-        <Member type="Method">private Vehicle CheckCurrentRoad(double distanceToCheck)</Member>
-        <Member type="Method">private Vehicle CheckFutureRoad(int index, double distanceToCheck)</Member>
-        <Member type="Method">private Vehicle GetClosestToStart(List&lt;Vehicle&gt; vehicles)</Member>
-        <Member type="Method">private void TranslateVehicle(double distanceToMove)</Member>
-        <Member type="Method">private void ControlOverreach()</Member>
-        <Member type="Method">private void GoToNextRoad()</Member>
-        <Member type="Method">private void ShowAsIncomming()</Member>
-        <Member type="Method">private void SetIncomming()</Member>
         <Member type="Method">public VehicleData ExtractData()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Interface">
         <Name>IDistributable</Name>
         <Access>Public</Access>
-        <Location left="264" top="411" />
+        <Location left="266" top="322" />
         <Size width="189" height="78" />
         <Collapsed>False</Collapsed>
         <Member type="Property">double Distribution { get; set; }</Member>
@@ -160,7 +120,7 @@
       <Entity type="Interface">
         <Name>IColorable</Name>
         <Access>Public</Access>
-        <Location left="264" top="496" />
+        <Location left="266" top="415" />
         <Size width="162" height="78" />
         <Collapsed>False</Collapsed>
         <Member type="Property">Color Color { get; set; }</Member>
@@ -168,8 +128,8 @@
       <Entity type="Class">
         <Name>Road</Name>
         <Access>Public</Access>
-        <Location left="10" top="598" />
-        <Size width="214" height="216" />
+        <Location left="10" top="515" />
+        <Size width="214" height="179" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public Node From { get; set; }</Member>
         <Member type="Property">public Node To { get; set; }</Member>
@@ -182,7 +142,7 @@
       <Entity type="Class">
         <Name>RoadType</Name>
         <Access>Public</Access>
-        <Location left="230" top="598" />
+        <Location left="288" top="515" />
         <Size width="200" height="154" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public string Name { get; set; }</Member>
@@ -194,56 +154,128 @@
       <Entity type="Interface">
         <Name>IComparable</Name>
         <Access>Public</Access>
-        <Location left="505" top="641" />
+        <Location left="288" top="702" />
         <Size width="179" height="78" />
         <Collapsed>False</Collapsed>
         <Member type="Method">int CompareTo(object other)</Member>
       </Entity>
     </Entities>
     <Relationships>
-      <Relationship type="Realization" first="4" second="3">
+      <Relationship type="Realization" first="3" second="2">
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
       </Relationship>
-      <Relationship type="Realization" first="0" second="3">
+      <Relationship type="Realization" first="6" second="8">
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
-      </Relationship>
-      <Relationship type="Association" first="2" second="0">
-        <Label>
-        </Label>
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-      <Relationship type="Association" first="1" second="0">
-        <Label>
-        </Label>
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-      <Relationship type="Realization" first="7" second="9">
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-      </Relationship>
-      <Relationship type="Realization" first="7" second="10">
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>495</X>
+          <Y>279</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>495</X>
+          <Y>344</Y>
+        </BendPoint>
       </Relationship>
       <Relationship type="Realization" first="6" second="9">
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>580</X>
+          <Y>345</Y>
+        </BendPoint>
       </Relationship>
-      <Relationship type="Realization" first="6" second="10">
+      <Relationship type="Realization" first="5" second="8">
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>224</X>
+          <Y>350</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>241</X>
+          <Y>350</Y>
+        </BendPoint>
       </Relationship>
-      <Relationship type="Realization" first="12" second="13">
+      <Relationship type="Realization" first="5" second="9">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>101</X>
+          <Y>467</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="11" second="12">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>383</X>
+          <Y>697</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>383</X>
+          <Y>677</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="7" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>615</X>
+          <Y>370</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="10" second="11">
+        <Label>
+        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>249</X>
+          <Y>604</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="3" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>808</X>
+          <Y>215</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="0" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>97</X>
+          <Y>106</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>212</X>
+          <Y>49</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="1" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>324</X>
+          <Y>95</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>102</X>
+          <Y>271</Y>
+        </BendPoint>
       </Relationship>
     </Relationships>
   </ProjectItem>
@@ -254,26 +286,11 @@
       <Entity type="Class">
         <Name>GUIMain</Name>
         <Access>Public</Access>
-        <Location left="72" top="135" />
-        <Size width="364" height="434" />
+        <Location left="72" top="117" />
+        <Size width="211" height="179" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public Project CurrentProject</Member>
         <Member type="Field">public ToolController ToolController</Member>
-        <Member type="Field">MenuStrip GUIMainMenuStrip</Member>
-        <Member type="Field">ToolStrip GUIMainToolStrip</Member>
-        <Member type="Field">private Viewport GUIMainViewport</Member>
-        <Member type="Method">private void MenuFileNewClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuFileOpenClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuFileSaveClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuSettingsProjectClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuSettingsSimulationClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuSettingsDistributionClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuTypesDestinationsClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuTypesVehiclesClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuTypesRoadsClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuSimulationRunClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void MenuSimulationViewClick(object sender, Eventargs args)</Member>
-        <Member type="Method">private void ToolClick(object sender, EventArgs args)</Member>
         <Member type="Method">public void UpdateTitle()</Member>
         <Member type="Method">public void UpdateProject(Project project)</Member>
         <Member type="Method">public void UpdateDestinationTypeSelect()</Member>
@@ -283,35 +300,25 @@
       <Entity type="Class">
         <Name>GUIMenuFileNew</Name>
         <Access>Public</Access>
-        <Location left="444" top="135" />
-        <Size width="276" height="179" />
+        <Location left="294" top="117" />
+        <Size width="191" height="94" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">TextBox ProjectName</Member>
-        <Member type="Field">Label ProjectNameLabel</Member>
-        <Member type="Field">Button Create</Member>
         <Member type="Property">public Project NewProject { get; set; }</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void CreateClick(object sender, EventArgs args)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GUIMenuSettingsProject</Name>
         <Access>Public</Access>
-        <Location left="444" top="322" />
-        <Size width="256" height="179" />
+        <Location left="557" top="117" />
+        <Size width="170" height="94" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">private TextBox NameOfProject</Member>
-        <Member type="Field">Label ProjectNameLabel</Member>
-        <Member type="Field">Button Ok</Member>
         <Member type="Property">public Project Project { get; set; }</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void OkClick(object sender, EventArgs args)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GUIMenuSettingsSimulation</Name>
         <Access>Public</Access>
-        <Location left="444" top="509" />
+        <Location left="557" top="225" />
         <Size width="191" height="77" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -319,31 +326,9 @@
       <Entity type="Class">
         <Name>GUIMenuSettingsDistribution</Name>
         <Access>Public</Access>
-        <Location left="774" top="135" />
-        <Size width="329" height="451" />
+        <Location left="557" top="320" />
+        <Size width="198" height="77" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">Project Project</Member>
-        <Member type="Field">TabControl TabContainer</Member>
-        <Member type="Field">TabPage TabDestinations</Member>
-        <Member type="Field">TabPage TabVehicles</Member>
-        <Member type="Field">DataGridView Destinations</Member>
-        <Member type="Field">DataGridView Vehicles</Member>
-        <Member type="Field">Label DestinationsLabel</Member>
-        <Member type="Field">Label VehiclesLabel</Member>
-        <Member type="Field">TextBox DestinationsPercent</Member>
-        <Member type="Field">TextBox VehiclesPercent</Member>
-        <Member type="Field">Button Save</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void OnSelectedChanged(object sender, EventArgs args)</Member>
-        <Member type="Method">private void OnEditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs args)</Member>
-        <Member type="Method">private void InputHandler(object sender, KeyPressEventArgs args)</Member>
-        <Member type="Method">private void ReadData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void SetColors(DataGridView data)</Member>
-        <Member type="Method">private void SaveData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void OnClosing(object sender, FormClosingEventArgs args)</Member>
-        <Member type="Method">private double Sum(DataGridView data)</Member>
-        <Member type="Method">private void UpdatePercentage()</Member>
-        <Member type="Method">private void UpdatePercentage(object sender, EventArgs args)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -357,282 +342,172 @@
       <Entity type="Class">
         <Name>GUIMenuSimulationRun</Name>
         <Access>Public</Access>
-        <Location left="417" top="596" />
-        <Size width="425" height="264" />
+        <Location left="294" top="225" />
+        <Size width="165" height="77" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">Project Project</Member>
-        <Member type="Field">Simulation Simulation</Member>
-        <Member type="Field">RichTextBox Information</Member>
-        <Member type="Field">ProgressBar ProgressBar</Member>
-        <Member type="Field">Label ProcessLabel</Member>
-        <Member type="Field">Button Start</Member>
-        <Member type="Field">Button Cancel</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void StartClick(object sender, EventArgs args)</Member>
-        <Member type="Method">private void CancelClick(object sender, EventArgs args)</Member>
-        <Member type="Method">private void WorkerProgressChanged(object sender, ProgressChangedEventArgs args)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GUIMenuSimulationView</Name>
         <Access>Public</Access>
-        <Location left="72" top="583" />
-        <Size width="332" height="536" />
+        <Location left="294" top="320" />
+        <Size width="171" height="77" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">Color CustomGreen</Member>
-        <Member type="Field">Color CustomRed</Member>
-        <Member type="Field">bool Started</Member>
-        <Member type="Field">Panel SimContainer</Member>
-        <Member type="Field">SimulationViewporrt SimViewport</Member>
-        <Member type="Field">ProgressBar ProgressBar</Member>
-        <Member type="Field">Button Open</Member>
-        <Member type="Field">Label OpenLabel</Member>
-        <Member type="Field">Button Primary</Member>
-        <Member type="Field">Button Secondary</Member>
-        <Member type="Field">Button StartStop</Member>
-        <Member type="Field">ComboBox UpdateRate</Member>
-        <Member type="Field">Label TimeLabel</Member>
-        <Member type="Field">TextBox SetTimeTextBox</Member>
-        <Member type="Field">Button SetTime</Member>
-        <Member type="Field">Timer TimeTimer</Member>
-        <Member type="Method">private void OpenClick(object sender, EventArgs args)</Member>
-        <Member type="Method">private void ResetButtons()</Member>
-        <Member type="Method">private void PrimaryClick(object sender, EventArgs args)</Member>
-        <Member type="Method">private void SecondaryClick(object sender, EventArgs args)</Member>
-        <Member type="Method">private void StartStopClick(object sender, EventArgs args)</Member>
-        <Member type="Method">private void UpdateRateChanged(object sender, EventArgs args)</Member>
-        <Member type="Method">private void SetTimeClick(object sender, EventArgs args)</Member>
-        <Member type="Method">private void Tick(object sender, EventArgs args)</Member>
-        <Member type="Method">private void OnLoad(object sender, EventArgs args)</Member>
-        <Member type="Method">private int GetUpdateRate()</Member>
-        <Member type="Method">private void Setup()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GUIMenuTypesDestinations</Name>
         <Access>Public</Access>
-        <Location left="854" top="596" />
-        <Size width="270" height="332" />
+        <Location left="854" top="117" />
+        <Size width="189" height="77" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">Project Project</Member>
-        <Member type="Field">TextBox SetName</Member>
-        <Member type="Field">Label NameLabel</Member>
-        <Member type="Field">Button SetColor</Member>
-        <Member type="Field">Button Add</Member>
-        <Member type="Field">Button Remove</Member>
-        <Member type="Field">DataGridView Destinations</Member>
-        <Member type="Field">ColorDialog ColorPicker</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void ReadData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void RemoveClick(object sender, EventArgs e)</Member>
-        <Member type="Method">private void AddClick(object sender, EventArgs e)</Member>
-        <Member type="Method">private void AddDestinationType()</Member>
-        <Member type="Method">private void ClickColor(object sender, EventArgs e)</Member>
-        <Member type="Method">private void UpdateGridColors()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GUIMenuTypesVehicles</Name>
         <Access>Public</Access>
-        <Location left="574" top="871" />
-        <Size width="268" height="434" />
+        <Location left="854" top="212" />
+        <Size width="162" height="77" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">Project Project</Member>
-        <Member type="Field">TextBox SetName</Member>
-        <Member type="Field">NumericUpDown MaxSpeed</Member>
-        <Member type="Field">NumericUpDown Acceleration</Member>
-        <Member type="Field">NumericUpDown Deceleration</Member>
-        <Member type="Field">Label NameLabel</Member>
-        <Member type="Field">Label MaxSpeedLabel</Member>
-        <Member type="Field">Label AccelerationLabel</Member>
-        <Member type="Field">Label DecelerationLabel</Member>
-        <Member type="Field">Button Add</Member>
-        <Member type="Field">Button Remove</Member>
-        <Member type="Field">Button SetColor</Member>
-        <Member type="Field">DataGridView Vehicles</Member>
-        <Member type="Field">ColorDialog ColorPicker</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void ReadData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void RemoveClick(object sender, EventArgs e)</Member>
-        <Member type="Method">private void AddClick(object sender, EventArgs e)</Member>
-        <Member type="Method">private void AddVehicleType()</Member>
-        <Member type="Method">private void ClickColor(object sender, EventArgs e)</Member>
-        <Member type="Method">private void UpdateGridColors()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GUIMenuTypesRoads</Name>
         <Access>Public</Access>
-        <Location left="854" top="937" />
-        <Size width="268" height="281" />
+        <Location left="854" top="308" />
+        <Size width="189" height="77" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">Project Project</Member>
-        <Member type="Field">Label NameLabel</Member>
-        <Member type="Field">Label SpeedLabel</Member>
-        <Member type="Field">TextBox SetName</Member>
-        <Member type="Field">NumericUpDown SetSpeed</Member>
-        <Member type="Field">Button Add</Member>
-        <Member type="Field">Button Remove</Member>
-        <Member type="Field">DataGridView Roads</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void ReadData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void AddClick(object sender, EventArgs e)</Member>
-        <Member type="Method">private void RemoveClick(object sender, EventArgs e)</Member>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>
     <Relationships>
-      <Relationship type="Association" first="4" second="5">
+      <Relationship type="Dependency" first="8" second="5">
         <Label>
         </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>749</X>
-          <Y>324</Y>
+          <X>829</X>
+          <Y>136</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>742</X>
-          <Y>48</Y>
+          <X>772</X>
+          <Y>42</Y>
         </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
       </Relationship>
-      <Relationship type="Association" first="1" second="5">
+      <Relationship type="Dependency" first="9" second="5">
         <Label>
         </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>745</X>
-          <Y>268</Y>
-        </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-      <Relationship type="Association" first="2" second="5">
-        <Label>
-        </Label>
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-        <BendPoint relativeToStartShape="True">
-          <X>745</X>
-          <Y>418</Y>
+          <X>829</X>
+          <Y>244</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>708</X>
-          <Y>48</Y>
+          <X>771</X>
+          <Y>42</Y>
         </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
       </Relationship>
-      <Relationship type="Association" first="3" second="5">
+      <Relationship type="Dependency" first="10" second="5">
         <Label>
         </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>745</X>
-          <Y>538</Y>
+          <X>829</X>
+          <Y>335</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>708</X>
-          <Y>48</Y>
+          <X>771</X>
+          <Y>42</Y>
         </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
       </Relationship>
-      <Relationship type="Association" first="0" second="5">
+      <Relationship type="Dependency" first="2" second="5">
         <Label>
         </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>47</X>
+          <X>762</X>
+          <Y>170</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>800</X>
+          <Y>42</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="3" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>800</X>
+          <Y>262</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>719</X>
+          <Y>42</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="4" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>800</X>
           <Y>350</Y>
         </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
+        <BendPoint relativeToStartShape="False">
+          <X>719</X>
+          <Y>42</Y>
+        </BendPoint>
       </Relationship>
-      <Relationship type="Association" first="6" second="5">
+      <Relationship type="Dependency" first="1" second="5">
         <Label>
         </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>745</X>
-          <Y>571</Y>
-        </BendPoint>
-        <BendPoint relativeToStartShape="False">
-          <X>719</X>
+          <X>339</X>
           <Y>48</Y>
         </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
       </Relationship>
-      <Relationship type="Association" first="7" second="5">
+      <Relationship type="Dependency" first="6" second="5">
         <Label>
         </Label>
         <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
+        <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>47</X>
-          <Y>709</Y>
+          <X>514</X>
+          <Y>264</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>453</X>
-          <Y>48</Y>
+          <X>533</X>
+          <Y>112</Y>
         </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
       </Relationship>
-      <Relationship type="Association" first="8" second="5">
+      <Relationship type="Dependency" first="7" second="5">
         <Label>
         </Label>
         <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
+        <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1149</X>
-          <Y>736</Y>
+          <X>533</X>
+          <Y>342</Y>
         </BendPoint>
-        <BendPoint relativeToStartShape="False">
-          <X>706</X>
-          <Y>48</Y>
-        </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
       </Relationship>
-      <Relationship type="Association" first="10" second="5">
+      <Relationship type="Dependency" first="0" second="5">
         <Label>
         </Label>
-        <StartOrientation>Horizontal</StartOrientation>
+        <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1149</X>
-          <Y>1091</Y>
-        </BendPoint>
-        <BendPoint relativeToStartShape="False">
-          <X>712</X>
+          <X>212</X>
           <Y>48</Y>
         </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-      <Relationship type="Association" first="9" second="5">
-        <Label>
-        </Label>
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-        <BendPoint relativeToStartShape="True">
-          <X>1149</X>
-          <Y>1259</Y>
-        </BendPoint>
-        <BendPoint relativeToStartShape="False">
-          <X>738</X>
-          <Y>48</Y>
-        </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
       </Relationship>
     </Relationships>
   </ProjectItem>
@@ -643,68 +518,36 @@
       <Entity type="Class">
         <Name>GUIToolEditDestination</Name>
         <Access>Public</Access>
-        <Location left="620" top="147" />
-        <Size width="268" height="216" />
+        <Location left="572" top="158" />
+        <Size width="171" height="111" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public Destination Destination</Member>
         <Member type="Field">public Project Project</Member>
-        <Member type="Field">Label TypeLabel</Member>
-        <Member type="Field">ComboBox Type</Member>
-        <Member type="Method">private void SetSize(int width, int height)</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void ReadData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void SaveData(object sender, EventArgs args)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GUIToolEditLightController</Name>
         <Access>Public</Access>
-        <Location left="327" top="147" />
-        <Size width="282" height="298" />
+        <Location left="366" top="158" />
+        <Size width="191" height="94" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public LightController Controller</Member>
-        <Member type="Field">Label FirstTimeLabel</Member>
-        <Member type="Field">Label SecondTimeLabel</Member>
-        <Member type="Field">NumericUpDown FirstTime</Member>
-        <Member type="Field">NumericUpDown SecondTime</Member>
-        <Member type="Field">Label LinksLabel</Member>
-        <Member type="Field">DataGridView Links</Member>
-        <Member type="Field">Button Remove</Member>
-        <Member type="Method">private void SetSize(int width, int height)</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void ReadData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void SaveData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void RemoveClick(object sender, EventArgs args)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GUIToolEditNode</Name>
         <Access>Public</Access>
-        <Location left="10" top="147" />
-        <Size width="307" height="349" />
+        <Location left="188" top="158" />
+        <Size width="162" height="111" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public Node Node</Member>
         <Member type="Field">public Project Project</Member>
-        <Member type="Field">Label PositionLabel</Member>
-        <Member type="Field">Label TypeLabel</Member>
-        <Member type="Field">TextBox Position</Member>
-        <Member type="Field">ComboBox Type</Member>
-        <Member type="Field">CheckBox GreenCheck</Member>
-        <Member type="Field">Label RoadsLabel</Member>
-        <Member type="Field">DataGridView Roads</Member>
-        <Member type="Field">Button Remove</Member>
-        <Member type="Method">private void SetSize(int width, int height)</Member>
-        <Member type="Method">private void Setup()</Member>
-        <Member type="Method">private void ReadData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void SaveData(object sender, EventArgs args)</Member>
-        <Member type="Method">private void RemoveRoadClick(object sender, EventArgs args)</Member>
-        <Member type="Method">public void NewMethod()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Form</Name>
         <Access>Public</Access>
-        <Location left="384" top="10" />
+        <Location left="384" top="35" />
         <Size width="162" height="77" />
         <Collapsed>False</Collapsed>
         <Modifier>Abstract</Modifier>
@@ -712,26 +555,32 @@
     </Entities>
     <Relationships>
       <Relationship type="Association" first="1" second="3">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>464</X>
+          <Y>146</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="0" second="3">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>464</X>
+          <Y>150</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="2" second="3">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>464</X>
+          <Y>138</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
@@ -745,23 +594,10 @@
         <Name>Pathfinder</Name>
         <Access>Public</Access>
         <Location left="10" top="10" />
-        <Size width="311" height="332" />
+        <Size width="291" height="111" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">static int MaxSpeed</Member>
-        <Member type="Field">static List&lt;Vertex&gt; Vertices</Member>
-        <Member type="Field">static List&lt;Vertex&gt; Closed</Member>
-        <Member type="Field">static List&lt;Vertex&gt; Open</Member>
-        <Member type="Field">static Vertex Start</Member>
-        <Member type="Field">static Vertex End</Member>
         <Member type="Method">public static void SetProject(Project project, Partitions partition)</Member>
-        <Member type="Method">private static void ConvertNodes(Project project)</Member>
-        <Member type="Method">private static void ConvertRoads(Project project, Partitions partition)</Member>
-        <Member type="Method">private static void InitLists()</Member>
-        <Member type="Method">private static void SetStartEnd(Node start, Node end)</Member>
         <Member type="Method">public static List&lt;Road&gt; FindPath(Node start, Node end)</Member>
-        <Member type="Method">private static void MoveToClosed(Vertex vertex)</Member>
-        <Member type="Method">private static void EstimateNeighbors(Vertex current)</Member>
-        <Member type="Method">private static List&lt;Road&gt; TracePath()</Member>
         <Modifier>Static</Modifier>
       </Entity>
       <Entity type="Class">
@@ -782,7 +618,7 @@
       <Entity type="Class">
         <Name>Edge</Name>
         <Access>Public</Access>
-        <Location left="329" top="235" />
+        <Location left="10" top="139" />
         <Size width="191" height="145" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public Road Source</Member>
@@ -794,14 +630,14 @@
       <Entity type="Interface">
         <Name>IComparable</Name>
         <Access>Public</Access>
-        <Location left="533" top="235" />
+        <Location left="222" top="242" />
         <Size width="179" height="78" />
         <Collapsed>False</Collapsed>
         <Member type="Method">int CompareTo(object other)</Member>
       </Entity>
       <Entity type="Comment">
         <Text>Arver fra Road</Text>
-        <Location left="451" top="286" />
+        <Location left="132" top="190" />
         <Size width="63" height="50" />
       </Entity>
       <Entity type="Comment">
@@ -815,8 +651,8 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>756</X>
-          <Y>264</Y>
+          <X>527</X>
+          <Y>261</Y>
         </BendPoint>
       </Relationship>
     </Relationships>
@@ -828,7 +664,7 @@
       <Entity type="Class">
         <Name>Vector2D</Name>
         <Access>Public</Access>
-        <Location left="751" top="198" />
+        <Location left="753" top="198" />
         <Size width="198" height="162" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double X { get; set; }</Member>
@@ -841,7 +677,7 @@
       <Entity type="Class">
         <Name>VehicleData</Name>
         <Access>Public</Access>
-        <Location left="751" top="10" />
+        <Location left="790" top="10" />
         <Size width="198" height="179" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public VehicleType Type { get; }</Member>
@@ -905,23 +741,15 @@
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>Program</Name>
-        <Access>Public</Access>
-        <Location left="10" top="251" />
-        <Size width="231" height="94" />
-        <Collapsed>False</Collapsed>
-        <Member type="Method">static void Main(string[] args)</Member>
-        <Modifier>Static</Modifier>
-      </Entity>
-      <Entity type="Class">
         <Name>SimulationSettings</Name>
         <Access>Public</Access>
         <Location left="253" top="98" />
-        <Size width="229" height="332" />
+        <Size width="229" height="349" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public int StepSize { get; set; }</Member>
         <Member type="Property">public int VehicleSpace { get; set; }</Member>
         <Member type="Property">public int IncommingRange { get; set; }</Member>
+        <Member type="Property">public int TrailingSpeed { get; set; }</Member>
         <Member type="Property">public int PrimaryCarCount { get; set; }</Member>
         <Member type="Property">public int PrimaryInbound { get; set; }</Member>
         <Member type="Property">public int PrimaryOutbound { get; set; }</Member>
@@ -947,7 +775,7 @@
       <Entity type="Enum">
         <Name>Partitions</Name>
         <Access>Public</Access>
-        <Location left="10" top="355" />
+        <Location left="10" top="257" />
         <Size width="231" height="112" />
         <Collapsed>False</Collapsed>
         <Value>Shared</Value>
@@ -956,7 +784,7 @@
       </Entity>
     </Entities>
     <Relationships>
-      <Relationship type="Realization" first="5" second="8">
+      <Relationship type="Realization" first="5" second="7">
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
@@ -968,6 +796,12 @@
           <Y>42</Y>
         </BendPoint>
       </Relationship>
+      <Relationship type="Dependency" first="4" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
     </Relationships>
   </ProjectItem>
   <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
@@ -978,14 +812,8 @@
         <Name>ToolController</Name>
         <Access>Public</Access>
         <Location left="10" top="10" />
-        <Size width="317" height="485" />
+        <Size width="299" height="213" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">Node _firstNode</Member>
-        <Member type="Field">LightController _firstController</Member>
-        <Member type="Field">IPositionable _firstMoveObject</Member>
-        <Member type="Field">bool _firstNodeConnection</Member>
-        <Member type="Field">bool _firstControllerConnection</Member>
-        <Member type="Field">bool _firstMove</Member>
         <Member type="Field">public ToolStripButton ActiveTool</Member>
         <Member type="Field">public ToolStripItemCollection Tools</Member>
         <Member type="Field">public Viewport Viewport</Member>
@@ -993,57 +821,27 @@
         <Member type="Property">public DestinationType SelectedDestinationType { get; }</Member>
         <Member type="Property">public RoadType SelectedRoadType { get; }</Member>
         <Member type="Method">public void ToggleTool(ToolStripButton clickedTool)</Member>
-        <Member type="Method">private void ViewportClick(object sender, MouseEventArgs args)</Member>
         <Member type="Method">public void OnKeyDown(object sender, KeyEventArgs args)</Member>
-        <Member type="Method">private void StopConnection()</Member>
-        <Member type="Method">private void Add(Type type)</Member>
-        <Member type="Method">private void SetNodeType(NodeTypes type)</Member>
-        <Member type="Method">private void LinkLight()</Member>
-        <Member type="Method">private void AddRoad(Partitions partition)</Member>
-        <Member type="Method">private void Edit()</Member>
-        <Member type="Method">private void Remove()</Member>
-        <Member type="Method">private void RemoveNode(Node target)</Member>
-        <Member type="Method">private void Move()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Simulation</Name>
         <Access>Public</Access>
-        <Location left="338" top="10" />
-        <Size width="430" height="519" />
+        <Location left="325" top="10" />
+        <Size width="339" height="179" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public const int MsInDay = 86400000</Member>
         <Member type="Field">public const int RecordInterval = 100</Member>
-        <Member type="Field">int _primaryProgress</Member>
-        <Member type="Field">int _secondaryProgress</Member>
-        <Member type="Field">BackgroundWorker MasterWorker</Member>
-        <Member type="Field">BackgroundWorker PrimaryWorker</Member>
-        <Member type="Field">BackgroundWorker SecondaryWorker</Member>
-        <Member type="Field">Project Project</Member>
-        <Member type="Field">Project PrimaryProject</Member>
-        <Member type="Field">Project SecondaryProject</Member>
-        <Member type="Field">List&lt;Vehicle&gt; _primaryVehicles</Member>
-        <Member type="Field">List&lt;Vehicle&gt; _secondaryVehicles</Member>
         <Member type="Event">public event EventHandler&lt;ProgressChangedEventArgs&gt; ProgressChanged</Member>
         <Member type="Method">protected virtual void OnProgressChanged()</Member>
-        <Member type="Method">private void PrimaryProgressReport(object sender, ProgressChangedEventArgs args)</Member>
-        <Member type="Method">private void SecondaryProgressReport(object sender, ProgressChangedEventArgs args)</Member>
-        <Member type="Method">private void Simulate(object sender, DoWorkEventArgs args)</Member>
-        <Member type="Method">private void Run(object sender, DoWorkEventArgs args)</Member>
         <Member type="Method">public void Start()</Member>
         <Member type="Method">public void Cancel()</Member>
-        <Member type="Method">private void SimulationCompleted(object sender, RunWorkerCompletedEventArgs args)</Member>
-        <Member type="Method">private List&lt;Vehicle&gt; CreateVehicles(Partitions partition)</Member>
-        <Member type="Method">private List&lt;Node&gt; GetHomes(int carCount, int inbound)</Member>
-        <Member type="Method">private List&lt;Destination&gt; GetDestinations(int carCount, int outbound)</Member>
-        <Member type="Method">private List&lt;VehicleType&gt; GetVehicleTypes(int carCount)</Member>
-        <Member type="Method">private List&lt;int&gt; GetTimes(int carCount, int spread, int startTime)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>FileHandler</Name>
         <Access>Public</Access>
-        <Location left="10" top="504" />
+        <Location left="679" top="10" />
         <Size width="243" height="162" />
         <Collapsed>False</Collapsed>
         <Member type="Method">public static Project NewProject()</Member>
@@ -1063,8 +861,8 @@
       <Entity type="Class">
         <Name>Viewport</Name>
         <Access>Public</Access>
-        <Location left="10" top="10" />
-        <Size width="395" height="706" />
+        <Location left="186" top="10" />
+        <Size width="162" height="383" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public readonly int GridLength = 1000</Member>
         <Member type="Field">public readonly int GridSize = 16</Member>
@@ -1073,7 +871,6 @@
         <Member type="Field">public Project Project</Member>
         <Member type="Field">public Point HoverConnection</Member>
         <Member type="Field">public Point MousePos</Member>
-        <Member type="Field">private Point _viewPos</Member>
         <Member type="Field">public Layer Grid</Member>
         <Member type="Field">public Layer Connections</Member>
         <Member type="Field">public Layer Nodes</Member>
@@ -1084,42 +881,19 @@
         <Member type="Property">public Point ViewPos { get; }</Member>
         <Member type="Property">public float Zoom { get; set; }</Member>
         <Member type="Method">public void Reset()</Member>
-        <Member type="Method">private void SetZoom(float value)</Member>
-        <Member type="Method">private void SetViewPos(Point value)</Member>
-        <Member type="Method">private Point GetGridPos()</Member>
-        <Member type="Method">private void OnMove(object sender, MouseEventArgs args)</Member>
-        <Member type="Method">private void OnWheel(object sender, MouseEventArgs args)</Member>
         <Member type="Method">public object GetObjByGridPos()</Member>
-        <Member type="Method">private void InitControls()</Member>
-        <Member type="Method">private Point GetDrawPosition(Point position)</Member>
-        <Member type="Method">protected void ScaleTranslateSmooth(SmoothingMode mode, PaintEventArgs args)</Member>
-        <Member type="Method">protected void DrawGrid(object sender, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawConnections(object sender, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawRoad(Road road, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawNodes(object sender, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawNode(Brush fill, Point position, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawArrow(Node node, bool left, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawEntities(object sender, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawLightController(Point position, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawDestination(Color color, Point position, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawInformation(object sender, PaintEventArgs args)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>SimulationViewPort</Name>
         <Access>Public</Access>
-        <Location left="414" top="10" />
-        <Size width="399" height="230" />
+        <Location left="10" top="10" />
+        <Size width="162" height="145" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">private const int VehicleSize = 16</Member>
         <Member type="Field">public Layer Vehicles</Member>
         <Member type="Field">public SimulationData SimData</Member>
         <Member type="Field">public Partitions CurrentPartition</Member>
         <Member type="Property">public int Time { get; set; }</Member>
-        <Member type="Method">private void DrawVehicles(object sender, PaintEventArgs args)</Member>
-        <Member type="Method">private void DrawVehicle(VehicleData vehicle, bool toDest, PaintEventArgs args)</Member>
-        <Member type="Method">private PointF GetDrawPosition(PointD position)</Member>
-        <Member type="Method">private int GetRecordIndex(int recordStartTime)</Member>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>

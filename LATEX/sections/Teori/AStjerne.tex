@@ -1,5 +1,5 @@
 \section{A* Algoritmen}\label{AStjerneTeori}
-A* (A stjerne) er en udvidelse af Dijkstras algoritme. Forskellen ved A* algoritmen er at den estimerer hvor langt noderne i graphen er fra slutnoden, og dermed findes den optimale rute hurtigere da den kun kigger på noder der ligger i retningen af slutnoden. Dette gøres når nabo noderne skal undersøges, ligesom i Dijkstra, vil algoritmen udregne kosten til nabo noderne af det nuværende punkt, og derudover vil der benyttes en heuristik til at estimere kosten fra nabo noden til slutnoden. Det vil sige at algoritmen arbejder med kosten til en node, betegnet \texttt{G}, en heuristik der estimerer kosten fra noden til slutnoden, betegnet \texttt{H}, og den samlede vurdering \texttt{F}, der udregnes som vist på formlen \ref{eq:A*}
+A* (A stjerne) er en udvidelse af Dijkstras algoritme. Forskellen ved A* algoritmen er at den estimerer hvor langt knuderne i graphen er fra slutknuden, og dermed findes den optimale rute hurtigere da den kun kigger på knuder der ligger i retningen af slutknuden. Dette gøres når nabo knuderne skal undersøges, ligesom i Dijkstra, vil algoritmen udregne kosten til nabo knuderne af det nuværende punkt, og derudover vil der benyttes en heuristik til at estimere kosten fra nabo knuden til slutknuden. Det vil sige at algoritmen arbejder med kosten til en knude, betegnet \texttt{G}, en heuristik der estimerer kosten fra knuden til slutknuden, betegnet \texttt{H}, og den samlede vurdering \texttt{F}, der udregnes som vist på formlen \ref{eq:A*}
 
 \begin{equation} \label{eq:A*}
 F(n) = G(n) + H(n)
@@ -10,7 +10,7 @@ Hvis man ønsker at A* skal finde den absolut korteste rute, kræver det at heur
 
 \vspace{5mm}
 
-Estimationerne der bliver udregnet benyttes hver gang algoritmen skal vælge den næste \texttt{Node} der skal undersøges. Ligesom Dijkstra tager den node der har den nuværende laveste \texttt{Cost}, tager A* den Node der har den laveste \texttt{Estimation} \texttt{F}.
+Estimationerne der bliver udregnet benyttes hver gang algoritmen skal vælge den næste \texttt{Node} der skal undersøges. Ligesom Dijkstra tager den knude der har den nuværende laveste \texttt{Cost}, tager A* den \texttt{Node} der har den laveste \texttt{Estimation} \texttt{F}.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -54,4 +54,4 @@ end
 \caption{A* pseudo-kode: EvaluateNeighbors}\label{AStarCodeEvaluateNeighbors}
 \end{figure}
 
-Den sidste ændring er fortaget i \texttt{EvaluateNeighbors}, set på figur \ref{AStarCodeEvaluateNeighbors}. Efter at en nabo \texttt{Node} er blevet fundet til at have en lavere \texttt{Cost} end den tidligere havde, bliver \texttt{Estimate} udregnet ved brug af nodens \texttt{Cost} eller \texttt{G}, plus heuristikken som eksempelvis kunne være distancen fra noden til slutpunktet, som ses på linje 11 og 12 på figur \ref{AStarCodeEvaluateNeighbors}.
+Den sidste ændring er fortaget i \texttt{EvaluateNeighbors}, set på figur \ref{AStarCodeEvaluateNeighbors}. Efter at en nabo \texttt{Node} er blevet fundet til at have en lavere \texttt{Cost} end den tidligere havde, bliver \texttt{Estimate} udregnet ved brug af knudens \texttt{Cost} eller \texttt{G}, plus heuristikken som eksempelvis kunne være distancen fra knuden til slutpunktet, som ses på linje 11 og 12 på figur \ref{AStarCodeEvaluateNeighbors}.

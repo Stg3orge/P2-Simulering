@@ -46,7 +46,7 @@ Programmet skal indeholde en sammenligning af to simuleringer, dette vil foregå
 \vspace{5mm}
 
 \subsection{Program opbygning}\label{ProgramOpbygning}
-Følgende afsnit beskriver hvordan opbygning af programmet forventets at blive, ud fra de forrige afsnit hvor de hovedsaglige komponenter er blevet beskrevt.
+Følgende afsnit beskriver hvordan opbygning af programmet forventets at blive, ud fra de forrige afsnit hvor de hovedsaglige komponenter er blevet beskrevet.
 
 Programmet forventets at blive opdelt i 6 hovedområder som kan ses på figur \ref{fig:ProgramOpdeling}. 
 
@@ -59,7 +59,7 @@ Programmet forventets at blive opdelt i 6 hovedområder som kan ses på figur \r
 \label{fig:ProgramOpdeling}
 \end{figure}
 
-\textbf{Main()} vil være områder som fremstiller de hovedsaglige objecter til sammenkoblig af programmet.
+\textbf{Main()} vil være områder som fremstiller de hovedsaglige objekter til sammenkoblig af programmet.
 
 \vspace{5mm}
 
@@ -101,38 +101,23 @@ Main() vil skulle kalde GUI MAIN når programmet states, da det er brugerens int
 
 Det samme gælder for ToolController som ikke vil kunne vælge/fremstille elementer uden brugeren fortæller hvliket elemnter det er, og samme princip ses ved ViewPort, da den skal have input fra ToolController omkring hvlike elementer som skal vise, samt ved indlæsning af filer, vil ViewPort skulle have data fra FIlehander, som igen skal køres igennem GUI MAIN.
 
-Herved opnår vi en god nedkapslig af programmet.
+Herved opnår vi en god nedkapslig af programmet, da der kun vil være 4 kerne klasser som har hvert deres formål, som beskrives nedenfor.
 
 \vspace{5mm}
 
+\textbf{Programmets kerne klasser} \\
 
-GUI MAIN skal som sagt intalisere de andre "core classes" ved opstart af programmet, derudover skal GUI MAIN 
+GUI MAIN skal som sagt intalisere de andre "core classes" ved opstart af programmet, derudover skal GUI MAIN håntere input fra brugeren. GUI MAIN står derfor for "MenuItems" som f. eks. save, load, settings osv. som vil være menupunkter for brugeren. Desuden vil GUIMAIN modtage inputs som valg af tilføje en vej(element). Dette input sendes efterføgende til ToolControlleren.
 
+\vspace{5mm}
 
+Ud fra hvlike input ToolControlleren får fra GUI MAIN skal det tilsvarende element vælges f.eks en vej. Hvorefter ToolControlleren udfører handlingen til den valgte element i dette tilfælde tilføje en vej til projektet. Derefter sendes outputet fra ToolController til ViewPort. Da vejen kun er tilføjet i programmets data, men ikke visualiseret. 
 
+\vspace{5mm}
 
-\textbf{Programmets Funktioner} \\
+ViewPorten visualisere derfor elementet, altså i dette tilfælde at tegne vejen i projektet. Ved indlæsning af et projekt vil samme fremgangsmåde forkomme, GUIMAIN sender dataerne fra projekt filen, hvorefter ToolControlleren fremstiller alle elemnter, og ViewPorten vil til sidst visualisere alle elementer i projektet, 
 
-GUI MAIN
- - bruger input
- 
- 
-ToolController
- - 
- 
- 
-ViewPort
- - Visning af simulation, samt projekt
- - Visning af valge elemter fra toolcontroler, f.eks veje, noder, osv. 
- 
- 
- 
-Simulation
- -  
-
-
-
-
+Alle dele af programmet vil i sidste fører tilbage til GUIMAIN som et loop, hvor brugeren så igen kan vælge sin handling, dette kun f.eks. være at lave simuluationen. Simulationen virker ved at fremstille bilerne ud fra de indstillinger som brugeren har sat, hvor bilens rute bliver beregnet i fremstillingsprocessen. Derefter køres den første simulation, og dernæst den anden. Hvor simulations resultaterne gemmes i en fil, som så kan køres i programmet og vise simulationen.
 
 
 \vspace{5mm}

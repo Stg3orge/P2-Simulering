@@ -6,11 +6,11 @@ Ikke alle programmets kravspecifikationer er blevet implementeret med ønsket ef
 %\setlength\LTright{\fill}
 \setlength{\LTleft}{-20cm plus -1fill}
 \setlength{\LTright}{\LTleft}
-\begin{longtable}{| p{0.60\textwidth} | p{0.60\textwidth} |}
+\begin{longtable}{| p{0.50\textwidth} | p{0.50\textwidth} |}
 	\hline
 \textbf{Funktioner} & \textbf{Løsningsforslag} \\
 	\hline
-Programmet implementere ikke Fodgængere & Skal implementeres på samme måde som køretøjerne, dog skal der lave en node, der hedder fodgængerfelt. \\
+Programmet implementere ikke Fodgængere & Skal implementeres på samme måde som køretøjerne, dog skal der lave en knude, der hedder fodgængerfelt. \\
 	\hline
 Programmet implementerer ikke cyklister & Skal implementeres således der laves en separat cykelsti, som cyklerne kan cykle på. derudover skal vejene ændres, således cyklister og bliver kan være på en vej. \\ 
 	\hline
@@ -32,7 +32,7 @@ Samling og analyse af simuleringens data. & \texttt{SimulationData} skal gemme a
 	\hline
 Implementere en hjælpeside til information omkring programmets dele. & Lave en hjælpe knappe, som forklarer med tekst, hvordan programmet fungere. \\ 
 	\hline
-I et lyskryds kan køretøjerne lave u-vendinger. & Der skal laves en ny vej, som man kun må køre ind på fra bestemte noder. \\ 
+I et lyskryds kan køretøjerne lave u-vendinger. & Der skal laves en ny vej, som man kun må køre ind på fra bestemte knude. \\ 
 	\hline 
 \caption{Fejl og mangler}\label{Fejl og mangler}
 \end{longtable}
@@ -47,8 +47,7 @@ Der blev lavet en performance profile som vidste at serialize og deserialize af 
 
 \vspace{5mm}
 
-Der blev derfor også kigget på andre metoder at serialize og deserialize simulation filerne istedet for at bruge XML. Der blev fundet frem til Protocol Buffer, og BinaryFormatter som iføgle flere tests siges at være hurtigere end XML[1,2,3]. Der blev derfor implamiteret BinartFormatter, da det som XML er en del af NET Framework hvliket gjode det en del nemmere at implemitere, samt det understøttede klasser som Point og Color, hvliket Protocol Buffer ikke gjode som startard(Brug surrogate klasser til at konvetere typer som Point, Color til at være kompitabel til Protocol Buffer). Men selvom at BinaryFormatter er hurtigere end XML bliver det stadig overgået af Protocol Buffer som i nogen tests er 12x så hurtig iforhold til BinaryFormatter[3,4], og siden programmet stadig er langtsomt nå det kommer til serialize og deserialize kunne Protocol Buffer midske simulation/view tiden, og afhjælpe med programmet ikke terminere fordi filen enten er for stor, eller tager forlang tid at åbne.
-
+Der blev derfor også kigget på andre metoder at serialize og deserialize simulation filerne istedet for at bruge XML. Der blev fundet frem til Protocol Buffer, og BinaryFormatter som iføgle flere tests siges at være hurtigere end XML \cite{SerializationPerformance}\cite{ComparingThePerformance}\cite{PerformanceTest}. Der blev derfor implementeret BinartFormatter, da det som XML er en del af NET Framework hvilket gjorde det en del nemmere at implementere, samt det understøttede klasser som Point og Color, hvliket Protocol Buffer ikke gjode som startard(Brug surrogate klasser til at konvetere typer som Point, Color til at være kompitabel til Protocol Buffer). Men selvom at BinaryFormatter er hurtigere end XML bliver det stadig overgået af Protocol Buffer som i nogen tests er 12x så hurtig iforhold til BinaryFormatter \cite{PerformanceTest}\cite{Protobuf}, og siden programmet stadig er langtsomt nå det kommer til serialize og deserialize kunne Protocol Buffer midske simulation/view tiden, og afhjælpe med programmet ikke terminere fordi filen enten er for stor, eller tager forlang tid at åbne.
 
 \vspace{5mm}
 
@@ -60,7 +59,8 @@ En anden måde at løse hukomelses problemet på, er ved brug af Memory-Mapped F
 \vspace{5mm}
 
 \textbf{CPU forbrug} \\
-For at optimere CPU forbruget, vil en mulig løsnig være at få GPU'en til at tegne grafikken i programmet, istedet for CPU'en. Dette kan gøres ved brug af Windows Presentation Foundation (WPF). Fordelen ved dette er at den mægnde CPU som bliver sparet,  vil kunne bruges på simulationen istedet, samt er GPU'en hurtigere til at tegne grafik end CPU'en. Derudover vil implemitering af flere "threds" kunne udnytte flere kerner i computeren, og herved øge simulationshastigheden, da vores program kun indeholder 2. Hvliket vil sige at f.eks. på en core i7 maskine med 8 kerner vil kun 25\% kraft blive brugt.
+For at optimere CPU forbruget, vil en mulig løsnig være at få GPU'en til at tegne grafikken i programmet, istedet for CPU'en. Dette kan gøres ved brug af Windows Presentation Foundation (WPF). Fordelen ved dette er at den mægnde CPU som bliver sparet,  vil kunne bruges på simulationen istedet, samt er GPU'en hurtigere til at tegne grafik end CPU'en. Derudover vil implemitering af flere "threads" kunne udnytte flere kerner i computeren, og herved øge simulationshastigheden, da vores program kun indeholder 2. Hvliket vil sige at f.eks. på en core i7 maskine med 8 kerner vil kun 25\% kraft blive brugt.
+
 
 
 

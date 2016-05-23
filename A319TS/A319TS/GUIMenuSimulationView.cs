@@ -18,13 +18,13 @@ namespace A319TS
         private SimulationViewport SimViewport;
         private ProgressBar ProgressBar = new ProgressBar();
         private Button Open = new Button();
-        private Label OpenLabel = new Label();
+        private TextBox OpenLabel = new TextBox();
         private Button Primary = new Button();
         private Button Secondary = new Button();
         private Button StartStop = new Button();
         private ComboBox UpdateRate = new ComboBox();
-        private Label TimeLabel = new Label();
-        private TextBox SetTimeTextBox = new TextBox();
+        private TextBox TimeLabel = new TextBox();
+        private NumericUpDown SetTimeBox = new NumericUpDown();
         private Button SetTime = new Button();
         private Timer TimeTimer = new Timer();
 
@@ -56,7 +56,7 @@ namespace A319TS
             Secondary.Enabled = true;
             StartStop.Enabled = true;
             UpdateRate.Enabled = true;
-            SetTimeTextBox.Enabled = true;
+            SetTimeBox.Enabled = true;
             SetTime.Enabled = true;
         }
         private void PrimaryClick(object sender, EventArgs args)
@@ -95,17 +95,9 @@ namespace A319TS
         }
         private void SetTimeClick(object sender, EventArgs args)
         {
-            try
-            {
-                double time = Convert.ToDouble(SetTimeTextBox.Text);
-                double roundedTime = Math.Round(time / 100, 0, MidpointRounding.AwayFromZero) * 100d;
-                SimViewport.Time = Convert.ToInt32(roundedTime);
-                SetTimeTextBox.Text = SimViewport.Time.ToString();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+            SimViewport.Time = decimal.ToInt32(SetTimeBox.Value);
+            SetTimeBox.Text = SimViewport.Time.ToString();
+            ProgressBar.Value = SimViewport.Time;
         }
         private void Tick(object sender, EventArgs args)
         {
@@ -123,49 +115,50 @@ namespace A319TS
             Text = "View Simulation";
 
             SimContainer.Location = new Point(12, 12);
-            SimContainer.Size = new Size(860, 279);
+            SimContainer.Size = new Size(858, 286);
             SimContainer.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
             SimContainer.BorderStyle = BorderStyle.Fixed3D;
             SimContainer.BackColor = Color.White;
             Controls.Add(SimContainer);
 
-            ProgressBar.Location = new Point(12, 297);
-            ProgressBar.Size = new Size(860, 23);
+            ProgressBar.Location = new Point(12, 304);
+            ProgressBar.Size = new Size(858, 10);
             ProgressBar.Minimum = 0;
             ProgressBar.Maximum = 86400000;
             ProgressBar.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
             Controls.Add(ProgressBar);
 
-            Open.Location = new Point(12, 326);
+            Open.Location = new Point(12, 320);
             Open.Size = new Size(75, 23);
             Open.Text = "Open";
             Open.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
             Open.Click += OpenClick;
             Controls.Add(Open);
 
-            OpenLabel.Location = new Point(93, 331);
-            OpenLabel.AutoSize = true;
-            OpenLabel.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left);
+            OpenLabel.Location = new Point(93, 321);
+            OpenLabel.Size = new Size(140, 22);
+            OpenLabel.Enabled = false;
+            OpenLabel.Anchor = (AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
             Controls.Add(OpenLabel);
 
-            Primary.Location = new Point(361, 326);
-            Primary.Size = new Size(75, 23);
+            Primary.Location = new Point(239, 320);
+            Primary.Size = new Size(90, 23);
             Primary.Text = "Primary";
             Primary.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
             Primary.Enabled = false;
             Primary.Click += PrimaryClick;
             Controls.Add(Primary);
 
-            Secondary.Location = new Point(442, 326);
-            Secondary.Size = new Size(75, 23);
+            Secondary.Location = new Point(335, 320);
+            Secondary.Size = new Size(90, 23);
             Secondary.Text = "Secondary";
             Secondary.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
             Secondary.Enabled = false;
             Secondary.Click += SecondaryClick;
             Controls.Add(Secondary);
 
-            StartStop.Location = new Point(523, 326);
-            StartStop.Size = new Size(75, 23);
+            StartStop.Location = new Point(431, 320);
+            StartStop.Size = new Size(90, 23);
             StartStop.Text = "Start / Stop";
             StartStop.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
             StartStop.Enabled = false;
@@ -173,8 +166,8 @@ namespace A319TS
             StartStop.Click += StartStopClick;
             Controls.Add(StartStop);
 
-            UpdateRate.Location = new Point(604, 328);
-            UpdateRate.Size = new Size(50, 21);
+            UpdateRate.Location = new Point(527, 319);
+            UpdateRate.Size = new Size(70, 24);
             UpdateRate.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
             UpdateRate.Enabled = false;
             UpdateRate.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -187,20 +180,21 @@ namespace A319TS
             UpdateRate.SelectedValueChanged += UpdateRateChanged;
             Controls.Add(UpdateRate);
 
-            TimeLabel.Location = new Point(660, 331);
-            TimeLabel.AutoSize = true;
+            TimeLabel.Location = new Point(603, 321);
+            TimeLabel.Size = new Size(90, 22);
             TimeLabel.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
+            TimeLabel.Enabled = false;
             TimeLabel.Text = "0";
             Controls.Add(TimeLabel);
 
-            SetTimeTextBox.Location = new Point(715, 328);
-            SetTimeTextBox.Size = new Size(75, 20);
-            SetTimeTextBox.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
-            SetTimeTextBox.Enabled = false;
-            SetTimeTextBox.RightToLeft = RightToLeft.Yes;
-            Controls.Add(SetTimeTextBox);
+            SetTimeBox.Location = new Point(699, 321);
+            SetTimeBox.Size = new Size(90, 22);
+            SetTimeBox.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
+            SetTimeBox.Enabled = false;
+            SetTimeBox.Maximum = 86400000;
+            Controls.Add(SetTimeBox);
 
-            SetTime.Location = new Point(797, 326);
+            SetTime.Location = new Point(795, 320);
             SetTime.Size = new Size(75, 23);
             SetTime.Text = "Set Time";
             SetTime.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
