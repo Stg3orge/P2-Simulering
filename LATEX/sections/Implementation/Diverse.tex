@@ -1,7 +1,7 @@
 \section{Diverse}\label{Diverse}
 Dette afsnit dækker over klasserne der ikke ligger under en bred kategori af klasser.
 
-\subsection{Project}
+\subsection*{Project}
 \texttt{Project} klassens formål er at holde på informationen om elementerne i vejnettet. Derudover holder \texttt{Project} klassen også på brugerens indstillinger for simuleringerne der udføres. Disse indstillinger er gemt i en instans af klassen \texttt{SimulationSettings}. Når \texttt{Project} klassen instansieres, tilføjer constructoren en \texttt{Default} type til \texttt{RoadTypes}, \texttt{VehicleTypes} og \texttt{DestinationTypes}, hvilket er listerne der gemme på alle typerne af deres slags. \texttt{Default} værdierne kan ikke slettes, da det ikke vil give mening for simuleringen at veje, køretøj og destinationer eksisterede uden en type, og programmet ville blive termineret. 
 
 \begin{figure}[H]
@@ -20,7 +20,7 @@ public object Clone()
 
 \texttt{Project} klassen implementerer interfacet \texttt{ICloneable}, der beder om en implementation af \texttt{Clone()}, der returnerer en kopi af en instans af et \texttt{Project}. Implementationen af \texttt{Clone()} funktionaliteten er vist på figur \ref{Project}, hvor instansen af \texttt{Project} bliver seraliseret vha. \texttt{BinaryFormatter} klassen, og derefter deserliseret samt returneret. Grunden til \texttt{Clone()} funktionen er at lave en 'deep copy' af projektet, da Simulation klassen har brug for en identisk men adskildt kopi, så køretøjerne i \texttt{Primary} og \texttt{Secondary} simuleringerne ikke kan se og holde for hinanden. En \texttt{MemberwiseClone()} som alle objekter har adgang til, laver kun en 'shallow copy', hvilket vil sige at knuderne og vejene stadig ville være referencer til de samme som i det første \texttt{Project}.
 
-\subsection{SimulationSettings}
+\subsection*{SimulationSettings}
 \begin{figure}[H]
 \begin{lstlisting} 
 // Defaults
@@ -80,7 +80,7 @@ TimeSpread & 0 & 86400000 \\
 \caption{Begrænsninger for simulering indstillingerne}\label{SimulationLimits}
 \end{table}
 
-\subsection{Data}
+\subsection*{Data}
 \texttt{SimulationData} er en klasse der indeholder dataen fra køretøjerne (\texttt{VehicleData}) fra en \texttt{Primary} og \texttt{Secondary} simulering, og en kopi af projektet simuleringen blev kørt på. Det er denne klasse der bliver gemt i en fil efter simuleringen, så brugeren kan åbne den senere gennem \texttt{SimulationView} brugerfladen. \texttt{VehicleData} indeholder arrays af punkterne der blev optaget gennem simuleringen, tiden på starten af rejsen mod og fra destinationen, samt køretøjets type. Ved begge klasser sættes dataen ind gennem constructoren, og det kan derefter ikke ændres igen, da egenskaberne for variablerne er med private settere. Data klasserne kan ses på figur \ref{SimData} og \ref{VehicleData}.
 
 \begin{figure}[H]
@@ -99,7 +99,7 @@ TimeSpread & 0 & 86400000 \\
 \end{minipage}
 \end{figure}
 
-\subsection{MathExtension}
+\subsection*{MathExtension}
 \texttt{MathExtension} er en klasse der er lavet for at håndtere udregningerne fra \texttt{Point} til \texttt{Point}, fra \texttt{PointD} til \texttt{PointD} samt en kort kovertering af km/h til m/ms. Der gøres bruge af klasser fra \texttt{Math} bibliotek. Måden vi udregner km/h til m/ms, er ved at tage km/h og dividere med 3600(60*60), se udregning \ref{ConvertKmhToMms}. Vi benytter os af afstandsformlen i \texttt{MathExtension}, hvor vi beregner afstanden mellem to noder via deres koordinater \ref{AfstandsFormel}. Afstandsformlen benyttes flere steder i programmet, men primært i \texttt{Pathfinder} og \texttt{Vehicle}, og konverteringen til meter på millisekund bliver kun bruger i \texttt{Vehicle.Drive()}.
 
 \begin{equation} \label{ConvertKmhToMms}
@@ -110,7 +110,7 @@ km/h / 3600
 \sqrt{(x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)}
 \end{equation}
 
-\subsection{Vector2D}
+\subsection*{Vector2D}
 \begin{figure}[H]
 \begin{lstlisting}
 public void Scale(double scalar)

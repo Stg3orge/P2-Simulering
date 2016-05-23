@@ -4,7 +4,7 @@
 \externaldocument{FejlOgMangler}
 Dette afsnit diskuterer hvorvidt den udviklede løsning, er en løsning på den opstillede problemformulering, samt afklarer om succeskriterierne i design afsnittet er opfyldt. Til sidst i afsnittet vil der diskuteres om hvorvidt vores program er realistisk.
 
-\subsection{Diskussion af problemformuleringen}\label{diskproblem}
+\subsection*{Diskussion af problemformuleringen}\label{diskproblem}
 Som det første der beskrives i problemformuleringen, har vi at nuværende simuleringsværktøjer enten ikke er brugervenlige, eller at de ikke er fleksible. Den udviklede løsning minder om værktøjet VisSim, der blev analyseret i afsnit \ref{Teknologianalyse}, i det at programmet giver brugeren mulighed for at opstille et vilkårligt vejnetværk, og ændre på en række indstillinger for simuleringen. Det der gør gruppens værktøj anderledes fra VisSim er at det ikke er muligt at opstille andre simuleringer end trafik afviklings simuleringer. Denne afgrænsning betyder at VisSim er langt mere fleksibel, men det er også denne fleksibilitet der gør at VisSim ikke er brugervenlig. Udover afgrænsningen, er den udviklede løsning gjort brugervenlig ved hjælp af værktøjstips og etiketter, hvor brugeren kan læse om de forskellige funktioner af knapper og indstillinger. På grund af fokuset på trafik afvikling og informationerne der befinder sig i programmet, vurderer vi at gruppens løsning er mere brugervenlig end VisSim.
 
 \vspace{5mm}
@@ -16,10 +16,10 @@ Problemformuleringen beskriver også at der skal tages hensyn til billisternes a
 \vspace{5mm}
 Samlet set er det gruppens mening at programmet er en løsning på problemformuleringen, i det at programmet blev videreudviklet og funktionalitet som cyklister og menneskelig adfærd blev implementeret.
 
-\subsection{Succeskriterier}\label{disksucces}
+\subsection*{Succeskriterier}\label{disksucces}
 Alle succeskriterierne er blevet løst udover kriterien om køretøjernes bevælgse skal gøres realistisk med hensyn til acceleration og deceleration. I gruppens program er acceleration og deceleration ikke blevet implementeret. Hvis et køretøj eksempelvis støder på et rødt lys, vil køretøjet stoppe øjeblikkeligt. Ligeledes når lyset skifter til grønt igen, vil køretøjet nå sin maksimale hastighed øjeblikketligt. Grunden til at acceleration og deceleration ikke er blevet implementeret, er at vigepligt og trafiklys blev prioriteret højere. Konsekvensen af denne mangel, er at køretøjerne vil bevæge sig gennem vejnettet hurtigere end det burde være muligt.
 
-\subsection{Realisme}
+\subsection*{Realisme}
 For at programmet skulle kunne bruges til at lave beslutninger, kræves det af programmmet, at resultatet af simuleringen er realistisk. Udover problemerne beskrevet herunder, er der også manglen på acceleration, deceleration og menneskelig adfærd som blev beskrevet i afsnit \ref{diskproblem} og \ref{disksucces}.
 
 \begin{itemize}
