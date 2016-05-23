@@ -1,0 +1,2476 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.3)  23 MAY 2016 14:27
+entering extended mode
+**C:/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/Main.tex
+(C:/Users/fiske/Documents/GitHub/P2-Simulering/LATEX/Main.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+(setup/preamble.tex
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fncychap\fncychap.
+sty"
+Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
+\RW=\skip43
+\mylen=\skip44
+\myhi=\skip45
+\px=\skip46
+\py=\skip47
+\pyy=\skip48
+\pxx=\skip49
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.sty
+"
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.cfg
+"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.
+def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infware
+rr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+)))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+)) ("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.s
+ty"
+Package: babel 2016/01/08 3.9n The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.c
+fg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-danish\danis
+h.ldf"
+Language: danish 2009/09/19 v1.3r Danish support from the babel system
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen103
+)
+Package babel Info: Making " an active character on input line 82.
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\engl
+ish.ldf"
+Language: english 2012/08/20 v3.3p English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count90
+\float@exts=\toks16
+\float@box=\box26
+\@float@everytoks=\toks17
+\@floatcapt=\box27
+)
+\@float@every@table=\toks18
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.cfg
+"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colortbl\colortbl.
+sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen104
+\extrarowheight=\dimen105
+\NC@list=\toks19
+\extratabsurround=\skip50
+\backup@length=\skip51
+)
+\everycr=\toks20
+\minrowclearance=\skip52
+)
+LaTeX Info: Redefining \color on input line 702.
+\rownum=\count91
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
+sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
+sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.
+cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+)
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.st
+y"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.s
+ty"
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen108
+\captionmargin@=\dimen109
+\captionwidth=\dimen110
+\caption@tempdima=\dimen111
+\caption@indent=\dimen112
+\caption@parindent=\dimen113
+\caption@hangindent=\dimen114
+)
+\c@ContinuedFloat=\count92
+Package caption Info: float package is loaded.
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\booktabs\booktabs.
+sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen115
+\lightrulewidth=\dimen116
+\cmidrulewidth=\dimen117
+\belowrulesep=\dimen118
+\belowbottomsep=\dimen119
+\aboverulesep=\dimen120
+\abovetopsep=\dimen121
+\cmidrulesep=\dimen122
+\cmidrulekern=\dimen123
+\defaultaddspace=\dimen124
+\@cmidla=\count93
+\@cmidlb=\count94
+\@aboverulesep=\dimen125
+\@belowrulesep=\dimen126
+\@thisruleclass=\count95
+\@lastruleclass=\count96
+\@thisrulewidth=\dimen127
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\framed\framed.sty"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip53
+\fb@frw=\dimen128
+\fb@frh=\dimen129
+\FrameRule=\dimen130
+\FrameSep=\dimen131
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
+sty"
+\lst@mode=\count97
+\lst@gtempboxa=\box28
+\lst@token=\toks22
+\lst@length=\count98
+\lst@currlwidth=\dimen132
+\lst@column=\count99
+\lst@pos=\count100
+\lst@lostspace=\dimen133
+\lst@width=\dimen134
+\lst@newlines=\count101
+\lst@lineno=\count102
+\lst@maxwidth=\dimen135
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.s
+ty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count103
+\lst@skipnumbers=\count104
+\lst@framebox=\box29
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
+cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.st
+y"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.st
+y"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks23
+\ex@=\dimen136
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen137
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count105
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count106
+\leftroot@=\count107
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count108
+\DOTSCASE@=\count109
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen138
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count110
+\c@MaxMatrixCols=\count111
+\dotsspace@=\muskip10
+\c@parentequation=\count112
+\dspbrk@lvl=\count113
+\tag@help=\toks24
+\row@=\count114
+\column@=\count115
+\maxfields@=\count116
+\andhelp@=\toks25
+\eqnshift@=\dimen139
+\alignsep@=\dimen140
+\tagshift@=\dimen141
+\tagwidth@=\dimen142
+\totwidth@=\dimen143
+\lineht@=\dimen144
+\@envbody=\toks26
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.s
+ty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.
+sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ntheorem\ntheorem.
+sty"
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\theorem@style=\toks28
+\theorem@@style=\toks29
+\theorembodyfont=\toks30
+\theoremnumbering=\toks31
+\theorempreskipamount=\skip57
+\theorempostskipamount=\skip58
+\theoremframepreskipamount=\skip59
+\theoremframepostskipamount=\skip60
+\theoreminframepreskipamount=\skip61
+\theoreminframepostskipamount=\skip62
+\theorem@preskip=\toks32
+\theorem@postskip=\toks33
+\theorem@framepreskip=\toks34
+\theorem@framepostskip=\toks35
+\theorem@inframepreskip=\toks36
+\theorem@inframepostskip=\toks37
+\theoremindent=\dimen145
+\theorem@indent=\dimen146
+\theoremrightindent=\dimen147
+\theorem@rightindent=\dimen148
+\theoremheaderfont=\toks38
+\theoremseparator=\toks39
+\theoremprework=\toks40
+\theorempostwork=\toks41
+\theoremsymbol=\toks42
+\qedsymbol=\toks43
+\theoremkeyword=\toks44
+\qedsymbol=\toks45
+\thm@topsep=\skip63
+\thm@topsepadd=\skip64
+Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
+\c@endNonectr=\count117
+\c@currNonectr=\count118
+\mysavskip=\skip65
+Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
+ line 1175.
+\thm@amstmpdepth=\dimen149
+\tagwidth=\dimen150
+\shadecolor=\toks46
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.
+sty"
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count119
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.
+sty"
+\fancy@headwidth=\skip66
+\f@ncyO@elh=\skip67
+\f@ncyO@erh=\skip68
+\f@ncyO@olh=\skip69
+\f@ncyO@orh=\skip70
+\f@ncyO@elf=\skip71
+\f@ncyO@erf=\skip72
+\f@ncyO@olf=\skip73
+\f@ncyO@orf=\skip74
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count120
+\calc@Bcount=\count121
+\calc@Adimen=\dimen151
+\calc@Bdimen=\dimen152
+\calc@Askip=\skip75
+\calc@Bskip=\skip76
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count122
+\calc@Cskip=\skip77
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.
+sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bbding\bbding.sty"
+Package: bbding 1999/04/15 v1.01 Dingbats symbols
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\multicol.sty
+"
+Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
+\c@tracingmulticols=\count123
+\mult@box=\box32
+\multicol@leftmargin=\dimen153
+\c@unbalance=\count124
+\c@collectmore=\count125
+\doublecol@number=\count126
+\multicoltolerance=\count127
+\multicolpretolerance=\count128
+\full@width=\dimen154
+\page@free=\dimen155
+\premulticols=\dimen156
+\postmulticols=\dimen157
+\multicolsep=\skip78
+\multicolbaselineskip=\skip79
+\partial@page=\box33
+\last@line=\box34
+\maxbalancingoverflow=\dimen158
+\mult@rightbox=\box35
+\mult@grightbox=\box36
+\mult@gfirstbox=\box37
+\mult@firstbox=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\c@columnbadness=\count129
+\c@finalcolumnbadness=\count130
+\last@try=\dimen159
+\multicolovershoot=\dimen160
+\multicolundershoot=\dimen161
+\mult@nat@firstbox=\box56
+\colbreak@box=\box57
+\mc@col@check@num=\count131
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tocbibind\tocbibin
+d.sty"
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lastpage\lastpage.
+sty"
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\todonotes\todonote
+s.sty"
+Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.st
+y"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.
+tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils
+.tex"
+\XKV@toks=\toks47
+\XKV@tempa@toks=\toks48
+)
+\XKV@depth=\count132
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\
+tikz.sty"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf
+.sty"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfr
+cs.sty"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+futil-common.tex"
+\pgfutil@everybye=\toks49
+\pgfutil@tempdima=\dimen162
+\pgfutil@tempdimb=\dimen163
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+futil-common-lists.tex"))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+futil-latex.def"
+\pgfutil@abb=\box58
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+frcs.code.tex"
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf
+core.sty"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemlayer\pg
+fsys.sty"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsys.code.tex"
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+fkeys.code.tex"
+\pgfkeys@pathtoks=\toks50
+\pgfkeys@temptoks=\toks51
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+fkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks52
+))
+\pgf@x=\dimen164
+\pgf@y=\dimen165
+\pgf@xa=\dimen166
+\pgf@ya=\dimen167
+\pgf@xb=\dimen168
+\pgf@yb=\dimen169
+\pgf@xc=\dimen170
+\pgf@yc=\dimen171
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count133
+\c@pgf@countb=\count134
+\c@pgf@countc=\count135
+\c@pgf@countd=\count136
+\t@pgf@toka=\toks53
+\t@pgf@tokb=\toks54
+\t@pgf@tokc=\toks55
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgf.cfg"
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count137
+\pgfsyssoftpath@bigbuffer@items=\count138
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcore.code.tex"
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+calc.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+util.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+parser.code.tex"
+\pgfmath@dimen=\dimen172
+\pgfmath@count=\count139
+\pgfmath@box=\box59
+\pgfmath@toks=\toks56
+\pgfmath@stack@operand=\toks57
+\pgfmath@stack@operation=\toks58
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.basic.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.trigonometric.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.random.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.comparison.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.base.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.round.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.misc.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.integerarithmetics.code.tex")))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+float.code.tex"
+\c@pgfmathroundto@lastzeros=\count140
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen173
+\pgf@picmaxx=\dimen174
+\pgf@picminy=\dimen175
+\pgf@picmaxy=\dimen176
+\pgf@pathminx=\dimen177
+\pgf@pathmaxx=\dimen178
+\pgf@pathminy=\dimen179
+\pgf@pathmaxy=\dimen180
+\pgf@xx=\dimen181
+\pgf@xy=\dimen182
+\pgf@yx=\dimen183
+\pgf@yy=\dimen184
+\pgf@zx=\dimen185
+\pgf@zy=\dimen186
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen187
+\pgf@path@lasty=\dimen188
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen189
+\pgf@shorten@start@additional=\dimen190
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count141
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen191
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen192
+\pgf@pt@y=\dimen193
+\pgf@pt@temp=\dimen194
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorequick.code.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen195
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen196
+\pgf@sys@shading@range@num=\count142
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box63
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+oduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box64
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+oduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\
+pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen197
+\pgf@nodesepend=\dimen198
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\
+pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgff
+or.sty"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfk
+eys.sty"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+fkeys.code.tex"))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.s
+ty"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+.code.tex"))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+ffor.code.tex"
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+.code.tex")
+\pgffor@iter=\dimen199
+\pgffor@skip=\dimen256
+\pgffor@stack=\toks59
+\pgffor@toks=\toks60
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\tikz.code.tex"
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pg
+flibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count143
+\pgfplotmarksize=\dimen257
+)
+\tikz@lastx=\dimen258
+\tikz@lasty=\dimen259
+\tikz@lastxsaved=\dimen260
+\tikz@lastysaved=\dimen261
+\tikzleveldistance=\dimen262
+\tikzsiblingdistance=\dimen263
+\tikz@figbox=\box65
+\tikz@figbox@bg=\box66
+\tikz@tempbox=\box67
+\tikz@tempbox@bg=\box68
+\tikztreelevel=\count144
+\tikznumberofchildren=\count145
+\tikznumberofcurrentchild=\count146
+\tikz@fig@count=\count147
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+odulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count148
+\pgfmatrixcurrentcolumn=\count149
+\pgf@matrix@numberofcolumns=\count150
+)
+\tikz@expandcount=\count151
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+\c@@todonotes@numberoftodonotes=\count152
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\genmisc\nth.sty"
+Package: nth 2002/02/27
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.
+sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-
+hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-
+generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.
+sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.s
+ty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions
+.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen264
+\Hy@linkcounter=\count153
+\Hy@pagecounter=\count154
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.de
+f"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count155
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.
+cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count156
+ ("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen265
+\Fld@menulength=\count157
+\Field@Width=\dimen266
+\Fld@charsize=\dimen267
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count158
+\c@Item=\count159
+\c@Hfootnote=\count160
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.d
+ef"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count161
+\c@bookmark@seq@number=\count162
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfile
+check.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip80
+)
+Package hyperref Info: Option `plainpages' set `false' on input line 125.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 125.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 125.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
+ty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitl
+estring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count163
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\rotating\rotating.
+sty"
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+\c@r@tfl@t=\count164
+\rotFPtop=\skip81
+\rotFPbot=\skip82
+\rot@float@box=\box69
+\rot@mess@toks=\toks61
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.
+sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
+base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.st
+y"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.
+sty"
+Package: chngcntr 2009/09/02 v1.0a change counter resetting
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\bookmark.
+sty"
+Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdfte
+x.def"
+File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
+\BKM@id=\count165
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption
+.sty"
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+\c@subfigure=\count166
+\c@subtable=\count167
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pbox\pbox.sty"
+Package: pbox 2011/12/07 v1.2 Dynamic parboxes
+\pb@xlen=\skip83
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\adjustbo
+x.sty"
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.
+sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\trimclip
+.sty"
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\collectbox\collect
+box.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box70
+)
+\tc@llx=\dimen268
+\tc@lly=\dimen269
+\tc@urx=\dimen270
+\tc@ury=\dimen271
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\tc-pdfte
+x.def"
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen272
+\adjbox@Height=\dimen273
+\adjbox@Depth=\dimen274
+\adjbox@Totalheight=\dimen275
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpag
+e.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count168
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.s
+ty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box71
+\sift@deathcycles=\count169
+\@vwid@loff=\dimen276
+\@vwid@roff=\dimen277
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.st
+y"
+\wrapoverhang=\dimen278
+\WF@size=\dimen279
+\c@WF@wrappedlines=\count170
+\WF@box=\box72
+\WF@everypar=\toks62
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.st
+y"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip84
+\LTright=\skip85
+\LTpre=\skip86
+\LTpost=\skip87
+\LTchunksize=\count171
+\LTcapwidth=\dimen280
+\LT@head=\box73
+\LT@firsthead=\box74
+\LT@foot=\box75
+\LT@lastfoot=\box76
+\LT@cols=\count172
+\LT@rows=\count173
+\c@LT@tables=\count174
+\c@LT@chunks=\count175
+\LT@p@ftn=\toks63
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgfplots\pgfplots.
+sty"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.revision.tex")
+Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+score.code.tex"
+\t@pgfplots@toka=\toks64
+\t@pgfplots@tokb=\toks65
+\t@pgfplots@tokc=\toks66
+\pgfplots@tmpa=\dimen281
+\c@pgfplots@coordindex=\count176
+\c@pgfplots@scanlineindex=\count177
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\sys\pgf
+plotssysgeneric.code.tex"))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\libs\pg
+fplotslibrary.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpgfc
+ompatib\pgfplotsoldpgfsupp_loader.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pg
+flibraryfpu.code.tex")
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpgfc
+ompatib\pgfplotsoldpgfsupp_pgflibraryfpu.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\oldpgfc
+ompatib\pgfplotsoldpgfsupp_pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count178
+))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotsutil.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsliststructure.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsliststructureext.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsarray.code.tex"
+\c@pgfplotsarray@tmp=\count179
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsmatrix.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\numtabl
+e\pgfplotstableshared.code.tex"
+\c@pgfplotstable@counta=\count180
+\t@pgfplotstable@a=\toks67
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\liststr
+ucture\pgfplotsdeque.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotsbinary.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotsbinary.data.code.tex"))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotsutil.verb.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\libs\pg
+flibrarypgfplots.surfshading.code.tex"
+\c@pgfplotslibrarysurf@no=\count181
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\sys\pgf
+librarypgfplots.surfshading.pgfsys-pdftex.def")))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotscolormap.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\util\pg
+fplotscolor.code.tex"))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+sstackedplots.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+splothandlers.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+smeshplothandler.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+smeshplotimage.code.tex")))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.scaling.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+scoordprocessing.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.errorbars.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.markers.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+sticks.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplot
+s.paths.code.tex")
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarydecorations.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+oduledecorations.code.tex"
+\pgfdecoratedcompleteddistance=\dimen282
+\pgfdecoratedremainingdistance=\dimen283
+\pgfdecoratedinputsegmentcompleteddistance=\dimen284
+\pgfdecoratedinputsegmentremainingdistance=\dimen285
+\pgf@decorate@distancetomove=\dimen286
+\pgf@decorate@repeatstate=\count182
+\pgfdecorationsegmentamplitude=\dimen287
+\pgfdecorationsegmentlength=\dimen288
+)
+\tikz@lib@dec@box=\box77
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\de
+corations\pgflibrarydecorations.pathmorphing.code.tex"))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex"
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\de
+corations\pgflibrarydecorations.pathreplacing.code.tex"))
+\pgfplots@numplots=\count183
+\pgfplots@xmin@reg=\dimen289
+\pgfplots@xmax@reg=\dimen290
+\pgfplots@ymin@reg=\dimen291
+\pgfplots@ymax@reg=\dimen292
+\pgfplots@zmin@reg=\dimen293
+\pgfplots@zmax@reg=\dimen294
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibraryplotmarks.code.tex"
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pg
+flibraryplotmarks.code.tex"
+File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+)))
+\c@currtheoremctr=\count184
+\c@endtheoremctr=\count185
+\c@theorem=\count186
+ (setup/todo/todo.tex))
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xr.sty"
+Package: xr 1994/05/28 v5.02 eXternal References (DPC)
+)
+(setup/hyphenations.tex) (setup/macros.tex
+\c@currexactr=\count187
+\c@endexactr=\count188
+\c@exa=\count189
+) (setup/variables.tex
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)) (Main.aux
+
+LaTeX Warning: Label `grafteori' multiply defined.
+
+)
+\openout1 = `Main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 7.
+ ("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
+ii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count190
+\scratchdimen=\dimen295
+\scratchbox=\box78
+\nofMPsegments=\count191
+\nofMParguments=\count192
+\everyMPshowfont=\toks68
+\MPscratchCnt=\count193
+\MPscratchDim=\dimen296
+\MPnumerator=\count194
+\makeMPintoPDFobject=\count195
+\everyMPtoPDFconversion=\toks69
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\ltcaption.
+sty"
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count196
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 7.
+ ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box79
+Package hyperref Info: Link coloring ON on input line 7.
+LaTeX Info: Redefining \ref on input line 7.
+LaTeX Info: Redefining \pageref on input line 7.
+LaTeX Info: Redefining \nameref on input line 7.
+
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.13}).
+
+(aau/frontpage.tex
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 5.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 5.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 5.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 5.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 5.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) <Pictures/forsidebillede.png, id=6, 429.10312pt x 398.99063pt>
+File: Pictures/forsidebillede.png Graphic file (type png)
+
+<use Pictures/forsidebillede.png>
+Package pdftex.def Info: Pictures/forsidebillede.png used on input line 30.
+(pdftex.def)             Requested size: 310.4979pt x 288.70982pt.
+ [1
+
+{C:/Users/fiske/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Pictures/
+forsidebillede.png>]) (aau/titlepages.tex
+\titlepageleftcolumnwidth=\skip88
+\titlepagerightcolumnwidth=\skip89
+Package epstopdf Info: Source file: <aau/aau_logo_en.eps>
+(epstopdf)                    date: 2016-03-31 14:01:32
+(epstopdf)                    size: 17997 bytes
+(epstopdf)             Output file: <aau/aau_logo_en-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-10 23:36:29
+(epstopdf)                    size: 9257 bytes
+(epstopdf)             Command: <epstopdf --outfile=aau/aau_logo_en-eps-convert
+ed-to.pdf aau/aau_logo_en.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+
+<aau/aau_logo_en-eps-converted-to.pdf, id=16, 115.43124pt x 77.28876pt>
+File: aau/aau_logo_en-eps-converted-to.pdf Graphic file (type pdf)
+
+<use aau/aau_logo_en-eps-converted-to.pdf>
+Package pdftex.def Info: aau/aau_logo_en-eps-converted-to.pdf used on input lin
+e 35.
+(pdftex.def)             Requested size: 166.5pt x 111.4903pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 35.
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 6125) in paragraph at lines 35--35
+\T1/lmr/m/n/10 Vedligeholdelse af Trafik Simu-ler-
+ []
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 35--35
+\T1/lmr/m/n/10 penne lisce tagli-atelle conchiglie.
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 35--35
+\T1/lmr/m/n/10 nette pen-noni lasag-nette trenette
+ []
+
+
+Underfull \hbox (badness 4660) in paragraph at lines 35--35
+\T1/lmr/m/n/10 crox-etti capelli d'angelo mafalde
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 35--35
+\T1/lmr/m/n/10 atelle sac-chet-tini pasta al ceppo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/10 spaghetti foglie d'ulivo ca-punti
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 35--35
+\T1/lmr/m/n/10 tor-tiglioni ver-mi-cel-loni fet-tuc-cine.
+ []
+
+
+Underfull \hbox (badness 4144) in paragraph at lines 35--35
+\T1/lmr/m/n/10 ceppo stringozzi ver-mi-celli fusilli
+ []
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 35--35
+\T1/lmr/m/n/10 sagnarelli chif-feri tuffoli ric-ci-olini
+ []
+
+
+Overfull \hbox (3.33333pt too wide) in paragraph at lines 35--35
+[] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.35 }
+       [1
+
+
+ <./aau/aau_logo_en-eps-converted-to.pdf>]) (Main.toc [2
+
+
+
+] [3])
+\tf@toc=\write4
+\openout4 = `Main.toc'.
+
+
+[4] (sections/sections.tex (sections/Abstract/Abstract.tex
+Chapter 1.
+LaTeX Font Info:    Try loading font information for OT1+pzc on input line 1.
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pzc.fd"
+File: ot1pzc.fd 2001/06/04 font definitions for OT1/pzc.
+)
+LaTeX Font Info:    Font shape `OT1/pzc/m/n' in size <76> not available
+(Font)              Font shape `OT1/pzc/mb/it' tried instead on input line 1.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Indledning/Indledning.tex [1
+
+
+]
+Chapter 2.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+[2
+
+]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 33.
+ ("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 33.
+) (sections/Simulering/Simulering.tex [3]
+Chapter 3.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 10.
+
+Overfull \hbox (6.8902pt too wide) in paragraph at lines 11--12
+[]\T1/lmr/m/n/10 Udvikling af drift og ressource beslut-ninger til at forbedre 
+sys-temets ydeevne 
+ []
+
+[4
+
+]) [5] [6] [7
+
+]
+(sections/IndledningProblemanalyse/IndledningProblemanalyse.tex
+Chapter 4.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
+[][][][][][][][][]  
+ []
+
+) (sections/Konteksten/Konteksten.tex [8
+
+]
+Chapter 5.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+(sections/Konteksten/vaekstbiler.tex) [9
+
+]
+Overfull \hbox (5.17552pt too wide) in paragraph at lines 38--39
+\T1/lmr/m/n/10 in-te-gra-tion med nu-værende ori-en-ter-ingsværk-tø-jer som f.e
+ks. ap-p-lika-tioner. Simu-
+ []
+
+) (sections/EksisterendeModeller/eksisterendemodeller.tex [10]
+Overfull \hbox (4.9908pt too wide) in paragraph at lines 11--12
+\T1/lmr/m/n/10 forhold til makro-niveau. De an-vendte mod-eller på dette niveau
+ er 4-trinsmodeller.
+ []
+
+
+LaTeX Warning: Reference `teknologianalyse' on page 11 undefined on input line 
+19.
+
+) (sections/Teknologianalyse/Teknologianalyse.tex [11]
+Chapter 6.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+[12
+
+]
+<Pictures/Teknologianalyse/vissimfunker.jpg, id=282, 1926.19624pt x 747.79375pt
+>
+File: Pictures/Teknologianalyse/vissimfunker.jpg Graphic file (type jpg)
+ <use Pictures/Teknologianalyse/vissimfunker.jpg>
+Package pdftex.def Info: Pictures/Teknologianalyse/vissimfunker.jpg used on inp
+ut line 19.
+(pdftex.def)             Requested size: 413.99895pt x 160.71547pt.
+
+Overfull \hbox (68.99895pt too wide) in paragraph at lines 19--20
+ [] 
+ []
+
+
+Overfull \hbox (18.91762pt too wide) in paragraph at lines 39--41
+\T1/lmr/m/n/10 Netværket er bestående af de vi-suelle el-e-menter, som har ind-
+fly-delse på trafikafviklin-
+ []
+
+[13 <./Pictures/Teknologianalyse/vissimfunker.jpg>] [14])
+(sections/Teknologianalyse/altransWTF.tex [15]
+Overfull \hbox (13.8901pt too wide) in paragraph at lines 21--22
+[]\T1/lmr/m/n/10 Modellen af ser-viceniveau udreg-ner ser-viceniveauet med vari
+-ablerne tid, omkost-
+ []
+
+[16] [17]) (sections/Interessentanalyse/Interessentanalyse.tex [18]
+Chapter 7.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
+[][][][][][][][][]  
+ []
+
+[19
+
+] [20]) (sections/Problemformulering/Problemformulering.tex [21]
+Chapter 8.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) [22
+
+] [23
+
+] (sections/Teori/Teori.tex
+Chapter 9.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 2.
+("C:\Users\fiske\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+[24
+
+] (sections/Teori/Grafteori.tex
+<Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG, id=370, 1123.1962
+4pt x 1336.995pt>
+File: Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG Graphic file 
+(type png)
+
+<use Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG>
+Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/weighted_directed_grap
+h.PNG used on input line 14.
+(pdftex.def)             Requested size: 172.5pt x 205.3348pt.
+
+Overfull \hbox (308.13086pt too wide) detected at line 50
+[]\OML/lmm/m/it/10 E \OT1/lmr/m/n/10 = \OMS/lmsy/m/n/10 ff\OML/lmm/m/it/10 A; B
+\OMS/lmsy/m/n/10 g ! \OT1/lmr/m/n/10 4\OML/lmm/m/it/10 ; \OMS/lmsy/m/n/10 f\OML
+/lmm/m/it/10 A; F\OMS/lmsy/m/n/10 g ! \OT1/lmr/m/n/10 5\OML/lmm/m/it/10 ; \OMS/
+lmsy/m/n/10 f\OML/lmm/m/it/10 B; D\OMS/lmsy/m/n/10 g ! \OT1/lmr/m/n/10 7\OML/lm
+m/m/it/10 ; \OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 C; A\OMS/lmsy/m/n/10 g ! \OT1/lm
+r/m/n/10 3\OML/lmm/m/it/10 ; \OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 C; B\OMS/lmsy/m
+/n/10 g ! \OT1/lmr/m/n/10 4\OML/lmm/m/it/10 ; \OMS/lmsy/m/n/10 f\OML/lmm/m/it/1
+0 D; C\OMS/lmsy/m/n/10 g ! \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 ; \OMS/lmsy/m/n/10
+ f\OML/lmm/m/it/10 D; E\OMS/lmsy/m/n/10 g[]  ! \OT1/lmr/m/n/10 3\OML/lmm/m/it/1
+0 ; \OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 E; D\OMS/lmsy/m/n/10 g ! \OT1/lmr/m/n/10
+ 3\OML/lmm/m/it/10 ; \OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 E; F\OMS/lmsy/m/n/10 g 
+! \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 ; \OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 F; C\O
+MS/lmsy/m/n/10 g ! \OT1/lmr/m/n/10 1\OML/lmm/m/it/10 ; \OMS/lmsy/m/n/10 f\OML/l
+mm/m/it/10 F; E\OMS/lmsy/m/n/10 g ! \OT1/lmr/m/n/10 1 \OMS/lmsy/m/n/10 2 \OML/l
+mm/m/it/10 E\OMS/lmsy/m/n/10 g
+ []
+
+[25 <./Pictures/Teoriafsnit/Figurfiler/weighted_directed_graph.PNG>]
+<Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.PNG, 
+id=380, 199.947pt x 154.77824pt>
+File: Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.
+PNG Graphic file (type png)
+
+<use Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_graph.P
+NG>
+Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weigh
+ted_directed_graph.PNG used on input line 61.
+(pdftex.def)             Requested size: 172.5pt x 133.53651pt.
+) [26 <./Pictures/Teoriafsnit/Figurfiler/adjacency_matrix_weighted_directed_gra
+ph.PNG>] (sections/Teori/Dijkstra.tex
+<Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png, id=389, 2109.8825pt x 1365.1
+pt>
+File: Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png Graphic file (type png)
+ <use Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png>
+Package pdftex.def Info: Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png used 
+on input line 4.
+(pdftex.def)             Requested size: 155.24895pt x 100.44092pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 39.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 39.
+ [27 <./Pictures/Teoriafsnit/Figurfiler/DijkstraGraf.png>] [28]) (sections/Teor
+i/AStjerne.tex
+Overfull \hbox (1.60031pt too wide) in paragraph at lines 97--1
+[]\T1/lmr/m/n/10 Figur [][]9.6[][] viser pro-ce-duren \T1/lmtt/m/n/10 TracePath
+\T1/lmr/m/n/10 , der finder ve-jen tilbage fra slutknuden.
+ []
+
+[29])) (sections/Design/Design.tex [30]
+Chapter 10.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+
+Overfull \hbox (9.9996pt too wide) in paragraph at lines 12--13
+\T1/lmr/m/n/10 forbindelsespunk-ter, der ved hjælp af ko-or-di-naterne kan bere
+gne af-s-tanden imellem
+ []
+
+) (sections/Design/Test.tex [31
+
+]
+Overfull \hbox (101.88017pt too wide) in paragraph at lines 18--20
+\T1/lmr/m/n/14.4 TEM TEST-ING set her https://www.inflectra.com/Ideas/Topic/Tes
+ting-
+ []
+
+) (sections/Design/Kravspecifikationer/Kravspecifikationer.tex [32] [33]
+<Pictures/Design/Opdeling.PNG, id=519, 1219.55624pt x 1324.95pt>
+File: Pictures/Design/Opdeling.PNG Graphic file (type png)
+
+<use Pictures/Design/Opdeling.PNG>
+Package pdftex.def Info: Pictures/Design/Opdeling.PNG used on input line 56.
+(pdftex.def)             Requested size: 137.9979pt x 149.90967pt.
+ [34]
+<Pictures/Design/ProgramOversigt.PNG, id=525, 2333.71875pt x 1831.84375pt>
+File: Pictures/Design/ProgramOversigt.PNG Graphic file (type png)
+
+<use Pictures/Design/ProgramOversigt.PNG>
+Package pdftex.def Info: Pictures/Design/ProgramOversigt.PNG used on input line
+ 87.
+(pdftex.def)             Requested size: 345.0pt x 270.79558pt.
+ [35 <./Pictures/Design/Opdeling.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
+
+ []
+
+[36 <./Pictures/Design/ProgramOversigt.PNG>])
+(sections/Implementation/Implementation.tex [37]
+Chapter 11.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+(sections/Implementation/Klassediagrammer.tex
+
+Package xr Warning: 
+No file appendix.aux
+LABELS NOT IMPORTED.
+ on input line 2.
+
+<Pictures/Klassediagram/VejElementer.png, id=550, 686.565pt x 613.54219pt>
+File: Pictures/Klassediagram/VejElementer.png Graphic file (type png)
+
+<use Pictures/Klassediagram/VejElementer.png>
+Package pdftex.def Info: Pictures/Klassediagram/VejElementer.png used on input 
+line 11.
+(pdftex.def)             Requested size: 344.99974pt x 308.3057pt.
+ [38
+
+]
+<Pictures/Klassediagram/Diverse.png, id=561, 770.12718pt x 375.65344pt>
+File: Pictures/Klassediagram/Diverse.png Graphic file (type png)
+
+<use Pictures/Klassediagram/Diverse.png>
+Package pdftex.def Info: Pictures/Klassediagram/Diverse.png used on input line 
+20.
+(pdftex.def)             Requested size: 344.99112pt x 168.28012pt.
+ [39 <./Pictures/Klassediagram/VejElementer.png>]
+<Pictures/Klassediagram/Viewport.png, id=569, 288.3272pt x 322.20375pt>
+File: Pictures/Klassediagram/Viewport.png Graphic file (type png)
+
+<use Pictures/Klassediagram/Viewport.png>
+Package pdftex.def Info: Pictures/Klassediagram/Viewport.png used on input line
+ 30.
+(pdftex.def)             Requested size: 138.0039pt x 154.21848pt.
+
+Overfull \hbox (25.11923pt too wide) in paragraph at lines 35--36
+\T1/lmr/m/n/10 bruger-flade \T1/lmtt/m/n/10 GUIMain\T1/lmr/m/n/10 , hvor der ka
+n redi-geres i ve-jnet-tet. Klassen \T1/lmtt/m/n/10 SimulationViewport
+ []
+
+<Pictures/Klassediagram/Pathfinder.png, id=572, 617.30624pt x 267.24844pt>
+File: Pictures/Klassediagram/Pathfinder.png Graphic file (type png)
+
+<use Pictures/Klassediagram/Pathfinder.png>
+Package pdftex.def Info: Pictures/Klassediagram/Pathfinder.png used on input li
+ne 39.
+(pdftex.def)             Requested size: 345.01094pt x 149.36449pt.
+ [40 <./Pictures/Klassediagram/Diverse.png> <./Pictures/Klassediagram/Viewport.
+png>]
+<Pictures/Klassediagram/Funktionalitet.png, id=581, 720.44156pt x 194.22563pt>
+File: Pictures/Klassediagram/Funktionalitet.png Graphic file (type png)
+
+<use Pictures/Klassediagram/Funktionalitet.png>
+Package pdftex.def Info: Pictures/Klassediagram/Funktionalitet.png used on inpu
+t line 48.
+(pdftex.def)             Requested size: 344.99452pt x 93.00792pt.
+)
+(sections/Implementation/HovedBrugerfladen.tex
+<Pictures/Implementation/program2.png, id=584, 516.42938pt x 258.21469pt>
+File: Pictures/Implementation/program2.png Graphic file (type png)
+
+<use Pictures/Implementation/program2.png>
+Package pdftex.def Info: Pictures/Implementation/program2.png used on input lin
+e 6.
+(pdftex.def)             Requested size: 345.013pt x 172.50648pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[41 <./Pictures/Klassediagram/Pathfinder.png> <./Pictures/Klassediagram/Funktio
+nalitet.png>]) (sections/Implementation/ElementerVejnettet.tex [42 <./Pictures/
+Implementation/program2.png>] [43] [44]) (sections/Implementation/Diverse.tex
+[45] [46]
+Overfull \hbox (7.63931pt too wide) in paragraph at lines 84--85
+\T1/lmtt/m/n/10 SimulationData \T1/lmr/m/n/10 er en klasse der in-de-holder dat
+aen fra køretø-jerne (\T1/lmtt/m/n/10 VehicleData\T1/lmr/m/n/10 )
+ []
+
+<Pictures/Klassediagram/SimulationData.png, id=702, 219.82124pt x 168.63pt>
+File: Pictures/Klassediagram/SimulationData.png Graphic file (type png)
+
+<use Pictures/Klassediagram/SimulationData.png>
+Package pdftex.def Info: Pictures/Klassediagram/SimulationData.png used on inpu
+t line 90.
+(pdftex.def)             Requested size: 155.25238pt x 119.09772pt.
+
+<Pictures/Klassediagram/VehicleData.png, id=703, 182.93344pt x 168.63pt>
+File: Pictures/Klassediagram/VehicleData.png Graphic file (type png)
+
+<use Pictures/Klassediagram/VehicleData.png>
+Package pdftex.def Info: Pictures/Klassediagram/VehicleData.png used on input l
+ine 96.
+(pdftex.def)             Requested size: 155.25688pt x 143.11745pt.
+ [47 <./Pictures/Klassediagram/SimulationData.png> <./Pictures/Klassediagram/Ve
+hicleData.png>])
+(sections/Implementation/Viewport.tex
+Overfull \hbox (15.54596pt too wide) in paragraph at lines 138--1
+\T1/lmr/m/n/10 bliver gjort i \T1/lmtt/m/n/10 TranslateVehicle() \T1/lmr/m/n/10
+ meto-den, der lig-ger i \T1/lmtt/m/n/10 Vehicle \T1/lmr/m/n/10 klassen. \T1/lm
+tt/m/n/10 Vector2D
+ []
+
+[48]
+Overfull \hbox (14.9074pt too wide) in paragraph at lines 48--49
+\T1/lmr/m/n/10 bare er benyt-tet alene er fordi må-den disse \T1/lmtt/m/n/10 La
+yer \T1/lmr/m/n/10 er an-vendt i bl.a. \T1/lmtt/m/n/10 ToolController
+ []
+
+[49]
+Overfull \hbox (0.68433pt too wide) in paragraph at lines 94--95
+\T1/lmtt/m/n/10 SimulationViewport \T1/lmr/m/n/10 har til for-mål at vi-su-alis
+-ere simu-lerin-gen, som \T1/lmtt/m/n/10 Simulation
+ []
+
+[50]) (sections/Implementation/Pathfinder.tex [51] [52])
+(sections/Implementation/Funktionelle.tex [53]
+
+Package xr Warning: 
+No file sections/Implementation/Vehicle.aux
+LABELS NOT IMPORTED.
+ on input line 2.
+
+
+Overfull \hbox (4.72705pt too wide) in paragraph at lines 24--25
+\T1/lmr/m/n/10 GUIMain som sender alle værk-tø-jerne, nu-værende view-port samt
+ pro-jekt. Herved
+ []
+
+[54] [55] [56]
+Overfull \hbox (3.18683pt too wide) in paragraph at lines 173--174
+\T1/lmr/m/n/10 sket, altså om start-punk-tet til ve-jen er blevet valgt. Hvis \
+T1/lmtt/m/n/10 _firstNodeConnection
+ []
+
+[57] [58]
+Overfull \hbox (8.13pt too wide) in paragraph at lines 227--228
+\T1/lmtt/m/n/10 Simulation \T1/lmr/m/n/10 klassen in-de-holder funk-tion-alitet
+en der bruges til at simulere. Klassen
+ []
+
+
+Overfull \hbox (31.79443pt too wide) in paragraph at lines 227--228
+\T1/lmtt/m/n/10 Backgroundworker \T1/lmr/m/n/10 in-stanser er sat til at køre \
+T1/lmtt/m/n/10 Simulate()\T1/lmr/m/n/10 , og \T1/lmtt/m/n/10 SimulationComplete
+d()
+ []
+
+[59]
+Overfull \hbox (0.99133pt too wide) in paragraph at lines 270--271
+\T1/lmtt/m/n/10 BackgroundWorker \T1/lmr/m/n/10 in-stanser. Når \T1/lmtt/m/n/10
+ ReportProgress() \T1/lmr/m/n/10 bliver brugt, sendes frem-
+ []
+
+) (sections/Implementation/Vehicle.tex
+Overfull \hbox (38.4341pt too wide) in paragraph at lines 301--1
+\T1/lmr/m/n/10 for hver simu-lerin-gen. Simu-lerin-gen bliver der-for først gem
+t når begge \T1/lmtt/m/n/10 BackgroundWorker
+ []
+
+[60] [61] [62]
+<Pictures/Implementation/TranslateVehicle.png, id=1239, 150.5625pt x 207.02344p
+t>
+File: Pictures/Implementation/TranslateVehicle.png Graphic file (type png)
+ <use Pictures/Implementation/TranslateVehicle.png>
+Package pdftex.def Info: Pictures/Implementation/TranslateVehicle.png used on i
+nput line 90.
+(pdftex.def)             Requested size: 113.81102pt x 156.496pt.
+
+Overfull \hbox (6.47253pt too wide) in paragraph at lines 97--98
+[][]\T1/lmr/m/n/10 Derefter kaldes \T1/lmtt/m/n/10 TranslateVehicle\T1/lmr/m/n/
+10 ,
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 97--98
+\T1/lmr/m/n/10 hvilket er en metode der fly-t-ter
+ []
+
+
+Underfull \hbox (badness 7273) in paragraph at lines 103--104
+[]\T1/lmr/m/n/10 Vektoren skaleres med af-s-
+ []
+
+[63 <./Pictures/Implementation/TranslateVehicle.png>])
+(sections/Implementation/Unittest.tex
+
+Package xr Warning: 
+No file Test.aux
+LABELS NOT IMPORTED.
+ on input line 2.
+
+
+Overfull \hbox (14.65784pt too wide) in paragraph at lines 7--8
+\T1/lmr/m/n/10 nogle af de mest rel-e-vante at ud-føre test-ing på. Vur-derin-g
+en har taget udgangspunkt
+ []
+
+[64]
+Overfull \hbox (235.83519pt too wide) in paragraph at lines 13--14
+\T1/lmr/m/n/10 måder at navn-give test-metoderne så-som det mere ud-bredte for-
+mat: \T1/lmr/bx/n/10 MetodeNavn_StadieUnderTesting_ForventetOpførsel\T1/lmr/m/n
+/10 .[[]] 
+ []
+
+
+Overfull \hbox (26.90358pt too wide) in paragraph at lines 30--31
+[][][]  
+ []
+
+
+Overfull \hbox (58.36128pt too wide) in paragraph at lines 46--46
+[]\T1/lmr/bx/n/8 Figure 11.43: |\T1/lmr/m/n/8 Test-meto-den Com-pareTo_TestOfIn
+putAndResultWhenParsedWithTwoDifferentSpeedValues| 
+ []
+
+[65]
+Overfull \hbox (16.70348pt too wide) in paragraph at lines 56--57
+[][][]  
+ []
+
+) (sections/Implementation/FejlOgMangler.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]|\T1/lmr/m/n/10 Programmet im-ple-mentere ikke
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 17--18
+[]|\T1/lmr/m/n/10 Step skal æn-dre sig på en bestemt
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 21--22
+[]|\T1/lmr/m/n/10 Programmets åbne og gemme funk-
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/10 Samling og anal-yse af simu-lerin-gens
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 38
+ []
+
+[66] [67]
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
+
+ []
+
+)) (sections/Diskussion/Diskussion2.tex [68]
+Chapter 12.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+
+Package xr Warning: 
+No file Teknologianalyse.aux
+LABELS NOT IMPORTED.
+ on input line 2.
+
+
+Package xr Warning: 
+No file konteksten.aux
+LABELS NOT IMPORTED.
+ on input line 3.
+
+
+Package xr Warning: 
+No file FejlOgMangler.aux
+LABELS NOT IMPORTED.
+ on input line 4.
+
+[69
+
+]) (sections/Konklusion/KonklusionAU2.tex [70] [71]
+Chapter 13.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+) (sections/Perspektivering/Perspektivering.tex [72
+
+]
+Chapter 14.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
+[][][][][][][][][]  
+ []
+
+)) (Main.bbl [73
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+[]\T1/lmr/m/n/10 protobuf-net not faster than bi-nary se-ri-al-iza-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+\T1/lmr/m/n/10 tion?  [][]$\T1/lmtt/m/n/10 http : / / stackoverflow . com / que
+stions / 2966500 /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--23
+[]\T1/lmr/m/n/10 Yan Cui.  Per-for-mance test - bi-na-ry-for-mat-ter vs pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--23
+\T1/lmr/m/n/10 to-buf - net.  [][]$\T1/lmtt/m/n/10 http : / / theburningmonk . 
+com / 2011 / 08 /$
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 35--41
+[]\T1/lmr/m/n/10 Danmarks Miljøun-der-søgelser.  Al-trans - ad-færdsmodel for p
+er-son-
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 43--49
+[]\T1/lmr/m/n/10 Danmarks Miljøun-der-søgelser.  Mod-e-l-anal-yser af mo-bilite
+t og miljø.
+ []
+
+
+Underfull \hbox (badness 4132) in paragraph at lines 43--49
+\T1/lmr/m/n/10 slu-trap-port fra al-trans og amor ii, faglig rap-port fra dmu n
+r.
+ []
+
+
+Underfull \hbox (badness 6220) in paragraph at lines 51--56
+[]\T1/lmr/m/n/10 Youssef Mous-saoui.  Com-par-ing the per-for-mance of .net se-
+ri-
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 51--56
+\T1/lmr/m/n/10 al-iz-ers.  [][]$\T1/lmtt/m/n/10 https : / / blogs . msdn . micr
+osoft . com / youssefm / 2009 / 07 / 10 /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
+[]\T1/lmr/m/n/10 MAXIM NO-VAK.  Se-ri-al-iza-tion per-for-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
+\T1/lmr/m/n/10 mance com-par-i-son.  [][]$\T1/lmtt/m/n/10 http : / / maxondev .
+ com /$
+ []
+
+
+Overfull \hbox (482.83095pt too wide) in paragraph at lines 58--63
+$\T1/lmtt/m/n/10 serialization-[]performance-[]comparison-[]c-[]net-[]formats-[
+]frameworks-[]xmldatacontractserializer-[]xmlserializer-[]binaryformatter-[]jso
+n-[]newtonsoft-[]servicestack-[]text/$[][]\T1/lmr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 2229) in paragraph at lines 65--70
+[]\T1/lmr/m/n/10 Dwight A Hen-nessy og David L Wiesen-thal.  Traf-fic con-ges-t
+ion,
+ []
+
+
+Underfull \hbox (badness 2213) in paragraph at lines 65--70
+\T1/lmr/m/n/10 driver stress, and driver ag-gres-sion.  [][]$\T1/lmtt/m/n/10 ht
+tps : / / www . researchgate .$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
+$\T1/lmtt/m/n/10 net / profile / Dwight _ Hennessy / publication / 229863510 _ 
+Traffic _$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
+$\T1/lmtt/m/n/10 congestion _ driver _ stress _ and _ driver _ aggression / lin
+ks /$
+ []
+
+[74
+
+]
+Underfull \hbox (badness 1742) in paragraph at lines 77--82
+[]\T1/lmr/m/n/10 Michael Knørr Skov og Karsten Sten Ped-er-sen.  Trafikprop. fl
+ere
+ []
+
+
+Underfull \hbox (badness 7433) in paragraph at lines 77--82
+\T1/lmr/m/n/10 veje vil sk-abe større vækst.  [][]$\T1/lmtt/m/n/10 http : / / w
+ww . cowi . dk / menu / tema /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
+$\T1/lmtt/m/n/10 infrastruktur-[]2030 / cowi-[]i-[]medierne / Documents / Veje 
+% 20skaber %$
+ []
+
+
+Underfull \hbox (badness 5970) in paragraph at lines 101--106
+[]\T1/lmr/m/n/10 Unit Test nam-ing best prac-tices.  [][]$\T1/lmtt/m/n/10 http 
+: / / stackoverflow . com /$
+ []
+
+
+Underfull \hbox (badness 3078) in paragraph at lines 101--106
+$\T1/lmtt/m/n/10 questions / 155436 / unit-[]test-[]naming-[]best-[]practices$[
+][]\T1/lmr/m/n/10 , 2013.  Ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--113
+$\T1/lmtt/m/n/10 Institutter / Transport / forskning / publikationer / publikat
+ioner %$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--113
+$\T1/lmtt/m/n/10 20dtf / 2007 / arbejdsnotat _ om _ trafikmodeller _ 160507 . a
+shx ? la = da$[][]\T1/lmr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--120
+[]\T1/lmr/m/n/10 Vejdirektoratet.  Læng-den af of-fentlige veje.  [][]$\T1/lmtt
+/m/n/10 http : / / www .$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--120
+$\T1/lmtt/m/n/10 vejdirektoratet . dk / DA / viden _ og _ data / statistik / ve
+jeneital /$
+ []
+
+) [75] (appendix.tex
+Appendix A.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 2--2
+[][][][][][][][][]  
+ []
+
+<Pictures/Klassediagram/GUI.png, id=1425, 764.8575pt x 325.215pt>
+File: Pictures/Klassediagram/GUI.png Graphic file (type png)
+
+<use Pictures/Klassediagram/GUI.png>
+Package pdftex.def Info: Pictures/Klassediagram/GUI.png used on input line 6.
+(pdftex.def)             Requested size: 344.99965pt x 146.69276pt.
+
+<Pictures/Klassediagram/GUIEdit.png, id=1426, 451.6875pt x 210.03468pt>
+File: Pictures/Klassediagram/GUIEdit.png Graphic file (type png)
+
+<use Pictures/Klassediagram/GUIEdit.png>
+Package pdftex.def Info: Pictures/Klassediagram/GUIEdit.png used on input line 
+12.
+(pdftex.def)             Requested size: 345.02289pt x 160.43564pt.
+)
+\tf@thm=\write5
+\openout5 = `Main.thm'.
+
+ 
+AED: lastpage setting LastPage
+[76
+
+ <./Pictures/Klassediagram/GUI.png> <./Pictures/Klassediagram/GUIEdit.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
+
+(Main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 37.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 34306 strings out of 493634
+ 765227 string characters out of 3135240
+ 1054181 words of memory out of 3000000
+ 35973 multiletter control sequences out of 15000+200000
+ 89076 words of font info for 68 fonts, out of 3000000 for 9000
+ 1030 hyphenation exceptions out of 8191
+ 64i,19n,100p,1599b,2115s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathe
+x.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
+athit.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
+lm-mathsy.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
+/lm/lm-ec.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
+/lm/lm-rm.enc}{C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
+/fontname/8r.enc}<C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/lm/lmbx10.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmbx12.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/lm/lmbx8.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/lm/lmex10.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/fiske/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/fiske/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/fiske/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/fiske/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/fiske/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/fiske/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/fiske/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri8.pfb><C:/Users/fiske/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/fiske/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/fisk
+e/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/
+fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Use
+rs/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:
+/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb>
+<C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtti10
+.pfb><C:/Users/fiske/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/zapfchan
+/uzcmi8a.pfb>
+Output written on Main.pdf (81 pages, 1568036 bytes).
+PDF statistics:
+ 1918 PDF objects out of 2073 (max. 8388607)
+ 871 named destinations out of 1000 (max. 500000)
+ 740 words of extra memory for PDF output out of 10000 (max. 10000000)
+
