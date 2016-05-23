@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{Protobuf}
+protobuf-net not faster than binary serialization?
+\newblock
+  \url{http://stackoverflow.com/questions/2966500/protobuf-net-not-faster-than-binary-serialization}.
+
 \bibitem{benjasfar}
 Pshko Aziz.
 \newblock Aalborg kommune teknisk forvaltning, 2016.
@@ -8,6 +13,13 @@ Pshko Aziz.
 Christopher~A. Chung.
 \newblock {\em Simulation Handbook - A Prictical Approch}.
 \newblock CRC Press LLC, 2004.
+
+\bibitem{PerformanceTest}
+Yan Cui.
+\newblock Performance test - binaryformatter vs protobuf - net.
+\newblock
+  \url{http://theburningmonk.com/2011/08/performance-test-binaryformatter-vs-protobuf-net/},
+  2011.
 
 \bibitem{VisualSolutions}
 Altair Engineering.
@@ -34,6 +46,20 @@ Danmarks Miljøundersøgelser.
 \newblock
   \url{http://www.dmu.dk/1_viden/2_publikationer/3_fagrapporter/rapporter/FR447.pdf},
   2003.
+
+\bibitem{ComparingThePerformance}
+Youssef Moussaoui.
+\newblock Comparing the performance of .net serializers.
+\newblock
+  \url{https://blogs.msdn.microsoft.com/youssefm/2009/07/10/comparing-the-performance-of-net-serializers/},
+  2009.
+
+\bibitem{SerializationPerformance}
+MAXIM NOVAK.
+\newblock Serialization performance comparison.
+\newblock
+  \url{http://maxondev.com/serialization-performance-comparison-c-net-formats-frameworks-xmldatacontractserializer-xmlserializer-binaryformatter-json-newtonsoft-servicestack-text/},
+  Ukendt.
 
 \bibitem{stress}
 Dwight A~Hennessy og~David L~Wiesenthal.
