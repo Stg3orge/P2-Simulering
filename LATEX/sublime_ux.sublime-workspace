@@ -35,7 +35,7 @@
 			"file": "sections/sections.tex",
 			"settings":
 			{
-				"buffer_size": 952,
+				"buffer_size": 953,
 				"line_ending": "Windows"
 			}
 		},
@@ -51,7 +51,7 @@
 			"file": "sections/Implementation/Unittest.tex",
 			"settings":
 			{
-				"buffer_size": 4330,
+				"buffer_size": 4277,
 				"line_ending": "Windows"
 			}
 		},
@@ -83,7 +83,7 @@
 			"file": "Main.aux",
 			"settings":
 			{
-				"buffer_size": 31422,
+				"buffer_size": 30989,
 				"line_ending": "Windows"
 			}
 		},
@@ -452,15 +452,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 952,
+						"buffer_size": 953,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								899,
-								899
+								0,
+								0
 							]
 						],
 						"settings":
@@ -510,15 +510,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4330,
+						"buffer_size": 4277,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2480,
-								2480
+								0,
+								0
 							]
 						],
 						"settings":
@@ -624,7 +624,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31422,
+						"buffer_size": 30989,
 						"regions":
 						{
 						},

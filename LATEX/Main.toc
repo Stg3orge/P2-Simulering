@@ -31,7 +31,6 @@
 \contentsline {section}{\numberline {10.3}Elementerne i Vejnettet}{41}{section.2.10.3}
 \contentsline {section}{\numberline {10.4}Diverse}{44}{section.2.10.4}
 \contentsline {section}{\numberline {10.5}Viewport}{47}{section.2.10.5}
-\contentsline {subsection}{\numberline {10.5.1}SimulationViewport}{49}{subsection.2.10.5.1}
 \contentsline {section}{\numberline {10.6}Pathfinder}{51}{section.2.10.6}
 \contentsline {section}{\numberline {10.7}Kerne Funktionalitet}{53}{section.2.10.7}
 \contentsline {section}{\numberline {10.8}Vehicle}{60}{section.2.10.8}
@@ -42,5 +41,5 @@
 \contentsline {chapter}{\numberline {13}Perspektivering}{72}{chapter.2.13}
 \contentsline {section}{\numberline {13.1}Analysering af simulationsoutput}{72}{section.2.13.1}
 \contentsline {section}{\numberline {13.2}Testing}{72}{section.2.13.2}
-\contentsline {chapter}{Bibliography}{73}{chapter*.89}
+\contentsline {chapter}{Bibliography}{73}{chapter*.90}
 \contentsline {chapter}{\numberline {A}Appendix}{75}{appendix.A}
