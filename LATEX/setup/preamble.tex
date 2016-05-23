@@ -108,7 +108,7 @@
 % Enable hyperlinks and insert info into the pdf
 % file. Hypperref should be loaded as one of the
 % last packages
-\usepackage{hyperref}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \hypersetup{%
   %pdfpagelabels=true,% Results in: "Warning: Option `pdfpagelabels' has already been used,(hyperref) - setting the option has no effect"
   plainpages=false,%
