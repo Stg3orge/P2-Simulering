@@ -15,8 +15,7 @@ namespace A319TS
         public bool Active { get; set; }
         public List<PointD> ToDestRecord { get; set; }
         public List<PointD> ToHomeRecord { get; set; }
-
-
+        
         private double _speed;
         public double Speed
         {
@@ -64,11 +63,11 @@ namespace A319TS
 
         private Node _currentNode;
 
-        private int _toDestTime;
+        public int ToDestTime;
         private bool _toDestStarted;
         private List<Road> _toDestPath;
 
-        private int _toHomeTime;
+        public int ToHomeTime;
         private bool _toHomeStarted;
         private List<Road> _toHomePath;
 
@@ -83,11 +82,11 @@ namespace A319TS
             Destination = dest;
             Type = type;
 
-            if (_toDestTime > _toHomeTime)
+            if (ToDestTime > ToHomeTime)
                 throw new ArgumentException("ToDestinationTime cannot be later than ToHomeTime");
 
-            _toDestTime = toDestTime;
-            _toHomeTime = toHomeTime;
+            ToDestTime = toDestTime;
+            ToHomeTime = toHomeTime;
             _toDestStarted = false;
             _toHomeStarted = false;
             
@@ -151,7 +150,7 @@ namespace A319TS
         ////////// ACTIVATION //////////
         private void CheckActive(int time)
         {
-            if (time > _toDestTime && !_toDestStarted)
+            if (time > ToDestTime && !_toDestStarted)
             {
                 if (true) // _toDestPath[0].From.IsEmpty
                 {
@@ -159,7 +158,7 @@ namespace A319TS
                     _toDestStarted = true;
                 }
             } 
-            else if(time > _toHomeTime && !_toHomeStarted)
+            else if(time > ToHomeTime && !_toHomeStarted)
             {
                 if (true) // _toHomePath[0].From.IsEmpty
                 {
@@ -200,7 +199,7 @@ namespace A319TS
             else if (vehicleInfront != null)
             {
                 if (Type.MaxSpeed > vehicleInfront.Speed)
-                    return vehicleInfront.Speed;
+                    return vehicleInfront.Speed * (_settings.TrailingSpeed / 100);
                 else
                     return Type.MaxSpeed;
             }
@@ -370,7 +369,7 @@ namespace A319TS
         ////////// EXTRACT DATA //////////
         public VehicleData ExtractData()
         {
-            return new VehicleData(Type, ToDestRecord, ToHomeRecord, _toDestTime, _toHomeTime);
+            return new VehicleData(Type, ToDestRecord, ToHomeRecord, ToDestTime, ToHomeTime);
         }
     }
 }

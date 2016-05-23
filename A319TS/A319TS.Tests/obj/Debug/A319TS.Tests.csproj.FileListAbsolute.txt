@@ -1,7 +1,6 @@
 C:\Programs\Git\P2-Simulering\A319TS\A319TS.Tests\bin\Debug\A319TS.Tests.dll
 C:\Programs\Git\P2-Simulering\A319TS\A319TS.Tests\bin\Debug\A319TS.Tests.pdb
 C:\Programs\Git\P2-Simulering\A319TS\A319TS.Tests\bin\Debug\A319TS.exe
-C:\Programs\Git\P2-Simulering\A319TS\A319TS.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Programs\Git\P2-Simulering\A319TS\A319TS.Tests\bin\Debug\A319TS.pdb
 C:\Programs\Git\P2-Simulering\A319TS\A319TS.Tests\obj\Debug\A319TS.Tests.csprojResolveAssemblyReference.cache
 C:\Programs\Git\P2-Simulering\A319TS\A319TS.Tests\obj\Debug\A319TS.Tests.dll

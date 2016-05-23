@@ -7,17 +7,15 @@ using System.Drawing;
 
 namespace A319TS
 {
-    static class MathExtension
+    public static class MathExtension
     {
         static public double Distance(Point from, Point to)
         {
-            return (Math.Sqrt(Math.Pow(Math.Abs(from.X - to.X), 2)
-                            + Math.Pow(Math.Abs(from.Y - to.Y), 2)));
+            return Math.Sqrt((to.X - from.X) * (to.X - from.X) + (to.Y - from.Y) * (to.Y - from.Y));
         }
         static public double Distance(PointD from, PointD to)
         {
-            return (Math.Sqrt(Math.Pow(Math.Abs(from.X - to.X), 2)
-                            + Math.Pow(Math.Abs(from.Y - to.Y), 2)));
+            return Math.Sqrt((to.X - from.X) * (to.X - from.X) + (to.Y - from.Y) * (to.Y - from.Y));
         }
         static public double KmhToMms(double kmh)
         {

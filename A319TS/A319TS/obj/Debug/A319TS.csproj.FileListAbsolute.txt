@@ -13,3 +13,4 @@ C:\Programs\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.Resources.resources
 C:\Programs\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csproj.GenerateResource.Cache
 C:\Programs\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.exe
 C:\Programs\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.pdb
+C:\Programs\Git\P2-Simulering\A319TS\A319TS\obj\Debug\A319TS.csprojResolveAssemblyReference.cache

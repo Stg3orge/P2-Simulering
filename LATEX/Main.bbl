@@ -65,6 +65,19 @@ Kenneth~H. Rosen.
 \newblock {\em Discrete Mathematics and its Applications}.
 \newblock McGraw Hill, 7. global edition, 20113.
 
+\bibitem{unittestbenefits}
+{The Benefits of Unit Testing}.
+\newblock \url{http://www.seguetech.com/blog/2014/10/10/benefits-unit-testing},
+  2014.
+\newblock Accessed: 22-05-2016.
+
+\bibitem{unittestnamingpractices}
+{Unit Test naming best practices}.
+\newblock
+  \url{http://stackoverflow.com/questions/155436/unit-test-naming-best-practices},
+  2013.
+\newblock Accessed: 22-05-2016.
+
 \bibitem{dtfnotat}
 Danmarks TransportForskning.
 \newblock Trafikmodeller arbejdsnotat til infrastrukturkommissionen notat 3.

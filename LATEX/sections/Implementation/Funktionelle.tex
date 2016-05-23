@@ -1,4 +1,5 @@
 \section{Kerne Funktionalitet}\label{Kernefunktionalitet}
+\externaldocument{sections/Implementation/Vehicle}
 
 For at håndtere alle dele af programmet blev der implementeret en et styringscenter, som heri findes som klassen \texttt{ToolController}. Formålet med denne fremgangsmåde skulle give bedre overblik over programmets mange metoder og give mulighed for let at håndtere fejl og ændringer i funktionaliteten. Klasserne i programmet er til dette formål håndteret objektorienteret og generelt nok til at fremgangsmåden kan fungere i praksis.
 
@@ -215,15 +216,86 @@ static public Project OpenProject()
 \caption{OpenProject metoden}\label{OpenProjectCode}
 \end{figure}
 
-Metoden \texttt{OpenProject}, der vises på figur \ref{OpenProjectCode}, kan åbne et eksisterende projekt, når brugeren trykker på Open Project i menuen. Denne metode benytter sig af \texttt{OpenFileDialog}, som ligger under \texttt{System.Windows.Forms}. Koden benytter sig af try-catch-finally, hvor den går ind i try fasen og filtrerer alle andre fil-typer væk som ikke er en TSP fil (traffic simulation project), hvis TSP filen er valgt så vil metoden deserialisere og åbne det gemte projekt op. Sidst vil finally lukke filen, så andre kan komme til.
+Metoden \texttt{OpenProject}, der vises på figur \ref{OpenProjectCode}, kan åbne et eksisterende projekt, når brugeren trykker på \texttt{Open} i \texttt{File} menuen. Denne metode benytter sig af \texttt{OpenFileDialog}, som ligger under \texttt{System.Windows.Forms}. Koden benytter sig af try-catch-finally, hvor den går ind i try fasen og filtrerer alle andre fil-typer væk som ikke er en TSP fil (traffic simulation project), hvis TSP filen er valgt så vil metoden deserialisere og åbne det gemte projekt op. Sidst vil finally lukke filen, så andre kan komme til.
 
 \vspace{5mm}
 
-I FileHandler klassen findes der også en SaveProject metode som gemmer projektet, som brugeren har arbejdet på. SaveProject metoden benytter den samme kode struktur som OpenProjekt metoden, som ses på figur \ref{OpenProjectCode}. Metoden minder meget om hinanden, hvor SaveProjekt gemmer istedet for at åbne et projekt.
-
-\vspace{5mm}
-
-\textbf{MANGLER: Noget om åbning og gemning af SimulationData}
+I \texttt{FileHandler} klassen findes der også en \texttt{SaveProject()} metode som gemmer projektet, som brugeren har arbejdet på. \texttt{SaveProject()} metoden benytter den samme kode struktur som \texttt{OpenProject()} metoden, som ses på figur \ref{OpenProjectCode}. Metoderne minder meget om hinanden, hvor SaveProjekt gemmer istedet for at åbne et projekt. Til gemning og åbning af simuleringsdata er der metoderne \texttt{OpenSimulation()} og \texttt{SaveSimulation()}, der fungerer på samme måde som \texttt{OpenProject()} og \texttt{SaveProject()}.
 
 %//////////////////////////////// Simulation ////////////////////////////////%
 \subsection{Simulation}\label{SimulationClass}
+\texttt{Simulation} klassen indeholder funktionaliteten der bruges til at simulere. Klassen tager to \texttt{BackgroundWorker} instanser i brug til at køre simuleringerne, en til den primære simulering og en til den sekundære. \texttt{BackgroundWorker} er en klasse der kan køre en metode på en ny tråd, så programmet kan multitaske. Begge \texttt{Backgroundworker} instanser er sat til at køre \texttt{Simulate()}, og \texttt{SimulationCompleted()} når \texttt{Simulate()} er færdig. 
+
+\begin{figure}[H]
+\begin{lstlisting}
+public void Run()
+{
+  // Find Inbound and Outbound Nodes 
+
+  SetupVehicles();
+
+  Tuple<List<Vehicle>, Project, Partitions> primaryArguments;
+  primaryArguments = new Tuple<List<Vehicle>, Project, Partitions>
+    (_primaryVehicles, PrimaryProject, Partitions.Primary);
+  Tuple<List<Vehicle>, Project, Partitions> secondaryArguments;
+  secondaryArguments = new Tuple<List<Vehicle>,Project,Partitions>
+    (_secondaryVehicles, SecondaryProject, Partitions.Secondary);
+
+  PrimaryWorker.RunWorkerAsync(primaryArguments);
+  SecondaryWorker.RunWorkerAsync(secondaryArguments);
+}
+\end{lstlisting}
+\caption{Run metoden}\label{RunCode}
+\end{figure}
+
+Den offentlige \texttt{Run()} metode, som set på figur \ref{RunCode}, bruges til at starte simuleringen. Først bliver \texttt{SetupVehicles} kørt der fylder \texttt{\_primaryVehicles} og \texttt{\_secondaryVehicles} listerne med Vehicle instanser ud fra indstillingerne brugeren har sat. Derefter startes de to \texttt{BackgroundWorker}, hvor de får en liste af køretøjerne der skal simuleres, selve projektet køretøjerne befinder sig i, og en enumerator der viser hvilken simulering der køres. Udover \texttt{Run()}, er \texttt{Cancel()} også offentlig. \texttt{Cancel()} metoden kalder \texttt{CancelAsync()} på de to \texttt{BackgroundWorker} instanser. 
+
+\begin{figure}[H]
+\begin{lstlisting}
+for (int i = 0; i < MsInDay; i += Project.Settings.StepSize)
+{
+  if (worker.CancellationPending)
+    break;
+  if (i % onePercent == 0)
+    worker.ReportProgress(i, i / onePercent + "% " + partition);
+  foreach (LightController controller in project.LightControllers)
+    controller.Update(project.Settings.StepSize);
+  for (int j = 0; j < vehicleCount; j++)
+    vehicles[j].Drive(i);
+}
+\end{lstlisting}
+\caption{Forløkke i Simulate metoden}\label{SimulateCode}
+\end{figure}
+
+\texttt{Simulate()} metoden starter med at udpakke argumenterne, der blev sendt i en \texttt{Tuple}, hvorefter forløkken set på figur \ref{SimulateCode}, bliver startet. For løkken er indkapslet i et try-catch statement, der stopper begge simuleringer i tilfælde af fejl, og rapporterer det til brugerfladen. Inde i forløkken på figur \ref{SimulateCode} tjekkes der først om brugeren har stoppet simuleringen, hvor forløkken så bliver brudt. Derefter tjekkes der om det er tid til at rapporterer fremdriften af loopet, hvilket gøres ved hvert lige procenttal. Brugerfladen \texttt{GUIMenuSimulationRun} der viser fremdriften, abonnerer på \texttt{ProgressChanged} begivenheden på begge \texttt{BackgroundWorker} instanser. Når \texttt{ReportProgress()} bliver brugt, sendes fremdriften samt en besked, der beskriver hvor langt simuleringen er nået, og om det er den primære eller sekundære simuleringen der er tale om. Efter dette bliver alle \texttt{LightController} instanser der findes i projektet opdateret, og sidst køres \texttt{Drive()} metoden på alle køretøjerne. \texttt{Drive()} metoden beskrives i afsnit \ref{Vehicle}.
+
+\begin{figure}[H]
+\begin{lstlisting}
+private void SimulationCompleted(object sender, 
+  RunWorkerCompletedEventArgs args)
+{
+  if (PrimaryWorker.IsBusy || SecondaryWorker.IsBusy 
+      || args.Cancelled)
+    return;
+  else
+  {
+    List<VehicleData> primaryData = new List<VehicleData>();
+    foreach (Vehicle vehicle in _primaryVehicles)
+      primaryData.Add(vehicle.ExtractData());
+
+    List<VehicleData> secondaryData = new List<VehicleData>();
+      foreach (Vehicle vehicle in _secondaryVehicles)
+      secondaryData.Add(vehicle.ExtractData());
+
+    SimulationData data = new SimulationData(Project, primaryData, 
+                                             secondaryData);
+    FileHandler.SaveSimulation(data);
+    Filename = data.Filename;
+    OnSimulationDone();
+  }
+}
+\end{lstlisting}
+\caption{SimulationCompleted metoden}\label{SimulationCompletedCode}
+\end{figure}
+
+\texttt{SimulationCompleted()}, som kan ses på figur \ref{SimulationCompletedCode}, bliver kaldet en gang for hver simuleringen. Simuleringen bliver derfor først gemt når begge \texttt{BackgroundWorker} instanser ikke er igang med noget, og derudover bliver der heller ikke gemt, hvis simuleringen er blevet afbrudt. Når begge simuleringer er færdige, bliver dataen lagt i en \texttt{SimulationData} instans, der gennem \texttt{FileHandler} bliver konverteret til binær, som senere kan åbnes og ses gennem \texttt{SimulationViewport} klassen. Sidst bliver \texttt{OnSimulationDone()} kaldt, der informerer brugerfladen om at simuleringerne er færdige.

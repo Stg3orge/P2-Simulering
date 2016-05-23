@@ -22,13 +22,23 @@ namespace A319TS.Tests
         }
 
         [TestMethod]
-        public void Scale_Test()
+        public void Scale_TestToSeeIfScalerWorksWithYCoordSetTo0()
         {
             Vector2D vec2 = new Vector2D(10, 0);
 
             vec2.Scale(6.5);
 
             Assert.AreEqual(65, vec2.Length);
+        }
+
+        [TestMethod]
+        public void Scale_TestToSeeIfScalerWorksWithXCoordSetTo0()
+        {
+            Vector2D vec3 = new Vector2D(0, 10);
+
+            vec3.Scale(6.5);
+
+            Assert.AreEqual(65, vec3.Length);
         }
     }
 }

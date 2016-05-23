@@ -1,26 +1,33 @@
 \chapter{Diskussion}
-Dette afsnit gennemgår de tanker gruppen har gjort sig i forhold til forskellige synspunkter af rapporten. Problemformuleringen er blevet løst ved hjælp af et software værktøj i form af meso simulering, i dette afsnit vil der diskuteres om denne problemformulering er blevet løst. 
+\externaldocument{Teknologianalyse}
+\externaldocument{konteksten}
+\externaldocument{FejlOgMangler}
+Dette afsnit diskuterer hvorvidt den udviklede løsning, er en løsning på den opstillede problemformulering, samt afklarer om succeskriterierne i design afsnittet er opfyldt. Til sidst i afsnittet vil der diskuteres om hvorvidt vores program er realistisk.
+
+\subsection{Problemformulering}\label{diskproblem}
+Som det første der beskrives i problemformuleringen, har vi at nuværende simuleringsværktøjer enten ikke er brugervenlige, eller at de ikke er fleksible. Den udviklede løsning minder om værktøjet VisSim, der blev analyseret i afsnit \ref{Teknologianalyse}, i det at programmet giver brugeren mulighed for at opstille et vilkårligt vejnetværk, og ændre på en række indstillinger for simuleringen. Det der gør gruppens værktøj anderledes fra VisSim er at det ikke er muligt at opstille andre simuleringer end trafik afviklings simuleringer. Denne afgrænsning betyder at VisSim er langt mere fleksibel, men det er også denne fleksibilitet der gør at VisSim ikke er brugervenlig. Udover afgrænsningen, er den udviklede løsning gjort brugervenlig ved hjælp af værktøjstips og etiketter, hvor brugeren kan læse om de forskellige funktioner af knapper og indstillinger. På grund af fokuset på trafik afvikling og informationerne der befinder sig i programmet, vurderer vi at gruppens løsning er mere brugervenlig end VisSim.
 
 \vspace{5mm}
-
-\section{Diskutering af problemformuleringen}
-Der er tidligere beskrevet i problemformuleringen at \textit{Nuværende simuleringsværktøjer til simulering af trafik er enten for svære at anvende eller mangler fleksibilitet}. Programmet som gruppen har lavet har løst dette ved at brugeren ikke selv skal programmere sit vejnetværk ligesom i VisSim, men brugeren skal indsætte veje, huse, destinationer osv. Dog skal brugeren også bestemme enkle variabler i form af køretøjets hastighed, procentvisdeling af destinationer osv. I modsætning til VisSim, så vil vores værktøj være mere overskueligt at anvende, dog er vores programet ikke er lige så præcis som VisSim, fordi værktøjet ikke anvender acceleration og deceleration, dette var en central del af programmet og er ikke blevet implementeret. Fleksibiliteten vil dog menes at være nogen lunde det samme, fordi brugeren selv skal opstille sit vejnetværk i begge programmer. Derudover er vores program mere fleksibelt end Altrans, fordi man ikke kan ændre på vejnetværket i Altrans. Altrans kan heller ikke visualisere simuleringen. Derimod kan Altrans vise en række data af simuleringen, som vores program ikke kan. Dette medføre at vores program er mere fleksibelt end Altrans, men brugeren har ikke noget data at sammenligne med.
+Problemformuleringen spørger dernæst hvordan et mesosimuleringsværktøj kan optimeres i forhold til vedligeholdse. I afsnit \ref{AenderingerAfKonteksten}, der omhandlede ændringerne i konteksten, fandt vi at antallet af køretøjer var stigende, og at der skete ændringer i befolkningens valg af transportmidler. I gruppens program er det muligt at indstille antallet af køretøjer der skal simuleres, og programmet kan dermed tilpasses til stigningen af antallet af køretøjer. Det er også muligt for brugeren at opsætte forskellige køretøjs-typer, og indstille hvor mange af køretøjerne skal have de forskellige typer. Det er ikke muligt i programmet at simulere cyklister, hvilket betyder at i tilfælde hvor transportmiddelvalget for en del af befolkningen ændrer sig til cykler, vil man ikke kunne vise dette i programmet, udover at der vil være færre køretøjer på vejnettet. 
 
 \vspace{5mm}
-
-Problemformuleringen nævner også optimering i forhold til vedligeholdelse, trods ændringerne i konteksten se afsnit REFHER. Dette er blevet løst ved at brugeren selv kan ændre konteksten, ved at indtaste forskellige variabler, til diverse funktioner i programmet, så som transportmiddelvalg. Her kan man ændre antallet af køretøjet, hastigher osv. I modsætning til Altrans, hvor Altrans ikke kan ændre konteksten, hvilket betyder at værketøjet ikke kan vedligeholdes i forhold til konteksten.
-
-\vspace{5mm}
-
-\section{Realitisk simulering}
-En af programmets formål var at det skulle være realistisk, dog har programmet nogle fejl, som der er beskrevet i afsnit \ref{FejlOgMangler}. Programmet implementere ikke deceleration og acceleration, som var en central del af simuleringen, da dette ville gøre programmet realistisk. Derudover kan køretøjerne lave uvendiger i alle lyskryds, dette er heller ikke realistisk, da det ikke er livligt i alle lyskryds. Vejnetværket er opstillet såleves en vej er et spor for en bil, dette gør også programmet urealistisk, da en vej kan indholde flere spor. Køretøjerne kan heller ikke overhale andre køretøjet, hvilket også er betydelig del af programmet. 
+Problemformuleringen beskriver også at der skal tages hensyn til billisternes adfærd, hvilket ikke bliver opfyldt af programmet. I programmet køre køretøjerne den maksimale hastighed, med mindre at køretøjer foran køre langsommere. I den virkelige værden svinger den ønskede hastighed fra billist til billist, og en implementation af adfærden ville dermed gøre simuleringen mere virkelighedsnær.
 
 \vspace{5mm}
+Samlet set er det gruppens mening at programmet er en løsning på problemformuleringen, i det at programmet blev videreudviklet og funktionalitet som cyklister og menneskelig adfærd blev implementeret.
 
-Programmet tager heller ikke højde for menneskelig adfærd, fodgænger og cyklister. Dette er også centrale dele, som vil påvirke trafikken. Køretøjerne køre deres max hastighed på vejene, hvilket betyder at der ikke er menneskelig adfærd i programmet. Dog burde der være variation af bilisternes adfærd, det er feks. ikke alle bilister som overholder hastighedsgrænsen, eller alle bilister som køre præcis hvad de må køre. 
+\subsection{Succeskriterier}\label{disksucces}
+Alle succeskriterierne er blevet løst udover kriterien om køretøjernes bevælgse skal gøres realistisk med hensyn til acceleration og deceleration. I gruppens program er acceleration og deceleration ikke blevet implementeret. Hvis et køretøj eksempelvis støder på et rødt lys, vil køretøjet stoppe øjeblikkeligt. Ligeledes når lyset skifter til grønt igen, vil køretøjet nå sin maksimale hastighed øjeblikketligt. Grunden til at acceleration og deceleration ikke er blevet implementeret, er at vigepligt og trafiklys blev prioriteret højere. Konsekvensen af denne mangel, er at køretøjerne vil bevæge sig gennem vejnettet hurtigere end det burde være muligt.
+
+\subsection{Realisme}
+For at programmet skulle kunne bruges til at lave beslutninger, kræves det af programmmet, at resultatet af simuleringen er realistisk. Udover problemerne beskrevet herunder, er der også manglen på acceleration, deceleration og menneskelig adfærd som blev beskrevet i afsnit \ref{diskproblem} og \ref{disksucces}.
+
+\begin{itemize}
+\item Køretøjerne i simuleringen kan lave uvendiger i alle lyskryds, dette er  ikke realistisk, da det ikke er lovligt i alle lyskryds.
+\item Vejnetværket er opstillet såleves en vej er et spor for en bil, dette gør også programmet urealistisk, da en vej kan indholde flere spor.
+\item Køretøjerne kan ikke overhale andre køretøjer, hvilket også er betydelig del af programmet.
+\item I programmet kan brugeren opstille et tidsrum hvor køretøjerne kører fra deres hjem til destinationen, og et tidsrum hvor der bliver kørt hjem igen. Dette fungerer ved at brugeren sætter et bestemt tidspunkt, og derefter indstiller hvor meget køretøjerne må afvige fra dette tidspunkt. Denne metode er urealistisk, da brugeren ikke kan specificere at der skal være meget trafik ved 8 tiden, og sammentidigt have en lav mængde trafik om natten og midt på dagen. Det ville være en forbedring, hvis brugeren kunne indstille procentvis antallet af køretøjer for mindre tidsrum gennem en dag, eksempelvis fra klokken 8 til klokken 9.
+\end{itemize}
 
 \vspace{5mm}
-
-Dog er programmet realistisk på synspunkter så som, vigepligt, lyskryds, køretøjerne ikke køre ind i hinanden, køretøjerner holder en afstand til de andre køretøjer, hastighedsgrænser osv. Derudover kan brugeren opstille et tidsrum, som er meget trafikeret hviklet gør programmet realistisk, da disse tidsrum også forekommer i traffikken idag. 
-
-
+Dog er programmet realistisk på synspunkter så som, vigepligt, lyskryds, køretøjerne ikke køre ind i hinanden, køretøjerner holder en afstand til de andre køretøjer og hastighedsgrænser. 

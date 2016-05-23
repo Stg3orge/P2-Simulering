@@ -1,6 +1,69 @@
 \section{Unit Test Implementation}\label{unittest}
-
-I dette program er testing implementeret i form af \textbf{Unit Tests}. Programmet er ikke udviklet i et \textbf{TDD}(Test-driven development) format. Problematikken ved ikke at udføre denne udviklingsmetode giver mulig anledning til fejltagelser ved kodeimplementationen. \textbf{TDD} er en udviklingsmetode orienteret omkring udvikling gennem testing. Ideen ligger i at kode tests før selve kildekoden bliver implementeret. Fordelen ved dette er at man går ind i kode-delen med en præcis viden om hvad metoden skal gøre.
+\externaldocument{Test}
+I dette program er testing implementeret i form af \textbf{Unit Tests}. Programmet er ikke udviklet i et \textbf{TDD}(Test-driven development) format. Problematikken ved ikke at udføre denne udviklingsmetode giver mulig anledning til fejltagelser ved kodeimplementationen. \textbf{TDD} er en udviklingsmetode orienteret omkring udvikling gennem testing. Ideen ligger i at kode tests før selve kildekoden bliver implementeret. Fordelen ved dette er at man går ind i kode-delen med en præcis viden om hvad metoden skal gøre.\cite{unittestbenefits}
 
 \vspace{5mm}
 
+I dette program er koden blevet implementeret og testing udført bagefter. Testingen er fokuseret på metoder der blev vurderet og prioriteret til at være nogle af de mest relevante at udføre testing på. Vurderingen har taget udgangspunkt i udregningsmetodik og koordinathåndtering da disse har den mest direkte indflydelse på programmets processer. Derudover er testmetoderne hovedsagligt udarbejdet efter den forståede problematik der kunne opstå ved den implementerede kode.
+
+\vspace{5mm}
+
+Testmetoderne og kildekoden er separeret i hver deres \texttt{namespace}, henholdsvist \textbf{A319TS} (hvori kildekoden findes) og \textbf{A319TS.Tests}. Begge disse tilhørerer den samme \texttt{solution} også ved navn \textbf{A319TS}. For at \textbf{A319TS.Tests} \texttt{namespace} kan benytte metoder fra \textbf{A319TS} er der lavet en reference inde i \texttt{namespace} via \textbf{Visual Studios} indbyggede referencesystem.
+
+Testklasserne er navngjort efter klassenavnet der bliver testet på efterfulgt af \textit{Tests}, et eksempel på dette kan ses på figur \ref{TestMethod}. Testmetoderne er navngivet efter dette format: \textbf{MetodeNavn\_TestForventetOpførsel}. Der findes bedre måder at navngive testmetoderne såsom det mere udbredte format: \textbf{MetodeNavn\_StadieUnderTesting\_ForventetOpførsel}.\cite{unittestnamingpractices}
+
+\begin{figure}[H]
+\begin{lstlisting}
+[TestClass]
+public class MathExtensionTests
+\end{lstlisting}
+\caption{Eksempel på Testklasse, MathExtensionTests}\label{TestMethod}
+\end{figure}
+
+\vspace{5mm}
+
+Derudover er formatet af testmetoderne kodet efter \textit{AAA}(Arrange, Act, Assert) mønsteret. Mønsteret går generelt set ud på at at først opstille sit test miljø \textbf{(Arrange)}, dernæst den aktuelle kode der udfører testen \textbf{(Act)} og til sidst tjekket efter hvorledes testen afgjorte om den originalse metode fungerede efter forventede opførsel \textbf{(Assert)}. Et eksempel på dette kan ses på figur \ref{comparetotestmetode}, hvori metoden \texttt{CompareTo} fra \texttt{RoadType} klassen bliver testet efter hvorledes metoden returnerer det rigtige resultat med forskellige \texttt{Speed} værdier.
+
+\begin{figure}[H]
+\begin{lstlisting}
+[TestMethod]
+public void CompareTo_TestOfInputAndResultWhenParsedWithTwoDifferentSpeedValues()
+{
+		// ARRANGE
+		var rt = new RoadType("Motorvej", 100);
+           
+		var rt1 = new RoadType("MiscVej", 60);
+
+		// ACT
+		var result = rt1.CompareTo(rt1);
+		var result2 = rt.CompareTo(rt1);
+
+		// ASSERT    
+		Assert.AreEqual(0, result);
+		Assert.AreEqual(1, result2);
+}
+\end{lstlisting}
+\caption{Testmetoden CompareTo\_TestOfInputAndResultWhenParsedWithTwoDifferentSpeedValues}\label{comparetotestmetode}
+\end{figure}
+
+Som gennemgået i afsnit \ref{Testing} kan det være en fordel af arbejde så tidligt som muligt med testfasen for at undgå fremtidig programfejl. Dog som sagt blev dette ikke udført i dette projekt, hvilket ledte til at tidsforbruget på at kode de forskellige testmetoder var højere end hvad de ellers kunne have været, havde de været implementeret tidligere i programfasen.
+
+I figur \ref{DistanceTestMethod} kan der ses et eksempel på en implementeret testmetode der aftester metoden \texttt{Distance} fra klassen \texttt{MathExtension}. Metoden har det primære formål at udregne distancen mellem to koordinatsæt og dette bliver testet med en fejlmargen på \textit{0.00001}, da udregningerne bearbejder en \texttt{double} og ender med en del decimaler der ikke er afgørende for resultatets holdbarhed. Det kan ses i testmetoden at den er udviklet efter samme \textit{AAA} format.
+
+\begin{figure}[H]
+\begin{lstlisting}
+[TestMethod]
+public void Distance_TestToSeeIfCalulationIsCorrectWhenInputIsTwoRandomCoords()
+{
+		Point pointA = new Point(6, 10);
+		Point pointB = new Point(2, 15);
+
+        double result = MathExtension.Distance(pointA, pointB);
+
+        Assert.AreEqual(6.40312, result, 0.00001);
+}
+\end{lstlisting}
+\caption{Testmetoden Distance\_TestToSeeIfCalculationIsCorrect}\label{DistanceTestMethod}
+\end{figure}
+
+Implementationen af unit testing i dette projekt var med intentionen om at fuldføre en acceptabel testmetode til at afvikle løsningsmodellen til problemformulering.
