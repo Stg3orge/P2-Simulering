@@ -18,6 +18,7 @@ namespace A319TS
         GroupBox StepSize = new GroupBox();
         GroupBox VehicleSpace = new GroupBox();
         GroupBox IncommingRange = new GroupBox();
+        GroupBox TrailingSpeed = new GroupBox();
         RichTextBox VehicleCountInfo = new RichTextBox();
         RichTextBox InboundOutboundInfo = new RichTextBox();
         RichTextBox TimeSpreadInfo = new RichTextBox();
@@ -26,13 +27,14 @@ namespace A319TS
         RichTextBox StepSizeInfo = new RichTextBox();
         RichTextBox VehicleSpaceInfo = new RichTextBox();
         RichTextBox IncommingRangeInfo = new RichTextBox();
+        RichTextBox TrailingSpeedInfo = new RichTextBox();
 
         public GUIInfoSettings()
         {
             Text = "Settings Info";
-            Size = new Size(330, 524);
-            MinimumSize = new Size(330, 524);
-            MaximumSize = new Size(330, 524);
+            Size = new Size(420, 627);
+            MinimumSize = new Size(420, 627);
+            MaximumSize = new Size(420, 627);
             ShowIcon = false;
             MinimizeBox = false;
             MaximizeBox = false;
@@ -41,7 +43,7 @@ namespace A319TS
 
             VehicleCount.Text = "Vehicle Count";
             VehicleCount.Location = new Point(12, 12);
-            VehicleCount.Size = new Size(290, 40);
+            VehicleCount.Size = new Size(378, 40);
             Controls.Add(VehicleCount);
 
             VehicleCountInfo.Dock = DockStyle.Fill;
@@ -53,19 +55,19 @@ namespace A319TS
 
             InboundOutbound.Text = "Inbound and Outbound";
             InboundOutbound.Location = new Point(12, 58);
-            InboundOutbound.Size = new Size(290, 65);
+            InboundOutbound.Size = new Size(378, 70);
             Controls.Add(InboundOutbound);
 
             InboundOutboundInfo.Dock = DockStyle.Fill;
             InboundOutboundInfo.BackColor = SystemColors.Control;
             InboundOutboundInfo.BorderStyle = BorderStyle.None;
             InboundOutboundInfo.ReadOnly = true;
-            InboundOutboundInfo.Text = "The amount of cars that enter and leave from nodes with either Inbound or Outbound as their selected type. Cannot be higher than vehicle count.";
+            InboundOutboundInfo.Text = "The amount, in percent, of cars that enter and leave from nodes with either Inbound or Outbound as their selected type.";
             InboundOutbound.Controls.Add(InboundOutboundInfo);
 
             TimeSpread.Text = "Time Spread";
-            TimeSpread.Location = new Point(12, 129);
-            TimeSpread.Size = new Size(290, 65);
+            TimeSpread.Location = new Point(12, 134);
+            TimeSpread.Size = new Size(378, 70);
             Controls.Add(TimeSpread);
 
             TimeSpreadInfo.Dock = DockStyle.Fill;
@@ -76,8 +78,8 @@ namespace A319TS
             TimeSpread.Controls.Add(TimeSpreadInfo);
 
             ToDestinationTime.Text = "To Destination Time";
-            ToDestinationTime.Location = new Point(12, 197);
-            ToDestinationTime.Size = new Size(290, 50);
+            ToDestinationTime.Location = new Point(12, 210);
+            ToDestinationTime.Size = new Size(378, 55);
             Controls.Add(ToDestinationTime);
 
             ToDestinationTimeInfo.Dock = DockStyle.Fill;
@@ -88,8 +90,8 @@ namespace A319TS
             ToDestinationTime.Controls.Add(ToDestinationTimeInfo);
 
             ToHomeTime.Text = "To Home Time";
-            ToHomeTime.Location = new Point(12, 250);
-            ToHomeTime.Size = new Size(290, 50);
+            ToHomeTime.Location = new Point(12, 271);
+            ToHomeTime.Size = new Size(378, 55);
             Controls.Add(ToHomeTime);
 
             ToHomeTimeInfo.Dock = DockStyle.Fill;
@@ -100,8 +102,8 @@ namespace A319TS
             ToHomeTime.Controls.Add(ToHomeTimeInfo);
 
             StepSize.Text = "Step Size";
-            StepSize.Location = new Point(12, 306);
-            StepSize.Size = new Size(290, 65);
+            StepSize.Location = new Point(12, 332);
+            StepSize.Size = new Size(378, 70);
             Controls.Add(StepSize);
 
             StepSizeInfo.Dock = DockStyle.Fill;
@@ -112,8 +114,8 @@ namespace A319TS
             StepSize.Controls.Add(StepSizeInfo);
 
             VehicleSpace.Text = "Vehicle Space";
-            VehicleSpace.Location = new Point(12, 377);
-            VehicleSpace.Size = new Size(290, 40);
+            VehicleSpace.Location = new Point(12, 408);
+            VehicleSpace.Size = new Size(378, 40);
             Controls.Add(VehicleSpace);
 
             VehicleSpaceInfo.Dock = DockStyle.Fill;
@@ -124,8 +126,8 @@ namespace A319TS
             VehicleSpace.Controls.Add(VehicleSpaceInfo);
 
             IncommingRange.Text = "Incomming Range";
-            IncommingRange.Location = new Point(12, 423);
-            IncommingRange.Size = new Size(290, 50);
+            IncommingRange.Location = new Point(12, 454);
+            IncommingRange.Size = new Size(378, 55);
             Controls.Add(IncommingRange);
 
             IncommingRangeInfo.Dock = DockStyle.Fill;
@@ -134,6 +136,18 @@ namespace A319TS
             IncommingRangeInfo.ReadOnly = true;
             IncommingRangeInfo.Text = "The distance in meters, in which vehicles look for incomming vehicles when waiting at a yield node.";
             IncommingRange.Controls.Add(IncommingRangeInfo);
+
+            TrailingSpeed.Text = "Trailing Speed";
+            TrailingSpeed.Location = new Point(12, 515);
+            TrailingSpeed.Size = new Size(378, 55);
+            Controls.Add(TrailingSpeed);
+
+            TrailingSpeedInfo.Dock = DockStyle.Fill;
+            TrailingSpeedInfo.BackColor = SystemColors.Control;
+            TrailingSpeedInfo.BorderStyle = BorderStyle.None;
+            TrailingSpeedInfo.ReadOnly = true;
+            TrailingSpeedInfo.Text = "The percentage of the speed of the vehicle infront, which should be traveled at when driving behind another vehicle.";
+            TrailingSpeed.Controls.Add(TrailingSpeedInfo);
         }
     }
 }
