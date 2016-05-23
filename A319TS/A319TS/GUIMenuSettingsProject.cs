@@ -20,9 +20,9 @@ namespace A319TS
         private void Setup()
         {
             Text = "Project";
-            Size = new Size(210, 110);
-            MinimumSize = new Size(210, 110);
-            MaximumSize = new Size(210, 110);
+            Size = new Size(274, 92);
+            MinimumSize = new Size(274, 92);
+            MaximumSize = new Size(274, 92);
             ShowIcon = false;
             MinimizeBox = false;
             MaximizeBox = false;
@@ -30,19 +30,19 @@ namespace A319TS
             StartPosition = FormStartPosition.CenterParent;
 
             NameOfProject = new TextBox();
-            NameOfProject.Location = new Point(82, 12);
-            NameOfProject.Size = new Size(100, 20);
+            NameOfProject.Location = new Point(63, 12);
+            NameOfProject.Size = new Size(100, 22);
             Controls.Add(NameOfProject);
 
             ProjectNameLabel = new Label();
             ProjectNameLabel.Text = "Name";
-            ProjectNameLabel.Location = new Point(12, 13);
+            ProjectNameLabel.Location = new Point(12, 15);
             Controls.Add(ProjectNameLabel);
             
             Ok = new Button();
             Ok.Text = "Ok";
-            Ok.Location = new Point(12, 38);
-            Ok.Size = new Size(170, 23);
+            Ok.Location = new Point(169, 12);
+            Ok.Size = new Size(75, 23);
             Ok.Click += OkClick;
             Controls.Add(Ok);
         }

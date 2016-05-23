@@ -37,7 +37,7 @@ namespace A319TS
             StepSize = 100;
             VehicleSpace = 2;
             IncommingRange = 10;
-            TrailingSpeed = 100;
+            TrailingSpeed = 80;
             PrimaryCarCount = 1000;
             PrimaryInbound = 10;
             PrimaryOutbound = 10;
