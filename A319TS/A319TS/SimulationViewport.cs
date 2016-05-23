@@ -104,8 +104,24 @@ namespace A319TS
         {
             foreach (LightController controller in Project.LightControllers)
             {
+                foreach (Node light in controller.Lights)
+                {
+                    Point position = GetDrawPosition(light.Position);
+                    position.X -= NodeSize / 2;
+                    position.Y -= NodeSize / 2;
+
+                    args.Graphics.FillEllipse(Brushes.Green, position.X, position.Y, NodeSize, NodeSize);
+                    args.Graphics.FillPie(Brushes.Red, new Rectangle(position.X, position.Y, NodeSize, NodeSize), 0, 180);
+                    args.Graphics.DrawEllipse(Pens.Black, position.X, position.Y, NodeSize, NodeSize);
+                }
+            }
+        }
+        private void DrawLightsOld(object sender, PaintEventArgs args)
+        {
+            foreach (LightController controller in Project.LightControllers)
+            {
                 bool switched;
-                if (Convert.ToInt32(Time / ((controller.FirstTime + controller.SecondTime) / 2)) % 2 == 1)
+                if (Convert.ToInt32(Time / controller.FirstTime) % 2 == 1)
                     switched = true;
                 else switched = false;
 
