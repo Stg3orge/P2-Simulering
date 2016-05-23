@@ -107,7 +107,7 @@ Herved opnår vi en god nedkapslig af programmet, da der kun vil være 4 kerne k
 
 \textbf{Programmets kerne klasser} \\
 
-GUI MAIN skal som sagt intalisere de andre "core classes" ved opstart af programmet, derudover skal GUI MAIN håntere input fra brugeren. Hvis brugeren f.eks. vægler at tilføje en vej(element), sendes inputet til ToolController.
+GUI MAIN skal som sagt intalisere de andre "core classes" ved opstart af programmet, derudover skal GUI MAIN håntere input fra brugeren. GUI MAIN står derfor for "MenuItems" som f. eks. save, load, settings osv. som vil være menupunkter for brugeren. Desuden vil GUIMAIN modtage inputs som valg af tilføje en vej(element). Dette input sendes efterføgende til ToolControlleren.
 
 \vspace{5mm}
 
@@ -115,12 +115,9 @@ Ud fra hvlike input ToolControlleren får fra GUI MAIN skal det tilsvarende elem
 
 \vspace{5mm}
 
-ViewPorten visualisere derfor elementet, altså i dette tilfælde at tegne vejen i projektet.
+ViewPorten visualisere derfor elementet, altså i dette tilfælde at tegne vejen i projektet. Ved indlæsning af et projekt vil samme fremgangsmåde forkomme, GUIMAIN sender dataerne fra projekt filen, hvorefter ToolControlleren fremstiller alle elemnter, og ViewPorten vil til sidst visualisere alle elementer i projektet, 
 
- 
-
-
-
+Alle dele af programmet vil i sidste fører tilbage til GUIMAIN som et loop, hvor brugeren så igen kan vælge sin handling, dette kun f.eks. være at lave simuluationen. Simulationen virker ved at fremstille bilerne ud fra de indstillinger som brugeren har sat, hvor bilens rute bliver beregnet i fremstillingsprocessen. Derefter køres den første simulation, og dernæst den anden. Hvor simulations resultaterne gemmes i en fil, som så kan køres i programmet og vise simulationen.
 
 
 \vspace{5mm}
