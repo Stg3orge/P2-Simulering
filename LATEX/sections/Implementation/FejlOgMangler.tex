@@ -43,26 +43,24 @@ I et lyskryds kan køretøjerne lave u-vendinger. & Der skal laves en ny vej, so
 
 \textbf{Hastighed} \\
 Som sagt har programmet en svaghed når det kommer til performance. For altefter tickraten på simulationen, samt antal af biler osv vil brug af CPU og hukommelse øge markant. Det betyder at hastigheden på simulationen, og åbning af simulationensfilen kan tage fra få sekunder til flere timer alt efter de valgte simulationindstillinger. \\
-Der blev lavet en performance profile som vidste at serialize og deserialize af vores simulations fil som tog det meste af simulation/view tiden. Desuden kan programmet ikke åbne filer, hvis de er over 1.2 GB.(\textbf{fordi VS ikke kan håndtere filer over 1.2GB})
+Der blev lavet en performance profile som vidste at serialize og deserialize af vores simulations fil tog det meste af simulation/view tiden. Grunden til dette er som sagt at simulationsfilen hurtig bliver stor, og da hele filen indlæses i en "stream" terminere programmet, da Visual Studio ikke kan håndtere objekter over 1.2 GB som standard. Se \textbf{(Hukomelses Brug)} afsnittet nedenfor for evt. løsning.
 
 \vspace{5mm}
 
-Der blev derfor også kigget på andre metoder at serialize og deserialize simulation filerne istedet for at bruge XML. Der blev fundet frem til Protocol Buffer, og BinaryFormatter som iføgle flere tests siges at være hurtigere end XML \cite{SerializationPerformance}\cite{ComparingThePerformance}\cite{PerformanceTest}. Der blev derfor implementeret BinartFormatter, da det som XML er en del af NET Framework hvilket gjorde det en del nemmere at implementere, samt det understøttede klasser som Point og Color, hvliket Protocol Buffer ikke gjode som startard(Brug surrogate klasser til at konvetere typer som Point, Color til at være kompitabel til Protocol Buffer). Men selvom at BinaryFormatter er hurtigere end XML bliver det stadig overgået af Protocol Buffer som i nogen tests er 12x så hurtig iforhold til BinaryFormatter \cite{PerformanceTest}\cite{Protobuf}, og siden programmet stadig er langtsomt nå det kommer til serialize og deserialize kunne Protocol Buffer midske simulation/view tiden, og afhjælpe med programmet ikke terminere fordi filen enten er for stor, eller tager forlang tid at åbne.
+Der blev derfor også kigget på andre metoder at serialize og deserialize simulation filerne istedet for at bruge XML. Der blev fundet frem til Protocol Buffer, og BinaryFormatter som iføgle flere tests siges at være hurtigere end XML \cite{SerializationPerformance}\cite{ComparingThePerformance}\cite{PerformanceTest}. Der blev derfor implementeret BinartFormatter, da det som XML er en del af NET Framework hvilket gjorde det en del nemmere at implementere, samt det understøttede klasser som Point og Color, hvliket Protocol Buffer ikke gjode som startard. Ved Protocol Buffer skal der laves en surrogate klasse til at konvetere typer som Point, Color til at være kompitabel til Protocol Buffer. \\
+Men selvom at BinaryFormatter er hurtigere end XML bliver det stadig overgået af Protocol Buffer som i nogen tests er 12x så hurtig iforhold til BinaryFormatter \cite{PerformanceTest}\cite{Protobuf}, og siden programmet stadig er langtsomt nå det kommer til serialize og deserialize kunne Protocol Buffer midske simulation/view tiden, og afhjælpe med programmet ikke terminere fordi filen enten er for stor, eller tager forlang tid at åbne.
 
 \vspace{5mm}
 
 \textbf{Hukomelses Brug} \\
 Dog vil dette ikke afhjælpe på hukommelses forbruget, for at løse dette kunne vi optimere brugen af datatyper f.eks. bruge floats isetdet for doubles, hvliket vil halvere brugen af hukomelse hvergang vi beytter en double. Vi bruger f.eks double ved vores grid hvor vi bruger points med doubles værdier. \\
 
-En anden måde at løse hukomelses problemet på, er ved brug af Memory-Mapped Files klassen, da den vil kunne splite filen op i en bestemt mægnde bytes  både ved gemning/indlæsning. Herved vil programmet ikke gemme/indlæse hele simulations filen på hukomelsen på engang, men kun den mægnden bytes som Memory-Mapped streamen er sat til. Herved ungåes det at programmet alt efter størelsen på simulationen har et hukommelses forbrug på måske over 4000MB, hvliket i sidste ende vil terminere enten programmet eller computeren.
+En anden måde at løse hukomelses problemet på, er ved brug af Memory-Mapped Files klassen, da den vil kunne splite filen op i en bestemt mægnde bytes  både ved gemning/indlæsning. Herved vil programmet ikke gemme/indlæse hele simulations filen på hukomelsen på engang, men kun den mægnden bytes som Memory-Mapped streamen er sat til. Herved ungåes det at programmet alt efter størelsen på simulationen har et hukommelses forbrug på måske over 4000MB, hvliket i sidste ende vil terminere enten programmet eller computeren. Derudover vil filens data blive insat i variabler hen af vejen, som filen indlæses, herved kommer objekter ikke over 1.2 GB ligeså hurtigt, da dataen nu bliver splitet i variable.
 
 \vspace{5mm}
 
 \textbf{CPU forbrug} \\
 For at optimere CPU forbruget, vil en mulig løsnig være at få GPU'en til at tegne grafikken i programmet, istedet for CPU'en. Dette kan gøres ved brug af Windows Presentation Foundation (WPF). Fordelen ved dette er at den mægnde CPU som bliver sparet,  vil kunne bruges på simulationen istedet, samt er GPU'en hurtigere til at tegne grafik end CPU'en. Derudover vil implemitering af flere "threads" kunne udnytte flere kerner i computeren, og herved øge simulationshastigheden, da vores program kun indeholder 2. Hvliket vil sige at f.eks. på en core i7 maskine med 8 kerner vil kun 25\% kraft blive brugt.
-
-
-
 
 
 
