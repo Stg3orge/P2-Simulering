@@ -49,6 +49,7 @@ namespace A319TS
             FirstTime.Text = Controller.FirstTime.ToString();
             FirstTime.Location = new Point(109, 12);
             FirstTime.Size = new Size(120, 22);
+            FirstTime.Maximum = Simulation.MsInDay;
             Controls.Add(FirstTime);
 
             SecondTimeLabel = new Label();
@@ -61,6 +62,7 @@ namespace A319TS
             SecondTime.Text = Controller.SecondTime.ToString();
             SecondTime.Location = new Point(109, 40);
             SecondTime.Size = new Size(120, 22);
+            SecondTime.Maximum = Simulation.MsInDay;
             Controls.Add(SecondTime);
 
             if (Controller.Lights.Count > 0)
