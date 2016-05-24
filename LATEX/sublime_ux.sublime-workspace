@@ -4,6 +4,86 @@
 		"selected_items":
 		[
 			[
+				"allocat",
+				"allocation_of_values_to_team_data"
+			],
+			[
+				"foot",
+				"football_data_array"
+			],
+			[
+				"match",
+				"matchescount"
+			],
+			[
+				"write",
+				"write_teamname_into_array"
+			],
+			[
+				"foo",
+				"football_data_array"
+			],
+			[
+				"mat",
+				"matches"
+			],
+			[
+				"fo",
+				"football_data_array"
+			],
+			[
+				"num",
+				"number_of_matches"
+			],
+			[
+				"print",
+				"print_match"
+			],
+			[
+				"ma",
+				"matchdatapointer"
+			],
+			[
+				"fot",
+				"football_data_array"
+			],
+			[
+				"footbal",
+				"football_data_array"
+			],
+			[
+				"football_d",
+				"football_data_array"
+			],
+			[
+				"football",
+				"football_data"
+			],
+			[
+				"footb",
+				"football_data_array"
+			],
+			[
+				"spec",
+				"spectators"
+			],
+			[
+				"gen",
+				"general_help"
+			],
+			[
+				"general",
+				"general_FAQ"
+			],
+			[
+				"hel",
+				"help_options"
+			],
+			[
+				"help",
+				"help_options"
+			],
+			[
 				"In",
 				"InputString"
 			],
@@ -32,18 +112,13 @@
 	"buffers":
 	[
 		{
-			"file": "sections/sections.tex",
+			"contents": "\\section{Fejl og mangler i programmet}\\label{FejlOgMangler}\nIkke alle programmets kravspecifikationer er blevet implementeret med ønsket effekt. I et af kriterierne ønskes det, at simuleringen også kan foregå med cyklister og fodgængere. Dette er dog ikke tilfældet, programmet simulere kun med køretøjer, så derfor har vi valgt at tage dette med i videreudvikling. Programmet opfylder dog heller ikke ønsket om acceleration og deceleration dvs. programmet bliver mindre realistisk, da dette var en central del af kriterierne. Samtidig var dette også vigtigt fordi VisSims acceleration og deceleration udspillede sig lineær, meningen var at lave en acceleration og deceleration som udspillede sig eksponentielt, da dette var mere realistisk. I tabel \\ref{Fejl og mangler} er de følgende fejl og mangler.\n\n%\\centering\n%\\setlength\\LTleft{\\fill}\n%\\setlength\\LTright{\\fill}\n\\setlength{\\LTleft}{-20cm plus -1fill}\n\\setlength{\\LTright}{\\LTleft}\n\\begin{longtable}{| p{0.50\\textwidth} | p{0.50\\textwidth} |}\n	\\hline\n\\textbf{Funktioner} & \\textbf{Løsningsforslag} \\\\\n	\\hline\nProgrammet implementere ikke Fodgængere & Skal implementeres på samme måde som køretøjerne, dog skal der lave en knude, der hedder fodgængerfelt. \\\\\n	\\hline\nProgrammet implementerer ikke cyklister & Skal implementeres således der laves en separat cykelsti, som cyklerne kan cykle på. derudover skal vejene ændres, således cyklister og bliver kan være på en vej. \\\\ \n	\\hline\nProgrammet implementerer ikke acceleration & Step skal ændre sig på en bestemt måde, således at step forøges gradvist ud fra køretøjets acceleration. Derudover holde øje med om der findes et objekt foran den.\\\\ \n	\\hline\nProgrammet implementerer ikke deceleration & Køretøjerne skal kunne se yield fra en bestemt distance, så de kan nå at decellerere på samme måde som acceleration, bortset fra at de skal kunne bremse i stedet. \\\\ \n	\\hline\nProgrammets åbne og gemme funktionalitet bruger for meget tid &  Programmets åbne og gemme funktionalitet skal forbedres ved brug af \\texttt{Protobuf}. \\\\ \n	\\hline\nTimeSpread, ToHomeTime, SetTime og ToDestinationtime skal ændres således brugeren ikke indtaster millisekunder & Det der står i tekstboksen skal ændres så der står klokkeslæt eller timer, derefter skal teksten konverteres til en integer og ganges op. \\\\ \n	\\hline\nProgrammets skal implementere menneskelig adfærd så bilerne ikke altid kører deres maksimale hastighed på vejene. & Lave en ny klasse \\texttt{Driver}, hvor man kan indstille menneskelig adfærd. \\\\ \n	\\hline\nDer skal implementeres UnitTest på alle klasser i kildekoden. & Implementer UnitTests. \\\\ \n	\\hline\nViewport går ud over kanterne i højre side og bunden. & Når programmet genererer gitteret, skal den tjekke programvinduets bredde og højde. Samt sørge for at Viewport positionen ikke kommer til at være større end hele størrelsen minus bredden og højden. \\\\ \n	\\hline\nSamling og analyse af simuleringens data. & \\texttt{SimulationData} skal gemme alt data som simuleringen har, ved at programmet skal kigge på de forskellige positioner. Hvis positionen er lig hinanden så står den stille, ellers skal den måle hastigheden.\\\\ \n	\\hline\nImplementere en hjælpeside til information omkring programmets dele. & Lave en hjælpe knappe, som forklarer med tekst, hvordan programmet fungere. \\\\ \n	\\hline\nI et lyskryds kan køretøjerne lave u-vendinger. & Der skal laves en ny vej, som man kun må køre ind på fra bestemte knude. \\\\ \n	\\hline \n\\caption{Fejl og mangler}\\label{Fejl og mangler}\n\\end{longtable}\n\n\n\n\\subsection*{Optimering af performance}\\label{OptimeringAfPerformance}\n\n\\textbf{Hastighed} \\\\\nSom sagt har programmet en svaghed når det kommer til performance. For altefter tickraten på simulationen, samt antal af biler osv vil brug af CPU og hukommelse øge markant. Det betyder at hastigheden på simulationen, og åbning af simulationensfilen kan tage fra få sekunder til flere timer alt efter de valgte simulationindstillinger. \\\\\nDer blev lavet en performance profile som vidste at serialize og deserialize af vores simulations fil tog det meste af simulation/view tiden. Grunden til dette er som sagt at simulationsfilen hurtig bliver stor, og da hele filen indlæses i en \"stream\" terminere programmet, da Visual Studio ikke kan håndtere objekter over 1.2 GB som standard. Se \\textbf{(Hukommelses Brug)} afsnittet nedenfor for evt. løsning.\n\n\\vspace{5mm}\n\nDer blev derfor også kigget på andre metoder at serialize og deserialize simulation filerne istedet for at bruge XML. Der blev fundet frem til Protocol Buffer, og BinaryFormatter som iføgle flere tests siges at være hurtigere end XML \\cite{SerializationPerformance}\\cite{ComparingThePerformance}\\cite{PerformanceTest}. Der blev derfor implementeret BinaryFormatter, da det som XML er en del af NET Framework hvilket gjorde det en del nemmere at implementere, samt det understøttede klasser som Point og Color, hvliket Protocol Buffer ikke gjode som startard. Ved Protocol Buffer skal der laves en surrogate klasse til at konvetere typer som Point, Color til at være kompitabel til Protocol Buffer. \\\\\nMen selvom at BinaryFormatter er hurtigere end XML bliver det stadig overgået af Protocol Buffer som i nogen tests er 12x så hurtig iforhold til BinaryFormatter \\cite{PerformanceTest}\\cite{Protobuf}, og siden programmet stadig er langtsomt nå det kommer til serialize og deserialize kunne Protocol Buffer midske simulation/view tiden, og afhjælpe med programmet ikke terminere fordi filen enten er for stor, eller tager for lang tid at åbne.\n\n\\vspace{5mm}\n\n\\textbf{Hukommelses Brug} \\\\\nDog vil dette ikke afhjælpe på hukommelses forbruget, for at løse dette kunne vi optimere brugen af datatyper f.eks. bruge floats isetdet for doubles, hvliket vil halvere brugen af hukomelse hvergang vi beytter en double. Vi bruger f.eks double ved vores grid hvor vi bruger points med doubles værdier. \\\\\n\nEn anden måde at løse hukommelses problemet på, er ved brug af Memory-Mapped Files klassen, da den vil kunne splite filen op i en bestemt mægnde bytes  både ved gemning/indlæsning. Herved vil programmet ikke gemme/indlæse hele simulations filen på hukomelsen på engang, men kun den mægnden bytes som Memory-Mapped streamen er sat til. Herved ungåes det at programmet alt efter størelsen på simulationen har et hukommelses forbrug på måske over 4000MB, hvliket i sidste ende vil terminere enten programmet eller computeren. Derudover vil filens data blive insat i variabler hen af vejen, som filen indlæses, herved kommer objekter ikke over 1.2 GB ligeså hurtigt, da dataen nu bliver splitet i variable.\n\n\\vspace{5mm}\n\n\\textbf{CPU forbrug} \\\\\nFor at optimere CPU forbruget, vil en mulig løsning være at få GPU'en til at tegne grafikken i programmet, istedet for CPU'en. Dette kan gøres ved brug af Windows Presentation Foundation (WPF). Fordelen ved dette er at den mægnde CPU som bliver sparet,  vil kunne bruges på simulationen istedet, samt er GPU'en hurtigere til at tegne grafik end CPU'en. Derudover vil implemitering af flere \"threads\" kunne udnytte flere kerner i computeren, og herved øge simulationshastigheden, da vores program kun indeholder 2. Hvilket vil sige at f.eks. på en core i7 maskine med 8 kerner vil kun 25\\% kraft blive brugt.\n\n\n\n",
+			"file": "sections/Implementation/FejlOgMangler.tex",
+			"file_size": 7400,
+			"file_write_time": 131084914595289595,
 			"settings":
 			{
-				"buffer_size": 953,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/Teknologianalyse/Teknologianalyse.tex",
-			"settings":
-			{
-				"buffer_size": 10144,
+				"buffer_size": 7214,
 				"line_ending": "Windows"
 			}
 		},
@@ -56,98 +131,18 @@
 			}
 		},
 		{
-			"file": "sections/Implementation/Implementation.tex",
+			"file": "sections/Implementation/Viewport.tex",
 			"settings":
 			{
-				"buffer_size": 1062,
+				"buffer_size": 7601,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "references.bib",
+			"file": "sections/Implementation/HovedBrugerfladen.tex",
 			"settings":
 			{
-				"buffer_size": 10214,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Main.tex",
-			"settings":
-			{
-				"buffer_size": 1102,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Main.aux",
-			"settings":
-			{
-				"buffer_size": 30989,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "setup/preamble.tex",
-			"settings":
-			{
-				"buffer_size": 6208,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/Teori/Test.tex",
-			"settings":
-			{
-				"buffer_size": 2040,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/Indledning/Indledning.tex",
-			"settings":
-			{
-				"buffer_size": 3288,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/Konklusion/Konklusion.tex",
-			"settings":
-			{
-				"buffer_size": 1499,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/Teori/Grafteori.tex",
-			"settings":
-			{
-				"buffer_size": 3206,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/EksisterendeModeller/eksisterendemodeller.tex",
-			"settings":
-			{
-				"buffer_size": 3274,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/Teori/Dijkstra.tex",
-			"settings":
-			{
-				"buffer_size": 6070,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sections/Implementation/Klassediagrammer.tex",
-			"settings":
-			{
-				"buffer_size": 5338,
+				"buffer_size": 2172,
 				"line_ending": "Windows"
 			}
 		},
@@ -160,10 +155,10 @@
 			}
 		},
 		{
-			"file": "sections/Design/Design.tex",
+			"file": "sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
 			"settings":
 			{
-				"buffer_size": 3589,
+				"buffer_size": 11626,
 				"line_ending": "Windows"
 			}
 		}
@@ -175,12 +170,12 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "Package Control: ",
+		"height": 104.0,
+		"last_filter": "Package Control: install",
 		"selected_items":
 		[
 			[
-				"Package Control: ",
+				"Package Control: install",
 				"Package Control: Install Package"
 			],
 			[
@@ -207,7 +202,7 @@
 	},
 	"distraction_free":
 	{
-		"menu_visible": true,
+		"menu_visible": false,
 		"show_minimap": false,
 		"show_open_files": false,
 		"show_tabs": false,
@@ -216,40 +211,95 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/Git/P2-Simulering/LATEX",
-		"/C/Programs/Git/P2-Simulering/LATEX/aau",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Design",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Diskussion",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Implementation",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Indledning",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Perspektivering",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teknologianalyse",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Teori",
-		"/C/Programs/Git/P2-Simulering/LATEX/setup"
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Kravspecifikationer",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Interessentanalyse",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Perspektivering"
 	],
 	"file_history":
 	[
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Design/Test.tex",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Implementation/Viewport.tex",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
-		"/C/Programs/Git/P2-Simulering/LATEX/sections/Laesevejledning/Laesevejledning.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Diverse.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Diskussion/Diskussion2.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Funktionelle.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/ElementerVejnettet.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Design/Design.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/setup/preamble.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/references.bib",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Simulering/Simulering.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori/Grafteori.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/FejlOgMangler.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Klassediagrammer.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Vehicle.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Implementation/Viewport.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion/KonklusionAU2.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Perspektivering/Perspektivering.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konteksten/konteksten.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Diskussion/Diskussion.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion/Konklusion-B.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion/Konklusion-Rasmus.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori/Dijkstra.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Teori/AStjerne.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Kravspecifikationer/Kravspecifikationer.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/Main.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Konklusion/Konklusion.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Laesevejledning/Laesevejledning.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Forord/Forord.tex",
+		"/C/Users/Rasmus Thomsen/Documents/P2-Simulering/LATEX/sections/Læsevejledning/Læsevejledning",
+		"/C/Users/Rasmus Thomsen/Dropbox/Software AAU/Gruppearbejde/P2/SaveProject.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/setup/variables.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/signatures.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/titlepages.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/aau/frontpage.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Indledning/Indledning.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/altransWTF.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teori/Teori.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Metode/Metode.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/sections.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Problemformulering/Problemformulering.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Interessentanalyse/Interessentanalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/references.bib",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/sections/Teknologianalyse/Teknologianalyse.tex",
+		"/C/Programs/Githubp2/P2-Simulering/LATEX/Main.tex",
+		"/C/Programs/C/Lektionone/eksamensopgavesuperliga.c",
+		"/C/Programs/Git/Gundamnation/Programs/Eksamensopgave2016/External/products.csv",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Interessantanalyse/Interessantanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/Git/P2-Simulering/LATEX/sections/Gruppekontrakt/Gruppekontrakt.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/sections/Procesanalyse/Procesanalyse.tex",
+		"/C/Programs/GitHub_P2/P2-Simulering/LATEX/setup/preamble.tex",
+		"/C/Programs/LaTeX Documents/LaTeX Document 2/assignment2.tex",
 		"/C/Programs/Git/Rep B2-24/Program rapport/profileprogram.c",
+		"/C/Programs/LaTeX Documents/LaTeX Document 1/document1.tex",
 		"/C/Programs/C/Lektionone/helppage.c",
-		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
-		"/C/Programs/Git/Rep B2-24/sections/sections.tex",
-		"/C/Programs/Git/Rep B2-24/setup/variables.tex",
-		"/C/Programs/C/Lektionone/help.c",
+		"/C/Programs/C/Lektionone/adresserfratxt.c",
+		"/C/Programs/C/Lektionone/superliga-2014-2015.txt",
+		"/C/Programs/C/Lektionone/adresser.txt",
+		"/C/Programs/C/Lektionone/aflevering4.c",
+		"/C/Programs/C/Lektionone/9.5.c",
+		"/C/Programs/C/Lektionone/testaflevering2.c",
+		"/C/Programs/C/Lektionone/opg2.7.c",
+		"/C/Programs/C/Lektionone/12.2.c",
+		"/C/Programs/C/Lektionone/deckofcards.c",
+		"/C/Programs/C/Lektionone/testintro.c",
+		"/C/Programs/C/Lektionone/contactinfo.txt",
+		"/C/Programs/C/Lektionone/sammensetarrays.c",
 		"/C/Programs/C/Lektionone/afleveringdonger.c",
+		"/C/Programs/C/Lektionone/help.c",
 		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/Programs/C/Lektionone/testaflevering2.c",
 		"/C/Programs/Git/Rep B2-24/sections/intro/intro.tex",
 		"/C/Programs/Git/Rep B2-24/references.bib",
+		"/C/Users/Jacob Thomsen/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
 		"/C/Programs/C/Lektionone/examplemalloc.c",
 		"/C/Programs/C/Lektionone/10.3.c",
-		"/C/Programs/C/Lektionone/9.5.c",
-		"/C/Programs/C/Lektionone/sammensetarrays.c",
 		"/C/Programs/C/Lektionone/mad.c",
 		"/C/Programs/C/Lektionone/exampleqsort.c",
 		"/C/Programs/C/Lektionone/functions_root_2_slide.c",
@@ -257,7 +307,6 @@
 		"/C/Programs/C/Lektionone/nyhms.c",
 		"/C/Programs/C/Lektionone/opg6.6.c",
 		"/C/Programs/C/Lektionone/test-prime.c",
-		"/C/Programs/C/Lektionone/aflevering4.c",
 		"/C/Programs/C/Lektionone/opg_267.c",
 		"/C/Programs/C/Lektionone/3.1.c",
 		"/C/Programs/C/Lektionone/primes.h",
@@ -276,7 +325,6 @@
 		"/C/Programs/C/Lektionone/sc2.3-1.c",
 		"/C/Programs/C/Lektionone/pythagorean.c",
 		"/C/Programs/C/Lektionone/opgave9.c",
-		"/C/Programs/C/Lektionone/opg2.7.c",
 		"/C/Programs/MinGW/msys/1.0/etc/profile",
 		"/C/Programs/MinGW/msys/1.0/etc/fstab",
 		"/C/MinGW/msys/1.0/etc/profile",
@@ -295,137 +343,47 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
-			"natbib",
-			"\\usepackage",
 			"url",
-			"hyphens",
-			"table",
-			"TABLE",
-			"\\/{}",
-			"//",
-			"_",
-			"\"",
-			"\\verb\"",
-			"”",
-			"\\/{}",
-			"vurdering",
-			"overvægt",
-			"Programmets ",
-			"height=\\textheight,",
-			"HEAD",
-			"make_exception_array",
-			"fig:makeexceptionarray",
-			"makeexceptionarray",
-			"hovedmenu",
-			"structed",
-			"structed ",
-			"HEAD",
-			"wrapfigure",
-			"wrapfigure\n",
-			"}\n",
-			"wrapfigure",
-			"ht",
-			"subsubsection",
-			"variabler",
-			"Linje tæller",
-			"calorie_need_calculator",
-			"I funktionen \\verb\"calorie_need_calculator\"(se figur \\ref{fig:Kalorie behov})",
-			"Algoritme",
-			"algoritme",
-			"ht!",
-			"Large",
-			"Rasmus_05",
-			"Rasmus_04",
-			"datasortering",
-			"Rasmus_03",
-			"Rasmus_02",
-			"wrapfigure",
-			"flowchartimage",
-			". Dette skulle ",
-			"øn tilfø",
-			"es sammen m",
-			"s daglige kcal. behov er.\nSamtidig skal der oprettes en opskrifts database, som indeholder opskrifter på henholdsvis morgen, middag og aftensmadsretter. Disse skal opstilles intuitivt, med en identificator så retterne kan findes frem mod forlangen. Opskrifterne, skrives sammen med deres respektive",
-			"nteres en indkøbsli",
-			"designes der",
-			"Ud fra problemformulering,",
-			"or overhoved",
-			"HEAD",
-			"\\verb\"New_user_basic_input\" er en funktion der spørger brugeren, som ønsker at lave en ny profil, om deres fysiske fremtoning, aktivitetsniveau og navn. På figueren \\ref{fig:profilopsaetning2}",
-			">>>>>>>>",
-			"en generelle hjælpemenu aflæs",
-			"en eller fjerne et. ",
-			"Funktionen \\verb\"general_FAQ\"",
-			"(SE FIGUR 519)",
-			" kalder en anden del af programdelen ved brugerpro",
-			"per god orden.",
-			"funktion der spørger",
-			"skal dog skrives som enten",
-			"verb\"age\" skal dog skrives som enten \\verb\"m\" eller \\verb\"f\", for male eller female. Dette gøres for at spare tid på input for brugeren og indeholder den samme information som at skrive det fulde køn. \\verb\"age\" er en integer da det ikke er nødvendigt at have som decimalt tal. Ligeledes er højden en int, hvor der bedes om et tal i centimeter som er det almindelige at bruge i Danmark. Derefter senere til beregning af dagligt indtag skal der oftest bruges centimeter, hvilket betyder at vi ikke skal omregne resultatet.\nTil sidst er vægten af brugeren en double. Dette gøres fordi vægte som vejer personer er i decimaltal, så bliver det nemmest for brugeren at indtaste det direkte ind i programmet.",
-			"HEAD",
-			"Profilopsaetning",
-			"adjustbox",
-			"[",
-			"]",
-			"{",
-			"}",
-			"{",
-			"]",
-			"[",
-			"]",
-			"}",
-			"{",
-			"]",
-			"{",
-			"FIGUR",
-			"Profil",
-			">>>>>>",
-			"h!",
-			"!ht",
-			"!h",
-			"HEAD",
-			"Det næste der sker er at der bliver tjekket om den givende \\textit{\"i\"} værdi skulle stå i \\verb\"exception list\" (undtagelses liste), og hvis den gør, så springes den følgende iteration for i over ved kald af \\verb\"continue\"",
-			"Da vi arbejder med en database med linjer af data som altid har et ID, og som står i numerisk rækkefølge (1, 2, 3, 4...) kan det antages at variablen i er ækvivalent med rettens id altså -> \\textit{i=Rettens Id}",
-			"Da vi",
-			"meal",
-			"HEAD",
-			"”",
-			"”w",
-			"”",
-			"'meal'",
-			"'",
-			"\"meal\"",
-			"flowchartimage",
-			"flowchart",
-			"[h]",
-			"h",
-			"[h]",
-			"\\pdfbookmark[0]{Front page}{label:frontpage}%\n\\begin{titlepage}\n  \\addtolength{\\hoffset}{0.5\\evensidemargin-0.5\\oddsidemargin} %set equal margins on the frontpage - remove this line if you want default margins\n  \\noindent%\n  \\begin{tabular}{@{}p{\\textwidth}@{}}\n    \\toprule[2pt]\n    \\midrule\n    \\vspace{0.2cm}\n    \\begin{center}\n        \\Huge{\\textbf{%\n      \\papername %found in variables.tex\n    }}\n    \\end{center}\n    \\begin{center}\n      \\Large{%\n          \n      }\n    \\end{center}\n    \\vspace{0.2cm}\\\\\n    \\midrule\n    \\toprule[2pt]\n  \\end{tabular}\n  \\vspace{4 cm}\n  \\begin{center}\n    {\\large\n      Project Report%Insert document type (e.g., Project Report)\n    }\\\\\n    \\vspace{0.2cm}\n    {\\Large\n      Group \\groupname%found in variables.tex\n    }\n  \\end{center}\n  \\vfill\n  \\begin{center}\n  Aalborg University\\\\\n  Department of Computer Science\\\\\n  Selma Lagerlöfs Vej 300\\\\\n  DK-9220 Aalborg\n  \\end{center}\n\\end{titlepage}\n\\clearpage",
-			"path",
-			"\\graphic",
-			"graphicspath",
-			"fora",
-			"ernæringsmæssig",
-			"ernærings",
-			"fremme",
-			"baserer",
-			"vaegtklassifikationer",
-			"\\ldots",
-			"teknologiana",
-			"sciencedirect",
-			"[1ex]",
-			"fontspec",
-			"pagestyle",
-			"@array",
-			"@arraypar",
-			"\\usepackage",
-			"tab",
-			"tabular",
-			"tabluar",
-			"pagestyle",
-			"\\headheight"
+			"node",
+			"fight",
+			"teams",
+			"match_count",
+			"league_table",
+			".",
+			"->",
+			"had",
+			"H",
+			"BIG_NUMBER",
+			":",
+			"Spectators in total: ",
+			"team_id",
+			"team",
+			"spectators",
+			"football_data_array",
+			"spectators",
+			"i",
+			"football_data_array[i].spectators",
+			"team_spectator",
+			"team_id",
+			"current_high",
+			"round_goal_amount",
+			"total_lines",
+			"number_of_lines",
+			"spectators",
+			"matchdata",
+			"General",
+			"Ret",
+			"%c",
+			"shelf",
+			"Location",
+			"Qualifiers",
+			"ProductCode",
+			"​",
+			"uigytgu",
+			"dickbutt"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -443,69 +401,40 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "sections/sections.tex",
+					"file": "sections/Implementation/FejlOgMangler.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 953,
+						"buffer_size": 7214,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "sections/Teknologianalyse/Teknologianalyse.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10144,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7232,
-								7232
+								7214,
+								7214
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1290.0,
+						"translation.y": 315.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "sections/Implementation/Unittest.tex",
 					"semi_transient": false,
 					"settings":
@@ -517,150 +446,37 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								2640,
+								2640
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "sections/Implementation/Implementation.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1062,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								46,
-								46
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "references.bib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10214,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3292,
-								3294
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 861.0,
+						"translation.y": 210.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Main.tex",
+					"buffer": 2,
+					"file": "sections/Implementation/Viewport.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1102,
+						"buffer_size": 7601,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1060,
-								1060
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Main.aux",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 30989,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 5406.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "setup/preamble.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6208,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3495,
-								3495
+								4713,
+								4713
 							]
 						],
 						"settings":
@@ -670,19 +486,19 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1098.0,
+						"translation.y": 840.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "sections/Teori/Test.tex",
+					"buffer": 3,
+					"file": "sections/Implementation/HovedBrugerfladen.tex",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2040,
+						"buffer_size": 2172,
 						"regions":
 						{
 						},
@@ -691,6 +507,34 @@
 							[
 								0,
 								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sections/Perspektivering/Perspektivering.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1890,
+								1890
 							]
 						],
 						"settings":
@@ -705,20 +549,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "sections/Indledning/Indledning.tex",
+					"buffer": 5,
+					"file": "sections/Design/Kravspecifikationer/Kravspecifikationer.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3288,
+						"buffer_size": 11626,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2346,
-								2346
+								7618,
+								7618
 							]
 						],
 						"settings":
@@ -726,211 +570,10 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1260.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "sections/Konklusion/Konklusion.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1499,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								497,
-								515
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "sections/Teori/Grafteori.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3206,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2021,
-								2021
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 396.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "sections/EksisterendeModeller/eksisterendemodeller.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3274,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2421,
-								2421
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "sections/Teori/Dijkstra.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6070,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "sections/Implementation/Klassediagrammer.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5338,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								343,
-								343
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "sections/Perspektivering/Perspektivering.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1890,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "sections/Design/Design.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3589,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
 					"type": "text"
 				}
 			]
@@ -942,7 +585,7 @@
 	},
 	"input":
 	{
-		"height": 34.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -969,7 +612,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 100.0
+		"height": 211.0
 	},
 	"output.find_results":
 	{
@@ -1021,7 +664,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 166.0,
+	"side_bar_width": 235.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
