@@ -120,30 +120,52 @@
 			}
 		},
 		{
-			"file": "sections/Vejledersamarbejde/Vejledersamarbejde.tex",
+			"contents": "\\chapter{Læringsproces}\\label{Laeringsproces}\nDette kapitel har til formål at give et indblik i hvordan gruppen lært igennem projektet, både fra gruppearbejde såvel som forelæsninger og opgaveregning igennem hele projektet. Selvom hvert gruppemedlem har haft hver deres måde at arbejde på, har alle gruppens medlemmer været flittig til at hjælpe hinanden, såfremt at der var nogen som var i stand til at hjælpe med at afvikle problemet. Hvis ingen i gruppen kunne løse et problem, blev det som regel til et gruppeproblem, som blev forsøgt løst ved, at alle gav deres input til hvordan det givne problem muligvis kunne løses. Til slut vil der blive reflekteret over læringsprocessen som helhed har fungeret.\n\n\\section{Vidensdeling}\\label{Vidensdeling}\nDer blev primært arbejdet med peer-learning igennem hele projektet, både til forelæsninger og projektarbejdet. Peer-learning er en vidensmetode der generelt set går ud på aktiv gruppemæssig diskussion og håndtering af emner, for at dele viden med sine ligemænd(peer). Peer-learning blev anvendt ved at tage de opgaver på tavlen, som ikke alle vidste hvordan skulle løses, og gennemgå det på forskellige måder indtil alle mente at de havde forstået hvad der var foregået. Dertil blev der ofte lavet en tavle opskrivning på arbejde der manglede at bliver udført, hvori medlemmer kunne, sammen med resten af gruppen, vælge hvad de ville gå i gang med. Derudover blev tavlen også brugt ofte på illustrationer af figurer for at kunne bedre forklare emner til gruppen, som andre havde orienteret sig om.\n\n\\vspace{5mm}\n\nDokumenter såsom artikler og referencer blev til tider diskuteret efter deres relevans eller brugbarhed. GitHub (som bliver gennemgået i et senere afsnit) var gruppens redskab til versionskontrol. Programmet blev brugt som den primære måde at dele opdateringer af både kode og rapport.\n\n\\section{Reflektion over læringsprocessen}\\label{Reflektion-over-laeringsprocessen}\nI starten af projektet var alle gruppens medlemmer gode til at møde op til forelæsninger, samt til at hjælpe hinanden med at løse de opgaver som blev stillet til den enkelte forelæsning og de ting som de forskellige medlemmer havde problemer med at forstå. Der var en kollektiv forventning fra starten af, om at alle medlemmer fulgte med på den teori der blev givet til forelæsninger o.lign. Længere inde i perioden begyndt det at variere meget med hvem der mødte op til forelæsningerne, og hvor meget gruppen arbejdede sammen under opgaveregningen. Dette skyldtes at gruppen måtte acceptere, at det ikke var alle medlemmer som fik det samme udbytte af forelæsningerne og opgaveregningen og fik mere ud af at bruge tiden anderledes. Derfor blev det også op til det enkelte medlem om, hvorvidt de ville være en del af det, som ikke var direkte knyttet til projektarbejdet, så længe man stadigvæk var en del af projektet. Til at starte med blev dette set som et problem i gruppen, men det endte med at der blev en større respekt for gruppemedlemmernes forskellighed, og derfor ikke virkede logisk at tvinge de medlemmer som ikke fik det store udbytte af forelæsning eller opgaveregning, til at være en del af det.\n	I projektarbejdet har det varieret meget, med hvordan det har været muligt med at hjælpe gruppens medlemmer. Det har ikke altid været muligt for gruppens medlemmer at hjælpe direkte med det gældende problem, eftersom ikke alle har siddet og arbejdet direkte med det samme. Derfor fungerede det primært ved at man stillede et spørgsmål efterfulgt af en forklaring på hvad man havde gjort indtil videre, indtil det var muligt at løse opgaven på egen hånd, eftersom det ikke altid var nødvendigt at være flere personer var på den samme opgave. Det kunne også føre til at en anden person tog opgaven på sig, hvis det var uden for det tidligere medlems kompetencer.",
+			"file": "sections/Laeringsproces/Laeringsproces.tex",
+			"file_size": 2761,
+			"file_write_time": 131084833656971880,
 			"settings":
 			{
-				"buffer_size": 2221,
-				"line_ending": "Unix"
+				"buffer_size": 3808,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\\chapter{Gruppesamarbejde}\\label{Gruppesamarbejde}\nDette kapitel har til formål at give et indblik i hvordan gruppen har samarbejdet under projektet, samt hvilke redskaber de har valgt at benytte sig af og hvordan disse blev benyttet. Gruppesamarbejdet har fungeret på det grundlag at alle havde kompetencerne fra forelæsningerne og at alle dermed var på det samme plan når der kunne opstå spørgsmål. Dette gjaldt også ved kode-deling og gennemgang af de tanker der var bag den implementerede kode. Der blev tildelt en række grupperoller, der havde til formål at uddelegere noget af det formelle arbejde. Derudover blev der til starten af projektet også gennemgået hvilke programmer der skulle benyttes til både vidensdeling, versionskontrol, sociale anliggender og kommunikation. Til slut vil der blive reflekteret over gruppesamarbejdet som helhed har fungeret.\n\n\\section{Rollefordeling}\\label{Rollefordeling-1}\n\nNoget af det først der blev vedtaget efter gruppedannelsen, var at blive enige om hvorvidt om deres skulle indføres grupperoller og hvordan vores gruppedemokrati skulle foregå igennem hele forløbet. Det blev vedtaget at indføre en rollefordeling, såfremt at der var nogle som mente at de var kvalificeret til det, eller havde lyst til at prøve at være det. Såfremt der var flere som gerne vil udfylde samme rolle, eller skulle man undervejs i forløbet få lyst til at prøve det, ville der blive indført en form for rotationsskift, således at dem som gerne ville prøve at udfylde en rolle, kunne få lov til at prøve det.\n	Det viste sig dog at det ikke var alle som havde lyst til at udføre en rolle, og dem som gerne ville prøve at udfylde en rolle, ikke havde lyst til at have de samme roller. Det var derfor muligt for alle gruppens medlemmer at få deres ønske opfyldt til rollefordelingen, som endte med at blive som følgende:\n\n\\begin{itemize}\n\\item Tidsplanlægger: Niclas\n\\item Opgavefordeler: Jacob\n\\item Referent: Lasse\n\\item Ordstyrer: Alexander\n\\end{itemize}\n\nDisse roller havde hvert deres formål igennem forløbet, og deres funktioner vil blive uddybet yderligere. Igennem forløbet blev disse rollers funktioner dog udført af andre eller helt udeladt, hvis der eksempelvis ikke var det store behov for det, eller hvis vedkommende som eksempelvis referenten var syg, og det var essentielt med et referat den følgende dag. På trods af at det i starten af projektet blev inddelt roller, så blev det mere flydende over tiden, og dem som ikke ville have roller til at starte med, påtog sig \n	\n\\subsection{Ordstyrer}\\label{Ordstyrer-1}\nOrdstyren udførte flere funktioner i forløbet. Den primære funktionen denne rolle udgjorde var at starte ud med at lave en dagsorden, og sikre sig at alle ikke snakkede i munden på hinanden når der blev diskuteret. Selvom dette job tilfaldt ordstyren, var det op til hele gruppen at sikre sig at alle i sad og snakkede i munden på hinanden, og at diskussioner ikke tog overhånd eller begyndte at brede sig til irrelevant snak og fokuserede på emnet.  og agere som mellemmand mellem gruppen og det enkelte medlemmer skulle der opstå situationer, hvor et medlem gerne ville have noget diskuteret i gruppen anonymt. \n\n\\subsection{Referent}\\label{Referent}\nReferentens funktion var at notere alle relevante detaljer og diskussioner omkring projektet ned hver dag og til vejledermøder. Dette gjorde det muligt at gå tilbage og se  at skulle der opstå tvivl, om hvad der var blevet tidligere og hvad vi var nået frem til v. Det gjorde det også muligt for gruppemedlemmer der havde været fraværende de pågældende dage, at tjekke hvad der havde foregået og hvad der var blevet lavet. Derudover var det referents job at notere ned hvis nogen kom for sent, ikke mødte op eller var syg samt om der var en grund til fraværet, såsom arbejde eller private forhold. Det var dog op til det enkelte medlem selv at skrive ind såfremt referenten ikke selv var tilstede, eller hvis man vidste at der var dage man ikke kunne møde.  \n\n\\subsection{Tidsplanlægger}\\label{Tidsplanlaegger}\nTidsplanlæggeren havde til formål at udforme en plan over hvor lang tid gruppen skulle forvente at bruge på forskellige dele af rapporten, men også tilpasse den efterhånden som projektet skred frem. Såfremt opgaver blev forsinket eller tog længere tid end forventet skulle tidsplanen revideres, således at det gav gruppen et overblik hvor hvor meget tid\n\n\\subsection{Opgavefordeler}\\label{Opgavefordeler}\nOpgavefordeleren havde til opgave at uddele opgaver til hvert gruppemedlem, samt at sikre sig at alle havde noget at lave og at opgaverne var struktureret så der ikke altid var en der sad med en større arbejdsbyrde end andre. Alle gruppens medlemmer havde dog mulighed for selv at gå ind og sætte sig på opgaver i Trello eller tilføje nye opgaver, såfremt der skulle opstå nye problemer der skulle løses. Dette gav et overblik for alle gruppens medlemmer, eftersom det var muligt for alle at se hvilke opgaver som var løst, og hvilke stadigvæk var under udarbejdelse. Det gjorde det muligt for alle gruppemedlemmer at til \n\n\\section{Fredagsmøder}\\label{Fredagsmoeder}\nHver fredag blev brugt på at holde et fredagsmøde enten i starten eller slutningen af dagen, alt efter hvordan det passede gruppens medlemmer bedst den pågældende fredag. Mødet blev brugt til at give alle gruppemedlemmer muligheden for at give positiv såvel som negativ feedback til gruppen eller enkelte medlemmer, men også til at afvikle spørgsmål der var opstået igennem ugen, som man ikke følte var blevet afklaret. Det var også en mulighed for at fortælle hvad man synes der skulle gøres anderledes i de kommende uger, som kunne være med til at forbedre gruppens præstation og effektivitet.\n\n\\section{Gruppekommunikation}\\label{Gruppekommunikation}\nDer blev under projektet brugt flere former for kommunikation der havde hvert deres formål. Udover de tiltænkte programmer som det blev besluttet at anvende under gruppedannelsen, som \n\n\\subsection{Facebook}\\label{Facebook}\nFacebook startede ud med udelukkende at blive brugt til det sociale aspekt i gruppen, samt ting som forsinkelser og til at få fat i gruppemedlemmer. Den første måneds tid overtog det meget det som slack var tiltænkt,  \n\n\\subsection{Slack}\\label{Slack}\nSlack var tiltænkt at det skulle som en faglig form for Facebook, hvor det udelukkende var meningen at projekt- og forelæsningsrelateret materiale og beskeder skulle sendes igennem. Det vil således spare gruppens medlemmer en masse tid at skulle gennemrode hele Facebook korrespondancen igennem for et link eller besked der tidligere var blevet postet   \n\n\\subsection{Google Drev}\\label{GoogleDrev}\nGoogleDrev blev brugt som gruppens lager for alt materiale der blev brugt og lavet igennem forløbet, med undtagelse af LaTeX filer og simulationsprogrammet der var forbeholdt GitHub, dog blev pdf versionen af projektrapporten fra LaTeX og det kompilet simulationsprogram lagt op, således at man altid hurtigt kunne finde den nyeste version som var blev lavet.   \n\n\\subsection{GitHub}\\label{GitHub}\nGitHub blev brugt som versionskontrol til både LaTeX og programmering, selvom der blev eksperimenterede med programmer som bl.a. ShareLatex og VS Anywhere endte det altid med at gruppen valgte at gå tilbage til GitHub, som det blev besluttede at benytte allerede startfasen af gruppearbejdet, eftersom der altid endte med at opstå problemer med de andre programmer, der kostede gruppen mange timer at fikse hver gang en fejl skete, hvilket ofte var tilfældet.\n\n\\subsection{Skype og Discord}\\label{SkypeOgDiscord}\nNår der skulle arbejdes hjemmefra eller hvis et gruppemedlem ikke havde mulighed for at møde, men stadigvæk gerne ville være en del af dagens arbejde, blev der brugt en form for voice-kommunikation program såsom Skype eller Discord. Til at starte med brugte vi Skype hvilket virkede fint, men valgte senere at skifte over til Discord, eftersom der begyndte at blive problemer der gjorde at vi kunne bruge op til en time på at få alle med i opkaldet. Discord og Skype var en god hjælp til at gøre gruppen i stand til at arbejde på afstand, da man stadigvæk havde mulighed for at snakke samme, dele screenshots og andet materiale igennem. Selvom det først var mere i den sidst halvdel af projektet at kommunikationsprogrammerne blev anvendt, fortrød vi at det ikke blev brugt mere ved eventuelt sygdom eller manglende fremmøde, så man stadigvæk kunne være up-to-date med hvad der skete og hvilke beslutninger der blev truffet i deres proces.  \n\n\\section{Reflektion over gruppesamarbejdet}\\label{Reflektion-over-gruppesamarbejdet}\n\nOver perioden var der både op og nedture i gruppen, både socialt såvel som projektrelateret, men har været med til at udvikle gruppen samt at give gruppens medlemmer erfaringer til fremtidens projekter og grupper. Et af de store problemer i gruppe har været manglende disciplin omkring mange af de forskellige dele. Blandt andet blev alle de forskellige redskaber ikke altid holdt up to date, eller benyttet som de var tiltænkt. Dette gav anledning til spildtid der blev brugt på at ",
+			"file": "sections/Gruppesamarbejde/Gruppesamarbejde.tex",
+			"file_size": 8679,
+			"file_write_time": 131084833656881875,
+			"settings":
+			{
+				"buffer_size": 9041,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\\chapter{Samarbejdsaftale}\\label{Samarbejdesaftale}\nI dette kapitel bliver samarbejdsaftalen skulle bruges i det tilfælde at der opstod konflikter eller problemer, hvor gruppen ikke kunne nå til enighed om en løsning eller et kompromis i fællesskab. Dette gav også alle gruppemedlemmer mulighed for at kunne bringe et problem eller der opstod en strid om hvordan. Den afsluttende samarbejdsaftale er vedlagt som bilag, efter at den blev redigeret sidste gang. Til slut vil der blive reflekteret over samarbejdsaftalen som helhed har fungeret.\n\n\\section{Samarbejdsaftale}\n\nDen første samarbejdsaftale blev udviklet med bagtanken om at den skulle tages op til revidering efter den første måned var overstået, således at gruppens medlemmer havde mulighed for at protestere imod nogle af de mente ikke fungerede, skulle udbygges eller fjernes fra aftalen. Dette skyldtes mest at der var en større uenighed i gruppen om hvilke måde der skulle arbejdes projekt-relateret. Nogle mente at der skulle være mødepligt hver dag fra 08:15 til 16:15 inklusiv forelæsninger, mens andre mente at forelæsninger var op til det enkelte medlem, hvor andre slet ikke mente at der skulle mødes hver dag, men benyttes stemme-kommunikationsprogrammer. \nEfter at gruppen havde udformet den første gruppekontrakt, blev den ikke anvendt, før der begyndt at blive diskuterede hvordan gruppen skulle arbejde, da flere af gruppens medlemmer viste utilfredshed med den daværende måde at arbejde på, hvorfor gruppen besluttede at redigere gruppekontraktten således at den blev tilpasset en arbejdsmetode som alle gruppens medlemmer kunne arbejde videre ud fra. Aftalen ændrede sig til at der var mulighed for at aftale om tirsdagen om man skulle møde om torsdagen eller om dagen kunne blive arbejdet igennem hjemmefra. Til dette formål blev der benyttet stemme-kommunikationsprogrammer gennem hele dagen så der var rig mulighed for at stille spørgsmål og gennemgå arbejde med de andre medlemmer.\n\n\\section{Reflektion over samarbejdsaftalen}\\label{Reflektion-over-samarbejdsaftale}\nDa gruppekontrakten var blev udformet, blev den ændret undervejs over den første måneds tid. Dette skyldtes at gruppen havde svært ved at tilpasse en arbejdsform som tilgodeså alle gruppemedlemmers ønsker vedrørende ting såsom mødetider, mødepligt, samt hvordan folk lærte og arbejder bedst og hvor de følte at de fik mest udbytte for deres tid. Derudover havde vi problemer med at gruppemedlemmer blev ofte distraheret af hinanden af både sociale såsom projektorienterede samtaler og andre forstyrrelser, hvilket ledte til at vi en gang imellem havde nogle meget uproduktive dage. Eftersom vi nåede frem til en ændring halvvejs inde i projektet vedrørende samarbejdsaftalen ledte det til nogle mere produktive dage. Dog gav dette også anledning til at flere medlemmer ikke mødte til en del forelæsninger herefter, og til tider var der kune 2 til 3 personer til opgaveregning. Redigeringen af samarbejdsaftalen skete kun én gang i projektet af en række grunde. Den første grund var at der fra start var et ønske fra mange medlemmer at mødepligten blev holdt fra morgen til eftermiddag, da de mente det var den bedste måde at føre gruppearbejdet på. Revideringen skete som sagt, på baggrund af den diskussion der blev taget om arbejdsformen. Arbejdsindsatsen gik derefter op efter aftalen blev indført og der var ingen grund til videre revidering, følte gruppen. Dog hen ad slutningen af projektet blev samarbejdsaftalen i forhold til hvilke dage man mødte osv. tilsidesat. Dette betød at der løbende blev aftalt dage, hvor man arbejdede hjemme og hvordan arbejdet blev uddelegeret. Medlemmer aftalte indbyrdes om hvad de kunne foretage sig arbejdsmæssigt fremadrettet. Denne fremgangsmåde virkede overraskende godt da projektets tidsramme nåede sit slutpunkt.",
+			"file": "sections/Samarbejdsaftale/Samarbejdsaftale.tex",
+			"file_size": 2349,
+			"file_write_time": 131084833658631975,
+			"settings":
+			{
+				"buffer_size": 3808,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "sections/sections.tex",
 			"settings":
 			{
-				"buffer_size": 369,
-				"line_ending": "Unix"
+				"buffer_size": 449,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "%!TEX root = ..\\..\\Main.tex\n\\chapter{Gruppe Kontrakt\\\\A319}\n\\section{Mødetider og pauser}\n\\begin{enumerate}\n\\item Der er fastlagte mødetider for gruppen. Såfremt at der ikke er forelæsninger, mødes alle medlemmer i gruppe rummet kl 8.15 og tager hjem igen 16.00. Dette er gældene for alle hverdage pånær fredag, her er det 8.15 til 15.30.\n\\begin{enumerate}\n\\item Derudover er der ikke fastlagte pauser, derimod kan der tages pauser efter behov dog inde for rimmelighedens grænser. Disse pauser vare 5 - 10 minutter. Derudover er der en større spisepause i tidsrummet 11.50 til 12.30 såfremt at der ikke er lektioner.\n\\end{enumerate}\n\\item Såfremt at der er forelæsning fra 8:15 ændres mødetidspunktet til det tilsvarende tidspunkt for forelæsningens afslutning, og dermed ses der bort fra ovenstående regel\n\\item Såfremt at et medlem har en lægeaftale eller et andet vigtigt ærinde som gør de bliver nød til at komme senere eller gå før tid, gøres dette klart for resten af gruppen og gerne så snart dette medlem ved besked omkring tidspunkter på hvornår de er fraværende.\n\\item Der kan i særtilfælde arbejdes hjemmefra, f.eks, hvis en opgave kan laves selv og gruppen umiddelbart ikke har brug for at diskuterer opgavens omfang før et senere tidspunkt.\n\\begin{enumerate}\n\\item Isåfald at et medlem arbejder hjemme fra men ikke for løst eller arbejdet tilstrækkeligt på opgaven/opgaverne tildelt dem, så vil medlemmet miste privilegiet til at arbejde hjemmefra.\n\\end{enumerate}\n\\end{enumerate}\n\n\\section{Gruppemøde og Code Review}\nGruppemøderne bliver afhold en gang hver uge. Dette gøres i slutningen af ugen\n\nDerudover holdes der Code Reviews (Så fremt der er kode at fremvise og gå igennem) hver mandag.\n\n\\begin{enumerate}\n\\item Ved dagens start laves der en dagsorden, dette bruges der 10 til 15 minutter på for at opliste dagens arbejde.\n\\item Ved ugens afslutning afholdes der et gruppemøde hvor i der gennemgås hvad der er blevet lavet igennem ugen og \n\\end{enumerate}\n\\section{Gruppens ansvar}\n\\begin{enumerate}\n\\item Hvis et gruppemedlem smider deres nøgle væk til grupperummet, hæfter det pågældende medlem for de resterende gruppemedlemmers nøgler, og skal derfor tilbagebetale gruppemedlemmernes depositum inden udgangen af projekforløbet.\n\\item Opstår der uenighed eller konflikter der kræver at der skal træffes et valg, vil resultatet blive bestemt ved håndsoprækning hvor flertallets\n\\item Der er mødepligt i grupperummet hver dag med mindre andet aftales på forhånd.\nHjemmearbejde: Der kan i særtilfælde blive arbejdet hjemme, dog skal dette aftales på forhånd (altså ikke på dagen) og hvis den opgave individet ville lave ikke er løst, så bliver mister det gruppe medlem det privilegie.\n\\item I tilfælde af splid i gruppen hvad beslutninger angår, gennemføres dette med valg.\n\\item Mød op til opgaveregning, man har selv ansvar for forlæsning.\n\\end{enumerate}\n\n\\section{Organisering}\n\\begin{enumerate}\n\\item Google Drive bruges til fildeling.\n\\item Facebook bruges til at melde forsinkelser.\n\\item Slack bliver brugt til studierelateret og generalle samtaler, samt til kortsigtet fildeling.\n\\item Git/Github bliver brugt til version kontrol af rapporten og koden.\n\\item Latex bliver brugt til at skrive rapporten.\n\\begin{enumerate}\n\\item Der laves et .tex document for hver sektion af rapporten, for at undgå version konflikter.\n\\end{enumerate}\n\\item Trello til opgave opstilling og fordelling af disse opgaver.\n\\item Tomsplanner bliver brugt til at lægge tidsplan over projektforløbet.\n\\item Fremmøde skema laves i regneark gennem Google Drive.\n\\end{enumerate}\n\n\\section{Konflikthåndtering}\n\\begin{enumerate}\n\\item Hvis et gruppemedlem ikke overholder gruppekontrakten, da løses situationen på følgende vis:\n\\begin{enumerate}\n\\item Den involverede person gøres bekendt med situationen ved et ekstraordinært møde.\n\\item Gruppemedlemmet har en uge til at rette op på problemet.\n\\item I tilfælde af, at ovenstående punkt ikke er en løsning, da inddrages vejleder.\n\\item Hvis der ikke kan findes og opstilles et fælles grundlag for den involverede person og resten af gruppen på grundlag af gruppekontrakten, da medfører dette en udsmidelse af gruppen.\n\\end{enumerate}\n\\item Hvis man har et problem skal man sige det hurtigst muligt, før problemet vokser.\n\\item Hvis man vil bringe noget op anonymt, skal man fortælle det til Alexander. Det vil derefter blive bragt op til diskussion ved et fredagsmøde.\n\\end{enumerate}\n\n\\section{Roller}\nGruppen har valgt, at ud dele enkle roller til individer i gruppen. Dette er valgt for at organisere og effektivisere gruppens arbejde. Der er uddelt 4 roller, Tidsplan handler, Trello handler, ordstyrer og referant. Rollerne er semi-dynamiske, andre medlemmer er velkommen til at prøve at være en af disse roller.\n\n\\subsection{Rollefordeling}\nTidsplan handler - Håndholder tidsplanen. (Niclas)\nTrello handler - Håndholder Trello skema. (Jacob)\nOrdstyrer - Håndholder dagsorden, afbrydning af unødvendige diskussioner.(Alex)\nReferant - Håndholder fremmøde skema, daglige referater(Lasse)\n\n\\subsection{Tidsplan handler}\nTidsplan handler, skal håndtere tidsplanen, ved brug af Tomsplanner. Her skal han holde tidsplanen opdateret, samt skal han sørger for tidsplanen bliver holdt, og ikke overskredet.\n\n\\subsection{Trello handler}\nTrello handler, skal håndtere systemet trello, og skal sørger for at gruppen altid har emner, som kan ud deles til gruppemedlemmer. Trello handler, skal sørger for at emnerne bliver sat ind i trello.\n\n\\subsection{Ordstyrer}\nOrdstyrer Håndtere dagsorden, og sørger for at holde gruppens arbejde på sporen igennem forløbet. Ordstyeren skal også uddeligere opgaver til de individuelle gruppemedlemmer. Han skal også sørgeres for, at unødvendige diskussioner bliver afbrydt. Han er også ordstyrer til vejleder møder, dog må andre gruppemedlemmer godt byde ind, enkle gange.\n\n\\subsection{Referant}\nReferanten sørger for fremmøde skema, hvis et gruppemedlem kommer for sent, sørger Referanten for at notere det. Derudover skal han lave daglige referater, af de diskussioner der sker over gruppen. Referanten sørger også for at lave referat af fredagsmøder, samt vejledermøde og vejleder kontakt. \n\n\\section{Projektarbejde}\nDagsorden\nCode reviews om mandagen.",
 			"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
-			"file_size": 6359,
-			"file_write_time": 130990545060199065,
 			"settings":
 			{
-				"buffer_size": 6234,
-				"line_ending": "Unix"
+				"buffer_size": 6533,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -182,10 +204,7 @@
 			}
 		},
 		{
-			"contents": "%!TEX root = ..\\Main.tex\n%Allow the use of \\xspace (smart spacing)\n\\usepackage{xspace}\n%Name Variables, remember trailing space\n\\newcommand{\\papername}{Procesanalyse\\xspace}\n\\newcommand{\\paperthemes}{Simulering\\xspace}\n\\newcommand{\\paperperiod}{INSERT PAPER TIME PERIOD HERE\\xspace}\n\\newcommand{\\groupname}{A319\\xspace}\n\n%Definition Variables\n\n%Example definition with the command \\examplevar\n%It will write \"This is an example (TIAE)\" the first time it's used and then just \"TIAE\" afterwards\n%\\newcommand{\\examplevar}{This is an example (TIAE)\\xspace\\renewcommand{\\examplevar}{TIAE\\xspace}}\n",
 			"file": "setup/variables.tex",
-			"file_size": 592,
-			"file_write_time": 131014680599784742,
 			"settings":
 			{
 				"buffer_size": 592,
@@ -237,10 +256,11 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE/aau",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE/sections",
-		"/C/Programs/GitHub_P2/P2-Simulering/LATEX PROCESANALYSE/setup"
+		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE",
+		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections",
+		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections/Gruppesamarbejde",
+		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections/Laeringsproces",
+		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections/Samarbejdsaftale"
 	],
 	"file_history":
 	[
@@ -305,7 +325,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -372,7 +392,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -400,29 +420,85 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "sections/Vejledersamarbejde/Vejledersamarbejde.tex",
-					"semi_transient": true,
+					"file": "sections/Laeringsproces/Laeringsproces.tex",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2221,
+						"buffer_size": 3808,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3354,
+								3354
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/Gruppesamarbejde/Gruppesamarbejde.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3753,
+								3757
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sections/Samarbejdsaftale/Samarbejdsaftale.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3808,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3808,
+								3808
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -432,12 +508,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "sections/sections.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 369,
+						"buffer_size": 449,
 						"regions":
 						{
 						},
@@ -456,16 +532,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6234,
+						"buffer_size": 6533,
 						"regions":
 						{
 						},
@@ -484,11 +560,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "aau/frontpage.tex",
 					"semi_transient": false,
 					"settings":
@@ -514,11 +590,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "aau/titlepages.tex",
 					"semi_transient": false,
 					"settings":
@@ -544,11 +620,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "sections/Interessantanalyse/Interessantanalyse.tex",
 					"semi_transient": false,
 					"settings":
@@ -572,11 +648,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "aau/signatures.tex",
 					"semi_transient": false,
 					"settings":
@@ -600,11 +676,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "setup/variables.tex",
 					"semi_transient": false,
 					"settings":
@@ -628,7 +704,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
