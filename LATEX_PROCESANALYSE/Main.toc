@@ -2,7 +2,7 @@
 \contentsline {chapter}{\numberline {1}Indledning}{1}{chapter.0.1}
 \contentsline {chapter}{\numberline {2}Projektplanl\IeC {\ae }gning}{2}{chapter.0.2}
 \contentsline {section}{\numberline {2.1}Tids- og opgaveplanl\IeC {\ae }gning}{2}{section.0.2.1}
-\contentsline {section}{\numberline {2.2}Reflektion over projektplanl\IeC {\ae }gningen}{5}{section.0.2.2}
+\contentsline {section}{\numberline {2.2}Reflektion over projektplanl\IeC {\ae }gningen}{6}{section.0.2.2}
 \contentsline {chapter}{\numberline {3}Arbejdsproces}{7}{chapter.0.3}
 \contentsline {section}{\numberline {3.1}Arbejdspapir}{7}{section.0.3.1}
 \contentsline {section}{\numberline {3.2}Programmering}{7}{section.0.3.2}
