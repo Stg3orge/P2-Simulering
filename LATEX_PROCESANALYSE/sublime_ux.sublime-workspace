@@ -115,15 +115,31 @@
 			"file": "Main.tex",
 			"settings":
 			{
-				"buffer_size": 1106,
+				"buffer_size": 1104,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Main.aux",
+			"settings":
+			{
+				"buffer_size": 14702,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "appendix.tex",
 			"settings":
 			{
-				"buffer_size": 44,
+				"buffer_size": 5240,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Main.tex.bak",
+			"settings":
+			{
+				"buffer_size": 1106,
 				"line_ending": "Windows"
 			}
 		},
@@ -131,7 +147,7 @@
 			"file": "sections/Projektplanlaegning/Projektplanlaegning.tex",
 			"settings":
 			{
-				"buffer_size": 8916,
+				"buffer_size": 9021,
 				"line_ending": "Windows"
 			}
 		},
@@ -139,7 +155,7 @@
 			"file": "sections/Arbejdsproces/Arbejdsproces.tex",
 			"settings":
 			{
-				"buffer_size": 5175,
+				"buffer_size": 5177,
 				"line_ending": "Windows"
 			}
 		},
@@ -147,7 +163,7 @@
 			"file": "sections/Laeringsproces/Laeringsproces.tex",
 			"settings":
 			{
-				"buffer_size": 3808,
+				"buffer_size": 3823,
 				"line_ending": "Windows"
 			}
 		},
@@ -155,7 +171,7 @@
 			"file": "sections/Gruppesamarbejde/Gruppesamarbejde.tex",
 			"settings":
 			{
-				"buffer_size": 12786,
+				"buffer_size": 12816,
 				"line_ending": "Windows"
 			}
 		},
@@ -179,7 +195,7 @@
 			"file": "sections/sections.tex",
 			"settings":
 			{
-				"buffer_size": 449,
+				"buffer_size": 450,
 				"line_ending": "Windows"
 			}
 		},
@@ -187,7 +203,7 @@
 			"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
 			"settings":
 			{
-				"buffer_size": 7273,
+				"buffer_size": 5222,
 				"line_ending": "Windows"
 			}
 		},
@@ -284,6 +300,7 @@
 		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/figures",
 		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections",
 		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections/Arbejdsproces",
+		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections/Gruppekontrakt",
 		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections/Gruppesamarbejde",
 		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections/Indledning",
 		"/C/Programs/Git/P2-Simulering/LATEX_PROCESANALYSE/sections/Laeringsproces",
@@ -422,7 +439,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -431,15 +448,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1106,
+						"buffer_size": 1104,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1106,
-								1106
+								1089,
+								1089
 							]
 						],
 						"settings":
@@ -450,24 +467,138 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "appendix.tex",
-					"semi_transient": true,
+					"file": "Main.aux",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 44,
+						"buffer_size": 14702,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								44,
-								44
+								4092,
+								4092
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1605.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "appendix.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4336,
+								4336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 600.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Main.tex.bak",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1106,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sections/Projektplanlaegning/Projektplanlaegning.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9021,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5940,
+								5928
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sections/Arbejdsproces/Arbejdsproces.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2712,
+								2712
 							]
 						],
 						"settings":
@@ -478,52 +609,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "sections/Projektplanlaegning/Projektplanlaegning.tex",
+					"buffer": 6,
+					"file": "sections/Laeringsproces/Laeringsproces.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8916,
+						"buffer_size": 3823,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3601,
-								3601
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 60.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "sections/Arbejdsproces/Arbejdsproces.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5175,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2697,
-								2697
+								3398,
+								3398
 							]
 						],
 						"settings":
@@ -538,48 +641,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "sections/Laeringsproces/Laeringsproces.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3808,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3808,
-								3808
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "sections/Gruppesamarbejde/Gruppesamarbejde.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12786,
+						"buffer_size": 12816,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3753,
-								3757
+								11108,
+								11108
 							]
 						],
 						"settings":
@@ -587,14 +662,14 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 780.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "sections/Samarbejdsaftale/Samarbejdsaftale.tex",
 					"semi_transient": false,
 					"settings":
@@ -606,8 +681,8 @@
 						"selection":
 						[
 							[
-								3263,
-								3263
+								3896,
+								3896
 							]
 						],
 						"settings":
@@ -618,11 +693,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "sections/Syntese/Syntese.tex",
 					"semi_transient": false,
 					"settings":
@@ -646,67 +721,67 @@
 						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "sections/sections.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 449,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1974,
-								1974
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
 					"buffer": 10,
+					"file": "sections/sections.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								369,
+								369
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "sections/Gruppekontrakt/Gruppekontrakt.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5222,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
 					"file": "aau/frontpage.tex",
 					"semi_transient": false,
 					"settings":
@@ -732,11 +807,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 13,
 					"file": "aau/titlepages.tex",
 					"semi_transient": false,
 					"settings":
@@ -762,11 +837,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 14,
 					"file": "sections/Interessantanalyse/Interessantanalyse.tex",
 					"semi_transient": false,
 					"settings":
@@ -790,11 +865,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 15,
 					"file": "aau/signatures.tex",
 					"semi_transient": false,
 					"settings":
@@ -818,11 +893,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 16,
 					"file": "setup/variables.tex",
 					"semi_transient": false,
 					"settings":
@@ -846,7 +921,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 15,
 					"type": "text"
 				}
 			]

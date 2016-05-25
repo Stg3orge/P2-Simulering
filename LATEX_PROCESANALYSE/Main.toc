@@ -7,8 +7,6 @@
 \contentsline {section}{\numberline {3.1}Arbejdspapir}{7}{section.0.3.1}
 \contentsline {section}{\numberline {3.2}Programmering}{7}{section.0.3.2}
 \contentsline {section}{\numberline {3.3}Metode}{7}{section.0.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Brainstorm}{8}{subsection.0.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Kildekritik}{8}{subsection.0.3.3.2}
 \contentsline {section}{\numberline {3.4}Reflektion over arbejdsprocessen}{8}{section.0.3.4}
 \contentsline {chapter}{\numberline {4}L\IeC {\ae }ringsproces}{10}{chapter.0.4}
 \contentsline {section}{\numberline {4.1}Vidensdeling}{10}{section.0.4.1}
@@ -26,18 +24,12 @@
 \contentsline {section}{\numberline {7.1}Samarbejdsaftale}{19}{section.0.7.1}
 \contentsline {section}{\numberline {7.2}Reflektion over samarbejdsaftalen}{20}{section.0.7.2}
 \contentsline {chapter}{\numberline {8}Syntese}{21}{chapter.0.8}
-\contentsline {chapter}{\numberline {9}Gruppe Kontrakt\\A319}{24}{chapter.0.9}
-\contentsline {section}{\numberline {9.1}M\IeC {\o }detider og pauser}{24}{section.0.9.1}
-\contentsline {section}{\numberline {9.2}Gruppem\IeC {\o }de og Code Review}{24}{section.0.9.2}
-\contentsline {section}{\numberline {9.3}Gruppens ansvar}{25}{section.0.9.3}
-\contentsline {section}{\numberline {9.4}Organisering}{25}{section.0.9.4}
-\contentsline {section}{\numberline {9.5}Konflikth\IeC {\r a}ndtering}{26}{section.0.9.5}
-\contentsline {section}{\numberline {9.6}Roller}{26}{section.0.9.6}
-\contentsline {subsection}{\numberline {9.6.1}Rollefordeling}{26}{subsection.0.9.6.1}
-\contentsline {subsection}{\numberline {9.6.2}Tidsplan handler}{26}{subsection.0.9.6.2}
-\contentsline {subsection}{\numberline {9.6.3}Trello handler}{26}{subsection.0.9.6.3}
-\contentsline {subsection}{\numberline {9.6.4}Ordstyrer}{27}{subsection.0.9.6.4}
-\contentsline {subsection}{\numberline {9.6.5}Referant}{27}{subsection.0.9.6.5}
-\contentsline {chapter}{\numberline {10}Vejlederkontrakt}{28}{chapter.0.10}
-\contentsline {section}{\numberline {10.1}Vejlederen kan forvente at}{28}{section.0.10.1}
-\contentsline {section}{\numberline {10.2}Vi forventer at vejlederen}{28}{section.0.10.2}
+\contentsline {chapter}{\numberline {A}Appendix - Gruppekontrakt A319}{24}{appendix.A}
+\contentsline {section}{\numberline {A.1}M\IeC {\o }detider og pauser}{24}{section.A.1}
+\contentsline {section}{\numberline {A.2}Gruppem\IeC {\o }de og Code Review}{24}{section.A.2}
+\contentsline {section}{\numberline {A.3}Gruppens ansvar}{25}{section.A.3}
+\contentsline {section}{\numberline {A.4}Organisering}{25}{section.A.4}
+\contentsline {section}{\numberline {A.5}Konflikth\IeC {\r a}ndtering}{26}{section.A.5}
+\contentsline {chapter}{\numberline {B}Appendix - Vejlederkontrakt}{27}{appendix.B}
+\contentsline {section}{\numberline {B.1}Vejlederen kan forvente at}{27}{section.B.1}
+\contentsline {section}{\numberline {B.2}Vi forventer at vejlederen}{27}{section.B.2}
