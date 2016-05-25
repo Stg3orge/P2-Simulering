@@ -41,22 +41,16 @@
 \contentsline {section}{\numberline {7.1}Samarbejdsaftale}{18}{section.0.7.1}
 \contentsline {section}{\numberline {7.2}Reflektion over samarbejdsaftalen}{19}{section.0.7.2}
 \contentsline {chapter}{\numberline {8}Syntese}{20}{chapter.0.8}
-\contentsline {section}{\numberline {8.1}Planl\IeC {\ae }gning}{20}{section.0.8.1}
-\contentsline {section}{\numberline {8.2}Arbejdsproces}{20}{section.0.8.2}
-\contentsline {section}{\numberline {8.3}L\IeC {\ae }ringsproces}{20}{section.0.8.3}
-\contentsline {section}{\numberline {8.4}Gruppesamarbejde}{21}{section.0.8.4}
-\contentsline {section}{\numberline {8.5}Vejledersamarbejde}{21}{section.0.8.5}
-\contentsline {section}{\numberline {8.6}Samarbejdsaftale}{21}{section.0.8.6}
-\contentsline {chapter}{\numberline {9}Samarbejdsaftale \\A319}{22}{chapter.0.9}
-\contentsline {section}{\numberline {9.1}M\IeC {\o }detider og pauser}{22}{section.0.9.1}
-\contentsline {section}{\numberline {9.2}Gruppem\IeC {\o }de og Code Review}{22}{section.0.9.2}
-\contentsline {section}{\numberline {9.3}Gruppens ansvar}{23}{section.0.9.3}
-\contentsline {section}{\numberline {9.4}Organisering}{23}{section.0.9.4}
-\contentsline {section}{\numberline {9.5}Konflikth\IeC {\r a}ndtering}{24}{section.0.9.5}
-\contentsline {section}{\numberline {9.6}Roller}{24}{section.0.9.6}
-\contentsline {subsection}{\numberline {9.6.1}Rollefordeling}{24}{subsection.0.9.6.1}
-\contentsline {subsection}{\numberline {9.6.2}Tidsplan handler}{24}{subsection.0.9.6.2}
-\contentsline {subsection}{\numberline {9.6.3}Trello handler}{24}{subsection.0.9.6.3}
-\contentsline {subsection}{\numberline {9.6.4}Ordstyrer}{25}{subsection.0.9.6.4}
-\contentsline {subsection}{\numberline {9.6.5}Referant}{25}{subsection.0.9.6.5}
-\contentsline {section}{\numberline {9.7}Projektarbejde}{25}{section.0.9.7}
+\contentsline {chapter}{\numberline {9}Samarbejdsaftale \\A319}{23}{chapter.0.9}
+\contentsline {section}{\numberline {9.1}M\IeC {\o }detider og pauser}{23}{section.0.9.1}
+\contentsline {section}{\numberline {9.2}Gruppem\IeC {\o }de og Code Review}{23}{section.0.9.2}
+\contentsline {section}{\numberline {9.3}Gruppens ansvar}{24}{section.0.9.3}
+\contentsline {section}{\numberline {9.4}Organisering}{24}{section.0.9.4}
+\contentsline {section}{\numberline {9.5}Konflikth\IeC {\r a}ndtering}{25}{section.0.9.5}
+\contentsline {section}{\numberline {9.6}Roller}{25}{section.0.9.6}
+\contentsline {subsection}{\numberline {9.6.1}Rollefordeling}{25}{subsection.0.9.6.1}
+\contentsline {subsection}{\numberline {9.6.2}Tidsplan handler}{25}{subsection.0.9.6.2}
+\contentsline {subsection}{\numberline {9.6.3}Trello handler}{25}{subsection.0.9.6.3}
+\contentsline {subsection}{\numberline {9.6.4}Ordstyrer}{26}{subsection.0.9.6.4}
+\contentsline {subsection}{\numberline {9.6.5}Referant}{26}{subsection.0.9.6.5}
+\contentsline {section}{\numberline {9.7}Projektarbejde}{26}{section.0.9.7}
