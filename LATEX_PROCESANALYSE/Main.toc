@@ -38,7 +38,6 @@
 \contentsline {subsection}{\numberline {9.6.3}Trello handler}{26}{subsection.0.9.6.3}
 \contentsline {subsection}{\numberline {9.6.4}Ordstyrer}{27}{subsection.0.9.6.4}
 \contentsline {subsection}{\numberline {9.6.5}Referant}{27}{subsection.0.9.6.5}
-\contentsline {section}{\numberline {9.7}Projektarbejde}{27}{section.0.9.7}
 \contentsline {chapter}{\numberline {10}Vejlederkontrakt}{28}{chapter.0.10}
 \contentsline {section}{\numberline {10.1}Vejlederen kan forvente at}{28}{section.0.10.1}
 \contentsline {section}{\numberline {10.2}Vi forventer at vejlederen}{28}{section.0.10.2}
