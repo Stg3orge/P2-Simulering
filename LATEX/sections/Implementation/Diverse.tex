@@ -100,7 +100,7 @@ TimeSpread & 0 & 86400000 \\
 \end{figure}
 
 \subsection*{MathExtension}
-\texttt{MathExtension} er en klasse der er lavet for at håndtere udregningerne fra \texttt{Point} til \texttt{Point}, fra \texttt{PointD} til \texttt{PointD} samt en kort kovertering af km/h til m/ms. Der gøres bruge af klasser fra \texttt{Math} bibliotek. Måden vi udregner km/h til m/ms, er ved at tage km/h og dividere med 3600(60*60), se udregning \ref{ConvertKmhToMms}. Vi benytter os af afstandsformlen i \texttt{MathExtension}, hvor vi beregner afstanden mellem to noder via deres koordinater \ref{AfstandsFormel}. Afstandsformlen benyttes flere steder i programmet, men primært i \texttt{Pathfinder} og \texttt{Vehicle}, og konverteringen til meter på millisekund bliver kun bruger i \texttt{Vehicle.Drive()}.
+\texttt{MathExtension} er en klasse der er lavet for at håndtere udregningerne fra \texttt{Point} til \texttt{Point}, fra \texttt{PointD} til \texttt{PointD} samt en kort kovertering af km/h til m/ms. Der gøres bruge af klasser fra \texttt{Math} bibliotek. Måden vi udregner km/h til m/ms, er ved at tage km/h og dividere med 3600(60*60), se udregning \ref{ConvertKmhToMms}. Vi benytter os af afstandsformlen i \texttt{MathExtension}, hvor vi beregner afstanden mellem to knuder via deres koordinater \ref{AfstandsFormel}. Afstandsformlen benyttes flere steder i programmet, men primært i \texttt{Pathfinder} og \texttt{Vehicle}, og konverteringen til meter på millisekund bliver kun bruger i \texttt{Vehicle.Drive()}.
 
 \begin{equation} \label{ConvertKmhToMms}
 km/h / 3600
